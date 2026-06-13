@@ -1,0 +1,17 @@
+{
+  "name": "WESHOW - Мультимедийные решения",
+  "short_name": "WESHOW",
+  "description": "Комплексные мультимедийные решения для бизнеса",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2563eb",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/weshow-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
