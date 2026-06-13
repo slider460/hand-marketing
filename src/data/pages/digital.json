@@ -1,0 +1,87 @@
+{
+ "title": "Digital услуги агентства Hand Marketing",
+ "description": "Контекстная реклама, SEO оптимизация, ASO оптимизация, сквозная аналитика, корпоративные/продуктовые/сайты, таргетированная реклама, мобильные приложения",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec226990634",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Digital",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Контекстная реклама",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Таргетированная реклама",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "SEO оптимизация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "ASO оптимизация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сквозная аналитика",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Корпоративные /продуктовые/сайты",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Оказываем полный спектр услуг по комплексному продвижению бизнеса в Интернете.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Мобильные Приложения",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "ONLINE трансляции /мероприятия /конференции/ презентации",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6264-6639-4864-a330-376436363464/__-20.png",
+     "alt": "",
+     "local": "/assets/46c18779___-20.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3861-6539-4134-b738-613332303161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/fa528dd6_Agency_presentation_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6633-3734-4463-b235-626632363264/__-22.png",
+     "alt": "",
+     "local": "/assets/75982abd___-22.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3237-3537-4131-a262-613738326136/__-21.png",
+     "alt": "",
+     "local": "/assets/59856e3c___-21.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

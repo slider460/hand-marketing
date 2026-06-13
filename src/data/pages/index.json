@@ -1,0 +1,984 @@
+{
+ "title": "Hand Marketing",
+ "description": "Рекламное агентство полного цикла",
+ "og_image": "https://static.tildacdn.com/tild3230-6663-4363-b038-333866373133/__76876-145.png",
+ "blocks": [
+  {
+   "id": "rec226204768",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Hand Marketing",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Рекламное агентство полного цикла",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Event",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Creative & Design",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Video production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Print & Production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "BTL",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Digital",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "3D Mapping",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Смотреть SHOWREEL",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3637-6665-4238-b166-636533313130/_hm-64.svg",
+     "alt": "",
+     "local": "/assets/2823d40e__hm-64.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3638-3539-4132-b931-656438623464/pizdapattrtn-62.svg",
+     "alt": "",
+     "local": "/assets/58c265e1_pizdapattrtn-62.svg"
+    }
+   ],
+   "videos": [],
+   "links": [
+    {
+     "href": "event",
+     "text": "Event"
+    },
+    {
+     "href": "creativedesign",
+     "text": "Creative & Design"
+    },
+    {
+     "href": "videoproduction",
+     "text": "Video production"
+    },
+    {
+     "href": "printandproduction",
+     "text": "Print & Production"
+    },
+    {
+     "href": "btl",
+     "text": "BTL"
+    },
+    {
+     "href": "digital",
+     "text": "Digital"
+    },
+    {
+     "href": "3dmapping",
+     "text": "3D Mapping"
+    }
+   ]
+  },
+  {
+   "id": "rec2200454521",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3836-3363-4534-b666-333865333634/Samara-2.png",
+     "alt": "",
+     "local": "/assets/aeacc191_Samara-2.png"
+    }
+   ],
+   "videos": [],
+   "links": [
+    {
+     "href": "https://hand-marketing.ru/samara_vdnh",
+     "text": ""
+    }
+   ]
+  },
+  {
+   "id": "rec227818429",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Кейсы",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3139-3736-4238-b263-326664353435/__-33.svg",
+     "alt": "",
+     "local": "/assets/4240bf0d___-33.svg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec236643910",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Основную бизнес-философию агентства можно охарактеризовать словом «прозрачность»: клиент имеет возможность наблюдать за исполнением заказа на каждом этапе проекта с экспертной оценкой исполняемых процедур. Главной движущей силой нашей компании являются ее сотрудники. На сегодняшний день в агентстве работают специалисты, имеющие богатый опыт работы в рекламном бизнесе. Основной принцип нашей работы - комплексное обеспечение клиентского сервиса на основе ситуационного анализа его потребностей, с последующей выработкой наиболее оптимальных методик и инструментов продвижения продуктов и услуг. Головной офис находится в Москве, партнерская сеть охватывает все крупные города России.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "О нас",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Более 10 лет",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Мы делаем эффективные маркетинговые коммуникации",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Full service",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Любые услуги в области маркетинговых коммуникаций",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сотрудничество",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Целеустремленность и внимание к партнерам - долгосрочное партнерство",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Локация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Офис в центре Москвы, региональная партнерская сеть с охватом более 100 городов России",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3436-6364-4661-a130-303235663166/__-25.png",
+     "alt": "",
+     "local": "/assets/33d22881___-25.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6563-6234-4536-b165-656236646638/__-26.png",
+     "alt": "",
+     "local": "/assets/ce52de21___-26.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3633-3432-4235-b433-346566646565/__-27.png",
+     "alt": "",
+     "local": "/assets/8cf0a58f___-27.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6330-3234-4462-b636-666466306361/__-123.svg",
+     "alt": "",
+     "local": "/assets/15ccf0fe___-123.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6236-3636-4737-b032-346631353066/__-126.svg",
+     "alt": "",
+     "local": "/assets/23f2438d___-126.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6461-3039-4862-a362-363931653836/__-125.svg",
+     "alt": "",
+     "local": "/assets/bfd536b0___-125.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6166-3232-4131-b436-363230666534/__-124.svg",
+     "alt": "",
+     "local": "/assets/298a19b9___-124.svg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec250571348",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Основную бизнес-философию агентства можно охарактеризовать словом «прозрачность»: клиент имеет возможность наблюдать за исполнением заказа на каждом этапе проекта с экспертной оценкой исполняемых процедур. Главной движущей силой нашей компании являются ее сотрудники. На сегодняшний день в агентстве работают специалисты, имеющие богатый опыт работы в рекламном бизнесе. Основной принцип нашей работы - комплексное обеспечение клиентского сервиса на основе ситуационного анализа его потребностей, с последующей выработкой наиболее оптимальных методик и инструментов продвижения продуктов и услуг. Головной офис находится в Москве, партнерская сеть охватывает все крупные города России.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "О нас",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Более 10 лет",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Мы делаем эффективные маркетинговые коммуникации",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Full service",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Любые услуги в области маркетинговых коммуникаций",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сотрудничество",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Целеустремленность и внимание к партнерам - долгосрочное партнерство",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Локация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Офис в центре Москвы, региональная партнерская сеть с охватом более 100 городов России",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3436-6364-4661-a130-303235663166/__-25.png",
+     "alt": "",
+     "local": "/assets/33d22881___-25.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6563-6234-4536-b165-656236646638/__-26.png",
+     "alt": "",
+     "local": "/assets/ce52de21___-26.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3633-3432-4235-b433-346566646565/__-27.png",
+     "alt": "",
+     "local": "/assets/8cf0a58f___-27.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6330-3234-4462-b636-666466306361/__-123.svg",
+     "alt": "",
+     "local": "/assets/15ccf0fe___-123.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6236-3636-4737-b032-346631353066/__-126.svg",
+     "alt": "",
+     "local": "/assets/23f2438d___-126.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6461-3039-4862-a362-363931653836/__-125.svg",
+     "alt": "",
+     "local": "/assets/bfd536b0___-125.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6166-3232-4131-b436-363230666534/__-124.svg",
+     "alt": "",
+     "local": "/assets/298a19b9___-124.svg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec226573802",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Client Service Director / CEO",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Commercial Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Народецкий Александр",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Семенов Эдвард",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Наша команда",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Дементьев Святослав",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Chief Creative Officer",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Business Development Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сергей Кличановский",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Chief information Officer",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Осотов Алексей",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Technical Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Муратов Денис",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Senior Account Manager",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Агафонова Илона",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3838-3461-4737-a231-396336386561/pizdapattrtn-61.svg",
+     "alt": "",
+     "local": "/assets/8136333e_pizdapattrtn-61.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6536-3538-4762-b664-633236633134/pizdapattrtn-62.svg",
+     "alt": "",
+     "local": "/assets/cfd18b4e_pizdapattrtn-62.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6133-3736-4165-a366-353530633430/mriyaresort_-01-05.png",
+     "alt": "",
+     "local": "/assets/7eed117e_mriyaresort_-01-05.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3366-6336-4430-b166-646662633061/mriyaresort_-01-06.png",
+     "alt": "",
+     "local": "/assets/1a4c5098_mriyaresort_-01-06.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6463-3334-4266-b835-313433396166/mriyaresort_-01-07.png",
+     "alt": "",
+     "local": "/assets/c1b18cc9_mriyaresort_-01-07.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3735-6531-4234-b830-363630623332/mriyaresort_-01-01.png",
+     "alt": "",
+     "local": "/assets/beff2559_mriyaresort_-01-01.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6238-6262-4661-a665-306166343031/mriyaresort_-01-02.png",
+     "alt": "",
+     "local": "/assets/926f2b86_mriyaresort_-01-02.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3636-6463-4437-b436-383331356332/mriyaresort_-01-03.png",
+     "alt": "",
+     "local": "/assets/832093b2_mriyaresort_-01-03.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3731-3535-4665-a633-663639313564/mriyaresort_-01-04.png",
+     "alt": "",
+     "local": "/assets/daf7e1c6_mriyaresort_-01-04.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249757129",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Наша команда",
+     "href": ""
+    }
+   ],
+   "images": [],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249908352",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3230-6663-4363-b038-333866373133/__76876-145.png",
+     "alt": "",
+     "local": "/assets/c034cbfb___76876-145.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3764-6333-4063-b531-396238386537/__76876-147.png",
+     "alt": "",
+     "local": "/assets/4ff4e574___76876-147.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6534-3130-4535-b834-393262383437/__76876-149.png",
+     "alt": "",
+     "local": "/assets/89f50d91___76876-149.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6132-4639-a162-346433313762/__76876-151.png",
+     "alt": "",
+     "local": "/assets/330c1b56___76876-151.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3939-3635-4033-a436-386536353930/__76876-150.png",
+     "alt": "",
+     "local": "/assets/aea63d23___76876-150.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6561-6361-4236-b763-656565643230/__76876-148.png",
+     "alt": "",
+     "local": "/assets/25f67f86___76876-148.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3232-3531-4665-b739-626634306233/__76876-146.png",
+     "alt": "",
+     "local": "/assets/0ab3e523___76876-146.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3230-6663-4363-b038-333866373133/-/resizeb/20x/__76876-145.png",
+     "alt": "",
+     "local": "/assets/28016e0e___76876-145.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3764-6333-4063-b531-396238386537/-/resizeb/20x/__76876-147.png",
+     "alt": "",
+     "local": "/assets/0e1084d5___76876-147.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6534-3130-4535-b834-393262383437/-/resizeb/20x/__76876-149.png",
+     "alt": "",
+     "local": "/assets/29c371cc___76876-149.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6132-4639-a162-346433313762/-/resizeb/20x/__76876-151.png",
+     "alt": "",
+     "local": "/assets/99292365___76876-151.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3939-3635-4033-a436-386536353930/-/resizeb/20x/__76876-150.png",
+     "alt": "",
+     "local": "/assets/38a5252a___76876-150.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6561-6361-4236-b763-656565643230/-/resizeb/20x/__76876-148.png",
+     "alt": "",
+     "local": "/assets/bad13ecf___76876-148.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3232-3531-4665-b739-626634306233/-/resizeb/20x/__76876-146.png",
+     "alt": "",
+     "local": "/assets/18e6a025___76876-146.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec226824033",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "С нами работают",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3432-6564-4939-b661-323662313364/-1___1.png",
+     "alt": "",
+     "local": "/assets/a4cc4595_-1___1.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3066-3236-4161-b334-323334656232/samregion.png",
+     "alt": "",
+     "local": "/assets/096280fb_samregion.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3832-3339-4933-b862-313162643738/-1___1_.png",
+     "alt": "",
+     "local": "/assets/471c1b3d_-1___1_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3838-3739-4632-b934-633966616665/tb-drone-logo-footer.svg",
+     "alt": "",
+     "local": "/assets/2c3efd1c_tb-drone-logo-footer.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3131-3864-4362-a232-336664366339/-1___1__23.png",
+     "alt": "",
+     "local": "/assets/4e63bd3f_-1___1__23.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3464-6230-4430-a663-383430313964/logo_1.svg",
+     "alt": "",
+     "local": "/assets/5323ba91_logo_1.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-3365-4733-b532-356530633965/-1___1__22.png",
+     "alt": "",
+     "local": "/assets/36796b26_-1___1__22.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6336-3333-4338-b864-363563663130/-1___1__21.png",
+     "alt": "",
+     "local": "/assets/8247896b_-1___1__21.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3561-6236-4939-a632-626362373038/-1___1__20.png",
+     "alt": "",
+     "local": "/assets/e18d9b45_-1___1__20.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6532-4434-b338-356238363733/-1___1__19.png",
+     "alt": "",
+     "local": "/assets/5159beed_-1___1__19.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3566-6666-4236-b331-353564393064/-1___1__18.png",
+     "alt": "",
+     "local": "/assets/1c6b6d59_-1___1__18.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6462-4631-b130-616639666233/-1___1__17.png",
+     "alt": "",
+     "local": "/assets/4b8a2bce_-1___1__17.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3635-3062-4664-a363-383435316230/-1___1__16.png",
+     "alt": "",
+     "local": "/assets/bffb39e9_-1___1__16.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6332-3162-4661-b032-666632663033/-1___1__15.png",
+     "alt": "",
+     "local": "/assets/bf8d3486_-1___1__15.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3261-6665-4864-a136-346266313930/-1___1__14.png",
+     "alt": "",
+     "local": "/assets/57d2d7c7_-1___1__14.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6431-3136-4132-a363-626237623063/logo.svg",
+     "alt": "",
+     "local": "/assets/55b7dcf1_logo.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3934-3664-4561-a461-323133653839/1603629-01.png",
+     "alt": "",
+     "local": "/assets/80458d7d_1603629-01.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3539-6635-4130-b638-336534373864/-1___1__12.png",
+     "alt": "",
+     "local": "/assets/9ebc6831_-1___1__12.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3134-3664-4665-b636-646534373035/-1___1__11.png",
+     "alt": "",
+     "local": "/assets/14add21a_-1___1__11.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3938-3735-4665-b834-356539326436/-1___1__10.png",
+     "alt": "",
+     "local": "/assets/648ea32c_-1___1__10.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6134-6137-4537-a165-346536616135/-1___1__9.png",
+     "alt": "",
+     "local": "/assets/aa42a20a_-1___1__9.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6562-6366-4463-b534-366137396164/-1___1__8.png",
+     "alt": "",
+     "local": "/assets/6a193950_-1___1__8.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6430-3166-4031-a333-626535303665/-1___1__7.png",
+     "alt": "",
+     "local": "/assets/e51f45fa_-1___1__7.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3230-3132-4362-b931-363364373738/-1___1__6.png",
+     "alt": "",
+     "local": "/assets/082ba5f4_-1___1__6.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6433-6662-4461-a365-663765333066/-1___1__5.png",
+     "alt": "",
+     "local": "/assets/bce17dae_-1___1__5.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6364-6136-4738-b438-306136636236/-1___1__4.png",
+     "alt": "",
+     "local": "/assets/dbc00ae2_-1___1__4.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3965-6433-4831-b139-643761623666/-1___1__3.png",
+     "alt": "",
+     "local": "/assets/1d2ef4fc_-1___1__3.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3961-6133-4661-b461-666462373731/__-71.png",
+     "alt": "",
+     "local": "/assets/e1164a74___-71.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249761992",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3036-3238-4961-a435-613162393431/1___1.png",
+     "alt": "",
+     "local": "/assets/9230e64f_1___1.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6439-3339-4732-a236-343435356637/__-71.png",
+     "alt": "",
+     "local": "/assets/639e8825___-71.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3362-6233-4536-a134-386230353433/1___1__23.png",
+     "alt": "",
+     "local": "/assets/e5a2a9ec_1___1__23.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3964-3934-4331-a262-313833383232/1___1_.png",
+     "alt": "",
+     "local": "/assets/2a333452_1___1_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3561-3035-4463-b061-393336306437/1___1__4.png",
+     "alt": "",
+     "local": "/assets/c89c8820_1___1__4.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6132-3630-4366-b731-383034303661/1___1__7.png",
+     "alt": "",
+     "local": "/assets/4a42526f_1___1__7.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3363-3039-4337-b766-313934373464/1___1__6.png",
+     "alt": "",
+     "local": "/assets/f1801043_1___1__6.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3130-3535-4433-b735-616266613231/1___1__8.png",
+     "alt": "",
+     "local": "/assets/9214e27f_1___1__8.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3230-6130-4538-b666-633033363666/1___1__9.png",
+     "alt": "",
+     "local": "/assets/6a81c452_1___1__9.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3632-3566-4533-a661-386562633230/1___1__11.png",
+     "alt": "",
+     "local": "/assets/4f5a6d72_1___1__11.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6139-3735-4133-b532-613534323733/1___1__10.png",
+     "alt": "",
+     "local": "/assets/6f240b47_1___1__10.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3465-6138-4339-b430-383531383561/1___1__12.png",
+     "alt": "",
+     "local": "/assets/5b4340bb_1___1__12.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3265-6132-4037-b933-616434613365/1___1__14.png",
+     "alt": "",
+     "local": "/assets/971aa08d_1___1__14.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3866-6431-4061-b466-346561346462/1___1__15.png",
+     "alt": "",
+     "local": "/assets/227bae0a_1___1__15.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3836-6162-4130-a438-343232353230/1___1__16.png",
+     "alt": "",
+     "local": "/assets/a8d21e97_1___1__16.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6264-3766-4231-b239-326336653434/1___1__17.png",
+     "alt": "",
+     "local": "/assets/c0528d5a_1___1__17.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3836-3537-4137-a635-623234333531/1___1__18.png",
+     "alt": "",
+     "local": "/assets/1cfaee1f_1___1__18.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6533-3239-4561-b533-383837326562/1___1__20.png",
+     "alt": "",
+     "local": "/assets/a2e48c6d_1___1__20.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6463-3733-4432-a237-636137336430/1___1__19.png",
+     "alt": "",
+     "local": "/assets/232a85b7_1___1__19.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6430-3535-4436-b836-346230373666/1___1__21.png",
+     "alt": "",
+     "local": "/assets/9e333e1a_1___1__21.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3737-3132-4534-b165-393530666666/1___1__22.png",
+     "alt": "",
+     "local": "/assets/2a7a8b18_1___1__22.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6533-3964-4930-a165-393365633562/1603629-01.png",
+     "alt": "",
+     "local": "/assets/a2e8411f_1603629-01.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6630-3535-4036-b737-363639306638/1___1__3.png",
+     "alt": "",
+     "local": "/assets/8937d9e3_1___1__3.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3932-3463-4262-b935-653334666231/1___1__5.png",
+     "alt": "",
+     "local": "/assets/517e36c2_1___1__5.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249777353",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "С нами работают",
+     "href": ""
+    }
+   ],
+   "images": [],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249912163",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6463-6638-4566-a533-643864666361/__-157.jpg",
+     "alt": "",
+     "local": "/assets/526310c5___-157.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3966-3935-4561-b036-323039666566/__-156.jpg",
+     "alt": "",
+     "local": "/assets/6faa54d5___-156.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3639-3239-4265-b232-356364613531/__-155.jpg",
+     "alt": "",
+     "local": "/assets/55395ca7___-155.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3866-6134-4534-a230-653166303930/__-154.jpg",
+     "alt": "",
+     "local": "/assets/89a0a2f3___-154.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3438-3330-4937-b062-383537333162/__-153.jpg",
+     "alt": "",
+     "local": "/assets/170b02a4___-153.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3237-3337-4162-b263-396564626664/__-152.jpg",
+     "alt": "",
+     "local": "/assets/c26782e8___-152.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6463-6638-4566-a533-643864666361/-/resizeb/20x/__-157.jpg",
+     "alt": "",
+     "local": "/assets/444035c4___-157.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3966-3935-4561-b036-323039666566/-/resizeb/20x/__-156.jpg",
+     "alt": "",
+     "local": "/assets/5a1d0050___-156.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3639-3239-4265-b232-356364613531/-/resizeb/20x/__-155.jpg",
+     "alt": "",
+     "local": "/assets/bbfbe9e4___-155.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3866-6134-4534-a230-653166303930/-/resizeb/20x/__-154.jpg",
+     "alt": "",
+     "local": "/assets/a62e22af___-154.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3438-3330-4937-b062-383537333162/-/resizeb/20x/__-153.jpg",
+     "alt": "",
+     "local": "/assets/50b8aa00___-153.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3237-3337-4162-b263-396564626664/-/resizeb/20x/__-152.jpg",
+     "alt": "",
+     "local": "/assets/4667213a___-152.jpg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec236488968",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Hand Marketing",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "м. Краснопресненская / м. Баррикадная 123022, Москва, Рочдельская, 14А",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "+7 495 580 75 37 info@hand-marketing.ru",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3639-3139-4463-b061-353263626538/pngegg_8.png",
+     "alt": "",
+     "local": "/assets/b919f59e_pngegg_8.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3165-3233-4938-b135-396462306330/pngegg_9.png",
+     "alt": "",
+     "local": "/assets/75d80daa_pngegg_9.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6433-3735-4366-b465-633763306263/__-124.png",
+     "alt": "",
+     "local": "/assets/56c192f2___-124.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6261-6165-4637-b633-303732363565/__-128.png",
+     "alt": "",
+     "local": "/assets/49784027___-128.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec288775527",
+   "type": "",
+   "texts": [],
+   "images": [],
+   "videos": [
+    {
+     "type": "mp4",
+     "src": "https://dl.dropboxusercontent.com/s/9cqeabb1b6pla6k/HM_Showreel.mp4?dl=0"
+    }
+   ],
+   "links": []
+  }
+ ],
+ "og_local": "/assets/c034cbfb___76876-145.png"
+}

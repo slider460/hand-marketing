@@ -1,0 +1,90 @@
+{
+ "title": "Video_Lingerie",
+ "description": "",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec237112973",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Подиумная съемка для журнала Lingerie",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Video Production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Организовать съемку показа моды и произвести монтаж отчетного ролика.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Задача",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Компания",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Решение",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Результат",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Lingerie - одно из самых читаемых в России изданий о нижнем белье и бельевом бизнесе. Издание получило известность в международном сообществе и является официальным информационным партнером главных мировых выставок отрасли — Unique by Mode City, Salon International de la Lingerie, Interfilière Paris, Maredamare, CPM Body & Beach, MareDimoda, Interfilière Hong Kong, Interfilière Shanghai, IATF Дубаи, Fashion World Токио, In Moda Индия, CAF Казахстан, Текстильлегпром и др.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Для подиумной схемки показа мод мы использовали двух операторов. Один оператор снимал крупный план, второй - общий. На постпродакшене ролик собирался в соответствии со структурой показа брендов.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3663-6466-4866-b032-303233356436/__3-72.png",
+     "alt": "",
+     "local": "/assets/6401cc5e___3-72.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6536-3430-4832-a633-623036626139/__-80.png",
+     "alt": "",
+     "local": "/assets/9838f566___-80.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3933-3162-4164-b862-623761663238/image_2020-10-11_00-.png",
+     "alt": "",
+     "local": "/assets/b0dbd709_image_2020-10-11_00-.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec238747754",
+   "type": "",
+   "texts": [],
+   "images": [],
+   "videos": [
+    {
+     "type": "mp4",
+     "src": "https://dl.dropboxusercontent.com/s/l4g7l1uln912aul/Video%20Lingerie%20Hand%20Marketing.mp4?dl=0"
+    }
+   ],
+   "links": []
+  }
+ ]
+}

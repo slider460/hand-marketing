@@ -1,0 +1,9 @@
+node_modules
+dist
+.env.local
+public/assets/*
+!public/assets/.gitkeep
+.DS_Store
+**/.DS_Store
+*.bak
+mirror/api/leads.csv

@@ -1,0 +1,430 @@
+{
+ "title": "Об агентстве Hand Marketing",
+ "description": "О нас ",
+ "og_image": "https://static.tildacdn.com/tild6461-6533-4238-b733-646365363464/image.png",
+ "blocks": [
+  {
+   "id": "rec249828908",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Основную бизнес-философию агентства Hand Marketing можно охарактеризовать словом «прозрачность»: клиент имеет возможность наблюдать за исполнением заказа на каждом этапе работы, получая экспертную оценку исполняемых процедур. Главной движущей силой нашей компании являются ее сотрудники. На сегодняшний день в агентстве работают специалисты, имеющие богатый опыт работы в рекламном бизнесе.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "О НАС",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "БОЛЕЕ 10 ЛЕТ",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "мы преумножаем успехи",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "FULL SERVICE",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Любые услуги в области маркетинговых коммуникаций",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "СОТРУДНИЧЕСТВО",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Целеустремленность и внимание к партнерам - залог долгосрочного партнерства",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "ЛОКАЦИЯ",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Офис в центре Москвы. Региональная партнерская сеть с охватом более 100 городов России",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Основной принцип нашей работы - комплексное обеспечение клиентского сервиса на основе ситуационного анализа его потребностей, с последующей выработкой наиболее оптимальных методик и инструментов продвижения продуктов и услуг. Головной офис находится в Москве, партнерская сеть охватывает все крупные города России.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3436-6364-4661-a130-303235663166/__-25.png",
+     "alt": "",
+     "local": "/assets/33d22881___-25.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6563-6234-4536-b165-656236646638/__-26.png",
+     "alt": "",
+     "local": "/assets/ce52de21___-26.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3633-3432-4235-b433-346566646565/__-27.png",
+     "alt": "",
+     "local": "/assets/8cf0a58f___-27.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6330-3234-4462-b636-666466306361/__-123.svg",
+     "alt": "",
+     "local": "/assets/15ccf0fe___-123.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6236-3636-4737-b032-346631353066/__-126.svg",
+     "alt": "",
+     "local": "/assets/23f2438d___-126.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6461-3039-4862-a362-363931653836/__-125.svg",
+     "alt": "",
+     "local": "/assets/bfd536b0___-125.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6166-3232-4131-b436-363230666534/__-124.svg",
+     "alt": "",
+     "local": "/assets/298a19b9___-124.svg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249828659",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Client Service Director / CEO",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Commercial Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Народецкий Александр",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Семенов Эдвард",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Наша команда",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Дементьев Святослав",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Chief Creative Officet",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Business Development Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Кличановский Сергей",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Chief information Officet",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Осотов Алексей",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Technical Director",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Муратов Денис",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Senior Account Manager",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Агафонова Илона",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3838-3461-4737-a231-396336386561/pizdapattrtn-61.svg",
+     "alt": "",
+     "local": "/assets/8136333e_pizdapattrtn-61.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6536-3538-4762-b664-633236633134/pizdapattrtn-62.svg",
+     "alt": "",
+     "local": "/assets/cfd18b4e_pizdapattrtn-62.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6133-3736-4165-a366-353530633430/mriyaresort_-01-05.png",
+     "alt": "",
+     "local": "/assets/7eed117e_mriyaresort_-01-05.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3366-6336-4430-b166-646662633061/mriyaresort_-01-06.png",
+     "alt": "",
+     "local": "/assets/1a4c5098_mriyaresort_-01-06.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6463-3334-4266-b835-313433396166/mriyaresort_-01-07.png",
+     "alt": "",
+     "local": "/assets/c1b18cc9_mriyaresort_-01-07.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3735-6531-4234-b830-363630623332/mriyaresort_-01-01.png",
+     "alt": "",
+     "local": "/assets/beff2559_mriyaresort_-01-01.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6238-6262-4661-a665-306166343031/mriyaresort_-01-02.png",
+     "alt": "",
+     "local": "/assets/926f2b86_mriyaresort_-01-02.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3636-6463-4437-b436-383331356332/mriyaresort_-01-03.png",
+     "alt": "",
+     "local": "/assets/832093b2_mriyaresort_-01-03.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3961-3936-4732-b134-383436653464/mriyaresort_-01-04.png",
+     "alt": "",
+     "local": "/assets/80a620e7_mriyaresort_-01-04.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249919980",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Наша команда",
+     "href": ""
+    }
+   ],
+   "images": [],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec249919996",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3230-6663-4363-b038-333866373133/__76876-145.png",
+     "alt": "",
+     "local": "/assets/c034cbfb___76876-145.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3764-6333-4063-b531-396238386537/__76876-147.png",
+     "alt": "",
+     "local": "/assets/4ff4e574___76876-147.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6534-3130-4535-b834-393262383437/__76876-149.png",
+     "alt": "",
+     "local": "/assets/89f50d91___76876-149.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6132-4639-a162-346433313762/__76876-151.png",
+     "alt": "",
+     "local": "/assets/330c1b56___76876-151.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3939-3635-4033-a436-386536353930/__76876-150.png",
+     "alt": "",
+     "local": "/assets/aea63d23___76876-150.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6561-6361-4236-b763-656565643230/__76876-148.png",
+     "alt": "",
+     "local": "/assets/25f67f86___76876-148.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3232-3531-4665-b739-626634306233/__76876-146.png",
+     "alt": "",
+     "local": "/assets/0ab3e523___76876-146.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3230-6663-4363-b038-333866373133/-/resizeb/20x/__76876-145.png",
+     "alt": "",
+     "local": "/assets/28016e0e___76876-145.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3764-6333-4063-b531-396238386537/-/resizeb/20x/__76876-147.png",
+     "alt": "",
+     "local": "/assets/0e1084d5___76876-147.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6534-3130-4535-b834-393262383437/-/resizeb/20x/__76876-149.png",
+     "alt": "",
+     "local": "/assets/29c371cc___76876-149.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6136-6132-4639-a162-346433313762/-/resizeb/20x/__76876-151.png",
+     "alt": "",
+     "local": "/assets/99292365___76876-151.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3939-3635-4033-a436-386536353930/-/resizeb/20x/__76876-150.png",
+     "alt": "",
+     "local": "/assets/38a5252a___76876-150.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6561-6361-4236-b763-656565643230/-/resizeb/20x/__76876-148.png",
+     "alt": "",
+     "local": "/assets/bad13ecf___76876-148.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3232-3531-4665-b739-626634306233/-/resizeb/20x/__76876-146.png",
+     "alt": "",
+     "local": "/assets/18e6a025___76876-146.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec237659936",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "В нашей работе мы ценим долгосрочное партнерство, и нам очень приятно что, обратившись к нам, с нами остаются на долгие годы.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Приятная часть нашей работы",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3162-6232-4564-b632-396431333834/_1-02.svg",
+     "alt": "",
+     "local": "/assets/d6f38343__1-02.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6139-3839-4034-b663-366464356664/Free_Flyer_01.png",
+     "alt": "",
+     "local": "/assets/2569a995_Free_Flyer_01.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3763-3834-4566-b634-643561336362/IMG_0434-2.jpg",
+     "alt": "",
+     "local": "/assets/03471723_IMG_0434-2.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6535-6538-4132-b534-353762363462/IMG_480708C64518-1.jpeg",
+     "alt": "",
+     "local": "/assets/5b028549_IMG_480708C64518-1.jpeg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec248612564",
+   "type": "",
+   "texts": [],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6331-6164-4934-b839-303939343038/-01.jpg",
+     "alt": "",
+     "local": "/assets/5edec812_-01.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3766-6665-4430-b638-313233313964/-02.jpg",
+     "alt": "",
+     "local": "/assets/6ab3ae28_-02.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6566-3935-4034-b332-346662616130/-03.jpg",
+     "alt": "",
+     "local": "/assets/4944d0e1_-03.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3063-3863-4561-b837-643834373564/-04.jpg",
+     "alt": "",
+     "local": "/assets/d92e7ddb_-04.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6334-3234-4632-a230-323138316437/-05.jpg",
+     "alt": "",
+     "local": "/assets/87db8011_-05.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3832-6432-4833-a637-623537633861/-06.jpg",
+     "alt": "",
+     "local": "/assets/18adc7ea_-06.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6361-6662-4432-a636-396261633062/-07.jpg",
+     "alt": "",
+     "local": "/assets/15f29a72_-07.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3737-3433-4938-a130-346363323664/-08.jpg",
+     "alt": "",
+     "local": "/assets/5f89736a_-08.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6638-6637-4764-b463-613236316663/-09.jpg",
+     "alt": "",
+     "local": "/assets/43b77270_-09.jpg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3661-6135-4566-b436-353434393862/_9324-01.jpg",
+     "alt": "",
+     "local": "/assets/cbf8f064__9324-01.jpg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ],
+ "og_local": "/assets/1d6436d2_image.png"
+}

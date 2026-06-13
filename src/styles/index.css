@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Hand Marketing v2.2 tokens */
+  --hm-green-light: #c7d306;
+  --hm-green: #96c223;
+  --hm-green-dark: #629535;
+  --hm-yellow-light: #ffdf2e;
+  --hm-yellow: #e1b905;
+  --hm-orange-light: #f39306;
+  --hm-red-light: #e8413b;
+  --hm-purple-light: #95388d;
+  --hm-purple: #673a7e;
+  --hm-cyan: #5bbcb0;
+  --hm-pink: #e71a83;
+  --hm-ink: #1a1a1a;
+  --hm-paper: #fafaf7;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  @apply font-body text-hm-ink bg-hm-paper antialiased;
+}
+h1, h2, h3, h4 { @apply font-display; }
+
+/* Карточка кейса v2.2: круг-постер -> цветной квадрат при ховере */
+.case-card { perspective: 1200px; }
+.case-card .face { backface-visibility: hidden; transition: transform .55s cubic-bezier(.4,.1,.2,1), opacity .4s; }
+.case-card .face-back { transform: rotateY(180deg); }
+.case-card:hover .face-front, .case-card:focus-within .face-front { transform: rotateY(180deg); }
+.case-card:hover .face-back, .case-card:focus-within .face-back { transform: rotateY(0deg); }
+@media (prefers-reduced-motion: reduce) {
+  .case-card .face { transition: opacity .3s; transform: none !important; }
+  .case-card:hover .face-front { opacity: 0; }
+}
+
+/* Бегущая строка логотипов клиентов */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }

@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -sL https://hand-marketing.ru -o /tmp/tilda_home.html)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"import json; m=json.load\\(open\\('/Users/aleksandrnarodetskii/Downloads/hand-marketing-react/src/data/assets-manifest.json'\\)\\); print\\(type\\(m\\), len\\(m\\)\\)\")",
+      "Bash(curl -s http://localhost:5173 -o /dev/null -w \"%{http_code}\")",
+      "Bash(curl -s \"http://localhost:5173/src/main.tsx\" -o /dev/null -w \" %{http_code}\")",
+      "Bash(python3 -)",
+      "Bash(node scripts/mirror-tilda.mjs)",
+      "Bash(jobs)",
+      "Bash(kill -0 39273)",
+      "Bash(grep -vE '^\\\\.*s*\\\\.*$|^  ассеты')",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://hand-marketing.ru/about -H 'User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0.0.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: ru-RU,ru;q=0.9' --compressed)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://hand-marketing.ru/\")",
+      "Bash(grep -vE '^[.s]*$|^  ассеты')",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(grep -oE \"storepart:'[0-9]+'[^;]{0,120}\" mirror/project/index.html)",
+      "Bash(curl -s \"https://store.tildaapi.com/api/getproductslist/?storepartuid=689558768071&recid=238003277&c=$\\(date +%s\\)000&getparts=true&getoptions=true&slice=1&size=100\" -H \"Referer: https://hand-marketing.ru/project\" -H \"Origin: https://hand-marketing.ru\" -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 Chrome/126.0.0.0 Safari/537.36\" -o /tmp/catalog.json)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('/tmp/catalog.json'\\)\\);print\\(d.get\\('status'\\),d.get\\('total'\\),len\\(d.get\\('products',[]\\)\\)\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(cp /tmp/catalog.json mirror/api/getproductslist.json)",
+      "Bash(curl -s \"https://store.tildaapi.com/api/getfilters/?storepartuid=689558768071&recid=238003277&c=$\\(date +%s\\)000\" -H \"Referer: https://hand-marketing.ru/project\" -A \"Mozilla/5.0 Chrome/126\" -o mirror/api/getfilters.json)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -sL \"https://weshow.su/portfolio/samara-stand-vdnh\" -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0.0.0 Safari/537.36\" -o /tmp/weshow_samara.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s \"https://weshow.su/assets/index-DEjBbLFf.js\" -A \"Mozilla/5.0\" -o /tmp/weshow_index.js)",
+      "Bash(curl -s \"https://weshow.su/assets/CaseSamaraStandVDNH-CgX3m9Bw.js\" -A \"Mozilla/5.0\" -o /tmp/ws_case.js)",
+      "Bash(node scripts/mirror-weshow-case.mjs)",
+      "Bash(grep -ohri '.\\\\{0,30\\\\}weshow.\\\\{0,40\\\\}' mirror/assets/)",
+      "Bash(grep -oE '<img[^>]{0,300}' mirror/index.html)",
+      "Bash(grep -rhoE \"data-elem-type='video'[^>]{0,400}\" mirror --include='*.html')"
+    ]
+  }
+}

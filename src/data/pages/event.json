@@ -1,0 +1,82 @@
+{
+ "title": "Услуги Event агентства Hand Marketing",
+ "description": "Услуши по организации мероприятий, wow show, road show, mice",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec226728692",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Event",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Конференции",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Выставки",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Презентации",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Корпоративные мероприятия",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Road show",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Специальные мероприятия",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "В организации мероприятия мы используем самые современные и продуманные технологические решения. В нашем парке огромный выбор проекционной техники и комплекс решений, который позволяет нам проводить различные по формату и масштабу мероприятия.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "MICE",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3861-6539-4134-b738-613332303161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/fa528dd6_Agency_presentation_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6465-3530-4439-a665-643566326532/__-124.svg",
+     "alt": "",
+     "local": "/assets/de4661b1___-124.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6261-3466-4236-b864-313965353430/__-125.svg",
+     "alt": "",
+     "local": "/assets/f19a1595___-125.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6639-6439-4262-b239-656465323161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/af6ba57b_Agency_presentation_.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

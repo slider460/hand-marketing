@@ -1,0 +1,75 @@
+{
+ "title": "Video_MesseDousseldorf_Inteplastika",
+ "description": "",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec238800871",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Обзорный ролик Messe Duesseldorf «Выставка Интерпластика»",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Снять обзорный ролик про выставку \"Интершарм\", которую организовывала компания Messe Duesseldorf.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Задача",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Компания",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Результат",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Messe Duesseldorf – организатор около 80 различных выставок по всему миру, охватывающих практически все отрасли экономики. Свою деятельность в России Мессе Дюссельдорф начала в 1963 году с организации официальной делегации Германии в рамках международной выставки «Химия», впервые прибыв по приглашению Торгово-Промышленной Палаты СССР.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3663-6466-4866-b032-303233356436/__3-72.png",
+     "alt": "",
+     "local": "/assets/6401cc5e___3-72.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3062-3262-4266-b632-643162313866/4234242___1.png",
+     "alt": "",
+     "local": "/assets/6621e3dd_4234242___1.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6264-6339-4963-b761-316263393566/image_2020-10-10_23-.png",
+     "alt": "",
+     "local": "/assets/52664bfa_image_2020-10-10_23-.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec238800726",
+   "type": "",
+   "texts": [],
+   "images": [],
+   "videos": [
+    {
+     "type": "mp4",
+     "src": "https://dl.dropboxusercontent.com/s/pdbzcvts89a5ilp/Interplastica%20Messe%20Duesseldorf.mp4?dl=0"
+    }
+   ],
+   "links": []
+  }
+ ]
+}

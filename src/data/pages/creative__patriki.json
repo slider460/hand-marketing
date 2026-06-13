@@ -1,0 +1,67 @@
+{
+ "title": "Creative_Patriki",
+ "description": "",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec243774879",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Разработка дизайна и верстка журнала Patriki Times",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Разработать дизайн журнала, включая сетку полос для ежемесячного выпуска. Оформить статьи рекламных модулей и интервью. Подготовить макеты для типографии и верстки интернет версии.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Задачи",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Компания",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Результат",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Ежемесячное глянцевое издание, посвященное лучшим местам центра Москвы.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3366-3664-4538-b632-356632323433/__-59.png",
+     "alt": "",
+     "local": "/assets/04cbd4d3___-59.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3135-3335-4734-a337-396563373033/photo.png",
+     "alt": "",
+     "local": "/assets/453e2537_photo.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3332-3131-4438-a262-363937623539/2.png",
+     "alt": "",
+     "local": "/assets/d844e59d_2.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3162-3135-4335-b439-336639373739/39565.png",
+     "alt": "",
+     "local": "/assets/9ab449af_39565.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "title": "Услуги агентства Hand Marketing",
+ "description": "Основные услуги агентства",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec228726270",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Event",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Creative & Design",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Video production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Print & Production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "BTL",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Digital",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "3D Mapping",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Hand Marketing - агентство полного цикла. Мы оказываем полный комплекс маркетинговых услуг, охватывающий online и offline продвижение товаров и услуг — от исследований, анализа и планирования до продакшна, проведения мероприятий, WOW SHOW и рекламных кампаний любой сложности.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3638-3032-4737-a561-386433393934/__-104.svg",
+     "alt": "",
+     "local": "/assets/194ea5d0___-104.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6230-3736-4036-b166-373633323062/__-105.svg",
+     "alt": "",
+     "local": "/assets/55a2a3af___-105.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6466-3266-4538-b932-666638343532/__-106.svg",
+     "alt": "",
+     "local": "/assets/483788e3___-106.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6235-3538-4131-b365-396330653938/__-107.svg",
+     "alt": "",
+     "local": "/assets/5513b54b___-107.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3035-6338-4635-b134-343563663832/__-108.svg",
+     "alt": "",
+     "local": "/assets/c687c699___-108.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3837-3730-4563-b161-323535303661/__-109.svg",
+     "alt": "",
+     "local": "/assets/053e46a2___-109.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6138-6261-4038-a434-666430383535/__-110.svg",
+     "alt": "",
+     "local": "/assets/b7903eb8___-110.svg"
+    }
+   ],
+   "videos": [],
+   "links": [
+    {
+     "href": "event",
+     "text": ""
+    },
+    {
+     "href": "creativedesign",
+     "text": ""
+    },
+    {
+     "href": "videoproduction",
+     "text": ""
+    },
+    {
+     "href": "printandproduction",
+     "text": ""
+    },
+    {
+     "href": "btl",
+     "text": ""
+    },
+    {
+     "href": "digital",
+     "text": ""
+    },
+    {
+     "href": "3dmapping",
+     "text": ""
+    },
+    {
+     "href": "event",
+     "text": "Event"
+    },
+    {
+     "href": "creativedesign",
+     "text": "Creative & Design"
+    },
+    {
+     "href": "videoproduction",
+     "text": "Video production"
+    },
+    {
+     "href": "printandproduction",
+     "text": "Print & Production"
+    },
+    {
+     "href": "btl",
+     "text": "BTL"
+    },
+    {
+     "href": "digital",
+     "text": "Digital"
+    },
+    {
+     "href": "3dmapping",
+     "text": "3D Mapping"
+    }
+   ]
+  }
+ ]
+}

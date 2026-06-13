@@ -1,0 +1,82 @@
+{
+ "title": "Creative_Book_Skolkovo",
+ "description": "",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec243778580",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Разработка дизайна и верстка книги \"Цифровое производство. Методы, экосистемы, технологии\"",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Задача",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Компания",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Результат",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Частная бизнес-школа, основанная в 2006 году, - совместный проект представителей российского и международного бизнесов. Бизнеc-школа частично создавалась на средства бизнес-сообщества.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сверстать книгу, следуя брендбуку сколково. Переработать инфографику для лучшего восприятия.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6365-3466-4966-b236-306663653465/__300118_1-01.svg",
+     "alt": "",
+     "local": "/assets/9fab4622___300118_1-01.svg"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6237-6336-4262-b633-633561356237/178.png",
+     "alt": "",
+     "local": "/assets/7a01e84c_178.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3139-3462-4233-b366-626366313336/2.png",
+     "alt": "",
+     "local": "/assets/eeccfba6_2.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3937-3565-4134-a239-343138303031/4.png",
+     "alt": "",
+     "local": "/assets/2ba7bd98_4.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6535-3261-4966-b966-386231346164/45.png",
+     "alt": "",
+     "local": "/assets/3805abe1_45.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6563-3239-4237-b861-323531653864/48.png",
+     "alt": "",
+     "local": "/assets/b2d51407_48.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6161-3630-4431-b339-653337383139/__-63.png",
+     "alt": "",
+     "local": "/assets/5ff68308___-63.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

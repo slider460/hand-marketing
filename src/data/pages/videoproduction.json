@@ -1,0 +1,77 @@
+{
+ "title": "Video Production услуги агентства Hand Marketing",
+ "description": "Рекламные ролики, отчетные ролики, вирусные ролики, обучающие ролики, видео презентации (ON/OFFline)",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec226962520",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Video production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Рекламные ролики",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Корпоративные фильмы",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Отчетные ролики",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Вирусные ролики",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Обучающие ролики",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Видео презентации (ON/OFFline)",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Все: от сценария до комплексного воплощения самых смелых идей. Однажды мы даже утопили джип, но только ради искусства!",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6365-6338-4561-b839-356532313739/__-16.png",
+     "alt": "",
+     "local": "/assets/5627e57e___-16.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3861-6539-4134-b738-613332303161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/fa528dd6_Agency_presentation_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3034-3730-4231-a137-623764323432/__-17.png",
+     "alt": "",
+     "local": "/assets/240674e3___-17.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3136-6461-4339-b639-383237313836/__-18.png",
+     "alt": "",
+     "local": "/assets/1e2884cd___-18.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

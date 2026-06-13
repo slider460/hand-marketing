@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hand-marketing.ru/sitemap.xml

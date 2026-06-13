@@ -1,0 +1,312 @@
+{
+ "title": "Print&Production услуги агентства Hand Marketing",
+ "description": "Рекламные конструкции, POSm, навигационное оборудование, печатная продукция, уникальные конструкции",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec226982975",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Print & Production",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Рекламные конструкции",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Выставочное оборудование",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "POSm",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Навигационное оборудование",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Печатная продукция",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Уникальные конструкции",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Не производим, а творим! Обладая огромной экспертностью в задачах проектирования, мы с удовольствием беремся за самые сложные проекты, необходимые бренду. При этом ежедневно помогаем нашим клиентам стандартными производство-полиграфическими задачами.",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild6234-3534-4831-b461-663834396162/_1.png",
+     "alt": "",
+     "local": "/assets/6f1d8108__1.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3861-6539-4134-b738-613332303161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/fa528dd6_Agency_presentation_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3266-6364-4363-b134-633533613061/_3.png",
+     "alt": "",
+     "local": "/assets/bfaeb3e5__3.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6432-3638-4137-b138-306366623239/_1.png",
+     "alt": "",
+     "local": "/assets/7cc376fa__1.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6133-3633-4333-b565-343561396539/_8.png",
+     "alt": "",
+     "local": "/assets/a52a2bfc__8.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6564-3739-4838-b264-646534626636/_6.png",
+     "alt": "",
+     "local": "/assets/c121ab37__6.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3932-3362-4563-a532-346264636362/_4.png",
+     "alt": "",
+     "local": "/assets/93d53c40__4.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild6239-6532-4532-b831-386337356161/_5.png",
+     "alt": "",
+     "local": "/assets/122035ab__5.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3962-6633-4230-b036-633663373032/_2.png",
+     "alt": "",
+     "local": "/assets/ce68776c__2.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  },
+  {
+   "id": "rec248650959",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "Полиграфия",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Мы постарались подсчитать, сколько всего мы произвели полиграфии, и вот что вышло:",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Нестандартная полиграфия",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "3 050 900",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "5 900 700",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "985 900",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "256 900",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Листовки",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Брошюры",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Каталоги",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Рекламные конструкции",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "230",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "48",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "390",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "L Banner",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Pop UP",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Демо-стенд",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "92",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "560",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "95",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Press Wall",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Roll UP",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Лайтбокс",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "98 000",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "940",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сувенирная продукция",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Нестандартные рекламные конструкции",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "89",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Выставочный стенд",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "345",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Навигация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "690",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Промостойка",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "1560",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Нестандартные конструкции для мероприятий",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сувенирная продукция",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "98 000",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Сувенирная продукция",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "201 039",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3234-3862-4834-a566-613833343065/_____1_.svg",
+     "alt": "",
+     "local": "/assets/0d2c6607______1_.svg"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}

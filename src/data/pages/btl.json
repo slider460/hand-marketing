@@ -1,0 +1,77 @@
+{
+ "title": "BTL услуги агентства Hand Marketing",
+ "description": "Дегустация, семплинг, подарок за покупку, национальное промо, Mystery Shopper, консультации, HoReCa",
+ "og_image": "",
+ "blocks": [
+  {
+   "id": "rec226985363",
+   "type": "",
+   "texts": [
+    {
+     "role": "text",
+     "text": "BTL",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Дегустация",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Консультации",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Семплинг",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Подарок за покупку",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Национальное промо",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Mystery Shopper",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Интеграция инновационных решений позволяет достигать высоких показателей в различных направлениях: от разработки стратегий до проведения национальных проектов.",
+     "href": ""
+    },
+    {
+     "role": "text",
+     "text": "Промо в HoReCa",
+     "href": ""
+    }
+   ],
+   "images": [
+    {
+     "src": "https://static.tildacdn.com/tild3163-3837-4333-a232-393861366239/__-16.png",
+     "alt": "",
+     "local": "/assets/33ce337b___-16.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3861-6539-4134-b738-613332303161/Agency_presentation_.png",
+     "alt": "",
+     "local": "/assets/fa528dd6_Agency_presentation_.png"
+    },
+    {
+     "src": "https://static.tildacdn.com/tild3934-6337-4462-b161-393033313663/__-19.png",
+     "alt": "",
+     "local": "/assets/4d054e3b___-19.png"
+    }
+   ],
+   "videos": [],
+   "links": []
+  }
+ ]
+}
