@@ -19,7 +19,7 @@
     v.autoplay = false
     v.removeAttribute('autoplay')
     if (!v.getAttribute('preload')) v.preload = 'none'
-    // если ролик попытается стартовать сам (Tilda/браузер) — гасим
+    // если ролик попытается стартовать сам (скрипт/браузер) — гасим
     v.addEventListener('play', function () {
       if (!userInteracted) {
         v.pause()
