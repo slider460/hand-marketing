@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// собрать поля (Tilda шлёт name/phone/email/... как обычные POST-поля)
+// собрать поля (name/phone/email/... приходят как обычные POST-поля)
 $data = $_POST;
 if (empty($data)) {
     $raw = file_get_contents('php://input');
@@ -33,8 +33,8 @@ if (empty($data)) {
     }
 }
 
-// служебные поля Tilda не нужны
-$skip = ['formid', 'tildaspec', 'form-spec-comments-value', '_ga'];
+// служебные поля не нужны
+$skip = ['formid', 'tnspec', 'form-spec-comments-value', '_ga'];
 $lines = [];
 foreach ($data as $k => $v) {
     if (in_array($k, $skip, true)) continue;
