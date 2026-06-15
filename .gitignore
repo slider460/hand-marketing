@@ -7,3 +7,5 @@ public/assets/*
 **/.DS_Store
 *.bak
 mirror/api/leads.csv
+
+dist-deploy/
