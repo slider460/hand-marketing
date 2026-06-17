@@ -41,12 +41,12 @@ SECTION = '''<div id="rec2198174601" class="r t-rec" style="background:#0B0B0D;"
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Onest:wght@400;500;600;700&display=swap');
 .pp{--ink:#0B0B0D;--ink2:#101117;--cream:#F3ECDD;--mut:#9A9385;--dim:#6A6456;--gold:#C9A24B;--gold2:#E7C66B;--line:rgba(231,198,107,.18);--ease:cubic-bezier(.16,1,.3,1);
  background:var(--ink);color:var(--cream);font-family:'Onest',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow:hidden;position:relative}
-.pp *{box-sizing:border-box}
+.pp *{box-sizing:border-box}\n.pp::before{content:"";position:absolute;top:0;left:0;right:0;height:150px;z-index:1;pointer-events:none;background:linear-gradient(180deg,#F4EFE4 0%,#cdbc9d 14%,#6f6550 34%,#22201b 64%,#0B0B0D 100%)}
 .pp ::selection{background:var(--gold);color:#000}
 .pp__wrap{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
 .pp__kick{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 26px;display:flex;gap:14px;align-items:center}
 .pp__kick::before{content:"";width:34px;height:1px;background:var(--gold)}
-.pp__hero{padding:64px 0 30px;position:relative}
+.pp__hero{padding:104px 0 30px;position:relative}
 .pp__title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;color:var(--cream);
  font-size:clamp(52px,15vw,124px);line-height:.92;letter-spacing:-.01em;margin:0 0 8px}
 .pp__title em{font-style:italic;color:var(--gold2)}
@@ -89,8 +89,8 @@ SECTION = '''<div id="rec2198174601" class="r t-rec" style="background:#0B0B0D;"
 .pp__about h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,6vw,44px);line-height:1.04;margin:0;color:var(--cream)}
 .pp__about p{margin:0 0 16px;color:#CFC8BA}
 .pp__about p.drop::first-letter{font-family:'Cormorant Garamond',serif;font-size:3.4em;float:left;line-height:.8;padding:6px 12px 0 0;color:var(--gold2)}
-.pp__facts{display:flex;flex-wrap:wrap;gap:0;margin-top:26px;border-top:1px solid var(--line)}
-.pp__fact{flex:1 1 120px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.pp__facts{display:flex;flex-wrap:wrap;gap:0 30px;margin-top:26px;border-top:1px solid var(--line)}
+.pp__fact{flex:1 1 80px;min-width:80px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .pp__fact .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1}
 .pp__fact .t{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
 /* process editorial */
@@ -143,7 +143,7 @@ SECTION = '''<div id="rec2198174601" class="r t-rec" style="background:#0B0B0D;"
       <h2>Mall Management Group — коммерческая недвижимость полного цикла</h2>
       <div class="pp__facts">
         <div class="pp__fact"><div class="n">Plaza B.V.</div><div class="t">Группа</div></div>
-        <div class="pp__fact"><div class="n">ТРЦ</div><div class="t">Формат объекта</div></div>
+        <div class="pp__fact"><div class="n">ТРЦ</div><div class="t">Формат</div></div>
         <div class="pp__fact"><div class="n">5:37</div><div class="t">Хронометраж</div></div>
       </div>
     </div>
