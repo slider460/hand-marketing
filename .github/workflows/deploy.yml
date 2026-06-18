@@ -20,7 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upload via FTP/FTPS
+      # Попытка 1 — не валим джобу при разовом таймауте FTP
+      - name: Upload via FTP/FTPS (attempt 1)
+        id: ftp1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -28,9 +31,28 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
           port: ${{ vars.FTP_PORT || 21 }}
+          timeout: 120000
           local-dir: ./mirror/
           server-dir: ${{ vars.FTP_REMOTE_DIR || './public_html/' }}
           # leads.csv создаётся на сервере формами — не перетирать/не удалять
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/api/leads.csv
+            **/*.bak
+      # Попытка 2 — только если первая упала (разрыв соединения и т.п.)
+      - name: Retry on transient failure (attempt 2)
+        if: steps.ftp1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          port: ${{ vars.FTP_PORT || 21 }}
+          timeout: 180000
+          local-dir: ./mirror/
+          server-dir: ${{ vars.FTP_REMOTE_DIR || './public_html/' }}
           exclude: |
             **/.git*
             **/.git*/**
