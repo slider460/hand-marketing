@@ -1,0 +1,41 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/tokens.css';
+const {
+  title = 'Hand Marketing — рекламное агентство полного цикла',
+  description = 'Event, Creative & Design, Video Production, Print, Digital, 3D Mapping, BTL. Более 10 лет эффективных маркетинговых коммуникаций.',
+  image = '/og.jpg',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const org = {
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'Hand Marketing',
+  alternateName: 'Хэнд-маркетинг', url: 'https://hand-marketing.ru',
+  logo: 'https://hand-marketing.ru/logo.png', telephone: '+7-495-580-75-37',
+  email: 'info@hand-marketing.ru', foundingDate: '2012',
+  address: { '@type': 'PostalAddress', addressCountry: 'RU', addressLocality: 'Москва', postalCode: '105005', streetAddress: 'наб. Академика Туполева, 15' },
+};
+---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={image} />
+  <meta property="og:locale" content="ru_RU" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json" set:html={JSON.stringify(org)} />
+  <ClientRouter />
+</head>
+<body>
+  <slot />
+</body>
+</html>
