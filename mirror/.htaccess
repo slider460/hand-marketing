@@ -39,6 +39,20 @@ DirectoryIndex index.html
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
+# Тестовый домен закрыт от индексации (боевой hand-marketing.ru — НЕ затрагивается)
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Host "weshowstudia\.ru" STAGING
+  SetEnvIfNoCase Host "www\.weshowstudia\.ru" STAGING
+</IfModule>
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow" env=STAGING
+</IfModule>
+# Для тестового домена отдаём «запрещающий» robots.txt
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_HOST} weshowstudia\.ru [NC]
+  RewriteRule ^robots\.txt$ /robots-staging.txt [L]
+</IfModule>
+
 # Не отдавать служебное
 <FilesMatch "(\.csv|\.bak|_compare\.html)$">
   Require all denied
