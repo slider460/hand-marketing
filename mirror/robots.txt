@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/leads.csv
+
+Sitemap: https://hand-marketing.ru/sitemap.xml
+Host: hand-marketing.ru
