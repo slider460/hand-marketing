@@ -10,6 +10,9 @@ def resolve(base, ref):
     ref = ref.split('#')[0].split('?')[0]
     if not ref or ref.startswith(('//', 'http', 'mailto:', 'tel:', 'data:', 'javascript:')):
         return None
+    # /media/ — видео живут на хостинге (заливаются отдельно), не в репозитории
+    if ref.startswith('/media/'):
+        return None
     return os.path.normpath(M + ref) if ref.startswith('/') else os.path.normpath(os.path.join(base, ref))
 
 

@@ -40,6 +40,7 @@ jobs:
             **/.git*/**
             **/api/leads.csv
             **/*.bak
+            media/**
       # Попытка 2 — только если первая упала (разрыв соединения и т.п.)
       - name: Retry on transient failure (attempt 2)
         if: steps.ftp1.outcome == 'failure'
@@ -58,6 +59,7 @@ jobs:
             **/.git*/**
             **/api/leads.csv
             **/*.bak
+            media/**
 
   deploy-ssh:
     if: ${{ vars.DEPLOY_METHOD == 'ssh' }}
