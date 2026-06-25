@@ -1,7 +1,8 @@
 # hand-marketing.ru — статический сайт
 # Apache 2.4+, PHP для форм (/api/lead.php)
 
-DirectoryIndex index.html
+# Лёгкая A2-версия (index-a2.html) приоритетнее тяжёлого оригинала Тильды (index.html)
+DirectoryIndex index-a2.html index.html
 
 # Красивые URL: /project -> /project/index.html (отдаётся каталогом автоматически)
 <IfModule mod_rewrite.c>

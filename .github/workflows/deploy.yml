@@ -7,7 +7,7 @@ name: Deploy site to hosting
 on:
   push:
     branches: [main]
-    paths: ['mirror/**', '.github/workflows/deploy.yml']
+    paths: ['mirror/**', 'public/assets/**', '.github/workflows/deploy.yml']
   workflow_dispatch: {}
 
 concurrency:
@@ -60,6 +60,18 @@ jobs:
             **/api/leads.csv
             **/*.bak
             media/**
+      # Картинки кейсов мобильной версии (/case-assets/...) лежат в public/assets
+      - name: Upload case images (public/assets -> /case-assets)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          port: ${{ vars.FTP_PORT || 21 }}
+          timeout: 180000
+          local-dir: ./public/assets/
+          server-dir: ${{ vars.FTP_REMOTE_DIR || './public_html/' }}case-assets/
 
   deploy-ssh:
     if: ${{ vars.DEPLOY_METHOD == 'ssh' }}
@@ -75,6 +87,11 @@ jobs:
       - name: Rsync mirror/ to server
         run: |
           rsync -az --delete \
-            --exclude='api/leads.csv' --exclude='*.bak' \
+            --exclude='api/leads.csv' --exclude='*.bak' --exclude='media/***' \
             -e "ssh -p ${{ vars.SSH_PORT || 22 }} -i ~/.ssh/id_ed25519" \
             ./mirror/ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ vars.SSH_REMOTE_DIR }}"
+      - name: Rsync case images (public/assets -> /case-assets)
+        run: |
+          rsync -az \
+            -e "ssh -p ${{ vars.SSH_PORT || 22 }} -i ~/.ssh/id_ed25519" \
+            ./public/assets/ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ vars.SSH_REMOTE_DIR }}case-assets/"

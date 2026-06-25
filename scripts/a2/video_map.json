@@ -1,0 +1,85 @@
+{
+ "videos": {
+  "3d/stavropol": [
+   "/media/stavropol-3dmapping.mp4"
+  ],
+  "bekobod1": [
+   "/media/bekabad-hd.mp4",
+   "/media/silkway-3d.mp4"
+  ],
+  "event/changan": [
+   "/media/changan-hm-180220.mp4"
+  ],
+  "event/eaton": [
+   "/media/eaton-almaty.mp4"
+  ],
+  "event/marieclaire": [
+   "/media/marie-claire-event.mp4"
+  ],
+  "event/riviera": [
+   "/media/event-riviera.mp4"
+  ],
+  "event/salaris": [
+   "/media/salaris-event-fin180416.mp4"
+  ],
+  "event/samsung": [
+   "/media/samsung-new-year-2020.mp4"
+  ],
+  "isotec": [
+   "/media/izotek-brand-video.mp4",
+   "/media/silkway-3d.mp4"
+  ],
+  "mmg": [
+   "/media/mmg-paveleckayaplaza.mp4"
+  ],
+  "samara_vdnh": [
+   "/media/samara_vdnh-1.mp4",
+   "/media/samara_vdnh-2.mp4",
+   "/media/samara_vdnh-3.mp4",
+   "/media/samara_vdnh-4.mp4",
+   "/media/samara_vdnh-5.mp4",
+   "/media/samara_vdnh-6.mp4",
+   "/media/samsung-new-year-2020.mp4"
+  ],
+  "video/eaton": [
+   "/media/presentation-eaton-russia.mp4"
+  ],
+  "video/gaz": [
+   "/media/gazelle-transformer.mp4"
+  ],
+  "video/interplastika": [
+   "/media/interplastica-messe-duesseldorf.mp4"
+  ],
+  "video/lingerie": [
+   "/media/video-lingerie-hand-marketing.mp4"
+  ],
+  "video/mozaika": [
+   "/media/as-mozaika.mp4"
+  ],
+  "video/patriot": [
+   "/media/eaton-yaz.mp4"
+  ],
+  "video/powertechnologies": [
+   "/media/pt-film-long.mp4",
+   "/media/pt-film-short.mp4"
+  ],
+  "video/rgd/history": [
+   "/media/transrzhd.mp4"
+  ],
+  "video/salaris": [
+   "/media/as-salaris-1.mp4",
+   "/media/as-salaris-2.mp4"
+  ],
+  "video/silkway": [
+   "/media/silkway-3d.mp4"
+  ],
+  "video/vivax": [
+   "/media/vivax-samburskaya.mp4"
+  ],
+  "zubovo": [
+   "/media/technopark-zubovo.mp4",
+   "/media/silkway-3d.mp4"
+  ]
+ },
+ "showreel": "/media/hm-showreel.mp4"
+}

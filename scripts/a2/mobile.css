@@ -1,0 +1,27 @@
+/* A2 мобильная версия: карточки кейсов в 1 колонку на всю ширину (как в примерах) */
+@media (max-width:640px){
+  .t-store__card-list{flex-wrap:wrap !important;display:flex !important;}
+  .t-store__card,.t-store__card.t-store__stretch-col,.t-store__card.t-store__stretch-col_25,
+  .t-store__card.t-store__stretch-col_33,.t-store__card.t-store__stretch-col_50{
+    width:100% !important;max-width:100% !important;flex:0 0 100% !important;margin-left:0 !important;margin-right:0 !important;
+  }
+  .t-store__card__wrap_all{margin-bottom:22px !important;}
+}
+
+/* ===== Мобильная карусель кейсов (прямоугольные, свайп влево-вправо) ===== */
+.mcases{display:none}
+@media(max-width:640px){
+  /* прячем круглый Tilda-стор там, где есть карусель */
+  body:has(.mcases) .js-store-grid-cont,body:has(.mcases) .t-store__card-list,body:has(.mcases) .t-store__filter,body:has(.mcases) .t-store__sort,body:has(.mcases) .t-store__viewall{display:none !important}
+  .mcases{display:block;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 18px 26px;margin:0 -2px}
+  .mcases::-webkit-scrollbar{display:none}
+  .mcases__track{display:flex;gap:16px;width:max-content}
+  .mcase{scroll-snap-align:center;flex:0 0 84vw;max-width:340px;background:#fff;border-radius:22px;box-shadow:0 16px 38px -16px rgba(20,23,28,.28);overflow:hidden;text-decoration:none;color:#14171c}
+  .mcase__img{position:relative;aspect-ratio:4/3;background:#e9ebee;overflow:hidden}
+  .mcase__img img{width:100%;height:100%;object-fit:cover;display:block}
+  .mcase__cat{position:absolute;top:14px;left:14px;font:700 13px/1 Montserrat,Arial,sans-serif;color:#fff;background:rgba(20,23,28,.55);padding:6px 10px 5px;border-radius:5px;border-bottom:3px solid #FFE000}
+  .mcase__cat:empty{display:none}
+  .mcase__b{padding:20px 22px 26px}
+  .mcase__t{font:800 19px/1.15 Montserrat,Arial,sans-serif;margin-bottom:14px;color:#14171c}
+  .mcase__d{font:400 15px/1.45 Circe,Arial,sans-serif;color:#454c54}
+}
