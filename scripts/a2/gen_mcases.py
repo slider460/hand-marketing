@@ -48,7 +48,7 @@ for c in cases:
     cover=(c.get('cover') or (imgs[0] if imgs else '')).replace('/assets/','/case-assets/')
     if JUNK.search(cover.split('/')[-1]):
         real=clean(imgs)
-        if real: cover=real[0]
+        cover=real[0] if real else ''  # нет нормального фото -> без обложки (не показываем плейсхолдер)
     # галерея — реальные фото с мероприятия из отрендеренной Тильды; иначе fallback на page JSON
     extracted=GALLERY.get(route,[])
     if extracted:
