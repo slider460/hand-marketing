@@ -4,14 +4,16 @@ HERE=os.path.dirname(os.path.abspath(__file__))
 P='static/cdn/'
 _vm=os.path.join(HERE,'video_map.json')
 SHOWREEL=(json.load(open(_vm)).get('showreel') if os.path.exists(_vm) else None) or '/media/hm-showreel.mp4'
+# Готовые карточки команды Тильды (фото+имя+должность запечены вместе) — эталон,
+# исключает путаницу подписей. Имя в alt — для доступности/SEO.
 TEAM=[
- ("Народецкий Александр","Client Service Director / CEO","as6133-3736-4165-a366-353530633430/mriyaresort_-01-05.png"),
- ("Семёнов Эдвард","Commercial Director","as3366-6336-4430-b166-646662633061/mriyaresort_-01-06.png"),
- ("Сергей Кличановский","Business Development Director","as3735-6531-4234-b830-363630623332/mriyaresort_-01-01.png"),
- ("Дементьев Святослав","Chief Creative Officer","as6463-3334-4266-b835-313433396166/mriyaresort_-01-07.png"),
- ("Осотов Алексей","Chief Information Officer","as6238-6262-4661-a665-306166343031/mriyaresort_-01-02.png"),
- ("Агафонова Илона","Senior Account Manager","as3731-3535-4665-a633-663639313564/mriyaresort_-01-04.png"),
- ("Муратов Денис","Technical Director","as3636-6463-4437-b436-383331356332/mriyaresort_-01-03.png"),
+ ("Народецкий Александр","as3230-6663-4363-b038-333866373133/__76876-145.png"),
+ ("Семёнов Эдуард","as6534-3130-4535-b834-393262383437/__76876-149.png"),
+ ("Сергей Кличановский","as3764-6333-4063-b531-396238386537/__76876-147.png"),
+ ("Дементьев Святослав","as6136-6132-4639-a162-346433313762/__76876-151.png"),
+ ("Осотов Алексей","as3939-3635-4033-a436-386536353930/__76876-150.png"),
+ ("Агафонова Илона","as6561-6361-4236-b763-656565643230/__76876-148.png"),
+ ("Муратов Денис","as3232-3531-4665-b739-626634306233/__76876-146.png"),
 ]
 SERVICES=[("Event","/event","#673A7E"),("Creative & Design","/creativedesign","#C12164"),
  ("Video Production","/videoproduction","#CF6F19"),("Digital","/digital","#5E9A2E"),
@@ -28,7 +30,7 @@ cards=m.group(1) if m else ''
 
 svc=''.join(f'<a class="mh-chip" href="{u}" style="--c:{c}">{H.escape(n)}</a>' for n,u,c in SERVICES)
 ab=''.join(f'<div class="mh-val" style="--c:{c}"><div class="mh-val__dot"></div><div><div class="mh-val__t">{H.escape(t)}</div><div class="mh-val__d">{H.escape(d)}</div></div></div>' for t,d,c in ABOUT)
-team=''.join(f'<div class="mh-mate"><div class="mh-mate__ph"><img src="{P}{ph}" alt="{H.escape(n)}" loading="lazy"></div><div class="mh-mate__n">{H.escape(n)}</div><div class="mh-mate__r">{H.escape(r)}</div></div>' for n,r,ph in TEAM)
+team=''.join(f'<div class="mh-mate"><img src="{P}{ph}" alt="{H.escape(n)}" loading="lazy"></div>' for n,ph in TEAM)
 logos=''.join(f'<div class="mh-logo"><img src="{P}{l}" alt="" loading="lazy"></div>' for l in LOGOS)
 
 mh=f'''<div class="mhome" id="mhome">
@@ -56,7 +58,8 @@ mh=f'''<div class="mhome" id="mhome">
 
 <section class="mh-sec mh-team">
   <h2>Наша команда</h2>
-  <div class="mh-mates">{team}</div>
+  <div class="mh-mates" data-team><div class="mh-mates__track">{team}</div></div>
+  <div class="mh-mates__dots" aria-hidden="true"></div>
 </section>
 
 <section class="mh-sec mh-clients">
@@ -85,4 +88,4 @@ mh=f'''<div class="mhome" id="mhome">
 </footer>
 </div>'''
 open(os.path.join(HERE,'mhome.html'),'w').write(mh)
-print('mhome.html:',len(mh),'bytes | cases cards:',cards.count('mcase__t'),'| team:',len(TEAM),'| logos:',len(LOGOS))
+print('mhome.html:',len(mh),'bytes | cases cards:',cards.count('mcase__t'),'| team cards:',len(TEAM),'| logos:',len(LOGOS))

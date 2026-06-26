@@ -83,12 +83,15 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><meta 
   .mh-val__d{font-size:15px;color:#5A616A;line-height:1.45}
 
   /* TEAM */
-  .mh-mates{padding:22px 20px 0;display:grid;grid-template-columns:1fr 1fr;gap:22px 16px}
-  .mh-mate{text-align:center}
-  .mh-mate__ph{width:124px;height:124px;margin:0 auto 12px;border-radius:50%;overflow:hidden;background:#eef0f2;box-shadow:0 12px 26px -12px rgba(20,23,28,.35)}
-  .mh-mate__ph img{width:100%;height:100%;object-fit:cover}
-  .mh-mate__n{font-family:'Montserrat';font-weight:700;font-size:16px;line-height:1.2}
-  .mh-mate__r{font-size:13px;color:var(--muted);margin-top:4px}
+  /* команда — горизонтальная карусель по одному человеку */
+  .mh-mates{margin-top:20px;padding:0 20px 4px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .mh-mates::-webkit-scrollbar{display:none}
+  .mh-mates__track{display:flex;gap:14px}
+  .mh-mate{flex:0 0 100%;scroll-snap-align:center}
+  .mh-mate img{width:100%;display:block;border-radius:18px;background:#2b2b2b;box-shadow:0 14px 30px -16px rgba(20,23,28,.45)}
+  .mh-mates__dots{display:flex;justify-content:center;gap:7px;margin-top:14px}
+  .mh-mates__dots span{width:7px;height:7px;border-radius:50%;background:#d4d7dd;transition:background .2s,width .2s}
+  .mh-mates__dots span.on{background:var(--ink,#14171C);width:20px;border-radius:4px}
 
   /* CLIENTS */
   .mh-logos{padding:22px 20px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -254,4 +257,7 @@ src='../../static/thb/as3036-3435-4134-a366-353439353766/-/resize/20x/noroot.png
 alt='' imgfield='tn_img_1604681109980'
 /> </div> </div> <div class='t396__elem tn-elem tn-elem__2376106061604681147600' data-elem-id='1604681147600' data-elem-type='text' data-field-top-value="240" data-field-left-value="420" data-field-width-value="170" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-fontsize-value="15" data-field-top-res-320-value="294" data-field-left-res-320-value="167" data-field-width-res-320-value="70" data-field-fontsize-res-320-value="8" data-field-top-res-640-value="315" data-field-left-res-640-value="280" data-field-top-res-960-value="275" data-field-left-res-960-value="280"> <div class='tn-atom'field='tn_text_1604681147600'>Подключен<br>
 к системе</div> </div> </div> </div> <script type="td">t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('237610606');});});</script> <!-- /T396 --> </div> </footer> <!--/footer--> </div> <!--/allrecords--> <!-- Stat --> <!-- Yandex.Metrika counter 71125393 -->  <noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --> <script type="td">if(!window.mainTracker) {window.mainTracker='custom';}
-</script> <script type="td" data-src="../../static/adaptive.js"></script><script>(function(){var b=document.querySelector('.mh-burger'),m=document.querySelector('.mh-menu');if(b&&m){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));m.hidden=o;});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.setAttribute('aria-expanded','false');m.hidden=true;});});}var h=document.querySelector('.mh-hdr');if(h)addEventListener('scroll',function(){h.style.boxShadow=pageYOffset>8?'0 8px 22px -12px rgba(0,0,0,.28)':'none';},{passive:true});})();</script><script>(function(){if(innerWidth<=640)return;var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script></body> </html>
+</script> <script type="td" data-src="../../static/adaptive.js"></script><script>(function(){var b=document.querySelector('.mh-burger'),m=document.querySelector('.mh-menu');if(b&&m){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));m.hidden=o;});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.setAttribute('aria-expanded','false');m.hidden=true;});});}var h=document.querySelector('.mh-hdr');if(h)addEventListener('scroll',function(){h.style.boxShadow=pageYOffset>8?'0 8px 22px -12px rgba(0,0,0,.28)':'none';},{passive:true});
+var tc=document.querySelector('.mh-mates[data-team]'),dots=document.querySelector('.mh-mates__dots');
+if(tc&&dots){var sl=tc.querySelectorAll('.mh-mate');for(var i=0;i<sl.length;i++){var d=document.createElement('span');if(i===0)d.className='on';dots.appendChild(d);}
+var ds=dots.children;tc.addEventListener('scroll',function(){var idx=Math.round(tc.scrollLeft/tc.clientWidth);for(var i=0;i<ds.length;i++)ds[i].className=i===idx?'on':'';},{passive:true});}})();</script><script>(function(){if(innerWidth<=640)return;var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script></body> </html>
