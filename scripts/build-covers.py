@@ -5,8 +5,9 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
 W,H=477,396; CX,CY,R=238,198,184
+_FONT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'fonts','Montserrat.ttf')
 def font(sz,w='ExtraBold'):
-    f=ImageFont.truetype('/tmp/fonts/Montserrat.ttf',sz)
+    f=ImageFont.truetype(_FONT,sz)
     try: f.set_variation_by_name(w)
     except: pass
     return f
@@ -36,7 +37,8 @@ def make(photo,focus,band,lines,cubes,out,sz=46):
         sz-=2; f=font(sz); lh=int(sz*1.0)
     total=lh*len(lines); by0=CY-R+40
     mw=max(d.textlength(t,font=f) for t in lines); padx=22
-    d.rounded_rectangle([CX-mw/2-padx,by0-12,CX+mw/2+padx,by0+total+10],14,fill=band)
+    bw=max(mw+2*padx, W-52)  # единая минимальная ширина плашки для всех карточек
+    d.rounded_rectangle([CX-bw/2,by0-12,CX+bw/2,by0+total+10],16,fill=band)
     y=by0
     for t in lines:
         tw=d.textlength(t,font=f); d.text((CX-tw/2,y),t,font=f,fill=(255,255,255)); y+=lh
