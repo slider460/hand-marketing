@@ -163,4 +163,12 @@
   .mh-video{width:100%;border-radius:18px;background:#000;aspect-ratio:16/9;display:block}
   .mh-reel{padding:0 20px 6px}
   .mh-reel__cap{font:800 13px/1 Montserrat,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#673A7E;margin:0 0 10px 2px}
-  .mh-reel video{width:100%;border-radius:20px;background:#000;aspect-ratio:16/9;display:block}
+  /* тизер-типографика (немой авто-луп) + кнопка Play -> по тапу полный шоурил со звуком */
+  .mh-reel__box{position:relative;border-radius:20px;overflow:hidden;background:#0b0b0c;aspect-ratio:16/9;cursor:pointer}
+  .mh-reel__teaser,.mh-reel__full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0b0b0c}
+  .mh-reel__play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:0;cursor:pointer;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.42))}
+  .mh-reel__pi{position:relative;width:74px;height:74px;border-radius:50%;background:#FFE000;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.6)}
+  .mh-reel__pi::before{content:"";width:0;height:0;border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #14171C;margin-left:6px}
+  .mh-reel__pi::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid rgba(255,224,0,.55);animation:mh-pulse 1.9s ease-out infinite}
+  .mh-reel__pl{font:800 13px/1.15 Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+  @keyframes mh-pulse{0%{transform:scale(1);opacity:.85}100%{transform:scale(1.55);opacity:0}}

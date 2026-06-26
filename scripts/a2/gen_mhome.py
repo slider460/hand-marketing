@@ -46,7 +46,7 @@ mh=f'''<div class="mhome" id="mhome">
   <p class="mh-lead">Делаем маркетинг, <b>который видно</b> — от идеи до реализации.</p>
   <div class="mh-chips">{svc}</div>
 </section>
-<section class="mh-reel" id="mh-reel"><div class="mh-reel__cap">Шоурил</div><video controls preload="metadata" playsinline><source src="{SHOWREEL}" type="video/mp4"></video></section>
+<section class="mh-reel" id="mh-reel"><div class="mh-reel__cap">Шоурил</div><div class="mh-reel__box" data-reel data-src="{SHOWREEL}"><video class="mh-reel__teaser" autoplay muted loop playsinline preload="auto" poster="/showreel-cover.jpg"><source src="/showreel-teaser.mp4" type="video/mp4"></video><button class="mh-reel__play" type="button" aria-label="Смотреть шоурил со звуком"><span class="mh-reel__pi"></span><span class="mh-reel__pl">Смотреть<br>шоурил</span></button></div></section>
 
 <section class="mh-sec" id="mh-cases">
   <div class="mh-sec__h"><h2>Кейсы</h2><a class="mh-all" href="/project">Все проекты →</a></div>
