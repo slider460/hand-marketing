@@ -75,11 +75,13 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><scrip
   .mcase__d{font-size:15px;color:#5A616A;line-height:1.4}
 
   /* ABOUT */
-  .mh-vals{padding:20px 20px 0;display:flex;flex-direction:column;gap:16px}
-  .mh-val{display:flex;gap:16px;padding:18px;border-radius:18px;background:#F7F8FA;border-left:4px solid var(--c)}
-  .mh-val__dot{flex:0 0 14px;width:14px;height:14px;border-radius:5px;background:var(--c);margin-top:5px}
-  .mh-val__t{font-family:'Montserrat';font-weight:800;font-size:19px;margin-bottom:5px}
-  .mh-val__d{font-size:15px;color:#5A616A;line-height:1.45}
+  /* «О нас» — бренд-цветные постеры с ghost-глифом (билборд: «маркетинг, который видно») */
+  .mh-vals{padding:20px 20px 0;display:flex;flex-direction:column;gap:14px}
+  .mh-val{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:var(--c);color:#fff;padding:26px 22px 24px;box-shadow:0 18px 34px -20px var(--c)}
+  .mh-val__ghost{position:absolute;z-index:-1;right:-8px;top:-22px;font:900 132px/1 Montserrat,Arial,sans-serif;letter-spacing:-.05em;color:rgba(255,255,255,.16);pointer-events:none;user-select:none}
+  .mh-val__eyebrow{display:block;font:800 11px/1 Montserrat,Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:12px}
+  .mh-val__t{font-family:'Montserrat';font-weight:800;font-size:25px;line-height:1.06;letter-spacing:-.01em;margin:0 0 9px}
+  .mh-val__d{margin:0;font-size:15px;line-height:1.46;color:rgba(255,255,255,.92);max-width:26ch}
 
   /* TEAM */
   /* команда — горизонтальная карусель по одному человеку */
@@ -185,7 +187,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><scrip
 
 <section class="mh-sec mh-about">
   <h2>О нас</h2>
-  <div class="mh-vals"><div class="mh-val" style="--c:#C12164"><div class="mh-val__dot"></div><div><div class="mh-val__t">Более 10 лет</div><div class="mh-val__d">Делаем эффективные маркетинговые коммуникации</div></div></div><div class="mh-val" style="--c:#CF6F19"><div class="mh-val__dot"></div><div><div class="mh-val__t">Full service</div><div class="mh-val__d">Любые услуги в области маркетинговых коммуникаций</div></div></div><div class="mh-val" style="--c:#5E9A2E"><div class="mh-val__dot"></div><div><div class="mh-val__t">Сотрудничество</div><div class="mh-val__d">Целеустремлённость и внимание к партнёрам — залог долгосрочного партнёрства</div></div></div><div class="mh-val" style="--c:#673A7E"><div class="mh-val__dot"></div><div><div class="mh-val__t">Локация</div><div class="mh-val__d">Офис в центре Москвы. Региональная сеть с охватом 100+ городов России</div></div></div></div>
+  <div class="mh-vals"><article class="mh-val" style="--c:#C12164"><span class="mh-val__ghost" aria-hidden="true">10+</span><span class="mh-val__eyebrow">Опыт</span><h3 class="mh-val__t">Более 10 лет на рынке</h3><p class="mh-val__d">Делаем эффективные маркетинговые коммуникации.</p></article><article class="mh-val" style="--c:#CF6F19"><span class="mh-val__ghost" aria-hidden="true">360°</span><span class="mh-val__eyebrow">Формат</span><h3 class="mh-val__t">Full service</h3><p class="mh-val__d">Любые услуги в области маркетинговых коммуникаций — под одной крышей.</p></article><article class="mh-val" style="--c:#5E9A2E"><span class="mh-val__ghost" aria-hidden="true">&amp;</span><span class="mh-val__eyebrow">Подход</span><h3 class="mh-val__t">Сотрудничество</h3><p class="mh-val__d">Целеустремлённость и внимание к партнёрам — залог долгосрочной работы.</p></article><article class="mh-val" style="--c:#673A7E"><span class="mh-val__ghost" aria-hidden="true">100+</span><span class="mh-val__eyebrow">География</span><h3 class="mh-val__t">100+ городов России</h3><p class="mh-val__d">Офис в центре Москвы и региональная сеть по всей стране.</p></article></div>
 </section>
 
 <section class="mh-sec mh-team">

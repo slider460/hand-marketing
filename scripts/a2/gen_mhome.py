@@ -18,10 +18,12 @@ TEAM=[
 SERVICES=[("Event","/event","#673A7E"),("Creative & Design","/creativedesign","#C12164"),
  ("Video Production","/videoproduction","#CF6F19"),("Digital","/digital","#5E9A2E"),
  ("3D Mapping","/3dmapping","#7E3FA0"),("Print & Production","/printandproduction","#E08A2B"),("BTL","/btl","#D6357E")]
-ABOUT=[("Более 10 лет","Делаем эффективные маркетинговые коммуникации","#C12164"),
- ("Full service","Любые услуги в области маркетинговых коммуникаций","#CF6F19"),
- ("Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочного партнёрства","#5E9A2E"),
- ("Локация","Офис в центре Москвы. Региональная сеть с охватом 100+ городов России","#673A7E")]
+# «О нас» — бренд-цветные постеры; ghost-глиф кодирует смысл (10+, 360°, &, 100+)
+# (цвет, эйбрау, ghost-глиф, заголовок, описание)
+ABOUT=[("#C12164","Опыт","10+","Более 10 лет на рынке","Делаем эффективные маркетинговые коммуникации."),
+ ("#CF6F19","Формат","360°","Full service","Любые услуги в области маркетинговых коммуникаций — под одной крышей."),
+ ("#5E9A2E","Подход","&","Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочной работы."),
+ ("#673A7E","География","100+","100+ городов России","Офис в центре Москвы и региональная сеть по всей стране.")]
 LOGOS="""as3432-6564-4939-b661-323662313364/-1___1.png|as3066-3236-4161-b334-323334656232/samregion.png|as3832-3339-4933-b862-313162643738/-1___1_.png|as3838-3739-4632-b934-633966616665/tb-drone-logo-footer.svg|as3131-3864-4362-a232-336664366339/-1___1__23.png|as3464-6230-4430-a663-383430313964/logo_1.svg|as6136-3365-4733-b532-356530633965/-1___1__22.png|as6336-3333-4338-b864-363563663130/-1___1__21.png|as3561-6236-4939-a632-626362373038/-1___1__20.png|as6136-6532-4434-b338-356238363733/-1___1__19.png|as3566-6666-4236-b331-353564393064/-1___1__18.png|as6136-6462-4631-b130-616639666233/-1___1__17.png""".split('|')
 
 cases=open(os.path.join(HERE,'carousels','all.html')).read()
@@ -29,7 +31,7 @@ m=re.search(r'<div class="mcases__track">(.*)</div></div>', cases, re.S)
 cards=m.group(1) if m else ''
 
 svc=''.join(f'<a class="mh-chip" href="{u}" style="--c:{c}">{H.escape(n)}</a>' for n,u,c in SERVICES)
-ab=''.join(f'<div class="mh-val" style="--c:{c}"><div class="mh-val__dot"></div><div><div class="mh-val__t">{H.escape(t)}</div><div class="mh-val__d">{H.escape(d)}</div></div></div>' for t,d,c in ABOUT)
+ab=''.join(f'<article class="mh-val" style="--c:{c}"><span class="mh-val__ghost" aria-hidden="true">{H.escape(g)}</span><span class="mh-val__eyebrow">{H.escape(e)}</span><h3 class="mh-val__t">{H.escape(t)}</h3><p class="mh-val__d">{H.escape(d)}</p></article>' for c,e,g,t,d in ABOUT)
 team=''.join(f'<div class="mh-mate"><img src="{P}{ph}" alt="{H.escape(n)}" loading="lazy"></div>' for n,ph in TEAM)
 logos=''.join(f'<div class="mh-logo"><img src="{P}{l}" alt="" loading="lazy"></div>' for l in LOGOS)
 
