@@ -83,6 +83,8 @@ MEDIA_REMAP={
 def remap_media(h):
     for a,b in MEDIA_REMAP.items():
         h=h.replace('/media/'+a,'/media/'+b)
+    # внешний хост weshow.su -> наш /media (ролик Eaton)
+    h=h.replace('https://weshow.su/videos/Presentation_Eaton_Russia.mp4','/media/presentation-eaton-russia.mp4')
     return h
 
 def process(p, route):
