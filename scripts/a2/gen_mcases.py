@@ -55,6 +55,10 @@ for c in cases:
         gallery=extracted
     else:
         gallery=clean([i for i in imgs if i!=cover])
+    # для кейсов-брошюр выносим главный макет в отдельный блок «Результат»
+    result_img=None
+    if route in BEFOREAFTER and gallery:
+        result_img=gallery[0]; gallery=gallery[1:]
     galhtml=''.join(f'<img src="{H.escape(g)}" alt="" loading="lazy">' for g in gallery)
     inner=f'''<section class="mh-hero mh-hero_sm" style="--c:{color}"><a class="mh-back" href="/project">← Все проекты</a><p class="mh-eyebrow" style="color:{color}">{H.escape(c['categoryLabel'])}</p><h1 class="mh-h1 mh-h1_sm">{H.escape(c['client'])}</h1><p class="mh-lead">{H.escape(c['title'])}</p></section>'''
     if cover: inner+=f'<div class="mh-cover"><img src="{H.escape(cover)}" alt="{H.escape(c["title"])}"></div>'
@@ -68,6 +72,10 @@ for c in cases:
                 f'<span class="mh-ba__handle"></span>'
                 f'<input class="mh-ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнить ТЗ и дизайн"></div>'
                 f'<p class="mh-ba__hint">← потяните, чтобы сравнить →</p></section>')
+    if result_img:
+        inner+=(f'<section class="mh-sec mh-result" style="--c:{color}"><h2 style="padding:0 20px">Результат</h2>'
+                f'<div class="mh-result__card"><span class="mh-result__tag">Готовая брошюра</span>'
+                f'<img src="{H.escape(result_img)}" alt="Результат — {H.escape(c["title"])}" loading="lazy"></div></section>')
     vids=VIDEOS.get(route,[])
     if vids:
         cov=H.escape(cover) if cover else ''
