@@ -20,6 +20,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build deployable tree (A2 -> index.html)
+        run: |
+          # Лёгкая A2-версия становится самим index.html (перезатирает тяжёлый оригинал
+          # Тильды); промежуточный index-a2.html в дерево деплоя не попадает -> FTP-синк
+          # удалит его и с сервера. React-страницы (без index-a2.html) не трогаются.
+          find mirror -name 'index-a2.html' -print0 | while IFS= read -r -d '' f; do
+            mv -f "$f" "${f%index-a2.html}index.html"
+          done
+          # черновые/служебные страницы — не на прод
+          rm -f mirror/proto-hero.html mirror/compare-a2.html mirror/cmp-riviera.html \
+                mirror/m-proj.html mirror/home-a2.html
       # Попытка 1 — не валим джобу при разовом таймауте FTP
       - name: Upload via FTP/FTPS (attempt 1)
         id: ftp1
@@ -78,6 +89,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Build deployable tree (A2 -> index.html)
+        run: |
+          find mirror -name 'index-a2.html' -print0 | while IFS= read -r -d '' f; do
+            mv -f "$f" "${f%index-a2.html}index.html"
+          done
+          rm -f mirror/proto-hero.html mirror/compare-a2.html mirror/cmp-riviera.html \
+                mirror/m-proj.html mirror/home-a2.html
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
