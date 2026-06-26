@@ -32,7 +32,7 @@ team=''.join(f'<div class="mh-mate"><div class="mh-mate__ph"><img src="{P}{ph}" 
 logos=''.join(f'<div class="mh-logo"><img src="{P}{l}" alt="" loading="lazy"></div>' for l in LOGOS)
 
 mh=f'''<div class="mhome" id="mhome">
-<header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="{P}as3637-6665-4238-b166-636533313130/_hm-64.svg" alt="" width="34" height="34"><b>HAND MARKETING</b></a>
+<header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="{P}as3365-6332-4339-a263-313566616365/152.png" alt="" width="36" height="36"><b>HAND MARKETING</b></a>
 <button class="mh-burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button></header>
 <nav class="mh-menu" hidden><a href="/project">Проекты</a><a href="/service">Услуги</a><a href="/about">О нас</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><a class="mh-menu__cta" href="#mh-form">Обсудить проект</a></nav>
 
@@ -41,9 +41,8 @@ mh=f'''<div class="mhome" id="mhome">
   <h1 class="mh-h1">Hand<br>Marketing</h1>
   <p class="mh-lead">Делаем маркетинг, <b>который видно</b> — от идеи до реализации.</p>
   <div class="mh-chips">{svc}</div>
-  <a class="mh-showreel" href="#mh-reel">▶ Смотреть SHOWREEL</a>
 </section>
-<section class="mh-reel" id="mh-reel"><video controls preload="none" playsinline poster="{P}as3230-6663-4363-b038-333866373133/__76876-145.png"><source src="{SHOWREEL}" type="video/mp4"></video></section>
+<section class="mh-reel" id="mh-reel"><div class="mh-reel__cap">Шоурил</div><video controls preload="metadata" playsinline><source src="{SHOWREEL}" type="video/mp4"></video></section>
 
 <section class="mh-sec" id="mh-cases">
   <div class="mh-sec__h"><h2>Кейсы</h2><a class="mh-all" href="/project">Все проекты →</a></div>
