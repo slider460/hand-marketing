@@ -172,3 +172,16 @@
   .mh-reel__pi::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid rgba(255,224,0,.55);animation:mh-pulse 1.9s ease-out infinite}
   .mh-reel__pl{font:800 13px/1.15 Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center;text-shadow:0 2px 12px rgba(0,0,0,.55)}
   @keyframes mh-pulse{0%{transform:scale(1);opacity:.85}100%{transform:scale(1.55);opacity:0}}
+  /* слайдер ТЗ ↔ дизайн (before/after) */
+  .mh-ba{padding-top:4px}
+  .mh-ba__box{position:relative;margin:14px 20px 0;border-radius:18px;overflow:hidden;background:#0b0b0c;touch-action:pan-y;user-select:none;box-shadow:0 14px 30px -18px rgba(20,23,28,.5)}
+  .mh-ba__after{display:block;width:100%;height:auto}
+  .mh-ba__before{position:absolute;top:0;left:0;width:100%;height:100%;clip-path:inset(0 50% 0 0)}
+  .mh-ba__before img{display:block;width:100%;height:100%;object-fit:cover}
+  .mh-ba__lbl{position:absolute;top:12px;z-index:3;font:800 11px/1 Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(20,23,28,.6);padding:6px 10px;border-radius:8px;pointer-events:none;backdrop-filter:blur(2px)}
+  .mh-ba__lbl_l{left:12px}
+  .mh-ba__lbl_r{right:12px}
+  .mh-ba__handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);z-index:2;pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+  .mh-ba__handle::after{content:"⟷";position:absolute;top:50%;left:50%;width:40px;height:40px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 4px 16px rgba(0,0,0,.35);display:grid;place-items:center;font-size:17px;color:#14171C}
+  .mh-ba__range{position:absolute;inset:0;width:100%;height:100%;margin:0;z-index:4;opacity:0;cursor:ew-resize}
+  .mh-ba__hint{margin:10px 20px 0;text-align:center;font-size:12px;color:var(--muted)}

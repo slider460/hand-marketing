@@ -10,6 +10,12 @@ _vm=os.path.join(HERE,'video_map.json')
 VIDEOS=json.load(open(_vm)).get('videos',{}) if os.path.exists(_vm) else {}
 _gm=os.path.join(HERE,'gallery_map.json')
 GALLERY=json.load(open(_gm)) if os.path.exists(_gm) else {}
+# Слайдер «ТЗ ↔ дизайн» (виджет Tilda t410 beforeafter): route -> (ТЗ, дизайн)
+BEFOREAFTER={
+ 'creative/becar/ramada':('/static/cdn/as3535-3864-4461-b337-353235373831/10-26.jpg','/static/cdn/as6339-3938-4339-b338-376464636233/345325-02.jpg'),
+ 'creative/becar/weampi':('/static/cdn/as3535-3864-4461-b337-353235373831/10-26.jpg','/static/cdn/as6266-6632-4733-b131-313761366638/10-25.jpg'),
+ 'creative/becar/vertical':('/static/cdn/as3535-3864-4461-b337-353235373831/10-26.jpg','/static/cdn/as6531-3535-4536-b636-376136646334/-10-08.jpg'),
+}
 # Денлист мусора для fallback-галерей (page JSON): постер видео, декор-акценты Zero-блоков,
 # иконки, заглушки, svg-разделители — оставляем только реальные фото/мокапы.
 JUNK=re.compile(r'(icons-\d+|noroot|pngegg|_{2,}-?\d|_{2,}\d-\d|4234242|1234567890|\.svg$)',re.I)
@@ -53,6 +59,15 @@ for c in cases:
     inner=f'''<section class="mh-hero mh-hero_sm" style="--c:{color}"><a class="mh-back" href="/project">← Все проекты</a><p class="mh-eyebrow" style="color:{color}">{H.escape(c['categoryLabel'])}</p><h1 class="mh-h1 mh-h1_sm">{H.escape(c['client'])}</h1><p class="mh-lead">{H.escape(c['title'])}</p></section>'''
     if cover: inner+=f'<div class="mh-cover"><img src="{H.escape(cover)}" alt="{H.escape(c["title"])}"></div>'
     if storyhtml: inner+=f'<section class="mh-sec mh-story">{storyhtml}</section>'
+    ba=BEFOREAFTER.get(route)
+    if ba:
+        inner+=(f'<section class="mh-sec mh-ba"><h2 style="padding:0 20px">ТЗ и дизайн</h2>'
+                f'<div class="mh-ba__box" data-ba><img class="mh-ba__after" src="{ba[1]}" alt="Дизайн">'
+                f'<div class="mh-ba__before"><img src="{ba[0]}" alt="ТЗ"></div>'
+                f'<span class="mh-ba__lbl mh-ba__lbl_l">ТЗ</span><span class="mh-ba__lbl mh-ba__lbl_r">Дизайн</span>'
+                f'<span class="mh-ba__handle"></span>'
+                f'<input class="mh-ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнить ТЗ и дизайн"></div>'
+                f'<p class="mh-ba__hint">← потяните, чтобы сравнить →</p></section>')
     vids=VIDEOS.get(route,[])
     if vids:
         cov=H.escape(cover) if cover else ''
