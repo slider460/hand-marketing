@@ -10,6 +10,8 @@ _vm=os.path.join(HERE,'video_map.json')
 VIDEOS=json.load(open(_vm)).get('videos',{}) if os.path.exists(_vm) else {}
 _gm=os.path.join(HERE,'gallery_map.json')
 GALLERY=json.load(open(_gm)) if os.path.exists(_gm) else {}
+# Постер видео для мобильного плеера (кадр из ролика), где нет нормальной обложки
+VPOSTER={'video/eaton':'/static/cdn/custom-eaton-rolik/poster.jpg'}
 # Слайдер «ТЗ ↔ дизайн» (виджет Tilda t410 beforeafter): route -> (ТЗ, дизайн)
 BEFOREAFTER={
  'creative/becar/ramada':('/static/cdn/as3535-3864-4461-b337-353235373831/10-26.jpg','/static/cdn/as6339-3938-4339-b338-376464636233/345325-02.jpg'),
@@ -78,7 +80,7 @@ for c in cases:
                 f'<img src="{H.escape(result_img)}" alt="Результат — {H.escape(c["title"])}" loading="lazy"></div></section>')
     vids=VIDEOS.get(route,[])
     if vids:
-        cov=H.escape(cover) if cover else ''
+        cov=H.escape(VPOSTER.get(route, cover) or '')
         vhtml=''.join(f'<video class="mh-video" controls preload="none" playsinline poster="{cov}"><source src="{u}" type="video/mp4"></video>' for u in vids)
         inner+=f'<section class="mh-sec"><h2 style="padding:0 20px">Видео</h2><div class="mh-videos">{vhtml}</div></section>'
     if galhtml: inner+=f'<section class="mh-sec"><h2 style="padding:0 20px">Галерея</h2><div class="mh-gallery">{galhtml}</div></section>'
