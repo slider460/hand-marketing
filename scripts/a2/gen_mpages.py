@@ -2,9 +2,9 @@
 import os, re, html as H
 HERE=os.path.dirname(os.path.abspath(__file__))
 P='static/cdn/'
-HM='as3637-6665-4238-b166-636533313130/_hm-64.svg'
+HM='as3365-6332-4339-a263-313566616365/152.png'
 
-HEADER=f'''<header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="/{P}{HM}" alt="" width="34" height="34"><b>HAND MARKETING</b></a>
+HEADER=f'''<header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="/{P}{HM}" alt="" width="36" height="36"><b>HAND MARKETING</b></a>'''+'''
 <button class="mh-burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button></header>
 <nav class="mh-menu" hidden><a href="/project">Проекты</a><a href="/service">Услуги</a><a href="/about">О нас</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><a class="mh-menu__cta" href="/contacts">Обсудить проект</a></nav>'''
 FOOTER='''<footer class="mh-foot"><b>HAND MARKETING</b>
@@ -36,7 +36,7 @@ PAGES={}
 PAGES['project']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyebrow">Портфолио</p><h1 class="mh-h1 mh-h1_sm">Проекты</h1><p class="mh-lead">Кейсы по всем направлениям — от event до 3D-mapping.</p></section>
 <section class="mh-sec"><div class="mh-grid">{cards_of('all')}</div></section>''')
 # УСЛУГИ — обзор
-svc_cards=''.join(f'<a class="mh-scard" href="{u}" style="--c:{c}"><span class="mh-scard__tag">Услуга</span><div class="mh-scard__t">{H.escape(n)}</div><div class="mh-scard__d">{H.escape(d)}</div><span class="mh-scard__go">Подробнее →</span></a>' for n,u,c,d in SERVICES)
+svc_cards=''.join(f'<a class="mh-scard" href="{u}" style="--c:{c}"><span class="mh-scard__ghost" aria-hidden="true">{H.escape(n[0])}</span><span class="mh-scard__tag">Услуга</span><h3 class="mh-scard__t">{H.escape(n)}</h3><p class="mh-scard__d">{H.escape(d)}</p><span class="mh-scard__go" aria-hidden="true"></span></a>' for n,u,c,d in SERVICES)
 PAGES['service']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyebrow">Что мы делаем</p><h1 class="mh-h1 mh-h1_sm">Услуги</h1><p class="mh-lead">Полный цикл маркетинговых коммуникаций.</p></section>
 <section class="mh-sec"><div class="mh-scards">{svc_cards}</div></section>''')
 # СТРАНИЦЫ УСЛУГ
