@@ -102,7 +102,7 @@ def process(p, route):
     h=defer_scripts(h)  # JS Тильды -> только десктоп (мобайл кастомный, движок не нужен)
     # Tilda прячет .t-records (opacity:0) до reveal-скрипта по window.load; мы часть JS
     # откладываем/выпиливаем — reveal может не сработать -> белый экран. Форсим видимость.
-    h=re.sub(r'(<head[^>]*>)', r'\1<style>.t-records{opacity:1!important}</style>'+FORM_JS, h, count=1)
+    h=re.sub(r'(<head[^>]*>)', lambda m: m.group(1)+'<style>.t-records{opacity:1!important}</style>'+FORM_JS, h, count=1)
     if route=='':  # ГЛАВНАЯ — кастомная мобильная версия (десктоп Тильда 1:1)
         G='#rec249749070 .t-store__card-list .t-store__card'
         lvl=G+':nth-child(n+9){display:none!important}'
