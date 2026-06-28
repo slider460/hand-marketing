@@ -54,3 +54,8 @@ make('mirror/portfolio/samara-vdnh/Card_Samara_stend.jpg',0.5,(196,38,46),
      ['СТЕНД САМАРСКОЙ','ОБЛАСТИ'],
      [('orange','TL',True,1.05),('green','TR',True,0.92),('red','BL',False,1.0),('magenta','BR',True,1.0)],
      'mirror/static/cdn/custom-samara-vdnh/cover-main.png',40)
+# Стенд Ставропольского края — фиолетовая плашка (мультимедиа), расстановка C
+make('mirror/portfolio/stavropol-vdnh/naked-eye-3d-cube.jpg',0.5,(103,58,126),
+     ['СТЕНД','СТАВРОПОЛЬЯ'],
+     [('magenta','TL',False,1.0),('green','TR',True,1.05),('orange','BL',True,0.95),('red','BR',False,1.0)],
+     'mirror/static/cdn/custom-stavropol-vdnh/cover-main.png',46)
