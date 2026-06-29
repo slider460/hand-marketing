@@ -12,6 +12,22 @@ DirectoryIndex index.html
   RewriteRule ^(.*)$ /$1/ [R=301,L]
 </IfModule>
 
+# WebP: отдавать <файл>.webp браузерам, которые их принимают (оригинал .png/.jpg — фолбэк).
+# Ссылки в HTML не меняются; визуал 1:1. .webp генерируются scripts/gen-webp.sh.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME}\.webp -f
+  RewriteRule ^(.+)\.(jpe?g|png)$ $1.$2.webp [T=image/webp,E=WEBP_SERVED:1,L]
+</IfModule>
+<IfModule mod_headers.c>
+  # кэши должны различать ответ по Accept (webp vs оригинал)
+  Header append Vary Accept env=WEBP_SERVED
+</IfModule>
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
 # Кэширование статики
 <IfModule mod_expires.c>
   ExpiresActive On

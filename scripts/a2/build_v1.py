@@ -93,6 +93,10 @@ FORM_JS='''<script>(function(){function msg(f,t,ok){var d=document.createElement
 document.addEventListener('submit',function(e){var f=e.target;if(!f||f.tagName!=='FORM')return;if(!(f.classList.contains('mh-f')||f.classList.contains('t-form')))return;e.preventDefault();e.stopImmediatePropagation();var tel=f.querySelector('input[type=tel],input[name=phone],input[name=Phone],input[name=tel],input[name=Tel]');if(tel&&tel.value.replace(/\\D/g,'').length<6){tel.focus();tel.style.borderColor='#c0392b';return;}var b=f.querySelector('button,input[type=submit]');var o=b?(b.textContent||b.value):'';if(b){b.disabled=true;if('textContent' in b&&b.tagName==='BUTTON')b.textContent='Отправляем…';else b.value='Отправляем…';}
 fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;if(b.tagName==='BUTTON')b.textContent=o;else b.value=o;}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});},true);})();</script>'''
 
+# Яндекс.Метрика (тот же счётчик, что был на Тильде: 71125393). Обычный <script> (не type=td) —
+# работает и на десктопе, и на кастомном мобайле. strip_trackers вырезает старую, эту вставляем после.
+METRIKA='''<!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->'''
+
 def process(p, route):
     h=open(p,encoding='utf-8').read()
     if 'id="root"' in h:  # React-страницы не трогаем тут (у них свой A2)
@@ -102,7 +106,7 @@ def process(p, route):
     h=defer_scripts(h)  # JS Тильды -> только десктоп (мобайл кастомный, движок не нужен)
     # Tilda прячет .t-records (opacity:0) до reveal-скрипта по window.load; мы часть JS
     # откладываем/выпиливаем — reveal может не сработать -> белый экран. Форсим видимость.
-    h=re.sub(r'(<head[^>]*>)', lambda m: m.group(1)+'<style>.t-records{opacity:1!important}</style>'+FORM_JS, h, count=1)
+    h=re.sub(r'(<head[^>]*>)', lambda m: m.group(1)+'<style>.t-records{opacity:1!important}</style>'+FORM_JS+METRIKA, h, count=1)
     if route=='':  # ГЛАВНАЯ — кастомная мобильная версия (десктоп Тильда 1:1)
         G='#rec249749070 .t-store__card-list .t-store__card'
         lvl=G+':nth-child(n+9){display:none!important}'
