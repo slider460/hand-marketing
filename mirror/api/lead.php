@@ -16,6 +16,28 @@ $SUBJECT = 'Заявка с сайта hand-marketing.ru';
 $LOGFILE = __DIR__ . '/leads.csv';        // резервная запись заявок
 // -----------------
 
+// ВРЕМЕННАЯ ДИАГНОСТИКА доставки писем: /api/lead.php?selftest=hm2026
+if (($_GET['selftest'] ?? '') === 'hm2026') {
+    $tb = "Self-test " . date('c') . " from " . ($_SERVER['SERVER_NAME'] ?? '');
+    $th = "From: site@hand-marketing.ru\r\nContent-Type: text/plain; charset=utf-8\r\n";
+    $mret = function_exists('mail') ? @mail($TO, '=?UTF-8?B?' . base64_encode('SELFTEST hand-marketing') . '?=', $tb, $th) : 'NO_MAIL_FUNC';
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode([
+        'mail_func_exists' => function_exists('mail'),
+        'mail_returned'    => $mret,
+        'disable_functions'=> ini_get('disable_functions'),
+        'sendmail_path'    => ini_get('sendmail_path'),
+        'SMTP'             => ini_get('SMTP'),
+        'dir_writable'     => is_writable(__DIR__),
+        'csv_exists'       => file_exists($LOGFILE),
+        'csv_size'         => @filesize($LOGFILE),
+        'to'               => $TO,
+        'php'              => PHP_VERSION,
+        'server_name'      => $_SERVER['SERVER_NAME'] ?? '',
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'error' => 'method not allowed']);
