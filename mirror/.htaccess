@@ -3,6 +3,16 @@
 
 DirectoryIndex index.html
 
+# www -> без www ТОЛЬКО для боевого hand-marketing.ru.
+# Файл .htaccess общий с weshowstudia.ru — поэтому правило строго привязано к хосту.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # ACME-проверки Let's Encrypt не редиректим (чтобы автопродление серта не ломалось)
+  RewriteRule ^\.well-known/acme-challenge/ - [L]
+  RewriteCond %{HTTP_HOST} ^www\.hand-marketing\.ru$ [NC]
+  RewriteRule ^(.*)$ https://hand-marketing.ru/$1 [R=301,L]
+</IfModule>
+
 # Красивые URL: /project -> /project/index.html (отдаётся каталогом автоматически)
 <IfModule mod_rewrite.c>
   RewriteEngine On
