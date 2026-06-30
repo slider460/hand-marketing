@@ -1,0 +1,14 @@
+<svg viewBox="110 40 204 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exhibition Build">
+ <defs>
+  <linearGradient id="pf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E5FB0"/><stop offset="1" stop-color="#5A3473"/></linearGradient>
+  <linearGradient id="pt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BD96D8"/><stop offset="1" stop-color="#9A6CBE"/></linearGradient>
+  <linearGradient id="ps" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3473"/><stop offset="1" stop-color="#3E2553"/></linearGradient>
+ </defs>
+ <polygon points="120,70 270,70 304,50 154,50" fill="url(#pt)"/>
+ <polygon points="160,110 230,110 264,90 194,90" fill="#7B4E9E"/>
+ <polygon points="270,70 270,250 304,230 304,50" fill="url(#ps)"/>
+ <polygon points="230,110 230,250 264,230 264,90" fill="#4A2A5E"/>
+ <path d="M120,250 L120,70 L270,70 L270,250 L230,250 L230,110 L160,110 L160,250 Z" fill="url(#pf)"/>
+ <polygon points="176,96 214,96 214,82 176,82" fill="#FFE000"/>
+ <polygon points="214,96 214,82 226,75 226,89" fill="#E6C800"/>
+</svg>
