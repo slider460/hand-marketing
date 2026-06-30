@@ -4,7 +4,10 @@ function send(f){if(f.__sending)return;var tel=f.querySelector('input[type=tel],
 fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){f.__sending=false;if(b){b.disabled=false;if(b.tagName==='BUTTON')b.textContent=o;else b.value=o;}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});}
 document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button,input[type=submit],.t-submit');if(!b)return;var f=b.closest('form');if(!isOur(f))return;e.preventDefault();e.stopImmediatePropagation();send(f);},true);
 document.addEventListener('submit',function(e){var f=e.target;if(!isOur(f))return;e.preventDefault();e.stopImmediatePropagation();send(f);},true);})();
-(function(){function fb(){var ls=document.querySelectorAll('link[href*="blackhole.invalid.com"]');for(var i=0;i<ls.length;i++)ls[i].href='/static/cdn/css/lib-zero-form-errorbox.min.css';}var t=0,iv=setInterval(function(){fb();if(++t>20)clearInterval(iv);},300);fb();})();</script><meta charset="utf-8">
+(function(){var P='blackhole.invalid.com/css/';function fx(v){if(typeof v==='string'){var i=v.indexOf(P);if(i>-1)return '/static/cdn/css/'+v.slice(i+P.length);}return v;}
+try{var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){if(n==='href'||n==='data-href')v=fx(v);return sa.call(this,n,v);};}catch(e){}
+try{var dd=Object.getOwnPropertyDescriptor(HTMLLinkElement.prototype,'href');if(dd&&dd.set){Object.defineProperty(HTMLLinkElement.prototype,'href',{configurable:true,enumerable:dd.enumerable,get:dd.get,set:function(v){dd.set.call(this,fx(v));}});}}catch(e){}
+function sweep(){var ls=document.querySelectorAll('link[href*="blackhole.invalid.com"]');for(var k=0;k<ls.length;k++)ls[k].href=fx(ls[k].getAttribute('href'));}var t=0,iv=setInterval(function(){sweep();if(++t>15)clearInterval(iv);},300);})();</script><meta charset="utf-8">
 <meta http-equiv="refresh" content="0;url=/portfolio/samara-stand-vdnh">
 <link rel="canonical" href="/portfolio/samara-stand-vdnh"><title>Стенд Самарской области</title>
 <meta name="description" content="Стенд Самарской области — Hand Marketing, рекламное агентство полного цикла.">
