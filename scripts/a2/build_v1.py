@@ -109,6 +109,8 @@ def process(p, route):
     h=open(p,encoding='utf-8').read()
     if 'id="root"' in h:  # React-страницы не трогаем тут (у них свой A2)
         return None
+    if 'custom-page' in h:  # наши кастомные адаптивные страницы (напр. /exhibition) — не трогаем
+        return None
     h=strip_trackers(h)
     h=remap_media(h)  # десктопные /media-ссылки -> имена из манифеста
     h=defer_scripts(h)  # JS Тильды -> только десктоп (мобайл кастомный, движок не нужен)

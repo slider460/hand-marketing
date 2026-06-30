@@ -6,7 +6,7 @@
 import os, glob, re
 
 LOGO   = "/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg"  # цветной куб HM
-SBER   = "/static/cdn/as6562-3737-4062-a266-336439646532/sberkorus.png"
+SBER   = "/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png"  # перенесён миграцией static/cdn->images/lib
 PHONE_T= "+74955807537"; PHONE="+7 495 580 75 37"; MAIL="info@hand-marketing.ru"
 WA     = "https://wa.me/74955807537"
 YT     = "https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw"
