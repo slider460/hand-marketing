@@ -115,6 +115,9 @@ def process(p, route):
     h=remap_media(h)  # десктопные /media-ссылки -> имена из манифеста
     h=defer_scripts(h)  # JS Тильды -> только десктоп (мобайл кастомный, движок не нужен)
     h=h.replace(' js-form-proccess','')  # снять Tilda-маркер обработки формы (свой обработчик в FORM_JS)
+    for _r in ('about','service','clients','contacts','project','privacy','exhibition','event','creativedesign','videoproduction','printandproduction','btl','digital','3dmapping'):
+        h=h.replace(f'href="{_r}"', f'href="/{_r}"')  # относительные nav-ссылки -> абсолютные (иначе 404 с подстраниц)
+    h=re.sub(r'href="(event|video|creative|digital|3d)/', r'href="/\1/', h)
     # Tilda прячет .t-records (opacity:0) до reveal-скрипта по window.load; мы часть JS
     # откладываем/выпиливаем — reveal может не сработать -> белый экран. Форсим видимость.
     h=re.sub(r'(<head[^>]*>)', lambda m: m.group(1)+'<style>.t-records{opacity:1!important}</style>'+FORM_JS+METRIKA, h, count=1)
