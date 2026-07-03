@@ -31,6 +31,21 @@ STEPS=[
 METRIKA='<!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->'
 
 PAGE_CSS="""<style id="ex-css">
+/* шапка 1:1 с Tilda-версией сайта (rec237851314): 140px, Raleway 700 20px, лого 90px, не sticky.
+   Только десктоп ≥861px — мобильная компакт-шапка хрома остаётся как есть. */
+@media(min-width:861px){
+ .hm-hdr{position:static;height:140px;border-bottom:0;padding:0 40px}
+ .hm-hdr__nav{gap:46px}
+ .hm-hdr__nav a{font-family:'Raleway',Arial,sans-serif;font-size:20px;font-weight:700;color:#000}
+ .hm-hdr__logo img{height:91px}
+ .hm-hdr__contacts{margin-left:24px;line-height:1.3}
+ .hm-hdr__contacts .ph{font-family:'Raleway',Arial,sans-serif;font-size:20px;font-weight:700;color:#000}
+ .hm-hdr__contacts .em{font-family:'Raleway',Arial,sans-serif;font-size:14px;font-weight:700;color:#000}}
+@media(min-width:861px) and (max-width:1120px){
+ .hm-hdr__nav{gap:26px}
+ .hm-hdr__nav a{font-size:17px}
+ .hm-hdr__logo img{height:70px}
+ .hm-hdr{height:110px}}
 .ex-main{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C}
 .ex-main a:focus-visible,.ex-main button:focus-visible{outline:3px solid #673A7E;outline-offset:3px;border-radius:4px}
 /* ------- герой: чертёж стенда ------- */
@@ -57,16 +72,11 @@ PAGE_CSS="""<style id="ex-css">
 .ex-part{opacity:0;transform:translateY(14px);animation:exUp .55s cubic-bezier(.2,.7,.2,1) forwards}
 .ex-part_1{animation-delay:.15s}.ex-part_2{animation-delay:.3s}.ex-part_3{animation-delay:.45s}.ex-part_4{animation-delay:.62s}.ex-part_5{animation-delay:.8s}
 @keyframes exUp{to{opacity:1;transform:none}}
-.ex-lead-line{stroke:#14171C;stroke-width:1;fill:none;opacity:.55;stroke-dasharray:340;stroke-dashoffset:340;animation:exDraw .8s ease forwards 1s}
-@keyframes exDraw{to{stroke-dashoffset:0}}
-.ex-dot{fill:#673A7E;opacity:0;animation:exIn .3s ease forwards 1.05s}
-.ex-note{font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;fill:#14171C;opacity:0;animation:exIn .5s ease forwards 1.3s}
-.ex-note_dim{fill:#673A7E;letter-spacing:.16em}
+.ex-note{font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;fill:#673A7E;opacity:0;animation:exIn .5s ease forwards 1s}
 @keyframes exIn{to{opacity:1}}
-.ex-dim{stroke:#673A7E;stroke-width:1;opacity:0;animation:exIn .5s ease forwards 1.3s}
+.ex-dim{stroke:#673A7E;stroke-width:1;opacity:0;animation:exIn .5s ease forwards 1s}
 @media (prefers-reduced-motion:reduce){
- .ex-part,.ex-dot,.ex-note,.ex-dim{animation:none;opacity:1;transform:none}
- .ex-lead-line{animation:none;stroke-dashoffset:0}
+ .ex-part,.ex-note,.ex-dim{animation:none;opacity:1;transform:none}
  .ex-rev{transition:none!important;opacity:1!important;transform:none!important}}
 /* ------- секции ------- */
 .ex-sec{max-width:1180px;margin:0 auto;padding:76px 40px}
@@ -122,31 +132,24 @@ PAGE_CSS="""<style id="ex-css">
  .ex-card{flex:0 0 78%;scroll-snap-align:start}}
 </style>"""
 
-# «чертёж»: арка exhibition-build в увеличении на листе, выноски и размерная линия.
+# арка exhibition-build крупно на изометрической сетке + размерная линия снизу.
 # Геометрия арки — из mirror/images/services/exhibition-build.svg (viewBox 110 40 204 220).
-DRAFT_SVG="""<svg class="ex-draft" viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Чертёж выставочного стенда: фриз с подсветкой, несущий каркас, зона экспозиции">
+DRAFT_SVG="""<svg class="ex-draft" viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Выставочный стенд-арка: от идеи до монтажа — под ключ">
 <defs>
  <linearGradient id="exf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E5FB0"/><stop offset="1" stop-color="#5A3473"/></linearGradient>
  <linearGradient id="ext" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BD96D8"/><stop offset="1" stop-color="#9A6CBE"/></linearGradient>
  <linearGradient id="exs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3473"/><stop offset="1" stop-color="#3E2553"/></linearGradient>
 </defs>
-<g transform="translate(118,52) scale(1.42)">
+<g transform="translate(126,26) scale(1.55)">
  <g class="ex-part ex-part_1"><polygon points="270,70 270,250 304,230 304,50" fill="url(#exs)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_2"><polygon points="230,110 230,250 264,230 264,90" fill="#4A2A5E" transform="translate(-110,-40)"/><polygon points="160,110 230,110 264,90 194,90" fill="#7B4E9E" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_3"><path d="M120,250 L120,70 L270,70 L270,250 L230,250 L230,110 L160,110 L160,250 Z" fill="url(#exf)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_4"><polygon points="120,70 270,70 304,50 154,50" fill="url(#ext)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_5"><polygon points="176,96 214,96 214,82 176,82" fill="#FFE000" transform="translate(-110,-40)"/><polygon points="214,96 214,82 226,75 226,89" fill="#E6C800" transform="translate(-110,-40)"/></g>
 </g>
-<!-- выноски -->
-<path class="ex-lead-line" d="M262,120 L330,86 L452,86"/><circle class="ex-dot" cx="262" cy="120" r="3.5"/>
-<text class="ex-note" x="338" y="74">Фриз с подсветкой</text>
-<path class="ex-lead-line" d="M133,220 L58,220 L38,204"/><circle class="ex-dot" cx="133" cy="220" r="3.5"/>
-<text class="ex-note" x="6" y="192">Несущий каркас</text>
-<path class="ex-lead-line" d="M290,240 L372,240 L398,224"/><circle class="ex-dot" cx="290" cy="240" r="3.5"/>
-<text class="ex-note" x="368" y="214">Зона экспозиции</text>
 <!-- размерная линия -->
-<g class="ex-dim"><line x1="132" y1="372" x2="418" y2="372"/><line x1="132" y1="364" x2="132" y2="380"/><line x1="418" y1="364" x2="418" y2="380"/></g>
-<text class="ex-note ex-note_dim" x="168" y="394">От идеи до монтажа — под ключ</text>
+<g class="ex-dim"><line x1="142" y1="372" x2="374" y2="372"/><line x1="142" y1="364" x2="142" y2="380"/><line x1="374" y1="364" x2="374" y2="380"/></g>
+<text class="ex-note" x="120" y="398">От идеи до монтажа — под ключ</text>
 </svg>"""
 
 REVEAL_JS="""<noscript><style>.ex-rev{opacity:1!important;transform:none!important}</style></noscript>

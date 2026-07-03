@@ -71,6 +71,21 @@ body>.hm-topbar,.hm-topbar{display:none!important}
   .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
 }
 </style><style id="ex-css">
+/* шапка 1:1 с Tilda-версией сайта (rec237851314): 140px, Raleway 700 20px, лого 90px, не sticky.
+   Только десктоп ≥861px — мобильная компакт-шапка хрома остаётся как есть. */
+@media(min-width:861px){
+ .hm-hdr{position:static;height:140px;border-bottom:0;padding:0 40px}
+ .hm-hdr__nav{gap:46px}
+ .hm-hdr__nav a{font-family:'Raleway',Arial,sans-serif;font-size:20px;font-weight:700;color:#000}
+ .hm-hdr__logo img{height:91px}
+ .hm-hdr__contacts{margin-left:24px;line-height:1.3}
+ .hm-hdr__contacts .ph{font-family:'Raleway',Arial,sans-serif;font-size:20px;font-weight:700;color:#000}
+ .hm-hdr__contacts .em{font-family:'Raleway',Arial,sans-serif;font-size:14px;font-weight:700;color:#000}}
+@media(min-width:861px) and (max-width:1120px){
+ .hm-hdr__nav{gap:26px}
+ .hm-hdr__nav a{font-size:17px}
+ .hm-hdr__logo img{height:70px}
+ .hm-hdr{height:110px}}
 .ex-main{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C}
 .ex-main a:focus-visible,.ex-main button:focus-visible{outline:3px solid #673A7E;outline-offset:3px;border-radius:4px}
 /* ------- герой: чертёж стенда ------- */
@@ -97,16 +112,11 @@ body>.hm-topbar,.hm-topbar{display:none!important}
 .ex-part{opacity:0;transform:translateY(14px);animation:exUp .55s cubic-bezier(.2,.7,.2,1) forwards}
 .ex-part_1{animation-delay:.15s}.ex-part_2{animation-delay:.3s}.ex-part_3{animation-delay:.45s}.ex-part_4{animation-delay:.62s}.ex-part_5{animation-delay:.8s}
 @keyframes exUp{to{opacity:1;transform:none}}
-.ex-lead-line{stroke:#14171C;stroke-width:1;fill:none;opacity:.55;stroke-dasharray:340;stroke-dashoffset:340;animation:exDraw .8s ease forwards 1s}
-@keyframes exDraw{to{stroke-dashoffset:0}}
-.ex-dot{fill:#673A7E;opacity:0;animation:exIn .3s ease forwards 1.05s}
-.ex-note{font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;fill:#14171C;opacity:0;animation:exIn .5s ease forwards 1.3s}
-.ex-note_dim{fill:#673A7E;letter-spacing:.16em}
+.ex-note{font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;fill:#673A7E;opacity:0;animation:exIn .5s ease forwards 1s}
 @keyframes exIn{to{opacity:1}}
-.ex-dim{stroke:#673A7E;stroke-width:1;opacity:0;animation:exIn .5s ease forwards 1.3s}
+.ex-dim{stroke:#673A7E;stroke-width:1;opacity:0;animation:exIn .5s ease forwards 1s}
 @media (prefers-reduced-motion:reduce){
- .ex-part,.ex-dot,.ex-note,.ex-dim{animation:none;opacity:1;transform:none}
- .ex-lead-line{animation:none;stroke-dashoffset:0}
+ .ex-part,.ex-note,.ex-dim{animation:none;opacity:1;transform:none}
  .ex-rev{transition:none!important;opacity:1!important;transform:none!important}}
 /* ------- секции ------- */
 .ex-sec{max-width:1180px;margin:0 auto;padding:76px 40px}
@@ -162,29 +172,22 @@ body>.hm-topbar,.hm-topbar{display:none!important}
  .ex-card{flex:0 0 78%;scroll-snap-align:start}}
 </style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </head>
-<body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="ex-main"><section class="ex-hero"><div class="ex-hero__blueprint" aria-hidden="true"></div><div class="ex-hero__in"><div><p class="ex-eyebrow">Услуга</p><h1>Exhibition<br>Build</h1><p class="ex-hero__sub">Застройка выставочных стендов под&nbsp;ключ</p><p class="ex-hero__lead">Проектируем и строим выставочные стенды любого масштаба — от концепции и дизайна до производства, мультимедиа-наполнения и монтажа на площадке в любом городе России.</p><div class="ex-hero__act"><a class="ex-cta" href="#lead">Обсудить проект</a><a class="ex-cta ex-cta_ghost" href="#ex-cases">Смотреть кейсы</a></div></div><div><svg class="ex-draft" viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Чертёж выставочного стенда: фриз с подсветкой, несущий каркас, зона экспозиции">
+<body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="ex-main"><section class="ex-hero"><div class="ex-hero__blueprint" aria-hidden="true"></div><div class="ex-hero__in"><div><p class="ex-eyebrow">Услуга</p><h1>Exhibition<br>Build</h1><p class="ex-hero__sub">Застройка выставочных стендов под&nbsp;ключ</p><p class="ex-hero__lead">Проектируем и строим выставочные стенды любого масштаба — от концепции и дизайна до производства, мультимедиа-наполнения и монтажа на площадке в любом городе России.</p><div class="ex-hero__act"><a class="ex-cta" href="#lead">Обсудить проект</a><a class="ex-cta ex-cta_ghost" href="#ex-cases">Смотреть кейсы</a></div></div><div><svg class="ex-draft" viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Выставочный стенд-арка: от идеи до монтажа — под ключ">
 <defs>
  <linearGradient id="exf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E5FB0"/><stop offset="1" stop-color="#5A3473"/></linearGradient>
  <linearGradient id="ext" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BD96D8"/><stop offset="1" stop-color="#9A6CBE"/></linearGradient>
  <linearGradient id="exs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3473"/><stop offset="1" stop-color="#3E2553"/></linearGradient>
 </defs>
-<g transform="translate(118,52) scale(1.42)">
+<g transform="translate(126,26) scale(1.55)">
  <g class="ex-part ex-part_1"><polygon points="270,70 270,250 304,230 304,50" fill="url(#exs)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_2"><polygon points="230,110 230,250 264,230 264,90" fill="#4A2A5E" transform="translate(-110,-40)"/><polygon points="160,110 230,110 264,90 194,90" fill="#7B4E9E" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_3"><path d="M120,250 L120,70 L270,70 L270,250 L230,250 L230,110 L160,110 L160,250 Z" fill="url(#exf)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_4"><polygon points="120,70 270,70 304,50 154,50" fill="url(#ext)" transform="translate(-110,-40)"/></g>
  <g class="ex-part ex-part_5"><polygon points="176,96 214,96 214,82 176,82" fill="#FFE000" transform="translate(-110,-40)"/><polygon points="214,96 214,82 226,75 226,89" fill="#E6C800" transform="translate(-110,-40)"/></g>
 </g>
-<!-- выноски -->
-<path class="ex-lead-line" d="M262,120 L330,86 L452,86"/><circle class="ex-dot" cx="262" cy="120" r="3.5"/>
-<text class="ex-note" x="338" y="74">Фриз с подсветкой</text>
-<path class="ex-lead-line" d="M133,220 L58,220 L38,204"/><circle class="ex-dot" cx="133" cy="220" r="3.5"/>
-<text class="ex-note" x="6" y="192">Несущий каркас</text>
-<path class="ex-lead-line" d="M290,240 L372,240 L398,224"/><circle class="ex-dot" cx="290" cy="240" r="3.5"/>
-<text class="ex-note" x="368" y="214">Зона экспозиции</text>
 <!-- размерная линия -->
-<g class="ex-dim"><line x1="132" y1="372" x2="418" y2="372"/><line x1="132" y1="364" x2="132" y2="380"/><line x1="418" y1="364" x2="418" y2="380"/></g>
-<text class="ex-note ex-note_dim" x="168" y="394">От идеи до монтажа — под ключ</text>
+<g class="ex-dim"><line x1="142" y1="372" x2="374" y2="372"/><line x1="142" y1="364" x2="142" y2="380"/><line x1="374" y1="364" x2="374" y2="380"/></g>
+<text class="ex-note" x="120" y="398">От идеи до монтажа — под ключ</text>
 </svg></div></div></section><section class="ex-sec"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Как мы строим стенд</h2></div><div class="ex-steps"><div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span><h3>Дизайн и 3D-визуализация</h3><p>Концепция, зонирование и фотореалистичная визуализация будущего стенда</p></div><div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span><h3>Конструктив и инженерия</h3><p>Проектирование каркаса, расчёт нагрузок, свет и инженерные системы</p></div><div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span><h3>Производство</h3><p>Собственная и партнёрская база — печать, дерево, металл, пластик, акрил</p></div><div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span><h3>Мультимедиа и интерактив</h3><p>LED-экраны, проекции, сенсорные панели, AR/VR и 3D-маппинг</p></div><div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span><h3>Логистика и монтаж</h3><p>Доставка, монтаж и демонтаж на площадке в любом городе России</p></div></div><p class="ex-steps__note ex-rev">Один подрядчик на весь цикл: <b>сдаём готовый стенд точно в срок</b> — включая экспозиции в виртуальном формате.</p></section><div class="ex-cases-wrap" id="ex-cases"><section class="ex-sec"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Кейсы</h2><a class="ex-all ex-rev" href="/project">Все проекты →</a></div><div class="ex-cases"><a class="ex-card ex-rev" href="/portfolio/samara-stand-vdnh"><div class="ex-card__img"><img src="/images/lib/custom-samara-vdnh/cover-main.png" alt="Стенд Самарской области" loading="lazy"><span class="ex-card__cat">Exhibition Build</span></div><div class="ex-card__b"><div class="ex-card__t">Стенд Самарской области</div><div class="ex-card__d">Выставка-форум «Россия», ВДНХ</div></div></a><a class="ex-card ex-rev" href="/portfolio/stavropol-stand-vdnh"><div class="ex-card__img"><img src="/images/lib/custom-stavropol-vdnh/cover-main.png" alt="Стенд Ставропольского края" loading="lazy"><span class="ex-card__cat">Exhibition Build</span></div><div class="ex-card__b"><div class="ex-card__t">Стенд Ставропольского края</div><div class="ex-card__d">Выставка-форум «Россия», ВДНХ</div></div></a><a class="ex-card ex-rev" href="/portfolio/samara-exhibition"><div class="ex-card__img"><img src="/images/lib/custom-samara-exhibition/cover-main.png" alt="Выставка «Самара»" loading="lazy"><span class="ex-card__cat">Exhibition Build</span></div><div class="ex-card__b"><div class="ex-card__t">Выставка «Самара»</div><div class="ex-card__d">Музей им. Алабина</div></div></a><a class="ex-card ex-rev" href="/eaton_online"><div class="ex-card__img"><img src="/images/lib/as6438-6362-4632-b262-313335333833/image_2021-03-06_22-.png" alt="Виртуальный стенд Eaton" loading="lazy"><span class="ex-card__cat">Exhibition Build</span></div><div class="ex-card__b"><div class="ex-card__t">Виртуальный стенд Eaton</div><div class="ex-card__d">Онлайн-трансляция выставки</div></div></a></div></section></div></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://wa.me/74955807537" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.4 5 5.1-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 — 2026 Hand Marketing</div></div></div></div><script>(function(){
 // убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
 function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
