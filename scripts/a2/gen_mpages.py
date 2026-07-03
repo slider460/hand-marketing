@@ -36,7 +36,9 @@ PAGES={}
 PAGES['project']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyebrow">Портфолио</p><h1 class="mh-h1 mh-h1_sm">Проекты</h1><p class="mh-lead">Кейсы по всем направлениям — от event до 3D-mapping.</p></section>
 <section class="mh-sec"><div class="mh-grid">{cards_of('all')}</div></section>''')
 # УСЛУГИ — обзор
-svc_cards=''.join(f'<a class="mh-scard" href="{u}" style="--c:{c}"><span class="mh-scard__ghost" aria-hidden="true">{H.escape(n[0])}</span><span class="mh-scard__tag">Услуга</span><h3 class="mh-scard__t">{H.escape(n)}</h3><p class="mh-scard__d">{H.escape(d)}</p><span class="mh-scard__go" aria-hidden="true"></span></a>' for n,u,c,d in SERVICES)
+# Exhibition Build — только в обзорном списке (своя страница /exhibition кастомная, gen_exhibition.py)
+SERVICES_OVERVIEW=[("Exhibition Build","/exhibition","#8E5FB0","Застройка выставочных стендов под ключ")]+SERVICES
+svc_cards=''.join(f'<a class="mh-scard" href="{u}" style="--c:{c}"><span class="mh-scard__ghost" aria-hidden="true">{H.escape(n[0])}</span><span class="mh-scard__tag">Услуга</span><h3 class="mh-scard__t">{H.escape(n)}</h3><p class="mh-scard__d">{H.escape(d)}</p><span class="mh-scard__go" aria-hidden="true"></span></a>' for n,u,c,d in SERVICES_OVERVIEW)
 PAGES['service']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyebrow">Что мы делаем</p><h1 class="mh-h1 mh-h1_sm">Услуги</h1><p class="mh-lead">Полный цикл маркетинговых коммуникаций.</p></section>
 <section class="mh-sec"><div class="mh-scards">{svc_cards}</div></section>''')
 # СТРАНИЦЫ УСЛУГ
