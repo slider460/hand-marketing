@@ -31,42 +31,7 @@ STEPS=[
 METRIKA='<!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->'
 
 PAGE_CSS="""<style id="ex-css">
-body{margin:0}
-/* Шапка — точная реплика Tilda-шапки сайта (rec237851314, координаты сняты с движка):
-   высота 140, сетка 1200/960, тексты Raleway 700 20px #000, лого 90px по центру окна,
-   телефон 20px + почта 14px правым краем по одной кромке, НЕ sticky.
-   Только десктоп ≥861px — мобильная компакт-шапка хрома остаётся как есть. */
-@media(min-width:861px){
- .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
- .hm-hdr__nav,.hm-hdr__contacts{display:contents}
- .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
-  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
- .hm-hdr a:hover{opacity:.6}
- .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
- .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
- .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
- .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
-@media(min-width:1200px){
- .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
-@media(min-width:960px) and (max-width:1199px){
- .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
-@media(min-width:861px) and (max-width:959px){
- .hm-hdr a[href="/about"]{left:2%}
- .hm-hdr a[href="/service"]{left:15%}
- .hm-hdr a[href="/project"]{left:27%}
- .hm-hdr a[href="/clients"]{right:31%}
- .hm-hdr a[href="/contacts"]{right:18%}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
+/* точная Tilda-шапка приходит из общего хрома (react-chrome.py, TILDA_HDR_CSS) */
 .ex-main{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C}
 .ex-main a:focus-visible,.ex-main button:focus-visible{outline:3px solid #673A7E;outline-offset:3px;border-radius:4px}
 /* ------- герой: чертёж стенда ------- */

@@ -70,12 +70,12 @@ body>.hm-topbar,.hm-topbar{display:none!important}
   .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
   .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
 }
-</style><style id="ex-css">
+
+/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
+   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
+   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
+   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
 body{margin:0}
-/* Шапка — точная реплика Tilda-шапки сайта (rec237851314, координаты сняты с движка):
-   высота 140, сетка 1200/960, тексты Raleway 700 20px #000, лого 90px по центру окна,
-   телефон 20px + почта 14px правым краем по одной кромке, НЕ sticky.
-   Только десктоп ≥861px — мобильная компакт-шапка хрома остаётся как есть. */
 @media(min-width:861px){
  .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
  .hm-hdr__nav,.hm-hdr__contacts{display:contents}
@@ -107,6 +107,8 @@ body{margin:0}
  .hm-hdr a[href="/clients"]{right:31%}
  .hm-hdr a[href="/contacts"]{right:18%}
  .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
+</style><style id="ex-css">
+/* точная Tilda-шапка приходит из общего хрома (react-chrome.py, TILDA_HDR_CSS) */
 .ex-main{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C}
 .ex-main a:focus-visible,.ex-main button:focus-visible{outline:3px solid #673A7E;outline-offset:3px;border-radius:4px}
 /* ------- герой: чертёж стенда ------- */

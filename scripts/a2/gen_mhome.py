@@ -15,7 +15,7 @@ TEAM=[
  ("Агафонова Илона","as6561-6361-4236-b763-656565643230/__76876-148.png"),
  ("Муратов Денис","as3232-3531-4665-b739-626634306233/__76876-146.png"),
 ]
-SERVICES=[("Event","/event","#673A7E"),("Creative & Design","/creativedesign","#C12164"),
+SERVICES=[("Exhibition Build","/exhibition","#8E5FB0"),("Event","/event","#673A7E"),("Creative & Design","/creativedesign","#C12164"),
  ("Video Production","/videoproduction","#CF6F19"),("Digital","/digital","#5E9A2E"),
  ("3D Mapping","/3dmapping","#7E3FA0"),("Print & Production","/printandproduction","#E08A2B"),("BTL","/btl","#D6357E")]
 # «О нас» — бренд-цветные постеры; ghost-глиф кодирует смысл (10+, 360°, &, 100+)
