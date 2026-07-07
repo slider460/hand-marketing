@@ -39,3 +39,20 @@
 | /video/vivax | `/media/vivax-samburskaya.mp4` | Vivax&Samburskaya.mp4 |
 | /zubovo | `/media/technopark-zubovo.mp4` | technopark-zubovo.mp4 |
 | /zubovo | `/media/silkway-3d.mp4` | 3D Silk Way.mp4 |
+
+## Новая страница /videoproduction (контент weshow, 07.07.2026)
+
+Файлы лежат в `media/` в корне репо, заливаются вручную в `/media/` на хостинг.
+Остальные примеры страницы (vivax, eaton-yaz, transrzhd, pt-film-long,
+gazelle-transformer, event-riviera, salaris-event-fin180416) уже на сервере.
+
+| Блок | Файл на хостинге | Исходник |
+|---|---|---|
+| hero (зацикленный луп) | `/media/vp-hero-loop.mp4` | нарезка из шоурила weshow, 14 с, 1.9 МБ |
+| Репортажные: форум «Россия» | `/media/samara-vdnh-report.mp4` | Dropbox weshow |
+| Обучающие: Saint-Gobain | `/media/saint-gobain-training.mp4` | Dropbox weshow (пережат 720p) |
+| Видеопрезентации | `/media/samara-pres-4elements.mp4` | Dropbox weshow (пережат) |
+| Видеопрезентации | `/media/samara-pres-5spirits.mp4` | Dropbox weshow (пережат) |
+| Видеопрезентации | `/media/samara-pres-vizual-1.mp4` | Dropbox weshow |
+| Видеопрезентации | `/media/samara-pres-vizual-2.mp4` | Dropbox weshow |
+| Видеопрезентации | `/media/samara-pres-content.mp4` | Dropbox weshow (пережат) |

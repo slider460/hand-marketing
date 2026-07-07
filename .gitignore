@@ -9,3 +9,6 @@ mirror/api/leads.csv
 dist-deploy/
 site/dist
 site/.astro
+
+# локальный симлинк для превью (на бою /media заливается вручную)
+mirror/media
