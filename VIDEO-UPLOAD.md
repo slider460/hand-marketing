@@ -56,3 +56,16 @@ gazelle-transformer, event-riviera, salaris-event-fin180416) уже на сер�
 | Видеопрезентации | `/media/samara-pres-vizual-1.mp4` | Dropbox weshow |
 | Видеопрезентации | `/media/samara-pres-vizual-2.mp4` | Dropbox weshow |
 | Видеопрезентации | `/media/samara-pres-content.mp4` | Dropbox weshow (пережат) |
+
+## Новая страница /content (мультимедийный контент, 07.07.2026)
+
+Файлы в `media/` в корне репо, заливать в `/media/` на хостинг.
+Naked Eye 3D переиспользует уже залитый `/media/stavropol-vdnh-nakedeye.mp4` — заливать не надо.
+
+| Блок | Файл на хостинге | Исходник |
+|---|---|---|
+| Графическое оформление | `/media/content-graphics.mp4` | Dropbox weshow (пережат 720p, 46 МБ) |
+| Мэппинг на архитектуре | `/media/content-mapping-arch.mp4` | Dropbox weshow (пережат, 7.6 МБ) |
+| Изогнутые экраны | `/media/content-mapping-curved.mp4` | Dropbox weshow (пережат, 25 МБ) |
+| Инфо-панели | `/media/content-infopanels.mp4` | Dropbox weshow (пережат, 21 МБ) |
+| Адаптация (автолуп) | `/media/content-adaptation-loop.mp4` | нарезка 10 с из ролика изогнутых экранов (0.8 МБ; у weshow этого видео нет — их файл битый) |

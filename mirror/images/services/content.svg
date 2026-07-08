@@ -1,0 +1,22 @@
+<svg viewBox="110 40 204 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Content">
+ <defs>
+  <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0427E"/><stop offset="1" stop-color="#9D1B4F"/></linearGradient>
+  <linearGradient id="ct" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F492B8"/><stop offset="1" stop-color="#D9558B"/></linearGradient>
+  <linearGradient id="cs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9D1B4F"/><stop offset="1" stop-color="#6E1237"/></linearGradient>
+ </defs>
+ <!-- изометрический LED-экран: фронт, верхняя грань, боковая грань (как у иконки Exhibition) -->
+ <polygon points="120,92 270,92 270,208 120,208" fill="url(#cf)"/>
+ <polygon points="120,92 270,92 304,72 154,72" fill="url(#ct)"/>
+ <polygon points="270,92 304,72 304,188 270,208" fill="url(#cs)"/>
+ <!-- контент на экране: волны -->
+ <path d="M132 176 q14 -12 28 0 t28 0 t28 0 t28 0 t14 0" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>
+ <path d="M132 192 q14 -12 28 0 t28 0 t28 0 t28 0 t14 0" fill="none" stroke="#FFFFFF" stroke-opacity=".3" stroke-width="6" stroke-linecap="round"/>
+ <!-- плей-кнопка -->
+ <polygon points="176,112 176,152 212,132" fill="#FFE000"/>
+ <polygon points="176,112 212,132 224,125 188,105" fill="#E6C800"/>
+ <!-- стойка -->
+ <polygon points="186,208 204,208 204,238 186,238" fill="url(#cs)"/>
+ <polygon points="164,238 226,238 240,230 178,230" fill="url(#ct)"/>
+ <polygon points="164,238 226,238 226,248 164,248" fill="url(#cf)"/>
+ <polygon points="226,238 240,230 240,240 226,248" fill="url(#cs)"/>
+</svg>
