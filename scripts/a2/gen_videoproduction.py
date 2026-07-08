@@ -81,8 +81,13 @@ PAGE_CSS="""<style id="vp-css">
 .vp-main{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C}
 .vp-main a:focus-visible,.vp-main button:focus-visible{outline:3px solid #CF6F19;outline-offset:3px;border-radius:4px}
 /* ------- герой: зацикленный шоурил ------- */
+/* постер-подложка всегда под видео; видео невидимо до реального старта
+   воспроизведения ('playing' -> .is-on): на мобильных с заблокированным
+   autoplay виден только красивый кадр, никакой системной кнопки плей */
 .vp-hero{position:relative;overflow:hidden;background:#14171C;color:#fff}
-.vp-hero__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vp-hero__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vp-hero__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.vp-hero__v.is-on{opacity:1}
 .vp-hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,28,.62) 0%,rgba(20,23,28,.34) 46%,rgba(20,23,28,.74) 100%)}
 .vp-hero__in{position:relative;max-width:1180px;margin:0 auto;padding:110px 40px 120px;min-height:min(66vh,560px);display:flex;flex-direction:column;justify-content:center}
 .vp-hero h1{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}
@@ -203,6 +208,7 @@ document.addEventListener('click',function(e){
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 var hv=document.querySelector('.vp-hero__v');
 if(hv){
+ hv.addEventListener('playing',function(){hv.classList.add('is-on');});
  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){hv.removeAttribute('autoplay');hv.pause();}
  else if('IntersectionObserver' in window){
   new IntersectionObserver(function(es){es.forEach(function(en){
@@ -272,7 +278,8 @@ def cases():
 
 def build():
     hero=(f'<section class="vp-hero">'
-          f'<video class="vp-hero__v" autoplay muted loop playsinline preload="metadata" poster="/images/vp/hero-poster.jpg" aria-hidden="true">'
+          f'<img class="vp-hero__poster" src="/images/vp/hero-poster.jpg" alt="" aria-hidden="true">'
+          f'<video class="vp-hero__v" autoplay muted loop playsinline preload="metadata" aria-hidden="true">'
           f'<source src="/media/vp-hero-loop.mp4" type="video/mp4"></video>'
           f'<div class="vp-hero__shade" aria-hidden="true"></div>'
           f'<div class="vp-hero__in">'
