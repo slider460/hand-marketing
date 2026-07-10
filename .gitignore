@@ -6,9 +6,15 @@ dist
 *.bak
 mirror/api/leads.csv
 
+# токены Telegram живут только на сервере (см. api/lead.php)
+mirror/api/config.php
+public/api/config.php
+
 dist-deploy/
 site/dist
 site/.astro
 
 # локальный симлинк для превью (на бою /media заливается вручную)
 mirror/media
+# исходники видео — 2 ГБ, на бой заливаются вручную по VIDEO-UPLOAD.md
+media/

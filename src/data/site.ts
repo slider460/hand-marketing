@@ -9,7 +9,7 @@ export const CONTACTS = {
   telegram: 'https://t.me/narodetskii',
   youtube: 'https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw',
   requisites: 'ООО «Хэнд-маркетинг» · ИНН 7709931482 · КПП 770901001 · ОГРН 1137746525608',
-  showreel: 'https://dl.dropboxusercontent.com/s/9cqeabb1b6pla6k/HM_Showreel.mp4?dl=0',
+  showreel: '/media/hm-showreel.mp4',
 }
 
 export const NAV = [

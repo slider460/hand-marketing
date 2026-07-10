@@ -25,6 +25,18 @@
       "port": 8080
     },
     {
+      "name": "dist",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "serve",
+        "dist",
+        "-l",
+        "8090"
+      ],
+      "port": 8090
+    },
+    {
       "name": "dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [

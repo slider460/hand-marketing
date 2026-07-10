@@ -226,7 +226,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 els.forEach(function(n,i){n.style.transitionDelay=Math.min(i%4*90,270)+'ms';io.observe(n);});
 })();</script>"""
 
-RALEWAY='<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">'
+RALEWAY='<link href="/fonts/raleway-700.css" rel="stylesheet">'  # self-host, см. mirror/fonts/
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">

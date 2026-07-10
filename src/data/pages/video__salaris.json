@@ -86,7 +86,7 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://dl.dropboxusercontent.com/s/97qhegnhf1rmsdr/AS_Salaris_1.mp4?dl=0"
+     "src": "/media/salaris-1.mp4"
     }
    ],
    "links": []
@@ -99,7 +99,7 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://dl.dropboxusercontent.com/s/j0daeg8jqgtso61/AS_Salaris_2.mp4?dl=0"
+     "src": "/media/salaris-2.mp4"
     }
    ],
    "links": []

@@ -33,6 +33,15 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
 
   return (
     <form onSubmit={onSubmit} className="mx-auto w-full max-w-xl">
+      {/* honeypot: скрытое поле для ботов, обработчик такие заявки отбрасывает */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-[9999px] h-px w-px opacity-0"
+      />
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
           <span className="sr-only">Ваше имя</span>

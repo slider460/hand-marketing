@@ -182,7 +182,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 els.forEach(function(n,i){n.style.transitionDelay=Math.min(i%4*90,270)+'ms';io.observe(n);});
 })();</script>"""
 
-RALEWAY='<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">'
+RALEWAY='<link href="/fonts/raleway-700.css" rel="stylesheet">'  # self-host, см. mirror/fonts/
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -270,12 +270,10 @@ def build():
     )
     works=f'<div class="ct-sec" id="ct-works">{rows}</div>'
 
-    final=(f'<section class="ct-sec"><div class="ct-final ct-rev">'
-           f'<h2>Готовы воплотить вашу идею?</h2>'
-           f'<p>Свяжитесь с нами, чтобы обсудить проект — поможем создать незабываемый мультимедийный опыт для вашей аудитории.</p>'
-           f'<a class="ct-cta" href="#lead">Обсудить проект</a></div></section>')
+    # Финальный CTA-блок убран 10.07.2026 по просьбе пользователя:
+    # он дублировал форму заявки hm-cta, которая идёт сразу за ним (#lead)
 
-    body=(f'{rc.header()}<main class="ct-main">{hero}{feats()}{works}{final}</main>'
+    body=(f'{rc.header()}<main class="ct-main">{hero}{feats()}{works}</main>'
           f'<a id="lead"></a>{rc.footer()}{rc.JS}{VIDEO_JS}{REVEAL_JS}</body></html>')
     return HEAD+body
 

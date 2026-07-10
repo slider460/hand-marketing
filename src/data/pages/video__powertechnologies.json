@@ -91,7 +91,7 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://dl.dropboxusercontent.com/s/c952pc83dzk58r9/PT%20Film%20LONG.mp4?dl=0"
+     "src": "/media/pt-film-long.mp4"
     }
    ],
    "links": []
@@ -104,7 +104,7 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://dl.dropboxusercontent.com/s/vopb0daxhgh296d/PT%20Film%20SHORT.mp4?dl=0"
+     "src": "/media/pt-film-short.mp4"
     }
    ],
    "links": []

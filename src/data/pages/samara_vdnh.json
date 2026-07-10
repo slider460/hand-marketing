@@ -128,27 +128,27 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/rwvj445tlkx57x2ljpwy7/4_.mp4?rlkey=g3033ruah2sd84m4hftnd9qzw&amp;raw=1"
+     "src": "/media/samara_vdnh-4.mp4"
     },
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/drwpmae1kg322wk1pk8er/1_.mp4?rlkey=iaqb0rd7trfgbgw9i3drnjiv7&amp;raw=1"
+     "src": "/media/samara_vdnh-1.mp4"
     },
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/d9jnc8iox0628vrfodcav/5_.mp4?rlkey=jua2l5gl13zlpcl8xfm83qtxy&amp;raw=1"
+     "src": "/media/samara_vdnh-5.mp4"
     },
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/alb7sei5u0ls72x9e1btf/7_-_.mp4?rlkey=0k23wlln1shion9483hejtua7&amp;raw=1"
+     "src": "/media/samara_vdnh-6.mp4"
     },
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/2hiqhmw7bwaz2f431p66o/2_.mp4?rlkey=5hxdbifaunnlcpzvma1vbrz1c&amp;raw=1"
+     "src": "/media/samara_vdnh-2.mp4"
     },
     {
      "type": "mp4",
-     "src": "https://www.dropbox.com/scl/fi/ujm4v27s5g8n0j0rp8nmt/3_.mp4?rlkey=bfjbizphbofe4oiyt5taf8ynn&amp;raw=1"
+     "src": "/media/samara_vdnh-3.mp4"
     }
    ],
    "links": []
@@ -161,7 +161,7 @@
    "videos": [
     {
      "type": "mp4",
-     "src": "https://dl.dropboxusercontent.com/s/pn06tivd2oejd5z/Samsung%202020.mp4?dl=0"
+     "src": "/media/samsung-2020.mp4"
     }
    ],
    "links": []

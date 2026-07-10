@@ -13,7 +13,7 @@ YT     = "https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw"
 NAV    = [("О нас","/about"),("Услуги","/service"),("Проекты","/project"),
           ("Клиенты","/clients"),("Контакты","/contacts")]
 
-FONT = '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">'
+FONT = '<link href="/fonts/montserrat.css" rel="stylesheet">'  # self-host, см. mirror/fonts/
 
 CSS = """<style id="hm-chrome-css">
 /* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
