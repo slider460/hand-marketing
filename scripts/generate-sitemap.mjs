@@ -1,17 +1,26 @@
 #!/usr/bin/env node
-// Генерирует public/sitemap.xml по реестру страниц и кейсов
-import { writeFileSync } from 'node:fs'
-import cases from '../src/data/cases.json' with { type: 'json' }
+// Генерирует sitemap.xml из СТРУКТУРЫ ЗЕРКАЛА (mirror/**/index.html) —
+// список URL не ведётся руками и не может устареть: что задеплоено, то и в sitemap.
+// lastmod — из mtime страницы. Пишет mirror/sitemap.xml (боевой) и копию в public/.
+import { writeFileSync, statSync, globSync } from 'node:fs'
+import { join } from 'node:path'
 
+const ROOT = new URL('..', import.meta.url).pathname
 const BASE = 'https://hand-marketing.ru'
-const staticRoutes = ['/', '/about', '/service', '/project', '/clients', '/contacts', '/privacy',
-  '/event', '/creativedesign', '/videoproduction', '/printandproduction', '/btl', '/digital', '/3dmapping']
-const urls = [...staticRoutes, ...cases.map((c) => c.route)]
-const today = new Date().toISOString().slice(0, 10)
+
+const pages = globSync(join(ROOT, 'mirror/**/index.html'))
+  .filter((f) => !f.includes('/static/'))
+  .map((f) => ({
+    loc: f.replace(join(ROOT, 'mirror'), '').replace(/index\.html$/, ''),
+    lastmod: statSync(f).mtime.toISOString().slice(0, 10),
+  }))
+  .sort((a, b) => a.loc.localeCompare(b.loc))
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${BASE}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
+${pages.map((p) => `  <url><loc>${BASE}${p.loc}</loc><lastmod>${p.lastmod}</lastmod></url>`).join('\n')}
 </urlset>
 `
-writeFileSync(new URL('../public/sitemap.xml', import.meta.url), xml)
-console.log(`sitemap.xml: ${urls.length} URL`)
+writeFileSync(join(ROOT, 'mirror/sitemap.xml'), xml)
+writeFileSync(join(ROOT, 'public/sitemap.xml'), xml)
+console.log(`sitemap.xml: ${pages.length} URL (mirror/ + копия в public/)`)
