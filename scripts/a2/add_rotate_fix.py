@@ -34,7 +34,9 @@ for f in sorted(glob.glob(os.path.join(ROOT, '**', 'index*.html'), recursive=Tru
     if MARK in h:
         skipped += 1
         continue
-    if 'class="mhome' not in h or 'type="td"' not in h or '</body>' not in h:
+    # ставим на все страницы с отложенным Tilda-движком (mhome не обязателен:
+    # /clients и /privacy без мобильной версии страдают от того же эффекта)
+    if 'type="td"' not in h or '</body>' not in h:
         continue
     h = h.replace('</body>', JS + '</body>', 1)
     with open(f, 'w', encoding='utf-8') as fh:
