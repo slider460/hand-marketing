@@ -163,14 +163,16 @@ CONCEPTS = [
 
 # Две отдельные ленты — по варианту дизайна (одной длинной листать слишком долго)
 FRAMES_V1 = [
-    ('video', '/media/samara-pres-vizual-1.mp4', '/images/vp/vizual_1_samara.jpg', 'Видеооблёт варианта'),
+    # облёт светлой «Неоновой арены» лежит в файле vizual-2 (нумерация файлов не совпадает с вариантами)
+    ('video', '/media/samara-pres-vizual-2.mp4', '/images/vp/vizual_2_samara.jpg', 'Видеооблёт варианта'),
     ('img', 'render-v1-a', '', '«Неоновая арена»: общий вид'),
     ('img', 'render-v1-b', '', 'Зона «Самарской регаты»'),
     ('img', 'render-v1-c', '', 'Интерьер с медиапотолком'),
     ('img', 'plan-v1', '', 'План застройки'),
 ]
 FRAMES_V2 = [
-    ('video', '/media/samara-pres-vizual-2.mp4', '/images/vp/vizual_2_samara.jpg', 'Видеооблёт варианта'),
+    # облёт тёмных «Хранителей» — файл vizual-1
+    ('video', '/media/samara-pres-vizual-1.mp4', '/images/vp/vizual_1_samara.jpg', 'Видеооблёт варианта'),
     ('img', 'render-v2-a', '', '«Хранители»: общий вид'),
     ('img', 'render-v2-b', '', 'Медиаколонны с хранителями'),
     ('img', 'render-v2-c', '', 'Фасад с LED-принтами'),
