@@ -38,14 +38,18 @@ if (file_exists($rlFile) && time() - (int)@filemtime($rlFile) < 10) {
 }
 @touch($rlFile);
 
-// собрать поля: обычный POST, urlencoded raw или JSON
+// собрать поля: обычный POST, JSON или urlencoded raw.
+// ВАЖНО: json_decode — ДО parse_str: parse_str на JSON-строке возвращает
+// непустой мусорный массив («{"a":"b"}» целиком становится ключом),
+// и JSON-ветка иначе никогда не выполняется.
 $data = $_POST;
 if (empty($data)) {
     $raw = file_get_contents('php://input');
-    parse_str($raw, $data);
-    if (empty($data)) {
-        $json = json_decode($raw, true);
-        if (is_array($json)) $data = $json;
+    $json = json_decode($raw, true);
+    if (is_array($json)) {
+        $data = $json;
+    } else {
+        parse_str($raw, $data);
     }
 }
 
