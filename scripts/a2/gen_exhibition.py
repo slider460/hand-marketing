@@ -179,15 +179,56 @@ FRAMES_V2 = [
     ('img', 'plan-v2', '', 'План застройки'),
 ]
 
-SPEC = [
-    ('И-01', 'Кинетическое шоу из хоккейных шайб', 'Шайбы на индивидуальных лебёдках выстраиваются в объёмные фигуры над сценой — визуальный якорь стенда и всех фото с форума.'),
-    ('И-02', '«Сдай ГТО с чемпионом»', 'Компьютерное зрение считает повторения и следит за техникой; амбассадор на экране тренирует, диплом печатается на стенде.'),
-    ('И-03', 'Полоса препятствий «Путь Героя»', 'Замкнутое пространство 360°: панорамные проекции реагируют на движение участника.'),
-    ('И-04', '«Самарская регата»', 'Гость раскрашивает корпус судна, сканер оцифровывает рисунок — и корабль уходит в плавание по медиаакватории стенда.'),
-    ('И-05', 'AR-фото с амбассадором', 'Цифровая копия легендарного спортсмена встаёт рядом с гостем; снимок с готовыми хэштегами уходит на почту.'),
-    ('И-06', '«Аллея Чемпионов»', 'Девять аттракционов, где физика управляет графикой: виртуальная рыбалка, прыжковый тест, пиксель-арт на велотренажёрах, симулятор старта LADA.'),
-    ('И-07', 'Тач-панели «Цифровая Самара»', 'Шесть вертикальных панелей — мультимедийный портал о спорте, инфраструктуре и проектах региона.'),
-    ('И-08', 'Бар амбассадоров', 'Авторские безалкогольные коктейли в честь чемпионов: «Апперкот Саитова», «Сальто Немова», «Синхрон Киселёвой».'),
+# Зоны стенда: рендер (страница презентации без текста) + описание. Z-01…Z-10.
+ZONES = [
+    # (файл рендера, название, описание) — картинки сверены с содержимым презентации 11.07.2026
+    ('zone-business', 'Деловая зона',
+     'Сцена с большим LED-экраном, профессиональный звук и подиум — площадка для церемоний федерального уровня, '
+     'презентаций и подписания соглашений. Фишка зоны — робот-андроид, который выполняет гимнастические упражнения '
+     'и устраивает шоу для гостей.'),
+    ('zone-vip', 'VIP-переговорная',
+     'Приватное пространство на 8 персон в тихой части стенда: большой экран, флаги, система для презентаций — '
+     'для переговоров делегаций и закрытых подписаний.'),
+    ('zone-kinetic', 'Кинетическое шоу из хоккейных шайб',
+     'Шайбы в честь юбилея ХК «Лада» подвешены на индивидуальных лебёдках над зоной. В фоновом режиме волны из шайб '
+     'плывут под потолком, в режиме шоу — опускаются и выстраиваются в объёмные фигуры с кульминацией — гигантской «50». '
+     'Шайбы можно отмечать автографами звёзд прямо во время шоу.'),
+    ('zone-digital', 'Информационные зоны «Цифровая Самара»',
+     'Вертикальные тач-пилоны — единый мультимедийный портал: спортивный навигатор по области, инфраструктура, '
+     'ключевые проекты и истории успеха. Рядом — «Голоса легенд»: 3D-фигуры знаменитых спортсменов с видеоприветствиями.'),
+    ('zone-alley', 'Зона спортивных клубов «Аллея Чемпионов»',
+     'Высокотехнологичное погружение в мир большого спорта: девять аттракционов, где физическая активность гостя '
+     'управляет графикой на экранах. Каждый клуб региона интегрирован в свою активность.'),
+    ('zone-catch', '«Волжский улов»',
+     'Виртуальная рыбалка на LED-пилоне: участник с интерактивной удочкой ловит цифровой трофей из Волги. '
+     'Пилон работает в двух режимах — имиджевый контент для привлечения и игра для вовлечения.'),
+    ('zone-tyaga', '«Самарский кач» — ожившие «Бурлаки на Волге»',
+     'Силовой интерактив с культурным кодом: участник тянет якорь на тросе — и баржа на ожившей картине Репина '
+     'движется вдоль берега. Шкала результата встроена в пилон.'),
+    ('zone-pixel', 'Пиксель-арт и «Запусти ракету в космос»',
+     'Коллективный аттракцион: гости на велотренажёрах с неоновыми колёсами вместе «раскрашивают» пиксельное панно '
+     'Самарской области, а беговая дорожка «Энергия для „Союза"» заряжает старт ракеты на экране.'),
+    ('zone-record', '«Самарский рекорд»',
+     'Прыжок в длину с места с мгновенным измерением: разметка прямо на полу стенда, результат — на экране '
+     'со сравнением с забавными местными ориентирами.'),
+    ('zone-gto', 'Зона «Сдай ГТО с чемпионом»',
+     'Компьютерное зрение в реальном времени считает повторения и следит за техникой, а спортсмен-амбассадор на экране '
+     'показывает упражнения как личный тренер. За сданный норматив — брендированный диплом с именем участника.'),
+    ('zone-hero-path', 'Полоса препятствий «Путь Героя»',
+     'Закрытое иммерсивное пространство 360°: панорамные проекции реагируют на движения участника, а сценарии испытаний '
+     'меняются под разные виды спорта — от хоккея до баскетбола.'),
+    ('zone-regata', '«Самарская регата» — акватория гонки',
+     'Гость раскрашивает корпус судна, сканер оцифровывает рисунок — и корабль отправляется в плавание по медиаакватории '
+     'с цифровым водопадом. На память участник забирает свой рисунок в брендированной рамке.'),
+    ('zone-photo', 'Фотозона «Фото с амбассадором»',
+     'Вертикальная тач-панель работает как цифровое зеркало: AR-копия легендарного спортсмена «подходит» к гостю и встаёт '
+     'в победную позу рядом. Снимок с готовым текстом и хэштегами мгновенно уходит на почту.'),
+    ('zone-bar', 'Спорт-бар и дегустация «Сделано в Самаре»',
+     'Дегустация инновационного спортивного питания самарских производителей и авторские безалкогольные коктейли '
+     'в честь чемпионов: «Апперкот Саитова» с эффектом дыма, «Сальто Немова», «Синхрон Киселёвой» в карамельной сфере.'),
+    ('zone-makers', 'Зона производителей',
+     'Экспозиция «Сделано в Самарской области»: местные компании представляют инновации в спортивном инвентаре, '
+     'экипировке и технологиях — от «умной одежды» MioBody до решений центра НТИ.'),
 ]
 
 def _mark(code, title):
@@ -234,11 +275,17 @@ def _variant_head(kick, name, note):
     return (f'<div class="sam-vhead ex-rev"><span class="sam-vhead__k">{kick}</span>'
             f'<h4 class="sam-vhead__n">{name}</h4><p class="sam-vhead__d">{note}</p></div>')
 
-def _spec():
-    rows = ''.join(f'<div class="sam-row ex-rev"><span class="sam-row__i">{i}</span>'
-                   f'<span class="sam-row__n">{n}</span><span class="sam-row__d">{d}</span></div>'
-                   for i, n, d in SPEC)
-    return f'<div class="sam-spec">{rows}</div>'
+def _zones():
+    rows = ''
+    for i, (img, name, desc) in enumerate(ZONES, 1):
+        p = f'/images/exhibition/samara/{img}.jpg'
+        rows += (f'<div class="sam-zone ex-rev">'
+                 f'<button type="button" class="sam-zoom sam-zone__img" data-img="{p}" data-title="{name}" '
+                 f'aria-label="Открыть рендер: {name}">'
+                 f'<img src="{p}" alt="{name} — рендер зоны выставочного стенда Самарской области" loading="lazy" width="800" height="450"></button>'
+                 f'<div class="sam-zone__txt"><span class="sam-zone__i">Z-{i:02d}</span>'
+                 f'<h4 class="sam-zone__n">{name}</h4><p class="sam-zone__d">{desc}</p></div></div>')
+    return f'<div class="sam-zones">{rows}</div>'
 
 def case_narr():
     hud = ('<div class="sam-hud ex-rev">'
@@ -257,15 +304,10 @@ def case_narr():
              '<div>Дать делегациям деловую зону для переговоров и подписаний</div>'
              '<div>Создать поводы для фото, публикаций и СМИ</div></div>')
 
-    zoning = ('<div class="sam-zon"><ul class="sam-zlist ex-rev">'
-              '<li><b>Деловая зона</b><span>сцена с LED-экраном для церемоний федерального уровня, VIP-переговорная на 8 персон</span></li>'
-              '<li><b>Шоу-зона</b><span>кинетическая инсталляция и центральный арт-экран</span></li>'
-              '<li><b>Интерактивная зона</b><span>«Аллея Чемпионов», ГТО, полоса препятствий 360°, медиаакватория регаты</span></li>'
-              '<li><b>Гостевая зона</b><span>спорт-бар с продукцией самарских производителей и лаунж</span></li></ul>'
-              '<figure class="sam-plan ex-rev"><button type="button" class="sam-zoom" data-img="/images/exhibition/samara/plan-v1.jpg" '
-              'data-title="План застройки стенда, 204 м²" aria-label="Открыть план застройки">'
-              '<img src="/images/exhibition/samara/plan-v1.jpg" alt="План застройки выставочного стенда 204 м² — зонирование" loading="lazy" width="800" height="450">'
-              '</button><figcaption class="sam-frame__cap"><span>План застройки · маршруты четырёх аудиторий</span></figcaption></figure></div>')
+    plan = ('<figure class="sam-plan ex-rev"><button type="button" class="sam-zoom" data-img="/images/exhibition/samara/plan-v1.jpg" '
+            'data-title="План застройки стенда, 204 м²" aria-label="Открыть план застройки">'
+            '<img src="/images/exhibition/samara/plan-v1.jpg" alt="План застройки выставочного стенда 204 м² — зонирование" loading="lazy" width="800" height="450">'
+            '</button><figcaption class="sam-frame__cap"><span>План застройки · маршруты четырёх аудиторий на 204 м²</span></figcaption></figure>')
 
     content = ('<div class="sam-cnt"><figure class="sam-cnt__v ex-rev">'
                '<button type="button" class="vp-facade" data-video="/media/samara-pres-content.mp4" data-title="Концепция контента стенда" '
@@ -280,7 +322,9 @@ def case_narr():
     outro = ('<div class="sam-outro ex-rev">'
              '<h3>Такой дизайн-проект — первый этап любого нашего стенда</h3>'
              '<p>Концепции на выбор, зонирование, интерактив, рендеры и видеооблёты, планы застройки и контент-пакет — '
-             'всё это вы оцениваете <b>до начала производства</b>. Дальше строим: собственное производство, мультимедиа и монтаж в любом городе России.</p>'
+             'всё это вы оцениваете <b>до начала производства</b>. Дальше строим сами: изготовление выставочных стендов '
+             'на собственной базе, аренда готовых конструкций для типовых задач, интерактивные инсталляции и монтаж '
+             'с сопровождением на площадке в любом городе России.</p>'
              '<a class="ex-cta" href="#ex-quiz">Рассчитать свой стенд</a></div>')
 
     return (f'<div class="sam-dark" id="ex-case"><div class="sam-in">'
@@ -294,18 +338,20 @@ def case_narr():
             f'<p class="sam-lead ex-rev">Хороший стенд рассказывает историю. Мы разработали две равноправные креативные концепции — '
             f'каждая с собственной легендой, визуальным кодом и полной видеопрезентацией. Нажмите — видео откроется со звуком:</p>'
             f'{_concepts()}'
-            f'{_mark("SMR·03", "Зонирование · 204 м²")}{zoning}'
-            f'{_mark("SMR·04", "Ведомость интерактивов")}'
-            f'<p class="sam-lead ex-rev">Мультимедиа проектируется вместе со стендом, а не «прикручивается» потом. '
-            f'Интерактивные инсталляции этого проекта:</p>{_spec()}'
-            f'{_mark("SMR·05", "Дизайн · два варианта")}'
+            f'{_mark("SMR·03", "Зоны стенда · 204 м²")}'
+            f'<p class="sam-lead ex-rev">Проектирование стенда — это режиссура потоков: у VIP-делегации, деловых гостей и семей '
+            f'с детьми свои маршруты и свои «сувениры на память». Мультимедиа и интерактив проектируются вместе с конструктивом, '
+            f'а не «прикручиваются» потом: интерактивные инсталляции, мультимедийные стенды и LED-пилоны заложены '
+            f'в конструктив с первого чертежа. Пятнадцать зон этого проекта:</p>'
+            f'{_zones()}{plan}'
+            f'{_mark("SMR·04", "Дизайн · два варианта")}'
             f'<p class="sam-lead ex-rev">Заказчик получил две полностью проработанные архитектуры стенда — у каждой свой видеооблёт, '
             f'рендеры и план застройки. Ленты листаются, кадры открываются в полный размер:</p>'
             f'{_variant_head("Вариант 1", "«Неоновая арена»", "Белый корпус, циановая светографика, медиапотолок-«Волга»")}'
             f'</div>{_strip(FRAMES_V1, "Вариант 1")}<div class="sam-in sam-in_seq">'
             f'{_variant_head("Вариант 2", "«Хранители»", "Тёмный корпус и гигантские арт-принты легенды на медиаколоннах")}'
             f'</div>{_strip(FRAMES_V2, "Вариант 2")}<div class="sam-in">'
-            f'{_mark("SMR·06", "Контент для всех экранов")}{content}'
+            f'{_mark("SMR·05", "Контент для всех экранов")}{content}'
             f'{outro}'
             f'</div></div>')
 
@@ -385,21 +431,16 @@ CASE_CSS = """<style id="sam-css">
 .sam-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--hair);border-radius:999px;padding:5px 12px;
  font-size:12.5px;font-weight:600;color:#C6CDD6;white-space:nowrap}
 .sam-chip i{width:8px;height:8px;border-radius:50%;flex:none}
-/* зонирование */
-.sam-zon{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start;margin-bottom:8px}
-.sam-zlist{list-style:none;margin:0;padding:0}
-.sam-zlist li{padding:14px 0;border-bottom:1px solid var(--hair)}
-.sam-zlist li:first-child{border-top:1px solid var(--hair)}
-.sam-zlist b{display:block;font-size:15.5px;color:#fff;margin-bottom:3px}
-.sam-zlist span{font-size:13.5px;line-height:1.5;color:var(--dim)}
-.sam-plan{margin:0}
-/* ведомость */
-.sam-spec{border-top:1px solid var(--hair);margin-bottom:8px}
-.sam-row{display:grid;grid-template-columns:64px minmax(220px,290px) 1fr;gap:18px;padding:15px 6px;border-bottom:1px solid var(--hair);transition:background .15s}
-.sam-row:hover{background:rgba(59,201,216,.05)}
-.sam-row__i{font-weight:800;font-size:13px;color:var(--cy);font-variant-numeric:tabular-nums;letter-spacing:.06em}
-.sam-row__n{font-weight:700;font-size:14.5px;color:#fff;line-height:1.4}
-.sam-row__d{font-size:13.5px;line-height:1.55;color:var(--dim)}
+/* зоны стенда: журнальные ряды рендер+описание, чередование сторон */
+.sam-zones{display:grid;gap:34px;margin:6px 0 30px}
+.sam-zone{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(20px,3vw,40px);align-items:center}
+.sam-zone:nth-child(even) .sam-zone__img{order:2}
+.sam-zone__txt{min-width:0}
+.sam-zone__i{display:inline-block;margin-bottom:10px;font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:11px;
+ letter-spacing:.2em;color:var(--cy);border:1px solid rgba(59,201,216,.45);padding:4px 9px;border-radius:4px}
+.sam-zone__n{margin:0 0 10px;font-size:clamp(17px,2vw,22px);font-weight:800;letter-spacing:-.015em;color:#fff;line-height:1.25}
+.sam-zone__d{margin:0;font-size:14.5px;line-height:1.65;color:var(--dim)}
+.sam-plan{margin:0 0 8px}
 /* кинолента */
 .sam-strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px max(40px,calc(50vw - 590px)) 22px;
  scrollbar-width:thin;scrollbar-color:rgba(59,201,216,.5) transparent;-webkit-overflow-scrolling:touch}
@@ -444,9 +485,10 @@ CASE_CSS = """<style id="sam-css">
 .sam-faq__item[open] summary::after{transform:translateY(-30%) rotate(225deg)}
 .sam-faq__item p{margin:0 0 18px;font-size:15px;line-height:1.65;color:#5A616A}
 @media(max-width:1080px){.sam-goals{grid-template-columns:1fr 1fr;gap:16px}
- .sam-zon{grid-template-columns:1fr}.sam-cnt{grid-template-columns:1fr}}
+ .sam-cnt{grid-template-columns:1fr}}
 @media(max-width:880px){.sam-duo{grid-template-columns:1fr}
- .sam-row{grid-template-columns:52px 1fr;grid-template-rows:auto auto}.sam-row__d{grid-column:2}}
+ .sam-zone{grid-template-columns:1fr;gap:14px}.sam-zone:nth-child(even) .sam-zone__img{order:0}
+ .sam-zones{gap:38px}}
 @media(max-width:640px){.sam-in{padding:52px 18px 8px}
  .sam-hud div{padding:12px 16px 12px 0}.sam-goals{grid-template-columns:1fr}
  .sam-strip{padding-left:18px;padding-right:18px}.sam-frame{flex-basis:88vw}}
