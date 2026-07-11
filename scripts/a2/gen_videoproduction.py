@@ -276,6 +276,65 @@ def cases():
                    f'<img class="vp-card__hov" src="{hov}" alt="" loading="lazy" aria-hidden="true"></a>'
                    for url,t,img,hov in CASES)
 
+# SEO-блок: процесс продакшна + FAQ со schema.org (семантика: «видеопродакшн» 175,
+# «съёмка рекламных роликов», «производство видеороликов», «корпоративные фильмы»)
+VP_FAQ=[
+ ('Что входит в видеопродакшн полного цикла?',
+  'Всё от идеи до мастер-файла: сценарий и раскадровка, продюсирование, съёмочная группа и техника, локации и актёры, монтаж, цветокоррекция, графика и 3D, звуковое оформление. Отдаём готовые версии под площадки — от кинотеатрального DCP до вертикальных роликов для соцсетей.'),
+ ('Сколько стоит съёмка рекламного ролика?',
+  'Зависит от хронометража, числа съёмочных дней, графики и прав на музыку. После брифа готовим смету с вариантами «оптимально/расширенно» — бесплатно. Производство видеороликов для соцсетей и корпоративные фильмы считаются по той же схеме.'),
+ ('Какие сроки производства видео?',
+  'Репортажная съёмка мероприятия — отдаём материал за 2–5 дней. Рекламный ролик или корпоративный фильм — обычно 3–6 недель от брифа до мастера, в зависимости от графики и согласований.'),
+ ('Снимаете ли вы за пределами Москвы?',
+  'Да, съёмочная группа выезжает в любой город России — снимали в Самаре, Ставрополе, на федеральных форумах и выставках.'),
+ ('Делаете ли вы только монтаж или графику по готовым материалам?',
+  'Да: монтаж, цветокоррекция, титры, 2D/3D-графика и упаковка под площадки по вашим исходникам — как отдельная услуга.'),
+]
+
+def seo_sec():
+    import json
+    items, ld = '', []
+    for q,a in VP_FAQ:
+        items += f'<details class="vp-faq__i vp-rev"><summary>{q}</summary><p>{a}</p></details>'
+        ld.append({'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}})
+    schema=json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':ld},ensure_ascii=False)
+    steps=(('Бриф и сценарий','Цели, аудитория, референсы. Пишем сценарий, раскадровку и смету — согласовываем до съёмок.'),
+           ('Подготовка','Локации, кастинг, техника, график съёмочных дней.'),
+           ('Съёмка','Съёмочная группа с собственным оборудованием — в студии, на объекте или на мероприятии.'),
+           ('Постпродакшн','Монтаж, цвет, графика и 3D, звук. Две итерации правок включены.'),
+           ('Мастер и версии','Форматы под все площадки: ТВ, экраны мероприятий, сайт, соцсети.'))
+    steps_html=''.join(f'<div class="vp-step vp-rev"><h4>{t}</h4><p>{d}</p></div>' for t,d in steps)
+    css=('<style id="vp-seo-css">'
+         '.vp-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin:6px 0 30px;counter-reset:vps}'
+         '.vp-step{counter-increment:vps;border-top:2px solid #CF6F19;padding-top:12px}'
+         '.vp-step::before{content:"0" counter(vps);font-weight:800;font-size:13px;color:#CF6F19;letter-spacing:.08em}'
+         '.vp-step h4{margin:6px 0 6px;font-size:14.5px;font-weight:700;line-height:1.35}'
+         '.vp-step p{margin:0;font-size:13px;line-height:1.5;color:#5A616A}'
+         '.vp-sec__lead a{color:#673A7E;font-weight:600}'
+         '.vp-faq{display:grid;gap:10px;max-width:820px}'
+         '.vp-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;background:#fff;padding:0 20px}'
+         '.vp-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:15px 36px 15px 0;font-size:15.5px;font-weight:700}'
+         '.vp-faq__i summary::-webkit-details-marker{display:none}'
+         '.vp-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;'
+         'transform:translateY(-70%) rotate(45deg);border-right:2.5px solid #CF6F19;border-bottom:2.5px solid #CF6F19;transition:transform .2s}'
+         '.vp-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}'
+         '.vp-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:#5A616A}'
+         '@media(max-width:960px){.vp-steps{grid-template-columns:1fr 1fr}}'
+         '@media(max-width:640px){.vp-steps{grid-template-columns:1fr}}'
+         '</style>')
+    return (f'<section class="vp-sec" id="vp-seo">{css}'
+            f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Как проходит видеопродакшн</h2></div>'
+            f'<p class="vp-sec__lead vp-rev">Видеопродакшн полного цикла означает, что за результат отвечает одна команда — '
+            f'от идеи до мастер-файла. Съёмка рекламных роликов, производство корпоративных фильмов, репортажи с мероприятий '
+            f'и обучающее видео проходят один и тот же управляемый процесс:</p>'
+            f'<div class="vp-steps">{steps_html}</div>'
+            f'<p class="vp-sec__lead vp-rev">Видео у нас редко живёт в одиночку: ролики становятся контентом для '
+            f'<a href="/exhibition/">выставочных стендов</a>, <a href="/content/">мультимедийных инсталляций</a> и экранов '
+            f'мероприятий — снимаем сразу с учётом поверхностей, на которых материал будет работать.</p>'
+            f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Вопросы о видеопродакшне</h2></div>'
+            f'<div class="vp-faq">{items}</div>'
+            f'<script type="application/ld+json">{schema}</script></section>')
+
 def build():
     hero=(f'<section class="vp-hero">'
           f'<img class="vp-hero__poster" src="/images/vp/hero-poster.jpg" alt="" aria-hidden="true">'
@@ -296,7 +355,7 @@ def build():
     case_sec=(f'<div class="vp-cases-wrap" id="vp-cases"><section class="vp-sec">'
           f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Кейсы</h2><a class="vp-all vp-rev" href="/project">Все проекты →</a></div>'
           f'<div class="vp-cases">{cases()}</div></section></div>')
-    body=f'{rc.header()}<main class="vp-main">{hero}{works}{case_sec}</main><a id="lead"></a>{rc.footer()}{rc.JS}{VIDEO_JS}{REVEAL_JS}</body></html>'
+    body=f'{rc.header()}<main class="vp-main">{hero}{works}{case_sec}{seo_sec()}</main><a id="lead"></a>{rc.footer()}{rc.JS}{VIDEO_JS}{REVEAL_JS}</body></html>'
     return HEAD+body
 
 if __name__=='__main__':

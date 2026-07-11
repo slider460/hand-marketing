@@ -219,6 +219,50 @@ def row(accent,title,desc,media,rev=False,lst=None):
             f'<p class="ct-row__d">{H.escape(desc)}</p>{lst_html}</div>'
             f'<div class="ct-row__media">{media}</div></section>')
 
+# SEO-блок: FAQ со schema.org (семантика: «мультимедийный контент» 1713 шир.,
+# «интерактивные инсталляции» 43, «интерактивный стол» 395, «видеомаппинг»)
+CT_FAQ=[
+ ('Какой мультимедийный контент вы создаёте?',
+  'Контент для LED-экранов и медиафасадов, видеомаппинг и 3D-графику, интерактивные инсталляции и сенсорные столы, Naked Eye 3D, VR-среды, контент для тач-панелей и инфокиосков, графические заставки и брендинг мероприятий.'),
+ ('Делаете ли вы контент для выставочных стендов?',
+  'Да, это одна из главных специализаций: контент проектируется вместе со стендом — под конкретные экраны, медиапотолки, пилоны и интерактивные зоны. Пример разбора такого проекта — на странице застройки выставочных стендов.'),
+ ('Сколько стоит создание мультимедийного контента?',
+  'Зависит от хронометража, разрешения поверхностей и сложности графики: контент для нестандартного медиафасада и заставка для LED-экрана — разные бюджеты. После брифа считаем смету бесплатно.'),
+ ('Что нужно, чтобы адаптировать наш существующий контент под новые экраны?',
+  'Исходники в максимальном качестве и параметры поверхностей: разрешение, физические размеры, тип экрана. Дальше мы пересоберём композицию под каждую поверхность — от изогнутых экранов до пола.'),
+ ('Интерактивные инсталляции — это только для выставок?',
+  'Нет: сенсорные столы, интерактивные стены и игровые механики работают в шоурумах, музеях, офисах продаж и на мероприятиях — везде, где нужно вовлечь посетителя, а не просто показать ролик.'),
+]
+
+def ct_faq():
+    import json
+    items, ld = '', []
+    for q,a in CT_FAQ:
+        items += f'<details class="ct-faq__i ct-rev"><summary>{q}</summary><p>{a}</p></details>'
+        ld.append({'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}})
+    schema=json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':ld},ensure_ascii=False)
+    css=('<style id="ct-faq-css">'
+         '.ct-seo__h{margin:0 0 14px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;color:#14171C}'
+         '.ct-seo__lead{max-width:70ch;margin:0 0 26px;font-size:16px;line-height:1.65;color:#5A616A}'
+         '.ct-seo__lead a{color:#673A7E;font-weight:600}'
+         '.ct-faq{display:grid;gap:10px;max-width:820px}'
+         '.ct-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;background:#fff;padding:0 20px}'
+         '.ct-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:15px 36px 15px 0;font-size:15.5px;font-weight:700}'
+         '.ct-faq__i summary::-webkit-details-marker{display:none}'
+         '.ct-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;'
+         'transform:translateY(-70%) rotate(45deg);border-right:2.5px solid #C12164;border-bottom:2.5px solid #C12164;transition:transform .2s}'
+         '.ct-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}'
+         '.ct-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:#5A616A}'
+         '</style>')
+    return (f'<section class="ct-sec" id="ct-seo">{css}'
+            f'<h2 class="ct-seo__h ct-rev">Вопросы о мультимедийном контенте</h2>'
+            f'<p class="ct-seo__lead ct-rev">Создание мультимедийного контента у нас связано с реальными поверхностями: '
+            f'мы сами строим <a href="/exhibition/">выставочные стенды</a> и снимаем <a href="/videoproduction/">видео</a>, '
+            f'поэтому контент, интерактивные инсталляции и сенсорные столы проектируются под конкретные экраны, залы и задачи — '
+            f'а не «в вакууме».</p>'
+            f'<div class="ct-faq">{items}</div>'
+            f'<script type="application/ld+json">{schema}</script></section>')
+
 def build():
     hero=(f'<section class="ct-hero">'
           f'<img class="ct-hero__poster" src="/images/content/hero-poster.jpg" alt="" aria-hidden="true">'
@@ -274,7 +318,7 @@ def build():
     # Финальный CTA-блок убран 10.07.2026 по просьбе пользователя:
     # он дублировал форму заявки hm-cta, которая идёт сразу за ним (#lead)
 
-    body=(f'{rc.header()}<main class="ct-main">{hero}{feats()}{works}</main>'
+    body=(f'{rc.header()}<main class="ct-main">{hero}{feats()}{works}{ct_faq()}</main>'
           f'<a id="lead"></a>{rc.footer()}{rc.JS}{VIDEO_JS}{REVEAL_JS}</body></html>')
     return HEAD+body
 
