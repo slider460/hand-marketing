@@ -203,5 +203,17 @@ document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!
  fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
 var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
 if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
+})();</script><script id="hm-metrika-goals">(function(){
+function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM')return;
+ if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ g('form_submit');
+},true);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+ if(!a)return;
+ g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+},true);
 })();</script></body>
 </html>

@@ -294,4 +294,16 @@ var ds=dots.children;tc.addEventListener('scroll',function(){var idx=Math.round(
 var rb=document.querySelector('[data-reel]');
 if(rb){rb.addEventListener('click',function(){var s=rb.getAttribute('data-src');if(!s)return;var v=document.createElement('video');v.className='mh-reel__full';v.src=s;v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');rb.innerHTML='';rb.appendChild(v);rb.style.cursor='default';var p=v.play();if(p&&p.catch)p.catch(function(){});},{once:true});}
 var ba=document.querySelector('[data-ba]');
-if(ba){var rng=ba.querySelector('.mh-ba__range'),bef=ba.querySelector('.mh-ba__before'),hnd=ba.querySelector('.mh-ba__handle');function upd(){var v=rng.value;bef.style.clipPath='inset(0 '+(100-v)+'% 0 0)';hnd.style.left=v+'%';}rng.addEventListener('input',upd);upd();}})();</script><script>(function(){if(innerWidth<=640)return;var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script></body> </html>
+if(ba){var rng=ba.querySelector('.mh-ba__range'),bef=ba.querySelector('.mh-ba__before'),hnd=ba.querySelector('.mh-ba__handle');function upd(){var v=rng.value;bef.style.clipPath='inset(0 '+(100-v)+'% 0 0)';hnd.style.left=v+'%';}rng.addEventListener('input',upd);upd();}})();</script><script>(function(){if(innerWidth<=640)return;var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script><script id="hm-metrika-goals">(function(){
+function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM')return;
+ if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ g('form_submit');
+},true);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+ if(!a)return;
+ g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+},true);
+})();</script></body> </html>

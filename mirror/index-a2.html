@@ -907,4 +907,16 @@ document.addEventListener('click',function(e){
  if(e.target.classList&&e.target.classList.contains('vp-modal'))closeModal();
 },true);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+})();</script><script id="hm-metrika-goals">(function(){
+function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM')return;
+ if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ g('form_submit');
+},true);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+ if(!a)return;
+ g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+},true);
 })();</script></body> </html>
