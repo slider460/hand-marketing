@@ -90,7 +90,7 @@ PAGE_CSS="""<style id="vp-css">
 .vp-hero__v.is-on{opacity:1}
 .vp-hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,28,.62) 0%,rgba(20,23,28,.34) 46%,rgba(20,23,28,.74) 100%)}
 .vp-hero__in{position:relative;max-width:1180px;margin:0 auto;padding:110px 40px 120px;min-height:min(66vh,560px);display:flex;flex-direction:column;justify-content:center}
-.vp-hero h1{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}
+.vp-hero__t{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}
 .vp-hero__sub{margin:20px 0 0;font-size:clamp(18px,2vw,24px);font-weight:700;color:#fff}
 .vp-hero__lead{margin:18px 0 0;max-width:560px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.85)}
 .vp-hero__act{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -230,11 +230,11 @@ RALEWAY='<link href="/fonts/raleway-700.css" rel="stylesheet">'  # self-host, с
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Video Production услуги агентства Hand Marketing</title>
-<meta name="description" content="Видеопродакшн полного цикла: рекламные, репортажные и вирусные ролики, корпоративные фильмы, обучающие видео и видеопрезентации. Съёмка, монтаж, графика.">
+<title>Видеопродакшн полного цикла в Москве и по всей России — Hand Marketing</title>
+<meta name="description" content="Видеопродакшн полного цикла: съёмка рекламных и корпоративных видеороликов, репортажи с мероприятий, обучающие видео и видеопрезентации. Съёмка, монтаж, графика — Hand Marketing, Москва и вся Россия.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/videoproduction/">
-<meta property="og:type" content="website"><meta property="og:title" content="Video Production услуги агентства Hand Marketing">
+<meta property="og:type" content="website"><meta property="og:title" content="Видеопродакшн полного цикла в Москве и по всей России — Hand Marketing">
 <meta property="og:description" content="Видеопродакшн полного цикла: рекламные, репортажные, вирусные ролики, корпоративные фильмы, обучающие видео и видеопрезентации.">
 <meta property="og:url" content="https://hand-marketing.ru/videoproduction/">
 <meta property="og:image" content="https://hand-marketing.ru/images/vp/hero-poster.jpg">
@@ -283,9 +283,10 @@ def build():
           f'<source src="/media/vp-hero-loop.mp4" type="video/mp4"></video>'
           f'<div class="vp-hero__shade" aria-hidden="true"></div>'
           f'<div class="vp-hero__in">'
-          f'<h1>Video Production</h1>'
-          f'<p class="vp-hero__sub">Видеопродакшн полного цикла</p>'
-          f'<p class="vp-hero__lead">Технологичные и кинематографичные видеорешения для вашего бизнеса — от идеи и съёмки до монтажа и графики.</p>'
+          # SEO: русский запрос — в <h1>, английское слово — крупный видимый акцент (вид не меняется)
+          f'<div class="vp-hero__t">Video Production</div>'
+          f'<h1 class="vp-hero__sub">Видеопродакшн полного цикла</h1>'
+          f'<p class="vp-hero__lead">Технологичные и кинематографичные видеорешения для вашего бизнеса: съёмка рекламных роликов, производство корпоративных фильмов, монтаж и графика.</p>'
           f'<div class="vp-hero__act"><a class="vp-cta" href="#lead">Обсудить проект</a>'
           f'<a class="vp-cta vp-cta_ghost" href="#vp-cases">Смотреть кейсы</a></div></div></section>')
     works=(f'<section class="vp-sec" id="vp-works">'

@@ -45,7 +45,7 @@ PAGE_CSS="""<style id="ex-css">
  -webkit-mask-image:radial-gradient(75% 85% at 60% 50%,#000 55%,transparent 100%);
  mask-image:radial-gradient(75% 85% at 60% 50%,#000 55%,transparent 100%)}
 .ex-eyebrow{margin:0 0 18px;font-family:'Raleway',Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#673A7E}
-.ex-hero h1{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em}
+.ex-hero__t{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em}
 .ex-hero__sub{margin:20px 0 0;font-size:clamp(18px,2vw,24px);font-weight:700}
 .ex-hero__lead{margin:18px 0 0;max-width:520px;font-size:17px;line-height:1.65;color:#5A616A}
 .ex-hero__act{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -150,12 +150,12 @@ setTimeout(function(){els.forEach(function(n){if(!n.classList.contains('is-in'))
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Exhibition Build — застройка выставочных стендов под ключ | Hand Marketing</title>
-<meta name="description" content="Проектирование и застройка выставочных стендов под ключ: дизайн, 3D-визуализация, производство, мультимедиа и монтаж. Кейсы: ВДНХ, Самара, Ставрополь, виртуальный стенд Eaton.">
+<title>Застройка выставочных стендов под ключ в Москве и по всей России | Hand Marketing</title>
+<meta name="description" content="Застройка выставочных стендов под ключ: дизайн и 3D-визуализация, изготовление, мультимедийные и интерактивные стенды, монтаж в любом городе России. Кейсы: ВДНХ, Самара, Ставрополь.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hand-marketing.ru/exhibition">
-<meta property="og:type" content="website"><meta property="og:title" content="Exhibition Build — застройка выставочных стендов | Hand Marketing">
-<meta property="og:description" content="Выставочные стенды под ключ: дизайн, производство, мультимедиа, монтаж.">
+<link rel="canonical" href="https://hand-marketing.ru/exhibition/">
+<meta property="og:type" content="website"><meta property="og:title" content="Застройка выставочных стендов под ключ в Москве и по всей России | Hand Marketing">
+<meta property="og:description" content="Выставочные стенды под ключ: дизайн, изготовление, интерактив и мультимедиа, монтаж по всей России.">
 <meta property="og:url" content="https://hand-marketing.ru/exhibition">
 <meta property="og:image" content="https://hand-marketing.ru/images/lib/custom-samara-vdnh/cover-main.png">
 <link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
@@ -180,9 +180,10 @@ def cases():
 def build():
     hero=(f'<section class="ex-hero"><div class="ex-hero__blueprint" aria-hidden="true"></div><div class="ex-hero__in">'
           f'<div><p class="ex-eyebrow">Услуга</p>'
-          f'<h1>Exhibition<br>Build</h1>'
-          f'<p class="ex-hero__sub">Застройка выставочных стендов под&nbsp;ключ</p>'
-          f'<p class="ex-hero__lead">Проектируем и строим выставочные стенды любого масштаба — от концепции и дизайна до производства, мультимедиа-наполнения и монтажа на площадке в любом городе России.</p>'
+          # SEO: русский запрос — в <h1>, английское слово — крупный видимый акцент (вид не меняется)
+          f'<div class="ex-hero__t">Exhibition<br>Build</div>'
+          f'<h1 class="ex-hero__sub">Застройка выставочных стендов под&nbsp;ключ</h1>'
+          f'<p class="ex-hero__lead">Проектируем и строим выставочные стенды любого масштаба — от дизайна выставочного стенда и 3D-визуализации до производства, мультимедийного наполнения и монтажа на площадке в любом городе России.</p>'
           f'<div class="ex-hero__act"><a class="ex-cta" href="#lead">Обсудить проект</a>'
           f'<a class="ex-cta ex-cta_ghost" href="#ex-cases">Смотреть кейсы</a></div></div>'
           f'<div>{DRAFT_SVG}</div>'

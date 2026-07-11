@@ -43,7 +43,7 @@ PAGE_CSS="""<style id="ct-css">
 .ct-hero__in{position:relative;max-width:1180px;margin:0 auto;padding:110px 40px 120px;min-height:min(66vh,560px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .ct-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(255,224,0,.1);
  box-shadow:inset 0 0 0 1px rgba(255,224,0,.35);color:#FFE000;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-family:'Raleway',Arial,sans-serif}
-.ct-hero h1{margin:22px 0 0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}
+.ct-hero__t{margin:22px 0 0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}
 .ct-hero__sub{margin:18px 0 0;font-size:clamp(19px,2.2vw,26px);font-weight:700;line-height:1.25;
  background:linear-gradient(92deg,#8BC34A,#FFB84D 38%,#FF5CA8 70%,#B36BE0);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ct-hero__lead{margin:18px 0 0;max-width:520px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.82)}
@@ -186,11 +186,11 @@ RALEWAY='<link href="/fonts/raleway-700.css" rel="stylesheet">'  # self-host, с
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Content — мультимедийный контент для мероприятий | Hand Marketing</title>
-<meta name="description" content="Мультимедийный контент от идеи до воплощения: графическое оформление и заставки, 3D-контент и мэппинг, Naked Eye 3D, VR, контент для инфо-панелей, брендинг мероприятий и адаптация под любые форматы.">
+<title>Мультимедийный контент для мероприятий и выставок | Hand Marketing</title>
+<meta name="description" content="Создание мультимедийного контента: видеомаппинг и 3D-графика, интерактивные инсталляции и стенды, Naked Eye 3D, VR, контент для инфо-панелей, брендинг мероприятий. От идеи до воплощения — Hand Marketing.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/content/">
-<meta property="og:type" content="website"><meta property="og:title" content="Content — мультимедийный контент | Hand Marketing">
+<meta property="og:type" content="website"><meta property="og:title" content="Мультимедийный контент для мероприятий и выставок | Hand Marketing">
 <meta property="og:description" content="Графическое оформление, 3D-мэппинг, Naked Eye 3D, VR, инфо-панели, брендинг мероприятий и адаптация контента.">
 <meta property="og:url" content="https://hand-marketing.ru/content/">
 <meta property="og:image" content="https://hand-marketing.ru/images/content/nakedeye.jpg">
@@ -227,9 +227,10 @@ def build():
           f'<div class="ct-hero__shade" aria-hidden="true"></div>'
           f'<div class="ct-hero__in">'
           f'<span class="ct-badge">Новое поколение визуальных решений</span>'
-          f'<h1>Content</h1>'
-          f'<p class="ct-hero__sub">Мультимедийный контент — от идеи до воплощения</p>'
-          f'<p class="ct-hero__lead">Мы создаём цифровые миры, которые оживляют ваши идеи. Передовые технологии и креативный подход для незабываемых впечатлений.</p>'
+          # SEO: русский запрос — в <h1>, английское слово — крупный видимый акцент (вид не меняется)
+          f'<div class="ct-hero__t">Content</div>'
+          f'<h1 class="ct-hero__sub">Мультимедийный контент — от идеи до воплощения</h1>'
+          f'<p class="ct-hero__lead">Мы создаём цифровые миры: интерактивные инсталляции, видеомаппинг и контент для мультимедийных стендов. Передовые технологии и креативный подход для незабываемых впечатлений.</p>'
           f'<div class="ct-hero__act"><a class="ct-cta" href="#lead">Обсудить проект</a>'
           f'<a class="ct-cta ct-cta_ghost" href="#ct-works">Смотреть примеры</a></div>'
           f'</div></section>')
