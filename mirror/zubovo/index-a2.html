@@ -363,4 +363,12 @@ document.addEventListener('click',function(e){
  if(!a)return;
  g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
 },true);
+})();</script><script id="hm-rotate-fix">(function(){
+if(window.innerWidth>640)return; // движок уже инициализируется штатно
+var t;
+function chk(){clearTimeout(t);t=setTimeout(function(){
+ if(window.innerWidth>640)location.reload();
+},250);}
+window.addEventListener('resize',chk);
+window.addEventListener('orientationchange',chk);
 })();</script></body> </html>
