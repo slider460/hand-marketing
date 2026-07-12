@@ -130,7 +130,7 @@ function apply(){ var g=grid(); if(!g)return; var cards=[].slice.call(g.querySel
 new MutationObserver(apply).observe(document.body,{childList:true,subtree:true});
 var t=0,iv=setInterval(function(){apply();if(++t>40)clearInterval(iv);},350);
 })();
-</script><script>(function(){if(innerWidth<=640)return;var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script><script id="hm-metrika-goals">(function(){
+</script><script>(function(){/* hm-mobile-engine: на этой странице нет кастомной мобильной версии — движок нужен и на ≤640, иначе артборды остаются в десктопных координатах */var ns=[].slice.call(document.querySelectorAll('script[type="td"]'));(function go(i){if(i>=ns.length)return;var n=ns[i];if(n.getAttribute('data-src')){var s=document.createElement('script');s.src=n.getAttribute('data-src');s.async=false;s.onload=s.onerror=function(){go(i+1)};document.head.appendChild(s);}else{try{var s=document.createElement('script');s.text=n.textContent;document.head.appendChild(s);}catch(e){}go(i+1);}})(0);})();</script><script id="hm-metrika-goals">(function(){
 function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
 document.addEventListener('submit',function(e){
  var f=e.target;if(!f||f.tagName!=='FORM')return;

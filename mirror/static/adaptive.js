@@ -89,8 +89,11 @@
   scanAll()
   document.addEventListener('DOMContentLoaded', scanAll)
   new MutationObserver(scanAll).observe(document.documentElement, { childList: true, subtree: true })
-})()
+})();
 
+// ВАЖНО: точка с запятой выше обязательна — без неё ASI склеивал два IIFE в вызов
+// `})()(function...)` (TypeError на 55 страницах), и весь фиксер наложений ниже
+// молча не выполнялся с момента переноса сайта.
 (function () {
   'use strict'
   var GAP = 18
