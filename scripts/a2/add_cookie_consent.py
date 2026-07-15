@@ -1,9 +1,27 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
-<meta http-equiv="refresh" content="0;url=/portfolio/samara-stand-vdnh">
-<link rel="canonical" href="https://hand-marketing.ru/portfolio/samara-stand-vdnh/"><title>Стенд Самарской области</title>
-<meta name="description" content="Стенд Самарской области — Hand Marketing, рекламное агентство полного цикла.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Hand Marketing", "alternateName": "Хэнд-маркетинг", "url": "https://hand-marketing.ru", "logo": "https://hand-marketing.ru/images/lib/as3365-6332-4339-a263-313566616365/152.png", "telephone": "+7-495-580-75-37", "email": "info@hand-marketing.ru", "foundingDate": "2012", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Москва", "postalCode": "123022", "streetAddress": "Рочдельская, 14А"}}</script>
-</head><body><h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">Стенд Самарской области</h1><script>location.replace('/portfolio/samara-stand-vdnh')</script><style id="hm-cookie-consent">
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Плашка согласия на cookie — как на weshow.su, но self-contained (без Tailwind/CDN).
+
+Фиксированная снизу белая карточка: заголовок «Мы используем файлы cookie»,
+текст согласия со ссылкой на /privacy, тёмная кнопка «ПРИНИМАЮ», крестик.
+Показывается, пока не нажали «Принимаю»/крестик (флаг в localStorage).
+Метрику НЕ гейтит (информационная модель «продолжая использовать — согласны»),
+как на weshow.su.
+
+Идемпотентен (маркер hm-cookie-consent). Патчит index.html И index-a2.html
+всех страниц mirror/. Правки — только через этот скрипт.
+
+Запуск: python3 scripts/a2/add_cookie_consent.py [--dry]
+"""
+import os, glob, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+MIRROR = os.path.join(HERE, '..', '..', 'mirror')
+MARK = 'hm-cookie-consent'
+DRY = '--dry' in sys.argv
+
+BLOCK = """<style id="hm-cookie-consent">
 .hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 .hmc.is-on{transform:translateY(0)}
 .hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
@@ -41,4 +59,35 @@
  document.getElementById('hmCookieOk').addEventListener('click',accept);
  document.getElementById('hmCookieX').addEventListener('click',accept);
  setTimeout(function(){box.classList.add('is-on');},600);
-})();</script></body></html>
+})();</script>"""
+
+
+def patch(path):
+    html = open(path, encoding='utf-8').read()
+    if MARK in html:
+        return 'skip'
+    if '</body>' not in html:
+        return 'no-body'
+    html = html.replace('</body>', BLOCK + '</body>', 1)
+    if not DRY:
+        open(path, 'w', encoding='utf-8').write(html)
+    return 'patched'
+
+
+def main():
+    files = sorted(set(
+        glob.glob(os.path.join(MIRROR, '**', 'index.html'), recursive=True) +
+        glob.glob(os.path.join(MIRROR, '**', 'index-a2.html'), recursive=True)
+    ))
+    n = skip = 0
+    for f in files:
+        st = patch(f)
+        if st == 'patched':
+            n += 1
+        elif st == 'skip':
+            skip += 1
+    print(f'{"[DRY] " if DRY else ""}пропатчено: {n} | уже было: {skip} | всего файлов: {len(files)}')
+
+
+if __name__ == '__main__':
+    main()
