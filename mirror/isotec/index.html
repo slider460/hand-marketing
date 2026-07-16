@@ -120,7 +120,7 @@ t_onFuncLoad('t282_appearMenu',function() {t282_appearMenu('237976934');window.a
     </dl>
     <div class="iz__stage rv">
       <a href="#" class="vp-stage" data-vpfacade data-video="/portfolio/isotec/brand-video.mp4" data-title="Бренд-ролик «Изотек»"><video id="izfilm" playsinline preload="none" poster="/portfolio/isotec/poster.jpg"><source src="/portfolio/isotec/brand-video.mp4" type="video/mp4"></video><span class="vp-stage__play"></span></a>
-      <button class="iz__pb" id="izpb" style="background-image:url('/portfolio/isotec/poster.jpg')" aria-label="Смотреть ролик"><span class="iz__play"><i></i></span></button>
+      
     </div>
     <div class="iz__cap rv"><span><b>Архив + съёмка</b></span><span><b>Производство</b></span><span><b>Команда</b></span><span><b>Постпродакшн</b></span></div>
   </header>
@@ -168,9 +168,7 @@ t_onFuncLoad('t282_appearMenu',function() {t282_appearMenu('237976934');window.a
     </div>
   </section>
 </div>
-<script>(function(){var v=document.getElementById('izfilm'),p=document.getElementById('izpb');
-if(v&&p){p.addEventListener('click',function(){p.style.opacity='0';p.style.pointerEvents='none';v.play();});
-v.addEventListener('pause',function(){if(v.currentTime===0){p.style.opacity='1';p.style.pointerEvents='';}});}
+<script>(function(){
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){document.querySelectorAll('.iz .rv').forEach(function(e){e.classList.add('in')});return;}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
 document.querySelectorAll('.iz .rv').forEach(function(e){io.observe(e)});})();</script>
