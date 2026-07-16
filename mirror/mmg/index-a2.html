@@ -327,9 +327,7 @@ t_onFuncLoad('t282_appearMenu',function() {t282_appearMenu('237976934');window.a
     <p class="pp__sub rv">Рекламный ролик торгово-развлекательного центра</p>
     <p class="pp__lead rv">Высокая стадия готовности ТРЦ, снятая так, чтобы её увидел и почувствовал будущий арендатор: масштаб, локация, концепция и спрос — в одном фильме.</p>
     <div class="pp__stage rv">
-      <a href="#" class="vp-stage" data-vpfacade data-video="/portfolio/mmg/brand-video.mp4" data-title="Рекламный ролик ТРЦ &quot;Павелецкая Плаза&quot;"><video id="ppfilm" playsinline preload="none" poster="/portfolio/mmg/poster.jpg"><source src="/portfolio/mmg/brand-video.mp4" type="video/mp4"></video><span class="vp-stage__play"></span></a>
-      <button class="pp__pb" id="pppb" style="background-image:url('/portfolio/mmg/poster.jpg')" aria-label="Смотреть рекламный ролик «Павелецкая Плаза»"><span class="pp__play"></span></button>
-      <i class="pp__tick tl"></i><i class="pp__tick tr"></i><i class="pp__tick bl"></i><i class="pp__tick br"></i>
+      <a href="#" class="vp-stage" data-vpfacade data-video="/portfolio/mmg/brand-video.mp4" data-title="Рекламный ролик ТРЦ &quot;Павелецкая Плаза&quot;"><video id="ppfilm" playsinline preload="none" poster="/portfolio/mmg/poster.jpg"><source src="/portfolio/mmg/brand-video.mp4" type="video/mp4"></video><span class="vp-stage__play"></span></a>      <i class="pp__tick tl"></i><i class="pp__tick tr"></i><i class="pp__tick bl"></i><i class="pp__tick br"></i>
     </div>
     <div class="pp__credits rv"><span><b>Сценарий</b></span><span><b>Аэросъёмка</b></span><span><b>Постпродакшн</b></span><span><b>Хронометраж</b> 5:37</span></div>
   </header>
@@ -389,9 +387,6 @@ t_onFuncLoad('t282_appearMenu',function() {t282_appearMenu('237976934');window.a
 </div>
 
 <script type="td">(function(){
-  var v=document.getElementById('ppfilm'),p=document.getElementById('pppb');
-  if(v&&p){p.addEventListener('click',function(){p.style.opacity='0';p.style.pointerEvents='none';v.play();});
-    v.addEventListener('pause',function(){if(v.currentTime===0){p.style.opacity='1';p.style.pointerEvents='';}});}
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){document.querySelectorAll('.pp .rv').forEach(function(e){e.classList.add('in')});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
   document.querySelectorAll('.pp .rv').forEach(function(e){io.observe(e)});
