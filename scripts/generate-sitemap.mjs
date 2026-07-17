@@ -10,6 +10,8 @@ const BASE = 'https://hand-marketing.ru'
 
 const pages = globSync(join(ROOT, 'mirror/**/index.html'))
   .filter((f) => !f.includes('/static/'))
+  // /for/** — приватные клиентские страницы (доступ по коду), в sitemap не попадают
+  .filter((f) => !f.includes('/mirror/for/'))
   .map((f) => ({
     loc: f.replace(join(ROOT, 'mirror'), '').replace(/index\.html$/, ''),
     lastmod: statSync(f).mtime.toISOString().slice(0, 10),

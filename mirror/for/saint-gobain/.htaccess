@@ -1,0 +1,9 @@
+# Приватная клиентская страница — вход через index.php (код доступа).
+# Действует ТОЛЬКО на /for/saint-gobain/, корневой .htaccess не затрагивает.
+DirectoryIndex index.php
+Options -Indexes
+
+# Превью-файлы (локальная разработка) — не отдавать, даже если случайно попали на сервер
+<FilesMatch "^_preview-">
+  Require all denied
+</FilesMatch>
