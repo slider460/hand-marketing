@@ -1,17 +1,15 @@
 {
-  "name": "WESHOW - Мультимедийные решения",
-  "short_name": "WESHOW",
-  "description": "Комплексные мультимедийные решения для бизнеса",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#2563eb",
-  "theme_color": "#7c3aed",
-  "icons": [
-    {
-      "src": "/weshow-favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ]
+ "name": "Hand Marketing — рекламное агентство полного цикла",
+ "short_name": "Hand Marketing",
+ "icons": [
+  {
+   "src": "/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ],
+ "theme_color": "#ffffff",
+ "background_color": "#ffffff",
+ "display": "browser",
+ "start_url": "/"
 }

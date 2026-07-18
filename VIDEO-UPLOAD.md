@@ -1,5 +1,9 @@
 # Видео для загрузки в /media/ (на хостинг)
 
+> **18.07.2026 — пережатые версии.** В `media-optimized/` лежат облегчённые копии всех роликов >40МБ
+> (720p, x264 crf24, звук сохранён, те же имена файлов). Заливать ПОВЕРХ старых в `/media/` на сервере —
+> ссылки в коде менять не нужно. Плюс новый `media/event-hero-loop.mp4` (1.2МБ) — hero-луп страницы /event.
+
 Всего файлов: 31 (некоторые ролики общие для нескольких кейсов).
 
 | Кейс | Файл на хостинге | Исходник |
@@ -7,6 +11,7 @@
 | /3d/stavropol | `/media/stavropol-3dmapping.mp4` | Stavropol 3DMapping.mp4 |
 | /bekobod1 | `/media/bekabad-hd.mp4` | bekabad-hd.mp4 |
 | /bekobod1 | `/media/silkway-3d.mp4` | 3D Silk Way.mp4 |
+| /event (hero-луп) | `/media/event-hero-loop.mp4` | смонтирован локально: media/event-hero-loop.mp4 (1.7 МБ) |
 | /event/changan | `/media/changan-hm-180220.mp4` | Changan HM 180220.mp4 |
 | /event/eaton | `/media/eaton-almaty.mp4` | Eaton Almaty.mp4 |
 | /event/marieclaire | `/media/marie-claire-event.mp4` | Marie Claire Event.mp4 |
