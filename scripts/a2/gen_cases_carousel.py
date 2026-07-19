@@ -13,7 +13,8 @@ for f in glob.glob(API+'/getproductslist_*.json'):
         cur=data.get(url,{})
         if title and not cur.get('title'):
             g=json.loads(p['gallery']) if p.get('gallery') else []
-            cur.update(title=title, descr=(p.get('descr') or '').strip(), cat=strip(p.get('text')), img=(g[0]['img'] if g else cur.get('img','')))
+            # descr в данных Tilda бывает с HTML (<br />) — чистим до текста
+            cur.update(title=strip(title), descr=strip(p.get('descr')), cat=strip(p.get('text')), img=(g[0]['img'] if g else cur.get('img','')))
         if not cur.get('img'):
             g=json.loads(p['gallery']) if p.get('gallery') else []
             if g: cur['img']=g[0]['img']
