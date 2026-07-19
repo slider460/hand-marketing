@@ -112,6 +112,10 @@ def parse_zero(seg, rid, log):
             html = re.sub(r"<img[^>]*data-original='([^']+)'[^>]*>",
                           lambda mm: '<img src="%s" alt="">' % norm_url(mm.group(1)), html)
             html = re.sub(r"\s(?:field|imgfield|data-redactor-[a-z]+)='[^']*'", "", html)
+            # только inline-разметка: блочные теги ломают дерево (<div> внутри <p>
+            # закрывает p, а лишние </div> выбивают mh-form из #mhome)
+            html = re.sub(r"</?(?:div|p|section|ul|ol|li|h\d|table|tr|td)[^>]*>", " ", html)
+            html = re.sub(r"(?:\s*<br\s*/?>\s*){3,}", "<br><br>", html)
             plain = re.sub(r"<[^>]+>", " ", html)
             plain = re.sub(r"(?:&nbsp;| |\s)+", " ", plain).strip()
             if not plain and "<img" not in html:
