@@ -11,7 +11,9 @@
 | /3d/stavropol | `/media/stavropol-3dmapping.mp4` | Stavropol 3DMapping.mp4 |
 | /bekobod1 | `/media/bekabad-hd.mp4` | bekabad-hd.mp4 |
 | /bekobod1 | `/media/silkway-3d.mp4` | 3D Silk Way.mp4 |
-| /event (hero-луп) | `/media/event-hero-loop.mp4` | смонтирован локально: media/event-hero-loop.mp4 (1.7 МБ) |
+| /event (hero-луп) | `/media/event-hero-loop.mp4` | смонтирован локально: media/event-hero-loop.mp4 (1.2 МБ) ✅ залито 18.07 |
+| /portfolio/samara-exhibition (hero-луп) | `/media/samara-exh-hero-loop.mp4` | смонтирован локально (0.8 МБ) |
+| /portfolio/samara-stand-vdnh (hero-луп) | `/media/samara-vdnh-hero-loop.mp4` | смонтирован локально (0.9 МБ) |
 | /event/changan | `/media/changan-hm-180220.mp4` | Changan HM 180220.mp4 |
 | /event/eaton | `/media/eaton-almaty.mp4` | Eaton Almaty.mp4 |
 | /event/marieclaire | `/media/marie-claire-event.mp4` | Marie Claire Event.mp4 |
