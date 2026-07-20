@@ -1,5 +1,15 @@
 [
  {
+  "slug": "portfolio__becar-private-money",
+  "route": "/portfolio/becar-private-money",
+  "category": "event",
+  "categoryLabel": "Exhibition Build",
+  "client": "Becar Asset Management",
+  "title": "Стенд You&Co на Private Money Expo Forum — выставка под ключ",
+  "metaTitle": "Стенд Becar на Private Money Expo Forum",
+  "cover": "/images/lib/custom-becar-pm/cover-main.png"
+ },
+ {
   "slug": "3d__stavropol",
   "route": "/3d/stavropol",
   "category": "3dmapping",

@@ -20,7 +20,8 @@ for f in glob.glob(API+'/getproductslist_*.json'):
             if g: cur['img']=g[0]['img']
         data[url]=cur
 order=json.load(open(API+'/getproductslist_689558768071.json'))['products']
-FB={'/portfolio/samara-stand-vdnh':('Стенд Самарской области','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
+FB={'/portfolio/becar-private-money':('Стенд You&Co для Becar','Private Money Expo Forum 2021','Exhibition Build'),
+    '/portfolio/samara-stand-vdnh':('Стенд Самарской области','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
     '/portfolio/samara-exhibition':('Выставка «Самара»','Музей им. Алабина','Exhibition Build'),
     '/portfolio/stavropol-stand-vdnh':('Стенд Ставропольского края','Выставка-форум «Россия», ВДНХ','Exhibition Build')}
 COL={'event':'#C12164','exhibition':'#673A7E','creative':'#C12164','video':'#CF6F19','digital':'#5E9A2E','3d':'#7E3FA0','btl':'#D6357E','print':'#E08A2B'}

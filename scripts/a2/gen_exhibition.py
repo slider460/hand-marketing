@@ -18,6 +18,7 @@ CASES=[
  ("/portfolio/samara-stand-vdnh","Стенд Самарской области","Выставка-форум «Россия», ВДНХ","/images/lib/custom-samara-vdnh/cover-main.png"),
  ("/portfolio/stavropol-stand-vdnh","Стенд Ставропольского края","Выставка-форум «Россия», ВДНХ","/images/lib/custom-stavropol-vdnh/cover-main.png"),
  ("/portfolio/samara-exhibition","Выставка «Самара»","Музей им. Алабина","/images/lib/custom-samara-exhibition/cover-main.png"),
+ ("/portfolio/becar-private-money","Стенд You&Co для Becar","Private Money Expo Forum, под ключ","/images/lib/custom-becar-pm/cover-main.png"),
  ("/eaton_online","Виртуальный стенд Eaton","Онлайн-трансляция выставки","/images/lib/as6438-6362-4632-b262-313335333833/image_2021-03-06_22-.png"),
 ]
 STEPS=[
