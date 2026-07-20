@@ -24,7 +24,9 @@ IMG = '/images/becar-pm'
 PAGE_CSS = """<style id="bp-css">
 :root{--bp-purple:#5B3A8F;--bp-deep:#3B2564;--bp-red:#E8404A;--bp-yellow:#F5A731;
  --bp-blue:#2456A6;--bp-ink:#14171C;--bp-paper:#FAF7F2;--bp-gold:#FFD37A}
-html{scroll-behavior:smooth}
+/* text-size-adjust: без него мобильные браузеры «бустят» мелкий текст (подписи фото
+   раздувались на iPhone и перекрывали снимки) */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--bp-paper)}
 .bp,.bp *{box-sizing:border-box}
 .bp{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--bp-ink);overflow:hidden}
@@ -193,9 +195,18 @@ body{margin:0;background:var(--bp-paper)}
  .bp-hero{padding-top:48px}
  .bp-facts__in{grid-template-columns:1fr 1fr;gap:14px;padding:20px 18px}
  .bp-fact b{font-size:21px}
- .bp-build__grid{grid-template-columns:1fr 1fr;gap:12px}
- .bp-shot_a{grid-column:span 2;aspect-ratio:16/10}
- .bp-shot_b,.bp-shot_c{grid-column:span 1;aspect-ratio:1/1}
+ .bp-build__grid{grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+ /* мобила: подписи НЕ поверх фото, а под ними («полароид») — иначе перекрывают снимок */
+ .bp-shot{aspect-ratio:auto;display:flex;flex-direction:column;background:#fff}
+ .bp-shot img{flex:none;height:auto}
+ .bp-shot_a{grid-column:span 2}
+ .bp-shot_b,.bp-shot_c{grid-column:span 1}
+ .bp-shot_a img{aspect-ratio:16/10}
+ .bp-shot_b img,.bp-shot_c img{aspect-ratio:1/1}
+ .bp-shot figcaption{position:static;background:none;color:#5A616A;font-size:12px;font-weight:600;
+  line-height:1.35;letter-spacing:.02em;padding:8px 12px 10px;border-radius:0;backdrop-filter:none;
+  overflow-wrap:break-word}
+ .bp-hero__tag{font-size:11px;padding:8px 12px}
  .bp-thumb{width:96px}
  .bp-total__grid{grid-template-columns:1fr}
  .bp-slides__nav{display:none}
@@ -339,7 +350,7 @@ def hero():
         f'<li>Презентация для сцены</li><li>POSM и полиграфия</li><li>Сопровождение</li>'
         f'<li>Демонтаж</li><li>Фотоотчёт</li></ul></div>'
         f'<div class="bp-hero__ph bp-r"><span class="bp-hero__tag">Этот стенд сделали мы!</span>'
-        f'<img src="{IMG}/photo-stand-full.jpg" alt="Построенный стенд You&Co для Becar на форуме Private Money 2021" width="2000" height="1334"></div>'
+        f'<img src="{IMG}/photo-team.jpg" alt="Команда Becar на стенде You&Co на форуме Private Money 2021" width="2000" height="1334"></div>'
         f'</div></div>{SKYLINE}'
         f'<div class="bp-facts"><div class="bp-facts__in">'
         f'<div class="bp-fact bp-r"><b>7 брендов</b><span>экосистемы Becar собраны на одном стенде</span></div>'
@@ -461,7 +472,7 @@ def stage():
         f'Вместо корпоративных таблиц — вырезные формы, кубки, мемы и честные графики: лапти против кед, '
         f'перекати-поле 2020-го и карта мировых коливингов. Зал слушал — и досидел до конца.</p></div>'
         f'<div class="bp-stage__grid">'
-        f'<img class="bp-r" src="{IMG}/photo-stage-hall.jpg" loading="lazy" alt="Выступление Becar на главной сцене Private Money Expo Forum 2021" width="2000" height="1334">'
+        f'<img class="bp-r" src="{IMG}/photo-stage-hall.jpg" loading="lazy" alt="Выступление Becar на главной сцене Private Money Expo Forum 2021 — на экране слайд нашей презентации" width="2000" height="1334">'
         f'<img class="bp-r" src="{IMG}/photo-stage-tops.jpg" loading="lazy" alt="Топ-менеджеры Becar на сцене #PME2021" width="2000" height="1334"></div>'
         f'<div class="bp-slides bp-r"><div class="bp-slides__head"><h3>Листайте слайды ↔</h3>'
         f'<div class="bp-slides__nav"><button type="button" id="bp-sl-prev" aria-label="Предыдущий слайд">‹</button>'

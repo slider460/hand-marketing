@@ -21,9 +21,10 @@ def save_resized(src, out, maxw, q=85):
 
 # Фото застройки и работы стенда
 PHOTOS = {
+    'Becar_081.jpg': 'photo-team.jpg',         # команда Becar на стенде (hero, замена 20.07)
     'Becar_141.jpg': 'photo-talks.jpg',        # переговоры на стенде (Смайл/GrowUp)
     'Becar_145.jpg': 'photo-lounge.jpg',       # лаунж-зона, синяя стена Дубая
-    'Becar_180.jpg': 'photo-stage-hall.jpg',   # зал, выступление, партнёрские баннеры
+    'Becar_179.jpg': 'photo-stage-hall.jpg',   # зал: на экране НАШ слайд (замена Becar_180, 20.07)
     'Becar_211.jpg': 'photo-stand-full.jpg',   # общий вид построенного стенда
     'Becar_223.jpg': 'photo-speaker.jpg',      # спикер у стены You&Co
     'Becar_235.jpg': 'photo-award.jpg',        # награда PME2021 + папка «Доходные инвестиции»
