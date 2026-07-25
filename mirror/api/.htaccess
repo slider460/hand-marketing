@@ -1,0 +1,15 @@
+# Короткий кэш для JSON-каталога (/api/getproductslist*.json и пр.).
+# В основном mirror/.htaccess application/json = "access plus 1 day" (24ч) —
+# из-за этого правки каталога до суток «догоняли» вернувшихся посетителей.
+# Здесь для директории /api/ переопределяем на 5 минут. Директивы обёрнуты
+# в <IfModule>, поэтому при отсутствии модуля просто игнорируются (форм-хендлер
+# lead.php в этой же папке не затрагивается — правило кэша касается только .json).
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/json "access plus 5 minutes"
+</IfModule>
+<FilesMatch "\.json$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=300, must-revalidate"
+  </IfModule>
+</FilesMatch>
