@@ -512,7 +512,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 
 def build():
     body = (f'{rc.header()}<main class="cn">{hero()}{brief()}{make()}{gallery()}'
-            f'{result()}{outro()}</main>{MODAL}'
+            f'{result()}</main>{MODAL}'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}{PAGE_JS}{BREADCRUMB_LD}</body></html>')
     return HEAD + body
 
