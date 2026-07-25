@@ -20,7 +20,8 @@ for f in glob.glob(API+'/getproductslist_*.json'):
             if g: cur['img']=g[0]['img']
         data[url]=cur
 order=json.load(open(API+'/getproductslist_689558768071.json'))['products']
-FB={'/portfolio/obo-academy':('Серия роликов для OBO Bettermann','Съёмка продукции в Академии OBO','Video production'),
+FB={'/portfolio/ceramicanova':('Имиджевые ролики для CeramicaNova','17 роликов по коллекциям санфарфора','Video production'),
+    '/portfolio/obo-academy':('Серия роликов для OBO Bettermann','Съёмка продукции в Академии OBO','Video production'),
     '/portfolio/becar-private-money':('Стенд You&Co для Becar','Private Money Expo Forum 2021','Exhibition Build'),
     '/portfolio/samara-stand-vdnh':('Стенд Самарской области','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
     '/portfolio/samara-exhibition':('Выставка «Самара»','Музей им. Алабина','Exhibition Build'),

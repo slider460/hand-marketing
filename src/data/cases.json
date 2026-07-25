@@ -65,6 +65,16 @@
     "coverRemote": "https://static.tildacdn.com/tild3065-6235-4539-a666-613330386237/Perfect_Binding_Broc.jpg"
   },
   {
+    "slug": "portfolio__ceramicanova",
+    "route": "/portfolio/ceramicanova",
+    "category": "video",
+    "categoryLabel": "Video Production",
+    "client": "CeramicaNova",
+    "title": "Имиджевые ролики для CeramicaNova — 17 фильмов по коллекциям санфарфора",
+    "metaTitle": "Имиджевые ролики для CeramicaNova",
+    "cover": "/images/lib/custom-ceramicanova/cover-main.png"
+  },
+  {
     "slug": "portfolio__obo-academy",
     "route": "/portfolio/obo-academy",
     "category": "video",

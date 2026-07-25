@@ -57,6 +57,8 @@ PRESENTATIONS=[
 # те же 15 круглых картинок, тот же порядок; при наведении — вторая картинка галереи
 # с информацией, как в родном сторе. (url, alt, картинка, hover-картинка)
 CASES=[
+ ("/portfolio/ceramicanova","Имиджевые ролики для CeramicaNova","/images/lib/custom-ceramicanova/cover-main.png","/images/lib/custom-ceramicanova/cover-hover.png"),
+ ("/portfolio/obo-academy","Серия роликов для OBO Bettermann","/images/lib/custom-obo-academy/cover-main.png","/images/lib/custom-obo-academy/cover-hover.png"),
  ("/video/patriot","УАЗ Патриот & Eaton","/images/lib/as3532-3737-4330-b333-386531636666/__-03.png","/images/lib/as6461-6261-4036-a666-313230363264/__-04.png"),
  ("/video/gaz","Газель-трансформер","/images/lib/as3233-3363-4138-b265-353738653739/__-20.png","/images/lib/as3438-6330-4463-b039-336563616535/__-21.png"),
  ("/video/rgd/history","РЖД","/images/lib/as3539-3461-4137-b062-323338303166/__-49.png","/images/lib/as3262-3561-4561-a132-303535353162/__-48.png"),
