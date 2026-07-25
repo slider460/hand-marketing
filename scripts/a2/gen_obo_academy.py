@@ -9,7 +9,8 @@
 (дисплей, инженерный гротеск), Onest (текст), JetBrains Mono (тех-метаданные: №,
 тайм-коды, категории). Ролики — как пронумерованный каталог из 3 глав (I/II/III),
 каждая — фичер + ряд, БЕЗ единой карточной сетки. Мотив «Building Connections» —
-прочерченная линия-трасса (SVG, анимация). Реальный логотип OBO (obo_logo.py).
+прочерченная линия-трасса (SVG, анимация). Официальный логотип OBO — SVG-исходник
+клиента (scripts/assets/obo-logo.svg → mirror/images/obo/logo-{white,color}.svg).
 
 Видео — самохостинг /media/obo-*.mp4 (заливка ВРУЧНУЮ, вне CI, см. VIDEO-UPLOAD.md),
 постеры /images/obo/poster-*.jpg. Правки — ТОЛЬКО через этот скрипт; build_v1
@@ -347,7 +348,7 @@ def hero():
       '<circle cx="760" cy="510" r="7"/><circle cx="1080" cy="340" r="7"/></svg>'
       '<div class="obo-w obo-hero__in">'
       '<div class="obo-hero__top">'
-      f'<img class="obo-hero__logo" src="{IMG}/logo-white.png" alt="OBO Bettermann">'
+      f'<img class="obo-hero__logo" src="{IMG}/logo-white.svg" alt="OBO Bettermann">'
       '<span class="obo-hero__slogan">Building Connections</span></div>'
       '<p class="obo-mono obo-anim" style="animation-delay:.05s;color:#5a3d05">'
       'Видеопродакшн · Академия OBO Bettermann</p>'
@@ -380,7 +381,7 @@ def company():
     return (
       '<section class="obo-about"><div class="obo-w">'
       '<div class="obo-about__card obo-r">'
-      f'<div class="obo-about__brand"><img class="obo-about__logo" src="{IMG}/logo-ink.png" '
+      f'<div class="obo-about__brand"><img class="obo-about__logo" src="{IMG}/logo-color.svg" '
       'alt="OBO Bettermann"><span class="obo-about__slogan">Building Connections</span>'
       f'<div class="obo-about__cats">{cats}</div></div>'
       '<div class="obo-about__body"><span class="obo-mono">Клиент проекта</span>'

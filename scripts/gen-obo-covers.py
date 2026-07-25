@@ -7,13 +7,20 @@
 - cover-hover: оранжевый ПРЯМОУГОЛЬНИК того же цвета — фоновое эхо «OBO»,
   заголовок «Серия продуктовых роликов», «СМОТРЕТЬ КЕЙС →».
 Кладёт в mirror/images/lib/custom-obo-academy/ (webp — через scripts/gen-webp.sh)."""
-import os, math, importlib.util
+import os
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..'))
-spec = importlib.util.spec_from_file_location("obo_logo", os.path.join(HERE, "obo_logo.py"))
-ol = importlib.util.module_from_spec(spec); spec.loader.exec_module(ol)
+# ОФИЦИАЛЬНЫЙ логотип (белый, растеризован из исходника движком браузера — build-вход)
+LOGO_WHITE = os.path.join(HERE, 'assets', 'logo-white.png')
+
+
+def logo(target_w):
+    lg = Image.open(LOGO_WHITE).convert('RGBA')
+    h = max(1, round(target_w * lg.height / lg.width))
+    return lg.resize((target_w, h), Image.LANCZOS)
+
 
 W, H = 477, 396
 CX, CY, R = 238, 190, 176
@@ -65,9 +72,9 @@ def cover_main():
     # тонкое внутреннее кольцо
     d.ellipse([cx - r + 7 * S, cy - r + 7 * S, cx + r - 7 * S, cy + r - 7 * S],
               outline=WHITE + (60,), width=2 * S)
-    # логотип OBO по центру
-    logo = ol.make_logo(int(232 * S), WHITE + (255,))
-    img.alpha_composite(logo, (cx - logo.width // 2, cy - logo.height // 2 - int(6 * S)))
+    # официальный логотип OBO по центру (белый)
+    lg = logo(int(236 * S))
+    img.alpha_composite(lg, (cx - lg.width // 2, cy - lg.height // 2 - int(10 * S)))
     # метрика «10 роликов» — тёмная пилюля у низа круга
     d2 = d
     ptxt = '10 РОЛИКОВ'
@@ -93,9 +100,9 @@ def cover_hover():
     eb = d.textbbox((0, 0), 'OBO', font=ef)
     d.text((W * S - (eb[2] - eb[0]) - int(30 * S) - eb[0], H * S - (eb[3] - eb[1]) - int(6 * S) - eb[1]),
            'OBO', font=ef, fill=ORANGE_D + (255,))
-    # маленький тёмный логотип сверху
-    logo = ol.make_logo(int(120 * S), INK + (255,))
-    img.alpha_composite(logo, (int(34 * S), int(26 * S)))
+    # официальный логотип сверху (белый — на оранжевом читается корректно)
+    lg = logo(int(132 * S))
+    img.alpha_composite(lg, (int(34 * S), int(26 * S)))
     # заголовок
     hf = font(int(44 * S), 'ExtraBold')
     lines = ['Серия', 'продуктовых', 'роликов']
@@ -112,10 +119,4 @@ def cover_hover():
 if __name__ == '__main__':
     cover_main().save(os.path.join(OUT, 'cover-main.png'))
     cover_hover().save(os.path.join(OUT, 'cover-hover.png'))
-    # отдельные логотипы для страницы (прозрачный фон)
-    imgdir = os.path.join(ROOT, 'mirror', 'images', 'obo')
-    os.makedirs(imgdir, exist_ok=True)
-    ol.make_logo(900, WHITE + (255,)).save(os.path.join(imgdir, 'logo-white.png'))
-    ol.make_logo(900, ORANGE + (255,)).save(os.path.join(imgdir, 'logo-orange.png'))
-    ol.make_logo(900, INK + (255,)).save(os.path.join(imgdir, 'logo-ink.png'))
-    print('written', OUT, '+ logos')
+    print('written', OUT)
