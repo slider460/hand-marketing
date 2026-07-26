@@ -40,6 +40,13 @@ CSS = """<style data-%(m)s="css">@media (max-width:640px){
 .cmb__sec--dark p{color:rgba(255,255,255,.88)}
 .cmb__img{padding:6px 14px}
 .cmb__img img{width:100%;height:auto;border-radius:14px;box-shadow:0 14px 30px -16px rgba(20,23,28,.35)}
+/* плоская графика (лого, вордмарк) — без карточки: тень/скругление вокруг
+   прозрачного PNG выглядят как посторонний серый прямоугольник */
+.cmb__img--flat{padding:10px 20px}
+.cmb__img--flat img{border-radius:0;box-shadow:none}
+/* логотип клиента — компактный знак в потоке, а не баннер во всю ширину */
+.cmb__logo{padding:12px 20px 16px;line-height:0}
+.cmb__logo img{display:block;width:auto;height:auto;max-width:min(60%,200px);max-height:64px;object-fit:contain;object-position:left center;border-radius:0;box-shadow:none}
 .cmb__grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px 14px}
 .cmb__grid img{width:100%;height:auto;border-radius:12px}
 .cmb__slider{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:8px 14px 14px}
@@ -59,6 +66,37 @@ def norm_url(u):
 
 def img_exists(u):
     return os.path.exists(os.path.join(ROOT, "mirror", u.lstrip("/")))
+
+
+_FLAT_CACHE = {}
+
+
+def is_flat(u):
+    """Плоская графика (лого/вордмарк на прозрачном или белом фоне)?
+
+    Такую картинку нельзя раздувать во всю ширину карточкой с тенью: получается
+    гигантский баннер, а тень ложится прямоугольником вокруг прозрачного PNG.
+    Растр читаем через PIL; SVG и всё, что не открылось, считаем фото."""
+    if u in _FLAT_CACHE:
+        return _FLAT_CACHE[u]
+    flat = False
+    try:
+        from PIL import Image
+        from collections import Counter
+        im = Image.open(os.path.join(ROOT, "mirror", u.lstrip("/"))).convert("RGBA")
+        im.thumbnail((200, 200))
+        px = list(im.getdata())
+        n = len(px)
+        transp = sum(1 for r, g, b, a in px if a < 16)
+        opaque = [(r, g, b) for r, g, b, a in px if a >= 200]
+        white = sum(1 for r, g, b in opaque if r > 243 and g > 243 and b > 243)
+        ink = [c for c in opaque if not (c[0] > 243 and c[1] > 243 and c[2] > 243)]
+        ncol = len(Counter((r >> 4, g >> 4, b >> 4) for r, g, b in ink))
+        flat = (transp + white) / n > 0.6 and ncol <= 90 and len(ink) / n < 0.35
+    except Exception:
+        flat = False
+    _FLAT_CACHE[u] = flat
+    return flat
 
 
 def is_dark(bg):
@@ -151,6 +189,13 @@ def rows_of(els):
 
 def el_html(e):
     if e["kind"] == "img":
+        if is_flat(e["src"]):
+            # мелкая плоская графика в макете = логотип клиента -> компактный знак
+            if e["w"] <= 460:
+                return ('<div class="cmb__logo"><img src="%s" alt="Логотип клиента" '
+                        'loading="lazy"></div>' % e["src"])
+            return ('<div class="cmb__img cmb__img--flat"><img src="%s" alt="" '
+                    'loading="lazy"></div>' % e["src"])
         return '<div class="cmb__img"><img src="%s" alt="" loading="lazy"></div>' % e["src"]
     if "<img" in e["html"]:
         return '<div class="cmb__textimg"><p>%s</p></div>' % e["html"]

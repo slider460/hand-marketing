@@ -221,6 +221,13 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><meta 
 .cmb__sec--dark p{color:rgba(255,255,255,.88)}
 .cmb__img{padding:6px 14px}
 .cmb__img img{width:100%;height:auto;border-radius:14px;box-shadow:0 14px 30px -16px rgba(20,23,28,.35)}
+/* плоская графика (лого, вордмарк) — без карточки: тень/скругление вокруг
+   прозрачного PNG выглядят как посторонний серый прямоугольник */
+.cmb__img--flat{padding:10px 20px}
+.cmb__img--flat img{border-radius:0;box-shadow:none}
+/* логотип клиента — компактный знак в потоке, а не баннер во всю ширину */
+.cmb__logo{padding:12px 20px 16px;line-height:0}
+.cmb__logo img{display:block;width:auto;height:auto;max-width:min(60%,200px);max-height:64px;object-fit:contain;object-position:left center;border-radius:0;box-shadow:none}
 .cmb__grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px 14px}
 .cmb__grid img{width:100%;height:auto;border-radius:12px}
 .cmb__slider{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:8px 14px 14px}
