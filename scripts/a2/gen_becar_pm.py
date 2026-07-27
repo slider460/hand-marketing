@@ -116,8 +116,6 @@ body{margin:0;background:var(--bp-paper)}
  box-shadow:0 34px 80px rgba(8,2,26,.55);transform-style:preserve-3d;transition:transform .18s ease-out;will-change:transform}
 .bp-viewer__stage img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:opacity .28s ease}
 .bp-viewer__stage img.is-fading{opacity:0}
-.bp-viewer__hint{position:absolute;left:18px;bottom:14px;background:rgba(20,10,44,.72);color:#E9E1F8;
- font-size:12px;font-weight:700;letter-spacing:.05em;padding:7px 13px;border-radius:999px;backdrop-filter:blur(4px)}
 .bp-viewer__cap{margin:18px 2px 0;font-size:14.5px;line-height:1.65;color:#CFC3E8;max-width:78ch}
 .bp-thumbs{display:flex;gap:12px;margin-top:18px}
 .bp-thumb{appearance:none;border:2.5px solid transparent;border-radius:12px;overflow:hidden;padding:0;
@@ -210,7 +208,6 @@ body{margin:0;background:var(--bp-paper)}
  .bp-thumb{width:96px}
  .bp-total__grid{grid-template-columns:1fr}
  .bp-slides__nav{display:none}
- .bp-viewer__hint{display:none}
 }
 </style>"""
 
@@ -250,11 +247,11 @@ SKYLINE = ('<div class="bp-skyline" aria-hidden="true"><svg viewBox="0 0 1200 15
 
 HEAD = f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Стенд Becar на Private Money Expo Forum — выставка под ключ | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: подготовка Becar Asset Management к форуму Private Money 2021 под ключ — концепция и дизайн стенда You&Co, застройка на компактной площадке, презентация для главной сцены, POSM и полиграфия, сопровождение, демонтаж и фотоотчёт.">
+<title>Стенд Becar на Private Money Expo Forum: выставка под ключ | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: выставка под ключ для Becar Asset Management на форуме Private Money 2021. Концепция и дизайн стенда You&Co, застройка в узкой галерее, презентация для главной сцены, POSM и полиграфия, сопровождение, демонтаж, фотоотчёт.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/portfolio/becar-private-money/">
-<meta property="og:type" content="article"><meta property="og:title" content="Стенд You&Co для Becar на Private Money Expo Forum 2021 — кейс Hand Marketing">
+<meta property="og:type" content="article"><meta property="og:title" content="Стенд You&Co для Becar на Private Money Expo Forum 2021 | кейс Hand Marketing">
 <meta property="og:description" content="Выставка под ключ: концепция, дизайн и застройка стенда, презентация для выступления топ-менеджеров, POSM и полиграфия, сопровождение и фотоотчёт.">
 <meta property="og:url" content="https://hand-marketing.ru/portfolio/becar-private-money/">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/render-front.jpg">
@@ -268,11 +265,11 @@ HEAD = f'''<!doctype html><html lang="ru"><head>
 VARIANTS_JS = """<script>
 var BP3D={
  v1:{views:['%(i)s/sketch-v1-a.jpg','%(i)s/sketch-v1-b.jpg','%(i)s/sketch-v1-c.jpg'],
-  cap:'Эскиз №1 — «пляж Марины»: жёлтая ресепшен-стойка и подиумные столики, песочная зона отдыха у кромки «моря» на полу, карта Дубая во всю стену. Смелый ход, но открытая пляжная зона съедала дефицитные метры.'},
+  cap:'Эскиз №1, «пляж Марины». Жёлтая ресепшен-стойка и подиумные столики, песочная зона отдыха у кромки «моря» на полу, карта Дубая во всю стену. Смелый ход, но открытая пляжная зона съедала дефицитные метры.'},
  v2:{views:['%(i)s/sketch-v2-a.jpg','%(i)s/sketch-v2-b.jpg','%(i)s/sketch-v2-c.jpg'],
-  cap:'Эскиз №2 — «вечерний город»: белая стойка с лайн-артом фасадов, бордовый текстиль, колесо обозрения и звёзды. Эффектно, но тёмная гамма спорила со светлой галереей площадки.'},
+  cap:'Эскиз №2, «вечерний город». Белая стойка с лайн-артом фасадов, бордовый текстиль, колесо обозрения и звёзды. Эффектно, но тёмная гамма спорила со светлой галереей площадки.'},
  fin:{views:['%(i)s/render-front.jpg','%(i)s/render-top.jpg','%(i)s/render-detail.jpg'],
-  cap:'Финальный 3D-проект: вся коммуникация ушла на стену-панно с картой Дубая, лаунж на светлом дереве вдоль фронта, ТВ-зона отдела продаж с QR, торцевые пилоны-витрины со всеми брендами экосистемы Becar. Каждый метр работает.'}
+  cap:'Финальный 3D-проект: вся коммуникация ушла на стену-панно с картой Дубая, лаунж на светлом дереве вдоль фронта, ТВ-зона отдела продаж с QR, торцевые пилоны-витрины со всеми брендами экосистемы Becar.'}
 };
 (function(){
  var stage=document.getElementById('bp3d-stage'),img=stage&&stage.querySelector('img');
@@ -295,7 +292,7 @@ var BP3D={
   t.addEventListener('click',function(){
    cur=t.getAttribute('data-v');view=0;
    [].forEach.call(document.querySelectorAll('.bp-tab'),function(x){x.classList.toggle('is-on',x===t);});
-   swap(BP3D[cur].views[0],t.textContent+' — стенд You&Co для Becar');draw();
+   swap(BP3D[cur].views[0],t.textContent+', стенд You&Co для Becar');draw();
   });
  });
  // лёгкий tilt за курсором (только точные указатели, без reduced-motion)
@@ -343,9 +340,9 @@ def hero():
         f'<div class="bp-r"><span class="bp-kicker">Кейс · выставка под ключ</span>'
         f'<h1 class="bp-h1">You<span class="amp">&amp;</span>Co на форуме Private&nbsp;Money</h1>'
         f'<div class="bp-hero__client"><b>Becar Asset Management</b> · Private Money Expo Forum · Москва, 2021</div>'
-        f'<p class="bp-hero__lead">Подготовили генерального партнёра форума в области недвижимости '
-        f'к выставке полностью под ключ: от идеи стенда и презентации для главной сцены — '
-        f'до последней брошюры, демонтажа и фотоотчёта.</p>'
+        f'<p class="bp-hero__lead">Мы сделали для Becar всю выставку: придумали и построили стенд, '
+        f'собрали презентацию для главной сцены, напечатали раздатку, дежурили на площадке '
+        f'все дни форума, а после закрытия разобрали конструкции и отдали фотоотчёт.</p>'
         f'<ul class="bp-chips"><li class="hot">Концепция</li><li>Дизайн стенда</li><li>Застройка</li>'
         f'<li>Презентация для сцены</li><li>POSM и полиграфия</li><li>Сопровождение</li>'
         f'<li>Демонтаж</li><li>Фотоотчёт</li></ul></div>'
@@ -353,10 +350,10 @@ def hero():
         f'<img src="{IMG}/photo-team.jpg" alt="Команда Becar на стенде You&Co на форуме Private Money 2021" width="2000" height="1334"></div>'
         f'</div></div>{SKYLINE}'
         f'<div class="bp-facts"><div class="bp-facts__in">'
-        f'<div class="bp-fact bp-r"><b>7 брендов</b><span>экосистемы Becar собраны на одном стенде</span></div>'
+        f'<div class="bp-fact bp-r"><b>7 брендов</b><span>экосистемы Becar на одном стенде</span></div>'
         f'<div class="bp-fact bp-r"><b>2 топ-спикера</b><span>Becar выступили на главной сцене #PME2021</span></div>'
-        f'<div class="bp-fact bp-r"><b>2 эскиза + финал</b><span>вариантов дизайна до утверждения проекта</span></div>'
-        f'<div class="bp-fact bp-r"><b>100% под ключ</b><span>от концепции до демонтажа и фотоотчёта</span></div>'
+        f'<div class="bp-fact bp-r"><b>2 эскиза + финал</b><span>показали клиенту, прежде чем утвердили проект</span></div>'
+        f'<div class="bp-fact bp-r"><b>1 подрядчик</b><span>на все работы, от концепции до фотоотчёта</span></div>'
         f'</div></div></section>')
 
 
@@ -365,24 +362,24 @@ def task():
         + cut('burst-purple', 'width:74px;height:74px;right:6%;top:44px;opacity:.16')
         + f'<div class="bp-wrap"><div class="bp-task__grid">'
         f'<div class="bp-r"><span class="bp-kicker" style="color:#E8404A">Задача</span>'
-        f'<h2 class="bp-h2">Форум инвесторов — и один шанс собрать всё вместе</h2>'
-        f'<p class="bp-lead">Private Money Expo Forum — главная встреча частных инвесторов в недвижимость. '
+        f'<h2 class="bp-h2">Вся линейка Becar на одном стенде</h2>'
+        f'<p class="bp-lead">Private Money Expo Forum собирает частных инвесторов в недвижимость. '
         f'Becar Asset Management шёл на форум генеральным партнёром со всей продуктовой линейкой: '
         f'отели We&I и Vertical, БЦ «Станция», ТРЦ «Смайл», Ramada Encore, GrowUp и зонтичный бренд '
         f'доходных инвестиций You&Co.</p>'
         f'<ul class="bp-list">'
         f'<li style="--cup:#E8404A">Разработать концепцию и дизайн стенда, который продаёт сразу семь продуктов</li>'
-        f'<li style="--cup:#F5A731">Застроить его на площадке форума и обеспечить работу все дни</li>'
+        f'<li style="--cup:#F5A731">Построить стенд на площадке и держать его в работе все дни форума</li>'
         f'<li style="--cup:#5B3A8F">Подготовить дизайн презентации для выступления топ-менеджеров на главной сцене</li>'
-        f'<li style="--cup:#2456A6">Произвести POSM и полиграфию: брошюры, папки, раздаточные материалы</li>'
-        f'<li style="--cup:#E8404A">Демонтировать стенд и отдать клиенту готовый фотоотчёт</li></ul></div>'
+        f'<li style="--cup:#2456A6">Напечатать POSM и полиграфию: брошюры, папки, раздатку</li>'
+        f'<li style="--cup:#E8404A">Демонтировать стенд и отдать клиенту фотоотчёт</li></ul></div>'
         f'<div class="bp-r"><div class="bp-card bp-card_alert">'
         f'<span class="bp-card__stamp">Главный вызов</span>'
         f'<h3>Очень мало пространства</h3>'
-        f'<p>Вместо просторного павильона — узкая линейная полоса в галерее у панорамного остекления: '
-        f'глубокой застройки не сделать, каждый метр на счету. Значит, работать должна каждая '
-        f'поверхность — стены, торцы и даже пол.</p></div>'
-        f'<div class="bp-arrowline">Решение — ниже ↓</div></div>'
+        f'<p>Площадка оказалась не павильоном, а узкой линейной полосой в галерее у панорамного '
+        f'остекления. Глубокой застройки тут не сделать, каждый метр на счету, поэтому работать '
+        f'должна была каждая поверхность: стены, торцы, пол.</p></div>'
+        f'<div class="bp-arrowline">Как решали ↓</div></div>'
         f'</div></div></section>')
 
 
@@ -393,17 +390,17 @@ def idea():
         + f'<div class="bp-wrap"><div class="bp-idea__grid">'
         f'<div class="bp-r"><span class="bp-kicker">Концепция</span>'
         f'<h2 class="bp-h2">Стенд-открытка из Дубая</h2>'
-        f'<p class="bp-lead">You&Co выводил инвесторов на самый горячий рынок 2021 года — Дубай. '
-        f'Мы превратили длинную стену — единственный крупный носитель на площадке — в иллюстрированную '
-        f'карту города в фирменном лайн-арте: Burj Khalifa, Palm Jumeirah, колесо Ain Dubai, Marina '
+        f'<p class="bp-lead">You&Co выводил инвесторов в Дубай. Длинная стена была единственным '
+        f'крупным носителем на площадке, и мы отдали её под иллюстрированную карту города '
+        f'в фирменном лайн-арте: Burj Khalifa, Palm Jumeirah, колесо Ain Dubai, Marina '
         f'и маршрут к будущему объекту.</p>'
-        f'<p class="bp-lead">Торцевые пилоны стали витринами экосистемы: на каждом — вся продуктовая '
-        f'линейка Becar. Куда бы гость ни посмотрел, он видел и город мечты, и конкретные продукты, '
-        f'в которые можно инвестировать уже сегодня.</p>'
+        f'<p class="bp-lead">Торцевые пилоны стали витринами экосистемы: на них поместилась вся '
+        f'продуктовая линейка Becar. Так рядом с картой города гость видел и сами объекты, '
+        f'в которые можно вложиться.</p>'
         f'<ul class="bp-brands"><li>Becar AM</li><li>You&Co</li><li>We&I by Vertical</li><li>Vertical</li>'
         f'<li>БЦ «Станция»</li><li>Ramada Encore</li><li>ТРЦ «Смайл»</li><li>GrowUp</li></ul>'
-        f'<div class="bp-idea__note bp-r">Светящийся логотип You&Co, ТВ-зона отдела продаж с QR-кодом '
-        f'и лаунж на светлом дереве с коврами — тёплый «отельный» приём вместо витринного официоза.</div></div>'
+        f'<div class="bp-idea__note bp-r">Светящийся логотип You&Co, ТВ-зона отдела продаж с QR-кодом, '
+        f'лаунж на светлом дереве с коврами. По ощущению ближе к отельному лобби, чем к выставочной витрине.</div></div>'
         f'<div class="bp-idea__art bp-r"><img src="{IMG}/photo-speaker.jpg" loading="lazy" '
         f'alt="Стена-панно с картой Дубая и светящимся логотипом You&Co" width="2000" height="1334"></div>'
         f'</div></div></section>')
@@ -416,16 +413,15 @@ def viewer3d():
         + f'<div class="bp-wrap">'
         f'<div class="bp-r"><span class="bp-kicker">Стенд в 3D</span>'
         f'<h2 class="bp-h2">От эскиза до финального проекта</h2>'
-        f'<p class="bp-lead">Клиент выбирал не «кота в мешке»: мы отрисовали стенд в 3D в двух концепциях, '
-        f'а после утверждения довели финальный проект до рабочего дизайна. Покрутите ракурсы — '
+        f'<p class="bp-lead">Стенд мы отрисовали в 3D в двух концепциях, клиент выбрал направление, '
+        f'а дальше мы довели финальный проект до рабочего дизайна. Покрутите ракурсы: '
         f'так стенд выглядел ещё до начала застройки.</p></div>'
         f'<div class="bp-tabs bp-r" role="tablist">'
         f'<button type="button" class="bp-tab" data-v="v1">Эскиз · вариант 1</button>'
         f'<button type="button" class="bp-tab" data-v="v2">Эскиз · вариант 2</button>'
         f'<button type="button" class="bp-tab is-on" data-v="fin">Финальный 3D-проект</button></div>'
         f'<div class="bp-viewer bp-r"><div class="bp-viewer__stage" id="bp3d-stage">'
-        f'<img src="{IMG}/render-front.jpg" alt="Финальный 3D-проект стенда You&Co для Becar" width="1920" height="1200">'
-        f'<span class="bp-viewer__hint">Наведите курсор — стенд наклонится · выбирайте ракурсы ниже</span></div>'
+        f'<img src="{IMG}/render-front.jpg" alt="Финальный 3D-проект стенда You&Co для Becar" width="1920" height="1200"></div>'
         f'<p class="bp-viewer__cap" id="bp3d-cap"></p>'
         f'<div class="bp-thumbs" id="bp3d-thumbs"></div></div>'
         f'</div></section>')
@@ -440,7 +436,7 @@ def build_gallery():
     ]
     figs = ''.join(
         f'<figure class="bp-shot bp-shot_{sz} bp-shot_{tl} bp-r"><img src="{IMG}/{f}" loading="lazy" '
-        f'alt="{H.escape(capt)} — стенд Becar на Private Money 2021" width="2000" height="1334">'
+        f'alt="{H.escape(capt)}. Стенд Becar на Private Money 2021" width="2000" height="1334">'
         f'<figcaption>{H.escape(capt)}</figcaption></figure>'
         for f, capt, sz, tl in shots)
     return (f'<section class="bp-sec bp bp-build">'
@@ -449,30 +445,29 @@ def build_gallery():
         f'<span class="bp-kicker" style="color:#5B3A8F">Реализация</span>'
         f'<h2 class="bp-h2">Как это выглядело вживую</h2>'
         f'<p class="bp-lead">Застройка прошла в ночь до открытия: каркас, печать панно, светящийся логотип, '
-        f'мебель, ТВ-зона и лифлетницы. Все дни форума наша команда дежурила на площадке — '
-        f'стенд отработал программу без единого сбоя, а после закрытия мы демонтировали '
-        f'конструкции и передали клиенту фотоотчёт.</p></div>'
+        f'мебель, ТВ-зона и лифлетницы. Все дни форума наша команда дежурила на площадке, '
+        f'а после закрытия мы демонтировали конструкции и передали клиенту фотоотчёт.</p></div>'
         f'<div class="bp-build__grid">{figs}</div>'
         f'</div></section>')
 
 
 def stage():
     slides = ''.join(
-        f'<img src="{IMG}/slide-{n}.jpg" loading="lazy" alt="Слайд презентации Becar для сцены Private Money — {H.escape(t)}" width="1400" height="788">'
-        for n, t in [(1, 'Откуда — куда'), (2, 'хроника сцены 2017–2019'), (3, '2020 год'),
+        f'<img src="{IMG}/slide-{n}.jpg" loading="lazy" alt="Слайд презентации Becar для сцены Private Money: {H.escape(t)}" width="1400" height="788">'
+        for n, t in [(1, 'откуда и куда'), (2, 'хроника сцены 2017-2019'), (3, '2020 год'),
                      (4, 'что у вас сейчас'), (5, 'лапти против кед'), (6, 'коливинги в мире')])
     return (f'<section class="bp-sec bp-stage">'
         + cut('shard-red', 'width:120px;height:110px;right:-34px;top:60px;transform:rotate(24deg);opacity:.9')
         + cut('burst-yellow', 'width:54px;height:54px;left:5%;bottom:70px;opacity:.8')
         + f'<div class="bp-wrap">'
         f'<div class="bp-r"><span class="bp-kicker">Главная сцена</span>'
-        f'<h2 class="bp-h2">Презентация, с которой не спят в зале</h2>'
+        f'<h2 class="bp-h2">Слайды для главной сцены</h2>'
         f'<p class="bp-lead">Вице-президент Becar Дмитрий Сороколетов и CVO Александр Пестряков выходили '
-        f'на главную сцену форума — мы собрали для выступления презентацию в айдентике You&Co. '
-        f'Вместо корпоративных таблиц — вырезные формы, кубки, мемы и честные графики: лапти против кед, '
-        f'перекати-поле 2020-го и карта мировых коливингов. Зал слушал — и досидел до конца.</p></div>'
+        f'на главную сцену форума, презентацию для выступления мы собрали в айдентике You&Co. '
+        f'Вместо корпоративных таблиц в слайдах вырезные формы, кубки, мемы и графики: лапти против кед, '
+        f'перекати-поле 2020-го, карта мировых коливингов.</p></div>'
         f'<div class="bp-stage__grid">'
-        f'<img class="bp-r" src="{IMG}/photo-stage-hall.jpg" loading="lazy" alt="Выступление Becar на главной сцене Private Money Expo Forum 2021 — на экране слайд нашей презентации" width="2000" height="1334">'
+        f'<img class="bp-r" src="{IMG}/photo-stage-hall.jpg" loading="lazy" alt="Выступление Becar на главной сцене Private Money Expo Forum 2021, на экране слайд нашей презентации" width="2000" height="1334">'
         f'<img class="bp-r" src="{IMG}/photo-stage-tops.jpg" loading="lazy" alt="Топ-менеджеры Becar на сцене #PME2021" width="2000" height="1334"></div>'
         f'<div class="bp-slides bp-r"><div class="bp-slides__head"><h3>Листайте слайды ↔</h3>'
         f'<div class="bp-slides__nav"><button type="button" id="bp-sl-prev" aria-label="Предыдущий слайд">‹</button>'
@@ -486,22 +481,21 @@ def posm():
         + cut('burst-red', 'width:64px;height:64px;right:7%;top:46px;opacity:.15')
         + f'<div class="bp-wrap"><div class="bp-posm__grid">'
         f'<div class="bp-posm__ph bp-r">'
-        f'<span class="bp-posm__star">Награда форума — на нашем стенде</span>'
+        f'<span class="bp-posm__star">Награда форума на нашем стенде</span>'
         f'<img src="{IMG}/photo-award.jpg" loading="lazy" '
         f'alt="Статуэтка Private Money 2021 и папка «Доходные инвестиции» на стенде Becar" width="2000" height="1334"></div>'
         f'<div class="bp-r"><span class="bp-kicker" style="color:#F5A731">POSM и полиграфия</span>'
         f'<h2 class="bp-h2">Раздатка, которую уносят с собой</h2>'
-        f'<p class="bp-lead">Инвестор уходит со стенда — а продукты остаются у него в руках. '
-        f'Мы произвели весь печатный комплект в единой айдентике:</p>'
+        f'<p class="bp-lead">Инвестор уходит со стенда, а продукты остаются у него в руках. '
+        f'Весь печатный комплект мы сделали в единой айдентике:</p>'
         f'<ul class="bp-list">'
         f'<li style="--cup:#5B3A8F">Папки «Доходные инвестиции» со всей линейкой продуктов</li>'
         f'<li style="--cup:#E8404A">Брошюры We&I, Vertical, «Смайл», «Станция» и Ramada Encore</li>'
-        f'<li style="--cup:#F5A731">«Конверт выгодных сделок» отдела продаж — офферы прямо на стенде</li>'
+        f'<li style="--cup:#F5A731">«Конверт выгодных сделок» отдела продаж: офферы прямо на стенде</li>'
         f'<li style="--cup:#2456A6">Календари You&Co, лифлетницы и навигационная графика</li></ul>'
-        f'<p class="bp-lead" style="margin-top:16px">Финальный штрих: вице-президент Becar получил '
-        f'награду от организаторов форума — статуэтку «за личный вклад в создание новых стандартов '
-        f'доходной недвижимости в России». Достойное завершение работы, в которую команда вложила '
-        f'столько сил.</p></div>'
+        f'<p class="bp-lead" style="margin-top:16px">На форуме вице-президент Becar получил '
+        f'от организаторов статуэтку «за личный вклад в создание новых стандартов '
+        f'доходной недвижимости в России».</p></div>'
         f'</div></div></section>')
 
 
@@ -513,8 +507,8 @@ def total():
         ('POSM и полиграфия', 'Папки, брошюры, конверты сделок, календари, лифлетницы'),
         ('Сопровождение', 'Команда на площадке все дни работы форума'),
         ('ТВ-зона продаж', 'Экран с роликами продуктов и QR-код отдела продаж SalesDep'),
-        ('Демонтаж', 'Разбор конструкций и вывоз после закрытия — без забот клиента'),
-        ('Фотоотчёт', 'Профессиональная съёмка стенда, гостей и выступлений'),
+        ('Демонтаж', 'Разбор конструкций и вывоз после закрытия форума'),
+        ('Фотоотчёт', 'Съёмка стенда, гостей и выступлений'),
     ]
     cards = ''.join(f'<div class="bp-step bp-r"><i aria-hidden="true"></i><b>{H.escape(t)}</b>'
                     f'<span>{H.escape(d)}</span></div>' for t, d in steps)
@@ -523,9 +517,9 @@ def total():
         + cut('shard-red', 'width:100px;height:90px;left:-30px;bottom:30px;transform:rotate(-18deg);opacity:.85')
         + f'<div class="bp-wrap">'
         f'<div class="bp-r"><span class="bp-kicker">Что вошло в «под ключ»</span>'
-        f'<h2 class="bp-h2">Один подрядчик — вся выставка</h2>'
-        f'<p class="bp-lead">Клиент занимался переговорами с инвесторами. Всё остальное — от первой '
-        f'идеи до фотоотчёта — сделал Hand Marketing.</p></div>'
+        f'<h2 class="bp-h2">Всю выставку сделал один подрядчик</h2>'
+        f'<p class="bp-lead">Клиент занимался переговорами с инвесторами. Всё остальное, от первой '
+        f'идеи до фотоотчёта, сделал Hand Marketing.</p></div>'
         f'<div class="bp-total__grid">{cards}</div>'
         f'<div class="bp-total__cta bp-r"><a class="bp-btn" href="#lead">Обсудить свой стенд</a>'
         f'<span class="bp-total__more">Ещё стенды под ключ: <a href="/portfolio/samara-stand-vdnh">Самарская область</a>, '
