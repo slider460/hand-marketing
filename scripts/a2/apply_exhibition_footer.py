@@ -69,7 +69,7 @@ FOOT = (
     '<a href="/privacy">Политика конфиденциальности</a></div>'
     '<div>Использование материалов Hand Marketing разрешено только с согласия правообладателя'
     f'<div class="hm-foot__sber"><img src="{SBER}" alt="СберКорус"></div></div>'
-    '</div><div class="hm-foot__cp">2012 — 2026 Hand Marketing</div></div></footer>'
+    '</div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></footer>'
 )
 
 

@@ -16,7 +16,7 @@
 
 Единство подвала: и портретный `.mhome .mh-foot`, и ландшафтная копия .mh-foot--u
 приводятся к ОДНОМУ каноничному HTML (CANON_INNER) — значки соцсетей (Telegram,
-WhatsApp, YouTube, инлайн-SVG, без внешних CDN — принцип проекта), год 2012–2026.
+WhatsApp, YouTube, инлайн-SVG, без внешних CDN — принцип проекта), год 2012 - 2026.
 
 Проблема 2 (маркер hm-eager-hero): верхняя картинка первого экрана «растрила»
 пиксельным превью /static/thb/.../resize/20x/ пока отложенный движок td не
@@ -73,7 +73,7 @@ CANON_INNER = (
     '</div>'
     '<nav class="mh-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a>'
     '<a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav>'
-    '<small>© 2012–2026 ООО «Хэнд-маркетинг»</small>'
+    '<small>© 2012 - 2026 ООО «Хэнд-маркетинг»</small>'
 )
 
 FOOT_HTML = f'<footer class="mh-foot mh-foot--u">{CANON_INNER}</footer>'

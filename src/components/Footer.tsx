@@ -44,7 +44,7 @@ export default function Footer() {
             {CONTACTS.requisites}
             <br />
             Использование материалов Hand Marketing разрешено только с согласия правообладателя.
-            <br />© 2012–{new Date().getFullYear()} Hand Marketing
+            <br />© 2012 - {new Date().getFullYear()} Hand Marketing
           </p>
         </div>
       </div>
