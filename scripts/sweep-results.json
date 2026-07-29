@@ -1,0 +1,2842 @@
+[
+ {
+  "path": "/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3d/stavropol/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3dmapping/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/about/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bacar_vertical_all/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/becar_stancia/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bekobod1/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/contacts/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/content/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/ramada/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/sdep/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/vertical/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/weampi/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/eaton/visual/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/patriki/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/piloti/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/rgd/suvenir/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/saintgobain/suitcase/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/skolkovo/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/teoxane/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/tunel/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/invest/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/smile/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/vertical/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/eaton_online/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/changan/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/eaton/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/marieclaire/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/messeduessleldorf/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/mozaika/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/riviera/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/salaris/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/samsung/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/exhibition/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/isotec/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/mmg/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-exhibition/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-stand-vdnh/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/stavropol-stand-vdnh/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/printandproduction/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/privacy/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/project/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/samara_vdnh/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/service/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/eaton/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/gaz/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/interplastika/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/lingerie/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/mozaika/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/patriot/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/powertechnologies/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/rgd/history/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/salaris/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/silkway/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/vivax/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/videoproduction/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/zubovo/",
+  "vp": "mob-port",
+  "vw": 375,
+  "scrollW": 375,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3d/stavropol/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3dmapping/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/about/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bacar_vertical_all/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/becar_stancia/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bekobod1/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/contacts/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/content/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/ramada/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/sdep/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/vertical/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/weampi/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/eaton/visual/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/patriki/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/piloti/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/rgd/suvenir/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/saintgobain/suitcase/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/skolkovo/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/teoxane/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/tunel/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/invest/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/smile/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/vertical/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/eaton_online/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/changan/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/eaton/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/marieclaire/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/messeduessleldorf/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/mozaika/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/riviera/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/salaris/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/samsung/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/exhibition/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/isotec/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/mmg/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-exhibition/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-stand-vdnh/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/stavropol-stand-vdnh/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/printandproduction/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/privacy/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/project/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/samara_vdnh/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/service/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/eaton/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/gaz/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/interplastika/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/lingerie/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/mozaika/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/patriot/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/powertechnologies/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/rgd/history/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/salaris/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/silkway/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/vivax/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/videoproduction/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/zubovo/",
+  "vp": "mob-land",
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3d/stavropol/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3dmapping/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/about/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bacar_vertical_all/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/becar_stancia/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bekobod1/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/contacts/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/content/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/ramada/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/sdep/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/vertical/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/weampi/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/eaton/visual/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/patriki/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/piloti/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/rgd/suvenir/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/saintgobain/suitcase/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/skolkovo/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/teoxane/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/tunel/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/invest/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/smile/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/vertical/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/eaton_online/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/changan/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/eaton/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/marieclaire/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/messeduessleldorf/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/mozaika/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/riviera/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/salaris/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/samsung/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/exhibition/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/isotec/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/mmg/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-exhibition/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-stand-vdnh/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/stavropol-stand-vdnh/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/printandproduction/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/privacy/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/project/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/samara_vdnh/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/service/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/eaton/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/gaz/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/interplastika/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/lingerie/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/mozaika/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/patriot/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/powertechnologies/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/rgd/history/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/salaris/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/silkway/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/vivax/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/videoproduction/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/zubovo/",
+  "vp": "tab-port",
+  "vw": 768,
+  "scrollW": 768,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3d/stavropol/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3dmapping/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/about/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bacar_vertical_all/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/becar_stancia/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bekobod1/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/contacts/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/content/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/ramada/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/sdep/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/vertical/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/weampi/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/eaton/visual/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/patriki/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/piloti/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/rgd/suvenir/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/saintgobain/suitcase/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/skolkovo/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/teoxane/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/tunel/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/invest/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/smile/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/vertical/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/eaton_online/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/changan/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/eaton/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/marieclaire/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/messeduessleldorf/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/mozaika/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/riviera/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/salaris/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/samsung/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/exhibition/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/isotec/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/mmg/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-exhibition/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-stand-vdnh/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/stavropol-stand-vdnh/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/printandproduction/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/privacy/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/project/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/samara_vdnh/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/service/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/eaton/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/gaz/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/interplastika/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/lingerie/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/mozaika/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/patriot/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/powertechnologies/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/rgd/history/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/salaris/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/silkway/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/vivax/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/videoproduction/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/zubovo/",
+  "vp": "tab-land",
+  "vw": 1024,
+  "scrollW": 1024,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3d/stavropol/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/3dmapping/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/about/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bacar_vertical_all/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/becar_stancia/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/bekobod1/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/contacts/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/content/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/ramada/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/sdep/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/vertical/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/becar/weampi/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/eaton/visual/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/patriki/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/piloti/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/rgd/suvenir/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/saintgobain/suitcase/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/skolkovo/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/teoxane/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creative/tunel/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/invest/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/smile/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/digital/becar/vertical/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/eaton_online/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/changan/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/eaton/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/marieclaire/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/messeduessleldorf/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/mozaika/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/riviera/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/salaris/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/event/samsung/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/exhibition/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/isotec/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/mmg/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-exhibition/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/samara-stand-vdnh/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/portfolio/stavropol-stand-vdnh/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/printandproduction/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/privacy/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/project/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/samara_vdnh/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/service/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/eaton/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/gaz/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/interplastika/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/lingerie/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/mozaika/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/patriot/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/powertechnologies/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/rgd/history/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/salaris/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/silkway/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/video/vivax/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/videoproduction/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/zubovo/",
+  "vp": "desktop",
+  "vw": 1440,
+  "scrollW": 1440,
+  "overflowPx": 0,
+  "offenders": [],
+  "consoleErrors": []
+ },
+ {
+  "path": "/",
+  "vp": "ROTATE 375->844",
+  "reloaded": true,
+  "tildaInited": true,
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": []
+ },
+ {
+  "path": "/event/",
+  "vp": "ROTATE 375->844",
+  "reloaded": false,
+  "tildaInited": true,
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": []
+ },
+ {
+  "path": "/btl/",
+  "vp": "ROTATE 375->844",
+  "reloaded": false,
+  "tildaInited": true,
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": []
+ },
+ {
+  "path": "/creativedesign/",
+  "vp": "ROTATE 375->844",
+  "reloaded": false,
+  "tildaInited": true,
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": []
+ },
+ {
+  "path": "/clients/",
+  "vp": "ROTATE 375->844",
+  "reloaded": false,
+  "tildaInited": true,
+  "vw": 844,
+  "scrollW": 844,
+  "overflowPx": 0,
+  "offenders": []
+ }
+]

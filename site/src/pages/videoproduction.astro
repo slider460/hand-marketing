@@ -1,0 +1,334 @@
+---
+/**
+ * Video Production — логика оформления как на weshow.su/services/video-production
+ * (hero с зацикленным лёгким видео → виды работ с примерами → кейсы → форма),
+ * оформление строго в фирменных токенах Hand Marketing.
+ * Hero-луп: 14 с из шоурила, пережат локально (/media/vp-hero-loop.mp4, ~1.9 МБ).
+ * Примеры видов работ: контент weshow (постеры и видео self-host в /media).
+ */
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LazyVideo from '../components/LazyVideo.astro';
+
+// Видео самохостятся в /media (на бою заливаются вручную, см. VIDEO-UPLOAD.md)
+const dbx = {
+  vivax: '/media/vivax-samburskaya.mp4',
+  uaz: '/media/eaton-yaz.mp4',
+  rzd: '/media/transrzhd.mp4',
+  powerTech: '/media/pt-film-long.mp4',
+  samara: '/media/samara-vdnh-report.mp4',
+  salaris: '/media/salaris-event-fin180416.mp4',
+  riviera: '/media/event-riviera.mp4',
+  gazel: '/media/gazelle-transformer.mp4',
+  saintGobain: '/media/saint-gobain-training.mp4',
+  pres1: '/media/samara-pres-4elements.mp4',
+  pres2: '/media/samara-pres-5spirits.mp4',
+  pres3: '/media/samara-pres-vizual-1.mp4',
+  pres4: '/media/samara-pres-vizual-2.mp4',
+  pres5: '/media/samara-pres-content.mp4',
+};
+
+interface Example { title: string; poster: string; video: string }
+interface WorkType { title: string; desc: string; accent: string; examples: Example[] }
+
+const workTypes: WorkType[] = [
+  {
+    title: 'Рекламные ролики', accent: 'var(--orange)',
+    desc: 'Создаём яркие, цепляющие и запоминающиеся рекламные видео, которые продают ваш продукт и повышают узнаваемость бренда. Фокус — на креативе, качестве исполнения и достижении KPI.',
+    examples: [
+      { title: 'VIVAX', poster: '/images/vp/cadr_samburskaya.jpg', video: dbx.vivax },
+      { title: 'УАЗ Патриот', poster: '/images/vp/cadr_yaz.jpg', video: dbx.uaz },
+    ],
+  },
+  {
+    title: 'Корпоративные фильмы', accent: 'var(--purple)',
+    desc: 'Рассказываем историю вашей компании. Снимаем имиджевые и HR-фильмы, которые укрепляют репутацию, мотивируют сотрудников и производят впечатление на партнёров и инвесторов.',
+    examples: [
+      { title: 'АО «РЖД»', poster: '/images/vp/cadr_rgd.jpg', video: dbx.rzd },
+      { title: 'Power Technology', poster: '/images/vp/cadr_power_tech.jpg', video: dbx.powerTech },
+    ],
+  },
+  {
+    title: 'Репортажные ролики', accent: 'var(--green)',
+    desc: 'Ловим живые эмоции и ключевые моменты. Создаём динамичные репортажные видео с выставок, конференций, форумов и мероприятий, передавая атмосферу и масштаб события.',
+    examples: [
+      { title: 'Выставка-форум «Россия»', poster: '/images/vp/cadr_samara_vdnh.jpg', video: dbx.samara },
+      { title: 'Event ТРЦ «Саларис»', poster: '/images/vp/cadr_salaris.jpg', video: dbx.salaris },
+      { title: 'Event ТРЦ «Ривьера»', poster: '/images/vp/cadr_riviera.jpg', video: dbx.riviera },
+    ],
+  },
+  {
+    title: 'Вирусные ролики', accent: 'var(--pink)',
+    desc: 'Разрабатываем нестандартные идеи и креативные концепции, которые выходят за рамки обычного. Наша цель — контент, который удивляет и которым хочется делиться.',
+    examples: [
+      { title: 'Газель-трансформер', poster: '/images/vp/cadr_gazell.jpg', video: dbx.gazel },
+    ],
+  },
+  {
+    title: 'Обучающие видео', accent: 'var(--orange)',
+    desc: 'Переводим сложное на простой и понятный язык. Производим структурированные обучающие материалы, видеоинструкции, HR-онбординги и курсы для сотрудников и клиентов.',
+    examples: [
+      { title: 'Saint-Gobain', poster: '/images/vp/Cadr_SG_obushenie.jpg', video: dbx.saintGobain },
+    ],
+  },
+];
+
+const presentations: Example[] = [
+  { title: 'Концепция «4 стихии»', poster: '/images/vp/4-stihii_samara.jpg', video: dbx.pres1 },
+  { title: 'Концепция «5 духов»', poster: '/images/vp/5-stihy_samara.jpg', video: dbx.pres2 },
+  { title: 'Визуализация стенда 1', poster: '/images/vp/vizual_1_samara.jpg', video: dbx.pres3 },
+  { title: 'Визуализация стенда 2', poster: '/images/vp/vizual_2_samara.jpg', video: dbx.pres4 },
+  { title: 'Концепция контента', poster: '/images/vp/content_samara.jpg', video: dbx.pres5 },
+];
+
+// Кейсы «как у нас сейчас»: карточки категории video из коллекции проектов
+const cases = (await getCollection('projects', (p) => p.data.category === 'video'))
+  .sort((a, b) => (a.data.order ?? 100) - (b.data.order ?? 100) || a.data.title.localeCompare(b.data.title));
+---
+<Base
+  title="Видеопродакшн — Hand Marketing"
+  description="Рекламные, имиджевые, репортажные и вирусные ролики, обучающие видео и видеопрезентации. Съёмка, монтаж, графика — видеопродакшн полного цикла Hand Marketing.">
+  <Header />
+
+  <!-- HERO: всегда крутится лёгкий зацикленный шоурил -->
+  <section class="hero">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata"
+      poster="/media/vp-hero-poster.jpg" aria-hidden="true">
+      <source src="/media/vp-hero-loop.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="wrap hero__in">
+      <p class="hero__kick">
+        <span class="sq" style="--c:var(--green)"></span><span class="sq" style="--c:var(--orange)"></span><span class="sq" style="--c:var(--pink)"></span><span class="sq" style="--c:var(--purple)"></span>
+        Hand Marketing · Video Production
+      </p>
+      <h1 class="hero__t">Видеопродакшн</h1>
+      <p class="hero__s">Технологичные и кинематографичные видеорешения для вашего бизнеса — от идеи и съёмки до монтажа и графики.</p>
+      <div class="hero__cta">
+        <a class="btn btn--yellow" href="#lead">Обсудить проект</a>
+        <a class="btn btn--ghost" href="#works">Виды работ ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВИДЫ РАБОТ с примерами -->
+  <main id="works" class="wrap">
+    <header class="sh">
+      <h2 class="sh__t">Что мы снимаем</h2>
+      <p class="sh__s">Каждое направление — с живыми примерами: нажмите на кадр, чтобы посмотреть ролик.</p>
+    </header>
+
+    {workTypes.map((w) => (
+      <section class="wt reveal" style={`--accent:${w.accent}`}>
+        <div class="wt__info">
+          <h3 class="wt__t"><i class="wt__sq" aria-hidden="true"></i>{w.title}</h3>
+          <p class="wt__d">{w.desc}</p>
+        </div>
+        <div class:list={['wt__ex', { 'wt__ex--three': w.examples.length === 3 }]}>
+          {w.examples.map((ex) => (
+            <figure class="ex">
+              <LazyVideo src={ex.video} poster={ex.poster} title={`${w.title}: ${ex.title}`} />
+              <figcaption class="ex__cap">Кейс: {ex.title}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- Видеопрезентации: лента концепций -->
+    <section class="wt wt--pres reveal" style="--accent:var(--purple)">
+      <div class="wt__info">
+        <h3 class="wt__t"><i class="wt__sq" aria-hidden="true"></i>Видеопрезентации</h3>
+        <p class="wt__d">Презентация проекта стенда Самарской области для форума «Россия — спортивная держава»: концепции, визуализации и контент стенда.</p>
+      </div>
+      <div class="pres" role="list">
+        {presentations.map((ex) => (
+          <figure class="ex pres__item" role="listitem">
+            <LazyVideo src={ex.video} poster={ex.poster} title={`Видеопрезентация: ${ex.title}`} />
+            <figcaption class="ex__cap">{ex.title}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    <!-- КЕЙСЫ как на /project -->
+    <section id="cases" class="cs">
+      <header class="sh">
+        <h2 class="sh__t">Кейсы Video Production</h2>
+        <p class="sh__s">Избранные проекты направления — подробности внутри каждого кейса.</p>
+      </header>
+      <ul class="grid">
+        {cases.map((p) => (
+          <li class="card reveal" style={`--accent:${p.data.accent}`}>
+            <a href={`/project/${p.id}`}>
+              <div class="card__media">
+                <Picture src={p.data.cover} alt={p.data.coverAlt}
+                  widths={[400, 640, 960]} sizes="(max-width:760px) 100vw, (max-width:1100px) 50vw, 33vw"
+                  formats={['avif', 'webp']} loading="lazy" decoding="async" class="card__img" />
+              </div>
+              <div class="card__body">
+                <span class="card__cat">Video Production</span>
+                <h3 class="card__t">{p.data.title}</h3>
+                <p class="card__c">{p.data.client}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="cs__more"><a class="btn btn--ink" href="/project">Все проекты →</a></div>
+    </section>
+
+    <!-- ФОРМА -->
+    <section id="lead" class="lead reveal">
+      <div class="lead__in">
+        <h2 class="lead__t">Готовы создать ваш следующий проект?</h2>
+        <p class="lead__s">Свяжитесь с нами, чтобы обсудить идеи — поможем воплотить их в жизнь.</p>
+        <form class="lead__form" method="post" action="/api/lead.php">
+          <input type="hidden" name="form" value="videoproduction" />
+          <!-- honeypot: скрытое поле для ботов, обработчик такие заявки отбрасывает -->
+          <input class="lead__hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="sr" for="lead-name">Имя</label>
+          <input id="lead-name" name="name" type="text" placeholder="Имя" autocomplete="name" />
+          <label class="sr" for="lead-contact">Телефон или email</label>
+          <input id="lead-contact" name="contact" type="text" placeholder="Телефон или email" required autocomplete="tel" />
+          <label class="sr" for="lead-comment">Комментарий</label>
+          <textarea id="lead-comment" name="comment" rows="4" placeholder="Комментарий"></textarea>
+          <button class="btn btn--yellow" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <style>
+    /* HERO */
+    .hero{position:relative;min-height:min(82vh,760px);display:flex;align-items:center;overflow:hidden;background:var(--ink)}
+    .hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,28,.55) 0%,rgba(20,23,28,.35) 45%,rgba(20,23,28,.72) 100%)}
+    .hero__in{position:relative;width:100%;padding-top:var(--space-l);padding-bottom:var(--space-l)}
+    .hero__kick{display:flex;align-items:center;gap:8px;margin:0 0 18px;font-family:var(--f-head);font-weight:700;
+      font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+    .sq{width:10px;height:10px;border-radius:3px;background:var(--c)}
+    .sq+.sq{margin-left:-4px}.sq:nth-of-type(4){margin-right:6px}
+    .hero__t{font-size:var(--step-6);font-weight:800;line-height:.98;color:#fff}
+    .hero__s{margin:20px 0 0;max-width:52ch;color:rgba(255,255,255,.88);font-size:var(--step-1)}
+    .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .btn{display:inline-block;font-family:var(--f-head);font-weight:700;font-size:15px;border:0;cursor:pointer;
+      padding:16px 28px;border-radius:999px;transition:transform .25s var(--ease),box-shadow .25s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px -16px rgba(0,0,0,.5)}
+    .btn--yellow{background:var(--yellow);color:var(--ink)}
+    .btn--ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+    .btn--ghost:hover{border-color:#fff;box-shadow:none}
+    .btn--ink{background:var(--ink);color:#fff}
+
+    /* Заголовки секций */
+    .sh{padding:var(--space-l) 0 var(--space-m)}
+    .sh__t{font-size:var(--step-4);line-height:1.04}
+    .sh__s{margin:.7rem 0 0;max-width:56ch;color:var(--body);font-size:var(--step-0)}
+
+    /* Вид работ: описание слева, примеры справа */
+    .wt{display:grid;grid-template-columns:minmax(240px,4fr) 8fr;gap:var(--space-m);
+      padding:var(--space-m) 0;border-top:1px solid var(--line)}
+    .wt__t{display:flex;align-items:center;gap:12px;font-size:var(--step-2);line-height:1.1}
+    .wt__sq{flex:none;width:14px;height:14px;border-radius:4px;background:var(--accent)}
+    .wt__d{margin:.9rem 0 0;color:var(--body);font-size:var(--step-0)}
+    .wt__ex{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-s)}
+    .wt__ex--three{grid-template-columns:repeat(3,1fr)}
+    .ex{margin:0}
+    .ex__cap{margin-top:10px;font-family:var(--f-head);font-weight:700;font-size:var(--step--1);color:var(--ink)}
+    .ex__cap::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--accent);margin-right:8px}
+
+    /* Лента видеопрезентаций */
+    .pres{display:grid;grid-auto-flow:column;grid-auto-columns:min(320px,78vw);gap:var(--space-s);
+      overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+    .pres__item{scroll-snap-align:start}
+
+    /* Кейсы (стиль /project) */
+    .grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-s)}
+    .card{border-radius:var(--r);overflow:hidden;background:var(--soft);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(20,23,28,.35)}
+    .card__media{aspect-ratio:4/3;overflow:hidden;background:#e9ebee}
+    .card :global(.card__img){width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+    .card:hover :global(.card__img){transform:scale(1.04)}
+    .card__body{padding:16px 18px 20px}
+    .card__cat{display:inline-block;font-family:var(--f-head);font-weight:700;font-size:12px;letter-spacing:.04em;
+      text-transform:uppercase;color:var(--accent)}
+    .card__t{margin:.4rem 0 .2rem;font-size:var(--step-1);line-height:1.15}
+    .card__c{margin:0;color:var(--dim);font-size:var(--step--1)}
+    .cs__more{display:flex;justify-content:center;margin-top:var(--space-m)}
+
+    /* Форма */
+    .lead{margin-top:var(--space-xl)}
+    .lead__in{background:var(--ink);border-radius:24px;padding:var(--space-l) clamp(22px,5vw,64px);text-align:center}
+    .lead__t{color:#fff;font-size:var(--step-3);line-height:1.08}
+    .lead__s{margin:.8rem auto 0;max-width:46ch;color:#aab0b8;font-size:var(--step-0)}
+    .lead__form{display:flex;flex-direction:column;gap:14px;max-width:460px;margin:var(--space-m) auto 0;text-align:left}
+    .lead__form input,.lead__form textarea{width:100%;font:inherit;color:#fff;background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px;resize:vertical}
+    .lead__form input::placeholder,.lead__form textarea::placeholder{color:#8a909a}
+    .lead__form input:focus,.lead__form textarea:focus{outline:2px solid var(--yellow);outline-offset:0;border-color:transparent}
+    .lead__form .btn{margin-top:6px}
+    .lead__hp{position:absolute !important;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+    .lead__ok{margin:var(--space-m) auto 0;max-width:46ch;text-align:center;color:#fff;font-size:var(--step-1)}
+    .lead__err{margin:0;color:#ffb3ad;font-size:14px}
+    .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+    @media(max-width:960px){
+      .wt{grid-template-columns:1fr;gap:var(--space-s)}
+      .wt__ex--three{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){
+      .wt__ex,.wt__ex--three{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .hero{min-height:72vh}
+    }
+    @media(prefers-reduced-motion:reduce){.hero__video{display:none}}
+  </style>
+
+  <script>
+    // Экономия ресурсов: фоновое видео ставится на паузу вне вьюпорта
+    // и не проигрывается при prefers-reduced-motion (CSS его прячет, JS глушит).
+    function initHeroVideo() {
+      const v = document.querySelector<HTMLVideoElement>('.hero__video');
+      if (!v || v.dataset.ready) return;
+      v.dataset.ready = '1';
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.pause(); v.removeAttribute('autoplay'); return; }
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+      }).observe(v);
+    }
+    initHeroVideo();
+    document.addEventListener('astro:page-load', initHeroVideo);
+
+    // Форма: отправка через fetch, чтобы пользователь видел «спасибо»,
+    // а не сырой JSON-ответ обработчика (нативный POST остаётся no-JS фолбэком)
+    function initLeadForm() {
+      const f = document.querySelector<HTMLFormElement>('.lead__form');
+      if (!f || f.dataset.ready) return;
+      f.dataset.ready = '1';
+      f.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = f.querySelector<HTMLButtonElement>('button[type=submit]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
+        try {
+          const res = await fetch(f.action, { method: 'POST', body: new FormData(f) });
+          const j = await res.json();
+          if (!res.ok || !j.success) throw new Error('send failed');
+          f.innerHTML = '<p class="lead__ok">Спасибо! Мы свяжемся с вами в ближайшее время.</p>';
+        } catch {
+          if (btn) { btn.disabled = false; btn.textContent = 'Отправить заявку'; }
+          let m = f.querySelector('.lead__err');
+          if (!m) { m = document.createElement('p'); m.className = 'lead__err'; f.appendChild(m); }
+          m.textContent = 'Не удалось отправить. Позвоните нам: +7 495 580 75 37';
+        }
+      });
+    }
+    initLeadForm();
+    document.addEventListener('astro:page-load', initLeadForm);
+  </script>
+</Base>

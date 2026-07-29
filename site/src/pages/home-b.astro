@@ -1,0 +1,52 @@
+---
+// ПОДХОД B — чистая семантичная вёрстка геро-главной «на глаз» под вид Тильды.
+// Цель демонстрации: показать, насколько близко лёгкий код повторяет оригинал.
+const services = [
+  ['Event', '/event'], ['Video production', '/videoproduction'], ['Digital', '/digital'], ['BTL', '/btl'],
+  ['Creative & Design', '/creativedesign'], ['Print & Production', '/printandproduction'], ['3D Mapping', '/3dmapping'],
+];
+---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hand Marketing — подход B</title>
+  <link href="/fonts/raleway-homeb.css" rel="stylesheet" />
+  <style>
+    *{box-sizing:border-box;margin:0}
+    body{font-family:'Raleway',Arial,sans-serif;background:#fff;color:#000;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+    .top{display:flex;justify-content:flex-end;padding:28px 0}
+    .burger{width:46px;height:30px;display:flex;flex-direction:column;justify-content:center;gap:7px;cursor:pointer}
+    .burger span{height:3px;background:#000;border-radius:2px}
+    .burger span:nth-child(2){width:60%;margin-left:auto}
+    .hero{padding-top:36px}
+    .hero__title{font-weight:800;font-size:96px;line-height:.98;letter-spacing:-.01em}
+    .hero__sub{font-weight:500;font-size:27px;margin-top:6px;color:#000}
+    .svc{display:flex;flex-wrap:wrap;gap:14px 44px;max-width:720px;margin-top:64px;font-weight:700;font-size:24px}
+    .svc a:hover{opacity:.6}
+    .showreel{display:inline-block;margin-top:64px;margin-left:auto;background:#FFE000;color:#000;
+      font-weight:700;font-size:21px;padding:18px 34px;border-radius:40px}
+    .showreel b{font-weight:800}
+    .showreel-row{display:flex}
+    @media(max-width:760px){.hero__title{font-size:54px}.hero__sub{font-size:20px}.svc{font-size:19px;gap:12px 26px}.wrap{padding:0 22px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><div class="burger" aria-label="Меню"><span></span><span></span><span></span></div></div>
+    <section class="hero">
+      <h1 class="hero__title">Hand Marketing</h1>
+      <p class="hero__sub">Рекламное агентство полного цикла</p>
+      <nav class="svc">
+        {services.map(([t, href]) => <a href={href}>{t}</a>)}
+      </nav>
+      <div class="showreel-row">
+        <a class="showreel" href="#showreel">Смотреть <b>SHOWREEL</b></a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

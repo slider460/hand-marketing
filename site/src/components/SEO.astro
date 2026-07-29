@@ -1,0 +1,76 @@
+---
+import { site } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;          // абсолютный или /path
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** Доп. JSON-LD для конкретной страницы (например, кейс) */
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description = site.description,
+  image = '/og.jpg',
+  type = 'website',
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const fullTitle = title ? `${title} — ${site.brand}` : `${site.brand} — ${site.tagline}`;
+const canonical = new URL(Astro.url.pathname, site.domain).href;
+const ogImage = new URL(image, site.domain).href;
+
+// Базовые сущности: всегда Organization + WebSite (на главной)
+const org = {
+  '@type': 'Organization',
+  '@id': `${site.domain}/#org`,
+  name: site.brand,
+  legalName: site.legalName,
+  url: site.domain,
+  logo: `${site.domain}/logo-cube.png`,
+  email: site.email,
+  telephone: site.phoneHref.replace('tel:', ''),
+  foundingDate: site.founded,
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: site.address.country,
+    addressLocality: site.address.locality,
+    postalCode: site.address.postalCode,
+    streetAddress: site.address.street,
+  },
+  ...(site.social.length ? { sameAs: site.social } : {}),
+};
+const website = {
+  '@type': 'WebSite',
+  '@id': `${site.domain}/#website`,
+  url: site.domain,
+  name: site.brand,
+  inLanguage: 'ru-RU',
+  publisher: { '@id': `${site.domain}/#org` },
+};
+const extra = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const jsonld = { '@context': 'https://schema.org', '@graph': [org, website, ...extra] };
+---
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<meta property="og:site_name" content={site.brand} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="ru_RU" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonld)} is:inline />

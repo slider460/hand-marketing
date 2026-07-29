@@ -1,0 +1,60 @@
+---
+import { site } from '../config/site';
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(href + '/');
+---
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="brand" href="/" aria-label={`${site.brand} — на главную`}>
+      <img src="/logo-cube.png" alt="" width="34" height="34" />
+      <b>{site.brand.toUpperCase()}</b>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      {site.nav.map((i) => (
+        <a href={i.href} aria-current={isActive(i.href) ? 'page' : undefined}>{i.label}</a>
+      ))}
+    </nav>
+    <a class="hd__cta" href="/contacts">Обсудить проект</a>
+    <button class="hd__burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="m-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="m-nav" class="m-nav" aria-label="Мобильная навигация" hidden>
+    {site.nav.map((i) => <a href={i.href}>{i.label}</a>)}
+    <a class="m-nav__cta" href="/contacts">Обсудить проект</a>
+  </nav>
+</header>
+
+<style>
+  .hd{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .hd__in{display:flex;align-items:center;gap:24px;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+  .brand b{font-family:var(--f-head);font-weight:800;font-size:15px;letter-spacing:.04em;color:var(--ink)}
+  .nav{display:flex;gap:24px;font-weight:500;font-size:15px}
+  .nav a{color:var(--body)}.nav a:hover,.nav a[aria-current]{color:var(--ink)}
+  .hd__cta{font-family:var(--f-head);font-weight:700;font-size:14px;color:#fff;background:var(--ink);padding:11px 18px;border-radius:999px;transition:transform .2s var(--ease)}
+  .hd__cta:hover{transform:translateY(-2px)}
+  .hd__burger{display:none;flex-direction:column;gap:5px;width:42px;height:42px;align-items:center;justify-content:center;background:none;border:0;cursor:pointer}
+  .hd__burger span{width:22px;height:2px;background:var(--ink);transition:.25s var(--ease)}
+  .m-nav{display:flex;flex-direction:column;padding:12px 24px 22px;gap:4px;border-bottom:1px solid var(--line);background:#fff}
+  .m-nav[hidden]{display:none}
+  .m-nav a{padding:12px 0;font-family:var(--f-head);font-weight:600;font-size:18px;color:var(--ink);border-bottom:1px solid var(--line)}
+  .m-nav__cta{margin-top:14px;color:#fff!important;background:var(--ink);text-align:center;border-radius:999px;border:0!important}
+  @media(max-width:860px){.nav,.hd__cta{display:none}.hd__burger{display:flex}}
+</style>
+
+<script>
+  function initNav() {
+    const b = document.querySelector<HTMLButtonElement>('.hd__burger');
+    const m = document.getElementById('m-nav');
+    if (!b || !m || b.dataset.ready) return;
+    b.dataset.ready = '1';
+    b.addEventListener('click', () => {
+      const open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', String(!open));
+      m.hidden = open;
+    });
+  }
+  initNav();
+  document.addEventListener('astro:page-load', initNav);
+</script>

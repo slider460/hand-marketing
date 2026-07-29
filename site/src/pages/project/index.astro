@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Picture } from 'astro:assets';
+import { services } from '../../config/site';
+
+const all = (await getCollection('projects')).sort(
+  (a, b) => (a.data.order ?? 100) - (b.data.order ?? 100) || a.data.title.localeCompare(b.data.title),
+);
+
+// Карта категория → подпись/цвет для фильтра и тегов
+const catLabel: Record<string, string> = {
+  event: 'Event', creative: 'Creative & Design', video: 'Video Production',
+  digital: 'Digital', '3dmapping': '3D Mapping',
+};
+const cats = [...new Set(all.map((p) => p.data.category).filter(Boolean))] as string[];
+---
+<Base title="Проекты — Hand Marketing" description="Кейсы рекламного агентства Hand Marketing: event, видео, 3D mapping, digital, креатив и дизайн.">
+  <Header />
+  <main class="wrap">
+    <header class="ph">
+      <h1 class="ph__t">Проекты</h1>
+      <p class="ph__s">Избранные кейсы агентства — от 3D mapping шоу до видеопродакшна и digital.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Фильтр по направлению">
+      <button class="chip is-on" data-cat="all" aria-pressed="true">Все</button>
+      {cats.map((c) => (
+        <button class="chip" data-cat={c} aria-pressed="false">{catLabel[c] ?? c}</button>
+      ))}
+    </div>
+
+    <ul class="grid" id="grid">
+      {all.map((p) => (
+        <li class="card reveal" data-cat={p.data.category ?? ''} style={`--accent:${p.data.accent}`}>
+          <a href={`/project/${p.id}`}>
+            <div class="card__media">
+              <Picture src={p.data.cover} alt={p.data.coverAlt}
+                widths={[400, 640, 960]} sizes="(max-width:760px) 100vw, (max-width:1100px) 50vw, 33vw"
+                formats={['avif', 'webp']} loading="lazy" decoding="async" class="card__img" />
+            </div>
+            <div class="card__body">
+              <span class="card__cat">{catLabel[p.data.category ?? ''] ?? p.data.services[0]}</span>
+              <h2 class="card__t">{p.data.title}</h2>
+              <p class="card__c">{p.data.client}</p>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .ph{padding:var(--space-l) 0 var(--space-m)}
+  .ph__t{font-size:var(--step-5);line-height:1.02}
+  .ph__s{margin:.75rem 0 0;max-width:48ch;color:var(--body);font-size:var(--step-1)}
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:var(--space-m)}
+  .chip{font-family:var(--f-head);font-weight:600;font-size:var(--step--1);padding:9px 16px;border-radius:999px;
+    border:1px solid var(--line);background:#fff;color:var(--body);cursor:pointer;transition:.2s var(--ease)}
+  .chip:hover{border-color:var(--ink);color:var(--ink)}
+  .chip.is-on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-s)}
+  .card{border-radius:var(--r);overflow:hidden;background:var(--soft);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .card[hidden]{display:none}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(20,23,28,.35)}
+  .card__media{aspect-ratio:4/3;overflow:hidden;background:#e9ebee}
+  .card :global(.card__img){width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+  .card:hover :global(.card__img){transform:scale(1.04)}
+  .card__body{padding:16px 18px 20px}
+  .card__cat{display:inline-block;font-family:var(--f-head);font-weight:700;font-size:12px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--accent)}
+  .card__t{margin:.4rem 0 .2rem;font-size:var(--step-1);line-height:1.15}
+  .card__c{margin:0;color:var(--dim);font-size:var(--step--1)}
+  @media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}}
+</style>
+
+<script>
+  function initFilters() {
+    const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
+    const cards = document.querySelectorAll<HTMLLIElement>('#grid .card');
+    if (!chips.length) return;
+    chips.forEach((chip) => {
+      if (chip.dataset.ready) return;
+      chip.dataset.ready = '1';
+      chip.addEventListener('click', () => {
+        const cat = chip.dataset.cat;
+        chips.forEach((c) => { c.classList.toggle('is-on', c === chip); c.setAttribute('aria-pressed', String(c === chip)); });
+        cards.forEach((card) => { card.hidden = cat !== 'all' && card.dataset.cat !== cat; });
+      });
+    });
+  }
+  initFilters();
+  document.addEventListener('astro:page-load', initFilters);
+</script>

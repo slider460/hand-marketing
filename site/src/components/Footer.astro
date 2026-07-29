@@ -1,0 +1,39 @@
+---
+import { site } from '../config/site';
+const year = new Date().getFullYear();
+---
+<footer class="ft">
+  <div class="wrap ft__in">
+    <div class="ft__brand">
+      <b>{site.brand.toUpperCase()}</b>
+      <p>{site.tagline} · с {site.founded}</p>
+    </div>
+    <nav class="ft__nav" aria-label="Подвал">
+      {site.nav.map((i) => <a href={i.href}>{i.label}</a>)}
+    </nav>
+    <div class="ft__contacts">
+      <a href={site.phoneHref}>{site.phone}</a>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <span>{site.address.locality}, {site.address.street}</span>
+    </div>
+  </div>
+  <div class="wrap ft__legal">
+    <span>© {year} {site.legalName}</span>
+    <a href="/privacy">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<style>
+  .ft{margin-top:var(--space-xl);background:var(--ink);color:#fff;padding:var(--space-l) 0 var(--space-m)}
+  .ft__in{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:var(--space-m);align-items:start}
+  .ft__brand b{font-family:var(--f-head);font-weight:800;font-size:18px;letter-spacing:.04em}
+  .ft__brand p{margin:.5rem 0 0;color:#aab0b8;font-size:var(--step--1)}
+  .ft__nav{display:flex;flex-direction:column;gap:10px}
+  .ft__nav a{color:#cfd3d9}.ft__nav a:hover{color:#fff}
+  .ft__contacts{display:flex;flex-direction:column;gap:10px;color:#cfd3d9}
+  .ft__contacts a:hover{color:#fff}
+  .ft__legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:var(--space-m);
+    padding-top:var(--space-s);border-top:1px solid rgba(255,255,255,.12);color:#8a909a;font-size:var(--step--1)}
+  .ft__legal a:hover{color:#fff}
+  @media(max-width:760px){.ft__in{grid-template-columns:1fr;gap:var(--space-s)}}
+</style>

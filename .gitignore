@@ -18,3 +18,10 @@ site/.astro
 mirror/media
 # исходники видео — 2 ГБ, на бой заливаются вручную по VIDEO-UPLOAD.md
 media/
+
+# тяжёлые рабочие каталоги: в git не кладём, на прод они не едут
+# (CI синкает только mirror/** и public/assets/**)
+scripts/deploytree/
+media-optimized/
+showreel-draft/*.mp4
+site/src/assets/

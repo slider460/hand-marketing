@@ -1,0 +1,114 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Picture } from 'astro:assets';
+
+export const getStaticPaths = (async () => {
+  const projects = await getCollection('projects');
+  return projects.map((p) => ({ params: { slug: p.id }, props: { project: p } }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+
+const catLabel: Record<string, string> = {
+  event: 'Event', creative: 'Creative & Design', video: 'Video Production',
+  digital: 'Digital', '3dmapping': '3D Mapping',
+};
+
+// «Ещё проекты» — той же категории, до 3 шт.
+const more = (await getCollection('projects'))
+  .filter((p) => p.id !== project.id && p.data.category === data.category)
+  .slice(0, 3);
+
+const seoTitle = data.seo?.title ?? `${data.title} — Hand Marketing`;
+const seoDesc = data.seo?.description ?? data.summary;
+---
+<Base title={seoTitle} description={seoDesc}>
+  <Header />
+  <main>
+    <article>
+      <header class="hero wrap" style={`--accent:${data.accent}`}>
+        <p class="hero__cat">{catLabel[data.category ?? ''] ?? data.services.join(' · ')}</p>
+        <h1 class="hero__t">{data.title}</h1>
+        <p class="hero__c">{data.client}</p>
+        <p class="hero__s">{data.summary}</p>
+      </header>
+
+      <div class="cover wrap">
+        <Picture src={data.cover} alt={data.coverAlt}
+          widths={[640, 960, 1280, 1600]} sizes="(max-width:1240px) 100vw, 1200px"
+          formats={['avif', 'webp']} loading="eager" decoding="sync" fetchpriority="high" class="cover__img" />
+      </div>
+
+      <div class="body wrap">
+        <Content />
+      </div>
+
+      {data.gallery.length > 0 && (
+        <div class="gallery wrap">
+          {data.gallery.map((g) => (
+            <figure class="gallery__i reveal">
+              <Picture src={g.src} alt={g.alt}
+                widths={[480, 768, 1100]} sizes="(max-width:760px) 100vw, 50vw"
+                formats={['avif', 'webp']} loading="lazy" decoding="async" />
+            </figure>
+          ))}
+        </div>
+      )}
+    </article>
+
+    {more.length > 0 && (
+      <section class="more wrap">
+        <h2 class="more__t">Ещё проекты</h2>
+        <ul class="more__grid">
+          {more.map((p) => (
+            <li class="more__card" style={`--accent:${p.data.accent}`}>
+              <a href={`/project/${p.id}`}>
+                <Picture src={p.data.cover} alt={p.data.coverAlt}
+                  widths={[400, 640]} sizes="(max-width:760px) 100vw, 33vw"
+                  formats={['avif', 'webp']} loading="lazy" decoding="async" class="more__img" />
+                <span class="more__cat">{catLabel[p.data.category ?? ''] ?? ''}</span>
+                <span class="more__name">{p.data.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <div class="wrap back"><a href="/project" class="back__link">← Все проекты</a></div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .hero{padding:var(--space-l) 0 var(--space-m);max-width:980px}
+  .hero__cat{font-family:var(--f-head);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin:0}
+  .hero__t{margin:.6rem 0 .3rem;font-size:var(--step-5);line-height:1.02}
+  .hero__c{margin:0;color:var(--dim);font-size:var(--step-1)}
+  .hero__s{margin:1.2rem 0 0;font-size:var(--step-1);color:var(--body)}
+  .cover{margin-bottom:var(--space-m)}
+  .cover :global(.cover__img){width:100%;border-radius:var(--r);aspect-ratio:16/9;object-fit:cover;background:#e9ebee}
+  .body{max-width:760px}
+  .body :global(p){margin:0 0 1.2em;font-size:var(--step-0);line-height:1.7}
+  .gallery{margin-top:var(--space-m);display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-s)}
+  .gallery__i{margin:0}
+  .gallery__i :global(img){width:100%;border-radius:var(--r);object-fit:cover}
+  .more{margin-top:var(--space-l)}
+  .more__t{font-size:var(--step-3);margin-bottom:var(--space-s)}
+  .more__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-s)}
+  .more__card{border-radius:var(--r);overflow:hidden;background:var(--soft)}
+  .more__card a{display:block}
+  .more__card :global(.more__img){width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .4s var(--ease)}
+  .more__card:hover :global(.more__img){transform:scale(1.05)}
+  .more__cat{display:block;padding:12px 14px 0;font-family:var(--f-head);font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+  .more__name{display:block;padding:2px 14px 14px;font-family:var(--f-head);color:var(--ink);font-size:var(--step-0)}
+  .back{margin-top:var(--space-m)}
+  .back__link{font-family:var(--f-head);font-weight:600;color:var(--ink)}
+  @media(max-width:760px){.gallery,.more__grid{grid-template-columns:1fr}}
+</style>

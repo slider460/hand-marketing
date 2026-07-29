@@ -1,0 +1,61 @@
+---
+/**
+ * Видео по «фасадному» паттерну: до клика грузится только постер (≈ КБ),
+ * сам ролик подгружается по требованию. Никакого autoplay.
+ * При остановке/закрытии воспроизведение прекращается.
+ */
+interface Props {
+  src: string;          // /media/<имя>.mp4
+  poster: string;
+  title: string;
+  class?: string;
+}
+const { src, poster, title, class: className } = Astro.props;
+---
+<div class:list={['lazyvideo', className]} data-lazyvideo>
+  <button type="button" class="lazyvideo__btn" aria-label={`Смотреть видео: ${title}`}>
+    <img src={poster} alt="" width="1280" height="720" loading="lazy" decoding="async" />
+    <span class="lazyvideo__play" aria-hidden="true"></span>
+  </button>
+  <template data-src={src}>
+    <video controls playsinline preload="none" poster={poster} aria-label={title}>
+      <source src={src} type="video/mp4" />
+    </video>
+  </template>
+</div>
+
+<style>
+  .lazyvideo{position:relative;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:#000}
+  .lazyvideo__btn{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:none}
+  .lazyvideo__btn img{width:100%;height:100%;object-fit:cover}
+  .lazyvideo__play{position:absolute;left:50%;top:50%;width:74px;height:74px;transform:translate(-50%,-50%);
+    border-radius:50%;background:var(--yellow);transition:transform .25s var(--ease)}
+  .lazyvideo__play::after{content:"";position:absolute;left:54%;top:50%;transform:translate(-50%,-50%);
+    border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #14171C}
+  .lazyvideo__btn:hover .lazyvideo__play{transform:translate(-50%,-50%) scale(1.08)}
+  .lazyvideo video{width:100%;height:100%;object-fit:cover;display:block}
+</style>
+
+<script>
+  // делегирование: грузим <video> только по клику; повторный init безопасен (View Transitions)
+  function initLazyVideo() {
+    document.querySelectorAll<HTMLElement>('[data-lazyvideo]').forEach((box) => {
+      if (box.dataset.ready) return;
+      box.dataset.ready = '1';
+      const btn = box.querySelector('button');
+      const tpl = box.querySelector('template');
+      btn?.addEventListener('click', () => {
+        if (!tpl) return;
+        const node = tpl.content.firstElementChild!.cloneNode(true) as HTMLVideoElement;
+        btn.replaceWith(node);
+        node.play().catch(() => {});
+      });
+    });
+  }
+  initLazyVideo();
+  document.addEventListener('astro:page-load', initLazyVideo);
+  // остановка всех видео при уходе со страницы
+  document.addEventListener('astro:before-swap', () => {
+    document.querySelectorAll('video').forEach((v) => v.pause());
+  });
+</script>
