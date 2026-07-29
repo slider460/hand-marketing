@@ -80,10 +80,14 @@ MOCKUPS = {
     'as6239-6132-4132-b165-363935373165/Perfect_Binding_Broc.png': 'mock-cover.jpg',
     'as3835-3039-4365-b261-623664653866/Perfect_Binding_Broc.jpg': 'mock-what.jpg',
 }
-# на этом мокапе один и тот же буклет снят дважды: берём только нижний экземпляр,
-# иначе в сетке «В печати» рядом стоят два одинаковых разворота
-MOCK_CROP = ('as6461-3831-4133-a563-623562653239/3694567890.jpg', 'mock-life.jpg',
-             (0.19, 0.615, 0.79, 1.0))
+# на этом мокапе четыре ракурса двух разворотов: режем на два отдельных кадра,
+# иначе в сетке «В печати» один и тот же разворот стоит по два-три раза
+MOCK_CROPS = [
+    ('as6461-3831-4133-a563-623562653239/3694567890.jpg', 'mock-life.jpg',
+     (0.19, 0.615, 0.79, 1.0)),      # разворот 10-11, нижний экземпляр
+    ('as6461-3831-4133-a563-623562653239/3694567890.jpg', 'mock-numbers.jpg',
+     (0.235, 0.0, 0.775, 0.305)),    # разворот 2-3, верхний экземпляр
+]
 # у этого фон фиолетовый, перекрашиваем
 MOCK_RECOLOR = ('as3439-3865-4561-a134-373531313961/Perfect_Binding_Broc.png',
                 'mock-becar.jpg')
@@ -123,12 +127,22 @@ def recolor_mockup():
     save(im, name, 1800)
 
 
-def crop_mockup():
-    """Один буклет вместо трёх ракурсов одного и того же."""
-    src, name, (l, t, r, b) = MOCK_CROP
-    im = flatten(Image.open(os.path.join(LIB, src)))
-    w, h = im.size
-    save(im.crop((round(w * l), round(h * t), round(w * r), round(h * b))), name, 1400)
+CARD_RATIO = 4 / 3      # сетка «В печати» режет карточки под 4:3
+
+
+def crop_mockups():
+    """По одному буклету на кадр вместо повторяющихся ракурсов. Кадр добиваем полями
+    цвета фона до пропорции карточки: иначе широкий кроп обрежется по бокам и съест
+    заголовок разворота."""
+    for src, name, (l, t, r, b) in MOCK_CROPS:
+        im = flatten(Image.open(os.path.join(LIB, src)))
+        w, h = im.size
+        cut = im.crop((round(w * l), round(h * t), round(w * r), round(h * b)))
+        cw, ch = cut.size
+        box = (cw, max(ch, round(cw / CARD_RATIO)))
+        canvas = Image.new('RGB', box, im.getpixel((4, 4)))
+        canvas.paste(cut, (0, (box[1] - ch) // 2))
+        save(canvas, name, 1400)
 
 
 def brief():
@@ -151,5 +165,5 @@ if __name__ == '__main__':
     print('мокапы:')
     mockups()
     recolor_mockup()
-    crop_mockup()
+    crop_mockups()
     print('готово →', DST)
