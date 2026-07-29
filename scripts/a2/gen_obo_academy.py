@@ -31,7 +31,7 @@ MEDIA = '/media'
 # ─── данные роликов ──────────────────────────────────────────────────────────
 FLAGSHIP = dict(slug='obo-point', title='ОБО Поинт', dur='5:06',
     cap='Обзорный фильм серии: Сергей Шаталов проводит по продуктовому миру OBO '
-        'Bettermann прямо в шоу-руме Академии — три направления и логика '
+        'Bettermann прямо в шоу-руме Академии. Три направления и логика '
         'ассортимента в одном ролике.')
 
 # главы каталога: (римская, ключ-иконка, латиница, название, вводка, [ролики])
@@ -310,11 +310,11 @@ html.no-js .obo-r{opacity:1;transform:none}
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Серия продуктовых роликов для OBO Bettermann — съёмка в Академии | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: серия из 10 продуктовых видеороликов для OBO Bettermann. Съёмка в Академии OBO, ведущий — Сергей Шаталов. Три направления: индустриальные инсталляции, инсталляции зданий, защита. Сценарий, студийная съёмка, макросъёмка, 3D-инфографика, монтаж.">
+<title>Серия продуктовых роликов для OBO Bettermann: съёмка в Академии | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: серия из 10 продуктовых видеороликов для OBO Bettermann. Съёмка в Академии OBO, ведущий Сергей Шаталов. Три направления: индустриальные инсталляции, инсталляции зданий, защита. Сценарий, студийная съёмка, макросъёмка, 3D-инфографика, монтаж.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/portfolio/obo-academy/">
-<meta property="og:type" content="article"><meta property="og:title" content="Серия продуктовых роликов для OBO Bettermann — кейс Hand Marketing">
+<meta property="og:type" content="article"><meta property="og:title" content="Серия продуктовых роликов для OBO Bettermann | кейс Hand Marketing">
 <meta property="og:description" content="10 видеороликов о продукции OBO Bettermann, снятых в Академии OBO с ведущим специалистом Сергеем Шаталовым.">
 <meta property="og:url" content="https://hand-marketing.ru/portfolio/obo-academy/">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/poster-obo-point.jpg">
@@ -352,11 +352,11 @@ def hero():
       '<span class="obo-hero__slogan">Building Connections</span></div>'
       '<p class="obo-mono obo-anim" style="animation-delay:.05s;color:#5a3d05">'
       'Видеопродакшн · Академия OBO Bettermann</p>'
-      '<h1 class="obo-anim" style="animation-delay:.12s">Продуктовая линейка&nbsp;OBO — по деталям</h1>'
+      '<h1 class="obo-anim" style="animation-delay:.12s">Продуктовая линейка&nbsp;OBO по деталям</h1>'
       '<p class="obo-hero__sub obo-anim" style="animation-delay:.22s">Серия из десяти роликов, '
       'снятых в шоу-руме Академии OBO. Ведущий специалист по техническому обучению '
-      'Сергей Шаталов разбирает каждый продукт — назначение, устройство и монтаж по шагам. '
-      'Это короткие мастер-классы, а не рекламные споты.</p>'
+      'Сергей Шаталов разбирает каждый продукт: назначение, устройство и монтаж по шагам. '
+      'По формату это короткие мастер-классы.</p>'
       '<div class="obo-hero__spec obo-mono obo-anim" style="animation-delay:.32s">'
       '<span>10 роликов</span><span>3 направления</span><span>Съёмка в Академии OBO</span>'
       '<span>Ведущий: С. Шаталов</span></div>'
@@ -387,10 +387,10 @@ def company():
       '<div class="obo-about__body"><span class="obo-mono">Клиент проекта</span>'
       '<h2>OBO Bettermann</h2>'
       '<p>Немецкий производитель систем для монтажа электротехники. Компания основана '
-      'в 1911 году в Мендене и уже более века остаётся семейным предприятием. В портфеле — '
+      'в 1911 году в Мендене и уже более века остаётся семейным предприятием. В портфеле '
       'кабеленесущие системы, крепёж и соединение, распределительные коробки, напольные '
       'и настенные системы, заземление и молниезащита. Весь ассортимент разложен по трём '
-      'направлениям — они же задают структуру этой серии роликов.</p>'
+      'направлениям, они же задают структуру этой серии роликов.</p>'
       f'<dl class="obo-spec">{rows}</dl></div>'
       '</div></div></section>')
 
@@ -398,13 +398,13 @@ def company():
 def intro():
     return (
       '<section class="obo-intro"><div class="obo-w obo-intro__grid">'
-      '<div class="obo-r"><h2>Продукцию сняли там, где ей учат — '
+      '<div class="obo-r"><h2>Продукцию сняли там, где ей учат: '
       'в&nbsp;<em>Академии&nbsp;OBO</em></h2></div>'
       '<div class="obo-intro__lede obo-r">'
-      '<p>У OBO Bettermann есть собственная <b>Академия</b> — учебный центр '
+      '<p>У OBO Bettermann есть собственная <b>Академия</b>, учебный центр '
       'с шоу-румом реальных решений и смонтированных систем. Мы сняли серию '
       'прямо в этом пространстве.</p>'
-      '<p>Для каждой позиции — свой сценарий, '
+      '<p>У каждой позиции свой сценарий, '
       'предметная макросъёмка деталей и 3D-инфографика с выносками. Всё в фирменном '
       'стиле OBO: <b>оранжевый и графит</b>, единые заставки и титры.</p>'
       '<div class="obo-credit"><span class="obo-credit__ava">СШ</span>'
@@ -466,7 +466,7 @@ def process():
                     for n, t, d in steps)
     return ('<section class="obo-proc"><div class="obo-w">'
             '<div class="obo-proc__hd obo-r"><span class="obo-mono">Производство</span>'
-            '<h2>Полный цикл — от сценария до пэкшота</h2>'
+            '<h2>Полный цикл: от сценария до пэкшота</h2>'
             '<p>Мы отвечали за всё, кроме экспертизы: её принёс сам OBO.</p></div>'
             f'<div class="obo-line" data-line><div class="obo-line__rail"></div>'
             f'<div class="obo-line__fill"></div><div class="obo-steps">{cells}</div></div>'
@@ -477,8 +477,8 @@ def outro():
     arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
     return ('<section class="obo-outro"><div class="obo-w obo-outro__in">'
             '<div class="obo-r"><h2>Снимем серию роликов о вашей продукции</h2>'
-            '<p>Экспертный обзор, предметная съёмка и инфографика в вашем фирменном стиле — под ключ.</p>'
-            '<div class="obo-outro__more">Ещё о видеопродакшне — '
+            '<p>Экспертный обзор, предметная съёмка и инфографика в вашем фирменном стиле, под ключ.</p>'
+            '<div class="obo-outro__more">Ещё о видеопродакшне: '
             '<a href="/videoproduction">услуга Video Production</a></div></div>'
             f'<a class="obo-btn obo-r" href="#lead">Обсудить проект {arrow}</a>'
             '</div></section>')

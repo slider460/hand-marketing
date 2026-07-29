@@ -297,12 +297,12 @@ html.no-js .cn-r,html.no-js .cn-stag>*{opacity:1!important;transform:none!import
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Имиджевые ролики для CeramicaNova — серия из 17 фильмов по коллекциям | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: серия из 17 имиджевых видеороликов для CeramicaNova — по одному на коллекцию санфарфора. В шоуруме бренда построили съёмочную инсталляцию, художник оформил сцену, сделали замкнутый слив и подкрасили воду, чтобы показать безободковый смыв. Предметная съёмка, макро, монтаж под ключ.">
+<title>Имиджевые ролики для CeramicaNova: 17 фильмов по коллекциям | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: серия из 17 имиджевых видеороликов для CeramicaNova, по одному на коллекцию санфарфора. В шоуруме бренда построили съёмочную инсталляцию, художник оформил сцену, сделали замкнутый слив и подкрасили воду, чтобы показать безободковый смыв. Предметная съёмка, макро, монтаж под ключ.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/portfolio/ceramicanova/">
-<meta property="og:type" content="article"><meta property="og:title" content="Имиджевые ролики для CeramicaNova — кейс Hand Marketing">
-<meta property="og:description" content="17 имиджевых фильмов о коллекциях санфарфора CeramicaNova. Съёмочная инсталляция в шоуруме, замкнутый слив, подкрашенная вода — безободковый смыв в кадре.">
+<meta property="og:type" content="article"><meta property="og:title" content="Имиджевые ролики для CeramicaNova | кейс Hand Marketing">
+<meta property="og:description" content="17 имиджевых фильмов о коллекциях санфарфора CeramicaNova. Съёмочная инсталляция в шоуруме, замкнутый слив, подкрашенная вода: безободковый смыв в кадре.">
 <meta property="og:url" content="https://hand-marketing.ru/portfolio/ceramicanova/">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/poster-{FLAGSHIP}.jpg">
 <link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
@@ -316,7 +316,7 @@ HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 def feat_player():
     n, slug, name, var, dur = next(f for f in FILMS if f[1] == FLAGSHIP)
     return (f'<div class="cn-feat cn-play-trigger" role="button" tabindex="0" '
-            f'data-src="{MEDIA}/ceramicanova-{slug}.mp4" data-title="{H.escape(name)} — имиджевый ролик" '
+            f'data-src="{MEDIA}/ceramicanova-{slug}.mp4" data-title="{H.escape(name)}, имиджевый ролик" '
             f'aria-label="Смотреть ролик: {H.escape(name)}">'
             f'<img src="{IMG}/poster-{slug}.jpg" alt="Кадр из имиджевого ролика коллекции {H.escape(name)}: '
             f'подкрашенная вода в безободковой чаше" loading="eager">'
@@ -325,7 +325,7 @@ def feat_player():
             f'<span>Безободковый смыв · {mmss(dur)}</span></div>'
             f'<div class="cn-playbtn">{PLAY}</div>'
             f'<div class="cn-feat__b"><b>{H.escape(name)}</b>'
-            f'<span>Тонированная вода обходит всю чашу — смыв читается в кадре</span></div></div>')
+            f'<span>Тонированная вода обходит всю чашу, и смыв виден в кадре</span></div></div>')
 
 
 def hero():
@@ -335,10 +335,10 @@ def hero():
       '<div class="cn-hero__grid">'
       '<div class="cn-hero__l">'
       '<span class="cn-kick">Видеопродакшн для CeramicaNova</span>'
-      '<h1>Каждая коллекция — <em>отдельный фильм</em></h1>'
-      '<p class="cn-hero__sub">Сняли серию из семнадцати имиджевых роликов для '
-      'CeramicaNova — по одному на коллекцию санфарфора. Чистая предметная съёмка, '
-      'макро глазури и линий и безободковый смыв, показанный подкрашенной водой.</p>'
+      '<h1>Каждой коллекции <em>свой фильм</em></h1>'
+      '<p class="cn-hero__sub">Сняли для CeramicaNova семнадцать имиджевых роликов, '
+      'по одному на коллекцию санфарфора. Предметная съёмка, макро глазури и линий, '
+      'безободковый смыв на подкрашенной воде.</p>'
       '<div class="cn-hero__cta">'
       '<a class="cn-btn cn-btn--red" href="#cn-gallery">Смотреть ролики ' + PLAY + '</a>'
       '<a class="cn-btn cn-btn--ghost" href="#cn-make">Как это снято</a>'
@@ -358,18 +358,18 @@ def brief():
     return (
       '<section class="cn-brief"><div class="cn-w cn-brief__grid">'
       '<div class="cn-r"><span class="cn-kick" style="color:var(--cn-red)">О проекте</span>'
-      f'<h2 style="margin-top:14px">{MARK()} — фарфор,<br>снятый как продукт-герой</h2></div>'
+      f'<h2 style="margin-top:14px">{MARK()}:<br>фарфор как продукт-герой</h2></div>'
       '<div class="cn-brief__lede cn-r">'
-      '<p><b>CeramicaNova</b> — бренд премиального санфарфора с философией '
-      '«extraordinary every day»: безободковые унитазы, чистая геометрия и качество глазури. '
-      'Каждую коллекцию нужно было показать не как строчку в каталоге, а как самостоятельный '
-      'объект — со своим характером формы и светом.</p>'
-      '<p>Мы сделали серию имиджевых роликов: по одному фильму на коллекцию. '
-      'Единый визуальный язык на всю линейку, крупные планы фактуры и линий и — главный приём — '
-      '<b>безободковый смыв, снятый подкрашенной водой</b>, чтобы поток был виден в кадре.</p>'
+      '<p><b>CeramicaNova</b> выпускает премиальный санфарфор под слоганом '
+      '«extraordinary every day»: безободковые унитазы, чистая геометрия, плотная глазурь. '
+      'Показать коллекцию строчкой в каталоге тут мало. Каждой нужен был свой кадр, '
+      'со своим характером формы и своим светом.</p>'
+      '<p>Мы сняли по фильму на коллекцию: единый визуальный язык на всю линейку, '
+      'крупные планы фактуры и линий. Главный приём серии: '
+      '<b>безободковый смыв на подкрашенной воде</b>, поток видно прямо в кадре.</p>'
       '</div></div>'
       '<div class="cn-w"><div class="cn-facts cn-stag cn-r">'
-      '<div class="cn-fact"><b>17</b><span>имиджевых роликов — по одному на коллекцию</span></div>'
+      '<div class="cn-fact"><b>17</b><span>имиджевых роликов, по одному на коллекцию</span></div>'
       '<div class="cn-fact"><b>≈1 мин</b><span>хронометраж каждого фильма</span></div>'
       '<div class="cn-fact"><b>16:9 + 1:1</b><span>горизонталь для сайта и квадрат-обложка для соцсетей</span></div>'
       '<div class="cn-fact"><b>1 язык</b><span>единая графика и подача на всю линейку</span></div>'
@@ -380,13 +380,13 @@ def brief():
 def make():
     steps = [
         ('01', 'Инсталляция в шоуруме',
-         'Съёмочную сцену собрали прямо в пространстве бренда — с плинтом под коллекцию '
-         'и полноценным светом.'),
+         'Съёмочную сцену собрали прямо в пространстве бренда: плинт под коллекцию '
+         'и полноценный свет.'),
         ('02', 'Художник оформил сцену',
-         'Декоративная штукатурка стен, реквизит и фактуры: каждый кадр читается как '
-         'интерьер, а не как каталог.'),
+         'Декоративная штукатурка стен, реквизит и фактуры, чтобы кадр выглядел '
+         'интерьерным.'),
         ('03', 'Система замкнутого слива',
-         'Организовали оборотную подачу воды — смыв можно было гонять дубль за дублем '
+         'Организовали оборотную подачу воды: смыв гоняли дубль за дублем '
          'без подключения к канализации.'),
         ('04', 'Подкрашенная вода',
          'Воду тонировали, чтобы безободковый смыв был виден: поток обходит всю чашу '
@@ -398,17 +398,17 @@ def make():
     return (
       '<section class="cn-make" id="cn-make"><div class="cn-w">'
       '<div class="cn-make__hd cn-r"><span class="cn-kick" style="color:var(--cn-red)">Как это снято</span>'
-      '<h2>Съёмочную сцену построили под смыв — а не наоборот</h2>'
-      '<p>Главная сложность имиджевого ролика про сантехнику — показать смыв красиво и '
-      'повторяемо. Мы решили её на площадке: инсталляция, замкнутая вода и её тонировка.</p></div>'
+      '<h2>Съёмочную сцену построили под смыв</h2>'
+      '<p>Сложность имиджевого ролика про сантехнику в том, чтобы показать смыв красиво и '
+      'повторяемо. Мы решили это на площадке: инсталляция, замкнутая вода и её тонировка.</p></div>'
       f'<figure class="cn-make__lead cn-r"><img src="{IMG}/backstage-set.jpg" '
       'alt="Съёмочная инсталляция CeramicaNova в шоуруме: коллекция на плинте у декоративной '
       'стены, свет и слайдер" loading="lazy">'
-      '<figcaption>Съёмочная инсталляция в шоуруме бренда: художник оформил сцену, коллекция — на плинте под светом</figcaption></figure>'
+      '<figcaption>Съёмочная инсталляция в шоуруме бренда: художник оформил сцену, коллекция стоит на плинте под светом</figcaption></figure>'
       '<div class="cn-make__row cn-r">'
       f'<figure class="cn-make__ph"><img src="{IMG}/backstage-water.jpg" '
       'alt="Подкрашенная вода поднимается в безободковой чаше во время съёмки смыва" loading="lazy">'
-      '<figcaption>Подкрашенная вода — безободковый смыв читается в кадре</figcaption></figure>'
+      '<figcaption>Подкрашенная вода: безободковый смыв виден в кадре</figcaption></figure>'
       f'<figure class="cn-make__ph"><img src="{IMG}/backstage-rig.jpg" '
       'alt="Оператор Hand Marketing на слайдере снимает коллекцию CeramicaNova в шоуруме" loading="lazy">'
       '<figcaption>Слайдер и макро: предметная съёмка каждой коллекции</figcaption></figure>'
@@ -437,7 +437,7 @@ def gallery():
     return (
       '<section class="cn-gal" id="cn-gallery"><div class="cn-w">'
       '<div class="cn-gal__hd cn-r"><div><span class="cn-kick">Галерея серии</span>'
-      '<h2 style="margin-top:12px">17 фильмов — вся линейка</h2></div>'
+      '<h2 style="margin-top:12px">17 фильмов, вся линейка</h2></div>'
       '<p class="cn-gal__hint">Кликните по коллекции, чтобы посмотреть её имиджевый ролик целиком.</p></div>'
       f'<div class="cn-grid cn-stag cn-r">{tiles}</div>'
       '</div></section>')
@@ -445,12 +445,12 @@ def gallery():
 
 def result():
     items = [
-        ('17', '<b>17 готовых имиджевых роликов</b> — по одному на каждую коллекцию '
+        ('17', '<b>17 готовых имиджевых роликов</b>, по одному на каждую коллекцию '
          'санфарфора, в едином визуальном языке.'),
         ('16:9', 'Горизонтальные версии <b>для сайта и карточек товара</b> плюс квадратные '
          'обложки 1:1 <b>для соцсетей</b> и маркетплейсов.'),
         ('∞', 'Отработанная <b>съёмочная схема со смывом</b>: инсталляция, замкнутая вода и '
-         'её тонировка — задел под любые новые коллекции бренда.'),
+         'её тонировка. Схему можно повторить на новых коллекциях.'),
     ]
     lis = ''.join(f'<li><span class="cn-num">{k}</span><span>{v}</span></li>' for k, v in items)
     return (
@@ -465,9 +465,9 @@ def outro():
     return (
       '<section class="cn-outro"><div class="cn-w cn-outro__in">'
       '<div class="cn-r"><h2>Снимем имиджевые ролики о вашем продукте</h2>'
-      '<p>Предметная съёмка, макро и продуманная площадка под сложные кадры — под ключ, '
+      '<p>Предметная съёмка, макро и площадка под сложные кадры. Под ключ, '
       'в вашем фирменном стиле.</p>'
-      '<div class="cn-outro__more">Больше о направлении — '
+      '<div class="cn-outro__more">Больше о направлении: '
       '<a href="/videoproduction">услуга «Видеопродакшн»</a></div></div>'
       f'<div class="cn-outro__cta cn-r"><a class="cn-btn cn-btn--dark" href="#lead">'
       f'Обсудить проект {ARROW}</a></div>'
