@@ -177,4 +177,17 @@ document.addEventListener('click',function(e){
  document.getElementById('hmCookieOk').addEventListener('click',accept);
  document.getElementById('hmCookieX').addEventListener('click',accept);
  setTimeout(function(){box.classList.add('is-on');},600);
+})();</script><script id="hm-zero-res-fix">(function(){
+function fix(){
+ var tn=window.tn;
+ if(!tn||!window.t396__updateWindowDimensions||!window.t396_doResize)return;
+ var was=tn.window_width_css;
+ window.t396__updateWindowDimensions();
+ if(tn.window_width_css===was)return; // замер был верный, вёрстку не трогаем
+ Object.keys(tn).forEach(function(k){
+  if(k.indexOf('ab')!==0||k==='ab_fields'||!tn[k]||!tn[k].screens)return;
+  try{window.t396_doResize(k.slice(2),true);}catch(e){}
+ });
+}
+window.addEventListener('load',function(){fix();setTimeout(fix,300);});
 })();</script></body> </html>
