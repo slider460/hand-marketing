@@ -162,6 +162,17 @@
     "coverRemote": "https://static.tildacdn.com/tild6236-6232-4835-a636-373936353964/12345678901234567890.png"
   },
   {
+    "slug": "creative__saintgobain__calendar",
+    "route": "/creative/saintgobain/calendar",
+    "category": "creative",
+    "categoryLabel": "Creative & Design",
+    "client": "Saint-Gobain",
+    "title": "Концепция новогоднего календаря Saint-Gobain",
+    "metaTitle": "Creative_Calendar_SaintGobain",
+    "cover": "/images/lib/custom-sgcalendar/cover-main.png",
+    "coverRemote": ""
+  },
+  {
     "slug": "creative__saintgobain__suitcase",
     "route": "/creative/saintgobain/suitcase",
     "category": "creative",
