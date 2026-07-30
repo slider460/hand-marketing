@@ -43,6 +43,8 @@ METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(functi
 IMG = '/images/samsung'
 URL = 'https://hand-marketing.ru/event/samsung/'
 VIDEO = '/media/samsung-new-year-2020.mp4'
+MESH_VIDEO = '/videos/samsung-mesh-drop.mp4'   # 5 с, сброс сетки с пульта
+MAIL_VIDEO = '/videos/samsung-mailbox.mp4'     # 12 с, зона почтового ящика
 
 # ─── Галерея: alt к g-01..g-38 в порядке хода вечера ──────────────────────────
 GALLERY = [
@@ -84,6 +86,22 @@ GALLERY = [
  'Чёрно-белый кадр: гость поднял руки на танцполе',
  'Ведущая на сцене на фоне синего экрана',
  'Три гостьи в вечерних платьях на фоне проекции с цифрами 2020',
+ # съёмка с площадки: взгляд техника
+ 'Пульт в зале: лист сцен на экране медиасервера и ноутбук оператора',
+ 'Панорамная проекция зимнего леса по дуге зала, над сценой белая фигура',
+ 'Сцена и боковые полотна с проекцией леса, сверху фермы со светом',
+ 'Вид со стола на панорамную проекцию и световые фермы',
+ 'Экран с представлением президента штаб-квартиры Samsung, по краям лес на полотнах',
+ 'Общий план зала: главный экран с темой вечера и гости за столами',
+ 'Цветная графика на сцене и танцпол между столами',
+]
+
+# ─── Раскадровка сброса сетки: (файл, таймкод, подпись) ───────────────────────
+DROPFRAMES = [
+ ('drop-1.jpg', '+0,00', 'контент гаснет в белое, видно складки полотна'),
+ ('drop-2.jpg', '+0,10', 'картинки нет, портал ещё закрыт'),
+ ('drop-3.jpg', '+0,20', 'портал пустой: полотно ушло вниз'),
+ ('drop-4.jpg', '+0,57', 'сцена открыта, в дыму работает свет'),
 ]
 
 # ─── Кадры «взгляда техника»: подписи по оборудованию ─────────────────────────
@@ -163,6 +181,11 @@ BEATS = [
   'светильниками контраст падает, поэтому яркость и глубину чёрного в контенте '
   'подбирают под конкретную зону.',
   'Настройка проекции на стену холла: на поверхности видна надпись 50 years of experience'),
+ ('foh.jpg', 'Пульт', 'Один лист сцен на весь вечер',
+  'Рабочее место оператора в зале: на экране лист сцен, рядом ноутбук. Панорама, сетка '
+  'над сценой и зона почтового ящика запускаются отсюда, поэтому картинки не расходятся '
+  'между собой.',
+  'Пульт в зале: лист сцен на экране медиасервера и ноутбук оператора'),
  ('welcome.jpg', 'Встреча', 'Гостей встречали снежки',
   'Первый кадр вечера, который видит гость: белые персонажи у входа. Дальше '
   'фотозона, оркестр в таких же костюмах и лестница в зал.',
@@ -553,28 +576,43 @@ PAGE_CSS = """<style id="sm-css">
 .sm-mesh h2{font-size:clamp(28px,3.8vw,50px);max-width:22ch;margin-top:16px}
 .sm-mesh__grid{display:grid;grid-template-columns:1.24fr .76fr;gap:clamp(24px,3.4vw,48px);
  margin-top:clamp(26px,3.2vw,44px);align-items:center}
-.sm-stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--sm-line);
- background:#05080F}
-.sm-stage img{display:block;width:100%;height:auto}
-/* полотно нарисовано поверх кадра: сетка плюс лёгкая дымка, как у настоящей гардины,
-   поэтому при сбросе картинка под ней становится чище */
-.sm-veil{position:absolute;left:7%;right:7%;top:13%;bottom:32%;
- background-image:linear-gradient(rgba(143,211,255,.26) 1px,transparent 1px),
- linear-gradient(90deg,rgba(143,211,255,.26) 1px,transparent 1px);
- background-size:15px 15px;border:1px solid rgba(143,211,255,.45);
- background-color:rgba(120,170,255,.07);
- -webkit-backdrop-filter:blur(1.4px) saturate(.9);backdrop-filter:blur(1.4px) saturate(.9);
- box-shadow:inset 0 0 60px rgba(76,141,255,.22);
- transition:transform 1.15s cubic-bezier(.5,.02,.6,.55),opacity 1.15s}
-.sm-veil__tag{position:absolute;left:0;top:-1px;transform:translateY(-100%);
- font-family:var(--sm-mf);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
- padding:5px 9px;border-radius:6px 6px 0 0;background:rgba(76,141,255,.85);color:#04102B}
-.sm-stage.is-down .sm-veil{transform:translateY(102%);opacity:0}
-.sm-stage__state{position:absolute;right:14px;top:14px;font-family:var(--sm-mf);font-size:11px;
- letter-spacing:.1em;padding:6px 11px;border-radius:6px;background:rgba(4,8,18,.78);
+/* ── плеер сброса сетки: реальное видео вместо схемы ── */
+.sm-play{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--sm-line);
+ background:#05080F;box-shadow:0 40px 90px -60px rgba(0,0,0,.9)}
+.sm-play video{display:block;width:100%;height:auto}
+.sm-play::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+ background:radial-gradient(70% 60% at 50% 50%,rgba(4,8,18,.2),rgba(4,8,18,.62));
+ transition:opacity .4s}
+.sm-play.is-playing::after{opacity:0}
+.sm-play__btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;
+ transition:opacity .3s,transform .2s}
+.sm-play__btn:hover{transform:translate(-50%,-50%) translateY(-2px)}
+.sm-play.is-playing .sm-play__btn{opacity:0;pointer-events:none}
+.sm-play__state{position:absolute;right:14px;top:14px;z-index:3;font-size:11px;
+ letter-spacing:.08em;padding:6px 11px;border-radius:6px;background:rgba(4,8,18,.78);
  color:#CFE0FF;border:1px solid var(--sm-line)}
-.sm-mesh__ctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
-.sm-mesh__log{font-family:var(--sm-mf);font-size:11.5px;color:var(--sm-mute)}
+.sm-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px);
+ margin-top:clamp(22px,2.6vw,34px)}
+.sm-strip figure{margin:0}
+.sm-strip img{display:block;width:100%;height:auto;border-radius:10px;
+ border:1px solid var(--sm-line)}
+.sm-strip figcaption{margin-top:9px;font-family:var(--sm-mf);font-size:10.5px;line-height:1.55;
+ color:var(--sm-mute)}
+.sm-strip b{display:block;color:var(--sm-ice);font-weight:500;margin-bottom:3px}
+/* ── доказательство по зоне ящика: вертикальный клип с площадки ── */
+.sm-proof{display:grid;grid-template-columns:clamp(220px,24vw,300px) 1fr;
+ gap:clamp(20px,2.6vw,36px);align-items:center;margin-top:clamp(26px,3.2vw,44px);
+ padding-top:clamp(24px,3vw,38px);border-top:1px solid var(--sm-line)}
+.sm-proof figure{margin:0}
+.sm-proof video{display:block;width:100%;height:auto;border-radius:14px;
+ border:1px solid var(--sm-line);background:#000}
+.sm-proof h3{font-size:clamp(19px,2vw,25px);margin-top:14px}
+.sm-proof p{color:#C4D2EC}
+.sm-foh{margin:18px 0 0}
+.sm-foh img{display:block;width:100%;height:auto;border-radius:14px;
+ border:1px solid var(--sm-line)}
+.sm-foh figcaption{margin-top:9px;font-family:var(--sm-mf);font-size:10.5px;line-height:1.55;
+ color:var(--sm-mute)}
 
 /* ── ВЕЧЕР ПО ШАГАМ ── */
 .sm-run{padding:clamp(56px,7vw,100px) 0;background:var(--sm-ink);overflow:hidden}
@@ -698,6 +736,8 @@ PAGE_CSS = """<style id="sm-css">
  .sm-fields{border-right:0;border-bottom:1px solid var(--sm-line)}
  .sm-plan .dim{display:none}
  .sm-lux{grid-template-columns:1fr}
+ .sm-proof{grid-template-columns:1fr}
+ .sm-proof figure{max-width:320px}
 }
 @media(max-width:640px){
  .sm{font-size:16px}
@@ -714,6 +754,7 @@ PAGE_CSS = """<style id="sm-css">
  .sm-mail__ph{grid-template-columns:1fr}
  .sm-grid{columns:2;column-gap:8px}
  .sm-cell{margin-bottom:8px}
+ .sm-strip{grid-template-columns:1fr 1fr}
  .sm-beat{flex:0 0 88vw}
  .sm-res__list li{grid-template-columns:1fr;gap:6px}
  .sm-lb__nav--p{left:-2px}.sm-lb__nav--n{right:-2px}
@@ -722,7 +763,7 @@ PAGE_CSS = """<style id="sm-css">
  .sm-r{opacity:1;transform:none;transition:none}
  .sm-map .flow{animation:none}
  .sm-wall__flake{animation:none;opacity:.5}
- .sm-veil{transition:none}
+ .sm-play::after{transition:none}
  .sm-cell:hover img{transform:none}
 }
 </style>"""
@@ -791,10 +832,10 @@ def brief():
 
 def scenes():
     tiles = [
-      ('a', 'hall2.jpg', 1400, 933, 'Зимний лес',
+      ('a', 'pano-1.jpg', 1600, 1200, 'Зимний лес',
        'Панорамные полотна по дуге зала и балкона держат сюжет весь вечер: лес, '
        'белки и зайцы, Дед Мороз на санях.',
-       'Зал вечера: наклонное полотно над столами и панорамные экраны с проекцией'),
+       'Панорамная проекция зимнего леса по дуге зала, над сценой белая фигура'),
       ('b', 'deer.jpg', 980, 1469, 'Олени',
        'Золотые фигуры стоят прямо в проекции, поэтому свет и графика работают вместе.',
        'Золотые фигуры оленей на фоне проекции с блёстками и логотипом Samsung'),
@@ -1066,11 +1107,18 @@ def flow():
       f'{wires}{flows}{nds}'
       '<text class="cap" x="262" y="376">датчик единственный вход в системе</text>'
       '</svg>'
-      '<div class="sm-say" id="sm-say"><b>Медиасервер</b><span>Держит все сцены и раздаёт '
+      '<div><div class="sm-say" id="sm-say"><b>Медиасервер</b><span>Держит все сцены и раздаёт '
       'их по каналам. Один и тот же сервер отвечает и за панорамные полотна, и за сетку '
       'над сценой, и за зону почтового ящика, поэтому картинки не расходятся между '
       'собой.</span></div>'
       f'<ul class="sm-chain">{chain}</ul>'
+      '<figure class="sm-foh">'
+      f'<img src="{IMG}/foh.jpg" width="1600" height="1200" '
+      'alt="Пульт в зале: лист сцен на экране медиасервера и ноутбук оператора" '
+      'loading="lazy" decoding="async">'
+      '<figcaption>Пульт в зале: слева лист сцен на экране медиасервера, справа ноутбук '
+      'оператора. Отсюда весь вечер запускались панорама, сетка и зона ящика.</figcaption>'
+      '</figure></div>'
       '</div></div></section>')
 
 
@@ -1218,39 +1266,64 @@ def mail():
       'снизу, кабель до сервера в декорации</div></div>'
       '</div></div></div>'
       '<p class="sm-note">Тайминги в логе и пять заставок в этом блоке наши, для '
-      'демонстрации порядка событий. В зоне работала та же логика: открытка в ящике, '
-      'сигнал датчика, новая картинка на стене.</p>'
-      '</div></div></div></section>')
+      'демонстрации порядка событий. Как это выглядело в зоне, видно на видео ниже.</p>'
+      '</div></div>'
+      '<div class="sm-proof sm-r">'
+      '<figure>'
+      f'<video controls muted playsinline preload="none" poster="{IMG}/mailbox-poster.jpg" '
+      'width="620" height="1102" '
+      'aria-label="Видео зоны почтового ящика: открытка уходит внутрь, на стене '
+      'меняется проекция">'
+      f'<source src="{MAIL_VIDEO}" type="video/mp4"></video></figure>'
+      '<div><span class="sm-kick">Кадр с площадки</span>'
+      '<h3>Зона в работе</h3>'
+      '<p>На видео вся механика подряд: на стене идёт приветствие почты Деда Мороза, '
+      'Снегурочка опускает открытку в ящик, и проекция уходит в новогоднюю графику '
+      'с искрами и надписью «С Новым годом!».</p>'
+      '<p class="sm-note">Снято на площадке, вертикальный кадр. Проектор в этот момент '
+      'работает из короба под ящиком, его в кадре не видно.</p></div>'
+      '</div>'
+      '</div></section>')
 
 
 def mesh():
+    strip = ''.join(
+      f'<figure><img src="{IMG}/{f}" width="1152" height="572" '
+      f'alt="Кадр сброса сетки, {tc} секунды: {H.escape(cap)}" loading="lazy" '
+      f'decoding="async"><figcaption><b>{tc} с</b>{cap}</figcaption></figure>'
+      for f, tc, cap in DROPFRAMES)
     return (
       '<section class="sm-mesh"><div class="sm-w">'
-      '<div class="sm-r" style="max-width:74ch"><span class="sm-kick">Живой блок</span>'
+      '<div class="sm-r" style="max-width:74ch"><span class="sm-kick">Видео с пульта</span>'
       '<h2>Сетка над сценой и автоматический сброс</h2></div>'
       '<div class="sm-mesh__grid">'
-      '<div class="sm-r"><div class="sm-stage" id="sm-stage">'
-      f'<img src="{IMG}/mesh.jpg" width="1600" height="1067" '
-      'alt="Логотип Samsung на проекционной сетке над сценой, артисты работают за полотном" '
-      'loading="lazy" decoding="async">'
-      '<span class="sm-veil"><span class="sm-veil__tag">проекционная сетка</span></span>'
-      '<span class="sm-stage__state" id="sm-stage-state">полотно в рабочем положении</span>'
-      '</div>'
-      '<div class="sm-mesh__ctrl">'
-      '<button class="sm-btn sm-btn--f" type="button" id="sm-drop">Сбросить сетку</button>'
-      '<span class="sm-mesh__log" id="sm-drop-log">картинка идёт по полотну перед '
-      'артистами</span>'
-      '</div></div>'
+      '<div class="sm-r"><div class="sm-play" id="sm-play">'
+      f'<video id="sm-mesh-vid" poster="{IMG}/drop-before.jpg" muted playsinline '
+      'preload="none" width="1280" height="720" '
+      'aria-label="Видео: сброс проекционной сетки над сценой, съёмка с пульта">'
+      f'<source src="{MESH_VIDEO}" type="video/mp4"></video>'
+      '<button class="sm-play__btn sm-btn sm-btn--f" type="button" id="sm-play-btn">'
+      'Сбросить сетку</button>'
+      '<span class="sm-play__state sm-mono" id="sm-play-state">полотно в рабочем '
+      'положении</span></div>'
+      '<p class="sm-note">Съёмка с пульта: на переднем плане экран медиасервера, '
+      'за ним портал сцены. Полотно сбрасывают по сигналу, дальше номер идёт '
+      'на открытой сцене.</p></div>'
       '<div class="sm-r"><p>Проекционная сетка это полупрозрачное полотно на всю ширину '
       'портала. Пока на неё идёт картинка, графика висит в воздухе перед артистами, '
-      'а самих артистов почти не видно. На фотографии так появился логотип: он не на '
-      'экране позади сцены, а прямо перед номером.</p>'
-      '<p>Система автоматического сброса снимает полотно по сигналу за секунды. Номер '
-      'не приходится останавливать: графика заканчивается, сетка уходит вниз, сцена '
-      'открывается целиком. Обратный подъём готовят между номерами.</p>'
-      '<p class="sm-note">Сетка на кадре нарисована поверх фотографии: так видно, какую '
-      'плоскость она закрывает и куда уходит при сбросе.</p></div>'
-      '</div></div></section>')
+      'а самих артистов почти не видно. Логотип Samsung на кадрах вечера появляется '
+      'именно так: не на экране позади сцены, а прямо перед номером.</p>'
+      '<p>Система автоматического сброса снимает полотно за доли секунды. Номер не '
+      'приходится останавливать: картинка гаснет, полотно уходит вниз, сцена '
+      'открывается целиком, и следом включается графика на экране за артистами.</p>'
+      '<p>Обратный подъём готовят между номерами, поэтому сетку можно использовать '
+      'несколько раз за вечер.</p></div>'
+      '</div>'
+      f'<div class="sm-strip sm-r">{strip}</div>'
+      '<p class="sm-note">Раскадровка того же видео, отсчёт от кадра, где картинка '
+      'начинает гаснуть. От гашения до пустого портала проходит около 0,2 секунды: '
+      'на съёмке это шесть кадров.</p>'
+      '</div></section>')
 
 
 def run():
@@ -1527,17 +1600,20 @@ PAGE_JS = """<script>(function(){
    },RM?0:1000));
   });
  }
- // ── сброс сетки ──
- var drop=document.getElementById('sm-drop');
- if(drop){
-  var stage=document.getElementById('sm-stage'),st=document.getElementById('sm-stage-state'),
-      dlog=document.getElementById('sm-drop-log'),down=false;
-  drop.addEventListener('click',function(){
-   down=!down;stage.classList.toggle('is-down',down);
-   drop.textContent=down?'Поднять сетку':'Сбросить сетку';
-   st.textContent=down?'полотно сброшено':'полотно в рабочем положении';
-   dlog.textContent=down?'сброс по сигналу: дальше номер идёт на открытой сцене'
-    :'картинка идёт по полотну перед артистами';});
+ // ── плеер сброса сетки ──
+ var pl=document.getElementById('sm-play');
+ if(pl){
+  var vid=document.getElementById('sm-mesh-vid'),pb=document.getElementById('sm-play-btn'),
+      pst=document.getElementById('sm-play-state');
+  pb.addEventListener('click',function(){
+   vid.currentTime=0;pl.classList.add('is-playing');
+   pst.textContent='сброс идёт';
+   var pr=vid.play();if(pr&&pr.catch)pr.catch(function(){pl.classList.remove('is-playing');});
+  });
+  vid.addEventListener('play',function(){pl.classList.add('is-playing');});
+  vid.addEventListener('ended',function(){
+   pl.classList.remove('is-playing');pb.textContent='Показать ещё раз';
+   pst.textContent='полотно сброшено, сцена открыта';});
  }
  // ── листалка шагов ──
  var track=document.getElementById('sm-track');
