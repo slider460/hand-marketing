@@ -173,6 +173,17 @@
     "coverRemote": ""
   },
   {
+    "slug": "creative__becar__smile",
+    "route": "/creative/becar/smile",
+    "category": "creative",
+    "categoryLabel": "Creative & Design",
+    "client": "Becar Asset Management",
+    "title": "Брошюра ТЦ «Смайл»",
+    "metaTitle": "Creative_Brochure_Smile",
+    "cover": "/images/lib/custom-smile-broch/cover-main.png",
+    "coverRemote": ""
+  },
+  {
     "slug": "creative__saintgobain__calendar",
     "route": "/creative/saintgobain/calendar",
     "category": "creative",

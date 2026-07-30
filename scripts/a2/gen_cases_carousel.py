@@ -20,7 +20,8 @@ for f in glob.glob(API+'/getproductslist_*.json'):
             if g: cur['img']=g[0]['img']
         data[url]=cur
 order=json.load(open(API+'/getproductslist_689558768071.json'))['products']
-FB={'/creative/becar/knight-house':('Брошюра «Дом с рыцарем»','18 полос про апартаменты в доходном доме','Creative & Design'),
+FB={'/creative/becar/smile':('Брошюра ТЦ «Смайл»','22 полосы про доход с торговых метров','Creative & Design'),
+    '/creative/becar/knight-house':('Брошюра «Дом с рыцарем»','18 полос про апартаменты в доходном доме','Creative & Design'),
     '/creative/saintgobain/calendar':('Новогодний календарь Saint-Gobain','Концепция: иллюстрации из инструментов','Creative & Design'),
     '/portfolio/ceramicanova':('Имиджевые ролики для CeramicaNova','17 роликов по коллекциям санфарфора','Video production'),
     '/portfolio/obo-academy':('Серия роликов для OBO Bettermann','Съёмка продукции в Академии OBO','Video production'),
