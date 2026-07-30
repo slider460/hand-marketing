@@ -80,7 +80,7 @@ SHEETS = [
      'Клиент получает его чёрно-белым, в коробке рядом лежат маркеры. Это приглашение взяться '
      'за календарь до того, как начнётся год.',
      'Обложка календаря Saint-Gobain: чёрно-белый орнамент-раскраска в подарочной коробке',
-     900, 2093),
+     900, 1264),
 ]
 
 # ─── конструкции: (ключ, файл, кнопка, заголовок, текст, [(характеристика, значение)], в) ──
@@ -111,10 +111,10 @@ INKS = [
 ]
 
 PAPERS = [
-    ('sheet-card', 'Открытка', 548, 624,
+    ('sheet-card', 'Открытка', 468, 382,
      'Линейный рисунок с открытки: стопка новогодних подарочных коробок с узорами'),
-    ('sheet-cover', 'Обложка', 760, 762,
-     'Фрагмент орнамента с обложки календаря: круги, спирали и чешуя'),
+    ('sheet-cover', 'Обложка', 613, 875,
+     'Орнамент с обложки календаря: круги, спирали и чешуя'),
 ]
 
 ARROW = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
@@ -324,14 +324,16 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 /* ── ПОДАРКИ ── */
 .sg-gift{background:#f6f7f8;padding:clamp(58px,7.5vw,104px) 0}
 .sg-gift h2{font-size:clamp(26px,3.3vw,42px);margin-top:14px;max-width:18ch}
-.sg-gift__grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,3vw,40px);
+.sg-gift__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);
  align-items:end;margin-top:clamp(28px,3.6vw,44px)}
 .sg-gift p{margin:18px 0 0;font-size:clamp(15.5px,1.3vw,17.5px);color:#33374a;max-width:58ch}
 .sg-gift figure{margin:0}
-/* открытка снята вертикально и в полную ширину колонки перевешивала бы широкий
-   кадр с маркерами: ограничиваем её по высоте и прижимаем к правому краю */
-.sg-gift__grid figure:last-child img{max-height:min(52vh,470px);width:auto;margin-left:auto}
-.sg-gift__grid figure:last-child figcaption{text-align:right}
+/* оба мокапа вертикальные и разной пропорции: равняем их по высоте, а не по
+   ширине колонки, иначе открытка встанет заметно крупнее коробки с маркерами.
+   Каждый кадр центрируем в своей колонке — при разной ширине прижатые к краям
+   мокапы оставляли бы посередине дыру шире самой картинки */
+.sg-gift__grid img{max-height:min(58vh,500px);width:auto;margin:0 auto}
+.sg-gift__grid figcaption{text-align:center}
 .sg-gift figcaption{margin-top:12px;font-family:var(--sg-mf);font-size:11.5px;letter-spacing:.1em;
  text-transform:uppercase;color:var(--sg-ink2)}
 
@@ -620,13 +622,13 @@ def gifts():
       'что и на обложке календаря, и она тоже приходит незакрашенной. Получатель сам решает, '
       'каким будет цвет его декабря.</p></div>'
       '<div class="sg-gift__grid">'
-      f'<figure class="sg-r"><img src="{IMG}/gifts.jpg" alt="Подарочный набор Saint-Gobain: '
-      'маркеры Copic Sketch в боксе с логотипом и новогодняя открытка-раскраска" '
-      'loading="lazy" width="1600" height="901">'
+      f'<figure class="sg-r"><img src="{IMG}/markers.jpg" alt="Набор маркеров Copic Sketch '
+      'в прозрачном боксе с наклейкой Saint-Gobain" '
+      'loading="lazy" width="897" height="1053">'
       '<figcaption>Набор маркеров Copic Sketch</figcaption></figure>'
       f'<figure class="sg-r"><img src="{IMG}/card.jpg" alt="Новогодняя открытка Saint-Gobain '
       'с рукописным леттерингом и рисунком-раскраской из подарочных коробок" '
-      'loading="lazy" width="804" height="1580">'
+      'loading="lazy" width="745" height="1059">'
       '<figcaption>Открытка с леттерингом</figcaption></figure>'
       '</div></div></section>')
 
