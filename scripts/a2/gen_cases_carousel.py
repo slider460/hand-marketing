@@ -29,6 +29,18 @@ FB={'/creative/becar/smile':('Брошюра ТЦ «Смайл»','22 полос
     '/portfolio/samara-stand-vdnh':('Стенд Самарской области','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
     '/portfolio/samara-exhibition':('Выставка «Самара»','Музей им. Алабина','Exhibition Build'),
     '/portfolio/stavropol-stand-vdnh':('Стенд Ставропольского края','Выставка-форум «Россия», ВДНХ','Exhibition Build')}
+# Жёсткие подписи там, где данных каталога не хватает. У трёх digital-кейсов
+# в поле text вместо категории лежит подзаголовок («Бизнес центр "Станция"»
+# и т.п.), поэтому cat_key их не распознавал и они выпадали из карусели digital,
+# хотя в десктопном каталоге стоят. Заодно фиксируем формулировки: подписи
+# в самих каталогах погашены под карточку v2.2 (круг + ховер-квадрат).
+OVERRIDE={
+ '/digital/becar/invest':('Becar','Сайт Becar Invest','Digital'),
+ '/digital/becar/smile':('Becar','Посадочная страница продукта «ТРЦ Смайл»','Digital'),
+ '/digital/becar/vertical':('Becar','Посадочная страница «Бутик-отель Вертикаль»','Digital'),
+ '/becar_stancia':('Becar','Посадочная страница «БЦ Станция»','Digital'),
+ '/bacar_vertical_all':('Becar','Посадочная страница «Сеть отелей Vertical»','Digital'),
+ '/eaton_online':('Eaton','Online-трансляция стенда на IT-ОСЬ 2020','Digital')}
 COL={'event':'#C12164','exhibition':'#673A7E','creative':'#C12164','video':'#CF6F19','digital':'#5E9A2E','3d':'#7E3FA0','btl':'#D6357E','print':'#E08A2B'}
 def cat_key(cat):
     c=cat.lower()
@@ -45,13 +57,23 @@ for p in order:
     img=(g[0]['img'] if g else '')
     info=data.get(url,{}); title=info.get('title') or ''; descr=info.get('descr') or ''; cat=info.get('cat') or ''
     if url in FB and not title: title,descr,cat=FB[url]
+    if url in OVERRIDE: title,descr,cat=OVERRIDE[url]
     if not img: img=info.get('img','')
     if not title and not img: continue
     c=card(url,title,descr,cat,img); allcards.append(c)
-    k=cat_key(cat); bycat.setdefault(k,[]).append(c)
+    k=cat_key(cat); bycat.setdefault(k,[]).append((url,c))
+# Порядок карточек в категории берём из каталога самой страницы услуги, иначе
+# мобильная карусель идёт в порядке общего каталога /project и расходится
+# с десктопной сеткой. Категория -> сторпарт страницы.
+PART_ORDER={'digital':'750728959451'}
+for k,sp in PART_ORDER.items():
+    f=f'{API}/getproductslist_{sp}.json'
+    if k not in bycat or not os.path.exists(f): continue
+    rank={p.get('url'):i for i,p in enumerate(json.load(open(f))['products'])}
+    bycat[k].sort(key=lambda uc: rank.get(uc[0],len(rank)))
 def wrap(cards): return '<div class="mcases" data-mcases><div class="mcases__track">'+''.join(cards)+'</div></div>'
 os.makedirs('scripts/a2/carousels',exist_ok=True)
 open('scripts/a2/carousels/all.html','w').write(wrap(allcards))
 for k,cs in bycat.items():
-    if k: open(f'scripts/a2/carousels/{k}.html','w').write(wrap(cs))
+    if k: open(f'scripts/a2/carousels/{k}.html','w').write(wrap(c for _,c in cs))
 print('all:',len(allcards),'| by cat:',{k:len(v) for k,v in bycat.items()})
