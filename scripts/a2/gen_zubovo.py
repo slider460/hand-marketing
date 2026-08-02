@@ -21,7 +21,10 @@
     проекту нет.
 
 Правки — ТОЛЬКО через этот скрипт; build_v1 страницу пропускает по маркеру
-<!--custom-page-->."""
+<!--custom-page-->.
+
+⚠️ ПОСЛЕ КАЖДОЙ РЕГЕНЕРАЦИИ гонять add_cookie_consent.py и add_metrika_goals.py:
+их блоки живут в готовом HTML и затираются перезаписью файла."""
 import math
 import os
 import importlib.util
