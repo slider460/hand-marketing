@@ -1,117 +1,118 @@
-<!doctype html><html lang="ru" class="no-js"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Журнал Patriki Times: дизайн издания и ежемесячная вёрстка | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: ежемесячный журнал Patriki Times о Патриарших прудах. Дизайн издания и сетка полос, рубрикатор, заголовочная система, оформление статей, интервью и рекламных модулей, макеты в типографию и под интернет-версию. Ежемесячная вёрстка номер за номером.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hand-marketing.ru/creative/patriki/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Журнал Patriki Times — кейс Hand Marketing">
-<meta property="og:description" content="Дизайн издания, сетка полос, рубрикатор и заголовочная система — и ежемесячная вёрстка номеров журнала о Патриарших прудах.">
-<meta property="og:url" content="https://hand-marketing.ru/creative/patriki/">
-<meta property="og:image" content="https://hand-marketing.ru/images/patriki/cover9.jpg">
-<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
-<!--custom-page-->
-<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
-<link href="/fonts/montserrat.css" rel="stylesheet"><link href="/fonts/oswald-onest.css" rel="stylesheet">
-<style id="hm-chrome-css">
-/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
-#root header,#root footer{display:none!important}
-body>.hm-topbar,.hm-topbar{display:none!important}
-/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
-/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
-#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
-.hm-chrome,.hm-chrome *{box-sizing:border-box}
-.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
-/* ШАПКА */
-.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
-.hm-hdr__nav{display:flex;align-items:center;gap:34px}
-.hm-hdr__nav.r{justify-content:flex-end}
-.hm-hdr a{color:#14171C;text-decoration:none}
-.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
-.hm-hdr__nav a:hover{opacity:.6}
-.hm-hdr__logo{display:flex;justify-content:center}
-.hm-hdr__logo img{height:54px;width:auto;display:block}
-.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
-.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
-.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
-/* ПОДВАЛ — фиолетовая форма */
-.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
-.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
-.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
-.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
-.hm-cta__consent a{color:#fff}
-.hm-cta form{display:flex;flex-direction:column;gap:14px}
-.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
-.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
-  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
-.hm-cta button:hover{transform:translateY(-2px)}
-.hm-cta__msg{font-weight:700;padding:8px 0}
-/* ПОДВАЛ — тёмный футер */
-.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
-.hm-foot__in{max-width:1080px;margin:0 auto}
-.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
-.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
-.hm-foot__nav a:hover{color:#FFE000}
-.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
-.hm-foot a{color:#cfd2d6}
-.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
-.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
-.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
-.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
-.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
-.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
-.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
-@media(max-width:860px){
-  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
-  .hm-hdr__nav.l{display:none}
-  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
-  .hm-hdr__logo{justify-content:flex-start}
-  .hm-hdr__logo img{height:40px}
-  .hm-hdr__contacts{margin-left:0}
-  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
-  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Сборка кейса «Журнал Patriki Times» — mirror/creative/patriki/index.html.
+
+Шапка, фиолетовая форма, футер и служебные скрипты берутся один в один из кейса
+Ramada, чтобы обвязка у всех кастомных кейсов оставалась одинаковой. Всё, что
+между ними, — своё: типографика повторяет само издание (узкий гротеск капсом,
+красная плашка героя, линейки), поэтому шрифты Oswald + Onest.
+
+Ассеты кладёт scripts/patriki-assets.py. Прогон: python3 scripts/gen-patriki.py
+"""
+import os
+import re
+
+SRC = 'mirror/creative/becar/ramada/index.html'
+DST = 'mirror/creative/patriki/index.html'
+
+ref = open(SRC, encoding='utf-8').read()
+
+
+def slice_between(start, end, inclusive_end=True):
+    a = ref.index(start)
+    b = ref.index(end, a) + (len(end) if inclusive_end else 0)
+    return ref[a:b]
+
+
+CHROME_CSS = slice_between('<style id="hm-chrome-css">', '</style>')
+METRIKA = slice_between('<!-- Yandex.Metrika counter -->', '<!-- /Yandex.Metrika counter -->')
+HDR = slice_between('<div class="hm-chrome hm-hdr"', '<main class="rm">', inclusive_end=False)
+FOOT = slice_between('<section class="hm-cta">', '<script>(function(){\n// убрать CTA', inclusive_end=False)
+FORM_JS = ref[ref.index('<script>(function(){\n// убрать CTA'):]
+FORM_JS = FORM_JS[:FORM_JS.index('</script>') + 9]
+
+# ── содержание листалки ─────────────────────────────────────────────────────
+PAGES = {
+    9: [
+        (1, 'Обложка. Генрих Карпин, 800°C Contemporary Steak'),
+        (3, 'Колонка главного редактора и содержание номера'),
+        (4, 'Блиц-интервью: Il Forno Group и мясной ресторан на Патриарших'),
+        (5, 'Зал, бургер и стейк — фотоблок интервью'),
+        (7, 'Рестораны: Ess-Thetik, австрийские сосиски под ёлкой'),
+        (8, 'Рестораны: Tuna Sushi Bar и бренд-шеф Роман Яковенко'),
+        (10, 'Патрики дети: Марк Беррес о чемпионате мира по футболу'),
+        (11, 'Топ-5 игроков и топ-5 претендентов на мундиаль'),
+        (12, 'История: Наполеон и Жозефина, открытие темы'),
+        (15, 'Красная выноска на линейках закрывает историю Жозефины'),
+        (16, 'История: Карл Фаберже и императорские пасхальные яйца'),
+        (18, '«В лесу родилась ёлочка» — песня родом с Патриков'),
+        (19, 'Ноты Бекмана, журнал «Малютка» и текст песни'),
+        (20, 'Кино: Голливуд, к России с любовью. Нелли Холмс'),
+        (22, 'Роман Резницкий: от поп до арт'),
+        (25, 'Психология: Штирлиц Роза Карлосоновна о зависимости от любви'),
+        (30, 'Олег Рой: анатомия разочарования'),
+        (34, 'Красота: Color-time, пространство на Патриарших'),
+        (36, 'Топ-10: самые дорогие дома в мире'),
+        (40, 'Бизнес: Penny Lane Realty, итоги года на рынке аренды'),
+        (42, 'Бизнес: Татьяна Гулина, тренды будущего'),
+        (46, 'Патрики глазами животных: Адольф, пти-брабансон'),
+        (48, 'Гид по Патриаршим: двадцать адресов района'),
+        (52, 'Задняя обложка: Agent Provocateur'),
+    ],
+    10: [
+        (1, 'Обложка. Андрей Шаронов, президент МШУ СКОЛКОВО'),
+        (3, 'Колонка редактора и содержание февральско-мартовского номера'),
+        (4, 'Блиц-интервью: Андрей Шаронов о спорте и СКОЛКОВО'),
+        (7, 'Анна Резниченко и турнир к 90-летию Александра Гомельского'),
+        (8, 'Патрики спорт: Маирбек Хостикоев, модуль героя'),
+        (11, 'Аркадий Дворкович, капитан команды «Брига ДА»'),
+        (13, 'Павел Колобков, министр спорта'),
+        (15, 'Алексей Саврасенко, «Локомотив-Кубань»'),
+        (16, 'Николай Падиус, тренер клуба СКОЛКОВО'),
+        (19, 'Фоторепортаж с благотворительного турнира'),
+        (22, 'Рестораны: Режис Тригель, шеф Bistrot Берёзка'),
+        (23, 'Диагональная выноска на ночном Париже'),
+        (25, 'Tuna Sushi Bar: вертикальные буквы на красном'),
+        (26, 'Ess-Thetik: рукописная строка поверх фото'),
+        (28, 'Патрики дети: топ-10 мультфильмов Марка Берреса'),
+        (30, 'История: братья Третьяковы и их галерея'),
+        (35, 'Третьяковская галерея: десять картин о Москве'),
+        (38, 'Проект «Жизнь»: #докопаемсядоистины'),
+        (40, 'Психология: Штирлиц Роза Карлосоновна, стоп отношения'),
+        (42, 'Олег Рой: короля играет свита'),
+        (46, 'Топ-10: десять семей, которые управляют миром'),
+        (50, 'Татьяна Гулина: океан внутри, или будущая жизнь на воде'),
+        (54, 'Мода: Кристина Кирия, весна наступает'),
+        (56, 'Подиум: Chanel, Dior, Valentino, Elie Saab'),
+        (60, 'Светская жизнь: премия Patriki Times Lifestyle Awards 2018'),
+        (62, 'Патрики глазами животных: Лаффа'),
+        (64, 'Гид по Патриаршим: обновлённый список адресов'),
+        (68, 'Задняя обложка: Agent Provocateur'),
+    ],
 }
 
-/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
-   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
-   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
-   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
-body{margin:0}
-@media(min-width:861px){
- .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
- .hm-hdr__nav,.hm-hdr__contacts{display:contents}
- .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
-  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
- .hm-hdr a:hover{opacity:.6}
- .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
- .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
- .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
- .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
-@media(min-width:1200px){
- .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
-@media(min-width:960px) and (max-width:1199px){
- .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
-@media(min-width:861px) and (max-width:959px){
- .hm-hdr a[href="/about"]{left:2%}
- .hm-hdr a[href="/service"]{left:15%}
- .hm-hdr a[href="/project"]{left:27%}
- .hm-hdr a[href="/clients"]{right:31%}
- .hm-hdr a[href="/contacts"]{right:18%}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
-</style>
-<style id="pt-css">
+RUBRICS = ['История', 'Рестораны', 'Бизнес', 'Кино', 'Здоровье', 'Красота', 'Искусство',
+           'Подарки', 'Психология', 'Мода', 'Патрики спорт', 'Патрики дети',
+           'Светская жизнь', 'Домашний любимец', 'Патрики глазами животных',
+           'Блиц-интервью', 'Топ-10', 'Гид по Патриаршим']
+
+ADS = [
+    ('ad-rollsroyce', 'Rolls-Royce Motor Cars Moscow', 'Полоса под обрез, дилерский блок в подвале на отдельной линейке'),
+    ('ad-ferretti', 'Ferretti Yachts / Burevestnik Group', 'Светлая полоса: заголовок разрядкой, лента интерьеров, модельный ряд'),
+    ('ad-jetsmarter', 'JetSmarter', 'Иллюстрация вместо фотографии, три коротких оффера столбиком'),
+    ('ad-senator', '«Сенатор», бутик мужской одежды', 'Классическая антиква и рамка — единственный серифный модуль номера'),
+    ('ad-mangusta', 'Mangusta / fast & glam', 'Тёмная полоса-контрапункт после светлого разворота'),
+    ('ad-grandmarina', 'Sochi Grand Marina', 'Карта и порт: инфографика в рекламном модуле'),
+]
+
+SPREADS = [
+    ('spread-elka', '«В лесу родилась ёлочка»', '№9, полосы 18–19'),
+    ('spread-sport', 'Патрики спорт: модуль героя', '№10, полосы 8–9'),
+    ('spread-berezka', 'Bistrot Берёзка', '№10, полосы 22–23'),
+]
+
+# ── страница ────────────────────────────────────────────────────────────────
+CSS = """
 .pt,.pt *{box-sizing:border-box}
 .pt{--ink:#14171C;--red:#D40D2E;--red-d:#9E0A22;--yellow:#FFC61E;--orange:#F08A24;
  --green:#43B02A;--paper:#F5F2EC;--rule:rgba(20,23,28,.14);--mute:#6A7078;
@@ -336,9 +337,73 @@ body{margin:0}
  .pt-flip__top{align-items:flex-start}
 }
 @media(prefers-reduced-motion:reduce){.pt *{transition:none!important}.pt-strip{scroll-behavior:auto}}
-</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+"""
+
+
+def zones():
+    z = [
+        ('Логотип издания', 'Сова в академической шапочке на радуге и монограмма «iK» — знак издателя, агентства «Ай Кей».', 6.5, 3.2, 23.5, 22.5),
+        ('Шапка и номер', 'PATRIKI TIMES набран разрядкой в два яруса, номер выпуска повёрнут на 90° у правого края.', 35.5, 3.2, 59.5, 16.5),
+        ('Строка издания', '«Ежемесячное издание, г. Москва» и слоган «где, как, когда и с кем» — две строки разной разрядки.', 32.5, 19.0, 62.0, 7.5),
+        ('Фотография героя', 'Портрет уходит под обрез с трёх сторон и держит всю нижнюю часть обложки.', 0.0, 26.8, 100.0, 73.2),
+        ('Анонсы номера', 'Три-четыре темы: жёлтым и оранжевым — рубрики, белым — герой обложки.', 3.5, 73.0, 59.5, 22.5),
+    ]
+    li, ov = [], []
+    for i, (t, d, x, y, w, h) in enumerate(z):
+        li.append(f'<li data-z="{i}"><b>{t}</b><span>{d}</span></li>')
+        ov.append(f'<div class="pt-cover__zone" data-z="{i}" style="left:{x}%;top:{y}%;width:{w}%;height:{h}%"></div>')
+    return '\n'.join(li), '\n'.join(ov)
+
+
+ZLIST, ZONES = zones()
+STAR = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>')
+
+RUBS = ''.join(f'<b>{r}</b>' for r in RUBRICS)
+ADS_HTML = '\n'.join(
+    f'<figure class="pt-ad"><img src="/images/patriki/{f}.jpg" alt="Рекламный модуль {t} в журнале Patriki Times"'
+    f' width="820" height="1160" loading="lazy"><figcaption><b>{t}</b><span>{d}</span></figcaption></figure>'
+    for f, t, d in ADS)
+SPREADS_HTML = '\n'.join(
+    f'<figure class="pt-print__i"><div class="pt-paper"><img src="/images/patriki/{f}.jpg"'
+    f' alt="Разворот журнала Patriki Times: {t}" width="2000" height="1414" loading="lazy"></div>'
+    f'<figcaption><b>{t}</b><span>{n}</span></figcaption></figure>'
+    for f, t, n in SPREADS)
+
+RESULT = [
+    ('01', 'Издание вышло девятнадцать раз: сетка и правила полосы выдержали весь ежемесячный цикл без переделок.'),
+    ('02', 'Рубрикатор из 18 разделов: читатель определяет тему по одному слову в углу полосы.'),
+    ('03', 'Заголовочная система из двух начертаний и трёх цветов одинаково держит и блиц-интервью, и фоторепортаж со светского вечера.'),
+    ('04', 'Рекламные модули соседей — от Rolls-Royce и Ferretti до Tiffany & Co. и Brioni — встали в номер, не споря с редакционными полосами.'),
+    ('05', 'Каждый номер уходил в типографию в 4+4 на A4 — с готовым препрессом, без правок на приладке.'),
+    ('06', 'Те же полосы переиспользовались для интернет-версии журнала без переверстки.'),
+    ('07', 'Готовая система сократила срок сборки: следующий номер собирался быстрее предыдущего при том же объёме материалов.'),
+    ('08', 'Обложка пережила смену шапки: к №17 добавились герб и новая строка, состав блоков остался прежним.'),
+]
+RESULT_HTML = '\n'.join(f'<div><b>{n}</b><p>{t}</p></div>' for n, t in RESULT)
+
+JS_PAGES = '{' + ','.join(
+    '"%d":[%s]' % (k, ','.join('[%d,"%s"]' % (n, c.replace('"', '\\"')) for n, c in v))
+    for k, v in PAGES.items()) + '}'
+
+HTML = f"""<!doctype html><html lang="ru" class="no-js"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Журнал Patriki Times: дизайн издания и ежемесячная вёрстка | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: ежемесячный журнал Patriki Times о Патриарших прудах. Дизайн издания и сетка полос, рубрикатор, заголовочная система, оформление статей, интервью и рекламных модулей, макеты в типографию и под интернет-версию. Ежемесячная вёрстка номер за номером.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hand-marketing.ru/creative/patriki/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Журнал Patriki Times — кейс Hand Marketing">
+<meta property="og:description" content="Дизайн издания, сетка полос, рубрикатор и заголовочная система — и ежемесячная вёрстка номеров журнала о Патриарших прудах.">
+<meta property="og:url" content="https://hand-marketing.ru/creative/patriki/">
+<meta property="og:image" content="https://hand-marketing.ru/images/patriki/cover9.jpg">
+<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
+<!--custom-page-->
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<link href="/fonts/montserrat.css" rel="stylesheet"><link href="/fonts/oswald-onest.css" rel="stylesheet">
+{CHROME_CSS}
+<style id="pt-css">{CSS}</style>{METRIKA}
 </head>
-<body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="pt">
+<body>{HDR}<main class="pt">
 
 <header class="pt-hero">
  <div class="pt-mast"><div class="pt-w pt-mast__in"><b>Patriki Times</b><span>Ежемесячное издание, г. Москва · где, как, когда и с кем</span></div></div>
@@ -391,17 +456,9 @@ body{margin:0}
  <div class="pt-cover__in">
   <div class="pt-cover__pic" id="pt-cpic">
    <img src="/images/patriki/cover9.jpg" alt="Разбор обложки журнала Patriki Times №9" width="1300" height="1838" loading="lazy">
-   <div class="pt-cover__zone" data-z="0" style="left:6.5%;top:3.2%;width:23.5%;height:22.5%"></div>
-<div class="pt-cover__zone" data-z="1" style="left:35.5%;top:3.2%;width:59.5%;height:16.5%"></div>
-<div class="pt-cover__zone" data-z="2" style="left:32.5%;top:19.0%;width:62.0%;height:7.5%"></div>
-<div class="pt-cover__zone" data-z="3" style="left:0.0%;top:26.8%;width:100.0%;height:73.2%"></div>
-<div class="pt-cover__zone" data-z="4" style="left:3.5%;top:73.0%;width:59.5%;height:22.5%"></div>
+   {ZONES}
   </div>
-  <ul class="pt-zlist" id="pt-zlist"><li data-z="0"><b>Логотип издания</b><span>Сова в академической шапочке на радуге и монограмма «iK» — знак издателя, агентства «Ай Кей».</span></li>
-<li data-z="1"><b>Шапка и номер</b><span>PATRIKI TIMES набран разрядкой в два яруса, номер выпуска повёрнут на 90° у правого края.</span></li>
-<li data-z="2"><b>Строка издания</b><span>«Ежемесячное издание, г. Москва» и слоган «где, как, когда и с кем» — две строки разной разрядки.</span></li>
-<li data-z="3"><b>Фотография героя</b><span>Портрет уходит под обрез с трёх сторон и держит всю нижнюю часть обложки.</span></li>
-<li data-z="4"><b>Анонсы номера</b><span>Три-четыре темы: жёлтым и оранжевым — рубрики, белым — герой обложки.</span></li></ul>
+  <ul class="pt-zlist" id="pt-zlist">{ZLIST}</ul>
  </div>
 </div></section>
 
@@ -437,7 +494,7 @@ body{margin:0}
 <section class="pt-rubs"><div class="pt-w">
  <div class="pt-hd"><span class="pt-rub">Навигация</span><h2>Восемнадцать <em>рубрик</em></h2>
   <p class="pt-lead">Одно слово узким гротеском в верхнем поле — единственный навигационный элемент внутри номера. Ни колонцифр по разделам, ни цветного обреза: читатель ориентируется по рубрике и колонтитулу.</p></div>
- <div class="pt-tags"><b>История</b><b>Рестораны</b><b>Бизнес</b><b>Кино</b><b>Здоровье</b><b>Красота</b><b>Искусство</b><b>Подарки</b><b>Психология</b><b>Мода</b><b>Патрики спорт</b><b>Патрики дети</b><b>Светская жизнь</b><b>Домашний любимец</b><b>Патрики глазами животных</b><b>Блиц-интервью</b><b>Топ-10</b><b>Гид по Патриаршим</b></div>
+ <div class="pt-tags">{RUBS}</div>
 </div></section>
 
 <section class="pt-heads"><div class="pt-w">
@@ -468,7 +525,7 @@ body{margin:0}
   <p class="pt-lead">Длинные интервью разбиваются цитатой. Тип врезки закреплён за характером материала, поэтому номер не превращается в набор случайных плашек.</p></div>
  <div class="pt-calls__grid">
   <figure class="pt-call">
-   <div class="pt-star"><div class="pt-star__row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></div>
+   <div class="pt-star"><div class="pt-star__row">{STAR*5}</div>
     <p><em>Спорт помогает</em>, это наверно, расхожая фраза, <em>и в работе, и в отдыхе</em>. И позволяет чувствовать себя в форме.</p></div>
    <figcaption class="pt-call__cap">Спортивные материалы: рамка со звёздами, узкий гротеск, два цвета.</figcaption>
   </figure>
@@ -506,20 +563,13 @@ body{margin:0}
 <section class="pt-ads"><div class="pt-w">
  <div class="pt-hd"><span class="pt-rub">Реклама</span><h2>Модули <em>соседей</em></h2>
   <p class="pt-lead">Рекламу в журнале дают те, кто живёт рядом: автомобильные и яхтенные дилеры, бутики, частная авиация. Каждый модуль занимает полосу целиком, поэтому редакционный материал никогда не спорит с рекламным.</p></div>
- <div class="pt-ads__grid"><figure class="pt-ad"><img src="/images/patriki/ad-rollsroyce.jpg" alt="Рекламный модуль Rolls-Royce Motor Cars Moscow в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>Rolls-Royce Motor Cars Moscow</b><span>Полоса под обрез, дилерский блок в подвале на отдельной линейке</span></figcaption></figure>
-<figure class="pt-ad"><img src="/images/patriki/ad-ferretti.jpg" alt="Рекламный модуль Ferretti Yachts / Burevestnik Group в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>Ferretti Yachts / Burevestnik Group</b><span>Светлая полоса: заголовок разрядкой, лента интерьеров, модельный ряд</span></figcaption></figure>
-<figure class="pt-ad"><img src="/images/patriki/ad-jetsmarter.jpg" alt="Рекламный модуль JetSmarter в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>JetSmarter</b><span>Иллюстрация вместо фотографии, три коротких оффера столбиком</span></figcaption></figure>
-<figure class="pt-ad"><img src="/images/patriki/ad-senator.jpg" alt="Рекламный модуль «Сенатор», бутик мужской одежды в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>«Сенатор», бутик мужской одежды</b><span>Классическая антиква и рамка — единственный серифный модуль номера</span></figcaption></figure>
-<figure class="pt-ad"><img src="/images/patriki/ad-mangusta.jpg" alt="Рекламный модуль Mangusta / fast & glam в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>Mangusta / fast & glam</b><span>Тёмная полоса-контрапункт после светлого разворота</span></figcaption></figure>
-<figure class="pt-ad"><img src="/images/patriki/ad-grandmarina.jpg" alt="Рекламный модуль Sochi Grand Marina в журнале Patriki Times" width="820" height="1160" loading="lazy"><figcaption><b>Sochi Grand Marina</b><span>Карта и порт: инфографика в рекламном модуле</span></figcaption></figure></div>
+ <div class="pt-ads__grid">{ADS_HTML}</div>
 </div></section>
 
 <section class="pt-print"><div class="pt-w">
  <div class="pt-hd"><span class="pt-rub">В печати</span><h2>Развороты <em>в номере</em></h2>
   <p class="pt-lead">Полосы верстались парами: фотополоса под обрез слева, текст справа — или наоборот. Проверка всегда шла на развороте, а не на отдельной полосе.</p></div>
- <div class="pt-print__list"><figure class="pt-print__i"><div class="pt-paper"><img src="/images/patriki/spread-elka.jpg" alt="Разворот журнала Patriki Times: «В лесу родилась ёлочка»" width="2000" height="1414" loading="lazy"></div><figcaption><b>«В лесу родилась ёлочка»</b><span>№9, полосы 18–19</span></figcaption></figure>
-<figure class="pt-print__i"><div class="pt-paper"><img src="/images/patriki/spread-sport.jpg" alt="Разворот журнала Patriki Times: Патрики спорт: модуль героя" width="2000" height="1414" loading="lazy"></div><figcaption><b>Патрики спорт: модуль героя</b><span>№10, полосы 8–9</span></figcaption></figure>
-<figure class="pt-print__i"><div class="pt-paper"><img src="/images/patriki/spread-berezka.jpg" alt="Разворот журнала Patriki Times: Bistrot Берёзка" width="2000" height="1414" loading="lazy"></div><figcaption><b>Bistrot Берёзка</b><span>№10, полосы 22–23</span></figcaption></figure>
+ <div class="pt-print__list">{SPREADS_HTML}
   <figure class="pt-print__i"><img src="/images/lib/as3162-3135-4335-b439-336639373739/39565.png" alt="Разворот журнала Patriki Times с интервью Игоря Цвирко" width="1660" height="1200" loading="lazy">
    <figcaption><b>Игорь Цвирко, Большой театр</b><span>поздний номер</span></figcaption></figure>
  </div>
@@ -527,81 +577,62 @@ body{margin:0}
 
 <section class="pt-res"><div class="pt-w">
  <div class="pt-hd"><span class="pt-rub">Результат</span><h2>Что получилось</h2></div>
- <div class="pt-res__grid"><div><b>01</b><p>Издание вышло девятнадцать раз: сетка и правила полосы выдержали весь ежемесячный цикл без переделок.</p></div>
-<div><b>02</b><p>Рубрикатор из 18 разделов: читатель определяет тему по одному слову в углу полосы.</p></div>
-<div><b>03</b><p>Заголовочная система из двух начертаний и трёх цветов одинаково держит и блиц-интервью, и фоторепортаж со светского вечера.</p></div>
-<div><b>04</b><p>Рекламные модули соседей — от Rolls-Royce и Ferretti до Tiffany & Co. и Brioni — встали в номер, не споря с редакционными полосами.</p></div>
-<div><b>05</b><p>Каждый номер уходил в типографию в 4+4 на A4 — с готовым препрессом, без правок на приладке.</p></div>
-<div><b>06</b><p>Те же полосы переиспользовались для интернет-версии журнала без переверстки.</p></div>
-<div><b>07</b><p>Готовая система сократила срок сборки: следующий номер собирался быстрее предыдущего при том же объёме материалов.</p></div>
-<div><b>08</b><p>Обложка пережила смену шапки: к №17 добавились герб и новая строка, состав блоков остался прежним.</p></div></div>
+ <div class="pt-res__grid">{RESULT_HTML}</div>
 </div></section>
 
-</main><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
-// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
-function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
- n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
-// форма -> /api/lead.php
-function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
-document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
- var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
- var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
- fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
-var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
-if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
-})();</script>
-<script>(function(){
+</main>{FOOT}{FORM_JS}
+<script>(function(){{
  // ── анатомия обложки ──
  var zl=document.getElementById('pt-zlist'),cp=document.getElementById('pt-cpic');
- if(zl&&cp){
+ if(zl&&cp){{
   var zones=cp.querySelectorAll('.pt-cover__zone'),items=zl.querySelectorAll('li');
-  function pick(i){
+  function pick(i){{
    for(var k=0;k<zones.length;k++)zones[k].classList.toggle('on',k===i);
    for(var m=0;m<items.length;m++)items[m].classList.toggle('on',m===i);
-  }
-  items.forEach(function(li,i){
-   li.addEventListener('mouseenter',function(){pick(i);});
-   li.addEventListener('click',function(){pick(i);});
-  });
-  zl.addEventListener('mouseleave',function(){pick(-1);});
+  }}
+  items.forEach(function(li,i){{
+   li.addEventListener('mouseenter',function(){{pick(i);}});
+   li.addEventListener('click',function(){{pick(i);}});
+  }});
+  zl.addEventListener('mouseleave',function(){{pick(-1);}});
   pick(0);
- }
+ }}
 
  // ── оверлей модульной сетки ──
  var ov=document.getElementById('pt-ov'),gimg=document.getElementById('pt-gimg'),
      colw=document.getElementById('pt-colw');
- var GRID={3:{w:26.57,g:1.646,img:'grid-3col',cap:'55,8 мм · три колонки'},
-            2:{w:40.71,g:1.63,img:'grid-2col',cap:'85,4 мм · две колонки'}};
- function cols(n){
+ var GRID={{3:{{w:26.57,g:1.646,img:'grid-3col',cap:'55,8 мм · три колонки'}},
+            2:{{w:40.71,g:1.63,img:'grid-2col',cap:'85,4 мм · две колонки'}}}};
+ function cols(n){{
   if(!ov)return;
   var g=GRID[n],L=8.71,html='<u></u><s class="r"></s><s class="f"></s>';
-  for(var i=0;i<n;i++){
+  for(var i=0;i<n;i++){{
    html+='<i style="left:'+(L+i*(g.w+g.g)).toFixed(3)+'%;width:'+g.w+'%;top:11.05%;height:80.33%"></i>';
-  }
+  }}
   ov.innerHTML=html;
   if(gimg)gimg.src='/images/patriki/'+g.img+'.jpg';
   if(colw)colw.textContent=g.cap;
- }
+ }}
  var sw=document.querySelector('.pt-sw');
- if(sw){sw.addEventListener('click',function(e){
+ if(sw){{sw.addEventListener('click',function(e){{
   var b=e.target.closest('button[data-cols]');if(!b)return;
-  sw.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});
+  sw.querySelectorAll('button').forEach(function(x){{x.classList.toggle('on',x===b);}});
   cols(+b.dataset.cols);
- });}
+ }});}}
  cols(3);
 
  // ── листалка ──
- var P={"9":[[1,"Обложка. Генрих Карпин, 800°C Contemporary Steak"],[3,"Колонка главного редактора и содержание номера"],[4,"Блиц-интервью: Il Forno Group и мясной ресторан на Патриарших"],[5,"Зал, бургер и стейк — фотоблок интервью"],[7,"Рестораны: Ess-Thetik, австрийские сосиски под ёлкой"],[8,"Рестораны: Tuna Sushi Bar и бренд-шеф Роман Яковенко"],[10,"Патрики дети: Марк Беррес о чемпионате мира по футболу"],[11,"Топ-5 игроков и топ-5 претендентов на мундиаль"],[12,"История: Наполеон и Жозефина, открытие темы"],[15,"Красная выноска на линейках закрывает историю Жозефины"],[16,"История: Карл Фаберже и императорские пасхальные яйца"],[18,"«В лесу родилась ёлочка» — песня родом с Патриков"],[19,"Ноты Бекмана, журнал «Малютка» и текст песни"],[20,"Кино: Голливуд, к России с любовью. Нелли Холмс"],[22,"Роман Резницкий: от поп до арт"],[25,"Психология: Штирлиц Роза Карлосоновна о зависимости от любви"],[30,"Олег Рой: анатомия разочарования"],[34,"Красота: Color-time, пространство на Патриарших"],[36,"Топ-10: самые дорогие дома в мире"],[40,"Бизнес: Penny Lane Realty, итоги года на рынке аренды"],[42,"Бизнес: Татьяна Гулина, тренды будущего"],[46,"Патрики глазами животных: Адольф, пти-брабансон"],[48,"Гид по Патриаршим: двадцать адресов района"],[52,"Задняя обложка: Agent Provocateur"]],"10":[[1,"Обложка. Андрей Шаронов, президент МШУ СКОЛКОВО"],[3,"Колонка редактора и содержание февральско-мартовского номера"],[4,"Блиц-интервью: Андрей Шаронов о спорте и СКОЛКОВО"],[7,"Анна Резниченко и турнир к 90-летию Александра Гомельского"],[8,"Патрики спорт: Маирбек Хостикоев, модуль героя"],[11,"Аркадий Дворкович, капитан команды «Брига ДА»"],[13,"Павел Колобков, министр спорта"],[15,"Алексей Саврасенко, «Локомотив-Кубань»"],[16,"Николай Падиус, тренер клуба СКОЛКОВО"],[19,"Фоторепортаж с благотворительного турнира"],[22,"Рестораны: Режис Тригель, шеф Bistrot Берёзка"],[23,"Диагональная выноска на ночном Париже"],[25,"Tuna Sushi Bar: вертикальные буквы на красном"],[26,"Ess-Thetik: рукописная строка поверх фото"],[28,"Патрики дети: топ-10 мультфильмов Марка Берреса"],[30,"История: братья Третьяковы и их галерея"],[35,"Третьяковская галерея: десять картин о Москве"],[38,"Проект «Жизнь»: #докопаемсядоистины"],[40,"Психология: Штирлиц Роза Карлосоновна, стоп отношения"],[42,"Олег Рой: короля играет свита"],[46,"Топ-10: десять семей, которые управляют миром"],[50,"Татьяна Гулина: океан внутри, или будущая жизнь на воде"],[54,"Мода: Кристина Кирия, весна наступает"],[56,"Подиум: Chanel, Dior, Valentino, Elie Saab"],[60,"Светская жизнь: премия Patriki Times Lifestyle Awards 2018"],[62,"Патрики глазами животных: Лаффа"],[64,"Гид по Патриаршим: обновлённый список адресов"],[68,"Задняя обложка: Agent Provocateur"]]};
+ var P={JS_PAGES};
  var issue=9,idx=0,
      img=document.getElementById('pt-page'),cap=document.getElementById('pt-cap'),
      pos=document.getElementById('pt-pos'),strip=document.getElementById('pt-strip');
- function build(){
-  strip.innerHTML=P[issue].map(function(p,i){
+ function build(){{
+  strip.innerHTML=P[issue].map(function(p,i){{
    return '<button type="button" data-i="'+i+'" aria-label="Полоса '+p[0]+'">'+
     '<img src="/images/patriki/t'+issue+'-'+p[0]+'.jpg" alt="" loading="lazy" width="64"></button>';
-  }).join('');
- }
- function show(i){
+  }}).join('');
+ }}
+ function show(i){{
   var list=P[issue];idx=(i+list.length)%list.length;
   var p=list[idx];
   img.src='/images/patriki/p'+issue+'-'+p[0]+'.jpg';
@@ -611,24 +642,28 @@ if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.docume
   var bs=strip.querySelectorAll('button');
   for(var k=0;k<bs.length;k++)bs[k].classList.toggle('on',k===idx);
   var cur=bs[idx];
-  if(cur)strip.scrollTo({left:cur.offsetLeft-strip.clientWidth/2+cur.clientWidth/2,behavior:'smooth'});
- }
- document.getElementById('pt-prev').addEventListener('click',function(){show(idx-1);});
- document.getElementById('pt-next').addEventListener('click',function(){show(idx+1);});
- strip.addEventListener('click',function(e){
+  if(cur)strip.scrollTo({{left:cur.offsetLeft-strip.clientWidth/2+cur.clientWidth/2,behavior:'smooth'}});
+ }}
+ document.getElementById('pt-prev').addEventListener('click',function(){{show(idx-1);}});
+ document.getElementById('pt-next').addEventListener('click',function(){{show(idx+1);}});
+ strip.addEventListener('click',function(e){{
   var b=e.target.closest('button[data-i]');if(b)show(+b.dataset.i);
- });
- document.querySelector('.pt-issues').addEventListener('click',function(e){
+ }});
+ document.querySelector('.pt-issues').addEventListener('click',function(e){{
   var b=e.target.closest('button[data-issue]');if(!b)return;
-  this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});
+  this.querySelectorAll('button').forEach(function(x){{x.classList.toggle('on',x===b);}});
   issue=+b.dataset.issue;build();show(0);
- });
- document.addEventListener('keydown',function(e){
+ }});
+ document.addEventListener('keydown',function(e){{
   if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;
   var f=document.getElementById('pt-flip').getBoundingClientRect();
   if(f.top>window.innerHeight*.5||f.bottom<window.innerHeight*.5)return;
   show(e.key==='ArrowLeft'?idx-1:idx+1);
- });
+ }});
  build();show(0);
-})();</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},{"@type":"ListItem","position":2,"name":"Creative & Design","item":"https://hand-marketing.ru/creativedesign/"},{"@type":"ListItem","position":3,"name":"Журнал Patriki Times","item":"https://hand-marketing.ru/creative/patriki/"}]}</script></body></html>
+}})();</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"}},{{"@type":"ListItem","position":2,"name":"Creative & Design","item":"https://hand-marketing.ru/creativedesign/"}},{{"@type":"ListItem","position":3,"name":"Журнал Patriki Times","item":"https://hand-marketing.ru/creative/patriki/"}}]}}</script></body></html>"""
+
+os.makedirs(os.path.dirname(DST), exist_ok=True)
+open(DST, 'w', encoding='utf-8').write(HTML)
+print(f'{DST}: {len(HTML) // 1024} КБ')
