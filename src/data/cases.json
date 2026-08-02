@@ -162,6 +162,17 @@
     "coverRemote": "https://static.tildacdn.com/tild6236-6232-4835-a636-373936353964/12345678901234567890.png"
   },
   {
+    "slug": "creative__metra",
+    "route": "/creative/metra",
+    "category": "creative",
+    "categoryLabel": "Creative & Design",
+    "client": "Metra Technology Group",
+    "title": "Брендбук Metra Technology Group",
+    "metaTitle": "Creative_Brandbook_Metra",
+    "cover": "/images/lib/custom-metra/cover-main.png",
+    "coverRemote": ""
+  },
+  {
     "slug": "creative__becar__knight-house",
     "route": "/creative/becar/knight-house",
     "category": "creative",
