@@ -34,16 +34,24 @@ POSTSCRIPTS = ['add_cookie_consent.py', 'add_metrika_goals.py']
 MARKERS = ['hm-cookie-consent', 'hm-metrika-goals', 'mc.yandex']
 
 
-def git_dirty():
+def git_status():
     out = subprocess.run(['git', 'status', '--porcelain', '--', 'mirror'],
                          cwd=ROOT, capture_output=True, text=True, check=True).stdout
-    files = set()
+    files = {}
     for line in out.splitlines():
         path = line[3:].strip().strip('"')
         if ' -> ' in path:
             path = path.split(' -> ')[1]
-        files.add(path)
+        files[path] = line[:2]
     return files
+
+
+def git_dirty():
+    return set(git_status())
+
+
+def git_deleted():
+    return {p for p, st in git_status().items() if 'D' in st}
 
 
 def run(script_path):
@@ -91,8 +99,15 @@ def main():
     gen = resolve_generator(sys.argv[1])
 
     dirty_before = git_dirty()
+    deleted_before = git_deleted()
     t0 = time.time()
     run(gen)
+    # генератор кастомной страницы может СНОСИТЬ файл (типичный случай:
+    # index-a2.html, который на деплое переименовывается в index.html и затёр бы
+    # кастомную страницу). Такие удаления нельзя откатывать вместе с чужими.
+    deleted_by_gen = git_deleted() - deleted_before
+    if deleted_by_gen:
+        print('  удалено генератором:', ', '.join(sorted(deleted_by_gen)))
 
     # целевые страницы: index*.html, переписанные генератором (по mtime —
     # ловит и случай «перезаписал тем же содержимым»)
@@ -111,7 +126,7 @@ def main():
         run(os.path.join(HERE, ps))
 
     # откат чужих файлов, изменённых только пост-скриптами
-    extra = sorted(git_dirty() - dirty_before - set(targets))
+    extra = sorted(git_dirty() - dirty_before - set(targets) - deleted_by_gen)
     extra = [f for f in extra if re.search(r'index(-a2)?\.html$', f)]
     if extra:
         subprocess.run(['git', 'checkout', '--'] + extra, cwd=ROOT, check=True)
