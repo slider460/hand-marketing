@@ -1,116 +1,115 @@
-<!doctype html><html lang="ru" class="no-js"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>ONLINE трансляция Eaton с форума OCS «IT-ОСЬ 2020» | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: онлайн-трансляция выступления Eaton на форуме OCS Distribution «IT-ОСЬ 2020». Аппаратная в офисе заказчика, две камеры, мини-ПТС и vMix, два независимых канала мобильного интернета с автопереключением. Семь часов эфира с 10:30 до 17:30 без сбоев.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hand-marketing.ru/eaton_online/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ONLINE трансляция Eaton с форума «IT-ОСЬ 2020» | кейс Hand Marketing">
-<meta property="og:description" content="Офис заказчика на день стал студией: две камеры, мини-ПТС, vMix и два канала мобильного интернета. Семь часов эфира на виртуальный стенд форума без единого обрыва.">
-<meta property="og:url" content="https://hand-marketing.ru/eaton_online/">
-<meta property="og:image" content="https://hand-marketing.ru/images/eaton-online/shift-desk.jpg">
-<meta property="og:site_name" content="Hand Marketing"><meta property="og:locale" content="ru_RU">
-<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
-<!--custom-page-->
-<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
-<link href="/fonts/montserrat.css" rel="stylesheet"><link href="/fonts/plex.css" rel="stylesheet"><style id="hm-chrome-css">
-/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
-#root header,#root footer{display:none!important}
-body>.hm-topbar,.hm-topbar{display:none!important}
-/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
-/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
-#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
-.hm-chrome,.hm-chrome *{box-sizing:border-box}
-.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
-/* ШАПКА */
-.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
-.hm-hdr__nav{display:flex;align-items:center;gap:34px}
-.hm-hdr__nav.r{justify-content:flex-end}
-.hm-hdr a{color:#14171C;text-decoration:none}
-.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
-.hm-hdr__nav a:hover{opacity:.6}
-.hm-hdr__logo{display:flex;justify-content:center}
-.hm-hdr__logo img{height:54px;width:auto;display:block}
-.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
-.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
-.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
-/* ПОДВАЛ — фиолетовая форма */
-.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
-.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
-.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
-.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
-.hm-cta__consent a{color:#fff}
-.hm-cta form{display:flex;flex-direction:column;gap:14px}
-.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
-.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
-  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
-.hm-cta button:hover{transform:translateY(-2px)}
-.hm-cta__msg{font-weight:700;padding:8px 0}
-/* ПОДВАЛ — тёмный футер */
-.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
-.hm-foot__in{max-width:1080px;margin:0 auto}
-.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
-.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
-.hm-foot__nav a:hover{color:#FFE000}
-.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
-.hm-foot a{color:#cfd2d6}
-.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
-.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
-.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
-.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
-.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
-.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
-.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
-@media(max-width:860px){
-  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
-  .hm-hdr__nav.l{display:none}
-  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
-  .hm-hdr__logo{justify-content:flex-start}
-  .hm-hdr__logo img{height:40px}
-  .hm-hdr__contacts{margin-left:0}
-  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
-  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
-}
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Генерит mirror/eaton_online/index.html: кейс «ONLINE трансляция EATON»
+с III Глобального технологического форума OCS Distribution «IT-ОСЬ 2020»
+(19 ноября 2020, онлайн).
 
-/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
-   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
-   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
-   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
-body{margin:0}
-@media(min-width:861px){
- .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
- .hm-hdr__nav,.hm-hdr__contacts{display:contents}
- .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
-  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
- .hm-hdr a:hover{opacity:.6}
- .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
- .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
- .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
- .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
-@media(min-width:1200px){
- .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
-@media(min-width:960px) and (max-width:1199px){
- .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
-@media(min-width:861px) and (max-width:959px){
- .hm-hdr a[href="/about"]{left:2%}
- .hm-hdr a[href="/service"]{left:15%}
- .hm-hdr a[href="/project"]{left:27%}
- .hm-hdr a[href="/clients"]{right:31%}
- .hm-hdr a[href="/contacts"]{right:18%}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
-</style><style id="eo-css">
+Что было раньше: запечённая Tilda-страница — сплошной текст «задача → решение →
+результат», из графики только иконки соцсетей внизу. Все цифры кейса (два канала,
+70/50 Мбит, ping 7 мс, jitter 2 мс, эфир 10:30–17:30) лежали в тексте абзацем.
+
+Идея страницы: кейс про трансляцию показать так, как его видит режиссёр — с
+монитора аппаратной. Отсюда три механики:
+
+1. Мультивью: окно ЭФИР + четыре источника, клик выводит источник в эфир,
+   в шапке бежит таймкод и мигает REC (кадры считаются по-настоящему, 25 к/с).
+2. Часы смены: ползунок 10:30 → 17:30 гоняет эфирное время в 60 раз быстрее
+   реального и синхронно двигает таймкод, счётчик uptime и график каналов.
+3. Телеметрия связи на canvas: две линии исходящего потока (основной и резерв)
+   рисуются от эфирного времени. Кнопка обрывает основной канал — резерв
+   подхватывает поток, счётчик обрывов эфира остаётся нулевым. Это главный
+   аргумент кейса, показанный вместо описания.
+
+Честность цифр: 70/50 Мбит, ping 7 мс, jitter 2 мс, 10:30–17:30, состав смены и
+оборудование — из текста кейса. Масштаб форума (около 1500 участников, 40+
+вендоров, пятичасовая программа, виртуальные стенды и демо-зоны) — из
+пресс-релиза OCS и публикаций о форуме, в блоке контекста это прямо подписано.
+График каналов — модель по паспортным показателям, а не запись мониторинга,
+и подписан так же.
+
+Шрифты IBM Plex Sans + IBM Plex Mono, локальные (/fonts/plex.css),
+кадры готовит scripts/eaton-online-assets.py.
+
+Правки: ТОЛЬКО через этот скрипт, build_v1 страницу пропускает по маркеру
+<!--custom-page-->."""
+import importlib.util
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, '..', '..', 'mirror'))
+
+spec = importlib.util.spec_from_file_location("rc", os.path.join(HERE, "react-chrome.py"))
+rc = importlib.util.module_from_spec(spec); spec.loader.exec_module(rc)
+
+METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->'
+
+IMG = '/images/eaton-online'
+URL = 'https://hand-marketing.ru/eaton_online/'
+
+# ─── паспорт проекта ────────────────────────────────────────────────────────
+FACTS = [
+    ('Клиент', 'Eaton'),
+    ('Событие', 'Форум OCS «IT-ОСЬ 2020», 19 ноября'),
+    ('Формат', 'Трансляция из офиса заказчика'),
+    ('Эфир', '10:30 — 17:30 МСК'),
+    ('Обрывов', '0'),
+]
+
+# ─── источники мультивью: (файл, метка, подпись под окном) ──────────────────
+SOURCES = [
+    ('cam1.jpg', 'КАМ 1 · СПИКЕР',
+     'Первая камера держит крупный план презентующего: это основная картинка семи часов эфира.',
+     'Спикеры за столом у брендволла Eaton, справа стойка с оборудованием'),
+    ('cam2.jpg', 'КАМ 2 · ПУЛЬТ',
+     'Микшер, внешняя звуковая карта и ноутбук с vMix: отсюда картинка уходит в сеть.',
+     'Микшерный пульт Yamaha и ноутбук с программной средой vMix на столе аппаратной'),
+    ('cam3.jpg', 'КАМ 3 · ПЛОЩАДКА',
+     'Вторая камера на штативе: её выводили, когда акцент нужен был на оборудовании Eaton.',
+     'Две камеры на штативах и световой прибор в офисе Eaton'),
+    ('slide.jpg', 'ЭФИР · ПЛАТФОРМА',
+     'Так поток выглядел у зрителя: спикер и презентация в окне виртуального стенда.',
+     'Окно трансляции на виртуальном стенде Eaton: спикер и слайд презентации'),
+]
+
+# ─── тракт сигнала: (индекс, заголовок, состав, описание) ───────────────────
+CHAIN = [
+    ('Съёмка', ['Камера 1 — крупный план', 'Камера 2 — акцент на оборудовании',
+                'Световые приборы', 'Петличные гарнитуры'],
+     'Оператор вёл две камеры сразу: одна всё время держала презентующего, вторая '
+     'подхватывала, когда нужно было показать оборудование. Свет ставили под офисный '
+     'потолок, звук снимали петличками, чтобы спикер не был привязан к столу.'),
+    ('Аппаратная', ['Мини-ПТС', 'Ноутбук с vMix', 'Внешняя звуковая карта',
+                    'Инженер трансляции'],
+     'Мини-ПТС — передвижная телевизионная станция: многокамерная съёмка и вещание в сеть '
+     'с одного рабочего места. Инженер сводил картинку и звук в vMix и отвечал за весь '
+     'контент, который уходил в эфир: подложки, презентации, титры.'),
+    ('Связь', ['Основной канал', 'Резервный канал', 'Роутер с автопереключением'],
+     'Своего интернета для вещания в офисе не было. Завели два независимых внешних канала '
+     'мобильного интернета и подняли их на одном роутере: основной и резервный. '
+     'При проблеме с основным система переключается на резерв сама.'),
+    ('Платформа', ['Виртуальный стенд Eaton', 'Демо-зона', 'Чат и вопросы из зала'],
+     'Поток уходил на площадку форума, в окно виртуального стенда Eaton. Там же зритель '
+     'скачивал материалы, заходил в демо-зону и задавал вопросы: связь работала в обе '
+     'стороны, поэтому канал нужен был широкий не только на отдачу.'),
+]
+
+# ─── контекст форума (по данным OCS) ────────────────────────────────────────
+FORUM = [
+    ('≈1500', 'участников из городов России и других стран'),
+    ('40+', 'вендоров со своими стендами на площадке'),
+    ('5 часов', 'шла программа форума'),
+    ('19.11.2020', 'третий форум OCS «IT-ОСЬ», полностью онлайн'),
+]
+
+# ─── показатели канала из кейса ─────────────────────────────────────────────
+LINK = [
+    ('in', '70', 'Mbit/sec'),
+    ('out', '50', 'Mbit/sec'),
+    ('ping', '7', 'ms'),
+    ('jitter', '2', 'ms'),
+]
+
+PAGE_CSS = """<style id="eo-css">
 :root{
  --eo-bg:#0A0D12; --eo-bg2:#0F141C; --eo-panel:#151C26; --eo-line:rgba(255,255,255,.12);
  --eo-txt:#E8EDF5; --eo-dim:#93A1B5; --eo-red:#FF3B2F; --eo-amber:#FF7A18;
@@ -357,9 +356,41 @@ body{margin:0}
  .eo-r{opacity:1;transform:none;transition:none}
  .eo-mv__rec i{animation:none}
 }
-</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-</head>
-<body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="eo"><section class="eo-hero"><div class="eo__wrap">
+</style>"""
+
+
+def esc(s):
+    return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+# ─── секции ─────────────────────────────────────────────────────────────────
+def multiview():
+    pgm = ''.join(
+        f'<img src="{IMG}/{f}" width="960" height="540" alt="{esc(alt)}"'
+        f'{" class=is-on" if i == 0 else ""}'
+        f'{" fetchpriority=high" if i == 0 else " loading=lazy"} decoding="async">'
+        for i, (f, label, _cap, alt) in enumerate(SOURCES))
+    btns = ''.join(
+        f'<button class="eo-mv__btn{" is-on" if i == 0 else ""}" type="button" data-i="{i}"'
+        f' aria-label="Вывести в эфир: {esc(label)}">'
+        f'<img src="{IMG}/{f}" width="480" height="270" loading="lazy" decoding="async" alt="">'
+        f'<span>{esc(label)}</span></button>'
+        for i, (f, label, _cap, _alt) in enumerate(SOURCES))
+    vu = ''.join('<i></i>' for _ in range(2))
+    return f'''<div class="eo-mv" id="eoMv">
+<div class="eo-mv__bar"><span class="eo-mv__rec"><i></i>REC</span>
+<span class="eo-mv__src" id="eoMvSrc">{esc(SOURCES[0][1])}</span>
+<span class="eo-mv__tc" id="eoMvTc">10:30:00:00</span></div>
+<div class="eo-mv__pgm">{pgm}<div class="eo-mv__air">В ЭФИРЕ</div>
+<div class="eo-mv__vu" id="eoVu" aria-hidden="true">{vu}</div></div>
+<div class="eo-mv__row">{btns}</div>
+<p class="eo-mv__cap" id="eoMvCap"><b>{esc(SOURCES[0][1])}.</b> {esc(SOURCES[0][2])}</p>
+</div>'''
+
+
+def hero():
+    facts = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in FACTS)
+    return f'''<section class="eo-hero"><div class="eo__wrap">
 <a class="eo-back" href="/project">← Проекты</a>
 <div class="eo-hero__grid">
 <div><div class="eo__eyebrow">Event · онлайн-трансляция</div>
@@ -367,18 +398,15 @@ body{margin:0}
 <p class="eo__lead eo-hero__lead">Eaton выступал на третьем форуме OCS Distribution
 «IT-ОСЬ 2020». Форум прошёл полностью онлайн, а спикер остался у себя в офисе:
 мы собрали там аппаратную и вели трансляцию на площадку форума с 10:30 до 17:30.</p></div>
-<div class="eo-mv" id="eoMv">
-<div class="eo-mv__bar"><span class="eo-mv__rec"><i></i>REC</span>
-<span class="eo-mv__src" id="eoMvSrc">КАМ 1 · СПИКЕР</span>
-<span class="eo-mv__tc" id="eoMvTc">10:30:00:00</span></div>
-<div class="eo-mv__pgm"><img src="/images/eaton-online/cam1.jpg" width="960" height="540" alt="Спикеры за столом у брендволла Eaton, справа стойка с оборудованием" class=is-on fetchpriority=high decoding="async"><img src="/images/eaton-online/cam2.jpg" width="960" height="540" alt="Микшерный пульт Yamaha и ноутбук с программной средой vMix на столе аппаратной" loading=lazy decoding="async"><img src="/images/eaton-online/cam3.jpg" width="960" height="540" alt="Две камеры на штативах и световой прибор в офисе Eaton" loading=lazy decoding="async"><img src="/images/eaton-online/slide.jpg" width="960" height="540" alt="Окно трансляции на виртуальном стенде Eaton: спикер и слайд презентации" loading=lazy decoding="async"><div class="eo-mv__air">В ЭФИРЕ</div>
-<div class="eo-mv__vu" id="eoVu" aria-hidden="true"><i></i><i></i></div></div>
-<div class="eo-mv__row"><button class="eo-mv__btn is-on" type="button" data-i="0" aria-label="Вывести в эфир: КАМ 1 · СПИКЕР"><img src="/images/eaton-online/cam1.jpg" width="480" height="270" loading="lazy" decoding="async" alt=""><span>КАМ 1 · СПИКЕР</span></button><button class="eo-mv__btn" type="button" data-i="1" aria-label="Вывести в эфир: КАМ 2 · ПУЛЬТ"><img src="/images/eaton-online/cam2.jpg" width="480" height="270" loading="lazy" decoding="async" alt=""><span>КАМ 2 · ПУЛЬТ</span></button><button class="eo-mv__btn" type="button" data-i="2" aria-label="Вывести в эфир: КАМ 3 · ПЛОЩАДКА"><img src="/images/eaton-online/cam3.jpg" width="480" height="270" loading="lazy" decoding="async" alt=""><span>КАМ 3 · ПЛОЩАДКА</span></button><button class="eo-mv__btn" type="button" data-i="3" aria-label="Вывести в эфир: ЭФИР · ПЛАТФОРМА"><img src="/images/eaton-online/slide.jpg" width="480" height="270" loading="lazy" decoding="async" alt=""><span>ЭФИР · ПЛАТФОРМА</span></button></div>
-<p class="eo-mv__cap" id="eoMvCap"><b>КАМ 1 · СПИКЕР.</b> Первая камера держит крупный план презентующего: это основная картинка семи часов эфира.</p>
+{multiview()}
 </div>
-</div>
-<dl class="eo-facts"><div><dt>Клиент</dt><dd>Eaton</dd></div><div><dt>Событие</dt><dd>Форум OCS «IT-ОСЬ 2020», 19 ноября</dd></div><div><dt>Формат</dt><dd>Трансляция из офиса заказчика</dd></div><div><dt>Эфир</dt><dd>10:30 — 17:30 МСК</dd></div><div><dt>Обрывов</dt><dd>0</dd></div></dl>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+<dl class="eo-facts">{facts}</dl>
+</div></section>'''
+
+
+def task():
+    forum = ''.join(f'<div><b>{esc(n)}</b><span>{esc(t)}</span></div>' for n, t in FORUM)
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-task eo-r">
 <div><div class="eo__eyebrow">Задача</div>
 <h2 class="eo-sec__h" style="margin-top:14px">Вывести спикера на форум,
@@ -394,30 +422,45 @@ body{margin:0}
 в форуме. Организовать отдельный интернет-канал вещания».</p>
 <p class="eo-note">Формулировка задачи из брифа.</p>
 </div></div>
-<div class="eo-r"><div class="eo-forum"><div><b>≈1500</b><span>участников из городов России и других стран</span></div><div><b>40+</b><span>вендоров со своими стендами на площадке</span></div><div><b>5 часов</b><span>шла программа форума</span></div><div><b>19.11.2020</b><span>третий форум OCS «IT-ОСЬ», полностью онлайн</span></div></div>
+<div class="eo-r"><div class="eo-forum">{forum}</div>
 <p class="eo-note">Масштаб площадки — по данным OCS Distribution об итогах форума
 «IT-ОСЬ 2020».</p></div>
 <div class="eo-shots eo-r">
-<figure class="eo-fig"><img src="/images/eaton-online/forum-hall.jpg" width="794" height="571"
+<figure class="eo-fig"><img src="{IMG}/forum-hall.jpg" width="794" height="571"
  loading="lazy" decoding="async"
  alt="3D-визуализация зала форума IT-ОСЬ 2020: виртуальные стенды вендоров, среди них Eaton">
 <figcaption>Виртуальный зал форума: стенды вендоров стоят так же, как стояли бы
 в павильоне.</figcaption></figure>
-<figure class="eo-fig"><img src="/images/eaton-online/forum-stand.jpg" width="1280" height="539"
+<figure class="eo-fig"><img src="{IMG}/forum-stand.jpg" width="1280" height="539"
  loading="lazy" decoding="async"
  alt="Виртуальный стенд Eaton на форуме: окно трансляции, кнопки демо-зоны, чат с менеджером">
 <figcaption>Стенд Eaton. В центре — окно, в которое уходил наш поток; рядом кнопки
 демо-зоны, розыгрыша и видеозвонка с вендором.</figcaption></figure>
 </div>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+</div></section>'''
+
+
+def chain():
+    nodes = ''.join(
+        f'<button class="eo-node{" is-on" if i == 0 else ""}" type="button" data-i="{i}">'
+        f'<span class="eo-node__n">0{i + 1}</span><h3>{esc(title)}</h3>'
+        + '<ul>' + ''.join(f'<li>{esc(x)}</li>' for x in items) + '</ul></button>'
+        for i, (title, items, _d) in enumerate(CHAIN))
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-r"><div class="eo__eyebrow">Решение · тракт</div>
 <h2 class="eo-sec__h" style="margin-top:14px">Путь картинки: от объектива
 до вопроса в чате</h2>
 <p class="eo-sec__sub">Подобрали оборудование и людей под задачу и собрали из них
 цепочку. Нажмите на ступень, чтобы посмотреть, что на ней происходило.</p></div>
-<div class="eo-chain eo-r"><button class="eo-node is-on" type="button" data-i="0"><span class="eo-node__n">01</span><h3>Съёмка</h3><ul><li>Камера 1 — крупный план</li><li>Камера 2 — акцент на оборудовании</li><li>Световые приборы</li><li>Петличные гарнитуры</li></ul></button><button class="eo-node" type="button" data-i="1"><span class="eo-node__n">02</span><h3>Аппаратная</h3><ul><li>Мини-ПТС</li><li>Ноутбук с vMix</li><li>Внешняя звуковая карта</li><li>Инженер трансляции</li></ul></button><button class="eo-node" type="button" data-i="2"><span class="eo-node__n">03</span><h3>Связь</h3><ul><li>Основной канал</li><li>Резервный канал</li><li>Роутер с автопереключением</li></ul></button><button class="eo-node" type="button" data-i="3"><span class="eo-node__n">04</span><h3>Платформа</h3><ul><li>Виртуальный стенд Eaton</li><li>Демо-зона</li><li>Чат и вопросы из зала</li></ul></button></div>
-<p class="eo-desc eo-r" id="eoChainDesc">Оператор вёл две камеры сразу: одна всё время держала презентующего, вторая подхватывала, когда нужно было показать оборудование. Свет ставили под офисный потолок, звук снимали петличками, чтобы спикер не был привязан к столу.</p>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+<div class="eo-chain eo-r">{nodes}</div>
+<p class="eo-desc eo-r" id="eoChainDesc">{esc(CHAIN[0][2])}</p>
+</div></section>'''
+
+
+def net():
+    link = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}<small>{esc(u)}</small></dd></div>'
+                   for k, v, u in LINK)
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-r"><div class="eo__eyebrow">Решение · связь</div>
 <h2 class="eo-sec__h" style="margin-top:14px">Канал, которого в офисе не было</h2>
 <p class="eo-sec__sub">Доступ к корпоративной сети нам не дали, а трансляции нужен
@@ -444,12 +487,17 @@ body{margin:0}
   <span class="eo-net__hint" id="eoNetHint">Так выглядела бы авария на площадке.
   Нажмите — и посмотрите, что увидит зритель.</span>
  </div>
- <dl class="eo-link"><div><dt>in</dt><dd>70<small>Mbit/sec</small></dd></div><div><dt>out</dt><dd>50<small>Mbit/sec</small></dd></div><div><dt>ping</dt><dd>7<small>ms</small></dd></div><div><dt>jitter</dt><dd>2<small>ms</small></dd></div></dl>
+ <dl class="eo-link">{link}</dl>
 </div>
 <p class="eo-note eo-r">Показатели каналов — из замеров на площадке. Сам график —
 модель по этим показателям, а не запись мониторинга: логи трансляции 2020 года
 не сохранились.</p>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+</div></section>'''
+
+
+def clock():
+    marks = ''.join(f'<span>{h}:30</span>' for h in range(10, 18))
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-r"><div class="eo__eyebrow">Смена</div>
 <h2 class="eo-sec__h" style="margin-top:14px">10:30 → 17:30, без перерывов</h2>
 <p class="eo-sec__sub">Трансляция началась в 10:30 по московскому времени и
@@ -466,28 +514,49 @@ body{margin:0}
   <input type="range" id="eoScrub" min="0" max="25200" step="1" value="0"
    aria-label="Время эфира, от 10:30 до 17:30">
  </div>
- <div class="eo-scrub__marks"><span>10:30</span><span>11:30</span><span>12:30</span><span>13:30</span><span>14:30</span><span>15:30</span><span>16:30</span><span>17:30</span></div>
+ <div class="eo-scrub__marks">{marks}</div>
  <p class="eo-clock__hint">Ползунок гонит эфирное время: вместе с ним идёт таймкод
  в аппаратной наверху и график каналов выше. Сам по себе эфир проигрывается в 60 раз
  быстрее реального.</p>
 </div>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+</div></section>'''
+
+
+def crew():
+    kit = [
+        ('Оператор', 'Держал две камеры: крупный план презентующего и акцент '
+                     'на презентационном оборудовании.'),
+        ('Инженер трансляции', 'Отвечал за весь контент, который уходил в эфир, '
+                               'и за сведение картинки со звуком.'),
+        ('Мини-ПТС', 'Передвижная станция для многокамерной съёмки с параллельной '
+                     'трансляцией в сеть.'),
+        ('vMix', 'Программная среда вещания на ноутбуке: переключение источников, '
+                 'титры, презентации.'),
+        ('Звук', 'Внешняя звуковая карта, микшер и петличные гарнитуры на спикерах.'),
+        ('Свет', 'Приборы под офисный потолок, чтобы кадр не выглядел переговоркой.'),
+    ]
+    items = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in kit)
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-r"><div class="eo__eyebrow">Площадка</div>
 <h2 class="eo-sec__h" style="margin-top:14px">Офис, который на день стал студией</h2></div>
 <div class="eo-crew eo-r">
-<figure class="eo-fig"><img src="/images/eaton-online/shift-desk.jpg" width="1280" height="720"
+<figure class="eo-fig"><img src="{IMG}/shift-desk.jpg" width="1280" height="720"
  loading="lazy" decoding="async"
  alt="Аппаратная в офисе Eaton: спикеры за столом у брендволла, стойка с оборудованием, камера">
 <figcaption>Брендволл, стол спикеров, стойка с оборудованием и камера — всё
 в одном офисном помещении.</figcaption></figure>
-<figure class="eo-fig"><img src="/images/eaton-online/shift-rack.jpg" width="1280" height="960"
+<figure class="eo-fig"><img src="{IMG}/shift-rack.jpg" width="1280" height="960"
  loading="lazy" decoding="async"
  alt="Рабочее место инженера трансляции: микшер Yamaha, ноутбук с vMix, кейсы, камеры на штативах">
 <figcaption>Рабочее место инженера: микшер, ноутбук с vMix, контрольный монитор.
 Слева — кейсы, в которых всё это приехало.</figcaption></figure>
 </div>
-<dl class="eo-kit eo-r"><div><dt>Оператор</dt><dd>Держал две камеры: крупный план презентующего и акцент на презентационном оборудовании.</dd></div><div><dt>Инженер трансляции</dt><dd>Отвечал за весь контент, который уходил в эфир, и за сведение картинки со звуком.</dd></div><div><dt>Мини-ПТС</dt><dd>Передвижная станция для многокамерной съёмки с параллельной трансляцией в сеть.</dd></div><div><dt>vMix</dt><dd>Программная среда вещания на ноутбуке: переключение источников, титры, презентации.</dd></div><div><dt>Звук</dt><dd>Внешняя звуковая карта, микшер и петличные гарнитуры на спикерах.</dd></div><div><dt>Свет</dt><dd>Приборы под офисный потолок, чтобы кадр не выглядел переговоркой.</dd></div></dl>
-</div></section><section class="eo-sec"><div class="eo__wrap">
+<dl class="eo-kit eo-r">{items}</dl>
+</div></section>'''
+
+
+def finale():
+    return f'''<section class="eo-sec"><div class="eo__wrap">
 <div class="eo-end eo-r">
 <div><div class="eo-big">0<small>Обрывов эфира за семь часов. Трансляция началась
 в 10:30 и закончилась в 17:30 по московскому времени без прерываний и сбоев.</small></div></div>
@@ -498,19 +567,10 @@ body{margin:0}
 <p>Такую же схему мы собираем под любое выступление, которое нельзя перенести
 в студию: конференция, годовое собрание, запуск продукта, обучение дилеров.</p>
 </div></div>
-</div></section></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
-// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
-function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
- n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
-// форма -> /api/lead.php
-function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
-document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
- var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
- var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
- fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
-var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
-if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
-})();</script><script>(function(){
+</div></section>'''
+
+
+PAGE_JS = """<script>(function(){
 var d=document,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
 
 // появление секций
@@ -521,7 +581,7 @@ var io=window.IntersectionObserver?new IntersectionObserver(function(es){
 
 // ── общее эфирное время: 0..25200 с (10:30 → 17:30), идёт в 60 раз быстрее ──
 var T=0,MAX=25200,SPEED=60,last=0,held=false;
-var CAPS=[['КАМ 1 · СПИКЕР','Первая камера держит крупный план презентующего: это основная картинка семи часов эфира.'],['КАМ 2 · ПУЛЬТ','Микшер, внешняя звуковая карта и ноутбук с vMix: отсюда картинка уходит в сеть.'],['КАМ 3 · ПЛОЩАДКА','Вторая камера на штативе: её выводили, когда акцент нужен был на оборудовании Eaton.'],['ЭФИР · ПЛАТФОРМА','Так поток выглядел у зрителя: спикер и презентация в окне виртуального стенда.']];
+var CAPS=[__CAPS__];
 var tcEl=d.getElementById('eoMvTc'),srcEl=d.getElementById('eoMvSrc'),capEl=d.getElementById('eoMvCap'),
     clockTc=d.getElementById('eoClockTc'),clockUp=d.getElementById('eoClockUp'),
     clockSt=d.getElementById('eoClockSt'),
@@ -671,60 +731,60 @@ else{requestAnimationFrame(frame);}
 
 // ── тракт сигнала ──
 var nodes=[].slice.call(d.querySelectorAll('.eo-node')),desc=d.getElementById('eoChainDesc'),
-    TXT=['Оператор вёл две камеры сразу: одна всё время держала презентующего, вторая подхватывала, когда нужно было показать оборудование. Свет ставили под офисный потолок, звук снимали петличками, чтобы спикер не был привязан к столу.','Мини-ПТС — передвижная телевизионная станция: многокамерная съёмка и вещание в сеть с одного рабочего места. Инженер сводил картинку и звук в vMix и отвечал за весь контент, который уходил в эфир: подложки, презентации, титры.','Своего интернета для вещания в офисе не было. Завели два независимых внешних канала мобильного интернета и подняли их на одном роутере: основной и резервный. При проблеме с основным система переключается на резерв сама.','Поток уходил на площадку форума, в окно виртуального стенда Eaton. Там же зритель скачивал материалы, заходил в демо-зону и задавал вопросы: связь работала в обе стороны, поэтому канал нужен был широкий не только на отдачу.'];
+    TXT=[__CHAIN__];
 nodes.forEach(function(b){b.addEventListener('click',function(){
  var i=+b.getAttribute('data-i');
  nodes.forEach(function(n,k){n.classList.toggle('is-on',k===i);});
  if(desc)desc.textContent=TXT[i];
 });});
-})();</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},{"@type":"ListItem","position":2,"name":"ONLINE трансляция Eaton с форума IT-ОСЬ 2020","item":"https://hand-marketing.ru/eaton_online/"}]}</script><style id="hm-cookie-consent">
-.hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-.hmc.is-on{transform:translateY(0)}
-.hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
-.hmc__card{position:relative;max-width:1200px;margin:0 auto;background:#fff;border:1px solid #f3f4f6;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
-.hmc__title{font-family:'Montserrat','Inter',sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0f172a;margin:0 0 6px}
-.hmc__text{font-size:14px;line-height:1.55;color:#334155;margin:0;max-width:820px}
-.hmc__text a{color:#2563eb;text-decoration:none}
-.hmc__text a:hover{text-decoration:underline;text-underline-offset:3px}
-.hmc__accept{flex:none;appearance:none;border:0;cursor:pointer;background:#111827;color:#fff;font-family:'Montserrat','Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:14px 32px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:background .15s,transform .15s,box-shadow .15s}
-.hmc__accept:hover{background:#1f2937;transform:translateY(-2px);box-shadow:0 16px 26px -10px rgba(0,0,0,.45)}
-.hmc__close{position:absolute;top:10px;right:12px;width:28px;height:28px;border:0;background:transparent;color:#94a3b8;font-size:22px;line-height:1;cursor:pointer;display:none}
-.hmc__close:hover{color:#475569}
-@media (max-width:760px){
- .hmc{padding:12px}
- .hmc__card{flex-direction:column;align-items:flex-start;gap:16px;padding:22px 20px}
- .hmc__accept{width:100%}
- .hmc__close{display:block}
-}
-</style>
-<div class="hmc" id="hmCookie" role="dialog" aria-label="Согласие на использование файлов cookie" aria-live="polite">
- <div class="hmc__card">
-  <div>
-   <div class="hmc__title">Мы используем файлы cookie</div>
-   <p class="hmc__text">Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даёте согласие на обработку файлов cookie. Подробнее в <a href="/privacy">Политике обработки персональных данных</a>.</p>
-  </div>
-  <button type="button" class="hmc__accept" id="hmCookieOk">ПРИНИМАЮ</button>
-  <button type="button" class="hmc__close" id="hmCookieX" aria-label="Закрыть">&times;</button>
- </div>
-</div>
-<script>(function(){
- var KEY='hm-cookie-consent';
- try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
- var box=document.getElementById('hmCookie');if(!box)return;
- function accept(){try{localStorage.setItem(KEY,'1');}catch(e){}box.classList.remove('is-on');setTimeout(function(){if(box&&box.parentNode)box.parentNode.removeChild(box);},400);}
- document.getElementById('hmCookieOk').addEventListener('click',accept);
- document.getElementById('hmCookieX').addEventListener('click',accept);
- setTimeout(function(){box.classList.add('is-on');},600);
-})();</script><script id="hm-metrika-goals">(function(){
-function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
-document.addEventListener('submit',function(e){
- var f=e.target;if(!f||f.tagName!=='FORM')return;
- if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
- g('form_submit');
-},true);
-document.addEventListener('click',function(e){
- var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
- if(!a)return;
- g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
-},true);
-})();</script></body></html>
+})();</script>"""
+
+BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList",'
+                 '"itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},'
+                 '{"@type":"ListItem","position":2,"name":"ONLINE трансляция Eaton с форума IT-ОСЬ 2020",'
+                 '"item":"' + URL + '"}]}</script>')
+
+HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ONLINE трансляция Eaton с форума OCS «IT-ОСЬ 2020» | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: онлайн-трансляция выступления Eaton на форуме OCS Distribution «IT-ОСЬ 2020». Аппаратная в офисе заказчика, две камеры, мини-ПТС и vMix, два независимых канала мобильного интернета с автопереключением. Семь часов эфира с 10:30 до 17:30 без сбоев.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{URL}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ONLINE трансляция Eaton с форума «IT-ОСЬ 2020» | кейс Hand Marketing">
+<meta property="og:description" content="Офис заказчика на день стал студией: две камеры, мини-ПТС, vMix и два канала мобильного интернета. Семь часов эфира на виртуальный стенд форума без единого обрыва.">
+<meta property="og:url" content="{URL}">
+<meta property="og:image" content="https://hand-marketing.ru{IMG}/shift-desk.jpg">
+<meta property="og:site_name" content="Hand Marketing"><meta property="og:locale" content="ru_RU">
+<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
+<!--custom-page-->
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+{rc.FONT}<link href="/fonts/plex.css" rel="stylesheet">{rc.CSS}{PAGE_CSS}{METRIKA}
+</head>
+<body>'''
+
+
+def js():
+    caps = ','.join("['%s','%s']" % (label.replace("'", "\\'"), cap.replace("'", "\\'"))
+                    for _f, label, cap, _alt in SOURCES)
+    chain = ','.join("'%s'" % d.replace("'", "\\'") for _t, _i, d in CHAIN)
+    return PAGE_JS.replace('__CAPS__', caps).replace('__CHAIN__', chain)
+
+
+def build():
+    return (HEAD + rc.header() + '<main class="eo">' + hero() + task() + chain() +
+            net() + clock() + crew() + finale() + '</main><a id="lead"></a>' +
+            rc.footer() + rc.JS + js() + BREADCRUMB_LD + '</body></html>')
+
+
+if __name__ == '__main__':
+    out = os.path.join(ROOT, 'eaton_online')
+    os.makedirs(out, exist_ok=True)
+    open(os.path.join(out, 'index.html'), 'w', encoding='utf-8').write(build())
+    # index-a2.html это деплой-источник (workflow переименовывает его в index.html)
+    # и затёр бы кастомную страницу на проде.
+    a2 = os.path.join(out, 'index-a2.html')
+    if os.path.exists(a2):
+        os.remove(a2)
+        print('удалён устаревший index-a2.html')
+    print('written', os.path.join(out, 'index.html'))
