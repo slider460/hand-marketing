@@ -1,116 +1,152 @@
-<!doctype html><html lang="ru" class="no-js"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>3D Mapping шоу в Ставрополе: 27 проекторов на здание Правительства | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: 3D mapping шоу на открытии новогодних мероприятий в Ставрополе 13 декабря 2019. 27 проекторов Epson EB-L1755U в башнях за 97 метров от фасада, 410 000 люмен, четыре лазера, дополненная реальность и более 25 000 зрителей на площади Ленина.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hand-marketing.ru/3d/stavropol/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="3D Mapping шоу в Ставрополе | кейс Hand Marketing">
-<meta property="og:description" content="Восемь минут проекции на здание Правительства края: 27 проекторов в башнях, 410 000 люмен, лазеры в ёлку и 25 тысяч человек на площади.">
-<meta property="og:url" content="https://hand-marketing.ru/3d/stavropol/">
-<meta property="og:image" content="https://hand-marketing.ru/images/lib/as3130-6433-4331-b864-383333663738/-3-1.jpg">
-<meta property="og:site_name" content="Hand Marketing"><meta property="og:locale" content="ru_RU">
-<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
-<!--custom-page-->
-<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
-<link href="/fonts/montserrat.css" rel="stylesheet"><link href="/fonts/unbounded-fira.css" rel="stylesheet"><style id="hm-chrome-css">
-/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
-#root header,#root footer{display:none!important}
-body>.hm-topbar,.hm-topbar{display:none!important}
-/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
-/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
-#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
-.hm-chrome,.hm-chrome *{box-sizing:border-box}
-.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
-/* ШАПКА */
-.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
-.hm-hdr__nav{display:flex;align-items:center;gap:34px}
-.hm-hdr__nav.r{justify-content:flex-end}
-.hm-hdr a{color:#14171C;text-decoration:none}
-.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
-.hm-hdr__nav a:hover{opacity:.6}
-.hm-hdr__logo{display:flex;justify-content:center}
-.hm-hdr__logo img{height:54px;width:auto;display:block}
-.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
-.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
-.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
-/* ПОДВАЛ — фиолетовая форма */
-.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
-.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
-.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
-.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
-.hm-cta__consent a{color:#fff}
-.hm-cta form{display:flex;flex-direction:column;gap:14px}
-.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
-.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
-  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
-.hm-cta button:hover{transform:translateY(-2px)}
-.hm-cta__msg{font-weight:700;padding:8px 0}
-/* ПОДВАЛ — тёмный футер */
-.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
-.hm-foot__in{max-width:1080px;margin:0 auto}
-.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
-.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
-.hm-foot__nav a:hover{color:#FFE000}
-.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
-.hm-foot a{color:#cfd2d6}
-.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
-.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
-.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
-.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
-.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
-.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
-.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
-@media(max-width:860px){
-  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
-  .hm-hdr__nav.l{display:none}
-  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
-  .hm-hdr__logo{justify-content:flex-start}
-  .hm-hdr__logo img{height:40px}
-  .hm-hdr__contacts{margin-left:0}
-  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
-  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
-}
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Генерит mirror/3d/stavropol/index.html: кейс «3D Mapping шоу в Ставрополе»
+(открытие новогодних мероприятий, площадь Ленина, 13 декабря 2019).
 
-/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
-   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
-   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
-   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
-body{margin:0}
-@media(min-width:861px){
- .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
- .hm-hdr__nav,.hm-hdr__contacts{display:contents}
- .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
-  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
- .hm-hdr a:hover{opacity:.6}
- .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
- .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
- .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
- .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
-@media(min-width:1200px){
- .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
-@media(min-width:960px) and (max-width:1199px){
- .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
- .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
- .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
- .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
- .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
-@media(min-width:861px) and (max-width:959px){
- .hm-hdr a[href="/about"]{left:2%}
- .hm-hdr a[href="/service"]{left:15%}
- .hm-hdr a[href="/project"]{left:27%}
- .hm-hdr a[href="/clients"]{right:31%}
- .hm-hdr a[href="/contacts"]{right:18%}
- .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
-</style><style id="sv-css">
+Что было раньше: запечённая Tilda-страница «задача → решение → результат»
+сплошным текстом. Вся техника кейса (27 проекторов, 410 000 лм, 97 м, 150 лк/м²)
+лежала одним абзацем, а из графики были четыре фотографии в галерее.
+
+Идея страницы: показать шоу так, как его собирали, то есть с пульта.
+Отсюда три механики, которых на сайте ещё не было:
+
+1. Пульт мэппинга. Верхняя камера в съёмке стоит неподвижно всю программу,
+   поэтому шесть сцен шоу лежат в одной геометрии фасада. На кадр положены
+   девять зон проекции в перспективе здания: гасишь стек, зона на фасаде
+   темнеет с мягкими краями (соседи перекрывают только стык), а счётчик
+   пересчитывает люмены и люксы на квадратный метр.
+2. Разрез площади в SVG: башня, 97 метров, луч над головами зрителей.
+   Кнопка опускает приборы на землю и рисует тени от толпы и декораций на
+   фасаде, то есть показывает, зачем нужны были башни.
+3. Туман по скроллу: главный сюжет вечера (площадь накрыло туманом за час
+   до старта) отыгран прокруткой, туман поднимается на высоту здания.
+
+Честность цифр: 27 проекторов Epson EB-L1755U, стек, башни, 97 м, 410 000 лм,
+150 лк/м², ELPLM10, 24 кг, 8 минут, более 25 000 зрителей, туман и AR-приложение
+из текста кейса. Дата 13.12.2019, площадь Ленина, ёлка 25 м и место в рейтинге
+ТурСтата, четыре лазера, зенитные прожекторы на 4 км, 100 кВт звука, название
+и персонажи приложения StavAR, программа из 150+ мероприятий — из публикаций
+о вечере (КП-Ставрополь, «Своё ТВ», «Победа26»). Южные слоны как символ края —
+по материалам Ставропольского краеведческого музея. Разбивка проекции на девять
+зон — реконструкция по съёмке, на странице подписана.
+
+Шрифты Unbounded + Fira Sans, локальные (/fonts/unbounded-fira.css),
+кадры готовит scripts/stavropol-3d-assets.py.
+
+Правки: ТОЛЬКО через этот скрипт, build_v1 страницу пропускает по маркеру
+<!--custom-page-->."""
+import importlib.util
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, '..', '..', 'mirror'))
+
+spec = importlib.util.spec_from_file_location("rc", os.path.join(HERE, "react-chrome.py"))
+rc = importlib.util.module_from_spec(spec); spec.loader.exec_module(rc)
+
+METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->'
+
+IMG = '/images/stavropol-3d'
+LIB = '/images/lib'
+URL = 'https://hand-marketing.ru/3d/stavropol/'
+VIDEO = '/media/stavropol-3dmapping.mp4'
+
+# фотографии вечера, оставшиеся от старой страницы (общий каталог зеркала)
+PH_ANGELS = LIB + '/as3130-6433-4331-b864-383333663738/-3-1.jpg'
+PH_TREES = LIB + '/as3564-6366-4465-b066-336636633266/-6-1.jpg'
+PH_ELEPH = LIB + '/as3935-3430-4336-a233-353836626537/0039-2.jpg'
+PH_CARPET = LIB + '/as3261-3734-4335-b536-346564646634/0055-1.jpg'
+PH_BEAMS = '/case-assets/7e5bfc88_0001-2.jpg'
+
+# ─── паспорт проекта ────────────────────────────────────────────────────────
+FACTS = [
+    ('Клиент', 'Администрация города Ставрополя'),
+    ('Дата', '13 декабря 2019'),
+    ('Площадка', 'Площадь Ленина'),
+    ('Проекторов', '27 в стеках'),
+    ('Зрителей', 'более 25 000'),
+]
+
+# ─── геометрия фасада на кадрах верхней камеры ──────────────────────────────
+# Кадры режутся одинаково (crop 960×300 от 120,270 в scripts/stavropol-3d-assets.py),
+# камера неподвижна, поэтому фасад везде лежит одним четырёхугольником.
+QUAD = [(30.0, 26.0), (938.0, 42.0), (938.0, 251.0), (31.0, 187.0)]
+ZONES = 9          # 9 зон по 3 проектора в стеке = 27 приборов
+PROJ_TOTAL = 27
+LM_TOTAL = 410000  # суммарный световой поток, лм
+LUX_TOTAL = 150    # люкс на квадратный метр на поверхности фасада
+
+# ─── сцены шоу: (файл, короткое имя, подпись) ───────────────────────────────
+SCENES = [
+    ('scene-arcade', 'Аркада',
+     'Первым делом шоу ломает привычные очертания здания: фасад разбирается '
+     'и собирается заново античной аркадой.'),
+    ('scene-carpet', 'Ковёр',
+     'Орнамент из ромбов расходится от центра и ложится по окнам, как узор по ткани. '
+     'Окна работают не помехой, а частью рисунка.'),
+    ('scene-deer', 'Олени',
+     'Светящееся стадо идёт вдоль всей длины фасада. Кадр держится на движении, '
+     'поэтому яркость здесь важнее детали.'),
+    ('scene-elephants', 'Слоны',
+     'Символ края выходит на здание Правительства: южные слоны идут по фасаду '
+     'и затем поднимаются на крышу.'),
+    ('scene-tree', 'Золотой зал',
+     'Золотой орнамент во всю длину и ёлка в центре: самая плотная по свету сцена, '
+     'здесь работают все 27 проекторов сразу.'),
+    ('scene-laser', 'Лазер',
+     'Лазерная графика ложится поверх проекции и уводит шоу к финалу: '
+     'дальше свет уйдёт с фасада в ёлку.'),
+]
+
+# ─── свет, лазеры, звук ─────────────────────────────────────────────────────
+NUMBERS = [
+    ('410 000', 'люмен', 'Суммарный световой поток 27 проекторов Epson EB-L1755U.'),
+    ('150', 'люкс/м²', 'Освещённость, которую эта связка дала на поверхности фасада.'),
+    ('≈2 700', 'м²', 'Столько площади закрывает такой поток при такой освещённости: '
+                     'расчёт 410 000 / 150.'),
+    ('97', 'метров', 'Дистанция от башен с проекторами до здания Правительства.'),
+    ('4', 'лазера', 'Мощные лазеры работали и по фасаду, и по небу над площадью.'),
+    ('4', 'километра', 'На такую высоту били зенитные прожекторы: их лучи видно с окраин.'),
+    ('100', 'кВт звука', 'Звуковой комплект площади, рассчитанный на 25 тысяч человек.'),
+    ('25', 'метров', 'Высота главной ёлки края: в тот год она вошла в топ-25 России '
+                     'по версии ТурСтата.'),
+]
+
+# ─── персонажи приложения StavAR ────────────────────────────────────────────
+AR_HEROES = [
+    ('Дед Мороз', 'Главный персонаж вечера, к нему выстраивалась очередь за селфи.'),
+    ('Слонёнок', 'Тот самый символ края, только маленький и виртуальный.'),
+    ('Крылатый монстр', 'Сказочная нечисть, которую искали по площади как в квесте.'),
+    ('Гигантская мышь', 'Символ наступавшего года, ростом с человека.'),
+]
+
+# ─── галерея вечера ─────────────────────────────────────────────────────────
+GALLERY = [
+    (PH_ANGELS, 'Ангелы и крест на фасаде здания Правительства Ставропольского края'),
+    (PH_CARPET, 'Ковровый орнамент во всю длину фасада, вид сверху'),
+    (PH_ELEPH, 'Слоны на фасаде здания Правительства, вид сверху'),
+    (PH_TREES, 'Ёлки на площади Ленина и зелёные лучи лазеров'),
+    (IMG + '/facade-laser.jpg', 'Лазерная графика по фасаду и толпа на площади'),
+    (PH_BEAMS, 'Лучи лазеров уходят в небо над площадью Ленина'),
+]
+
+
+def zone_pts(i):
+    """Полигон i-й зоны проекции в перспективе фасада."""
+    tl, tr, br, bl = QUAD
+    a, b = i / ZONES, (i + 1) / ZONES
+
+    def top(t):
+        return (tl[0] + (tr[0] - tl[0]) * t, tl[1] + (tr[1] - tl[1]) * t)
+
+    def bot(t):
+        return (bl[0] + (br[0] - bl[0]) * t, bl[1] + (br[1] - bl[1]) * t)
+
+    pts = [top(a), top(b), bot(b), bot(a)]
+    return ' '.join('%.1f,%.1f' % p for p in pts)
+
+
+PAGE_CSS = """<style id="sv-css">
 :root{
  --sv-bg:#05070B; --sv-bg2:#0A0E15; --sv-panel:#0E141D; --sv-line:rgba(255,255,255,.13);
  --sv-txt:#EEF2F8; --sv-dim:#8E9BAE; --sv-mute:#66717F;
@@ -378,10 +414,18 @@ body{margin:0}
  .sv-desk__live i,.sv-phone__mark::after,.sv-beams .ray{animation:none}
  .sv-fog__veil{transition:none}
 }
-</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-</head>
-<body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="sv"><section class="sv-hero">
-<div class="sv-hero__bg"><img src="/images/lib/as3130-6433-4331-b864-383333663738/-3-1.jpg" width="1262" height="841"
+</style>"""
+
+
+def esc(s):
+    return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+# ─── секции ─────────────────────────────────────────────────────────────────
+def hero():
+    facts = ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), esc(v)) for k, v in FACTS)
+    return f'''<section class="sv-hero">
+<div class="sv-hero__bg"><img src="{PH_ANGELS}" width="1262" height="841"
  alt="Проекция ангелов на фасаде здания Правительства Ставропольского края"
  fetchpriority="high" decoding="async"></div>
 <div class="sv__wrap sv-hero__in">
@@ -391,8 +435,12 @@ body{margin:0}
 <p class="sv__lead sv-hero__lead">Открытие новогодних мероприятий на площади Ленина.
 27 проекторов в башнях за 97 метров от фасада, четыре лазера, зенитные прожекторы
 и дополненная реальность на площади, куда пришли больше 25 тысяч человек.</p>
-<dl class="sv-facts"><div><dt>Клиент</dt><dd>Администрация города Ставрополя</dd></div><div><dt>Дата</dt><dd>13 декабря 2019</dd></div><div><dt>Площадка</dt><dd>Площадь Ленина</dd></div><div><dt>Проекторов</dt><dd>27 в стеках</dd></div><div><dt>Зрителей</dt><dd>более 25 000</dd></div></dl>
-</div></section><section class="sv-sec"><div class="sv__wrap"><div class="sv-task sv-r">
+<dl class="sv-facts">{facts}</dl>
+</div></section>'''
+
+
+def task():
+    return f'''<section class="sv-sec"><div class="sv__wrap"><div class="sv-task sv-r">
 <div><div class="sv__eyebrow">Задача</div>
 <h2 class="sv-sec__h">Собрать площадь и удержать её</h2>
 <div class="sv-quote">Шоу открывало новогоднюю программу города: следом шли ещё
@@ -407,14 +455,18 @@ body{margin:0}
 <p>Из этого выросли три решения, которые определили проект: технику убрать
 с площади в башни, картинку строить на перекрытии проекторных стеков, а ожидание
 занять приложением дополненной реальности.</p>
-</div></div></div></section><section class="sv-sec" id="svFogSec"><div class="sv__wrap">
+</div></div></div></section>'''
+
+
+def fog():
+    return f'''<section class="sv-sec" id="svFogSec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">13 декабря, вечер</div>
 <h2 class="sv-sec__h">За час до старта площадь исчезла</h2>
 <p class="sv-sec__sub">На Ставрополь опустился густой туман. Он плотно лёг на площадь
 и скрыл от глаз декорации и здания. Со стороны это выглядело как сорванное
 мероприятие: проекция на фасад, которого не видно, невозможна.</p></div>
 <div class="sv-fog sv-r" id="svFog">
-<img src="/images/stavropol-3d/fog.jpg" width="1120" height="510" loading="lazy" decoding="async"
+<img src="{IMG}/fog.jpg" width="1120" height="510" loading="lazy" decoding="async"
  alt="Ковровый орнамент на фасаде и туман над площадью Ленина в Ставрополе">
 <div class="sv-fog__veil" aria-hidden="true"></div>
 <div class="sv-fog__scale" aria-hidden="true"><span>крыша</span><span>карниз</span><span>площадь</span></div>
@@ -428,7 +480,32 @@ body{margin:0}
 в чистом воздухе.</p>
 <p class="sv-note">Логика вечера описана в отчёте по проекту. Анимация тумана на этой
 странице: иллюстрация, а не запись метеоданных.</p>
-</div></section><section class="sv-sec"><div class="sv__wrap">
+</div></section>'''
+
+
+def desk():
+    imgs = ''.join(
+        '<img src="%s/%s.jpg" width="960" height="300" alt="Сцена шоу: %s"%s%s decoding="async">'
+        % (IMG, f, esc(name.lower()), ' class="is-on"' if i == 0 else '',
+           '' if i == 0 else ' loading="lazy"')
+        for i, (f, name, _cap) in enumerate(SCENES))
+    zones = ''.join(
+        '<g data-z="%d"><polygon class="z-dark" points="%s"></polygon>'
+        '<polygon class="z-hit" points="%s"><title>Стек %d: 3 проектора</title></polygon></g>'
+        % (i, zone_pts(i), zone_pts(i), i + 1)
+        for i in range(ZONES))
+    stacks = ''.join(
+        '<button class="sv-stack" type="button" data-z="%d"'
+        ' aria-label="Выключить стек %d">'
+        '<b>%d</b>3 прибора</button>' % (i, i + 1, i + 1)
+        for i in range(ZONES))
+    scenes = ''.join(
+        '<button class="sv-scene%s" type="button" data-s="%d" aria-label="Сцена: %s">'
+        '<img src="%s/%s.jpg" width="480" height="150" loading="lazy" decoding="async" alt="">'
+        '<span>%s</span></button>'
+        % (' is-on' if i == 0 else '', i, esc(name), IMG, f, esc(name))
+        for i, (f, name, _cap) in enumerate(SCENES))
+    return f'''<section class="sv-sec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">Решение · свет</div>
 <h2 class="sv-sec__h">Пульт: 27 проекторов на один фасад</h2>
 <p class="sv-sec__sub">27 проекторов <b>Epson EB-L1755U</b> собрали в стеки и развели
@@ -439,12 +516,12 @@ body{margin:0}
 <div class="sv-desk sv-r" id="svDesk">
 <div class="sv-desk__bar">
 <span class="sv-desk__live"><i></i>LIVE</span>
-<span id="svSceneName">Аркада</span>
+<span id="svSceneName">{esc(SCENES[0][1])}</span>
 <span class="sv-desk__read">
-<span>в работе <b id="svProj">27/27</b></span>
+<span>в работе <b id="svProj">{PROJ_TOTAL}/{PROJ_TOTAL}</b></span>
 <span>поток <b id="svLm">410 000</b> лм</span>
 <span>на фасаде <b id="svLux">150</b> лк/м²</span></span></div>
-<div class="sv-desk__screen"><img src="/images/stavropol-3d/scene-arcade.jpg" width="960" height="300" alt="Сцена шоу: аркада" class="is-on" decoding="async"><img src="/images/stavropol-3d/scene-carpet.jpg" width="960" height="300" alt="Сцена шоу: ковёр" loading="lazy" decoding="async"><img src="/images/stavropol-3d/scene-deer.jpg" width="960" height="300" alt="Сцена шоу: олени" loading="lazy" decoding="async"><img src="/images/stavropol-3d/scene-elephants.jpg" width="960" height="300" alt="Сцена шоу: слоны" loading="lazy" decoding="async"><img src="/images/stavropol-3d/scene-tree.jpg" width="960" height="300" alt="Сцена шоу: золотой зал" loading="lazy" decoding="async"><img src="/images/stavropol-3d/scene-laser.jpg" width="960" height="300" alt="Сцена шоу: лазер" loading="lazy" decoding="async">
+<div class="sv-desk__screen">{imgs}
 <svg class="sv-zones" id="svZones" viewBox="0 0 960 300" preserveAspectRatio="none"
  role="group" aria-label="Зоны проекции на фасаде">
 <defs><linearGradient id="svFade" x1="0" y1="0" x2="1" y2="0">
@@ -452,12 +529,12 @@ body{margin:0}
 <stop offset="0.16" stop-color="#04070C" stop-opacity="1"></stop>
 <stop offset="0.84" stop-color="#04070C" stop-opacity="1"></stop>
 <stop offset="1" stop-color="#04070C" stop-opacity="0"></stop></linearGradient></defs>
-<g data-z="0"><polygon class="z-dark" points="30.0,26.0 130.9,27.8 131.8,194.1 31.0,187.0"></polygon><polygon class="z-hit" points="30.0,26.0 130.9,27.8 131.8,194.1 31.0,187.0"><title>Стек 1: 3 проектора</title></polygon></g><g data-z="1"><polygon class="z-dark" points="130.9,27.8 231.8,29.6 232.6,201.2 131.8,194.1"></polygon><polygon class="z-hit" points="130.9,27.8 231.8,29.6 232.6,201.2 131.8,194.1"><title>Стек 2: 3 проектора</title></polygon></g><g data-z="2"><polygon class="z-dark" points="231.8,29.6 332.7,31.3 333.3,208.3 232.6,201.2"></polygon><polygon class="z-hit" points="231.8,29.6 332.7,31.3 333.3,208.3 232.6,201.2"><title>Стек 3: 3 проектора</title></polygon></g><g data-z="3"><polygon class="z-dark" points="332.7,31.3 433.6,33.1 434.1,215.4 333.3,208.3"></polygon><polygon class="z-hit" points="332.7,31.3 433.6,33.1 434.1,215.4 333.3,208.3"><title>Стек 4: 3 проектора</title></polygon></g><g data-z="4"><polygon class="z-dark" points="433.6,33.1 534.4,34.9 534.9,222.6 434.1,215.4"></polygon><polygon class="z-hit" points="433.6,33.1 534.4,34.9 534.9,222.6 434.1,215.4"><title>Стек 5: 3 проектора</title></polygon></g><g data-z="5"><polygon class="z-dark" points="534.4,34.9 635.3,36.7 635.7,229.7 534.9,222.6"></polygon><polygon class="z-hit" points="534.4,34.9 635.3,36.7 635.7,229.7 534.9,222.6"><title>Стек 6: 3 проектора</title></polygon></g><g data-z="6"><polygon class="z-dark" points="635.3,36.7 736.2,38.4 736.4,236.8 635.7,229.7"></polygon><polygon class="z-hit" points="635.3,36.7 736.2,38.4 736.4,236.8 635.7,229.7"><title>Стек 7: 3 проектора</title></polygon></g><g data-z="7"><polygon class="z-dark" points="736.2,38.4 837.1,40.2 837.2,243.9 736.4,236.8"></polygon><polygon class="z-hit" points="736.2,38.4 837.1,40.2 837.2,243.9 736.4,236.8"><title>Стек 8: 3 проектора</title></polygon></g><g data-z="8"><polygon class="z-dark" points="837.1,40.2 938.0,42.0 938.0,251.0 837.2,243.9"></polygon><polygon class="z-hit" points="837.1,40.2 938.0,42.0 938.0,251.0 837.2,243.9"><title>Стек 9: 3 проектора</title></polygon></g></svg>
+{zones}</svg>
 <div class="sv-desk__tag">ФАСАД · 9 ЗОН</div></div>
-<div class="sv-stacks"><button class="sv-stack" type="button" data-z="0" aria-label="Выключить стек 1"><b>1</b>3 прибора</button><button class="sv-stack" type="button" data-z="1" aria-label="Выключить стек 2"><b>2</b>3 прибора</button><button class="sv-stack" type="button" data-z="2" aria-label="Выключить стек 3"><b>3</b>3 прибора</button><button class="sv-stack" type="button" data-z="3" aria-label="Выключить стек 4"><b>4</b>3 прибора</button><button class="sv-stack" type="button" data-z="4" aria-label="Выключить стек 5"><b>5</b>3 прибора</button><button class="sv-stack" type="button" data-z="5" aria-label="Выключить стек 6"><b>6</b>3 прибора</button><button class="sv-stack" type="button" data-z="6" aria-label="Выключить стек 7"><b>7</b>3 прибора</button><button class="sv-stack" type="button" data-z="7" aria-label="Выключить стек 8"><b>8</b>3 прибора</button><button class="sv-stack" type="button" data-z="8" aria-label="Выключить стек 9"><b>9</b>3 прибора</button></div>
-<div class="sv-desk__scenes"><button class="sv-scene is-on" type="button" data-s="0" aria-label="Сцена: Аркада"><img src="/images/stavropol-3d/scene-arcade.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Аркада</span></button><button class="sv-scene" type="button" data-s="1" aria-label="Сцена: Ковёр"><img src="/images/stavropol-3d/scene-carpet.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Ковёр</span></button><button class="sv-scene" type="button" data-s="2" aria-label="Сцена: Олени"><img src="/images/stavropol-3d/scene-deer.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Олени</span></button><button class="sv-scene" type="button" data-s="3" aria-label="Сцена: Слоны"><img src="/images/stavropol-3d/scene-elephants.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Слоны</span></button><button class="sv-scene" type="button" data-s="4" aria-label="Сцена: Золотой зал"><img src="/images/stavropol-3d/scene-tree.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Золотой зал</span></button><button class="sv-scene" type="button" data-s="5" aria-label="Сцена: Лазер"><img src="/images/stavropol-3d/scene-laser.jpg" width="480" height="150" loading="lazy" decoding="async" alt=""><span>Лазер</span></button></div>
+<div class="sv-stacks">{stacks}</div>
+<div class="sv-desk__scenes">{scenes}</div>
 <div class="sv-desk__foot">
-<p class="sv-desk__cap" id="svDeskCap"><b>Аркада.</b> Первым делом шоу ломает привычные очертания здания: фасад разбирается и собирается заново античной аркадой.</p>
+<p class="sv-desk__cap" id="svDeskCap"><b>{esc(SCENES[0][1])}.</b> {esc(SCENES[0][2])}</p>
 <button class="sv-btn sv-btn--fill" type="button" id="svAllOn">Включить все стеки</button>
 </div></div>
 <p class="sv-note">Нажмите на зону прямо на фасаде или на номер стека внизу:
@@ -465,7 +542,11 @@ body{margin:0}
 наша реконструкция по съёмке. В кейсе зафиксированы 27 проекторов, стековая
 установка, башни и дистанция 97 метров. Кадры сняты неподвижной верхней камерой,
 поэтому геометрия фасада во всех сценах одна и та же.</p>
-</div></section><section class="sv-sec"><div class="sv__wrap">
+</div></section>'''
+
+
+def cut():
+    return f'''<section class="sv-sec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">Решение · оптика</div>
 <h2 class="sv-sec__h">Почему башни, а не приборы на площади</h2>
 <p class="sv-sec__sub">Проекторы весят 24 килограмма и допускают проецирование
@@ -563,38 +644,48 @@ body{margin:0}
 <button class="sv-btn" type="button" id="svCutBtn">Опустить приборы на площадь</button>
 </div></div>
 <div class="sv-kit sv-r">
-<figure class="sv-fig"><img src="/images/stavropol-3d/tower.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/tower.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Башня с проекторами на площади Ленина"><figcaption>
 <b>Башня</b>Стек приборов поднят над площадью, лучи идут поверх зрителей и декораций.
 </figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/rig.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/rig.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Монтаж проекционного оборудования на ферме"><figcaption>
 <b>Монтаж</b>Сборка и наводка шли днём, при свете: ночью выравнивать 27 зон уже поздно.
 </figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/laser-soft.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/laser-soft.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Лазерная графика в программе на планшете"><figcaption>
 <b>Лазерная графика</b>Рисунок лазеров готовится и правится на площадке, прямо перед стартом.
 </figcaption></figure>
-</div></div></section><section class="sv-sec"><div class="sv__wrap">
+</div></div></section>'''
+
+
+def numbers():
+    tiles = ''.join('<div><b class="sv-num">%s</b><i>%s</i><span>%s</span></div>'
+                    % (esc(n), esc(u), esc(t)) for n, u, t in NUMBERS)
+    return f'''<section class="sv-sec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">Комплект</div>
 <h2 class="sv-sec__h">Чем светили, чем били и чем звучали</h2>
 <p class="sv-sec__sub">Проекция была только частью вечера. Вместе с ней работали лазеры,
 зенитные прожекторы и фальконы, а всю программу вёл звуковой комплект на сто киловатт.</p></div>
-<div class="sv-nums sv-r"><div><b class="sv-num">410 000</b><i>люмен</i><span>Суммарный световой поток 27 проекторов Epson EB-L1755U.</span></div><div><b class="sv-num">150</b><i>люкс/м²</i><span>Освещённость, которую эта связка дала на поверхности фасада.</span></div><div><b class="sv-num">≈2 700</b><i>м²</i><span>Столько площади закрывает такой поток при такой освещённости: расчёт 410 000 / 150.</span></div><div><b class="sv-num">97</b><i>метров</i><span>Дистанция от башен с проекторами до здания Правительства.</span></div><div><b class="sv-num">4</b><i>лазера</i><span>Мощные лазеры работали и по фасаду, и по небу над площадью.</span></div><div><b class="sv-num">4</b><i>километра</i><span>На такую высоту били зенитные прожекторы: их лучи видно с окраин.</span></div><div><b class="sv-num">100</b><i>кВт звука</i><span>Звуковой комплект площади, рассчитанный на 25 тысяч человек.</span></div><div><b class="sv-num">25</b><i>метров</i><span>Высота главной ёлки края: в тот год она вошла в топ-25 России по версии ТурСтата.</span></div></div>
+<div class="sv-nums sv-r">{tiles}</div>
 <div class="sv-kit sv-r">
-<figure class="sv-fig"><img src="/images/stavropol-3d/projector.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/projector.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Проекционный блок на площади"><figcaption>
 <b>Проектор</b>Epson EB-L1755U: 24 кг, лазерный источник света, среднефокусный объектив ELPLM10.
 </figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/desk.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/desk.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Микшерный пульт на площадке"><figcaption>
 <b>Пульт</b>Свет, видео и звук сводятся в одной точке: шоу идёт по таймкоду без права на дубль.
 </figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/flags.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/flags.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Флаги России и Ставропольского края над площадью"><figcaption>
 <b>Площадь Ленина</b>Главная площадь края: здание Правительства, ёлка 25 метров и место
 для 25 тысяч человек.</figcaption></figure>
-</div></div></section><section class="sv-sec"><div class="sv__wrap"><div class="sv-split sv-r">
+</div></div></section>'''
+
+
+def elephants():
+    return f'''<section class="sv-sec"><div class="sv__wrap"><div class="sv-split sv-r">
 <div><div class="sv__eyebrow">Содержание</div>
 <h2 class="sv-sec__h">Слоны на крыше парламента</h2>
 <p>Восьмиминутное шоу ломало привычные очертания здания и закручивало в нём образы края.
@@ -607,10 +698,17 @@ body{margin:0}
 <p>Поэтому образ читался без пояснений: жители узнали своего слона на своём здании.</p>
 <p class="sv-note">Факты о южных слонах: по материалам Ставропольского краеведческого музея
 и публикациям о его коллекции.</p></div>
-<figure class="sv-fig"><img src="/images/lib/as3935-3430-4336-a233-353836626537/0039-2.jpg" width="1262" height="841" loading="lazy"
+<figure class="sv-fig"><img src="{PH_ELEPH}" width="1262" height="841" loading="lazy"
  decoding="async" alt="Слоны на фасаде здания Правительства Ставропольского края">
 <figcaption><b>Финал шоу</b>Слоны идут по фасаду длиной в целый квартал.</figcaption></figure>
-</div></div></section><section class="sv-sec"><div class="sv__wrap">
+</div></div></section>'''
+
+
+def ar():
+    chips = ''.join('<button class="sv-chip%s" type="button" data-h="%d">%s</button>'
+                    % (' is-on' if i == 0 else '', i, esc(n))
+                    for i, (n, _d) in enumerate(AR_HEROES))
+    return f'''<section class="sv-sec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">Решение · ожидание</div>
 <h2 class="sv-sec__h">StavAR: чем занять площадь до старта</h2>
 <p class="sv-sec__sub">Люди приходят на площадь заранее и стоят в темноте и на морозе.
@@ -621,21 +719,25 @@ body{margin:0}
 <div class="sv-ar sv-r" id="svAr">
 <div class="sv-phone">
 <div class="sv-phone__scr">
-<img src="/images/stavropol-3d/crowd.jpg" width="1120" height="510" loading="lazy" decoding="async"
+<img src="{IMG}/crowd.jpg" width="1120" height="510" loading="lazy" decoding="async"
  alt="Площадь Ленина, зрители с телефонами">
 <div class="sv-phone__hud">
 <div class="sv-phone__top">STAVAR · ПЛОЩАДЬ ЛЕНИНА</div>
 <div class="sv-phone__mark" id="svArMark" style="left:52%;top:44%"></div>
-<p class="sv-phone__name"><b id="svArName">Дед Мороз</b>
-<span id="svArDesc">Главный персонаж вечера, к нему выстраивалась очередь за селфи.</span></p>
+<p class="sv-phone__name"><b id="svArName">{esc(AR_HEROES[0][0])}</b>
+<span id="svArDesc">{esc(AR_HEROES[0][1])}</span></p>
 </div></div></div>
 <div><p class="sv-sec__sub" style="margin-top:0">Персонажи стояли по разным точкам площади,
 поэтому ожидание превращалось в маршрут: чтобы собрать всех, нужно было пройти площадь
 насквозь. Это же развело толпу равномернее по площадке.</p>
-<div class="sv-chips"><button class="sv-chip is-on" type="button" data-h="0">Дед Мороз</button><button class="sv-chip" type="button" data-h="1">Слонёнок</button><button class="sv-chip" type="button" data-h="2">Крылатый монстр</button><button class="sv-chip" type="button" data-h="3">Гигантская мышь</button></div>
+<div class="sv-chips">{chips}</div>
 <p class="sv-note">Персонажи и механика приложения: по публикациям о вечере.
 Снимок в рамке телефона: реальный кадр площади, метка условная.</p></div>
-</div></div></section><section class="sv-sec"><div class="sv__wrap"><div class="sv-final sv-r">
+</div></div></section>'''
+
+
+def finale():
+    return f'''<section class="sv-sec"><div class="sv__wrap"><div class="sv-final sv-r">
 <div><div class="sv__eyebrow">Финал</div>
 <div class="sv-big sv-num">8:00<small>Столько длилось 3D mapping шоу. После него площадь
 не разошлась: фасад превратился в экран под управлением виджея, и началась дискотека.</small></div>
@@ -663,37 +765,35 @@ body{margin:0}
 <text x="836" y="126" fill="#8E9BAE" font-size="13" font-family="Fira Sans, Arial">Ёлка, 25 м</text>
 </svg>
 <div class="sv-kit sv-r">
-<figure class="sv-fig"><img src="/images/stavropol-3d/tree-laser.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/tree-laser.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Зелёный лазерный луч уходит в вершину ёлки"><figcaption>
 <b>Луч в ёлку</b>Тот самый переход от фасада к площади.</figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/facade-laser.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/facade-laser.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Лазерная графика по фасаду и зрители на площади"><figcaption>
 <b>Лазеры по фасаду</b>Графика лазеров ложилась поверх проекции, не споря с ней по яркости.
 </figcaption></figure>
-<figure class="sv-fig"><img src="/images/stavropol-3d/crowd.jpg" width="1120" height="510" loading="lazy"
+<figure class="sv-fig"><img src="{IMG}/crowd.jpg" width="1120" height="510" loading="lazy"
  decoding="async" alt="Дискотека на площади Ленина под лучами лазеров"><figcaption>
 <b>Дискотека</b>Площадь осталась стоять и после шоу: это и есть результат вечера.
 </figcaption></figure>
-</div></div></section><section class="sv-sec"><div class="sv__wrap">
+</div></div></section>'''
+
+
+def video():
+    gal = ''.join('<figure><img src="%s" width="1262" height="841" loading="lazy"'
+                  ' decoding="async" alt="%s"></figure>' % (src, esc(alt))
+                  for src, alt in GALLERY)
+    return f'''<section class="sv-sec"><div class="sv__wrap">
 <div class="sv-r"><div class="sv__eyebrow">Съёмка вечера</div>
 <h2 class="sv-sec__h">Как это выглядело с площади</h2></div>
 <div class="sv-video sv-r"><video controls preload="none" playsinline
- poster="/images/stavropol-3d/poster.jpg" width="1280" height="720">
-<source src="/media/stavropol-3dmapping.mp4" type="video/mp4">Ваш браузер не поддерживает видео.</video></div>
-<div class="sv-gal sv-r"><figure><img src="/images/lib/as3130-6433-4331-b864-383333663738/-3-1.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Ангелы и крест на фасаде здания Правительства Ставропольского края"></figure><figure><img src="/images/lib/as3261-3734-4335-b536-346564646634/0055-1.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Ковровый орнамент во всю длину фасада, вид сверху"></figure><figure><img src="/images/lib/as3935-3430-4336-a233-353836626537/0039-2.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Слоны на фасаде здания Правительства, вид сверху"></figure><figure><img src="/images/lib/as3564-6366-4465-b066-336636633266/-6-1.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Ёлки на площади Ленина и зелёные лучи лазеров"></figure><figure><img src="/images/stavropol-3d/facade-laser.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Лазерная графика по фасаду и толпа на площади"></figure><figure><img src="/case-assets/7e5bfc88_0001-2.jpg" width="1262" height="841" loading="lazy" decoding="async" alt="Лучи лазеров уходят в небо над площадью Ленина"></figure></div>
-</div></section></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
-// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
-function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
- n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
-// форма -> /api/lead.php
-function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
-document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
- var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
- var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
- fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
-var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
-if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
-})();</script><script>(function(){
+ poster="{IMG}/poster.jpg" width="1280" height="720">
+<source src="{VIDEO}" type="video/mp4">Ваш браузер не поддерживает видео.</video></div>
+<div class="sv-gal sv-r">{gal}</div>
+</div></section>'''
+
+
+PAGE_JS = """<script>(function(){
 var d=document,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
 
 // ── появление блоков ──
@@ -706,7 +806,7 @@ if(window.IntersectionObserver&&!RM){
 }else{rev.forEach(function(n){n.classList.add('in');});}
 
 // ── пульт мэппинга ──
-var SCENES=[['Аркада','Первым делом шоу ломает привычные очертания здания: фасад разбирается и собирается заново античной аркадой.'],['Ковёр','Орнамент из ромбов расходится от центра и ложится по окнам, как узор по ткани. Окна работают не помехой, а частью рисунка.'],['Олени','Светящееся стадо идёт вдоль всей длины фасада. Кадр держится на движении, поэтому яркость здесь важнее детали.'],['Слоны','Символ края выходит на здание Правительства: южные слоны идут по фасаду и затем поднимаются на крышу.'],['Золотой зал','Золотой орнамент во всю длину и ёлка в центре: самая плотная по свету сцена, здесь работают все 27 проекторов сразу.'],['Лазер','Лазерная графика ложится поверх проекции и уводит шоу к финалу: дальше свет уйдёт с фасада в ёлку.']],TOTAL=27,ZN=9,LM=410000,LUX=150;
+var SCENES=[__SCENES__],TOTAL=__TOTAL__,ZN=__ZONES__,LM=__LM__,LUX=__LUX__;
 var zonesSvg=d.getElementById('svZones'),deskCap=d.getElementById('svDeskCap'),
     sceneName=d.getElementById('svSceneName'),projEl=d.getElementById('svProj'),
     lmEl=d.getElementById('svLm'),luxEl=d.getElementById('svLux'),
@@ -717,7 +817,7 @@ var zonesSvg=d.getElementById('svZones'),deskCap=d.getElementById('svDeskCap'),
     zoneGs=zonesSvg?[].slice.call(zonesSvg.querySelectorAll('g[data-z]')):[],
     off=[];
 
-function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00A0');}
+function fmt(n){return String(Math.round(n)).replace(/\\B(?=(\\d{3})+(?!\\d))/g,'\\u00A0');}
 
 function paintDesk(){
  var on=TOTAL-off.length*(TOTAL/ZN);
@@ -805,7 +905,7 @@ window.addEventListener('resize',onScroll);
 fogPaint();
 
 // ── персонажи StavAR ──
-var HEROES=[['Дед Мороз','Главный персонаж вечера, к нему выстраивалась очередь за селфи.'],['Слонёнок','Тот самый символ края, только маленький и виртуальный.'],['Крылатый монстр','Сказочная нечисть, которую искали по площади как в квесте.'],['Гигантская мышь','Символ наступавшего года, ростом с человека.']],POS=[['52%','44%'],['30%','62%'],['70%','30%'],['42%','74%']];
+var HEROES=[__HEROES__],POS=[['52%','44%'],['30%','62%'],['70%','30%'],['42%','74%']];
 var arName=d.getElementById('svArName'),arDesc=d.getElementById('svArDesc'),
     arMark=d.getElementById('svArMark'),
     chips=[].slice.call(d.querySelectorAll('.sv-chip'));
@@ -816,54 +916,58 @@ chips.forEach(function(b){b.addEventListener('click',function(){
  if(arDesc)arDesc.textContent=HEROES[i][1];
  if(arMark){arMark.style.left=POS[i][0];arMark.style.top=POS[i][1];}
 });});
-})();</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},{"@type":"ListItem","position":2,"name":"3D Mapping шоу в Ставрополе","item":"https://hand-marketing.ru/3d/stavropol/"}]}</script><style id="hm-cookie-consent">
-.hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-.hmc.is-on{transform:translateY(0)}
-.hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
-.hmc__card{position:relative;max-width:1200px;margin:0 auto;background:#fff;border:1px solid #f3f4f6;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
-.hmc__title{font-family:'Montserrat','Inter',sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0f172a;margin:0 0 6px}
-.hmc__text{font-size:14px;line-height:1.55;color:#334155;margin:0;max-width:820px}
-.hmc__text a{color:#2563eb;text-decoration:none}
-.hmc__text a:hover{text-decoration:underline;text-underline-offset:3px}
-.hmc__accept{flex:none;appearance:none;border:0;cursor:pointer;background:#111827;color:#fff;font-family:'Montserrat','Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:14px 32px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:background .15s,transform .15s,box-shadow .15s}
-.hmc__accept:hover{background:#1f2937;transform:translateY(-2px);box-shadow:0 16px 26px -10px rgba(0,0,0,.45)}
-.hmc__close{position:absolute;top:10px;right:12px;width:28px;height:28px;border:0;background:transparent;color:#94a3b8;font-size:22px;line-height:1;cursor:pointer;display:none}
-.hmc__close:hover{color:#475569}
-@media (max-width:760px){
- .hmc{padding:12px}
- .hmc__card{flex-direction:column;align-items:flex-start;gap:16px;padding:22px 20px}
- .hmc__accept{width:100%}
- .hmc__close{display:block}
-}
-</style>
-<div class="hmc" id="hmCookie" role="dialog" aria-label="Согласие на использование файлов cookie" aria-live="polite">
- <div class="hmc__card">
-  <div>
-   <div class="hmc__title">Мы используем файлы cookie</div>
-   <p class="hmc__text">Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даёте согласие на обработку файлов cookie. Подробнее в <a href="/privacy">Политике обработки персональных данных</a>.</p>
-  </div>
-  <button type="button" class="hmc__accept" id="hmCookieOk">ПРИНИМАЮ</button>
-  <button type="button" class="hmc__close" id="hmCookieX" aria-label="Закрыть">&times;</button>
- </div>
-</div>
-<script>(function(){
- var KEY='hm-cookie-consent';
- try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
- var box=document.getElementById('hmCookie');if(!box)return;
- function accept(){try{localStorage.setItem(KEY,'1');}catch(e){}box.classList.remove('is-on');setTimeout(function(){if(box&&box.parentNode)box.parentNode.removeChild(box);},400);}
- document.getElementById('hmCookieOk').addEventListener('click',accept);
- document.getElementById('hmCookieX').addEventListener('click',accept);
- setTimeout(function(){box.classList.add('is-on');},600);
-})();</script><script id="hm-metrika-goals">(function(){
-function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
-document.addEventListener('submit',function(e){
- var f=e.target;if(!f||f.tagName!=='FORM')return;
- if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
- g('form_submit');
-},true);
-document.addEventListener('click',function(e){
- var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
- if(!a)return;
- g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
-},true);
-})();</script></body></html>
+})();</script>"""
+
+BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList",'
+                 '"itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},'
+                 '{"@type":"ListItem","position":2,"name":"3D Mapping шоу в Ставрополе",'
+                 '"item":"' + URL + '"}]}</script>')
+
+HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>3D Mapping шоу в Ставрополе: 27 проекторов на здание Правительства | Hand Marketing</title>
+<meta name="description" content="Кейс Hand Marketing: 3D mapping шоу на открытии новогодних мероприятий в Ставрополе 13 декабря 2019. 27 проекторов Epson EB-L1755U в башнях за 97 метров от фасада, 410 000 люмен, четыре лазера, дополненная реальность и более 25 000 зрителей на площади Ленина.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{URL}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3D Mapping шоу в Ставрополе | кейс Hand Marketing">
+<meta property="og:description" content="Восемь минут проекции на здание Правительства края: 27 проекторов в башнях, 410 000 люмен, лазеры в ёлку и 25 тысяч человек на площади.">
+<meta property="og:url" content="{URL}">
+<meta property="og:image" content="https://hand-marketing.ru{PH_ANGELS}">
+<meta property="og:site_name" content="Hand Marketing"><meta property="og:locale" content="ru_RU">
+<link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
+<!--custom-page-->
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+{rc.FONT}<link href="/fonts/unbounded-fira.css" rel="stylesheet">{rc.CSS}{PAGE_CSS}{METRIKA}
+</head>
+<body>'''
+
+
+def js():
+    scenes = ','.join("['%s','%s']" % (name.replace("'", "\\'"), cap.replace("'", "\\'"))
+                      for _f, name, cap in SCENES)
+    heroes = ','.join("['%s','%s']" % (n.replace("'", "\\'"), t.replace("'", "\\'"))
+                      for n, t in AR_HEROES)
+    return (PAGE_JS.replace('__SCENES__', scenes).replace('__HEROES__', heroes)
+            .replace('__TOTAL__', str(PROJ_TOTAL)).replace('__ZONES__', str(ZONES))
+            .replace('__LM__', str(LM_TOTAL)).replace('__LUX__', str(LUX_TOTAL)))
+
+
+def build():
+    return (HEAD + rc.header() + '<main class="sv">' + hero() + task() + fog() + desk() +
+            cut() + numbers() + elephants() + ar() + finale() + video() +
+            '</main><a id="lead"></a>' + rc.footer() + rc.JS + js() + BREADCRUMB_LD +
+            '</body></html>')
+
+
+if __name__ == '__main__':
+    out = os.path.join(ROOT, '3d', 'stavropol')
+    os.makedirs(out, exist_ok=True)
+    open(os.path.join(out, 'index.html'), 'w', encoding='utf-8').write(build())
+    # index-a2.html это деплой-источник (workflow переименовывает его в index.html)
+    # и затёр бы кастомную страницу на проде.
+    a2 = os.path.join(out, 'index-a2.html')
+    if os.path.exists(a2):
+        os.remove(a2)
+        print('удалён устаревший index-a2.html')
+    print('written', os.path.join(out, 'index.html'))
