@@ -13,13 +13,22 @@
 героя, подписи), ровно как в сюжете оно переключает машину. Кнопка едет
 за читателем в липкой панели и работает в любой момент.
 
-Три механики:
+Четыре механики:
 1. Кнопка блокировки: data-lock на <html>, кадр «пробка» гаснет, из-под
    него выходит кадр «робот» на той же обочине, палитра уходит в синий.
-2. Раскадровка на одиннадцать бит из настоящих кадров ролика: клик по
-   кадру перематывает плеер на этот таймкод.
-3. Лента расползания 2013 → 2025: точки копий проявляются по очереди,
+2. Сториборд: 31 карандашный лист из презентации проекта, переключатель
+   «раскадровка / как сняли» разом меняет рисунки на кадры ролика (30 из
+   31 листа имеют пару), клик по листу перематывает плеер на этот момент.
+   Единственный неснятый лист в режиме «как сняли» гаснет.
+3. Критерии вирусности из брифа: шесть требований раскрываются ответом
+   готового ролика.
+4. Лента расползания 2013 → 2025: точки копий проявляются по очереди,
    когда секция попадает в экран, клик открывает карточку копии.
+
+Источник фактуры о производстве — презентация проекта «eaton gaz.pptx»
+(бриф, критерии вирусного ролика, три захода, сториборд, тракт из 12
+этапов, три съёмочных дня, состав смены и техника, локация, графика).
+Бюджет из презентации на страницу намеренно не вынесен.
 
 Честность фактуры: даты, площадки и заголовки перезаливов — выборка
 копий, которые находятся поиском (так и подписано в секции). Первое место
@@ -54,7 +63,68 @@ FACTS = [
     ('Клиент', 'ГАЗ и Eaton'),
     ('Год', '2013'),
     ('Формат', 'Вирусный ролик, 1:42'),
-    ('Съёмка', 'Две локации, два дня'),
+    ('Съёмка', 'Три смены'),
+    ('Сториборд', '31 лист'),
+]
+
+# ─── рамки брифа: (что, значение) ───────────────────────────────────────────
+# Бюджет из презентации на страницу намеренно не выносим.
+FRAME = [
+    ('Хронометраж', '30–60 секунд'),
+    ('Съёмка', 'На натуре'),
+    ('Графика', 'Не предполагалась'),
+    ('План смен', 'Одна, без переработок'),
+]
+
+# ─── критерии вирусного ролика из брифа: (критерий, требование, наш ответ) ──
+VIRAL = [
+    ('Невероятность сценария',
+     'Сюжет должен «взрывать» мозг: необычный взгляд на привычные вещи или '
+     'что-то принципиально новое.',
+     'Маршрутка из утренней пробки встаёт на ноги и уходит по грязи. '
+     'Привычнее сюжета в стране нет, а такого поворота в нём никто не ждёт.'),
+    ('Тонкая связь с брендом',
+     'Если ролик откровенно рекламный, зрители не станут им делиться и вирусная '
+     'раскрутка не сработает.',
+     'Ни одного кадра с логотипом до самого конца. Продукт показан как деталь '
+     'сюжета: кнопка на панели, без которой ничего бы не случилось.'),
+    ('Удобство распространения',
+     'Насколько просто опубликовать ролик у себя или отправить другу.',
+     'Полтора десятка перезаливов на разных площадках за первые два года: '
+     'ролик забирали себе целиком, без ссылок и условий.'),
+    ('Вирусный потенциал',
+     'Насколько ролик вызывает желание показать его знакомым.',
+     'Шутка держится на общем опыте: её понимает любой, кто стоял в пробке '
+     'и видел, как маршрутка объезжает её по обочине.'),
+    ('Актуальность',
+     'Насколько сюжет попадает в текущие настроения и разговоры.',
+     'Год выхода «Трансформеров» в прокате и вечная московская пробка '
+     'в одном кадре.'),
+    ('Скорость распространения',
+     'Основная волна должна прийтись на первые две-три недели: у удачных '
+     'роликов 40% просмотров набирается уже за первую неделю.',
+     'Двадцать тысяч просмотров за первые сутки после появления в сети.'),
+]
+
+# ─── заходы, которые обсуждались: (название, описание, статус) ──────────────
+IDEAS = [
+    ('Чёрный юмор',
+     'Стройка, сельская местность, ухабистая земляная дорога. В кузове грузовой '
+     'ГАЗели едут строители, машина застревает в грязи и буксует. Водитель '
+     'просит пассажиров подтолкнуть, и рабочие со знанием дела берутся '
+     'вызволять машину.',
+     'Отклонено'),
+    ('Псевдодокументальная история',
+     'Обычная московская пробка, снятая будто бы видеорегистратором или '
+     'телефоном, — при том что снимает камера высокой чёткости. Ставка на то, '
+     'что зритель принимает картинку за случайную запись.',
+     'Отклонено'),
+    ('Дорожная пробка',
+     'Заявочные планы пробки, маршрутка, кнопка на панели. Машина '
+     'трансформируется в робота, обходит пробку и снова становится маршруткой. '
+     'В финале водитель просыпается от похлопывания по плечу: ему подают '
+     'деньги за проезд.',
+     'В работу'),
 ]
 
 # ─── ограничения брифа: (заголовок, текст) ──────────────────────────────────
@@ -73,34 +143,83 @@ LIMITS = [
      'она не готова.'),
 ]
 
-# ─── раскадровка: (секунда, таймкод, заголовок бита, подпись) ───────────────
-BEATS = [
-    (1.5,  '0:01', 'Обочина',
-     'Разбитая колея вдоль пробки. Туда никто не сунется.'),
-    (6.0,  '0:06', 'Пробка',
-     'Утро, вылетная магистраль, все стоят.'),
-    (9.5,  '0:09', 'Все опаздывают',
-     'Пассажиры звонят, объясняют, что задерживаются.'),
-    (16.0, '0:16', 'Водитель',
-     'Он знает про свою машину то, чего не знают они.'),
-    (20.5, '0:20', 'Синяя кнопка',
-     'Блокировка дифференциала на панели. Главный предмет ролика.'),
-    (27.0, '0:27', 'Колея',
-     'Колесо уходит в грязь: обычной машине здесь конец.'),
-    (33.0, '0:33', 'Разворот',
-     'ГАЗель раскладывается прямо посреди поля.'),
-    (40.0, '0:40', 'Трансформер',
-     'Робот выходит на обочину мимо билборда и шагает вдоль пробки.'),
-    (44.0, '0:44', 'Свидетели',
-     'Женщина на остановке и нога робота в одном кадре.'),
-    (79.0, '1:19', 'Пробуждение',
-     'Водителя будят: всё это было во сне, маршрутка так и стоит.'),
-    (93.5, '1:33', 'А кнопка настоящая',
-     'Финальный кадр возвращает к панели. Опция в прайсе есть.'),
+# ─── сториборд: (подпись, секунда в ролике или None) ────────────────────────
+# Порядок = порядок листов в презентации проекта. Секунда — момент, на
+# котором в готовом ролике стоит тот же кадр; None у листов, которых на
+# экране нет. Пары должны совпадать с PAIRS в scripts/gaz-assets.py.
+STORY = [
+    ('Пробка на вылетной магистрали, внизу кадра разбитая обочина', 1.5),
+    ('Водитель легковушки жмёт на клаксон', 6.0),
+    ('Мужчина вышел из машины и звонит: он застрял', 9.5),
+    ('Маршрутка в общем потоке', 11.0),
+    ('Салон: пассажиры нервничают, ребёнок на заднем сиденье', 12.0),
+    ('Водитель смотрит вперёд и знает про машину то, чего не знают они', 16.0),
+    ('Панель приборов, кнопка блокировки', 20.5),
+    ('Рука на рычаге коробки', 23.5),
+    ('Руки на руле', 13.5),
+    ('Нога на педали', 24.0),
+    ('Колесо трогается с места', 27.0),
+    ('Маршрутка уходит с асфальта на грунтовую обочину', 26.0),
+    ('Колесо в грязи', 29.0),
+    ('Водитель тянется к панели', 30.0),
+    ('Палец нажимает кнопку', 30.5),
+    ('Машина раскладывается прямо в поле', 33.0),
+    ('Парень с телефоном не верит своим глазам', 36.0),
+    ('Робот в полный рост выходит на обочину', 40.0),
+    ('Женщина на остановке оборачивается', 44.0),
+    ('Крупный план механики: сустав робота', None),  # единственный неснятый лист
+    ('Робот бежит вдоль пробки', 57.0),
+    ('Робот проходит над женщиной', 50.0),
+    ('Взгляд сверху: робот шагает через кадр', 48.0),
+    ('Робот уходит вперёд по обочине', 58.0),
+    ('Маршрутка снова маршрутка: обратная трансформация', 67.5),
+    ('Салон: пассажиры смеются', 72.0),
+    ('Водителя трогают за плечо', 79.0),
+    ('Пассажир протягивает деньги за проезд', 74.0),
+    ('Водитель оборачивается: это был сон', 89.0),
+    ('Финальный кадр, та же кнопка на панели', 93.5),
+    ('Пэкшот. На листе стоит «www.сайт.com»', 97.0),
 ]
 
-# ─── сопоставление съёмки и кадра: (фото, кадр, заголовок, подпись) ─────────
-PAIRS = [
+# ─── бумага против экрана: (что было на листах, что вышло, подпись) ─────────
+DIFFS = [
+    ('Кнопка красная', 'Кнопка синяя',
+     'На всех листах сториборда кнопка нарисована красной: художник рисовал '
+     '«тревожную кнопку» по смыслу. У настоящего ELocker на панели ГАЗели '
+     'она синяя, и в кадр пошла именно она.'),
+    ('Без графики', 'Робот и аниматика',
+     'Бриф описывал простой ролик на натуре без графики и сложных трюков. '
+     'Робота собрали моделью, согласовали аниматику — траекторию его '
+     'перемещения — и только потом детализировали до финального качества.'),
+    ('Одна смена', 'Три съёмочных дня',
+     'План был снять всё за одну смену без переработок. В итоге первый день '
+     'ушёл на панорамы, второй на крупные планы водителя и пассажиров, '
+     'третий на досъёмку того, что не успели.'),
+]
+
+# ─── тракт производства: 12 этапов из презентации ──────────────────────────
+STAGES = [
+    'Согласование идеи', 'Разработка сценария', 'Утверждение сценария',
+    'Отрисовка сториборда', 'Согласование сториборда', 'Подготовка к съёмке',
+    'Съёмка', 'Черновой монтаж', 'Графика', 'Разработка звука',
+    'Сборка: видео, графика, звук', 'Цветокоррекция',
+]
+
+# ─── съёмочные дни: (номер, что снимали) ───────────────────────────────────
+SHIFTS = [
+    ('День 1', 'Все панорамные кадры'),
+    ('День 2', 'Крупные планы водителя и пассажиров'),
+    ('День 3', 'Досъёмка кадров, которые не успели в первый день'),
+]
+
+CREW_LIST = ['Режиссёр', 'Второй режиссёр', 'Оператор', 'Ассистент оператора',
+             'Администратор площадки', 'Техник', 'Гафер', 'Актёры']
+GEAR_LIST = ['Камера RED Scarlet в обвесе', 'Набор объективов', 'Штатив и кран',
+             'Осветительное оборудование', 'Генератор', 'Светоотражатели',
+             'Отдельное звукозаписывающее устройство', 'Хлопушка']
+
+# ─── съёмка и кадр: (фото, кадр, заголовок, текст, подпись 1, подпись 2) ───
+BTS = [
     ('shoot-crew.jpg', 'shot-pylon.jpg', 'Опора ЛЭП',
      'Оператор снимает с крана вверх, в пустое небо над опорой. В готовом '
      'ролике по этой точке пойдёт робот: опора на фотографии со съёмки и '
@@ -352,6 +471,121 @@ html[data-lock="on"] .gz-card::before{background:var(--acc)}
 .gz-press small{color:var(--dim);font-size:13.5px}
 .gz-disc{margin-top:26px;color:var(--dim);font-size:13.5px;max-width:74ch}
 
+/* ── РАМКИ БРИФА ─────────────────────────────────────────────────────── */
+.gz-frame{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:1px;
+ margin-top:32px;background:var(--line);border:1px solid var(--line);border-radius:var(--rad);
+ overflow:hidden}
+.gz-frame div{background:var(--panel);padding:18px 20px}
+.gz-frame b{display:block;font-family:'Tektur',Arial,sans-serif;font-size:10.5px;letter-spacing:.18em;
+ text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:6px}
+.gz-frame span{font-size:15.5px}
+
+/* ── КРИТЕРИИ ВИРУСНОСТИ ─────────────────────────────────────────────── */
+.gz-viral{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-cr__list{margin-top:32px;border-top:1px solid var(--line)}
+.gz-cr{border-bottom:1px solid var(--line)}
+.gz-cr summary{display:grid;grid-template-columns:minmax(190px,.9fr) 1.6fr;gap:10px 28px;
+ padding:20px 44px 20px 0;cursor:pointer;position:relative;list-style:none;align-items:baseline}
+.gz-cr summary::-webkit-details-marker{display:none}
+.gz-cr summary::after{content:"+";position:absolute;right:8px;top:18px;font-family:'Tektur',Arial,sans-serif;
+ font-size:20px;line-height:1;color:var(--acc2);transition:transform .25s ease}
+.gz-cr[open] summary::after{content:"–"}
+.gz-cr summary b{font-family:'Tektur',Arial,sans-serif;font-size:15px;text-transform:uppercase;
+ letter-spacing:.03em;font-weight:700}
+.gz-cr summary span{color:var(--dim);font-size:15px}
+.gz-cr p{margin:0 44px 22px 0;padding:16px 20px;border-left:3px solid var(--acc);
+ background:rgba(43,143,235,.07);max-width:80ch}
+@media(max-width:760px){.gz-cr summary{grid-template-columns:1fr;padding-right:38px}}
+
+/* ── ЗАХОДЫ ──────────────────────────────────────────────────────────── */
+.gz-ideas{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-idea__tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.gz-idea__t{border:1px solid var(--line);background:var(--panel);color:var(--dim);cursor:pointer;
+ border-radius:var(--rad);padding:11px 18px;font:500 14.5px 'Rubik',Arial,sans-serif;
+ transition:color .2s,border-color .2s,background .2s}
+.gz-idea__t:hover{color:var(--ink)}
+.gz-idea__t.is-on{color:var(--ink);border-color:var(--acc);background:rgba(43,143,235,.13)}
+.gz-idea__panes{margin-top:18px;border:1px solid var(--line);border-radius:var(--rad);
+ background:var(--panel);padding:clamp(20px,3vw,32px);min-height:170px}
+.gz-idea__p{display:none}
+.gz-idea__p.is-on{display:block}
+.gz-idea__p p{margin:0;max-width:76ch;color:var(--dim);font-size:16px}
+.gz-idea__st{display:inline-block;margin-bottom:12px;font-family:'Tektur',Arial,sans-serif;
+ font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:3px;
+ background:rgba(255,255,255,.07);color:var(--dim)}
+.gz-idea__st.ok{background:rgba(43,143,235,.2);color:var(--acc2)}
+
+/* ── СТОРИБОРД ───────────────────────────────────────────────────────── */
+.gz-st{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-seg{display:inline-flex;margin-top:28px;border:1px solid var(--line);border-radius:var(--rad);
+ overflow:hidden;background:var(--panel)}
+.gz-seg__b{border:0;background:none;color:var(--dim);cursor:pointer;padding:11px 20px;
+ font:500 14px 'Tektur',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+ transition:background .2s,color .2s}
+.gz-seg__b.is-on{background:var(--acc);color:#fff}
+.gz-st__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:12px;margin-top:26px}
+/* height:100% — <button> в гриде не тянется по строке сам, и карточки
+   с подписью в одну строку оказываются ниже соседей */
+.gz-st__i{padding:0;border:1px solid var(--line);border-radius:var(--rad);background:var(--panel);
+ color:inherit;text-align:left;font:inherit;overflow:hidden;display:block;height:100%;
+ transition:border-color .2s ease,transform .2s ease}
+button.gz-st__i{cursor:pointer}
+button.gz-st__i:hover{border-color:var(--acc);transform:translateY(-3px)}
+.gz-st__ph{position:relative;display:block;aspect-ratio:440/271;background:#f4f2ee}
+.gz-st__ph picture{display:block;height:100%}
+.gz-st__ph img{width:100%;height:100%;object-fit:cover}
+.gz-st__a,.gz-st__b{position:absolute;inset:0;transition:opacity .45s ease}
+.gz-st__b{opacity:0;background:#000;display:block}
+.gz-st__b img{object-fit:contain;background:#000}
+.gz-st.is-film .gz-st__i:not(.no-pair) .gz-st__a{opacity:0}
+.gz-st.is-film .gz-st__i:not(.no-pair) .gz-st__b{opacity:1}
+.gz-st.is-film .no-pair .gz-st__a{opacity:.32}
+.gz-st__n{position:absolute;left:7px;top:7px;font-family:'Tektur',Arial,sans-serif;font-size:11px;
+ letter-spacing:.06em;padding:3px 7px;border-radius:3px;background:rgba(6,8,12,.72);color:#fff}
+.gz-st__tc{position:absolute;right:7px;bottom:7px;font-family:'Tektur',Arial,sans-serif;font-size:10.5px;
+ letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:rgba(6,8,12,.82);color:var(--acc2)}
+.gz-st__tc.no{color:#C9A227;background:rgba(6,8,12,.86);text-transform:none;letter-spacing:.02em}
+.gz-st__c{display:block;padding:11px 13px 14px;color:var(--dim);font-size:13.5px;line-height:1.42}
+
+/* ── БУМАГА ПРОТИВ ЭКРАНА ────────────────────────────────────────────── */
+.gz-diffs{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-diffs__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:34px}
+.gz-diff{border:1px solid var(--line);border-radius:var(--rad);background:var(--panel);padding:22px}
+.gz-diff__h{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px;
+ font-family:'Tektur',Arial,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.03em}
+.gz-diff__h .was{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3)}
+.gz-diff__h .arr{color:var(--acc2)}
+.gz-diff__h .now{color:var(--ink)}
+.gz-diff p{margin:0;color:var(--dim);font-size:15px}
+
+/* ── ПРОИЗВОДСТВО ────────────────────────────────────────────────────── */
+.gz-prod{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-stages{list-style:none;margin:32px 0 0;padding:0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);
+ border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
+.gz-stages li{background:var(--panel);padding:15px 18px;display:flex;gap:12px;align-items:baseline;
+ font-size:15px}
+.gz-stage__n{font-family:'Tektur',Arial,sans-serif;font-size:11px;color:var(--acc2);flex:none}
+.gz-shifts{display:grid;grid-template-columns:repeat(auto-fit,minmax(226px,1fr));gap:16px;margin-top:22px}
+.gz-shifts div{border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:var(--rad);
+ background:var(--panel);padding:18px 20px}
+.gz-shifts b{display:block;font-family:'Tektur',Arial,sans-serif;font-size:13px;letter-spacing:.1em;
+ text-transform:uppercase;margin-bottom:6px}
+.gz-shifts span{color:var(--dim);font-size:14.5px}
+.gz-lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-top:22px}
+.gz-lists h3{font-size:14px;margin-bottom:12px;color:var(--acc2)}
+.gz-lists ul{list-style:none;margin:0;padding:0}
+.gz-lists li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:14.5px}
+
+/* ── ЛОКАЦИЯ И ГРАФИКА ───────────────────────────────────────────────── */
+.gz-loc,.gz-gfx{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-loc__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:34px}
+.gz-gfx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:34px}
+.gz-loc figure,.gz-gfx figure{margin:0}
+.gz-loc img,.gz-gfx img{border:1px solid var(--line);border-radius:var(--rad);width:100%}
+.gz-loc figcaption,.gz-gfx figcaption{margin-top:9px;font-family:'Tektur',Arial,sans-serif;font-size:11px;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+
 /* ── ТИТРЫ ───────────────────────────────────────────────────────────── */
 .gz-credits{padding:clamp(50px,8vw,96px) 0 clamp(56px,9vw,110px);border-top:1px solid var(--line)}
 .gz-credits__grid{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));
@@ -410,14 +644,20 @@ def lock_btn(dock=False):
             f'<span class="on">нажмите ещё раз, чтобы вернуть пробку</span></small></span></button>')
 
 
-def task():
+def tc(sec):
+    return '%d:%02d' % (int(sec) // 60, int(sec) % 60)
+
+
+def brief():
+    frame = ''.join(f'<div><b>{k}</b><span>{v}</span></div>' for k, v in FRAME)
     cards = ''.join(f'<div class="gz-card"><h3>{t}</h3><p>{p}</p></div>' for t, p in LIMITS)
     return f'''<section class="gz-task gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Задача</div>
+<div class="gz-eyebrow">Бриф</div>
 <h2 class="gz-h2">Ролик, в котором нельзя ничего сравнивать</h2>
-<p class="gz-sub">Блокировка дифференциала даёт машине серьёзное преимущество и при этом
-остаётся вещью совершенно нерекламной: это деталь заднего моста, которую не видно.
-Бриф закрывал все привычные ходы разом.</p>
+<p class="gz-sub">Заказчик просил видео по автотранспортной тематике, которое
+показывает: с включённой блокировкой машина проходит там, где обычная встаёт.
+Ролик нужен был как вирусный контент. Дальше начинались ограничения.</p>
+<div class="gz-frame">{frame}</div>
 <div class="gz-task__grid">{cards}</div>
 <div class="gz-solve">
 <h3>Решение: пусть это будет сон</h3>
@@ -432,21 +672,153 @@ def task():
 </div></div></section>'''
 
 
-def storyboard():
-    items = ''.join(
-        f'<button class="gz-sb__i" type="button" data-t="{sec}" '
-        f'aria-label="Перемотать ролик на {tc}: {title}">'
-        f'<span class="gz-sb__ph">{pic("sb-%02d.jpg" % (i + 1), title)}'
-        f'<span class="gz-sb__tc">{tc}</span></span>'
-        f'<span class="gz-sb__tx"><b>{title}</b><span>{cap}</span></span></button>'
-        for i, (sec, tc, title, cap) in enumerate(BEATS))
-    return f'''<section class="gz-sb gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Раскадровка</div>
-<h2 class="gz-h2">Сто две секунды, одиннадцать бит</h2>
-<p class="gz-sub">Каждый кадр был срежиссирован заранее: две локации, два съёмочных
-дня, никакого материала «про запас». Ниже идут реальные кадры ролика по порядку.</p>
-<div class="gz-sb__grid">{items}</div>
-<p class="gz-sb__hint">Нажмите на любой кадр, и плеер ниже перемотается на этот момент.</p>
+def viral():
+    rows = ''.join(
+        f'<details class="gz-cr"{" open" if i == 0 else ""}>'
+        f'<summary><b>{name}</b><span>{req}</span></summary>'
+        f'<p>{ans}</p></details>'
+        for i, (name, req, ans) in enumerate(VIRAL))
+    return f'''<section class="gz-viral gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Что считать вирусным</div>
+<h2 class="gz-h2">Шесть требований к ролику</h2>
+<p class="gz-sub">Вирусным ролик делает не бюджет, а сходимость нескольких условий
+сразу. Они были прописаны ещё до сценария: ниже требование из брифа и то, чем
+на него ответил готовый ролик.</p>
+<div class="gz-cr__list">{rows}</div>
+</div></section>'''
+
+
+def ideas():
+    tabs = ''.join(
+        f'<button class="gz-idea__t{" is-on" if i == len(IDEAS) - 1 else ""}" '
+        f'type="button" data-i="{i}">{name}</button>'
+        for i, (name, _d, _s) in enumerate(IDEAS))
+    panes = ''.join(
+        f'<div class="gz-idea__p{" is-on" if i == len(IDEAS) - 1 else ""}" data-i="{i}">'
+        f'<span class="gz-idea__st{" ok" if st == "В работу" else ""}">{st}</span>'
+        f'<p>{d}</p></div>'
+        for i, (_n, d, st) in enumerate(IDEAS))
+    return f'''<section class="gz-ideas gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Заходы</div>
+<h2 class="gz-h2">Три сюжета на одну кнопку</h2>
+<p class="gz-sub">До съёмки сюжет искали в трёх разных направлениях. Два первых
+упирались в то же ограничение: машина в них выглядела беспомощной.</p>
+<div class="gz-idea__tabs">{tabs}</div>
+<div class="gz-idea__panes">{panes}</div>
+</div></section>'''
+
+
+def story():
+    paired = sum(1 for _c, s in STORY if s is not None)
+    items = []
+    for i, (cap, sec) in enumerate(STORY, 1):
+        num = '%02d' % i
+        badge = (f'<span class="gz-st__tc">{tc(sec)}</span>' if sec is not None
+                 else '<span class="gz-st__tc no">нет в ролике</span>')
+        shot = (f'<span class="gz-st__b">{pic("f-%s.jpg" % num, cap)}</span>'
+                if sec is not None else '')
+        tag = 'button' if sec is not None else 'div'
+        attr = (f' type="button" data-t="{sec}" '
+                f'aria-label="Перемотать ролик на {tc(sec)}: {cap}"'
+                if sec is not None else '')
+        items.append(
+            f'<{tag} class="gz-st__i{"" if sec is not None else " no-pair"}"{attr}>'
+            f'<span class="gz-st__ph"><span class="gz-st__a">'
+            f'{pic("sb/%s.jpg" % num, "Лист сториборда %d: %s" % (i, cap))}</span>'
+            f'{shot}<span class="gz-st__n">{num}</span>{badge}</span>'
+            f'<span class="gz-st__c">{cap}</span></{tag}>')
+    return f'''<section class="gz-st gz-r" id="gzStory"><div class="gz__in">
+<div class="gz-eyebrow">Сториборд</div>
+<h2 class="gz-h2">Весь ролик нарисован до съёмки</h2>
+<p class="gz-sub">Отрисовка и согласование сториборда — отдельные этапы тракта:
+пока лист не утверждён, площадка не бронируется. Тридцать листов сюжета плюс
+пэкшот, ниже они идут по порядку. {paired} из {len(STORY)} листов стоят в ролике
+ровно так, как были нарисованы: не дошёл до экрана только крупный план механики.</p>
+<div class="gz-seg" role="group" aria-label="Что показывать">
+<button class="gz-seg__b is-on" type="button" data-m="art">Раскадровка</button>
+<button class="gz-seg__b" type="button" data-m="film">Как сняли</button>
+</div>
+<div class="gz-st__grid">{''.join(items)}</div>
+<p class="gz-sb__hint">Переключатель меняет все кадры разом. Клик по кадру
+перематывает плеер ниже на этот момент.</p>
+</div></section>'''
+
+
+def diffs():
+    cards = ''.join(
+        f'<div class="gz-diff"><div class="gz-diff__h"><span class="was">{a}</span>'
+        f'<span class="arr" aria-hidden="true">→</span><span class="now">{b}</span></div>'
+        f'<p>{t}</p></div>' for a, b, t in DIFFS)
+    return f'''<section class="gz-diffs gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Бумага против экрана</div>
+<h2 class="gz-h2">Что изменилось по дороге</h2>
+<p class="gz-sub">Сториборд рисуют, чтобы спорить на бумаге, а не на площадке.
+Три вещи всё-таки поменялись между листом и монтажом.</p>
+<div class="gz-diffs__grid">{cards}</div>
+</div></section>'''
+
+
+def production():
+    stages = ''.join(
+        f'<li><span class="gz-stage__n">{i:02d}</span>{s}</li>'
+        for i, s in enumerate(STAGES, 1))
+    shifts = ''.join(f'<div><b>{d}</b><span>{w}</span></div>' for d, w in SHIFTS)
+    crew = ''.join(f'<li>{c}</li>' for c in CREW_LIST)
+    gear = ''.join(f'<li>{g}</li>' for g in GEAR_LIST)
+    pairs = ''.join(
+        f'<div class="gz-pair">'
+        f'<figure>{pic(photo, cap1)}<figcaption>{cap1}</figcaption></figure>'
+        f'<figure>{pic(frame, cap2)}<figcaption>{cap2}</figcaption></figure>'
+        f'<div class="gz-pair__tx"><h3>{title}</h3><p>{text}</p></div>'
+        f'</div>' for photo, frame, title, text, cap1, cap2 in BTS)
+    return f'''<section class="gz-prod gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Производство</div>
+<h2 class="gz-h2">Двенадцать этапов и три смены</h2>
+<p class="gz-sub">Тракт был расписан до старта, от согласования идеи до
+цветокоррекции. Съёмка стоит в нём седьмым пунктом: к моменту выезда на площадку
+спорить уже не о чем.</p>
+<ol class="gz-stages">{stages}</ol>
+<div class="gz-shifts">{shifts}</div>
+<div class="gz-lists">
+<div><h3>Смена</h3><ul>{crew}</ul></div>
+<div><h3>Техника</h3><ul>{gear}</ul></div>
+</div>
+{pairs}
+</div></section>'''
+
+
+def location():
+    return f'''<section class="gz-loc gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Локация</div>
+<h2 class="gz-h2">Дорога, вдоль которой идёт другая дорога</h2>
+<p class="gz-sub">Под сюжет нужна была не просто трасса, а трасса с параллельной
+разбитой дорогой — и с разрешённым съездом на неё, чтобы знак стоял в кадре
+и к съёмке не было вопросов. Такую нашли недалеко от Москвы.</p>
+<div class="gz-loc__grid">
+<figure>{pic('loc-1.jpg', 'Съезд с трассы на грунтовую дорогу, скаутинг локации')}
+<figcaption>Скаутинг: съезд и знак</figcaption></figure>
+<figure>{pic('loc-2.jpg', 'Размытая параллельная дорога в лужах, скаутинг локации')}
+<figcaption>Скаутинг: та самая параллельная колея</figcaption></figure>
+<figure>{pic('f-12.jpg', 'Кадр ролика: маршрутка уходит с асфальта мимо знака')}
+<figcaption>Кадр из ролика: знак съезда в кадре</figcaption></figure>
+</div>
+</div></section>'''
+
+
+def graphics():
+    return f'''<section class="gz-gfx gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Графика</div>
+<h2 class="gz-h2">Робот появился после съёмки</h2>
+<p class="gz-sub">Сначала собрали модель, затем согласовали аниматику — траекторию
+перемещения робота по кадру — и только после этого довели модель до финального
+качества. Порядок важен: пока траектория не сходится с реальной перспективой
+площадки, детализировать нечего.</p>
+<div class="gz-gfx__grid">
+<figure>{pic('f-16.jpg', 'Кадр ролика: маршрутка раскладывается в поле')}
+<figcaption>Трансформация</figcaption></figure>
+<figure>{pic('f-18.jpg', 'Кадр ролика: робот в полный рост на обочине')}
+<figcaption>Финальная модель в кадре</figcaption></figure>
+</div>
 </div></section>'''
 
 
@@ -463,23 +835,6 @@ def film():
 <div class="gz-film__cap"><span>Хронометраж <b>1:42</b></span>
 <span>Музыка <b>Becks V Menthol — Ultra Lust</b></span>
 <span>Пэкшот кампании <b>azgaz.ru/elocker</b></span></div>
-</div></section>'''
-
-
-def shoot():
-    out = []
-    for photo, frame, title, text, cap1, cap2 in PAIRS:
-        out.append(
-            f'<div class="gz-pair">'
-            f'<figure>{pic(photo, cap1)}<figcaption>{cap1}</figcaption></figure>'
-            f'<figure>{pic(frame, cap2)}<figcaption>{cap2}</figcaption></figure>'
-            f'<div class="gz-pair__tx"><h3>{title}</h3><p>{text}</p></div>'
-            f'</div>')
-    return f'''<section class="gz-shoot gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Съёмка</div>
-<h2 class="gz-h2">Две локации, два дня</h2>
-<p class="gz-sub">Слева площадка, справа то, что из неё получилось в ролике.</p>
-{''.join(out)}
 </div></section>'''
 
 
@@ -563,9 +918,29 @@ if(hero&&dock&&window.IntersectionObserver){
  },{rootMargin:'-40% 0px 0px 0px'}).observe(hero);
 }
 
-// ── раскадровка перематывает плеер ──
+// ── сториборд: переключатель «раскадровка / как сняли» ──
+var story=d.getElementById('gzStory');
+[].forEach.call(d.querySelectorAll('.gz-seg__b'),function(b){
+ b.addEventListener('click',function(){
+  var film=b.getAttribute('data-m')==='film';
+  if(story)story.classList.toggle('is-film',film);
+  [].forEach.call(d.querySelectorAll('.gz-seg__b'),function(n){
+   n.classList.toggle('is-on',n===b);});
+ });
+});
+
+// ── заходы: вкладки ──
+var tabs=[].slice.call(d.querySelectorAll('.gz-idea__t')),
+    panes=[].slice.call(d.querySelectorAll('.gz-idea__p'));
+tabs.forEach(function(b){b.addEventListener('click',function(){
+ var i=b.getAttribute('data-i');
+ tabs.forEach(function(n){n.classList.toggle('is-on',n===b);});
+ panes.forEach(function(n){n.classList.toggle('is-on',n.getAttribute('data-i')===i);});
+});});
+
+// ── лист сториборда перематывает плеер ──
 var film=d.getElementById('gzFilm');
-[].forEach.call(d.querySelectorAll('.gz-sb__i'),function(b){
+[].forEach.call(d.querySelectorAll('.gz-st__i[data-t]'),function(b){
  b.addEventListener('click',function(){
   if(!film)return;
   var t=parseFloat(b.getAttribute('data-t'))||0;
@@ -631,8 +1006,9 @@ def js():
 
 
 def build():
-    return (HEAD + rc.header() + '<main class="gz">' + hero() + task() + storyboard() +
-            film() + shoot() + spread() + credits() + lock_btn(dock=True) +
+    return (HEAD + rc.header() + '<main class="gz">' + hero() + brief() + viral() +
+            ideas() + story() + film() + diffs() + production() + location() +
+            graphics() + spread() + credits() + lock_btn(dock=True) +
             '</main><a id="lead"></a>' +
             rc.footer() + rc.JS + js() + BREADCRUMB_LD + VIDEO_LD + '</body></html>')
 

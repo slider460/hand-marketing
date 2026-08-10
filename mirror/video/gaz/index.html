@@ -305,6 +305,121 @@ html[data-lock="on"] .gz-card::before{background:var(--acc)}
 .gz-press small{color:var(--dim);font-size:13.5px}
 .gz-disc{margin-top:26px;color:var(--dim);font-size:13.5px;max-width:74ch}
 
+/* ── РАМКИ БРИФА ─────────────────────────────────────────────────────── */
+.gz-frame{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:1px;
+ margin-top:32px;background:var(--line);border:1px solid var(--line);border-radius:var(--rad);
+ overflow:hidden}
+.gz-frame div{background:var(--panel);padding:18px 20px}
+.gz-frame b{display:block;font-family:'Tektur',Arial,sans-serif;font-size:10.5px;letter-spacing:.18em;
+ text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:6px}
+.gz-frame span{font-size:15.5px}
+
+/* ── КРИТЕРИИ ВИРУСНОСТИ ─────────────────────────────────────────────── */
+.gz-viral{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-cr__list{margin-top:32px;border-top:1px solid var(--line)}
+.gz-cr{border-bottom:1px solid var(--line)}
+.gz-cr summary{display:grid;grid-template-columns:minmax(190px,.9fr) 1.6fr;gap:10px 28px;
+ padding:20px 44px 20px 0;cursor:pointer;position:relative;list-style:none;align-items:baseline}
+.gz-cr summary::-webkit-details-marker{display:none}
+.gz-cr summary::after{content:"+";position:absolute;right:8px;top:18px;font-family:'Tektur',Arial,sans-serif;
+ font-size:20px;line-height:1;color:var(--acc2);transition:transform .25s ease}
+.gz-cr[open] summary::after{content:"–"}
+.gz-cr summary b{font-family:'Tektur',Arial,sans-serif;font-size:15px;text-transform:uppercase;
+ letter-spacing:.03em;font-weight:700}
+.gz-cr summary span{color:var(--dim);font-size:15px}
+.gz-cr p{margin:0 44px 22px 0;padding:16px 20px;border-left:3px solid var(--acc);
+ background:rgba(43,143,235,.07);max-width:80ch}
+@media(max-width:760px){.gz-cr summary{grid-template-columns:1fr;padding-right:38px}}
+
+/* ── ЗАХОДЫ ──────────────────────────────────────────────────────────── */
+.gz-ideas{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-idea__tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.gz-idea__t{border:1px solid var(--line);background:var(--panel);color:var(--dim);cursor:pointer;
+ border-radius:var(--rad);padding:11px 18px;font:500 14.5px 'Rubik',Arial,sans-serif;
+ transition:color .2s,border-color .2s,background .2s}
+.gz-idea__t:hover{color:var(--ink)}
+.gz-idea__t.is-on{color:var(--ink);border-color:var(--acc);background:rgba(43,143,235,.13)}
+.gz-idea__panes{margin-top:18px;border:1px solid var(--line);border-radius:var(--rad);
+ background:var(--panel);padding:clamp(20px,3vw,32px);min-height:170px}
+.gz-idea__p{display:none}
+.gz-idea__p.is-on{display:block}
+.gz-idea__p p{margin:0;max-width:76ch;color:var(--dim);font-size:16px}
+.gz-idea__st{display:inline-block;margin-bottom:12px;font-family:'Tektur',Arial,sans-serif;
+ font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:3px;
+ background:rgba(255,255,255,.07);color:var(--dim)}
+.gz-idea__st.ok{background:rgba(43,143,235,.2);color:var(--acc2)}
+
+/* ── СТОРИБОРД ───────────────────────────────────────────────────────── */
+.gz-st{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-seg{display:inline-flex;margin-top:28px;border:1px solid var(--line);border-radius:var(--rad);
+ overflow:hidden;background:var(--panel)}
+.gz-seg__b{border:0;background:none;color:var(--dim);cursor:pointer;padding:11px 20px;
+ font:500 14px 'Tektur',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+ transition:background .2s,color .2s}
+.gz-seg__b.is-on{background:var(--acc);color:#fff}
+.gz-st__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:12px;margin-top:26px}
+/* height:100% — <button> в гриде не тянется по строке сам, и карточки
+   с подписью в одну строку оказываются ниже соседей */
+.gz-st__i{padding:0;border:1px solid var(--line);border-radius:var(--rad);background:var(--panel);
+ color:inherit;text-align:left;font:inherit;overflow:hidden;display:block;height:100%;
+ transition:border-color .2s ease,transform .2s ease}
+button.gz-st__i{cursor:pointer}
+button.gz-st__i:hover{border-color:var(--acc);transform:translateY(-3px)}
+.gz-st__ph{position:relative;display:block;aspect-ratio:440/271;background:#f4f2ee}
+.gz-st__ph picture{display:block;height:100%}
+.gz-st__ph img{width:100%;height:100%;object-fit:cover}
+.gz-st__a,.gz-st__b{position:absolute;inset:0;transition:opacity .45s ease}
+.gz-st__b{opacity:0;background:#000;display:block}
+.gz-st__b img{object-fit:contain;background:#000}
+.gz-st.is-film .gz-st__i:not(.no-pair) .gz-st__a{opacity:0}
+.gz-st.is-film .gz-st__i:not(.no-pair) .gz-st__b{opacity:1}
+.gz-st.is-film .no-pair .gz-st__a{opacity:.32}
+.gz-st__n{position:absolute;left:7px;top:7px;font-family:'Tektur',Arial,sans-serif;font-size:11px;
+ letter-spacing:.06em;padding:3px 7px;border-radius:3px;background:rgba(6,8,12,.72);color:#fff}
+.gz-st__tc{position:absolute;right:7px;bottom:7px;font-family:'Tektur',Arial,sans-serif;font-size:10.5px;
+ letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:rgba(6,8,12,.82);color:var(--acc2)}
+.gz-st__tc.no{color:#C9A227;background:rgba(6,8,12,.86);text-transform:none;letter-spacing:.02em}
+.gz-st__c{display:block;padding:11px 13px 14px;color:var(--dim);font-size:13.5px;line-height:1.42}
+
+/* ── БУМАГА ПРОТИВ ЭКРАНА ────────────────────────────────────────────── */
+.gz-diffs{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-diffs__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:34px}
+.gz-diff{border:1px solid var(--line);border-radius:var(--rad);background:var(--panel);padding:22px}
+.gz-diff__h{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px;
+ font-family:'Tektur',Arial,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.03em}
+.gz-diff__h .was{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3)}
+.gz-diff__h .arr{color:var(--acc2)}
+.gz-diff__h .now{color:var(--ink)}
+.gz-diff p{margin:0;color:var(--dim);font-size:15px}
+
+/* ── ПРОИЗВОДСТВО ────────────────────────────────────────────────────── */
+.gz-prod{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-stages{list-style:none;margin:32px 0 0;padding:0;display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--line);
+ border:1px solid var(--line);border-radius:var(--rad);overflow:hidden}
+.gz-stages li{background:var(--panel);padding:15px 18px;display:flex;gap:12px;align-items:baseline;
+ font-size:15px}
+.gz-stage__n{font-family:'Tektur',Arial,sans-serif;font-size:11px;color:var(--acc2);flex:none}
+.gz-shifts{display:grid;grid-template-columns:repeat(auto-fit,minmax(226px,1fr));gap:16px;margin-top:22px}
+.gz-shifts div{border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:var(--rad);
+ background:var(--panel);padding:18px 20px}
+.gz-shifts b{display:block;font-family:'Tektur',Arial,sans-serif;font-size:13px;letter-spacing:.1em;
+ text-transform:uppercase;margin-bottom:6px}
+.gz-shifts span{color:var(--dim);font-size:14.5px}
+.gz-lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-top:22px}
+.gz-lists h3{font-size:14px;margin-bottom:12px;color:var(--acc2)}
+.gz-lists ul{list-style:none;margin:0;padding:0}
+.gz-lists li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:14.5px}
+
+/* ── ЛОКАЦИЯ И ГРАФИКА ───────────────────────────────────────────────── */
+.gz-loc,.gz-gfx{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
+.gz-loc__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:34px}
+.gz-gfx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:34px}
+.gz-loc figure,.gz-gfx figure{margin:0}
+.gz-loc img,.gz-gfx img{border:1px solid var(--line);border-radius:var(--rad);width:100%}
+.gz-loc figcaption,.gz-gfx figcaption{margin-top:9px;font-family:'Tektur',Arial,sans-serif;font-size:11px;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+
 /* ── ТИТРЫ ───────────────────────────────────────────────────────────── */
 .gz-credits{padding:clamp(50px,8vw,96px) 0 clamp(56px,9vw,110px);border-top:1px solid var(--line)}
 .gz-credits__grid{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));
@@ -345,13 +460,14 @@ html[data-lock="on"] .gz-card::before{background:var(--acc)}
 Реклама не машины, а одной опции в прайсе: синей кнопки на панели.</span><span class="on">Кнопка нажата.
 Обочина, по которой не поедет ни одна маршрутка, стала дорогой.</span></p>
 <button class="gz-lock" id="gzLock" type="button" aria-pressed="false"><span class="gz-lock__b" aria-hidden="true"><i></i></span><span class="gz-lock__t gz-swap"><span class="off">Включить блокировку</span><span class="on">Блокировка включена</span><small class="gz-swap"><span class="off">та самая синяя кнопка</span><span class="on">нажмите ещё раз, чтобы вернуть пробку</span></small></span></button>
-<ul class="gz-facts"><li><b>Клиент</b><span>ГАЗ и Eaton</span></li><li><b>Год</b><span>2013</span></li><li><b>Формат</b><span>Вирусный ролик, 1:42</span></li><li><b>Съёмка</b><span>Две локации, два дня</span></li></ul>
+<ul class="gz-facts"><li><b>Клиент</b><span>ГАЗ и Eaton</span></li><li><b>Год</b><span>2013</span></li><li><b>Формат</b><span>Вирусный ролик, 1:42</span></li><li><b>Съёмка</b><span>Три смены</span></li><li><b>Сториборд</b><span>31 лист</span></li></ul>
 </div></section><section class="gz-task gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Задача</div>
+<div class="gz-eyebrow">Бриф</div>
 <h2 class="gz-h2">Ролик, в котором нельзя ничего сравнивать</h2>
-<p class="gz-sub">Блокировка дифференциала даёт машине серьёзное преимущество и при этом
-остаётся вещью совершенно нерекламной: это деталь заднего моста, которую не видно.
-Бриф закрывал все привычные ходы разом.</p>
+<p class="gz-sub">Заказчик просил видео по автотранспортной тематике, которое
+показывает: с включённой блокировкой машина проходит там, где обычная встаёт.
+Ролик нужен был как вирусный контент. Дальше начинались ограничения.</p>
+<div class="gz-frame"><div><b>Хронометраж</b><span>30–60 секунд</span></div><div><b>Съёмка</b><span>На натуре</span></div><div><b>Графика</b><span>Не предполагалась</span></div><div><b>План смен</b><span>Одна, без переработок</span></div></div>
 <div class="gz-task__grid"><div class="gz-card"><h3>Рекламируем не машину</h3><p>Продукт кампании: одна опция в прайсе, блокируемый дифференциал Eaton на ГАЗель Бизнес и Соболь. Снаружи машина с ней и без неё выглядит одинаково, показать нечего.</p></div><div class="gz-card"><h3>Сравнивать нельзя</h3><p>Категорически запрещалось ставить рядом автомобиль с блокировкой и без неё. Прямая демонстрация преимущества, с которой начинается любой ролик про проходимость, отпадала сразу.</p></div><div class="gz-card"><h3>Позиционирование консервативное</h3><p>Почти все идеи с вирусным потенциалом заворачивались PR-службой: марка на рынке держится серьёзного тона, шутить над собственной машиной она не готова.</p></div></div>
 <div class="gz-solve">
 <h3>Решение: пусть это будет сон</h3>
@@ -363,13 +479,34 @@ html[data-lock="on"] .gz-card::before{background:var(--acc)}
 не обещает лишнего: всё, что происходит на экране, происходит в голове у водителя.
 А в последнем кадре камера возвращается на панель, и синяя кнопка оказывается
 настоящей.</p>
-</div></div></section><section class="gz-sb gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Раскадровка</div>
-<h2 class="gz-h2">Сто две секунды, одиннадцать бит</h2>
-<p class="gz-sub">Каждый кадр был срежиссирован заранее: две локации, два съёмочных
-дня, никакого материала «про запас». Ниже идут реальные кадры ролика по порядку.</p>
-<div class="gz-sb__grid"><button class="gz-sb__i" type="button" data-t="1.5" aria-label="Перемотать ролик на 0:01: Обочина"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-01.jpg.webp" type="image/webp"><img src="/images/gaz/sb-01.jpg" alt="Обочина" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:01</span></span><span class="gz-sb__tx"><b>Обочина</b><span>Разбитая колея вдоль пробки. Туда никто не сунется.</span></span></button><button class="gz-sb__i" type="button" data-t="6.0" aria-label="Перемотать ролик на 0:06: Пробка"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-02.jpg.webp" type="image/webp"><img src="/images/gaz/sb-02.jpg" alt="Пробка" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:06</span></span><span class="gz-sb__tx"><b>Пробка</b><span>Утро, вылетная магистраль, все стоят.</span></span></button><button class="gz-sb__i" type="button" data-t="9.5" aria-label="Перемотать ролик на 0:09: Все опаздывают"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-03.jpg.webp" type="image/webp"><img src="/images/gaz/sb-03.jpg" alt="Все опаздывают" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:09</span></span><span class="gz-sb__tx"><b>Все опаздывают</b><span>Пассажиры звонят, объясняют, что задерживаются.</span></span></button><button class="gz-sb__i" type="button" data-t="16.0" aria-label="Перемотать ролик на 0:16: Водитель"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-04.jpg.webp" type="image/webp"><img src="/images/gaz/sb-04.jpg" alt="Водитель" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:16</span></span><span class="gz-sb__tx"><b>Водитель</b><span>Он знает про свою машину то, чего не знают они.</span></span></button><button class="gz-sb__i" type="button" data-t="20.5" aria-label="Перемотать ролик на 0:20: Синяя кнопка"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-05.jpg.webp" type="image/webp"><img src="/images/gaz/sb-05.jpg" alt="Синяя кнопка" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:20</span></span><span class="gz-sb__tx"><b>Синяя кнопка</b><span>Блокировка дифференциала на панели. Главный предмет ролика.</span></span></button><button class="gz-sb__i" type="button" data-t="27.0" aria-label="Перемотать ролик на 0:27: Колея"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-06.jpg.webp" type="image/webp"><img src="/images/gaz/sb-06.jpg" alt="Колея" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:27</span></span><span class="gz-sb__tx"><b>Колея</b><span>Колесо уходит в грязь: обычной машине здесь конец.</span></span></button><button class="gz-sb__i" type="button" data-t="33.0" aria-label="Перемотать ролик на 0:33: Разворот"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-07.jpg.webp" type="image/webp"><img src="/images/gaz/sb-07.jpg" alt="Разворот" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:33</span></span><span class="gz-sb__tx"><b>Разворот</b><span>ГАЗель раскладывается прямо посреди поля.</span></span></button><button class="gz-sb__i" type="button" data-t="40.0" aria-label="Перемотать ролик на 0:40: Трансформер"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-08.jpg.webp" type="image/webp"><img src="/images/gaz/sb-08.jpg" alt="Трансформер" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:40</span></span><span class="gz-sb__tx"><b>Трансформер</b><span>Робот выходит на обочину мимо билборда и шагает вдоль пробки.</span></span></button><button class="gz-sb__i" type="button" data-t="44.0" aria-label="Перемотать ролик на 0:44: Свидетели"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-09.jpg.webp" type="image/webp"><img src="/images/gaz/sb-09.jpg" alt="Свидетели" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">0:44</span></span><span class="gz-sb__tx"><b>Свидетели</b><span>Женщина на остановке и нога робота в одном кадре.</span></span></button><button class="gz-sb__i" type="button" data-t="79.0" aria-label="Перемотать ролик на 1:19: Пробуждение"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-10.jpg.webp" type="image/webp"><img src="/images/gaz/sb-10.jpg" alt="Пробуждение" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">1:19</span></span><span class="gz-sb__tx"><b>Пробуждение</b><span>Водителя будят: всё это было во сне, маршрутка так и стоит.</span></span></button><button class="gz-sb__i" type="button" data-t="93.5" aria-label="Перемотать ролик на 1:33: А кнопка настоящая"><span class="gz-sb__ph"><picture><source srcset="/images/gaz/sb-11.jpg.webp" type="image/webp"><img src="/images/gaz/sb-11.jpg" alt="А кнопка настоящая" loading="lazy" decoding="async"></picture><span class="gz-sb__tc">1:33</span></span><span class="gz-sb__tx"><b>А кнопка настоящая</b><span>Финальный кадр возвращает к панели. Опция в прайсе есть.</span></span></button></div>
-<p class="gz-sb__hint">Нажмите на любой кадр, и плеер ниже перемотается на этот момент.</p>
+</div></div></section><section class="gz-viral gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Что считать вирусным</div>
+<h2 class="gz-h2">Шесть требований к ролику</h2>
+<p class="gz-sub">Вирусным ролик делает не бюджет, а сходимость нескольких условий
+сразу. Они были прописаны ещё до сценария: ниже требование из брифа и то, чем
+на него ответил готовый ролик.</p>
+<div class="gz-cr__list"><details class="gz-cr" open><summary><b>Невероятность сценария</b><span>Сюжет должен «взрывать» мозг: необычный взгляд на привычные вещи или что-то принципиально новое.</span></summary><p>Маршрутка из утренней пробки встаёт на ноги и уходит по грязи. Привычнее сюжета в стране нет, а такого поворота в нём никто не ждёт.</p></details><details class="gz-cr"><summary><b>Тонкая связь с брендом</b><span>Если ролик откровенно рекламный, зрители не станут им делиться и вирусная раскрутка не сработает.</span></summary><p>Ни одного кадра с логотипом до самого конца. Продукт показан как деталь сюжета: кнопка на панели, без которой ничего бы не случилось.</p></details><details class="gz-cr"><summary><b>Удобство распространения</b><span>Насколько просто опубликовать ролик у себя или отправить другу.</span></summary><p>Полтора десятка перезаливов на разных площадках за первые два года: ролик забирали себе целиком, без ссылок и условий.</p></details><details class="gz-cr"><summary><b>Вирусный потенциал</b><span>Насколько ролик вызывает желание показать его знакомым.</span></summary><p>Шутка держится на общем опыте: её понимает любой, кто стоял в пробке и видел, как маршрутка объезжает её по обочине.</p></details><details class="gz-cr"><summary><b>Актуальность</b><span>Насколько сюжет попадает в текущие настроения и разговоры.</span></summary><p>Год выхода «Трансформеров» в прокате и вечная московская пробка в одном кадре.</p></details><details class="gz-cr"><summary><b>Скорость распространения</b><span>Основная волна должна прийтись на первые две-три недели: у удачных роликов 40% просмотров набирается уже за первую неделю.</span></summary><p>Двадцать тысяч просмотров за первые сутки после появления в сети.</p></details></div>
+</div></section><section class="gz-ideas gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Заходы</div>
+<h2 class="gz-h2">Три сюжета на одну кнопку</h2>
+<p class="gz-sub">До съёмки сюжет искали в трёх разных направлениях. Два первых
+упирались в то же ограничение: машина в них выглядела беспомощной.</p>
+<div class="gz-idea__tabs"><button class="gz-idea__t" type="button" data-i="0">Чёрный юмор</button><button class="gz-idea__t" type="button" data-i="1">Псевдодокументальная история</button><button class="gz-idea__t is-on" type="button" data-i="2">Дорожная пробка</button></div>
+<div class="gz-idea__panes"><div class="gz-idea__p" data-i="0"><span class="gz-idea__st">Отклонено</span><p>Стройка, сельская местность, ухабистая земляная дорога. В кузове грузовой ГАЗели едут строители, машина застревает в грязи и буксует. Водитель просит пассажиров подтолкнуть, и рабочие со знанием дела берутся вызволять машину.</p></div><div class="gz-idea__p" data-i="1"><span class="gz-idea__st">Отклонено</span><p>Обычная московская пробка, снятая будто бы видеорегистратором или телефоном, — при том что снимает камера высокой чёткости. Ставка на то, что зритель принимает картинку за случайную запись.</p></div><div class="gz-idea__p is-on" data-i="2"><span class="gz-idea__st ok">В работу</span><p>Заявочные планы пробки, маршрутка, кнопка на панели. Машина трансформируется в робота, обходит пробку и снова становится маршруткой. В финале водитель просыпается от похлопывания по плечу: ему подают деньги за проезд.</p></div></div>
+</div></section><section class="gz-st gz-r" id="gzStory"><div class="gz__in">
+<div class="gz-eyebrow">Сториборд</div>
+<h2 class="gz-h2">Весь ролик нарисован до съёмки</h2>
+<p class="gz-sub">Отрисовка и согласование сториборда — отдельные этапы тракта:
+пока лист не утверждён, площадка не бронируется. Тридцать листов сюжета плюс
+пэкшот, ниже они идут по порядку. 30 из 31 листов стоят в ролике
+ровно так, как были нарисованы: не дошёл до экрана только крупный план механики.</p>
+<div class="gz-seg" role="group" aria-label="Что показывать">
+<button class="gz-seg__b is-on" type="button" data-m="art">Раскадровка</button>
+<button class="gz-seg__b" type="button" data-m="film">Как сняли</button>
+</div>
+<div class="gz-st__grid"><button class="gz-st__i" type="button" data-t="1.5" aria-label="Перемотать ролик на 0:01: Пробка на вылетной магистрали, внизу кадра разбитая обочина"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/01.jpg.webp" type="image/webp"><img src="/images/gaz/sb/01.jpg" alt="Лист сториборда 1: Пробка на вылетной магистрали, внизу кадра разбитая обочина" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-01.jpg.webp" type="image/webp"><img src="/images/gaz/f-01.jpg" alt="Пробка на вылетной магистрали, внизу кадра разбитая обочина" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">01</span><span class="gz-st__tc">0:01</span></span><span class="gz-st__c">Пробка на вылетной магистрали, внизу кадра разбитая обочина</span></button><button class="gz-st__i" type="button" data-t="6.0" aria-label="Перемотать ролик на 0:06: Водитель легковушки жмёт на клаксон"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/02.jpg.webp" type="image/webp"><img src="/images/gaz/sb/02.jpg" alt="Лист сториборда 2: Водитель легковушки жмёт на клаксон" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-02.jpg.webp" type="image/webp"><img src="/images/gaz/f-02.jpg" alt="Водитель легковушки жмёт на клаксон" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">02</span><span class="gz-st__tc">0:06</span></span><span class="gz-st__c">Водитель легковушки жмёт на клаксон</span></button><button class="gz-st__i" type="button" data-t="9.5" aria-label="Перемотать ролик на 0:09: Мужчина вышел из машины и звонит: он застрял"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/03.jpg.webp" type="image/webp"><img src="/images/gaz/sb/03.jpg" alt="Лист сториборда 3: Мужчина вышел из машины и звонит: он застрял" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-03.jpg.webp" type="image/webp"><img src="/images/gaz/f-03.jpg" alt="Мужчина вышел из машины и звонит: он застрял" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">03</span><span class="gz-st__tc">0:09</span></span><span class="gz-st__c">Мужчина вышел из машины и звонит: он застрял</span></button><button class="gz-st__i" type="button" data-t="11.0" aria-label="Перемотать ролик на 0:11: Маршрутка в общем потоке"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/04.jpg.webp" type="image/webp"><img src="/images/gaz/sb/04.jpg" alt="Лист сториборда 4: Маршрутка в общем потоке" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-04.jpg.webp" type="image/webp"><img src="/images/gaz/f-04.jpg" alt="Маршрутка в общем потоке" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">04</span><span class="gz-st__tc">0:11</span></span><span class="gz-st__c">Маршрутка в общем потоке</span></button><button class="gz-st__i" type="button" data-t="12.0" aria-label="Перемотать ролик на 0:12: Салон: пассажиры нервничают, ребёнок на заднем сиденье"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/05.jpg.webp" type="image/webp"><img src="/images/gaz/sb/05.jpg" alt="Лист сториборда 5: Салон: пассажиры нервничают, ребёнок на заднем сиденье" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-05.jpg.webp" type="image/webp"><img src="/images/gaz/f-05.jpg" alt="Салон: пассажиры нервничают, ребёнок на заднем сиденье" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">05</span><span class="gz-st__tc">0:12</span></span><span class="gz-st__c">Салон: пассажиры нервничают, ребёнок на заднем сиденье</span></button><button class="gz-st__i" type="button" data-t="16.0" aria-label="Перемотать ролик на 0:16: Водитель смотрит вперёд и знает про машину то, чего не знают они"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/06.jpg.webp" type="image/webp"><img src="/images/gaz/sb/06.jpg" alt="Лист сториборда 6: Водитель смотрит вперёд и знает про машину то, чего не знают они" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-06.jpg.webp" type="image/webp"><img src="/images/gaz/f-06.jpg" alt="Водитель смотрит вперёд и знает про машину то, чего не знают они" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">06</span><span class="gz-st__tc">0:16</span></span><span class="gz-st__c">Водитель смотрит вперёд и знает про машину то, чего не знают они</span></button><button class="gz-st__i" type="button" data-t="20.5" aria-label="Перемотать ролик на 0:20: Панель приборов, кнопка блокировки"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/07.jpg.webp" type="image/webp"><img src="/images/gaz/sb/07.jpg" alt="Лист сториборда 7: Панель приборов, кнопка блокировки" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-07.jpg.webp" type="image/webp"><img src="/images/gaz/f-07.jpg" alt="Панель приборов, кнопка блокировки" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">07</span><span class="gz-st__tc">0:20</span></span><span class="gz-st__c">Панель приборов, кнопка блокировки</span></button><button class="gz-st__i" type="button" data-t="23.5" aria-label="Перемотать ролик на 0:23: Рука на рычаге коробки"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/08.jpg.webp" type="image/webp"><img src="/images/gaz/sb/08.jpg" alt="Лист сториборда 8: Рука на рычаге коробки" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-08.jpg.webp" type="image/webp"><img src="/images/gaz/f-08.jpg" alt="Рука на рычаге коробки" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">08</span><span class="gz-st__tc">0:23</span></span><span class="gz-st__c">Рука на рычаге коробки</span></button><button class="gz-st__i" type="button" data-t="13.5" aria-label="Перемотать ролик на 0:13: Руки на руле"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/09.jpg.webp" type="image/webp"><img src="/images/gaz/sb/09.jpg" alt="Лист сториборда 9: Руки на руле" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-09.jpg.webp" type="image/webp"><img src="/images/gaz/f-09.jpg" alt="Руки на руле" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">09</span><span class="gz-st__tc">0:13</span></span><span class="gz-st__c">Руки на руле</span></button><button class="gz-st__i" type="button" data-t="24.0" aria-label="Перемотать ролик на 0:24: Нога на педали"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/10.jpg.webp" type="image/webp"><img src="/images/gaz/sb/10.jpg" alt="Лист сториборда 10: Нога на педали" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-10.jpg.webp" type="image/webp"><img src="/images/gaz/f-10.jpg" alt="Нога на педали" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">10</span><span class="gz-st__tc">0:24</span></span><span class="gz-st__c">Нога на педали</span></button><button class="gz-st__i" type="button" data-t="27.0" aria-label="Перемотать ролик на 0:27: Колесо трогается с места"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/11.jpg.webp" type="image/webp"><img src="/images/gaz/sb/11.jpg" alt="Лист сториборда 11: Колесо трогается с места" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-11.jpg.webp" type="image/webp"><img src="/images/gaz/f-11.jpg" alt="Колесо трогается с места" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">11</span><span class="gz-st__tc">0:27</span></span><span class="gz-st__c">Колесо трогается с места</span></button><button class="gz-st__i" type="button" data-t="26.0" aria-label="Перемотать ролик на 0:26: Маршрутка уходит с асфальта на грунтовую обочину"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/12.jpg.webp" type="image/webp"><img src="/images/gaz/sb/12.jpg" alt="Лист сториборда 12: Маршрутка уходит с асфальта на грунтовую обочину" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-12.jpg.webp" type="image/webp"><img src="/images/gaz/f-12.jpg" alt="Маршрутка уходит с асфальта на грунтовую обочину" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">12</span><span class="gz-st__tc">0:26</span></span><span class="gz-st__c">Маршрутка уходит с асфальта на грунтовую обочину</span></button><button class="gz-st__i" type="button" data-t="29.0" aria-label="Перемотать ролик на 0:29: Колесо в грязи"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/13.jpg.webp" type="image/webp"><img src="/images/gaz/sb/13.jpg" alt="Лист сториборда 13: Колесо в грязи" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-13.jpg.webp" type="image/webp"><img src="/images/gaz/f-13.jpg" alt="Колесо в грязи" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">13</span><span class="gz-st__tc">0:29</span></span><span class="gz-st__c">Колесо в грязи</span></button><button class="gz-st__i" type="button" data-t="30.0" aria-label="Перемотать ролик на 0:30: Водитель тянется к панели"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/14.jpg.webp" type="image/webp"><img src="/images/gaz/sb/14.jpg" alt="Лист сториборда 14: Водитель тянется к панели" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-14.jpg.webp" type="image/webp"><img src="/images/gaz/f-14.jpg" alt="Водитель тянется к панели" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">14</span><span class="gz-st__tc">0:30</span></span><span class="gz-st__c">Водитель тянется к панели</span></button><button class="gz-st__i" type="button" data-t="30.5" aria-label="Перемотать ролик на 0:30: Палец нажимает кнопку"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/15.jpg.webp" type="image/webp"><img src="/images/gaz/sb/15.jpg" alt="Лист сториборда 15: Палец нажимает кнопку" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-15.jpg.webp" type="image/webp"><img src="/images/gaz/f-15.jpg" alt="Палец нажимает кнопку" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">15</span><span class="gz-st__tc">0:30</span></span><span class="gz-st__c">Палец нажимает кнопку</span></button><button class="gz-st__i" type="button" data-t="33.0" aria-label="Перемотать ролик на 0:33: Машина раскладывается прямо в поле"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/16.jpg.webp" type="image/webp"><img src="/images/gaz/sb/16.jpg" alt="Лист сториборда 16: Машина раскладывается прямо в поле" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-16.jpg.webp" type="image/webp"><img src="/images/gaz/f-16.jpg" alt="Машина раскладывается прямо в поле" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">16</span><span class="gz-st__tc">0:33</span></span><span class="gz-st__c">Машина раскладывается прямо в поле</span></button><button class="gz-st__i" type="button" data-t="36.0" aria-label="Перемотать ролик на 0:36: Парень с телефоном не верит своим глазам"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/17.jpg.webp" type="image/webp"><img src="/images/gaz/sb/17.jpg" alt="Лист сториборда 17: Парень с телефоном не верит своим глазам" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-17.jpg.webp" type="image/webp"><img src="/images/gaz/f-17.jpg" alt="Парень с телефоном не верит своим глазам" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">17</span><span class="gz-st__tc">0:36</span></span><span class="gz-st__c">Парень с телефоном не верит своим глазам</span></button><button class="gz-st__i" type="button" data-t="40.0" aria-label="Перемотать ролик на 0:40: Робот в полный рост выходит на обочину"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/18.jpg.webp" type="image/webp"><img src="/images/gaz/sb/18.jpg" alt="Лист сториборда 18: Робот в полный рост выходит на обочину" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-18.jpg.webp" type="image/webp"><img src="/images/gaz/f-18.jpg" alt="Робот в полный рост выходит на обочину" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">18</span><span class="gz-st__tc">0:40</span></span><span class="gz-st__c">Робот в полный рост выходит на обочину</span></button><button class="gz-st__i" type="button" data-t="44.0" aria-label="Перемотать ролик на 0:44: Женщина на остановке оборачивается"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/19.jpg.webp" type="image/webp"><img src="/images/gaz/sb/19.jpg" alt="Лист сториборда 19: Женщина на остановке оборачивается" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-19.jpg.webp" type="image/webp"><img src="/images/gaz/f-19.jpg" alt="Женщина на остановке оборачивается" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">19</span><span class="gz-st__tc">0:44</span></span><span class="gz-st__c">Женщина на остановке оборачивается</span></button><div class="gz-st__i no-pair"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/20.jpg.webp" type="image/webp"><img src="/images/gaz/sb/20.jpg" alt="Лист сториборда 20: Крупный план механики: сустав робота" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">20</span><span class="gz-st__tc no">нет в ролике</span></span><span class="gz-st__c">Крупный план механики: сустав робота</span></div><button class="gz-st__i" type="button" data-t="57.0" aria-label="Перемотать ролик на 0:57: Робот бежит вдоль пробки"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/21.jpg.webp" type="image/webp"><img src="/images/gaz/sb/21.jpg" alt="Лист сториборда 21: Робот бежит вдоль пробки" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-21.jpg.webp" type="image/webp"><img src="/images/gaz/f-21.jpg" alt="Робот бежит вдоль пробки" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">21</span><span class="gz-st__tc">0:57</span></span><span class="gz-st__c">Робот бежит вдоль пробки</span></button><button class="gz-st__i" type="button" data-t="50.0" aria-label="Перемотать ролик на 0:50: Робот проходит над женщиной"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/22.jpg.webp" type="image/webp"><img src="/images/gaz/sb/22.jpg" alt="Лист сториборда 22: Робот проходит над женщиной" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-22.jpg.webp" type="image/webp"><img src="/images/gaz/f-22.jpg" alt="Робот проходит над женщиной" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">22</span><span class="gz-st__tc">0:50</span></span><span class="gz-st__c">Робот проходит над женщиной</span></button><button class="gz-st__i" type="button" data-t="48.0" aria-label="Перемотать ролик на 0:48: Взгляд сверху: робот шагает через кадр"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/23.jpg.webp" type="image/webp"><img src="/images/gaz/sb/23.jpg" alt="Лист сториборда 23: Взгляд сверху: робот шагает через кадр" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-23.jpg.webp" type="image/webp"><img src="/images/gaz/f-23.jpg" alt="Взгляд сверху: робот шагает через кадр" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">23</span><span class="gz-st__tc">0:48</span></span><span class="gz-st__c">Взгляд сверху: робот шагает через кадр</span></button><button class="gz-st__i" type="button" data-t="58.0" aria-label="Перемотать ролик на 0:58: Робот уходит вперёд по обочине"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/24.jpg.webp" type="image/webp"><img src="/images/gaz/sb/24.jpg" alt="Лист сториборда 24: Робот уходит вперёд по обочине" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-24.jpg.webp" type="image/webp"><img src="/images/gaz/f-24.jpg" alt="Робот уходит вперёд по обочине" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">24</span><span class="gz-st__tc">0:58</span></span><span class="gz-st__c">Робот уходит вперёд по обочине</span></button><button class="gz-st__i" type="button" data-t="67.5" aria-label="Перемотать ролик на 1:07: Маршрутка снова маршрутка: обратная трансформация"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/25.jpg.webp" type="image/webp"><img src="/images/gaz/sb/25.jpg" alt="Лист сториборда 25: Маршрутка снова маршрутка: обратная трансформация" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-25.jpg.webp" type="image/webp"><img src="/images/gaz/f-25.jpg" alt="Маршрутка снова маршрутка: обратная трансформация" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">25</span><span class="gz-st__tc">1:07</span></span><span class="gz-st__c">Маршрутка снова маршрутка: обратная трансформация</span></button><button class="gz-st__i" type="button" data-t="72.0" aria-label="Перемотать ролик на 1:12: Салон: пассажиры смеются"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/26.jpg.webp" type="image/webp"><img src="/images/gaz/sb/26.jpg" alt="Лист сториборда 26: Салон: пассажиры смеются" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-26.jpg.webp" type="image/webp"><img src="/images/gaz/f-26.jpg" alt="Салон: пассажиры смеются" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">26</span><span class="gz-st__tc">1:12</span></span><span class="gz-st__c">Салон: пассажиры смеются</span></button><button class="gz-st__i" type="button" data-t="79.0" aria-label="Перемотать ролик на 1:19: Водителя трогают за плечо"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/27.jpg.webp" type="image/webp"><img src="/images/gaz/sb/27.jpg" alt="Лист сториборда 27: Водителя трогают за плечо" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-27.jpg.webp" type="image/webp"><img src="/images/gaz/f-27.jpg" alt="Водителя трогают за плечо" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">27</span><span class="gz-st__tc">1:19</span></span><span class="gz-st__c">Водителя трогают за плечо</span></button><button class="gz-st__i" type="button" data-t="74.0" aria-label="Перемотать ролик на 1:14: Пассажир протягивает деньги за проезд"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/28.jpg.webp" type="image/webp"><img src="/images/gaz/sb/28.jpg" alt="Лист сториборда 28: Пассажир протягивает деньги за проезд" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-28.jpg.webp" type="image/webp"><img src="/images/gaz/f-28.jpg" alt="Пассажир протягивает деньги за проезд" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">28</span><span class="gz-st__tc">1:14</span></span><span class="gz-st__c">Пассажир протягивает деньги за проезд</span></button><button class="gz-st__i" type="button" data-t="89.0" aria-label="Перемотать ролик на 1:29: Водитель оборачивается: это был сон"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/29.jpg.webp" type="image/webp"><img src="/images/gaz/sb/29.jpg" alt="Лист сториборда 29: Водитель оборачивается: это был сон" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-29.jpg.webp" type="image/webp"><img src="/images/gaz/f-29.jpg" alt="Водитель оборачивается: это был сон" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">29</span><span class="gz-st__tc">1:29</span></span><span class="gz-st__c">Водитель оборачивается: это был сон</span></button><button class="gz-st__i" type="button" data-t="93.5" aria-label="Перемотать ролик на 1:33: Финальный кадр, та же кнопка на панели"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/30.jpg.webp" type="image/webp"><img src="/images/gaz/sb/30.jpg" alt="Лист сториборда 30: Финальный кадр, та же кнопка на панели" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-30.jpg.webp" type="image/webp"><img src="/images/gaz/f-30.jpg" alt="Финальный кадр, та же кнопка на панели" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">30</span><span class="gz-st__tc">1:33</span></span><span class="gz-st__c">Финальный кадр, та же кнопка на панели</span></button><button class="gz-st__i" type="button" data-t="97.0" aria-label="Перемотать ролик на 1:37: Пэкшот. На листе стоит «www.сайт.com»"><span class="gz-st__ph"><span class="gz-st__a"><picture><source srcset="/images/gaz/sb/31.jpg.webp" type="image/webp"><img src="/images/gaz/sb/31.jpg" alt="Лист сториборда 31: Пэкшот. На листе стоит «www.сайт.com»" loading="lazy" decoding="async"></picture></span><span class="gz-st__b"><picture><source srcset="/images/gaz/f-31.jpg.webp" type="image/webp"><img src="/images/gaz/f-31.jpg" alt="Пэкшот. На листе стоит «www.сайт.com»" loading="lazy" decoding="async"></picture></span><span class="gz-st__n">31</span><span class="gz-st__tc">1:37</span></span><span class="gz-st__c">Пэкшот. На листе стоит «www.сайт.com»</span></button></div>
+<p class="gz-sb__hint">Переключатель меняет все кадры разом. Клик по кадру
+перематывает плеер ниже на этот момент.</p>
 </div></section><section class="gz-film gz-r"><div class="gz__in">
 <div class="gz-eyebrow">Ролик</div>
 <h2 class="gz-h2">Газель-трансформер</h2>
@@ -382,11 +519,52 @@ html[data-lock="on"] .gz-card::before{background:var(--acc)}
 <div class="gz-film__cap"><span>Хронометраж <b>1:42</b></span>
 <span>Музыка <b>Becks V Menthol — Ultra Lust</b></span>
 <span>Пэкшот кампании <b>azgaz.ru/elocker</b></span></div>
-</div></section><section class="gz-shoot gz-r"><div class="gz__in">
-<div class="gz-eyebrow">Съёмка</div>
-<h2 class="gz-h2">Две локации, два дня</h2>
-<p class="gz-sub">Слева площадка, справа то, что из неё получилось в ролике.</p>
+</div></section><section class="gz-diffs gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Бумага против экрана</div>
+<h2 class="gz-h2">Что изменилось по дороге</h2>
+<p class="gz-sub">Сториборд рисуют, чтобы спорить на бумаге, а не на площадке.
+Три вещи всё-таки поменялись между листом и монтажом.</p>
+<div class="gz-diffs__grid"><div class="gz-diff"><div class="gz-diff__h"><span class="was">Кнопка красная</span><span class="arr" aria-hidden="true">→</span><span class="now">Кнопка синяя</span></div><p>На всех листах сториборда кнопка нарисована красной: художник рисовал «тревожную кнопку» по смыслу. У настоящего ELocker на панели ГАЗели она синяя, и в кадр пошла именно она.</p></div><div class="gz-diff"><div class="gz-diff__h"><span class="was">Без графики</span><span class="arr" aria-hidden="true">→</span><span class="now">Робот и аниматика</span></div><p>Бриф описывал простой ролик на натуре без графики и сложных трюков. Робота собрали моделью, согласовали аниматику — траекторию его перемещения — и только потом детализировали до финального качества.</p></div><div class="gz-diff"><div class="gz-diff__h"><span class="was">Одна смена</span><span class="arr" aria-hidden="true">→</span><span class="now">Три съёмочных дня</span></div><p>План был снять всё за одну смену без переработок. В итоге первый день ушёл на панорамы, второй на крупные планы водителя и пассажиров, третий на досъёмку того, что не успели.</p></div></div>
+</div></section><section class="gz-prod gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Производство</div>
+<h2 class="gz-h2">Двенадцать этапов и три смены</h2>
+<p class="gz-sub">Тракт был расписан до старта, от согласования идеи до
+цветокоррекции. Съёмка стоит в нём седьмым пунктом: к моменту выезда на площадку
+спорить уже не о чем.</p>
+<ol class="gz-stages"><li><span class="gz-stage__n">01</span>Согласование идеи</li><li><span class="gz-stage__n">02</span>Разработка сценария</li><li><span class="gz-stage__n">03</span>Утверждение сценария</li><li><span class="gz-stage__n">04</span>Отрисовка сториборда</li><li><span class="gz-stage__n">05</span>Согласование сториборда</li><li><span class="gz-stage__n">06</span>Подготовка к съёмке</li><li><span class="gz-stage__n">07</span>Съёмка</li><li><span class="gz-stage__n">08</span>Черновой монтаж</li><li><span class="gz-stage__n">09</span>Графика</li><li><span class="gz-stage__n">10</span>Разработка звука</li><li><span class="gz-stage__n">11</span>Сборка: видео, графика, звук</li><li><span class="gz-stage__n">12</span>Цветокоррекция</li></ol>
+<div class="gz-shifts"><div><b>День 1</b><span>Все панорамные кадры</span></div><div><b>День 2</b><span>Крупные планы водителя и пассажиров</span></div><div><b>День 3</b><span>Досъёмка кадров, которые не успели в первый день</span></div></div>
+<div class="gz-lists">
+<div><h3>Смена</h3><ul><li>Режиссёр</li><li>Второй режиссёр</li><li>Оператор</li><li>Ассистент оператора</li><li>Администратор площадки</li><li>Техник</li><li>Гафер</li><li>Актёры</li></ul></div>
+<div><h3>Техника</h3><ul><li>Камера RED Scarlet в обвесе</li><li>Набор объективов</li><li>Штатив и кран</li><li>Осветительное оборудование</li><li>Генератор</li><li>Светоотражатели</li><li>Отдельное звукозаписывающее устройство</li><li>Хлопушка</li></ul></div>
+</div>
 <div class="gz-pair"><figure><picture><source srcset="/images/gaz/shoot-crew.jpg.webp" type="image/webp"><img src="/images/gaz/shoot-crew.jpg" alt="Съёмочная группа на локации" loading="lazy" decoding="async"></picture><figcaption>Съёмочная группа на локации</figcaption></figure><figure><picture><source srcset="/images/gaz/shot-pylon.jpg.webp" type="image/webp"><img src="/images/gaz/shot-pylon.jpg" alt="Тот же ракурс в готовом ролике" loading="lazy" decoding="async"></picture><figcaption>Тот же ракурс в готовом ролике</figcaption></figure><div class="gz-pair__tx"><h3>Опора ЛЭП</h3><p>Оператор снимает с крана вверх, в пустое небо над опорой. В готовом ролике по этой точке пойдёт робот: опора на фотографии со съёмки и опора в кадре одна и та же, поэтому графика стоит в настоящей перспективе места, а не поверх произвольного фона.</p></div></div><div class="gz-pair"><figure><picture><source srcset="/images/gaz/shoot-cab.jpg.webp" type="image/webp"><img src="/images/gaz/shoot-cab.jpg" alt="Актёр перед дублем" loading="lazy" decoding="async"></picture><figcaption>Актёр перед дублем</figcaption></figure><figure><picture><source srcset="/images/gaz/shot-driver.jpg.webp" type="image/webp"><img src="/images/gaz/shot-driver.jpg" alt="Тот же кадр в ролике" loading="lazy" decoding="async"></picture><figcaption>Тот же кадр в ролике</figcaption></figure><div class="gz-pair__tx"><h3>Кабина</h3><p>Вся линия водителя снята в одной кабине: пробка, сон и пробуждение идут в том же салоне и в том же пасмурном свете. На этом держится финал: до последнего кадра зритель не отличает сон от яви.</p></div></div>
+</div></section><section class="gz-loc gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Локация</div>
+<h2 class="gz-h2">Дорога, вдоль которой идёт другая дорога</h2>
+<p class="gz-sub">Под сюжет нужна была не просто трасса, а трасса с параллельной
+разбитой дорогой — и с разрешённым съездом на неё, чтобы знак стоял в кадре
+и к съёмке не было вопросов. Такую нашли недалеко от Москвы.</p>
+<div class="gz-loc__grid">
+<figure><picture><source srcset="/images/gaz/loc-1.jpg.webp" type="image/webp"><img src="/images/gaz/loc-1.jpg" alt="Съезд с трассы на грунтовую дорогу, скаутинг локации" loading="lazy" decoding="async"></picture>
+<figcaption>Скаутинг: съезд и знак</figcaption></figure>
+<figure><picture><source srcset="/images/gaz/loc-2.jpg.webp" type="image/webp"><img src="/images/gaz/loc-2.jpg" alt="Размытая параллельная дорога в лужах, скаутинг локации" loading="lazy" decoding="async"></picture>
+<figcaption>Скаутинг: та самая параллельная колея</figcaption></figure>
+<figure><picture><source srcset="/images/gaz/f-12.jpg.webp" type="image/webp"><img src="/images/gaz/f-12.jpg" alt="Кадр ролика: маршрутка уходит с асфальта мимо знака" loading="lazy" decoding="async"></picture>
+<figcaption>Кадр из ролика: знак съезда в кадре</figcaption></figure>
+</div>
+</div></section><section class="gz-gfx gz-r"><div class="gz__in">
+<div class="gz-eyebrow">Графика</div>
+<h2 class="gz-h2">Робот появился после съёмки</h2>
+<p class="gz-sub">Сначала собрали модель, затем согласовали аниматику — траекторию
+перемещения робота по кадру — и только после этого довели модель до финального
+качества. Порядок важен: пока траектория не сходится с реальной перспективой
+площадки, детализировать нечего.</p>
+<div class="gz-gfx__grid">
+<figure><picture><source srcset="/images/gaz/f-16.jpg.webp" type="image/webp"><img src="/images/gaz/f-16.jpg" alt="Кадр ролика: маршрутка раскладывается в поле" loading="lazy" decoding="async"></picture>
+<figcaption>Трансформация</figcaption></figure>
+<figure><picture><source srcset="/images/gaz/f-18.jpg.webp" type="image/webp"><img src="/images/gaz/f-18.jpg" alt="Кадр ролика: робот в полный рост на обочине" loading="lazy" decoding="async"></picture>
+<figcaption>Финальная модель в кадре</figcaption></figure>
+</div>
 </div></section><section class="gz-spread gz-r"><div class="gz__in">
 <div class="gz-eyebrow">Результат</div>
 <h2 class="gz-h2">Ролик забрали себе</h2>
@@ -458,9 +636,29 @@ if(hero&&dock&&window.IntersectionObserver){
  },{rootMargin:'-40% 0px 0px 0px'}).observe(hero);
 }
 
-// ── раскадровка перематывает плеер ──
+// ── сториборд: переключатель «раскадровка / как сняли» ──
+var story=d.getElementById('gzStory');
+[].forEach.call(d.querySelectorAll('.gz-seg__b'),function(b){
+ b.addEventListener('click',function(){
+  var film=b.getAttribute('data-m')==='film';
+  if(story)story.classList.toggle('is-film',film);
+  [].forEach.call(d.querySelectorAll('.gz-seg__b'),function(n){
+   n.classList.toggle('is-on',n===b);});
+ });
+});
+
+// ── заходы: вкладки ──
+var tabs=[].slice.call(d.querySelectorAll('.gz-idea__t')),
+    panes=[].slice.call(d.querySelectorAll('.gz-idea__p'));
+tabs.forEach(function(b){b.addEventListener('click',function(){
+ var i=b.getAttribute('data-i');
+ tabs.forEach(function(n){n.classList.toggle('is-on',n===b);});
+ panes.forEach(function(n){n.classList.toggle('is-on',n.getAttribute('data-i')===i);});
+});});
+
+// ── лист сториборда перематывает плеер ──
 var film=d.getElementById('gzFilm');
-[].forEach.call(d.querySelectorAll('.gz-sb__i'),function(b){
+[].forEach.call(d.querySelectorAll('.gz-st__i[data-t]'),function(b){
  b.addEventListener('click',function(){
   if(!film)return;
   var t=parseFloat(b.getAttribute('data-t'))||0;
