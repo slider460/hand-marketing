@@ -20,7 +20,8 @@ for f in glob.glob(API+'/getproductslist_*.json'):
             if g: cur['img']=g[0]['img']
         data[url]=cur
 order=json.load(open(API+'/getproductslist_689558768071.json'))['products']
-FB={'/creative/metra':('Брендбук Metra Technology Group','Пять брендов индустриальной экосистемы','Creative & Design'),
+FB={'/creative/samara':('Фирменный стиль выставки «Самара»','Брендбук Самарской области, 28 полос','Creative & Design'),
+    '/creative/metra':('Брендбук Metra Technology Group','Пять брендов индустриальной экосистемы','Creative & Design'),
     '/creative/becar/smile':('Брошюра ТЦ «Смайл»','22 полосы про доход с торговых метров','Creative & Design'),
     '/creative/becar/knight-house':('Брошюра «Дом с рыцарем»','18 полос про апартаменты в доходном доме','Creative & Design'),
     '/creative/saintgobain/calendar':('Новогодний календарь Saint-Gobain','Концепция: иллюстрации из инструментов','Creative & Design'),

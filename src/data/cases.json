@@ -1,5 +1,15 @@
 [
   {
+    "slug": "creative__samara",
+    "route": "/creative/samara",
+    "category": "creative",
+    "categoryLabel": "Creative & Design",
+    "client": "Правительство Самарской области",
+    "title": "Фирменный стиль выставки «Самара»",
+    "metaTitle": "Брендбук выставки «Самара» — фирменный стиль Самарской области",
+    "cover": "/images/lib/custom-samara-brand/cover-main.png"
+  },
+  {
     "slug": "portfolio__becar-private-money",
     "route": "/portfolio/becar-private-money",
     "category": "event",
