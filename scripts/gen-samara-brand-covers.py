@@ -2,14 +2,16 @@
 """Обложки карточки кейса «Фирменный стиль выставки „Самара“» (477×396),
 механика дизайн-системы v2.2:
 - cover-main: КРУГ-постер в фирменном синем 368AB5, внутри — кривая паруса
-  светлым тоном (тот самый фоновый паттерн из гайда), маскот «Ладушка» стоит
-  в круге и головой выходит за его границу, внизу метрика «28 ПОЛОС»;
+  светлым тоном (тот самый фоновый паттерн из гайда), маскот «Ладушка» строго
+  по центру и плашка «БРЕНДБУК / ВЫСТАВКА „САМАРА“»: в каталоге карточка идёт
+  без подписи, поэтому кейс объясняет сам постер, а не знак региона;
 - cover-hover: КВАДРАТ того же синего — фоновое эхо «46» (слов семантического
   ядра), знак-парус, заголовок и «СМОТРЕТЬ КЕЙС →».
 Знак и парус не рисуем руками: берём кривые из scripts/a2/samara_vectors.json,
 то есть тот же вектор, что и на самой странице кейса.
 Кладёт в mirror/images/lib/custom-samara-brand/ (webp — scripts/gen-webp.sh)."""
 import json
+import math
 import os
 
 import fitz
@@ -85,6 +87,11 @@ def disc():
     return im
 
 
+MAIN_PLATE = ('БРЕНДБУК', 'ВЫСТАВКА «САМАРА»')
+PLATE_TOP = 300      # верх плашки в координатах карточки
+FIG_H, FIG_BOTTOM = 252, 298   # рост фигуры и уровень, на котором она стоит
+
+
 def cover_main():
     S = SS
     img = Image.new('RGBA', (W * S, H * S), (0, 0, 0, 0))
@@ -97,26 +104,34 @@ def cover_main():
     d = ImageDraw.Draw(img)
     d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=WHITE + (52,), width=2 * S)
 
-    # маскот стоит в круге и выходит за его верхнюю границу — по правилу карточек
-    # v2.2 объёмные элементы разрешено выпускать за круг
+    # маскот строго по центру круга: карточка в каталоге идёт без подписи,
+    # поэтому объяснять кейс должен сам постер
     m = Image.open(MASCOT).convert('RGBA')
-    mh = int(316 * S)
+    mh = int(FIG_H * S)
     m = m.resize((max(1, round(m.width * mh / m.height)), mh), Image.LANCZOS)
-    # фигура стоит в круге и выходит за его правую границу, оставаясь в карточке
-    img.alpha_composite(m, (cx - m.width // 2 + int(124 * S), cy + r - mh - int(24 * S)))
+    img.alpha_composite(m, (cx - m.width // 2, int(FIG_BOTTOM * S) - mh))
 
-    # знак и метрика — в нижней половине: сверху карточку перекрывает чип категории
-    lg = vector('mark', int(62 * S))
-    img.paste(lg, (cx - r + int(46 * S), cy + int(20 * S)), lg)
-    ptxt = '28 ПОЛОС'
-    pf = font(int(18 * S), 'ExtraBold')
-    tb = d.textbbox((0, 0), ptxt, font=pf)
-    tw, th = tb[2] - tb[0], tb[3] - tb[1]
-    px_, py_ = int(24 * S), int(14 * S)
-    pw, ph = tw + px_ * 2, th + py_ * 2
-    plx, ply = cx - r + int(38 * S), cy + r - int(74 * S)
-    d.rounded_rectangle([plx, ply, plx + pw, ply + ph], radius=ph // 2, fill=INK + (255,))
-    d.text((plx + px_ - tb[0], ply + py_ - tb[1]), ptxt, font=pf, fill=SAND + (255,))
+    # плашка вместо знака: знак региона узнаётся не всеми, а «что это за кейс»
+    # с карточки должно читаться сразу. Знак остаётся на hover-квадрате.
+    rows = []
+    for text, size, color in ((MAIN_PLATE[0], 16, SAND), (MAIN_PLATE[1], 12, (168, 196, 214))):
+        f = font(int(size * S), 'ExtraBold')
+        tb = d.textbbox((0, 0), text, font=f)
+        rows.append((text, f, tb, tb[2] - tb[0], tb[3] - tb[1], color))
+    padx, pady, gap = int(20 * S), int(12 * S), int(7 * S)
+    pw = max(x[3] for x in rows) + padx * 2
+    ph = sum(x[4] for x in rows) + gap + pady * 2
+    plx, ply = cx - pw // 2, int(PLATE_TOP * S)
+    # плашка обязана вписаться в хорду круга на своей высоте, иначе углы вылезут
+    half = math.sqrt(max(0.0, (R * S) ** 2 - ((ply + ph / 2) - cy) ** 2))
+    if pw / 2 > half - 12 * S:
+        raise SystemExit('✗ плашка шире круга на этой высоте: %.0f px против %.0f px'
+                         % (pw / S, 2 * (half - 12 * S) / S))
+    d.rounded_rectangle([plx, ply, plx + pw, ply + ph], radius=int(16 * S), fill=INK + (255,))
+    y = ply + pady
+    for _t, f, tb, tw, th, color in rows:
+        d.text((cx - tw // 2 - tb[0], y - tb[1]), _t, font=f, fill=color + (255,))
+        y += th + gap
     return img.resize((W, H), Image.LANCZOS)
 
 
