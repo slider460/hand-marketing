@@ -30,7 +30,8 @@ FB={'/creative/samara':('Фирменный стиль выставки «Сам
     '/portfolio/becar-private-money':('Стенд You&Co для Becar','Private Money Expo Forum 2021','Exhibition Build'),
     '/portfolio/samara-stand-vdnh':('Стенд Самарской области','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
     '/portfolio/samara-exhibition':('Выставка «Самара»','Музей им. Алабина','Exhibition Build'),
-    '/portfolio/stavropol-stand-vdnh':('Стенд Ставропольского края','Выставка-форум «Россия», ВДНХ','Exhibition Build')}
+    '/portfolio/stavropol-stand-vdnh':('Стенд Ставропольского края','Выставка-форум «Россия», ВДНХ','Exhibition Build'),
+    '/event/changan':('Презентация Changan CS35','Атриум ТЦ и финал с 3D mapping шоу','Event')}
 # Жёсткие подписи там, где данных каталога не хватает. У трёх digital-кейсов
 # в поле text вместо категории лежит подзаголовок («Бизнес центр "Станция"»
 # и т.п.), поэтому cat_key их не распознавал и они выпадали из карусели digital,

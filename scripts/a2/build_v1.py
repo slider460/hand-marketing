@@ -1,6 +1,7 @@
 import os, re, shutil
 ROOT='/Users/aleksandrnarodetskii/Downloads/hand-marketing-react/mirror'
 HERE=os.path.dirname(os.path.abspath(__file__))
+LM_MAX=16  # ступеней «Загрузить ещё» на главной (по 8 карточек = потолок 128 кейсов)
 MOBILE='<style>'+open(os.path.join(HERE,'mobile.css')).read()+'</style>'
 MHOME_CSS='<style>'+open(os.path.join(HERE,'mhome.css')).read()+'</style>'
 MHOME_HTML=open(os.path.join(HERE,'mhome.html')).read()
@@ -124,12 +125,14 @@ def process(p, route):
     h=re.sub(r'(<head[^>]*>)', lambda m: m.group(1)+'<style>.t-records{opacity:1!important}</style>'+FORM_JS+METRIKA, h, count=1)
     if route=='':  # ГЛАВНАЯ — кастомная мобильная версия (десктоп Тильда 1:1)
         G='#rec249749070 .t-store__card-list .t-store__card'
+        # ступеней должно хватать на ВСЕ кейсы каталога (8 шт. на шаг), иначе последние
+        # карточки не достаются кнопкой «Загрузить ещё»: было 6 ступеней = потолок 48
         lvl=G+':nth-child(n+9){display:none!important}'
-        for s in range(2,7):
+        for s in range(2,LM_MAX+1):
             lvl+=f'body.lm{s} {G}:nth-child(n+9){{display:revert!important}}'
             lvl+=f'body.lm{s} {G}:nth-child(n+{8*s+1}){{display:none!important}}'
         DESK_CSS='<style>@media(min-width:641px){#rec249926772{display:none!important}}'+lvl+'.mh-loadmore{display:block;margin:34px auto 0;padding:15px 44px;font:700 16px Montserrat,Arial,sans-serif;color:#fff;background:#14171C;border:0;border-radius:999px;cursor:pointer;transition:transform .2s}.mh-loadmore:hover{transform:translateY(-2px)}</style>'
-        DESK_JS='''<script>(function(){function home(){return location.pathname.replace(/index\\.html$/,'').replace(/\\/+$/,'')==='';}if(!home())return;var step=1,btn=null;function place(){var b=document.getElementById('rec249749070');if(!b)return;var g=b.querySelector('.t-store__card-list')||b.querySelector('.js-store-grid-cont');if(!g)return;var total=g.querySelectorAll('.t-store__card').length;if(total<=8){if(btn)btn.style.display='none';return;}if(!btn||!btn.isConnected){btn=document.createElement('button');btn.className='mh-loadmore';btn.textContent='Загрузить ещё';btn.onclick=function(e){e.preventDefault();step++;document.body.className=document.body.className.replace(/\\blm\\d\\b/g,'').trim();if(step>1)document.body.classList.add('lm'+Math.min(step,6));place();};g.parentNode.insertBefore(btn,g.nextSibling);}btn.style.display=(8*step>=total)?'none':'block';}new MutationObserver(place).observe(document.body,{childList:true,subtree:true});var t=0,iv=setInterval(function(){place();if(++t>50)clearInterval(iv);},300);})();</script>'''
+        DESK_JS='''<script>(function(){function home(){return location.pathname.replace(/index\\.html$/,'').replace(/\\/+$/,'')==='';}if(!home())return;var step=1,btn=null;function place(){var b=document.getElementById('rec249749070');if(!b)return;var g=b.querySelector('.t-store__card-list')||b.querySelector('.js-store-grid-cont');if(!g)return;var total=g.querySelectorAll('.t-store__card').length;if(total<=8){if(btn)btn.style.display='none';return;}if(!btn||!btn.isConnected){btn=document.createElement('button');btn.className='mh-loadmore';btn.textContent='Загрузить ещё';btn.onclick=function(e){e.preventDefault();step++;document.body.className=document.body.className.replace(/\\blm\\d+\\b/g,'').trim();if(step>1)document.body.classList.add('lm'+Math.min(step,__LM_MAX__));place();};g.parentNode.insertBefore(btn,g.nextSibling);}btn.style.display=(8*step>=total)?'none':'block';}new MutationObserver(place).observe(document.body,{childList:true,subtree:true});var t=0,iv=setInterval(function(){place();if(++t>50)clearInterval(iv);},300);})();</script>'''.replace('__LM_MAX__', str(LM_MAX))
         h=h.replace('</head>', MHOME_CSS+DESK_CSS+CIRCE_LINK+'</head>',1)
         h=re.sub(r'(<body[^>]*>)', r'\1'+MHOME_HTML, h, count=1)
         h=h.replace('</body>', MHOME_JS+DESK_JS+BOOT+'</body>',1)

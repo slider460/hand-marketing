@@ -12,7 +12,9 @@
 
 Фиксы:
   - Кейсы: прячем rec249926772, показываем самодостаточную адаптивную сетку
-    круглых обложек (первые 12 + кнопка «Все проекты» → /project).
+    круглых обложек (ВСЕ кейсы + кнопка «Все проекты» → /project). Список берётся
+    из мобильной карусели `.mcases` на этой же странице — она источник правды,
+    её пересобирает gen_cases_carousel.py + apply_cases_carousel.py.
   - Клиенты: прячем битый rec249777353, показываем десктопный rec226824033
     (он корректно перетекает в 3 колонки на планшете).
 
@@ -20,26 +22,22 @@
 Идемпотентен. Откат: git checkout mirror/index-a2.html
 """
 import os
+import re
 import sys
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'mirror')
 PAGE = os.path.join(ROOT, 'index-a2.html')
 
-# первые 12 кейсов (обложка, ссылка) — как на десктопе; текст запечён в картинку
-CASES = [
-    ('/images/lib/custom-stavropol-vdnh/cover-main.png', '/portfolio/stavropol-stand-vdnh'),
-    ('/images/lib/custom-samara-vdnh/cover-main.png', '/portfolio/samara-stand-vdnh'),
-    ('/images/lib/custom-samara-exhibition/cover-main.png', '/portfolio/samara-exhibition'),
-    ('/images/lib/as6135-3563-4735-a365-643234376439/icons-112.png', '/eaton_online'),
-    ('/images/lib/as3466-3261-4738-b938-303637303133/__-18.png', '/event/samsung'),
-    ('/images/lib/as6466-3635-4534-b432-353364376364/__-01.png', '/3d/stavropol'),
-    ('/images/lib/as3532-3737-4330-b333-386531636666/__-03.png', '/video/patriot'),
-    ('/images/lib/as3731-3666-4163-a661-383336646133/__-13.png', '/event/marieclaire'),
-    ('/images/lib/as3234-6262-4231-b031-663033663939/__-16.png', '/event/salaris'),
-    ('/images/lib/as3233-3363-4138-b265-353738653739/__-20.png', '/video/gaz'),
-    ('/images/lib/as3933-3462-4563-b861-383364333966/__-15.png', '/video/salaris'),
-    ('/images/lib/as3062-3363-4134-b333-623232303134/__-22.png', '/event/riviera'),
-]
+
+def read_cases(html):
+    """Пары (обложка, ссылка) из мобильной карусели .mcases на этой же странице."""
+    i = html.find('data-mcases')
+    if i < 0:
+        return []
+    seg = html[i:html.find('</section>', i)]
+    return [(cov, href) for href, cov in
+            re.findall(r'<a class="mcase" href="([^"]+)"><div class="mcase__img">'
+                       r'<img src="([^"]+)"', seg)]
 
 CSS = """<style>/*hm-home-tablet*/
 .hm-cases-t{display:none}
@@ -60,10 +58,10 @@ CSS = """<style>/*hm-home-tablet*/
 </style>"""
 
 
-def build_block():
+def build_block(cases):
     cards = ''.join(
         f'<a class="hm-cases-t__c" href="{href}"><img src="{cov}" alt="Проект Hand Marketing" loading="lazy"></a>'
-        for cov, href in CASES
+        for cov, href in cases
     )
     return (f'\n{CSS}\n<section class="hm-cases-t"><div class="hm-cases-t__grid">{cards}</div>'
             f'<a class="hm-cases-t__more" href="/project">Все проекты</a></section>\n')
@@ -71,8 +69,24 @@ def build_block():
 
 def main():
     html = open(PAGE, encoding='utf-8').read()
+    cases = read_cases(html)
+    if not cases:
+        print('!! карусель .mcases не найдена — нечем наполнить планшетную сетку')
+        return 1
     if 'hm-home-tablet' in html:
-        print('Уже применено (hm-home-tablet), пропуск.')
+        # уже вставлено: пересобираем секцию под актуальный список кейсов
+        a = html.find('<style>/*hm-home-tablet*/')
+        b = html.find('</section>', html.find('<section class="hm-cases-t"', a))
+        if a < 0 or b < 0:
+            print('!! маркер есть, но секцию разобрать не удалось')
+            return 1
+        new = build_block(cases)
+        old = html[a:b + len('</section>')]
+        if old == new.strip():
+            print(f'Актуально ({len(cases)} кейсов), правок нет.')
+            return
+        open(PAGE, 'w', encoding='utf-8').write(html[:a] + new.strip() + html[b + len('</section>'):])
+        print(f'Планшетная сетка кейсов обновлена: {len(cases)} карточек.')
         return
     # вставляем перед десктопным блоком кейсов rec249749070 (в его позиции)
     a = html.find('id="rec249749070"')
@@ -83,7 +97,7 @@ def main():
     if ins < 0:
         print('!! не найдено начало <div> якоря')
         return 1
-    html = html[:ins] + build_block() + html[ins:]
+    html = html[:ins] + build_block(cases) + html[ins:]
     open(PAGE, 'w', encoding='utf-8').write(html)
     print('Готово: адаптивная сетка кейсов + своп клиентов (641–980px).')
 
