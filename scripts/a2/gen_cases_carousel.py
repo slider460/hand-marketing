@@ -53,7 +53,7 @@ def cat_key(cat):
 def card(url,title,descr,cat,img):
     k=cat_key(cat); color=COL.get(k,'#14171C')
     return f'''<a class="mcase" href="{H.escape(url)}"><div class="mcase__img"><img src="{H.escape(img)}" alt="" loading="lazy"><span class="mcase__cat" style="--c:{color}">{H.escape(cat)}</span></div><div class="mcase__b"><div class="mcase__t">{H.escape(title)}</div><div class="mcase__d">{H.escape(descr)}</div></div></a>'''
-allcards=[]; bycat={}
+allcards=[]; bycat={}; CARD={}
 for p in order:
     url=p.get('url') or ''
     g=json.loads(p['gallery']) if p.get('gallery') else []
@@ -65,15 +65,19 @@ for p in order:
     if not title and not img: continue
     c=card(url,title,descr,cat,img); allcards.append(c)
     k=cat_key(cat); bycat.setdefault(k,[]).append((url,c))
-# Порядок карточек в категории берём из каталога самой страницы услуги, иначе
-# мобильная карусель идёт в порядке общего каталога /project и расходится
-# с десктопной сеткой. Категория -> сторпарт страницы.
-PART_ORDER={'digital':'750728959451'}
+    CARD[url]=c
+# Состав и порядок категорийной карусели берём из каталога самой страницы услуги.
+# По ярлыку категории раскладывать нельзя: у карточки он один, а в каталогах
+# кейс живёт сразу в нескольких сторпартах (Ставрополь стоит и в event, и в 3d,
+# Changan — в event и 3d). Из-за ярлыка мобильная карусель теряла такие кейсы
+# и расходилась с десктопной сеткой. Категория -> сторпарт страницы.
+PART_ORDER={'event':'252167513721','creative':'573067849371','digital':'750728959451',
+            '3d':'305877663751','print':'351156592581'}
 for k,sp in PART_ORDER.items():
     f=f'{API}/getproductslist_{sp}.json'
-    if k not in bycat or not os.path.exists(f): continue
-    rank={p.get('url'):i for i,p in enumerate(json.load(open(f))['products'])}
-    bycat[k].sort(key=lambda uc: rank.get(uc[0],len(rank)))
+    if not os.path.exists(f): continue
+    urls=[p.get('url') for p in json.load(open(f))['products']]
+    bycat[k]=[(u,CARD[u]) for u in urls if u in CARD]
 def wrap(cards): return '<div class="mcases" data-mcases><div class="mcases__track">'+''.join(cards)+'</div></div>'
 os.makedirs('scripts/a2/carousels',exist_ok=True)
 open('scripts/a2/carousels/all.html','w').write(wrap(allcards))
