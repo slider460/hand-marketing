@@ -406,8 +406,26 @@ img{max-width:100%;height:auto;display:block}
 .rz-stage{margin:clamp(22px,3vw,32px) 0 20px}
 @media(min-width:981px) and (min-height:640px){
  .rz-stage{position:sticky;top:12px;z-index:6}}
-.rz-stage video{width:100%;display:block;border-radius:12px;background:#000;
- box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.rz-player{position:relative}
+.rz-stage video{width:100%;height:auto;aspect-ratio:16/9;display:block;
+ border-radius:12px;background:#000;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+/* своя кнопка запуска: ролик сам не стартует, перемотка только ставит кадр */
+.rz-play{position:absolute;left:0;right:0;top:0;bottom:46px;display:flex;
+ flex-direction:column;align-items:center;justify-content:center;gap:14px;
+ border:0;background:linear-gradient(180deg,rgba(23,27,33,.12),rgba(23,27,33,.62));
+ color:#fff;cursor:pointer;border-radius:12px 12px 0 0;transition:opacity .25s}
+.rz-play[hidden]{display:none}
+.rz-play__disc{width:88px;height:88px;border-radius:50%;background:var(--red);
+ display:grid;place-items:center;box-shadow:0 14px 34px rgba(0,0,0,.45);
+ transition:transform .2s,background .2s}
+.rz-play:hover .rz-play__disc,.rz-play:focus-visible .rz-play__disc{
+ transform:scale(1.07);background:#D64A36}
+.rz-play__t{font:700 17px/1.2 'Podkova',serif;letter-spacing:.01em;
+ text-shadow:0 2px 14px rgba(0,0,0,.6);display:flex;align-items:center;gap:10px}
+.rz-play__t b{font-weight:400;font-family:'Istok Web',sans-serif;font-size:14px;
+ opacity:.82;border-left:1px solid rgba(255,255,255,.4);padding-left:10px}
+@media(max-width:560px){.rz-play__disc{width:64px;height:64px}
+ .rz-play__disc svg{width:24px;height:24px}.rz-play__t{font-size:15px}}
 .rz-yard__grid{display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:18px;
  align-items:start}
 .rz-planwrap{background:#0F1216;border:1px solid rgba(255,255,255,.14);
@@ -645,10 +663,17 @@ def yard():
       'эти услуги происходят, и поставили к каждой кадр из фильма. Три услуги '
       'сняты живьём, четыре остались фотографией со слайда, и на схеме это видно '
       'по цвету пометки.</p>'
-      '<div class="rz-stage"><video id="rz-v" controls preload="none" playsinline '
+      '<div class="rz-stage"><div class="rz-player">'
+      '<video id="rz-v" controls preload="none" playsinline '
       f'poster="{IMG}/poster.jpg" width="1280" height="720">'
       f'<source src="{VIDEO}" type="video/mp4">'
-      'Ваш браузер не воспроизводит видео.</video></div>'
+      'Ваш браузер не воспроизводит видео.</video>'
+      '<button type="button" class="rz-play" id="rz-play">'
+      '<span class="rz-play__disc" aria-hidden="true">'
+      '<svg viewBox="0 0 32 32" width="32" height="32"><path d="M11 7l16 9-16 9z" '
+      'fill="currentColor"/></svg></span>'
+      '<span class="rz-play__t" id="rz-play-t">Смотреть фильм<b>3:54</b></span>'
+      '</button></div></div>'
       '<div class="rz-yard__grid">'
       f'<div><div class="rz-planwrap" id="rz-wrap">{plan_svg()}</div>'
       '<p class="rz-hint">Схема шире экрана: её можно прокрутить вбок, '
@@ -889,8 +914,8 @@ def sync():
       'по управлению терминально-складским комплексом, филиала ОАО «РЖД». '
       'Титр держится в кадре с 3:18 по 3:28, сам синхрон идёт с 3:15 по 3:37 '
       'и закрывает фильм.</p>'
-      '<button type="button" class="rz-go" id="rz-sync-go">Включить синхрон '
-      'с 3:15</button>'
+      '<button type="button" class="rz-go" id="rz-sync-go">Поставить плеер '
+      'на 3:15</button>'
       '</div></div></div></section>')
 
 
@@ -925,13 +950,32 @@ PAGE_JS = """<script>(function(){
  function mmss(s){s=Math.max(0,Math.round(s));return (s/60|0)+':'+('0'+(s%60)).slice(-2);}
  function inView(el){var r=el.getBoundingClientRect();
   return r.top>-40&&r.bottom<innerHeight+40;}
- function seek(s,play){
+ // ── плеер: автозапуска нет. Перемотка ставит кадр на паузе, а запуск
+ // остаётся за своей кнопкой поверх постера.
+ var playBtn=document.getElementById('rz-play'),
+     playT=document.getElementById('rz-play-t');
+ function label(s){
+  if(!playT)return;
+  playT.innerHTML=(s>0?'Включить с ':'Смотреть фильм')+
+   (s>0?'<b>'+mmss(s)+'</b>':'<b>3:54</b>');
+ }
+ function seek(s){
   // до загрузки метаданных currentTime молча игнорируется — ждём событие
-  function go(){v.currentTime=Math.min(s,(v.duration||1e5)-.2);
-   if(play!==false){var q=v.play();if(q&&q.catch)q.catch(function(){});}}
+  function go(){v.currentTime=Math.min(s,(v.duration||1e5)-.2);}
   if(v.readyState>0)go();
   else{v.addEventListener('loadedmetadata',go,{once:true});v.load();}
+  label(s);
   if(!inView(v))v.scrollIntoView({block:'center',behavior:'smooth'});
+ }
+ if(playBtn){
+  playBtn.addEventListener('click',function(){
+   var q=v.play();if(q&&q.catch)q.catch(function(){});
+  });
+  v.addEventListener('play',function(){playBtn.hidden=true;});
+  v.addEventListener('pause',function(){
+   playBtn.hidden=false;label(v.currentTime>1?v.currentTime:0);
+  });
+  v.addEventListener('ended',function(){playBtn.hidden=false;label(0);});
  }
 
  // ── двор: остановка ведёт контейнер, подсвечивает зону и кадр ───────────
@@ -964,7 +1008,7 @@ PAGE_JS = """<script>(function(){
    var svg=wrap.querySelector('.rz-plan'),k=svg.getBoundingClientRect().width/1200;
    wrap.scrollTo({left:s.x*k-wrap.clientWidth/2,behavior:'smooth'});
   }
-  if(doSeek)seek(s.sec,true);
+  if(doSeek)seek(s.sec);
  }
  btns.forEach(function(b){b.addEventListener('click',function(){
   stopWalk();show(+b.dataset.i,true);});});
@@ -1009,7 +1053,7 @@ PAGE_JS = """<script>(function(){
   nshot.src=IMG+'/'+n.shot+'.jpg';
   nshot.alt='Кадр фильма с плашкой: '+n.cap;
   ncap.textContent=mmss(n.sec)+'. Плашка «'+n.num+'»: '+n.cap+'.';
-  seek(n.sec,true);
+  seek(n.sec);
  });});
 
  // ── колея: ползунок повторяет экранный размер из фильма ─────────────────
@@ -1039,7 +1083,7 @@ PAGE_JS = """<script>(function(){
 
  // ── синхрон ─────────────────────────────────────────────────────────────
  var sg=document.getElementById('rz-sync-go');
- if(sg)sg.addEventListener('click',function(){seek(195.5,true);});
+ if(sg)sg.addEventListener('click',function(){seek(195.5);});
 
  // ── появление блоков: свип по скроллу, а не IntersectionObserver.
  // Наблюдатель отдаёт колбэк на следующем кадре, и при быстрой прокрутке
