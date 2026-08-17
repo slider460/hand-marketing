@@ -1,0 +1,30 @@
+<svg viewBox="110 40 204 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo production">
+ <defs>
+  <linearGradient id="hf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4CA4E8"/><stop offset="1" stop-color="#2A6D9E"/></linearGradient>
+  <linearGradient id="ht" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#93CBF2"/><stop offset="1" stop-color="#59A8DE"/></linearGradient>
+  <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A6D9E"/><stop offset="1" stop-color="#1B4A6E"/></linearGradient>
+  <linearGradient id="hl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FC6EE"/><stop offset="1" stop-color="#3B7FB5"/></linearGradient>
+ </defs>
+ <!-- рисунок чуть крупнее центра кадра: без этого камера читается мельче
+      соседних иконок, у которых фигура занимает больше высоты viewBox -->
+ <g transform="translate(213,145) scale(1.12) translate(-213,-145)">
+ <!-- горб видоискателя: та же изометрия, что у остальных иконок (сдвиг грани +17,-10) -->
+ <polygon points="176,102 228,102 228,84 176,84" fill="url(#hf)"/>
+ <polygon points="176,84 228,84 245,74 193,74" fill="url(#ht)"/>
+ <polygon points="228,102 245,92 245,74 228,84" fill="url(#hs)"/>
+ <!-- корпус камеры: фронт, верхняя грань, боковая грань -->
+ <polygon points="124,112 268,112 268,210 124,210" fill="url(#hf)"/>
+ <polygon points="124,112 268,112 302,92 158,92" fill="url(#ht)"/>
+ <polygon points="268,112 302,92 302,190 268,210" fill="url(#hs)"/>
+ <!-- кнопка спуска на верхней грани -->
+ <polygon points="276,104 292,104 300,99 284,99" fill="#FFE000"/>
+ <polygon points="276,104 292,104 292,109 276,109" fill="#E6C800"/>
+ <!-- объектив: оправа, ствол, стекло, блик -->
+ <circle cx="196" cy="161" r="41" fill="url(#hs)"/>
+ <circle cx="196" cy="161" r="33" fill="url(#hl)"/>
+ <circle cx="196" cy="161" r="22" fill="#17456F"/>
+ <path d="M181 148 a22 22 0 0 1 18 -7" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>
+ <!-- индикатор на фронте -->
+ <circle cx="248" cy="130" r="7" fill="#FFE000"/>
+ </g>
+</svg>

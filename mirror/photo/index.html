@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--custom-page--><title>Предметная съёмка товаров и оборудования для каталогов | Hand Marketing</title><meta name="description" content="Предметная и каталожная съёмка товаров, оборудования и интерьеров: вырезанный по контуру фон, кадрирование под квадратные карточки, ретушь и сдача под печатный каталог, сайт и маркетплейсы. Выезд на производство и объекты."><link rel="canonical" href="https://hand-marketing.ru/photo"><meta property="og:type" content="website"><meta property="og:title" content="Предметная съёмка товаров и оборудования для каталогов | Hand Marketing"><meta property="og:description" content="Предметная и каталожная съёмка товаров, оборудования и интерьеров: вырезанный по контуру фон, кадрирование под квадратные карточки, ретушь и сдача под печатный каталог, сайт и маркетплейсы. Выезд на производство и объекты."><meta property="og:url" content="https://hand-marketing.ru/photo"><meta property="og:image" content="https://hand-marketing.ru/images/sgphoto/backstage-setup.jpg"><link rel="stylesheet" href="/fonts/exo2-spectral.css"><link href="/fonts/montserrat.css" rel="stylesheet"><style id="hm-chrome-css">
+/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
+#root header,#root footer{display:none!important}
+body>.hm-topbar,.hm-topbar{display:none!important}
+/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
+/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
+#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
+.hm-chrome,.hm-chrome *{box-sizing:border-box}
+.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
+/* ШАПКА */
+.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
+.hm-hdr__nav{display:flex;align-items:center;gap:34px}
+.hm-hdr__nav.r{justify-content:flex-end}
+.hm-hdr a{color:#14171C;text-decoration:none}
+.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
+.hm-hdr__nav a:hover{opacity:.6}
+.hm-hdr__logo{display:flex;justify-content:center}
+.hm-hdr__logo img{height:54px;width:auto;display:block}
+.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
+.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
+.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
+/* ПОДВАЛ — фиолетовая форма */
+.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
+.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
+.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
+.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
+.hm-cta__consent a{color:#fff}
+.hm-cta form{display:flex;flex-direction:column;gap:14px}
+.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
+.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
+  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
+.hm-cta button:hover{transform:translateY(-2px)}
+.hm-cta__msg{font-weight:700;padding:8px 0}
+/* ПОДВАЛ — тёмный футер */
+.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
+.hm-foot__in{max-width:1080px;margin:0 auto}
+.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
+.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.hm-foot__nav a:hover{color:#FFE000}
+.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
+.hm-foot a{color:#cfd2d6}
+.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
+.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
+.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
+.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
+.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
+.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
+@media(max-width:860px){
+  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
+  .hm-hdr__nav.l{display:none}
+  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
+  .hm-hdr__logo{justify-content:flex-start}
+  .hm-hdr__logo img{height:40px}
+  .hm-hdr__contacts{margin-left:0}
+  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
+  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
+}
+
+/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
+   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
+   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
+   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
+body{margin:0}
+@media(min-width:861px){
+ .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
+ .hm-hdr__nav,.hm-hdr__contacts{display:contents}
+ .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
+  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
+ .hm-hdr a:hover{opacity:.6}
+ .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
+ .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
+ .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
+ .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
+@media(min-width:1200px){
+ .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
+ .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
+ .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
+ .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
+ .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
+@media(min-width:960px) and (max-width:1199px){
+ .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
+ .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
+ .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
+ .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
+ .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
+@media(min-width:861px) and (max-width:959px){
+ .hm-hdr a[href="/about"]{left:2%}
+ .hm-hdr a[href="/service"]{left:15%}
+ .hm-hdr a[href="/project"]{left:27%}
+ .hm-hdr a[href="/clients"]{right:31%}
+ .hm-hdr a[href="/contacts"]{right:18%}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
+</style><style id="ph-css">
+.ph{--ink:#16191C;--paper:#fff;--mist:#F2F4F6;--line:rgba(22,25,28,.12);
+ --blue:#4CA4E8;--deep:#3B729D;
+ font-family:'Spectral',Georgia,serif;color:var(--ink);background:var(--paper);
+ -webkit-font-smoothing:antialiased}
+.ph *{box-sizing:border-box}
+.ph h1,.ph h2,.ph h3,.ph .ui{font-family:'Exo 2','Montserrat',-apple-system,Arial,sans-serif}
+.ph :focus-visible{outline:3px solid var(--deep);outline-offset:3px;border-radius:3px}
+.ph__wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.ph__sec{padding:84px 0;border-top:1px solid var(--line)}
+.ph__kicker{font-family:'Exo 2',sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;
+ text-transform:uppercase;color:var(--deep);margin:0 0 14px}
+.ph__h{font-size:clamp(26px,3.2vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.12;margin:0 0 16px}
+.ph__lead{font-size:clamp(16px,1.5vw,19px);line-height:1.65;max-width:66ch;margin:0}
+
+/* герой */
+.ph-hero{padding:60px 0 76px;border-top:0}
+.ph-hero__g{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+.ph-hero h1{font-size:clamp(30px,4.4vw,56px);font-weight:800;line-height:1.04;letter-spacing:-.03em;margin:0 0 20px}
+.ph-hero h1 em{font-style:normal;color:var(--deep)}
+.ph-hero__st{border:1px solid var(--line);border-radius:20px;background:var(--mist);
+ display:flex;align-items:center;justify-content:center;padding:30px;min-height:330px}
+.ph-hero__st img{max-width:100%;max-height:400px;width:auto;height:auto;display:block}
+.ph-cta{display:inline-block;margin-top:26px;font-family:'Exo 2',sans-serif;font-size:15px;font-weight:700;
+ text-decoration:none;padding:14px 28px;border-radius:999px;background:var(--ink);color:#fff}
+.ph-cta:hover{background:var(--deep)}
+.ph-cta_g{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:10px}
+.ph-cta_g:hover{background:var(--ink);color:#fff}
+
+/* сетки */
+.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.ph-card{border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;background:#fff}
+.ph-card h3{font-size:19px;font-weight:700;margin:0 0 10px}
+.ph-card p{font-size:15.5px;line-height:1.62;margin:0;color:#3D444A}
+.ph-del{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:30px}
+.ph-del__i{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.ph-del__t{font-family:'Exo 2',sans-serif;font-size:15px;font-weight:700}
+.ph-del__d{font-size:15.5px;line-height:1.6;color:#3D444A}
+
+/* врезка кейса */
+.ph-hl{margin-top:34px;border-radius:20px;overflow:hidden;border:1px solid var(--line);
+ display:grid;grid-template-columns:1.02fr .98fr}
+.ph-hl__t{padding:38px 40px}
+.ph-hl__t h3{font-size:clamp(21px,2.4vw,29px);font-weight:700;line-height:1.15;margin:0 0 14px}
+.ph-hl__t p{font-size:16px;line-height:1.65;color:#3D444A;margin:0 0 18px}
+.ph-hl__n{display:flex;flex-wrap:wrap;gap:26px;margin:0 0 22px;padding:0;list-style:none}
+.ph-hl__n b{font-family:'Exo 2',sans-serif;display:block;font-size:30px;font-weight:800;line-height:1}
+.ph-hl__n span{font-family:'Exo 2',sans-serif;font-size:13px;color:#6B7178}
+.ph-hl__i{background:var(--mist);display:flex;align-items:center;justify-content:center;padding:26px}
+.ph-hl__i img{max-width:100%;max-height:330px;width:auto;display:block}
+
+/* витрина */
+.ph-cases{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:34px}
+.ph-case{text-decoration:none;color:inherit;display:block}
+.ph-case__p{display:block;position:relative;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:var(--mist)}
+.ph-case__p img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+.ph-case__p img+img{opacity:0}
+.ph-case:hover .ph-case__p img+img{opacity:1}
+.ph-case__c{display:block;font-family:'Exo 2',sans-serif;font-size:16px;font-weight:700;margin:14px 0 4px}
+.ph-case__w{display:block;font-size:14.5px;line-height:1.5;color:#6B7178;margin:0}
+
+/* faq */
+.ph-faq{margin-top:30px;border-top:1px solid var(--line)}
+.ph-faq details{border-bottom:1px solid var(--line)}
+.ph-faq summary{font-family:'Exo 2',sans-serif;font-size:17px;font-weight:600;padding:20px 40px 20px 0;
+ cursor:pointer;position:relative;list-style:none}
+.ph-faq summary::-webkit-details-marker{display:none}
+.ph-faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:24px;color:var(--deep)}
+.ph-faq details[open] summary::after{content:"–"}
+.ph-faq p{font-size:15.5px;line-height:1.68;color:#3D444A;margin:0 0 22px;max-width:82ch}
+
+@media(max-width:1080px){
+ .ph__wrap{padding:0 28px}
+ .ph-hero__g,.ph-hl{grid-template-columns:1fr}
+ .ph-grid{grid-template-columns:repeat(2,1fr)}
+ .ph-cases{grid-template-columns:repeat(3,1fr);gap:26px}
+ .ph-del{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:880px){
+ .ph__sec{padding:56px 0}
+ .ph-hl__t{padding:28px 24px}
+}
+@media(max-width:640px){
+ .ph__wrap{padding:0 18px}
+ .ph-grid{grid-template-columns:1fr}
+ .ph-cases{grid-template-columns:1fr 1fr;gap:20px}
+ .ph-del__i{grid-template-columns:1fr;gap:6px}
+ .ph-cta_g{margin-left:0;margin-top:10px}
+ .ph-hero__st{min-height:220px;padding:18px}
+}
+@media(max-height:520px) and (orientation:landscape){
+ .ph__sec{padding:40px 0}
+ .ph-cases{grid-template-columns:repeat(4,1fr)}
+}
+</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --></head><body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="ph"><header class="ph__sec ph-hero"><div class="ph__wrap"><div class="ph-hero__g">
+<div>
+ <p class="ph__kicker">Фотопродакшн Hand Marketing</p>
+ <h1>Предметная съёмка товаров и <em>оборудования</em></h1>
+ <p class="ph__lead">Снимаем продукцию для печатных каталогов, сайтов, маркетплейсов
+  и POS-материалов. Работаем не кадрами, а линейками: единая геометрия по всем
+  артикулам, вырезанный по контуру фон, кадрирование с запасом под квадратную
+  карточку. Выезжаем на производство и объекты, где стоит оборудование.</p>
+ <a class="ph-cta" href="#lead">Обсудить съёмку</a>
+ <a class="ph-cta ph-cta_g" href="/photo/saint-gobain">Разбор съёмки для Saint-Gobain</a>
+</div>
+<figure class="ph-hero__st" style="margin:0">
+ <img src="/images/sgphoto/item-2140.webp" width="900" height="700"
+  alt="Предметная съёмка комплектующих: подвес с вырезанным по контуру фоном" fetchpriority="high">
+</figure>
+</div></div></header><section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Что снимаем</p>
+<h2 class="ph__h">Шесть форматов съёмки</h2>
+<p class="ph__lead">Чаще всего заказывают первые три: каталог продукции, съёмку
+ оборудования на объекте и продукт внутри системы.</p>
+<div class="ph-grid"><article class="ph-card"><h3>Предметная и каталожная съёмка</h3><p>Товары и комплектующие на белом: несколько ракурсов на артикул, единая геометрия по всей линейке, вырезанный по контуру фон. Основной формат для каталогов и карточек товара.</p></article><article class="ph-card"><h3>Съёмка оборудования на объекте</h3><p>Станки, узлы и системы там, где они стоят: на производстве, в цеху, в учебном центре. Свет привозим с собой, съёмочный стол разворачиваем на месте.</p></article><article class="ph-card"><h3>Продукт внутри системы</h3><p>Не только позиция отдельно, но и то, как она работает в сборке. Для технических каталогов это вторая обязательная картинка на артикул.</p></article><article class="ph-card"><h3>Съёмка для маркетплейсов</h3><p>Карточка под требования площадок: квадрат и вертикаль, белый фон, инфографика по вашему шаблону, именование файлов по артикулам.</p></article><article class="ph-card"><h3>Репортаж и мероприятия</h3><p>Съёмка деловых событий, конференций и презентаций: зал, спикеры, гости, детали застройки. Отбор и цветокор отдаём в течение нескольких дней.</p></article><article class="ph-card"><h3>Портрет и команда</h3><p>Бизнес-портрет руководителя, портреты команды и съёмка для годового отчёта: единый свет и фон на всю серию, чтобы портреты стояли рядом.</p></article></div>
+</div></section><section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Как сдаём</p>
+<h2 class="ph__h">Условия сдачи файлов</h2>
+<p class="ph__lead">Съёмка каталога заканчивается не карточкой в портфолио,
+ а пакетом файлов, который без ручной доработки уходит в вёрстку и на сайт.
+ Вот из чего он состоит.</p>
+<div class="ph-del"><div class="ph-del__i"><div class="ph-del__t">Исходники</div><div class="ph-del__d">RAW со съёмки, мастер-файлы 5760×3240 и выше. Кадрируются без потери качества под разворот каталога.</div></div><div class="ph-del__i"><div class="ph-del__t">Вырезанный фон</div><div class="ph-del__d">У отдельных позиций фон вырезается по контуру, а не прямоугольником: вместе с контуром вырезается перфорация, прорези и просветы. Сдаём с альфа-каналом.</div></div><div class="ph-del__i"><div class="ph-del__t">Кадрирование</div><div class="ph-del__d">Каждый кадр снимается с запасом под квадрат 1:1 и вертикаль 4:5, чтобы одна съёмка закрывала каталог, сайт и маркетплейс без пересъёмки.</div></div><div class="ph-del__i"><div class="ph-del__t">Именование</div><div class="ph-del__d">Файлы называем по вашим артикулам и складываем в структуру папок заказчика. Каталог собирается из пакета без ручного разбора.</div></div><div class="ph-del__i"><div class="ph-del__t">Обработка</div><div class="ph-del__d">Общая цветокоррекция по всей серии, ретушь дефектов, согласование по контрольным кадрам до того, как в обработку уйдёт вся партия.</div></div><div class="ph-del__i"><div class="ph-del__t">Форматы сдачи</div><div class="ph-del__d">PNG и TIFF с прозрачностью, JPEG и WebP под веб, подготовка макетов под печать вместе с нашей типографской группой.</div></div></div>
+</div></section><section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Опорный кейс</p>
+<h2 class="ph__h">Съёмка продукции Gyproc для Saint-Gobain</h2>
+<div class="ph-hl">
+ <div class="ph-hl__t">
+  <h3>63 позиции за один съёмочный день</h3>
+  <ul class="ph-hl__n">
+   <li><b>62</b><span>кадра в сдаче</span></li>
+   <li><b>615</b><span>отверстий вырезано</span></li>
+   <li><b>1</b><span>съёмочный день</span></li>
+  </ul>
+  <p>Комплектующие для гипсокартонных систем: подвесы, соединители, ленты, крепёж
+   и профили, а следом собранные из них потолок и перегородка. Сдача шла сразу
+   в три канала: печатные каталоги, сайт компании и POS-материалы.</p>
+  <p>На странице кейса лист сдачи можно переключить в квадрат и посмотреть, что
+   останется в кадрировании у каждого файла, а подложку сменить на шахматку и
+   увидеть границу выреза.</p>
+  <a class="ph-cta" href="/photo/saint-gobain">Открыть разбор кейса</a>
+ </div>
+ <div class="ph-hl__i"><img src="/images/sgphoto/item-2105.webp" width="900" height="600"
+  loading="lazy" alt="Соединитель «краб» Gyproc, предметная съёмка с вырезанным фоном"></div>
+</div>
+</div></section><section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Проекты</p>
+<h2 class="ph__h">Съёмки, которые делали сами</h2>
+<p class="ph__lead">Под каждой карточкой написано, что именно снимали: предметную
+ продукцию, подиум, репортаж или съёмку на объекте.</p>
+<div class="ph-cases"><a class="ph-case" href="/photo/saint-gobain"><span class="ph-case__p"><img src="/images/lib/custom-sgphoto/cover-main.png" alt="Saint-Gobain" loading="lazy"><img src="/images/lib/custom-sgphoto/cover-hover.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">Saint-Gobain</span><span class="ph-case__w">Предметная съёмка продукции Gyproc</span></a><a class="ph-case" href="/portfolio/ceramicanova"><span class="ph-case__p"><img src="/images/lib/custom-ceramicanova/cover-main.png" alt="CeramicaNova" loading="lazy"><img src="/images/lib/custom-ceramicanova/cover-hover.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">CeramicaNova</span><span class="ph-case__w">Студийная съёмка санфарфора</span></a><a class="ph-case" href="/portfolio/obo-academy"><span class="ph-case__p"><img src="/images/lib/custom-obo-academy/cover-main.png" alt="OBO Bettermann" loading="lazy"><img src="/images/lib/custom-obo-academy/cover-hover.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">OBO Bettermann</span><span class="ph-case__w">Съёмка продукции в Академии OBO</span></a><a class="ph-case" href="/video/lingerie"><span class="ph-case__p"><img src="/images/lib/as3439-3739-4562-a533-616631333163/__-37.png" alt="Lingerie Show-Forum" loading="lazy"><img src="/images/lib/as6538-3664-4239-b165-373961323065/__-36.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">Lingerie Show-Forum</span><span class="ph-case__w">Подиум и лукбук на 54 выхода</span></a><a class="ph-case" href="/event/marieclaire"><span class="ph-case__p"><img src="/images/lib/as3731-3666-4163-a661-383336646133/__-13.png" alt="Marie Claire" loading="lazy"><img src="/images/lib/as3631-3366-4331-b933-653734353566/__-14.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">Marie Claire</span><span class="ph-case__w">Репортаж с кросс-мероприятий</span></a><a class="ph-case" href="/event/mozaika"><span class="ph-case__p"><img src="/images/lib/as6263-3532-4466-b765-323663363739/__-28.png" alt="ТРЦ «Мозаика»" loading="lazy"><img src="/images/lib/as6662-3466-4461-a163-356635363933/__-29.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">ТРЦ «Мозаика»</span><span class="ph-case__w">Репортаж с вечера открытия</span></a><a class="ph-case" href="/event/riviera"><span class="ph-case__p"><img src="/images/lib/as3062-3363-4134-b333-623232303134/__-22.png" alt="ТРЦ «Ривьера»" loading="lazy"><img src="/images/lib/as3962-3736-4130-b434-343833336331/__-23.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">ТРЦ «Ривьера»</span><span class="ph-case__w">Съёмка застройки и вечера</span></a><a class="ph-case" href="/creative/becar/ramada"><span class="ph-case__p"><img src="/images/lib/as6534-3037-4839-a432-383536343433/__-56.png" alt="Becar" loading="lazy"><img src="/images/lib/as6561-3234-4363-b930-306439303437/__-57.png" alt="" aria-hidden="true" loading="lazy"></span><span class="ph-case__c">Becar</span><span class="ph-case__w">Съёмка для брошюры Ramada Encore</span></a></div>
+</div></section><section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Вопросы</p>
+<h2 class="ph__h">Что спрашивают до съёмки</h2>
+<div class="ph-faq"><details><summary>Сколько стоит предметная съёмка?</summary><p>Считаем по числу позиций и ракурсов, а не по часам. В смете отдельно стоят съёмочный день, обработка и вырезание фона, потому что объём ретуши на технических изделиях с перфорацией и на гладкой упаковке отличается в разы. После списка позиций даём смету бесплатно.</p></details><details><summary>Сколько позиций можно снять за один день?</summary><p>На съёмке продукции Gyproc для Saint-Gobain за одну смену прошло 63 позиции: отдельные изделия и собранные из них системы. Это рабочий ориентир для технических изделий, когда заказчик заранее собрал продукцию на площадке.</p></details><details><summary>Вы вырезаете фон у товаров?</summary><p>Да, и вырезаем по контуру, а не прямоугольником. В кейсе Saint-Gobain вместе с контуром вырезано 615 сквозных отверстий: перфорация подвесов и прорези профиля. Файлы отдаются с прозрачностью, их можно класть на любой фон.</p></details><details><summary>Подойдут ли фото для маркетплейсов и печатного каталога сразу?</summary><p>Да, если требования собраны в бриф до съёмки. Мы снимаем с запасом под квадратное и вертикальное кадрирование, поэтому одна съёмка закрывает печатный каталог, карточку на сайте и площадки без пересъёмки.</p></details><details><summary>Снимаете ли вы на территории заказчика?</summary><p>Да. Чаще всего так и снимаем оборудование: студию разворачиваем на площадке заказчика, где лежит продукция и есть специалист, который соберёт систему в кадре. Выезжаем по Москве и в регионы.</p></details></div>
+</div></section></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
+// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
+function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
+ n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
+// форма -> /api/lead.php
+function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
+document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
+ var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
+ var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
+ fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
+var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
+if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
+})();</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Фотопродакшн: предметная и каталожная съёмка", "serviceType": "Предметная съёмка товаров и оборудования", "provider": {"@type": "Organization", "name": "Hand Marketing", "url": "https://hand-marketing.ru/"}, "areaServed": {"@type": "Country", "name": "Россия"}, "url": "https://hand-marketing.ru/photo"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько стоит предметная съёмка?", "acceptedAnswer": {"@type": "Answer", "text": "Считаем по числу позиций и ракурсов, а не по часам. В смете отдельно стоят съёмочный день, обработка и вырезание фона, потому что объём ретуши на технических изделиях с перфорацией и на гладкой упаковке отличается в разы. После списка позиций даём смету бесплатно."}}, {"@type": "Question", "name": "Сколько позиций можно снять за один день?", "acceptedAnswer": {"@type": "Answer", "text": "На съёмке продукции Gyproc для Saint-Gobain за одну смену прошло 63 позиции: отдельные изделия и собранные из них системы. Это рабочий ориентир для технических изделий, когда заказчик заранее собрал продукцию на площадке."}}, {"@type": "Question", "name": "Вы вырезаете фон у товаров?", "acceptedAnswer": {"@type": "Answer", "text": "Да, и вырезаем по контуру, а не прямоугольником. В кейсе Saint-Gobain вместе с контуром вырезано 615 сквозных отверстий: перфорация подвесов и прорези профиля. Файлы отдаются с прозрачностью, их можно класть на любой фон."}}, {"@type": "Question", "name": "Подойдут ли фото для маркетплейсов и печатного каталога сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Да, если требования собраны в бриф до съёмки. Мы снимаем с запасом под квадратное и вертикальное кадрирование, поэтому одна съёмка закрывает печатный каталог, карточку на сайте и площадки без пересъёмки."}}, {"@type": "Question", "name": "Снимаете ли вы на территории заказчика?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Чаще всего так и снимаем оборудование: студию разворачиваем на площадке заказчика, где лежит продукция и есть специалист, который соберёт систему в кадре. Выезжаем по Москве и в регионы."}}]}</script><style id="hm-cookie-consent">
+.hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.hmc.is-on{transform:translateY(0)}
+.hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
+.hmc__card{position:relative;max-width:1200px;margin:0 auto;background:#fff;border:1px solid #f3f4f6;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+.hmc__title{font-family:'Montserrat','Inter',sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0f172a;margin:0 0 6px}
+.hmc__text{font-size:14px;line-height:1.55;color:#334155;margin:0;max-width:820px}
+.hmc__text a{color:#2563eb;text-decoration:none}
+.hmc__text a:hover{text-decoration:underline;text-underline-offset:3px}
+.hmc__accept{flex:none;appearance:none;border:0;cursor:pointer;background:#111827;color:#fff;font-family:'Montserrat','Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:14px 32px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:background .15s,transform .15s,box-shadow .15s}
+.hmc__accept:hover{background:#1f2937;transform:translateY(-2px);box-shadow:0 16px 26px -10px rgba(0,0,0,.45)}
+.hmc__close{position:absolute;top:10px;right:12px;width:28px;height:28px;border:0;background:transparent;color:#94a3b8;font-size:22px;line-height:1;cursor:pointer;display:none}
+.hmc__close:hover{color:#475569}
+@media (max-width:760px){
+ .hmc{padding:12px}
+ .hmc__card{flex-direction:column;align-items:flex-start;gap:16px;padding:22px 20px}
+ .hmc__accept{width:100%}
+ .hmc__close{display:block}
+}
+</style>
+<div class="hmc" id="hmCookie" role="dialog" aria-label="Согласие на использование файлов cookie" aria-live="polite">
+ <div class="hmc__card">
+  <div>
+   <div class="hmc__title">Мы используем файлы cookie</div>
+   <p class="hmc__text">Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даёте согласие на обработку файлов cookie. Подробнее в <a href="/privacy">Политике обработки персональных данных</a>.</p>
+  </div>
+  <button type="button" class="hmc__accept" id="hmCookieOk">ПРИНИМАЮ</button>
+  <button type="button" class="hmc__close" id="hmCookieX" aria-label="Закрыть">&times;</button>
+ </div>
+</div>
+<script>(function(){
+ var KEY='hm-cookie-consent';
+ try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
+ var box=document.getElementById('hmCookie');if(!box)return;
+ function accept(){try{localStorage.setItem(KEY,'1');}catch(e){}box.classList.remove('is-on');setTimeout(function(){if(box&&box.parentNode)box.parentNode.removeChild(box);},400);}
+ document.getElementById('hmCookieOk').addEventListener('click',accept);
+ document.getElementById('hmCookieX').addEventListener('click',accept);
+ setTimeout(function(){box.classList.add('is-on');},600);
+})();</script><script id="hm-metrika-goals">(function(){
+function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM')return;
+ if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ g('form_submit');
+},true);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+ if(!a)return;
+ g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+},true);
+})();</script></body></html>

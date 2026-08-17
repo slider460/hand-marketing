@@ -1,5 +1,15 @@
 [
   {
+    "slug": "photo__saint-gobain",
+    "route": "/photo/saint-gobain",
+    "category": "photo",
+    "categoryLabel": "Photo Production",
+    "client": "Saint-Gobain",
+    "title": "Предметная съёмка продукции Gyproc",
+    "metaTitle": "Предметная съёмка продукции Gyproc для Saint-Gobain",
+    "cover": "/images/lib/custom-sgphoto/cover-main.png"
+  },
+  {
     "slug": "creative__samara",
     "route": "/creative/samara",
     "category": "creative",

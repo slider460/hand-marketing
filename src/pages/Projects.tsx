@@ -10,6 +10,7 @@ const FILTERS = [
   { key: 'all', label: 'Все' },
   { key: 'event', label: 'Event' },
   { key: 'video', label: 'Video Production' },
+  { key: 'photo', label: 'Photo Production' },
   { key: 'creative', label: 'Creative & Design' },
   { key: 'digital', label: 'Digital' },
   { key: '3dmapping', label: '3D Mapping' },
