@@ -219,8 +219,11 @@ CSS = """<style id="ph-css">
 /* витрина */
 .ph-cases{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:34px}
 .ph-case{text-decoration:none;color:inherit;display:block}
-.ph-case__p{display:block;position:relative;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:var(--mist)}
-.ph-case__p img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+/* круг нарисован внутри самой обложки (PNG с прозрачными углами), а при
+   наведении вторая обложка — цветной КВАДРАТ. Поэтому контейнер не режем
+   ни маской, ни border-radius: иначе квадрат обрезается в круг. */
+.ph-case__p{display:block;position:relative;aspect-ratio:1/1}
+.ph-case__p img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .25s}
 .ph-case__p img+img{opacity:0}
 .ph-case:hover .ph-case__p img+img{opacity:1}
 .ph-case__c{display:block;font-family:'Exo 2',sans-serif;font-size:16px;font-weight:700;margin:14px 0 4px}
