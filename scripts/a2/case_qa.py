@@ -124,6 +124,19 @@ def main():
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(channel='chrome')
+            # прогрев: самый первый запрос свежего Chrome к локальному серверу
+            # изредка возвращается 404, и первый вьюпорт снимался бы с ошибкой
+            warm = browser.new_context()
+            try:
+                wp = warm.new_page()
+                for _ in range(4):
+                    r = wp.goto(url, wait_until='domcontentloaded', timeout=20000)
+                    if r is not None and r.status == 200:
+                        break
+                    wp.wait_for_timeout(500)
+            except Exception:
+                pass
+            warm.close()
             for name, w, h in VIEWPORTS:
                 ctx = browser.new_context(viewport={'width': w, 'height': h},
                                           device_scale_factor=1)
@@ -144,7 +157,16 @@ def main():
                 page.on('response', lambda r, acc=req404:
                         acc.append(r.url) if r.status == 404 else None)
                 try:
-                    page.goto(url, wait_until='load', timeout=45000)
+                    resp = page.goto(url, wait_until='load', timeout=45000)
+                    # локальный http.server изредка отдаёт 404 на первый запрос
+                    # свежего контекста: это не дефект страницы, перезапрашиваем
+                    tries = 0
+                    while resp is not None and resp.status == 404 and tries < 3:
+                        tries += 1
+                        page.wait_for_timeout(600 * tries)
+                        console_errs.clear()
+                        req404.clear()
+                        resp = page.goto(url, wait_until='load', timeout=45000)
                     page.wait_for_timeout(800)
                     page.evaluate(AUTOSCROLL_JS)
                     res = page.evaluate(CHECK_JS)
