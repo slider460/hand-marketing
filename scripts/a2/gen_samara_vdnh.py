@@ -366,10 +366,16 @@ def hero():
         for n, u in (('16 000 000+', 'посетителей'), ('248', 'дней работы'),
                      ('16,5 млн', 'пикселей на парусе'), ('20+', 'мультимедийных систем')))
     return f'''<section class="sv-hero">
-  <picture class="sv-hero__bg">
-    <source srcset="{IMG}/stand-hero.jpg.webp" type="image/webp">
-    <img src="{IMG}/stand-hero.jpg" alt="Стенд Самарской области на выставке «Россия»" fetchpriority="high">
-  </picture>
+  <div class="sv-hero__bg">
+    <video class="sv-hero__vid" autoplay muted loop playsinline preload="metadata"
+           poster="{IMG}/stand-hero.jpg" aria-hidden="true">
+      <source src="/media/samara-vdnh-hero-loop.mp4" type="video/mp4">
+    </video>
+    <picture>
+      <source srcset="{IMG}/stand-hero.jpg.webp" type="image/webp">
+      <img src="{IMG}/stand-hero.jpg" alt="Стенд Самарской области на выставке «Россия»" fetchpriority="high">
+    </picture>
+  </div>
   <div class="sv-hero__in">
     <div class="sv-kicker">Выставка-форум «Россия» · ВДНХ, павильон 75 · 2023 и 2024</div>
     <h1>Стенд Самарской<br>области</h1>
@@ -1264,6 +1270,9 @@ PAGE_CSS = '''<style>
  justify-content:flex-end;color:#fff;overflow:hidden;background:#0A121C}
 .sv-hero__bg{position:absolute;inset:0;z-index:0}
 .sv-hero__bg img{width:100%;height:100%;object-fit:cover;opacity:.62}
+.sv-hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;z-index:1}
+.sv-hero__vid+picture img{opacity:.62}   /* кадр под видео: виден, пока луп грузится */
+@media (prefers-reduced-motion:reduce){.sv-hero__vid{display:none}}
 .sv-hero::after{content:'';position:absolute;inset:0;z-index:1;
  background:linear-gradient(180deg,rgba(8,14,22,.72) 0%,rgba(8,14,22,.35) 38%,rgba(8,14,22,.92) 100%)}
 .sv-hero__in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:120px 28px 30px;width:100%}
