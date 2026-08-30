@@ -15,6 +15,13 @@
 > и без звука, режет её `scripts/stavropol-assets.py --clip`. Полный ролик на странице больше не
 > используется, но с сервера его не удаляли.
 
+> **30.08.2026 — клипы кейса Silk Way НЕ нужно грузить вручную.**
+> `mirror/videos/silkway-hall.mp4` (финал ролика на LED-экране зала, 2.0 МБ) и
+> `mirror/videos/silkway-sand.mp4` (художник за песочным столом, 1.4 МБ) лежат
+> в `mirror/**` и уезжают на хостинг обычным деплоем, адреса `/videos/silkway-*.mp4`.
+> Режет их `scripts/silkway-assets.py --clips` из ~/Downloads/silk_way (IMG_5863.MOV
+> и IMG_5861.MOV). Сам ролик `/media/silkway-3d.mp4` на сервере уже лежит и не менялся.
+
 > **19.08.2026 — эмуляции кинетического экрана Самары.** Четыре ролика кейса
 > /portfolio/samara-stand-vdnh лежат в `mirror/media/` и грузятся на хостинг ВРУЧНУЮ:
 > `samara-vdnh-kinetic-faces.mp4` (6.0 МБ), `samara-vdnh-kinetic-wives.mp4` (12.3 МБ),
