@@ -686,13 +686,16 @@ var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
   }
   function play(){
     if(anim)cancelAnimationFrame(anim);
-    if(!seeds.length){paint(-1);readout();return;}
+    readout();                       /* цифры верны сразу: во вкладке без
+                                        кадров анимации rAF не тикает, и
+                                        ждать её конца нельзя */
+    if(!seeds.length){paint(-1);return;}
+    if(RM||document.hidden){paint(maxD);return;}
     t0=performance.now();
-    if(RM){paint(maxD);readout();return;}
     (function frame(now){
       var k=Math.min(1,(now-t0)/dur);
       paint(maxD*k);
-      if(k<1)anim=requestAnimationFrame(frame);else{anim=0;readout();}
+      if(k<1)anim=requestAnimationFrame(frame);else anim=0;
     })(t0);
   }
   function setPart(id){
