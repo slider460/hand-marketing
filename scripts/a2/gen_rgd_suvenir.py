@@ -92,7 +92,7 @@ KIT = [
      'стоит по центру над ручками',
      'До 250×360×100 мм, мелованная бумага от 270 г/м², офсет с двух сторон, '
      'ламинация, витой шнур и кольца пикколо'),
-    ('sheet-03', 'Перекидной календарь',
+    ('sheet-march', 'Перекидной календарь',
      'Тринадцать листов: титул с цифрами дирекции и двенадцать месяцев, '
      'на каждом одна услуга ЦМ',
      'Формат А3, мелованный картон от 300 г/м², глянцевая ламинация, '
@@ -229,15 +229,12 @@ CSS = """<style id="rs-css">
 .rs-concept span{font-size:15px;line-height:1.62;color:var(--mute)}
 
 /* ── титульный лист: цифры дирекции ─────────────────────────────────────── */
-.rs-fig{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:start;
- margin-top:34px}
-.rs-fig__grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
- border:1px solid var(--line)}
+.rs-fig__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+ background:var(--line);border:1px solid var(--line);margin-top:34px}
 .rs-fig__grid div{background:var(--paper);padding:24px 22px}
 .rs-fig__grid b{display:block;font-size:clamp(26px,3.4vw,38px);font-weight:800;
  line-height:1;letter-spacing:-.02em;color:var(--teal);margin-bottom:8px}
 .rs-fig__grid span{font-size:14.5px;line-height:1.45;color:var(--mute)}
-.rs-fig img{width:100%;display:block;border-radius:2px}
 
 /* ── перекидной календарь ───────────────────────────────────────────────── */
 .rs-cal{display:grid;grid-template-columns:300px 1fr;gap:44px;margin-top:36px;
@@ -308,8 +305,8 @@ CSS = """<style id="rs-css">
  text-transform:uppercase;color:var(--mute);white-space:nowrap}
 .rs-roll__ctl input{flex:1;accent-color:var(--teal);height:26px}
 .rs-kit{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 26px;margin-top:44px}
-.rs-kit img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:2px;
- background:var(--day)}
+.rs-kit img{width:100%;aspect-ratio:4/3;object-fit:contain;display:block;
+ border-radius:2px;background:var(--paper)}
 .rs-kit h3{margin:14px 0 6px;font-size:18px}
 .rs-kit p{margin:0;font-size:14.5px;line-height:1.55;color:var(--mute)}
 .rs-kit__spec{margin-top:10px!important;font-size:13px!important;
@@ -317,11 +314,16 @@ CSS = """<style id="rs-css">
 
 /* ── мокап против тиража ────────────────────────────────────────────────── */
 .rs-print{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
-.rs-print figure img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;
- border-radius:2px}
+.rs-print--two{grid-template-columns:repeat(2,1fr)}
+/* оба кадра шара вертикальные: широкая рамка оставляла бы полполя пустым */
+.rs-print--two figure img{aspect-ratio:3/4}
+.rs-print figure img{width:100%;aspect-ratio:4/3;object-fit:contain;display:block;
+ border-radius:2px;background:var(--night2)}
+.rs-print__row img{width:100%;display:block;border-radius:2px}
 .rs-print__step{font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
  color:var(--tealL);margin-bottom:10px}
-.rs-print__row{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:30px}
+.rs-print__row{display:grid;grid-template-columns:1.33fr .75fr;gap:22px;
+ margin-top:30px;align-items:start}
 
 /* ── состав работ ───────────────────────────────────────────────────────── */
 .rs-craft{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
@@ -501,13 +503,8 @@ def figures():
       'на нём дирекция в цифрах. Они задают тон остальным двенадцати, '
       'дальше идут не картинки про логистику, а конкретные услуги '
       'с параметрами.</p>'
-      '<div class="rs-fig"><div class="rs-fig__grid">{c}</div>'
-      '<figure>{p}<figcaption>Тираж на стене: пружина, ригель и лист А3. '
-      'Календарь дирекция вешала в кабинетах, поэтому лист должен был '
-      'читаться с двух шагов.</figcaption></figure></div>'
-      '</div></section>').format(
-          c=cells,
-          p=zoom('sheet-march', '(max-width:1100px) 100vw, 480px'))
+      '<div class="rs-fig__grid">{c}</div>'
+      '</div></section>').format(c=cells)
 
 
 def sheet(i):
@@ -557,9 +554,6 @@ def calendar():
       'и свайпом</div>'
       '</div></div></div>'
       '<div class="rs-cal__real">'
-      '<figure>{p}<figcaption>Ежедневник и папка из того же набора '
-      'на рабочем столе дирекции: разгон лёг ровно так, как '
-      'в макете.</figcaption></figure>'
       '<div><h3>Как устроен лист</h3>'
       '<p class="lead">Модуль у всех двенадцати полос один: слева плашка '
       'знака ЦМ и описание услуги узкой колонкой, справа номер и название '
@@ -570,8 +564,7 @@ def calendar():
       'терминально-логистической услуги в январе до разработки схем '
       'погрузки в декабре. Календарь висит у клиента весь год и весь год '
       'работает каталогом.</p></div>'
-      '</div></div></section>').format(i=items, s=sheets, p=pic(
-          'diary-print', '(max-width:760px) 100vw, 560px'))
+      '</div></div></section>').format(i=items, s=sheets)
 
 
 def roll():
@@ -641,12 +634,9 @@ def card():
       'идёт состав с Дедом Морозом в кабине, знак ЦМ подвешен над путями '
       'на табличке.</p>'
       '<div class="rs-card">'
-      '<figure>{f}<figcaption>Лицо: ночь, снег и новогодний состав. '
-      'Ёлки собраны из бумажных слоёв, гирлянда держит и знак, '
-      'и вагоны.</figcaption></figure>'
-      '<figure>{b}<figcaption>Оборот: лес в три плана, поздравление '
-      'и разгон, который приходит из угла и связывает открытку '
-      'с остальным набором.</figcaption></figure>'
+      '<figure>{f}<figcaption>Лицо открытки</figcaption></figure>'
+      '<figure>{b}<figcaption>Оборот с поздравлением '
+      'дирекции</figcaption></figure>'
       '</div>'
       '<div class="rs-card__note">'
       '<p class="rs-card__quote">{h}<b>{s}</b></p>'
@@ -692,31 +682,22 @@ def print_run():
       '<div class="lbl">Тираж</div>'
       '<h2>От мокапа до полки в кабинете</h2>'
       '<p class="lead">Часть набора клиент снял уже напечатанной и прислал '
-      'кадры со своих столов. Заодно видно правку, которая случилась между '
-      'макетом и тиражом: белый шар с бирюзовым разгоном стал красным '
-      'с серебряным знаком и морозным напылением.</p>'
-      '<div class="rs-print">'
-      '<figure><div class="rs-print__step">Мокап</div>{a}'
-      '<figcaption>Шар из макета набора: белый, разгон занимает нижнюю '
-      'половину сферы.</figcaption></figure>'
+      'кадры со своих столов. На шаре между макетом и тиражом произошла '
+      'замена: белый со стеклянным разгоном не пошёл, вместо него сделали '
+      'красный с серебряным знаком и морозным напылением.</p>'
+      '<div class="rs-print rs-print--two">'
       '<figure><div class="rs-print__step">Утверждено в печать</div>{b}'
-      '<figcaption>Тиражный вариант: красный шар, знак серебром, '
-      'вместо разгона напыление и звёзды.</figcaption></figure>'
+      '<figcaption>Шар, ушедший в тираж</figcaption></figure>'
       '<figure><div class="rs-print__step">13 декабря 2018</div>{c}'
-      '<figcaption>Тот же шар в подарочной коробке на полке в кабинете '
-      'дирекции.</figcaption></figure>'
+      '<figcaption>Шар в упаковке, кабинет дирекции</figcaption></figure>'
       '</div>'
       '<div class="rs-print__row">'
-      '<figure>{d}<figcaption>Напечатанный ежедневник на рабочем столе '
-      'дирекции, 4 декабря 2018 года. Разгон на обложке лёг ровно так, '
-      'как в макете.</figcaption></figure>'
-      '<figure>{e}<figcaption>Папка набора: на плоской обложке видно, '
-      'что полосы идут разной длины и толщины, а белые просветы работают '
-      'частью рисунка.</figcaption></figure>'
+      '<figure>{d}<figcaption>Ежедневник на столе дирекции, '
+      '4 декабря 2018</figcaption></figure>'
+      '<figure>{e}<figcaption>Папка из того же набора</figcaption></figure>'
       '</div></div></section>').format(
-          a=zoom('ball', '(max-width:760px) 100vw, 360px'),
-          b=zoom('ball-red', '(max-width:760px) 100vw, 360px'),
-          c=zoom('ball-box', '(max-width:760px) 100vw, 360px'),
+          b=zoom('ball-red', '(max-width:760px) 100vw, 480px'),
+          c=zoom('ball-box', '(max-width:760px) 100vw, 480px'),
           d=zoom('diary-print', '(max-width:760px) 100vw, 560px'),
           e=zoom('folder-print', '(max-width:760px) 100vw, 560px'))
 
