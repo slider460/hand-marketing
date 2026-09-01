@@ -469,6 +469,11 @@ function gaps(){
   return {h:worst(zn),a:worst(az)};
 }
 var fmt1=function(x){return x.toFixed(1).replace('.',',');};
+// «4 раза», но «16 раз»: русское склонение по последней цифре
+function razа(n){var a=n%100,b=n%10;
+  if(a>10&&a<20)return 'раз';
+  if(b>1&&b<5)return 'раза';
+  return 'раз';}
 function report(){
   var c=covered(),g=gaps(),el=document.getElementById('avGap'),s;
   document.getElementById('avCov').textContent=Math.round(c*100)+' %';
@@ -776,7 +781,7 @@ if(thk){
         +'font-size="10" text-anchor="end" fill="'+(on?'#16181C':'rgba(22,24,28,.34)')
         +'">'+String(TT[i]).replace('.',',')+' мм</text>';}
     bends.innerHTML=s;
-    var k=cur[1],kk=(k<10?fmt1(k):Math.round(k));
+    var k=cur[1],kk=Math.round(k);
     dropE.textContent='вертикаль сжата логарифмом: иначе плёнка ушла бы '
       +'за кадр в 64 раза';
     figE.innerHTML=(t>=4
@@ -784,7 +789,7 @@ if(thk){
         +'это единица, и экран держит форму на голове целую смену, '
         +'не ловит царапины от сумок и рукавов.'
       : 'Лист <b>'+String(t).replace('.',',')+' мм</b> провисает в <b>'+kk
-        +'</b> раз'+(kk==2?'а':'')+' сильнее выбранных четырёх'
+        +'</b> '+razа(kk)+' сильнее выбранных четырёх'
         +(t<=0.5?': такая плёнка живёт волной перед лицом и искажает обзор.'
                 :': форма плывёт, и экран приходится поправлять рукой.'));}
   thk.addEventListener('click',function(e){
