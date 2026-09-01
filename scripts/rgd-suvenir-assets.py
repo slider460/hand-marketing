@@ -64,10 +64,7 @@ SRC = os.path.expanduser('~/Documents/Материалы для обновлен
 PDF = os.path.join(SRC, 'RGD_CD_191205.pdf')            # печатный календарь, 13 полос
 CARD = os.path.join(SRC, 'календарь ржд_45шт.pdf')      # открытка, разворот 200×200
 
-# низ коллажа на полосе месяца: макет модульный, граница у всех одна.
-# Ниже неё на печатном листе идёт календарная сетка, её страница считает сама
-COLLAGE_BOTTOM = .712
-SHEET_DPI = 140      # ~1160 px по ширине A4, дальше идут -m 1000 и -s 640
+SHEET_DPI = 150      # ~1240 px по ширине A4, дальше идут -m 1000 и -s 640
 
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0 Safari/537.36')
@@ -266,9 +263,8 @@ def sheets():
 def sheet_pics():
     """Листы календаря картинками.
 
-    Полоса месяца режется по низу коллажа: печатная календарная сетка
-    в кейс не едет, её страница считает сама и кладёт под кадр живой.
-    Титул идёт целиком, сетки на нём нет."""
+    Полосы идут целиком и без правок: кейс показывает печатный календарь
+    один в один, вместе с его собственной календарной сеткой."""
     import fitz
     doc = fitz.open(PDF)
     os.makedirs(IMG, exist_ok=True)
@@ -277,17 +273,14 @@ def sheet_pics():
         im = np.frombuffer(pix.samples, dtype=np.uint8).reshape(
             pix.height, pix.width, 3)
         im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
-        if i == 0:
-            slug, cut = 'sheet-00', im.shape[0]
-        else:
-            slug, cut = f'sheet-{i:02d}', int(im.shape[0] * COLLAGE_BOTTOM)
+        slug = f'sheet-{i:02d}'
         big = os.path.join(IMG, f'{slug}.jpg')
-        cv2.imwrite(big, im[:cut], [cv2.IMWRITE_JPEG_QUALITY, 86])
+        cv2.imwrite(big, im, [cv2.IMWRITE_JPEG_QUALITY, 86])
         webp(big)
         for suffix, side, q in (('-m', 1000, 86), ('-s', 640, 84)):
             k = min(1.0, side / im.shape[1])
             cv2.imwrite(os.path.join(IMG, f'{slug}{suffix}.jpg'),
-                        cv2.resize(im[:cut], None, fx=k, fy=k,
+                        cv2.resize(im, None, fx=k, fy=k,
                                    interpolation=cv2.INTER_AREA),
                         [cv2.IMWRITE_JPEG_QUALITY, q])
             webp(os.path.join(IMG, f'{slug}{suffix}.jpg'))
