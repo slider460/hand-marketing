@@ -156,6 +156,77 @@ STAND_ITEMS = [
                        'не заполняет'),
     ('Смена из трех человек', 'Координатор и две промо-модели в форме марки'),
 ]
+
+# ─── фотоотчёт: (файл, alt, подпись в лайтбоксе) ───────────────────────────
+GAL = [
+    ('g5916', 'Дилерский центр «РИА Авто» в день презентации автомобиля',
+     'Салон на Волоколамском шоссе, гостей ждали с полудня'),
+    ('g5925', 'Автомобиль тест-драйва Changan CS35 с оклейкой у салона',
+     'Тест-драйв стартовал от входа, машины подготовили с утра'),
+    ('g5931', 'Стойка встречи гостей на мероприятии для автодилера',
+     'На стойке лежали анкеты: без анкеты на тест-драйв не записывали'),
+    ('g5958', 'Гость заполняет анкету на тест-драйв Changan',
+     'Заполняли сразу на входе, пока раздевались'),
+    ('g5993', 'Регистрация гостей на презентации нового автомобиля',
+     'В пик прихода писали стоя, стойки на всех не хватало'),
+    ('g6007', 'Промо-модели у автомобиля Changan в шоуруме дилера',
+     'В шоуруме стояли машины дилера, наши две были в зоне шоу'),
+    ('g6057', 'Встреча гостей мероприятия у стойки регистрации',
+     'Встречающих поставили в двух точках, на входе и в зале'),
+    ('g6087', 'Гости в зоне ожидания перед началом программы',
+     'До открытия успевали обойти салон и посмотреть машины'),
+    ('g6096', 'Регистрация гостей презентации Changan CS35',
+     'Списки сверяли с записями, собранными на стенде в торговом центре'),
+    ('g6151', 'Гости в зале дилерского центра перед шоу',
+     'Зал собрался за полчаса до первого блока'),
+    ('g6163', 'Фуршет на презентации автомобиля в дилерском центре',
+     'Фуршет держали весь день, между блоками к нему возвращались'),
+    ('g6176', 'Съемка мероприятия для автодилера',
+     'Снимали для отчета клиенту, ролик собрали уже после'),
+    ('g6193', 'Ведущий открывает программу у автомобиля Changan',
+     'Открытие держали коротким, зал ждал шоу'),
+    ('g6216', 'Официальная часть презентации нового автомобиля',
+     'На официальную часть в тайминге отвели десять минут'),
+    ('g6225', 'Представители дилера и марки на презентации',
+     'Слово давали и дилеру, и представителям марки'),
+    ('g6236', 'Вручение подарка на мероприятии для автодилера',
+     'Подарки готовили заранее, вручали в первом блоке'),
+    ('g6245', 'Подарок представителю марки Changan на презентации',
+     'Второй подарок ушел представителю марки'),
+    ('g6270', 'Гости снимают проекционное шоу на телефоны',
+     'Телефоны поднимались на каждом переходе графики'),
+    ('g6278', 'Зрители у пресс-волла Changan и РИА Авто',
+     'Пресс-волл поставили у входа в зону шоу'),
+    ('g6289', 'Барабанщицы у автомобиля перед выступлением',
+     'Барабаны выкатывали между блоками, на это уходило пара минут'),
+    ('g6300', 'Танец с фонарями на презентации автомобиля',
+     'Фонари подсвечены изнутри, в темном зале это читалось лучше всего'),
+    ('g6307', 'Реквизит танцевального номера с фонарями крупным планом',
+     'Реквизит привезли артисты, на нас были площадка, свет и звук'),
+    ('g6322', 'Шоу китайских барабанов на презентации Changan CS35',
+     'Под барабаны освобождали полосу перед машиной'),
+    ('g6333', 'Выступление барабанщицы на мероприятии для автодилера',
+     'Барабаны ставили ближе к залу, машина оставалась фоном'),
+    ('g6345', 'Гости смотрят программу вечера в дилерском центре',
+     'Между блоками зал не расходился'),
+    ('g6356', 'Танцевальный номер с веерами на презентации автомобиля',
+     'Второй танцевальный номер шел уже во втором блоке'),
+    ('g6374', 'Веера в танцевальном номере на мероприятии',
+     'Номер ставили на ту же площадку, что и барабаны'),
+    ('g6386', 'Финал танцевального блока на презентации Changan',
+     'После финала гостей звали на тест-драйв'),
+    ('g6404', 'Гости у столов с раскрасками на мероприятии',
+     'Столы поставили рядом с зоной шоу, очередь не пересекалась с фуршетом'),
+    ('g6412', 'Промо-модель раздает листы для раскраски автомобиля',
+     'Листы раздавали между блоками программы'),
+    ('g6450', 'Гости раскрашивают машины фломастерами на презентации',
+     'Раскрашивали и взрослые, конкурс шел до самого финала'),
+    ('g6748', 'Награждение участников конкурса раскрасок',
+     'Лучшие листы показывали залу перед вручением'),
+    ('g6798', 'Ведущие у автомобиля под проекцией на презентации',
+     'После шоу свет оставляли приглушенным, ведущие работали у машины'),
+]
+
 # ─── главы ролика: тайм-коды сняты сканом кадров ───────────────────────────
 CHAPTERS = [
     (0, 'Титры'),
@@ -421,7 +492,39 @@ CSS2 = """<style id="cg-css2">
 .cg-show figcaption{margin-top:8px;font-size:13px;color:var(--dim);line-height:1.4}
 
 /* ── вечер ───────────────────────────────────────────────────────────── */
-.cg-eve{background:var(--ink2)}
+.cg-gal{background:var(--ink2)}
+.cg-gal__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:32px}
+.cg-gal__item{padding:0;border:0;background:none;cursor:pointer;border-radius:10px;
+ overflow:hidden;line-height:0;position:relative;transition:transform .18s}
+.cg-gal__item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;
+ background:rgba(255,255,255,.04);transition:opacity .18s}
+.cg-gal__item:hover{transform:translateY(-3px)}
+.cg-gal__item:hover img{opacity:.82}
+.cg-gal__item:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.cg-lb{position:fixed;inset:0;z-index:9500;background:rgba(6,8,12,.94);
+ display:flex;align-items:center;justify-content:center;padding:38px 62px}
+.cg-lb[hidden]{display:none}
+.cg-lb__fig{margin:0;max-width:min(1200px,92vw);text-align:center}
+.cg-lb__fig img{max-width:100%;max-height:78vh;border-radius:10px;display:block;margin:0 auto}
+.cg-lb__fig figcaption{margin-top:14px;font-size:15px;color:rgba(255,255,255,.72);
+ line-height:1.5;max-width:70ch;margin-left:auto;margin-right:auto}
+.cg-lb__x{position:absolute;top:16px;right:20px;width:44px;height:44px;border:0;
+ background:rgba(255,255,255,.08);color:#fff;font-size:28px;line-height:1;border-radius:50%;
+ cursor:pointer}
+.cg-lb__x:hover{background:rgba(255,255,255,.18)}
+.cg-lb__nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;
+ border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:32px;
+ line-height:1;cursor:pointer}
+.cg-lb__nav:hover{background:rgba(255,255,255,.18)}
+.cg-lb__nav.prev{left:14px}
+.cg-lb__nav.next{right:14px}
+.cg-show__lead{margin-top:30px}
+.cg-show__big{margin:0}
+.cg-show__big picture{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.cg-show__big img{aspect-ratio:16/9;object-fit:cover}
+.cg-show__big figcaption{margin-top:10px;font-size:14px;color:var(--dim);line-height:1.5;
+ max-width:80ch}
+.cg-eve{background:var(--ink)}
 .cg-eve__wrap{display:grid;grid-template-columns:340px 1fr;gap:34px;margin-top:34px;
  align-items:start}
 .cg-time{display:flex;flex-direction:column;border-left:2px solid var(--line);padding-left:0}
@@ -471,6 +574,9 @@ CSS3 = """<style id="cg-css3">
  .cg-two__grid,.cg-task,.cg-voice__cols,.cg-out__grid{grid-template-columns:1fr}
  .cg-gifts,.cg-strip{grid-template-columns:1fr 1fr}
  .cg-show,.cg-eve__grid,.cg-color__ph,.cg-back__grid{grid-template-columns:1fr 1fr}
+ .cg-gal__grid{grid-template-columns:repeat(3,1fr)}
+ .cg-lb{padding:20px}
+ .cg-lb__nav{width:42px;height:42px;font-size:26px}
  .cg-hero__nums{grid-template-columns:1fr 1fr;gap:0}
  .cg-hero__nums div{padding:16px 0}
  .cg-hero__in{padding:100px 18px 48px}
@@ -481,6 +587,7 @@ CSS3 = """<style id="cg-css3">
 @media (max-width:560px){
  .cg{font-size:16px}
  .cg-strip,.cg-show,.cg-eve__grid,.cg-color__ph,.cg-back__grid{grid-template-columns:1fr}
+ .cg-gal__grid{grid-template-columns:repeat(2,1fr);gap:8px}
  .cg-step__top{flex-wrap:wrap;gap:6px 12px}
  .cg-step__top b{font-size:26px;min-width:2.2em}
  .cg-step__top span{font-size:14px}
@@ -579,7 +686,7 @@ def backstage():
         ('back-podium', 'Changan CS35 на подиуме в атриуме торгового центра',
          'Машину доводили руками, чтобы встала ровно по центру подиума'),
         ('back-hall', 'Промо-стенд Changan CS35 в атриуме, работа промоутеров',
-         'Днем в атриуме светло, поэтому экран подняли на стойку повыше'),
+         'К встрече гостей на стенде готовы: за час до открытия центра'),
         ('back-top', 'Посетители у автомобилей Changan CS35 на промо-стенде',
          'Между подиумами оставили проход, иначе поток обходил стенд стороной'),
     ]
@@ -851,44 +958,56 @@ def color():
 
 
 def mapping():
+    big = (
+        f'<figure class="cg-show__big">{pic("map-fire", "Проекционное шоу на кузове Changan CS35 в дилерском центре", sizes="(max-width:900px) 92vw, 1100px")}'
+        '<figcaption>Экран стоял вплотную за машиной и всю программу менял '
+        'пейзаж, от гор до ночного города. Из зала это читалось как движение</figcaption></figure>')
     shots = ''.join(
         f'<figure>{pic(sl, alt)}<figcaption>{cap}</figcaption></figure>'
         for sl, alt, cap in (
-            ('map-fire', 'Проекционное шоу на кузове Changan CS35, пиксельная графика',
-             'Горы на заднике сменяли город и лес, так держался эффект движения'),
-            ('map-lines', 'Проекционное шоу на автомобиле, контурная графика по кузову',
-             'Линии идут по ребрам кузова, их положение задавали по 3д-маске'),
+            ('map-lines', 'Контурная графика по кузову автомобиля, проекционное шоу',
+             'Линии идут по ребрам кузова, положение задавали по 3д-маске'),
             ('map-spark', '3д маппинг на автомобиле, световые разряды по борту',
              'Разряды рисовали крупно: мелкая графика на изгибах борта разваливается'),
+            ('map-blue', 'Проекция синих росчерков на кузове Changan CS35',
+             'Синий блок шел под медленную часть трека, машину обходили по кругу'),
+            ('map-acid', 'Проекционное шоу на автомобиле, кислотные полосы',
+             'Полосы тянули от переднего крыла к задней двери, попадая в такт'),
+            ('map-flow', 'Световые потоки на капоте автомобиля, проекция',
+             'На капоте графика держится лучше всего, это самая ровная плоскость'),
             ('map-flame', 'Проекция огня на капоте автомобиля Changan',
              'Самый яркий блок ставили в середину, к нему подводили музыку'),
             ('map-wave', 'Экран за автомобилем на презентации, смена пейзажа',
-             'Пейзаж на экране менялся весь показ, зрители стояли в двух метрах'),
+             'Зрители стояли в двух метрах, поэтому пейзаж работал и на них'),
             ('map-brand', 'Логотип Changan в проекции на двери автомобиля',
-             'Знак держали на кузове дольше остального, кадр уходил в отчет клиенту')))
+             'И конечно же логотип компании украшал авто, этим блоком и закрывали шоу')))
     return (
         '<section class="cg-map" id="mapping"><div class="in">'
-        '<p class="kicker rv">Шоу на кузове</p>'
-        '<h2 class="rv">Три проектора и экран вплотную к машине</h2>'
-        '<p class="lead narrow rv">Вечер открывали трехминутным световым шоу. '
-        'Сняли форму автомобиля, собрали по ней 3д-маску, и картинка легла '
-        'по кузову, а не по воздуху вокруг. Два проектора светили на саму '
-        'машину. Третий работал на экран, который стоял вплотную за ней, '
-        'горизонтально во всю ширину: по нему шла смена пейзажей, и казалось, '
-        'что машина едет.</p>'
+        '<p class="kicker rv">Главный номер вечера</p>'
+        '<h2 class="rv">Проекционное шоу на кузове</h2>'
+        '<p class="lead narrow rv">Ради этого вечер и собирали. Три минуты, '
+        'машина в темном зале, музыка, и по кузову идет графика: контур, '
+        'разряды, огонь, потоки. Люди подняли телефоны почти все сразу, '
+        'это была самая громкая часть программы.</p>'
+        '<p class="narrow rv">Сняли форму автомобиля и собрали по ней 3д-маску, '
+        'иначе картинка ложится мимо кузова и половина уходит в пол. Два '
+        'проектора светили на машину, третий на экран за ней. Экран стоял '
+        'вплотную и горизонтально, во всю ширину, машина стояла к нему боком. '
+        'Все проекции прямые, из зала: сзади мы не светили.</p>'
+        f'<div class="cg-show__lead rv">{big}</div>'
         '<div class="cg-map__wrap">'
         '<div class="cg-scene rv" id="cgScene">'
-        '<svg viewBox="0 0 700 600" role="img" aria-label="Схема расстановки '
-        'проекторов вокруг автомобиля, вид сверху">'
+        '<svg viewBox="0 0 700 560" role="img" aria-label="Схема расстановки '
+        'проекторов и экрана вокруг автомобиля, вид сверху">'
         '<defs>'
-        '<linearGradient id="cgBeamL" x1="0" y1="0" x2="1" y2="0">'
+        '<linearGradient id="cgBeamL" x1="0" y1="1" x2="0" y2="0">'
         '<stop offset="0" stop-color="#4ADEF0" stop-opacity=".42"/>'
         '<stop offset="1" stop-color="#4ADEF0" stop-opacity="0"/></linearGradient>'
-        '<linearGradient id="cgBeamR" x1="1" y1="0" x2="0" y2="0">'
+        '<linearGradient id="cgBeamR" x1="0" y1="1" x2="0" y2="0">'
         '<stop offset="0" stop-color="#FF3E9A" stop-opacity=".42"/>'
         '<stop offset="1" stop-color="#FF3E9A" stop-opacity="0"/></linearGradient>'
-        '<linearGradient id="cgBeamB" x1="0" y1="0" x2="0" y2="1">'
-        '<stop offset="0" stop-color="#C9F23C" stop-opacity=".34"/>'
+        '<linearGradient id="cgBeamB" x1="0" y1="1" x2="0" y2="0">'
+        '<stop offset="0" stop-color="#C9F23C" stop-opacity=".30"/>'
         '<stop offset="1" stop-color="#C9F23C" stop-opacity="0"/></linearGradient>'
         '</defs>'
         '<g id="cgBeams"></g>'
@@ -898,33 +1017,30 @@ def mapping():
         '</svg></div>'
         '<div class="cg-map__ctl">'
         '<div class="cg-ctl rv"><h3>Почему проекторов два, а не один</h3>'
-        '<p>Машина это не стена. Свет от одного проектора закрывает только '
-        'обращенный к нему борт, дальняя половина кузова остается темной. '
-        'Второй проектор ставят не ради яркости, а чтобы закрыть вторую '
-        'половину. Переключите и посмотрите, что гаснет.</p>'
+        '<p>Машина длинная, а проектор стоит под углом. С одной точки дальний '
+        'конец кузова уходит в тень, картинка там растягивается и теряет '
+        'плотность. Второй проектор ставят с другого угла, чтобы борт был '
+        'закрыт от бампера до бампера. Переключите и посмотрите, что гаснет.</p>'
         '<div class="cg-toggle" data-group="proj">'
         '<button type="button" data-proj="1">один</button>'
         '<button type="button" class="is-on" data-proj="2">два</button></div></div>'
         '<div class="cg-ctl rv"><h3>Стекла заклеили пленкой</h3>'
         f'<p>Остекление занимает {str(AREAS["share"]).replace(".", ",")} процента '
-        'той поверхности, которую видят проекторы. Стекло свет не отражает, '
+        'поверхности, на которую идет проекция. Стекло свет не отражает, '
         'оно пропускает его в салон, и на месте окон в картинке остаются дыры. '
         'Поэтому все стекла заклеили белой пленкой, включая лобовое.</p>'
         '<div class="cg-toggle" data-group="film">'
         '<button type="button" class="is-on" data-film="1">пленка есть</button>'
         '<button type="button" data-film="0">без пленки</button></div></div>'
         '<div class="cg-read">'
-        '<div><b data-read="lit">0 %</b><span>кузова под картинкой</span></div>'
+        '<div><b data-read="lit">0 %</b><span>борта под картинкой</span></div>'
         '<div><b data-read="dark">0 %</b><span>темнеет или уходит в стекло</span></div>'
         '</div>'
-        '<p class="note">Доли считаются по контуру кузова сверху: периметр разбит '
-        'на участки, участок засчитан освещенным, если он развернут к включенному '
-        'проектору. Остекление вычитается по площади зон.</p>'
+        '<p class="note">Считаем ту сторону кузова, которую видит зал: периметр '
+        'разбит на участки, участок засчитан освещенным, если он развернут '
+        'к включенному проектору. Остекление вычитается по площади зон.</p>'
         '</div></div>'
-        '<h3 class="rv" style="margin-top:48px">Шесть кадров из трех минут</h3>'
-        '<p class="note rv" style="max-width:70ch;margin-bottom:22px">Кадры сняты '
-        'с одной точки, но между дублями камера гуляла, и сводить их в один ракурс '
-        'мы не стали.</p>'
+        '<h3 class="rv" style="margin-top:48px">Восемь кадров из трех минут</h3>'
         f'<div class="cg-show rv">{shots}</div>'
         '</div></section>'
     )
@@ -966,6 +1082,36 @@ def evening():
     )
 
 
+def gallery():
+    cells = ''.join(
+        f'<button type="button" class="cg-gal__item" data-i="{i}" '
+        f'aria-label="Открыть фото: {esc(alt)}">'
+        f'<img src="{IMG}/{slug}-640.jpg" alt="{esc(alt)}" loading="lazy" '
+        f'decoding="async"></button>'
+        for i, (slug, alt, _cap) in enumerate(GAL))
+    return (
+        '<section class="cg-gal" id="photos"><div class="in">'
+        '<p class="kicker rv">Фотоотчет</p>'
+        '<h2 class="rv">Вечер целиком</h2>'
+        '<p class="lead narrow rv">Съемка шла весь день, от приезда первых '
+        'гостей до награждения. Здесь то, что не попало в разделы выше. '
+        'Нажмите на кадр, чтобы открыть крупно.</p>'
+        f'<div class="cg-gal__grid rv">{cells}</div>'
+        '</div>'
+        '<div class="cg-lb" id="cgLb" hidden role="dialog" aria-modal="true" '
+        'aria-label="Просмотр фотографии">'
+        '<button type="button" class="cg-lb__x" data-lb="close" '
+        'aria-label="Закрыть">&times;</button>'
+        '<button type="button" class="cg-lb__nav prev" data-lb="prev" '
+        'aria-label="Предыдущее фото">&#8249;</button>'
+        '<figure class="cg-lb__fig"><img id="cgLbImg" src="" alt="">'
+        '<figcaption id="cgLbCap"></figcaption></figure>'
+        '<button type="button" class="cg-lb__nav next" data-lb="next" '
+        'aria-label="Следующее фото">&#8250;</button>'
+        '</div></section>'
+    )
+
+
 def film():
     chaps = ''.join(
         f'<button type="button" data-t="{t}"><i>{t // 60}:{t % 60:02d}</i>{name}</button>'
@@ -1002,8 +1148,6 @@ def outro():
         'денег на машину, и это видно по разговорам у стенда</li>'
         '<li>Делать не один вечер, а серию: за один раз до дилера доезжает '
         'слишком узкая часть тех, с кем поговорили в торговом центре</li>'
-        '<li>Закладывать запас по времени на монтаж в галерее, ночное окно '
-        'короче, чем кажется</li>'
         '</ul></div></div>'
         '<p class="cg-out__last rv">Если коротко: машину привезли туда, где люди '
         'уже ходят, неделю разговаривали и записывали, потом собрали всех '
@@ -1221,28 +1365,26 @@ PAINT_JS = """<script>
 SCENE_JS = """<script>
 (function(){
  'use strict';
- var BODY=%BODY%, POLY=%POLY%, GLASS=%GLASS%;
+ var BODY=%BODY%, POLY=%POLY%, GLASS=%GLASS%, WHEELS=%WHEELS%;
  var scene=document.getElementById('cgScene');
  if(!scene) return;
  var beams=document.getElementById('cgBeams'),
+     screenG=document.getElementById('cgScreen'),
      carG=document.getElementById('cgCarTop'),
      projG=document.getElementById('cgProj'),
      readLit=document.querySelector('[data-read="lit"]'),
      readDark=document.querySelector('[data-read="dark"]');
  var nProj=2, film=1;
- var SC=0.36, CX=350, CY=340;
- /* машина стоит носом к зрителю, экран вплотную за кормой */
- function tp(p){
-  var x=(p[0]-420)*SC, y=(p[1]-210)*SC;
-  return [CX+y, CY-x];
- }
+ var SC=0.52, CX=350, CY=250;
+ /* машина стоит боком к экрану: контур не поворачиваем */
+ function tp(p){ return [CX+(p[0]-420)*SC, CY+(p[1]-210)*SC]; }
  var pts=POLY.map(tp);
  var carTop=Math.min.apply(null,pts.map(function(p){return p[1];}));
- var PROJ=[{x:92,y:530,c:'#4ADEF0',g:'url(#cgBeamL)',name:'проектор слева'},
-           {x:608,y:530,c:'#FF3E9A',g:'url(#cgBeamR)',name:'проектор справа'}];
- var SCREEN={y:Math.round(carTop-18), x0:96, x1:604};
- var BACK={x:350,y:16,c:'#C9F23C',g:'url(#cgBeamB)',
-           name:'третий проектор ведет пейзаж на экране'};
+ var SCREEN={y:Math.round(carTop-26), x0:60, x1:640};
+ /* все три проектора стоят со стороны зала, проекция прямая */
+ var PROJ=[{x:150,y:500,c:'#4ADEF0',g:'url(#cgBeamL)',name:'проектор слева'},
+           {x:550,y:500,c:'#FF3E9A',g:'url(#cgBeamR)',name:'проектор справа'}];
+ var BACK={x:350,y:520,c:'#C9F23C',g:'url(#cgBeamB)',name:'третий, поверх машины на экран'};
 
  function segments(){
   var out=[], total=0, lit=0;
@@ -1250,81 +1392,83 @@ SCENE_JS = """<script>
    var a=pts[i], b=pts[(i+1)%pts.length];
    var dx=b[0]-a[0], dy=b[1]-a[1], len=Math.hypot(dx,dy);
    if(!len) continue;
-   total+=len;
-   var nx=dy/len, ny=-dx/len, mx=(a[0]+b[0])/2, my=(a[1]+b[1])/2, col=null;
+   var nx=dy/len, ny=-dx/len, mx=(a[0]+b[0])/2, my=(a[1]+b[1])/2;
+   /* считаем только ту сторону, которую видит зал */
+   var facing = ny>0.05;
+   if(facing) total+=len;
+   var col=null;
    for(var k=0;k<nProj;k++){
     var p=PROJ[k], vx=p.x-mx, vy=p.y-my, vl=Math.hypot(vx,vy);
-    if((nx*vx+ny*vy)/vl>0.26){col=p.c;break;}
+    if((nx*vx+ny*vy)/vl>0.30){col=p.c;break;}
    }
-   if(col) lit+=len;
+   if(col&&facing) lit+=len;
    out.push({a:a,b:b,c:col});
   }
-  return {segs:out, share:lit/total};
+  return {segs:out, share:total?lit/total:0};
  }
 
  function draw(){
-  /* лучи */
   var html='';
   for(var k=0;k<nProj;k++){
-   var p=PROJ[k];
-   var l=-1e9,r=1e9,minP=null,maxP=null,best=-1e9,worst=1e9;
+   var p=PROJ[k], best=-1e9, worst=1e9, minP=null, maxP=null;
    pts.forEach(function(q){
     var ang=Math.atan2(q[1]-p.y,q[0]-p.x);
     if(ang>best){best=ang;maxP=q;}
     if(ang<worst){worst=ang;minP=q;}
    });
-   var ext=2.1;
+   var ext=1.6;
    function far(q){return [p.x+(q[0]-p.x)*ext,p.y+(q[1]-p.y)*ext];}
    var f1=far(minP), f2=far(maxP);
-   html+='<polygon points="'+p.x+','+p.y+' '+f1[0]+','+f1[1]+' '+f2[0]+','+f2[1]+
-         '" fill="'+p.g+'"/>';
+   html+='<polygon points="'+p.x+','+p.y+' '+f1[0].toFixed(1)+','+f1[1].toFixed(1)+
+         ' '+f2[0].toFixed(1)+','+f2[1].toFixed(1)+'" fill="'+p.g+'"/>';
   }
-  var bf=BACK;
-  html+='<polygon points="'+bf.x+','+bf.y+' '+SCREEN.x0+','+SCREEN.y+' '+
-        SCREEN.x1+','+SCREEN.y+'" fill="'+bf.g+'"/>';
+  html+='<polygon points="'+BACK.x+','+BACK.y+' '+SCREEN.x0+','+SCREEN.y+' '+
+        SCREEN.x1+','+SCREEN.y+'" fill="'+BACK.g+'"/>';
   beams.innerHTML=html;
-  document.getElementById('cgScreen').innerHTML=
-   '<rect x="'+SCREEN.x0+'" y="'+SCREEN.y+'" width="'+(SCREEN.x1-SCREEN.x0)+
-   '" height="14" rx="3"/><text x="350" y="'+(SCREEN.y-14)+
-   '" text-anchor="middle">экран вплотную за машиной, на нем шел пейзаж</text>';
 
-  /* машина: серый силуэт, поверх контур цветом того проектора,
-     который этот участок видит; тёмный участок значит «сюда не светит» */
+  screenG.innerHTML='<rect x="'+SCREEN.x0+'" y="'+SCREEN.y+'" width="'+
+   (SCREEN.x1-SCREEN.x0)+'" height="14" rx="3"/><text x="350" y="'+(SCREEN.y-14)+
+   '" text-anchor="middle">экран вплотную за машиной, на нем менялся пейзаж</text>';
+
   var r=segments(), share=r.share, eff=film?share:share*(1-GLASS/100);
   var glassOp=film?'1':'.2';
-  var body='<path d="'+BODY+'" class="cgcar"/>';
-  var inner='<rect x="250" y="118" width="220" height="184" class="cgglass" opacity="'+
-   glassOp+'"/><polygon points="470,118 556,88 556,332 470,302" class="cgglass" opacity="'+
-   glassOp+'"/><polygon points="178,96 250,116 250,304 178,324" class="cgglass" opacity="'+
-   glassOp+'"/>';
+  var op=film?'.9':'.22';
+  var inner='<rect x="250" y="118" width="220" height="184" rx="8" class="cgroof"/>'+
+   '<rect x="262" y="92" width="196" height="28" rx="6" class="cgglass" opacity="'+op+'"/>'+
+   '<rect x="262" y="300" width="196" height="28" rx="6" class="cgglass" opacity="'+op+'"/>'+
+   '<polygon points="470,118 556,88 556,332 470,302" class="cgglass" opacity="'+op+'"/>'+
+   '<polygon points="178,96 250,116 250,304 178,324" class="cgglass" opacity="'+op+'"/>'+
+   WHEELS.map(function(w){
+    return '<rect x="'+(w[0]-38)+'" y="'+(w[1]-15)+'" width="76" height="30" rx="11" '+
+           'class="cgwheel"/>';
+   }).join('');
   var edge=r.segs.map(function(s){
    return '<line x1="'+s.a[0].toFixed(1)+'" y1="'+s.a[1].toFixed(1)+'" x2="'+
     s.b[0].toFixed(1)+'" y2="'+s.b[1].toFixed(1)+'" stroke="'+(s.c||'#2A3038')+
-    '" stroke-width="9" stroke-linecap="round"/>';
+    '" stroke-width="8" stroke-linecap="round"/>';
   }).join('');
-  carG.innerHTML='<g transform="translate('+CX+','+CY+') rotate(-90) scale('+SC+') '+
-   'translate(-420,-210)">'+body+inner+'</g>'+edge+
-   '<text x="'+CX+'" y="'+(CY+180)+'" text-anchor="middle" class="cglab">'+
-   'CS35 в зале, вид сверху</text>';
+  carG.innerHTML='<g transform="translate('+CX+','+CY+') scale('+SC+') '+
+   'translate(-420,-210)"><path d="'+BODY+'" class="cgcar"/>'+inner+'</g>'+edge+
+   '<text x="'+CX+'" y="'+(CY+124)+'" text-anchor="middle" class="cglab">'+
+   'CS35 боком к экрану, вид сверху</text>';
 
-  /* проекторы */
   var ph='';
   for(var j=0;j<PROJ.length;j++){
-   var q=PROJ[j], off=j<nProj;
-   ph+='<g opacity="'+(off?1:.3)+'"><rect x="'+(q.x-26)+'" y="'+(q.y-14)+
-       '" width="52" height="28" rx="6" fill="'+(off?q.c:'#3A414C')+'"/>'+
+   var q=PROJ[j], on=j<nProj;
+   ph+='<g opacity="'+(on?1:.3)+'"><rect x="'+(q.x-26)+'" y="'+(q.y-14)+
+       '" width="52" height="28" rx="6" fill="'+(on?q.c:'#3A414C')+'"/>'+
        '<text x="'+q.x+'" y="'+(q.y+34)+'" text-anchor="middle" class="cglab">'+
        q.name+'</text></g>';
   }
-  ph+='<g><rect x="'+(BACK.x-26)+'" y="'+(BACK.y-4)+'" width="52" height="24" rx="6" fill="'+
-      BACK.c+'"/><text x="'+BACK.x+'" y="'+(BACK.y+46)+'" text-anchor="middle" '+
-      'class="cglab">третий проектор</text></g>';
+  ph+='<g><rect x="'+(BACK.x-26)+'" y="'+(BACK.y-14)+'" width="52" height="28" rx="6" fill="'+
+      BACK.c+'"/><text x="'+BACK.x+'" y="'+(BACK.y+34)+'" text-anchor="middle" '+
+      'class="cglab">'+BACK.name+'</text></g>';
   projG.innerHTML=ph;
 
   readLit.textContent=Math.round(eff*100)+' %';
   readDark.textContent=Math.round((1-eff)*100)+' %';
  }
- [].slice.call(scene.parentNode.parentNode.querySelectorAll('[data-proj]')).forEach(function(b){
+ [].slice.call(document.querySelectorAll('[data-proj]')).forEach(function(b){
   b.addEventListener('click',function(){
    [].slice.call(document.querySelectorAll('[data-proj]')).forEach(function(x){
     x.classList.remove('is-on');});
@@ -1339,6 +1483,44 @@ SCENE_JS = """<script>
   });
  });
  draw();
+})();
+</script>"""
+
+LB_JS = """<script>
+(function(){
+ 'use strict';
+ var GAL=%GAL%;
+ var lb=document.getElementById('cgLb');
+ if(!lb) return;
+ var img=document.getElementById('cgLbImg'), cap=document.getElementById('cgLbCap'),
+     items=[].slice.call(document.querySelectorAll('.cg-gal__item')), cur=0, last=null;
+ function show(i){
+  cur=(i+GAL.length)%GAL.length;
+  var g=GAL[cur];
+  img.src='%IMG%/'+g[0]+'.jpg'; img.alt=g[1]; cap.textContent=g[2];
+ }
+ function open(i){
+  last=document.activeElement; show(i); lb.hidden=false;
+  document.body.style.overflow='hidden';
+  lb.querySelector('[data-lb="close"]').focus();
+ }
+ function close(){
+  lb.hidden=true; document.body.style.overflow='';
+  if(last&&last.focus) last.focus();
+ }
+ items.forEach(function(b,i){b.addEventListener('click',function(){open(i);});});
+ lb.addEventListener('click',function(e){
+  var act=e.target.getAttribute&&e.target.getAttribute('data-lb');
+  if(act==='close'||e.target===lb) close();
+  else if(act==='prev') show(cur-1);
+  else if(act==='next') show(cur+1);
+ });
+ document.addEventListener('keydown',function(e){
+  if(lb.hidden) return;
+  if(e.key==='Escape') close();
+  else if(e.key==='ArrowLeft') show(cur-1);
+  else if(e.key==='ArrowRight') show(cur+1);
+ });
 })();
 </script>"""
 
@@ -1365,7 +1547,9 @@ FILM_JS = """<script>
 
 SCENE_CSS = """<style id="cg-scene-css">
 .cg-scene .cgcar{fill:#E7EBF0;stroke:#0C1017;stroke-width:8}
-.cg-scene .cgglass{fill:#94A0AE}
+.cg-scene .cgglass{fill:#8E99A6}
+.cg-scene .cgroof{fill:#D6DCE3}
+.cg-scene .cgwheel{fill:#252B33}
 .cg-scene text{font:600 12px 'Golos Text',Arial,sans-serif;fill:rgba(255,255,255,.6)}
 .cg-scene #cgScreen rect{fill:#E7EBF0;opacity:.9}
 .cg-scene .cglab{font-size:12px}
@@ -1414,10 +1598,11 @@ def scripts():
         '%ZONES%': j(zones_json(), ensure_ascii=False),
         '%BODY%': j(BODY_D), '%POLY%': j(poly),
         '%GLASS%': j(AREAS['share']), '%PENS%': j(PENS, ensure_ascii=False),
-        '%WHEELS%': j(WHEELS),
+        '%WHEELS%': j(WHEELS), '%GAL%': j(GAL, ensure_ascii=False),
+        '%IMG%': IMG,
         '%RIVALS%': j(MAP['rivals']),
     }
-    out = PAGE_JS + PAINT_JS + SCENE_JS + FILM_JS
+    out = PAGE_JS + PAINT_JS + SCENE_JS + LB_JS + FILM_JS
     for k, v in subs.items():
         out = out.replace(k, v)
     return out
@@ -1459,7 +1644,7 @@ def page():
     # своего блока «обсудить проект» на странице нет: её закрывает фиолетовая
     # форма из rc.footer(), второй CTA был бы дублем
     body = (f'{rc.header()}<main class="cg">{hero()}{two()}{backstage()}{stand()}'
-            f'{voices()}{mapping()}{color()}{evening()}{film()}{outro()}</main>'
+            f'{voices()}{mapping()}{color()}{evening()}{gallery()}{film()}{outro()}</main>'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}{scripts()}{BREADCRUMB_LD}'
             '</body></html>')
     html = head + body
