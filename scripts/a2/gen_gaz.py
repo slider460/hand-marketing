@@ -13,7 +13,7 @@
 героя, подписи), ровно как в сюжете оно переключает машину. Кнопка едет
 за читателем в липкой панели и работает в любой момент.
 
-Четыре механики:
+Пять механик:
 1. Кнопка блокировки: data-lock на <html>, кадр «пробка» гаснет, из-под
    него выходит кадр «робот» на той же обочине, палитра уходит в синий.
 2. Сториборд: 31 карандашный лист из презентации проекта, переключатель
@@ -22,7 +22,10 @@
    Единственный неснятый лист в режиме «как сняли» гаснет.
 3. Критерии вирусности из брифа: шесть требований раскрываются ответом
    готового ролика.
-4. Лента расползания 2013 → 2025: точки копий проявляются по очереди,
+4. Триптих «лист → площадка → кадр» в производстве: бекстейдж площадки
+   (mirror/videos/gaz-backstage.mp4, уезжает обычным деплоем) стоит между
+   листом сториборда 19 и кадром 0:44, который на этой площадке снимали.
+5. Лента расползания 2013 → 2025: точки копий проявляются по очереди,
    когда секция попадает в экран, клик открывает карточку копии.
 
 Источник фактуры о производстве — презентация проекта «eaton gaz.pptx»
@@ -577,6 +580,27 @@ button.gz-st__i:hover{border-color:var(--acc);transform:translateY(-3px)}
 .gz-lists ul{list-style:none;margin:0;padding:0}
 .gz-lists li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:14.5px}
 
+/* ── ТРИПТИХ «ЛИСТ → ПЛОЩАДКА → КАДР» ────────────────────────────────── */
+.gz-trip{margin-top:54px;padding-top:54px;border-top:1px solid var(--line)}
+.gz-trip h3{font-size:clamp(18px,2.2vw,24px);margin-bottom:12px}
+.gz-trip>p{color:var(--dim);max-width:74ch;margin:0}
+.gz-trip__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px;
+ align-items:start}
+.gz-trip figure{margin:0}
+/* три источника с разными пропорциями (лист 1.62, видео 1.78, кадр 2.42)
+   ставим в одинаковый бокс, иначе триптих едет по высоте */
+/* display:block обязателен: бокс это <span>, а на inline aspect-ratio не работает */
+.gz-trip__box{display:block;position:relative;aspect-ratio:16/9;border:1px solid var(--line);
+ border-radius:var(--rad);overflow:hidden;background:#000}
+.gz-trip__box.art{background:#f4f2ee}
+.gz-trip__box picture{display:block;height:100%}
+.gz-trip__box img,.gz-trip__box video{width:100%;height:100%;display:block;object-fit:contain}
+.gz-trip__box video{object-fit:cover;background:#000}
+.gz-trip figcaption{margin-top:9px;font-family:'Tektur',Arial,sans-serif;font-size:11px;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.gz-trip figcaption b{display:block;color:var(--acc2);font-weight:400;margin-bottom:3px}
+@media(max-width:860px){.gz-trip__grid{grid-template-columns:1fr}}
+
 /* ── ЛОКАЦИЯ И ГРАФИКА ───────────────────────────────────────────────── */
 .gz-loc,.gz-gfx{padding:clamp(50px,8vw,96px) 0;border-top:1px solid var(--line)}
 .gz-loc__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:34px}
@@ -784,6 +808,26 @@ def production():
 <div><h3>Техника</h3><ul>{gear}</ul></div>
 </div>
 {pairs}
+<div class="gz-trip">
+<h3>Между листом и кадром</h3>
+<p>Бекстейдж с площадки: сорок пять секунд, один непрерывный план. В кадре
+пятеро, рядом на земле лежит кран, актрисе объясняют сцену, за спиной идёт
+та самая трасса с фурами. Готовится один кадр — женщина на остановке. В ролике
+он идёт около четырёх с половиной секунд.</p>
+<div class="gz-trip__grid">
+<figure><span class="gz-trip__box art">{pic('sb/19.jpg', 'Лист сториборда 19: женщина на остановке оборачивается')}</span>
+<figcaption><b>Лист 19</b>Как нарисовали</figcaption></figure>
+<figure><span class="gz-trip__box">
+<video id="gzBts" controls preload="none" playsinline
+ poster="{IMG}/backstage-poster.jpg" width="960" height="540">
+<source src="/videos/gaz-backstage.mp4" type="video/mp4">
+Ваш браузер не умеет показывать видео.
+<a href="/videos/gaz-backstage.mp4">Скачать бекстейдж</a>.
+</video></span>
+<figcaption><b>Площадка</b>Как снимали, 0:45</figcaption></figure>
+<figure><span class="gz-trip__box">{pic('f-19.jpg', 'Кадр ролика: женщина на остановке и нога робота')}</span>
+<figcaption><b>0:44</b>Что вышло в ролике</figcaption></figure>
+</div></div>
 </div></section>'''
 
 

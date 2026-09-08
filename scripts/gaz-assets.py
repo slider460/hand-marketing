@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Ассеты кейса «Газель-трансформер» (/video/gaz/).
 
-Готовит четыре вещи:
+Готовит пять вещей:
 
 1. Шрифты Tektur + Rubik, self-host (mirror/fonts/tektur-rubik.css +
    mirror/fonts/files/). Внешних CDN в проекте нет принципиально.
@@ -19,7 +19,12 @@
    у опоры ЛЭП и актёр в кабине ГАЗели. Опора на фото — та самая, мимо
    которой в ролике шагает робот, поэтому кадры идут парами.
 
-Запуск: python3 scripts/gaz-assets.py [--fonts] [--frames] [--deck]
+5. Бекстейдж площадки: mirror/videos/gaz-backstage.mp4 (45 с, один план,
+   группа готовит кадр с актрисой на остановке) + постер плеера. Кладётся
+   в mirror/videos/, а не в media/, поэтому уезжает обычным деплоем без
+   ручной заливки. Путь к исходнику задаётся GAZ_BACKSTAGE.
+
+Запуск: python3 scripts/gaz-assets.py [--fonts] [--frames] [--deck] [--backstage]
         (без ключей — всё сразу)
 """
 import os
@@ -40,6 +45,10 @@ OUT = os.path.join(MIRROR, 'images', 'gaz')
 FILM = os.path.join(ROOT, 'media', 'gazelle-transformer.mp4')
 ASSETS = os.path.join(ROOT, 'public', 'assets')
 SB_OUT = os.path.join(OUT, 'sb')
+CLIPS = os.path.join(MIRROR, 'videos')
+BACKSTAGE = os.environ.get('GAZ_BACKSTAGE', os.path.expanduser(
+    '~/Documents/Материалы для обновления сайта/Eaton/Газель трансформер/'
+    'Газ бекстейдж Eaton.mp4'))
 PPTX = os.environ.get('GAZ_PPTX',
                       os.path.expanduser('~/Downloads/eaton gaz.pptx'))
 
@@ -168,6 +177,39 @@ def frames():
     print(f'✓ кадры: {n} шт. в mirror/images/gaz/')
 
 
+def backstage():
+    """Бекстейдж площадки в mirror/videos/ + постер плеера.
+
+    Исходник: 45 с, 1280x720, один непрерывный план — группа готовит кадр
+    с актрисой на остановке (лист сториборда 19, в ролике 0:44). Звук на
+    исходнике почти неслышный (средний уровень -32 дБ), поэтому дорожку
+    нормализуем, иначе на телефоне не слышно ни ветра, ни трассы.
+
+    Кладём НЕ в media/ (туда грузят вручную), а в mirror/videos/ — оттуда
+    файл уезжает на хостинг обычным деплоем, как клипы Samsung и Silk Way.
+    """
+    if not os.path.exists(BACKSTAGE):
+        print(f'· бекстейджа нет ({BACKSTAGE}) — шаг пропущен, '
+              'готовый клип уже в mirror/videos/')
+        return
+    os.makedirs(CLIPS, exist_ok=True)
+    dst = os.path.join(CLIPS, 'gaz-backstage.mp4')
+    # в триптихе плеер занимает треть полосы, 960 по ширине хватает с запасом;
+    # 25 к/с вместо 29.97 и crf 26 держат файл в разумном весе для репозитория
+    sh(['ffmpeg', '-y', '-loglevel', 'error', '-i', BACKSTAGE,
+        '-vf', 'scale=960:-2:flags=lanczos', '-r', '25',
+        '-c:v', 'libx264', '-crf', '26', '-preset', 'slow',
+        '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
+        '-c:a', 'aac', '-b:a', '96k',
+        '-af', 'loudnorm=I=-20:TP=-1.5:LRA=11', dst])
+    poster = os.path.join(OUT, 'backstage-poster.jpg')
+    sh(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '20', '-i', BACKSTAGE,
+        '-frames:v', '1', '-vf', 'scale=1280:-2:flags=lanczos', '-q:v', '3', poster])
+    webp(poster)
+    mb = os.path.getsize(dst) / 1024 / 1024
+    print(f'✓ бекстейдж: mirror/videos/gaz-backstage.mp4 ({mb:.1f} МБ) + постер')
+
+
 def deck():
     """Сториборд и фото локации из презентации проекта.
 
@@ -228,3 +270,5 @@ if __name__ == '__main__':
         frames()
     if do_all or '--deck' in args:
         deck()
+    if do_all or '--backstage' in args:
+        backstage()
