@@ -38,7 +38,16 @@
 > для кинетического экрана». Ролик паруса `mirror/videos/samara-vdnh-parus.mp4` (2.9 МБ)
 > грузить не нужно: он внутри `mirror/**` и уезжает обычным деплоем.
 
-Всего файлов: 31 (некоторые ролики общие для нескольких кейсов).
+> **08.09.2026 — два ролика кейса «Клиентский опыт» Saint-Gobain.** Страница
+> /video/saintgobain/cx ждёт ручной заливки в `/media/`: `sg-cx-part1.mp4` (66 МБ,
+> путь клиента, 6:57) и `sg-cx-part2.mp4` (27 МБ, тезисы директоров, 3:11). Веб-версии
+> пережаты из исходников заказчика (x264 crf 27, 720p, faststart) командой ffmpeg,
+> исходники лежат в «Материалы для обновления сайта/Saint-Gobain/CX_video».
+> Луп первого экрана `mirror/videos/sgcx-hero-loop.mp4` (2,3 МБ, 15 с, немой) грузить
+> вручную НЕ нужно: он лежит внутри `mirror/**` и уезжает обычным деплоем, адрес
+> `/videos/sgcx-hero-loop.mp4`. Режет его `python3 scripts/sgcx-assets.py --hero`.
+
+Всего файлов: 33 (некоторые ролики общие для нескольких кейсов).
 
 | Кейс | Файл на хостинге | Исходник |
 |---|---|---|
@@ -66,6 +75,8 @@
 | /samara_vdnh | `/media/samara_vdnh-6.mp4` | 3_.mp4 |
 | /samara_vdnh | `/media/samsung-new-year-2020.mp4` | Samsung 2020.mp4 |
 | /video/eaton | `/media/presentation-eaton-russia.mp4` | Presentation_Eaton_Russia.mp4 |
+| /video/saintgobain/cx | `/media/sg-cx-part1.mp4` | SG клиентский опыт часть 1.mp4 |
+| /video/saintgobain/cx | `/media/sg-cx-part2.mp4` | SG клиентский опыт часть 2 ТЕЗИСЫ.mp4 |
 | /video/gaz | `/media/gazelle-transformer.mp4` | GAZelle Transformer.mp4 |
 | /video/interplastika | `/media/interplastica-messe-duesseldorf.mp4` | Interplastica Messe Duesseldorf.mp4 |
 | /video/lingerie | `/media/video-lingerie-hand-marketing.mp4` | Video Lingerie Hand Marketing.mp4 |

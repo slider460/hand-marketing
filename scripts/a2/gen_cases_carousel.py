@@ -20,7 +20,14 @@ for f in glob.glob(API+'/getproductslist_*.json'):
             if g: cur['img']=g[0]['img']
         data[url]=cur
 order=json.load(open(API+'/getproductslist_689558768071.json'))['products']
-FB={'/photo/saint-gobain':('Съёмка продукции Gyproc','63 позиции за один съёмочный день','Photo Production'),
+FB={
+    '/video/eaton':('Eaton','Ролик для международной выставки','Video production'),
+    '/creative/becar/vertical':('Becar','Брошюра Vertical BW Signature Collection','Creative & Design'),
+    '/bekobod1':('Технопарк «Бекабад»','Презентационный ролик технопарка','Video production'),
+    '/zubovo':('Технопарк «Зубово»','Презентационный фильм технопарка под Уфой','Video production'),
+    '/isotec':('Изотек','Бренд-ролик ISOTEC для Saint-Gobain','Video production'),
+    '/video/saintgobain/cx':('Фильм «Клиентский опыт» Saint-Gobain','48 сотрудников названы в кадре по имени','Video production'),
+    '/photo/saint-gobain':('Съёмка продукции Gyproc','63 позиции за один съёмочный день','Photo Production'),
     '/creative/samara':('Фирменный стиль выставки «Самара»','Брендбук Самарской области, 28 полос','Creative & Design'),
     '/creative/metra':('Брендбук Metra Technology Group','Пять брендов индустриальной экосистемы','Creative & Design'),
     '/creative/becar/smile':('Брошюра ТЦ «Смайл»','22 полосы про доход с торговых метров','Creative & Design'),
@@ -44,7 +51,8 @@ OVERRIDE={
  '/digital/becar/vertical':('Becar','Посадочная страница «Бутик-отель Вертикаль»','Digital'),
  '/becar_stancia':('Becar','Посадочная страница «БЦ Станция»','Digital'),
  '/bacar_vertical_all':('Becar','Посадочная страница «Сеть отелей Vertical»','Digital'),
- '/eaton_online':('Eaton','Online-трансляция стенда на IT-ОСЬ 2020','Digital')}
+ '/eaton_online':('Eaton','Online-трансляция стенда на IT-ОСЬ 2020','Digital'),
+ '/mmg':('MMG Павелецкая Плаза','Рекламный фильм торгового центра','Video production')}
 COL={'event':'#C12164','exhibition':'#673A7E','creative':'#C12164','video':'#CF6F19','digital':'#5E9A2E','3d':'#7E3FA0','btl':'#D6357E','print':'#E08A2B'}
 def cat_key(cat):
     c=cat.lower()

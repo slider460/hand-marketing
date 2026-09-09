@@ -32,6 +32,13 @@
   "mmg": [
    "/media/mmg-paveleckayaplaza.mp4"
   ],
+  "portfolio/samara-stand-vdnh": [
+   "/videos/samara-vdnh-parus.mp4",
+   "/media/samara-vdnh-kinetic-faces.mp4",
+   "/media/samara-vdnh-kinetic-wives.mp4",
+   "/media/samara-vdnh-kinetic-sport.mp4",
+   "/media/samara-vdnh-kinetic-before.mp4"
+  ],
   "portfolio/stavropol-stand-vdnh": [
    "/videos/stavropol-stand.mp4",
    "/media/stavropol-vdnh-nakedeye.mp4"
@@ -70,6 +77,10 @@
   "video/rgd/history": [
    "/media/transrzhd.mp4"
   ],
+  "video/saintgobain/cx": [
+   "/media/sg-cx-part1.mp4",
+   "/media/sg-cx-part2.mp4"
+  ],
   "video/salaris": [
    "/media/as-salaris-1.mp4",
    "/media/as-salaris-2.mp4"
@@ -83,13 +94,6 @@
   "zubovo": [
    "/media/technopark-zubovo.mp4",
    "/media/silkway-3d.mp4"
-  ],
-  "portfolio/samara-stand-vdnh": [
-   "/videos/samara-vdnh-parus.mp4",
-   "/media/samara-vdnh-kinetic-faces.mp4",
-   "/media/samara-vdnh-kinetic-wives.mp4",
-   "/media/samara-vdnh-kinetic-sport.mp4",
-   "/media/samara-vdnh-kinetic-before.mp4"
   ]
  },
  "showreel": "/media/hm-showreel.mp4"
