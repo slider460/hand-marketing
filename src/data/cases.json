@@ -63,6 +63,17 @@
     "coverRemote": "https://static.tildacdn.com/tild6432-3236-4736-b338-353235353565/OBDKVI1_-01.png"
   },
   {
+    "slug": "video__saintgobain__training",
+    "route": "/video/saintgobain/training",
+    "category": "video",
+    "categoryLabel": "Video Production",
+    "client": "Saint-Gobain",
+    "title": "Обучающие видео для руководителей",
+    "metaTitle": "Обучающие видео для руководителей Saint-Gobain",
+    "cover": "/images/lib/custom-sgtraining/cover-main.png",
+    "coverRemote": ""
+  },
+  {
     "slug": "video__saintgobain__cx",
     "route": "/video/saintgobain/cx",
     "category": "video",

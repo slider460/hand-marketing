@@ -26,6 +26,7 @@ FB={
     '/bekobod1':('Технопарк «Бекабад»','Презентационный ролик технопарка','Video production'),
     '/zubovo':('Технопарк «Зубово»','Презентационный фильм технопарка под Уфой','Video production'),
     '/isotec':('Изотек','Бренд-ролик ISOTEC для Saint-Gobain','Video production'),
+    '/video/saintgobain/training':('Обучающие видео Saint-Gobain','Курс для руководителей: вопросы и модель STAR','Video production'),
     '/video/saintgobain/cx':('Фильм «Клиентский опыт» Saint-Gobain','48 сотрудников названы в кадре по имени','Video production'),
     '/photo/saint-gobain':('Съёмка продукции Gyproc','63 позиции за один съёмочный день','Photo Production'),
     '/creative/samara':('Фирменный стиль выставки «Самара»','Брендбук Самарской области, 28 полос','Creative & Design'),
