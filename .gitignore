@@ -26,3 +26,14 @@ media-optimized/
 showreel-draft/*.mp4
 site/src/assets/
 scripts/a2/qa-shots/
+scripts/a2/agent-out/
+
+# текстовый аудит: дампы страниц и отчёты агентов — рабочие артефакты
+scripts/audit/pages/
+scripts/audit/briefs/
+scripts/audit/agent-out/
+
+# кэш выдачи XMLRiver
+scripts/audit/serp-cache/
+scripts/audit/lint.json
+scripts/audit/lint.md
