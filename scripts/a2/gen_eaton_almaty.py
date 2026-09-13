@@ -418,7 +418,7 @@ def out():
       'и приглашённые участники.</p>'
       f'<ul class="ea-res">{res}</ul>'
       '<p class="ea-sign">Желаем приятной и продуктивной поездки!</p>'
-      '<p class="ea-more">Другие проекты с этим клиентом: '
+      '<p class="ea-more">Конференции под ключ это наша <a href="/event">услуга Event</a>. Другие проекты с этим клиентом: '
       '<a href="/eaton_online">онлайн-трансляция Eaton</a>, '
       '<a href="/video/patriot">ролик УАЗ Патриот и Eaton</a>.</p>'
       '</div></section>')

@@ -393,7 +393,7 @@ def hero():
     return f'''<section class="eo-hero"><div class="eo__wrap">
 <a class="eo-back" href="/project">← Проекты</a>
 <div class="eo-hero__grid">
-<div><div class="eo__eyebrow">Event · онлайн-трансляция</div>
+<div><div class="eo__eyebrow"><a href="/event" style="color:inherit;text-decoration:none">Event</a> · онлайн-трансляция</div>
 <h1>Семь часов эфира из офиса, куда <em>не завели интернет</em></h1>
 <p class="eo__lead eo-hero__lead">Eaton выступал на третьем форуме OCS Distribution
 «IT-ОСЬ 2020». Форум прошёл полностью онлайн, а спикер остался у себя в офисе:

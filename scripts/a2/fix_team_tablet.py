@@ -40,7 +40,7 @@ PAGES = {
 # Пути АБСОЛЮТНЫЕ (/images/...) — чтобы фото грузились на любой глубине (/about/ и т.п.)
 TEAM = [
     ('/images/lib/as3731-3535-4665-a633-663639313564/mriyaresort_-01-04.png', 'Народецкий Александр', 'Client Service Director / CEO'),
-    ('/images/lib/as3366-6336-4430-b166-646662633061/mriyaresort_-01-06.png', 'Семёнов Эдвард', 'Commercial Director'),
+    ('/images/lib/as3366-6336-4430-b166-646662633061/mriyaresort_-01-06.png', 'Семенов Эдвард', 'Commercial Director'),
     ('/images/lib/as6133-3736-4165-a366-353530633430/mriyaresort_-01-05.png', 'Сергей Кличановский', 'Business Development Director'),
     ('/images/lib/as6463-3334-4266-b835-313433396166/mriyaresort_-01-07.png', 'Дементьев Святослав', 'Chief Creative Officer'),
     ('/images/lib/as3735-6531-4234-b830-363630623332/mriyaresort_-01-01.png', 'Осотов Алексей', 'Chief Information Officer'),

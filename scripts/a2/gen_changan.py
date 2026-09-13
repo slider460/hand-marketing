@@ -620,7 +620,7 @@ def hero():
         f'<div class="cg-hero__bg">{pic("hero-show", "Презентация нового автомобиля Changan CS35, световое шоу на кузове", sizes="100vw", lazy=False)}</div>'
         '<div class="cg-hero__in">'
         '<div class="cg-hero__where">'
-        f'<span>Event и BTL</span><span>{BRIEF["mall"]}</span>'
+        f'<span><a href="/event" style="color:inherit;text-decoration:none">Event и BTL</a></span><span>{BRIEF["mall"]}</span>'
         f'<span>{BRIEF["dealer"]}</span></div>'
         '<h1>Презентация нового автомобиля Changan CS35 в торговом центре</h1>'
         '<p class="cg-hero__sub">Презентацию нового автомобиля вынесли из салона '

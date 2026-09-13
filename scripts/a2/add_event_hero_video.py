@@ -38,7 +38,7 @@ CSS = f"""<style data-{MARK}="css">
 .evh__shade{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,28,.62) 0%,rgba(20,23,28,.34) 46%,rgba(20,23,28,.74) 100%)}}
 .evh__in{{position:relative;max-width:1180px;margin:0 auto;padding:110px 40px 120px;min-height:min(66vh,560px);display:flex;flex-direction:column;justify-content:center}}
 .evh__t{{margin:0;font-size:clamp(44px,6.6vw,88px);line-height:.98;font-weight:800;letter-spacing:-.025em;color:#fff}}
-.evh__sub{{margin:20px 0 0;font-size:clamp(18px,2vw,24px);font-weight:700;color:#fff}}
+.evh .evh__sub{{margin:20px 0 0;font-size:clamp(18px,2vw,24px);font-weight:700;letter-spacing:normal;color:#fff}}
 .evh__lead{{margin:18px 0 0;max-width:560px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.85)}}
 .evh__act{{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}}
 /* цвета с !important — глобальные Tilda-правила #allrecords a бьют по специфичности */
@@ -57,8 +57,8 @@ def section(anchor):
             f'<div class="evh__shade" aria-hidden="true"></div>'
             f'<div class="evh__in">'
             f'<div class="evh__t">Event</div>'
-            f'<div class="evh__sub">Ивент-агентство полного цикла</div>'
-            f'<p class="evh__lead">Конференции, выставки, презентации, корпоративные мероприятия и road show — концепция, площадка, продакшн и режиссура под ключ.</p>'
+            f'<h1 class="evh__sub">Организация мероприятий для компаний</h1>'
+            f'<p class="evh__lead">Конференции, выставки, презентации, корпоративные мероприятия и road show под ключ: концепция, площадка, продакшн и режиссура.</p>'
             f'<div class="evh__act"><a class="evh-cta" href="{anchor}">Обсудить проект</a></div>'
             f'</div></section>')
 

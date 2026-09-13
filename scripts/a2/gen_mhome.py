@@ -8,7 +8,7 @@ SHOWREEL=(json.load(open(_vm)).get('showreel') if os.path.exists(_vm) else None)
 # исключает путаницу подписей. Имя в alt — для доступности/SEO.
 TEAM=[
  ("Народецкий Александр","as3230-6663-4363-b038-333866373133/__76876-145.png"),
- ("Семёнов Эдуард","as6534-3130-4535-b834-393262383437/__76876-149.png"),
+ ("Семенов Эдвард","as6534-3130-4535-b834-393262383437/__76876-149.png"),
  ("Сергей Кличановский","as3764-6333-4063-b531-396238386537/__76876-147.png"),
  ("Дементьев Святослав","as6136-6132-4639-a162-346433313762/__76876-151.png"),
  ("Осотов Алексей","as3939-3635-4033-a436-386536353930/__76876-150.png"),
@@ -20,10 +20,10 @@ SERVICES=[("Exhibition Build","/exhibition","#8E5FB0"),("Event","/event","#673A7
  ("3D Mapping","/3dmapping","#7E3FA0"),("Print & Production","/printandproduction","#E08A2B"),("BTL","/btl","#D6357E")]
 # «О нас» — бренд-цветные постеры; ghost-глиф кодирует смысл (10+, 360°, &, 100+)
 # (цвет, эйбрау, ghost-глиф, заголовок, описание)
-ABOUT=[("#C12164","Опыт","10+","На рынке с 2012 года","Более 10 лет делаем эффективные маркетинговые коммуникации."),
- ("#CF6F19","Формат","360°","Full service","Любые услуги в области маркетинговых коммуникаций — под одной крышей."),
- ("#5E9A2E","Подход","&","Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочной работы."),
- ("#673A7E","География","100+","100+ городов России","Офис в центре Москвы и региональная сеть по всей стране.")]
+ABOUT=[("#C12164","Опыт","10+","На рынке с 2012 года","Более 10 лет делаем рекламу для компаний и регионов."),
+ ("#CF6F19","Формат","360°","10 направлений","От брошюры на 22 полосы до стенда на выставке «Россия»."),
+ ("#5E9A2E","Подход","&","Сотрудничество","Saint-Gobain, Eaton и Becar работали с нами не один раз."),
+ ("#673A7E","География","◎","Офис в центре Москвы","Работали в Самаре, Ставрополе, Санкт-Петербурге, Калининграде и Алматы.")]
 LOGOS="""/images/lib/as3432-6564-4939-b661-323662313364/-1___1.png|/images/lib/as3066-3236-4161-b334-323334656232/samregion.png|/images/lib/as3832-3339-4933-b862-313162643738/-1___1_.png|/static/cdn/as3838-3739-4632-b934-633966616665/tb-drone-logo-footer.svg|/images/lib/as3131-3864-4362-a232-336664366339/-1___1__23.png|/static/cdn/as3464-6230-4430-a663-383430313964/logo_1.svg|/images/lib/as6136-3365-4733-b532-356530633965/-1___1__22.png|/images/lib/as6336-3333-4338-b864-363563663130/-1___1__21.png|/images/lib/as3561-6236-4939-a632-626362373038/-1___1__20.png|/images/lib/as6136-6532-4434-b338-356238363733/-1___1__19.png|/images/lib/as3566-6666-4236-b331-353564393064/-1___1__18.png|/images/lib/as6136-6462-4631-b130-616639666233/-1___1__17.png|/images/lib/as3635-3062-4664-a363-383435316230/-1___1__16.png|/images/lib/as6332-3162-4661-b032-666632663033/-1___1__15.png|/images/lib/as3261-6665-4864-a136-346266313930/-1___1__14.png|/static/cdn/as6431-3136-4132-a363-626237623063/logo.svg|/images/lib/as3934-3664-4561-a461-323133653839/1603629-01.png|/images/lib/as3539-6635-4130-b638-336534373864/-1___1__12.png|/images/lib/as3134-3664-4665-b636-646534373035/-1___1__11.png|/images/lib/as3938-3735-4665-b834-356539326436/-1___1__10.png|/images/lib/as6134-6137-4537-a165-346536616135/-1___1__9.png|/images/lib/as6562-6366-4463-b534-366137396164/-1___1__8.png|/images/lib/as6430-3166-4031-a333-626535303665/-1___1__7.png|/images/lib/as3230-3132-4362-b931-363364373738/-1___1__6.png|/images/lib/as6433-6662-4461-a365-663765333066/-1___1__5.png|/images/lib/as6364-6136-4738-b438-306136636236/-1___1__4.png|/images/lib/as3965-6433-4831-b139-643761623666/-1___1__3.png|/images/lib/as3961-6133-4661-b461-666462373731/__-71.png|/images/lib/custom-clients/bella-systech.png|/images/lib/custom-clients/ceramicanova.png""".split('|')
 
 cases=open(os.path.join(HERE,'carousels','all.html')).read()
@@ -41,9 +41,9 @@ mh=f'''<div class="mhome" id="mhome">
 <nav class="mh-menu" hidden><a href="/project">Проекты</a><a href="/service">Услуги</a><a href="/about">О нас</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><a class="mh-menu__cta" href="#mh-form">Обсудить проект</a></nav>
 
 <section class="mh-hero">
-  <p class="mh-eyebrow">Рекламное агентство полного цикла · с 2012</p>
-  <h1 class="mh-h1">Hand<br>Marketing</h1>
-  <p class="mh-lead">Делаем маркетинг, <b>который видно</b> — от идеи до реализации.</p>
+  <h1 class="mh-eyebrow">Рекламное агентство полного цикла · с 2012</h1>
+  <p class="mh-h1">Hand<br>Marketing</p>
+  <p class="mh-lead"><b>Стенд Самарской области</b> на ВДНХ, фильм для ЦМ РЖД, 3D mapping в Ставрополе.</p>
   <div class="mh-chips">{svc}</div>
 </section>
 <section class="mh-reel" id="mh-reel"><div class="mh-reel__cap">Шоурил</div><div class="mh-reel__box" data-reel data-src="{SHOWREEL}"><video class="mh-reel__teaser" autoplay muted loop playsinline preload="auto" poster="/showreel-cover.jpg"><source src="/showreel-teaser.mp4" type="video/mp4"></video><button class="mh-reel__play" type="button" aria-label="Смотреть шоурил со звуком"><span class="mh-reel__pi"></span><span class="mh-reel__pl">Смотреть<br>шоурил</span></button></div></section>
@@ -71,7 +71,7 @@ mh=f'''<div class="mhome" id="mhome">
 
 <section class="mh-form" id="mh-form">
   <h2>Давайте сделаем проект вместе?</h2>
-  <p>Оставьте контакты — перезвоним и обсудим задачу.</p>
+  <p>Оставьте контакты. Перезвоним и обсудим задачу.</p>
   <form class="mh-f" onsubmit="return false">
     <input type="text" name="name" placeholder="Как вас зовут" autocomplete="name">
     <input type="tel" name="phone" placeholder="+7 ___ ___ __ __" autocomplete="tel" inputmode="tel">

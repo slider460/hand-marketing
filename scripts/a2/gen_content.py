@@ -187,7 +187,7 @@ RALEWAY='<link href="/fonts/raleway-700.css" rel="stylesheet">'  # self-host, с
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Мультимедийный контент для мероприятий и выставок | Hand Marketing</title>
-<meta name="description" content="Создание мультимедийного контента: видеомаппинг и 3D-графика, интерактивные инсталляции и стенды, Naked Eye 3D, VR, контент для инфо-панелей, брендинг мероприятий. От идеи до воплощения — Hand Marketing.">
+<meta name="description" content="Видеомаппинг и 3D-графика, интерактивные инсталляции и стенды, Naked Eye 3D, VR и контент для инфо-панелей. Мультимедиа для мероприятий и выставок.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/content/">
 <meta property="og:type" content="website"><meta property="og:title" content="Мультимедийный контент для мероприятий и выставок | Hand Marketing">

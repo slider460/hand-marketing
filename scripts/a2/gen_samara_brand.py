@@ -1412,12 +1412,12 @@ PAGE_JS = """<script>(function(){
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Фирменный стиль выставки «Самара» — брендбук Самарской области | Hand Marketing</title>
+<title>Брендбук выставки «Самара» для Самарской области | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: руководство по использованию фирменного стиля выставки «Самара» в Музее им. П. В. Алабина. 28 полос: логотип и охранные поля, палитра, Manrope, маскот «Ладушка» в 16 образах, семантическое ядро из 46 слов, бенто-макеты, навигация по модулю X, носители.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Фирменный стиль выставки «Самара» — брендбук Самарской области">
+<meta property="og:title" content="Брендбук выставки «Самара» для Самарской области">
 <meta property="og:description" content="Брендбук как рабочая система: соберите стену зоны из слов ядра, переоденьте маскота и нарежьте навигационную табличку по модулю X прямо на странице.">
 <meta property="og:url" content="{URL}">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/banner-welcome.jpg">

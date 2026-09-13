@@ -430,7 +430,7 @@ def hero():
  fetchpriority="high" decoding="async"></div>
 <div class="sv__wrap sv-hero__in">
 <a class="sv-back" href="/project">← Проекты</a>
-<div class="sv__eyebrow">3D Mapping · Ставрополь · 13 декабря 2019</div>
+<div class="sv__eyebrow"><a href="/3dmapping" style="color:inherit;text-decoration:none">3D Mapping</a> · Ставрополь · 13 декабря 2019</div>
 <h1>Восемь минут, за которые здание Правительства <em>перестало быть зданием</em></h1>
 <p class="sv__lead sv-hero__lead">Открытие новогодних мероприятий на площади Ленина.
 27 проекторов в башнях за 97 метров от фасада, четыре лазера, зенитные прожекторы

@@ -392,8 +392,8 @@ HTML = f"""<!doctype html><html lang="ru" class="no-js"><head>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/creative/patriki/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Журнал Patriki Times — кейс Hand Marketing">
-<meta property="og:description" content="Дизайн издания, сетка полос, рубрикатор и заголовочная система — и ежемесячная вёрстка номеров журнала о Патриарших прудах.">
+<meta property="og:title" content="Журнал Patriki Times | кейс Hand Marketing">
+<meta property="og:description" content="Дизайн издания, сетка полос, рубрикатор и заголовочная система, а также ежемесячная вёрстка номеров журнала о Патриарших прудах.">
 <meta property="og:url" content="https://hand-marketing.ru/creative/patriki/">
 <meta property="og:image" content="https://hand-marketing.ru/images/patriki/cover9.jpg">
 <link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">

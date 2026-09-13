@@ -359,7 +359,7 @@ def hero():
     return (
       '<section class="mz-hero"><div class="mz-hero__top">'
       '<a class="mz-back" href="/project">← Все проекты</a>'
-      '<div class="lbl">Event · Messe Düsseldorf Moscow</div>'
+      '<div class="lbl"><a href="/event" style="color:inherit;text-decoration:none">Event</a> · Messe Düsseldorf Moscow</div>'
       '<h1>Новый год в собственном офисе</h1>'
       '<p class="lead">Компания решила встретить Новый год не в ресторане, '
       'а у себя: в тех же комнатах, где сотрудники работают каждый день. '

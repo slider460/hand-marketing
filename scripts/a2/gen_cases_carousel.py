@@ -49,20 +49,40 @@ FB={
 OVERRIDE={
  '/digital/becar/invest':('Becar','Сайт Becar Invest','Digital'),
  '/digital/becar/smile':('Becar','Посадочная страница продукта «ТРЦ Смайл»','Digital'),
- '/digital/becar/vertical':('Becar','Посадочная страница «Бутик-отель Вертикаль»','Digital'),
  '/becar_stancia':('Becar','Посадочная страница «БЦ Станция»','Digital'),
  '/bacar_vertical_all':('Becar','Посадочная страница «Сеть отелей Vertical»','Digital'),
- '/eaton_online':('Eaton','Online-трансляция стенда на IT-ОСЬ 2020','Digital'),
- '/mmg':('MMG Павелецкая Плаза','Рекламный фильм торгового центра','Video production')}
+ '/mmg':('MMG Павелецкая Плаза','Рекламный фильм торгового центра','Video production'),
+ '/video/rgd/history':('ЦМ РЖД','Фильм к десятилетию дирекции, 3:54','Video production'),
+ '/eaton_online':('Eaton','Семь часов эфира на IT-ОСЬ 2020 из офиса','Event'),
+ '/video/patriot':('УАЗ и Eaton','Рекламный ролик УАЗ Патриот, 60 секунд','Video production'),
+ '/video/gaz':('ГАЗ и Eaton','Вирусный ролик «Газель-трансформер», 1:42','Video production'),
+ '/event/salaris':('МФК «Саларис»','Презентация для арендаторов, 200 гостей','Event'),
+ '/video/salaris':('МФК «Саларис»','Два ролика: объект и аудитория','Video production'),
+ '/event/riviera':('ТРЦ «Ривьера»','«Внутри стихии»: вечер для арендаторов на стройке','Event'),
+ '/event/mozaika':('ТЦ «Мозаика»','«Пора выходить на свет»: 134 гостя зажгли знак','Event'),
+ '/event/samsung':('Samsung','Новогодний вечер 2020, зимний лес из проекций','Event'),
+ '/video/powertechnologies':('Power Technologies','ЧМ-2018: 11 городов, 12 стадионов','Video production'),
+ '/video/mozaika':('ТРЦ «Мозаика»','4:31 и тринадцать синхронов','Video production'),
+ '/event/messeduessleldorf':('Messe Düsseldorf','Новый год в собственном офисе','Event'),
+ '/video/interplastika':('Messe Düsseldorf','«интерпластика» за 2:12, 17 компаний в кадре','Video production'),
+ '/video/silkway':('Silk Way Rally','Маршрут 5 947,93 км рельефом по легенде','Video production'),
+ '/video/vivax':('VIVAX SPORT','Настасья Самбурская и три средства за 49 секунд','Video production'),
+ '/creative/becar/weampi':('Becar','We&I: 24 полосы про кондо-отель','Creative'),
+ '/creative/tunel':('AnVIT','Тоннель дезинфекции с циклом до 20 секунд','Creative'),
+ '/creative/skolkovo':('СКОЛКОВО','Доклад «Цифровое производство» на 86 полос','Creative'),
+ '/digital/becar/vertical':('Becar','Посадочная страница бутик-отеля Vertical','Digital'),
+ '/3d/stavropol':('Администрация Ставрополя','27 проекторов, более 25 000 зрителей','3D mapping')}
 COL={'event':'#C12164','exhibition':'#673A7E','creative':'#C12164','video':'#CF6F19','digital':'#5E9A2E','3d':'#7E3FA0','btl':'#D6357E','print':'#E08A2B'}
 def cat_key(cat):
     c=cat.lower()
     for k in COL:
         if k in c: return k
     return ''
+# описания, у которых заголовок остаётся из каталога (текстовый аудит 13.09.2026)
+DESCR_OVERRIDE={'/event/marieclaire': 'Кросс-мероприятия в ТЦ Москвы, 2011–2013', '/creative/samara': '28 полос и маскот в 16 образах'}
 def card(url,title,descr,cat,img):
     k=cat_key(cat); color=COL.get(k,'#14171C')
-    return f'''<a class="mcase" href="{H.escape(url)}"><div class="mcase__img"><img src="{H.escape(img)}" alt="" loading="lazy"><span class="mcase__cat" style="--c:{color}">{H.escape(cat)}</span></div><div class="mcase__b"><div class="mcase__t">{H.escape(title)}</div><div class="mcase__d">{H.escape(descr)}</div></div></a>'''
+    return f'''<a class="mcase" href="{H.escape(url)}"><div class="mcase__img"><img src="{H.escape(img)}" alt="" loading="lazy"><span class="mcase__cat" style="--c:{color}">{H.escape(cat)}</span></div><div class="mcase__b"><div class="mcase__t">{H.escape(H.unescape(title))}</div><div class="mcase__d">{H.escape(H.unescape(descr))}</div></div></a>'''
 allcards=[]; bycat={}; CARD={}
 for p in order:
     url=p.get('url') or ''
@@ -71,6 +91,7 @@ for p in order:
     info=data.get(url,{}); title=info.get('title') or ''; descr=info.get('descr') or ''; cat=info.get('cat') or ''
     if url in FB and not title: title,descr,cat=FB[url]
     if url in OVERRIDE: title,descr,cat=OVERRIDE[url]
+    if url in DESCR_OVERRIDE: descr=DESCR_OVERRIDE[url]
     if not img: img=info.get('img','')
     if not title and not img: continue
     c=card(url,title,descr,cat,img); allcards.append(c)

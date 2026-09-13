@@ -415,7 +415,7 @@ HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="«Ком подарков» — BTL-кампания для ТРЦ «Саларис» | кейс Hand Marketing">
+<meta property="og:title" content="«Ком подарков»: BTL-кампания для ТРЦ «Саларис» | кейс Hand Marketing">
 <meta property="og:description" content="Командная механика вместо личных баллов: семья копит подарки вместе. Механика, digital, оформление центра, промо-персонал и финальное шоу с розыгрышем кроссовера.">
 <meta property="og:url" content="{URL}">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/step-site.jpg">

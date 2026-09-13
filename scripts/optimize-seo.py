@@ -32,7 +32,7 @@ for f in pages:
     if 'name="description"' not in s:
         m=re.search(r'property="og:description" content="([^"]*)"',s) or re.search(r'<title>([^<]*)</title>',s)
         d=html.unescape(m.group(1)).strip() if m else 'Hand Marketing — рекламное агентство полного цикла.'
-        if len(d)<30: d+=' — Hand Marketing, рекламное агентство полного цикла.'
+        if len(d)<30: d+='. Рекламное агентство полного цикла Hand Marketing.'
         s=s.replace('</head>','<meta name="description" content="%s">\n</head>'%html.escape(d,quote=True),1); stats['desc']+=1
     # JSON-LD Organization
     if 'application/ld+json' not in s:

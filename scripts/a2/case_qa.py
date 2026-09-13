@@ -118,7 +118,14 @@ def main():
                     break
                 time.sleep(0.1)
         base = f'http://127.0.0.1:{PORT}'
-    url = f'{base}/{path}/' if path else base + '/'
+    # если рядом лежит index-a2.html, на прод уезжает он (deploy.yml переименовывает
+    # его в index.html), а локальный сервер по адресу каталога отдал бы мёртвый index.html
+    a2 = os.path.isfile(os.path.join(MIRROR, path, 'index-a2.html'))
+    if a2:
+        url = f'{base}/{path}/index-a2.html' if path else base + '/index-a2.html'
+        print('  проверяется index-a2.html (продовая версия)')
+    else:
+        url = f'{base}/{path}/' if path else base + '/'
 
     problems, warns = [], []
     try:

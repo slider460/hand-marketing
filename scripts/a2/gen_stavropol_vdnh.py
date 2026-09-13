@@ -479,7 +479,7 @@ def hero():
 <a class="sv-back" href="/project/">← Все проекты</a>
 <div class="sv-hero__grid">
  <div>
-  <div class="sv__eyebrow">Выставка «Россия», ВДНХ, павильон №75</div>
+  <div class="sv__eyebrow"><a href="/exhibition" style="color:inherit;text-decoration:none">Выставка «Россия», ВДНХ</a>, павильон №75</div>
   <h1>Стенд Ставропольского края, <em>собранный вокруг одной точки</em></h1>
   <p class="sv__lead sv-hero__lead">248 дней экспозиции края в главном павильоне регионов.
   Мы отвечали за мультимедийную часть: LED-короб с изображением, рассчитанным под конкретное

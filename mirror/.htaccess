@@ -11,6 +11,10 @@ DirectoryIndex index.html
   RewriteRule ^\.well-known/acme-challenge/ - [L]
   RewriteCond %{HTTP_HOST} ^www\.hand-marketing\.ru$ [NC]
   RewriteRule ^(.*)$ https://hand-marketing.ru/$1 [R=301,L]
+  # weshowstudia.ru отдавал полную копию сайта (13.09.2026 владелец решил: домен не нужен).
+  # 301 на тот же путь боевого домена, чтобы вес и индекс не делились между дублями.
+  RewriteCond %{HTTP_HOST} ^(www\.)?weshowstudia\.ru$ [NC]
+  RewriteRule ^(.*)$ https://hand-marketing.ru/$1 [R=301,L]
 </IfModule>
 
 # Красивые URL: /project -> /project/index.html (отдаётся каталогом автоматически)

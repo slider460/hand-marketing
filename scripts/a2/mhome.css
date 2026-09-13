@@ -35,8 +35,8 @@
 
   /* HERO */
   .mh-hero{padding:30px 20px 36px}
-  .mh-eyebrow{margin:0 0 14px;font-family:'Montserrat';font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--purple)}
-  .mh-h1{font-weight:800;font-size:clamp(46px,15vw,64px);line-height:.96}
+  .mhome .mh-eyebrow{margin:0 0 14px;font-family:'Montserrat';font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--purple)}
+  .mh-h1{font-family:'Montserrat',Arial,sans-serif;letter-spacing:-.02em;margin:0;color:var(--ink);font-weight:800;font-size:clamp(46px,15vw,64px);line-height:.96}
   .mh-lead{margin:16px 0 22px;font-size:18px;color:#454C54;max-width:24ch}
   .mh-lead b{color:var(--ink)}
   .mh-chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}

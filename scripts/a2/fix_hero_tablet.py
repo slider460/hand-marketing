@@ -113,7 +113,7 @@ def build_pic(extra_class=''):
         '<span class="hm-heropic__ov">'
         '<span class="hm-heropic__eye">Выставка-форум «Россия» · ВДНХ</span>'
         '<span class="hm-heropic__t">Стенд Самарской области</span>'
-        '<span class="hm-heropic__m"><i>ноябрь 2023 — июль 2024</i><i>18+ млн посетителей</i></span>'
+        '<span class="hm-heropic__m"><i>ноябрь 2023 – июль 2024</i><i>16 млн посетителей стенда</i></span>'
         '</span></a>'
     )
 
@@ -127,9 +127,9 @@ def build_block():
         f'\n{CSS}\n'
         '<section class="hm-hero-t"><div class="hm-hero-t__in">'
         '<div class="hm-hero-t__txt">'
-        '<p class="hm-hero-t__eye">Рекламное агентство полного цикла · с 2012</p>'
-        '<h1 class="hm-hero-t__h1">Hand<br>Marketing</h1>'
-        '<p class="hm-hero-t__lead">Делаем маркетинг, <b>который видно</b> — от идеи до реализации.</p>'
+        '<h1 class="hm-hero-t__eye">Рекламное агентство полного цикла · с 2012</h1>'
+        '<p class="hm-hero-t__h1">Hand<br>Marketing</p>'
+        '<p class="hm-hero-t__lead"><b>Стенд Самарской области</b> на ВДНХ, фильм для ЦМ РЖД, 3D mapping в Ставрополе.</p>'
         f'<div class="hm-hero-t__chips">{chips}</div>'
         '<a class="hm-hero-t__reel" href="#" data-vpfacade data-video="/media/hm-showreel.mp4"'
         ' data-title="Шоурил Hand Marketing">Смотреть шоурил</a>'

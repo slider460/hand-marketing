@@ -581,7 +581,7 @@ def hero():
 <div class="mc-hero__in"><div class="mc__wrap">
 <a class="mc-back" href="/project/">← Проекты</a>
 <h1>Marie Claire выходит <em>из&nbsp;киоска</em> в&nbsp;галерею</h1>
-<p class="mc-hero__lead">Серия кросс-мероприятий журнала в торговых центрах Москвы: застройка галерей,
+<p class="mc-hero__lead">Серия <a href="/event" style="color:inherit;text-decoration:none">кросс-мероприятий</a> журнала в торговых центрах Москвы: застройка галерей,
 семплинг и кросс-промо с косметическими и модными брендами, финальный вечер для покупателей.</p>
 <dl class="mc-hero__facts">{facts}</dl>
 </div></div></section>'''
@@ -899,7 +899,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Кросс-мероприятия Marie Claire в ТЦ Москвы | кейс Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: серия мероприятий журнала Marie Claire в торговых центрах Москвы — ГУМ, Европейский, Атриум, Метрополис. Застройка галерей, POSm для брендов-партнёров, семплинг и кросс-промо с подарком за покупку, премия «Приз великолепия» три года подряд и финальный вечер с показом мод и шоу-программой.">
+<meta name="description" content="Серия мероприятий Marie Claire в торговых центрах Москвы: ГУМ, Европейский, Атриум, Метрополис. Застройка, семплинг, кросс-промо и финальный вечер с показом мод.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">
