@@ -6,6 +6,8 @@
 фиолетовая форма + тёмный футер из react-chrome.py.
 build_v1 её пропускает по маркеру <!--custom-page-->. Деплой CI не трогает (нет index-a2.html)."""
 import os, importlib.util, html as H
+import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+import commerce_block as cb  # цена «от», отзывы, Service/Breadcrumb (14.09.2026)
 
 HERE=os.path.dirname(os.path.abspath(__file__))
 ROOT=os.path.abspath(os.path.join(HERE,'..','..','mirror'))
@@ -361,7 +363,7 @@ FAQ = [
     ('Можно ли заказать только мультимедиа и контент для готового стенда?',
      'Да. Интерактивные инсталляции, видеомаппинг, контент для LED-экранов и тач-панелей мы делаем и как отдельную услугу, в том числе для стендов, которые строит другой подрядчик.'),
     ('Сколько стоит выставочный стенд под ключ?',
-     'Бюджет зависит от площади, конструктива и объёма мультимедиа. Оставьте заявку в форме внизу страницы, и мы перезвоним с расчётом.'),
+     'Выставочный стенд под ключ стоит от 500 000 ₽, мультимедийная зона от 150 000 ₽. Итог зависит от площади, конструктива и объёма мультимедиа. Оставьте заявку в форме внизу страницы, и мы перезвоним с расчётом.'),
 ]
 
 def faq_html():
@@ -705,7 +707,7 @@ def build():
     case_sec=(f'<div class="ex-cases-wrap" id="ex-cases"><section class="ex-sec">'
           f'<div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Кейсы</h2><a class="ex-all ex-rev" href="/project">Все проекты →</a></div>'
           f'<div class="ex-cases">{cases()}</div></section></div>')
-    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{case_sec}{CASE_CSS}{case_narr()}{faq_html()}</main>'
+    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{case_sec}<section class="ex-sec" id="ex-price"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Стоимость и отзывы</h2></div>{cb.render("exhibition")}</section>{CASE_CSS}{case_narr()}{faq_html()}</main>'
           f'<a id="lead"></a>{rc.footer()}{rc.JS}{VP_MODAL}{REVEAL_JS}</body></html>')
     return HEAD+body
 
