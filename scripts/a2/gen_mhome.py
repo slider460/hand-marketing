@@ -33,7 +33,8 @@ cards=m.group(1) if m else ''
 svc=''.join(f'<a class="mh-chip" href="{u}" style="--c:{c}">{H.escape(n)}</a>' for n,u,c in SERVICES)
 ab=''.join(f'<article class="mh-val" style="--c:{c}"><span class="mh-val__ghost" aria-hidden="true">{H.escape(g)}</span><span class="mh-val__eyebrow">{H.escape(e)}</span><h3 class="mh-val__t">{H.escape(t)}</h3><p class="mh-val__d">{H.escape(d)}</p></article>' for c,e,g,t,d in ABOUT)
 team=''.join(f'<div class="mh-mate"><img src="{P}{ph}" alt="{H.escape(n)}" loading="lazy"></div>' for n,ph in TEAM)
-logos=''.join(f'<div class="mh-logo"><img src="{l}" alt="" loading="lazy"></div>' for l in LOGOS)
+from add_home_alts import LOGOS as LOGO_ALT  # alt логотипов, сверены по картинкам
+logos=''.join(f'<div class="mh-logo"><img src="{l}" alt="{LOGO_ALT.get(l.split("/")[-1], "")}" loading="lazy"></div>' for l in LOGOS)
 
 mh=f'''<div class="mhome" id="mhome">
 <header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="{P}as3365-6332-4339-a263-313566616365/152.png" alt="" width="36" height="36"><b>HAND MARKETING</b></a>

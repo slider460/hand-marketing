@@ -58,9 +58,15 @@ CSS = """<style>/*hm-home-tablet*/
 </style>"""
 
 
+def _alt(href):
+    import html as _h
+    from add_home_alts import case_alts
+    return _h.escape(case_alts().get(href.rstrip('/'), 'Проект Hand Marketing'))
+
+
 def build_block(cases):
     cards = ''.join(
-        f'<a class="hm-cases-t__c" href="{href}"><img src="{cov}" alt="Проект Hand Marketing" loading="lazy"></a>'
+        f'<a class="hm-cases-t__c" href="{href}"><img src="{cov}" alt="{_alt(href)}" loading="lazy"></a>'
         for cov, href in cases
     )
     return (f'\n{CSS}\n<section class="hm-cases-t"><div class="hm-cases-t__grid">{cards}</div>'
