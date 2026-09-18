@@ -83,7 +83,7 @@ PAGE_CSS="""<style id="ex-css">
 .ex-step__n{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#673A7E;color:#fff;font-weight:800;font-size:15px;margin-bottom:18px;box-shadow:0 0 0 6px #fff}
 .ex-step__n::before{content:"0" counter(exstep)}
 .ex-step h3{margin:0 0 8px;font-size:17px;font-weight:700;line-height:1.3}
-.ex-step p{margin:0;font-size:14px;line-height:1.55;color:#5A616A}
+.ex-step p{margin:0;font-size:14px;line-height:1.55;color:#5A616A}.ex-step p a{color:#673A7E;font-weight:700;text-decoration:none}.ex-step p a:hover{text-decoration:underline}.ex-steps_3{grid-template-columns:repeat(3,1fr)}
 .ex-steps__note{margin:44px 0 0;text-align:center;font-size:16px;color:#5A616A}
 .ex-steps__note b{color:#14171C}
 /* кейсы: масштаб родного стора (~295px), фото без апскейла */
@@ -360,6 +360,9 @@ FAQ = [
      'Зависит от площади и состава работ. Первые эскизы и зонирование обычно готовы за одну-две недели, полный дизайн-проект с рендерами и видео занимает от двух недель. Точный график зафиксируем после брифа.'),
     ('Вы делаете только дизайн или строите стенд под ключ?',
      'Берём весь проект: концепцию, дизайн-проект, производство конструкций, мультимедийное наполнение (экраны, интерактив, контент), монтаж и сопровождение на площадке в любом городе России.'),
+    ('Можно ли арендовать готовый стенд, а не строить свой?',
+     'Да, для типовых задач берём аренду готовых конструкций: это быстрее и дешевле '
+     'индивидуальной застройки. Наполнение, графику и мультимедиа при этом делаем так же.'),
     ('Можно ли заказать только мультимедиа и контент для готового стенда?',
      'Да. Интерактивные инсталляции, видеомаппинг, контент для LED-экранов и тач-панелей мы делаем и как отдельную услугу, в том числе для стендов, которые строит другой подрядчик.'),
     ('Сколько стоит выставочный стенд под ключ?',
@@ -663,11 +666,11 @@ setTimeout(function(){els.forEach(function(n){if(!n.classList.contains('is-in'))
 
 HEAD=f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Застройка выставочных стендов под ключ | Hand Marketing</title>
+<title>Застройка выставочных стендов под ключ в Москве | Hand Marketing</title>
 <meta name="description" content="Застройка выставочных стендов под ключ: дизайн и 3D-визуализация, изготовление, мультимедийные стенды, монтаж в любом городе России. Кейсы: ВДНХ, Самара, Ставрополь.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/exhibition/">
-<meta property="og:type" content="website"><meta property="og:title" content="Застройка выставочных стендов под ключ | Hand Marketing">
+<meta property="og:type" content="website"><meta property="og:title" content="Застройка выставочных стендов под ключ в Москве | Hand Marketing">
 <meta property="og:description" content="Выставочные стенды под ключ: дизайн, изготовление, интерактив и мультимедиа, монтаж по всей России.">
 <meta property="og:url" content="https://hand-marketing.ru/exhibition">
 <meta property="og:image" content="https://hand-marketing.ru/images/lib/custom-samara-vdnh/cover-main.png">
@@ -696,7 +699,7 @@ def build():
           # SEO: русский запрос — в <h1>, английское слово — крупный видимый акцент (вид не меняется)
           f'<div class="ex-hero__t">Exhibition<br>Build</div>'
           f'<h1 class="ex-hero__sub">Застройка выставочных стендов под&nbsp;ключ</h1>'
-          f'<p class="ex-hero__lead">Проектируем и строим выставочные стенды: делаем дизайн и 3D-визуализацию, производим конструкции, ставим мультимедиа и монтируем на площадке в любом городе России. Стенд Самарской области, который мы сделали для выставки «Россия» на ВДНХ, открылся в первый день и отработал 248 дней без выходных.</p>'
+          f'<p class="ex-hero__lead">Проектируем и строим стенды для выставок и форумов: делаем дизайн и 3D-визуализацию, производим конструкции, ставим мультимедиа и монтируем на площадке в любом городе России. Стенд Самарской области, который мы сделали для выставки «Россия» на ВДНХ, открылся в первый день и отработал 248 дней без выходных.</p>'
           f'<div class="ex-hero__act"><a class="ex-cta" href="#lead">Обсудить проект</a>'
           f'<a class="ex-cta ex-cta_ghost" href="#ex-cases">Смотреть кейсы</a></div></div>'
           f'<div>{DRAFT_SVG}</div>'
@@ -704,10 +707,27 @@ def build():
     steps_sec=(f'<section class="ex-sec"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Как мы строим стенд</h2></div>'
           f'<div class="ex-steps">{steps()}</div>'
           f'<p class="ex-steps__note ex-rev">Все пять этапов ведёт <b>один подрядчик</b>.</p></section>')
+    bundle=(
+        '<section class="ex-sec" id="ex-bundle"><div class="ex-sec__head">'
+        '<h2 class="ex-sec__h ex-rev">Стенд, контент и ролики делает одна команда</h2></div>'
+        '<div class="ex-steps ex-steps_3">'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Конструктив и застройка</h3><p>Дизайн-проект, производство на своей и партнёрской '
+        'базе, аренда готовых конструкций для типовых задач, монтаж на площадке.</p></div>'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Мультимедиа и интерактив</h3><p>Экраны, проекции, сенсорные панели и интерактивные '
+        'зоны проектируем вместе с конструктивом, а не поверх готового стенда. '
+        '<a href="/content/">Мультимедийный контент</a>.</p></div>'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Контент и ролики</h3><p>Графику и видео снимаем и рисуем сами, сразу под размеры '
+        'и поверхности вашего стенда. <a href="/videoproduction/">Видеопродакшн</a>.</p></div>'
+        '</div>'
+        '<p class="ex-steps__note ex-rev">Поэтому на площадке не спорят между собой три подрядчика: '
+        'сроки, макеты и форматы сходятся внутри одной команды.</p></section>')
     case_sec=(f'<div class="ex-cases-wrap" id="ex-cases"><section class="ex-sec">'
           f'<div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Кейсы</h2><a class="ex-all ex-rev" href="/project">Все проекты →</a></div>'
           f'<div class="ex-cases">{cases()}</div></section></div>')
-    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{case_sec}<section class="ex-sec" id="ex-price"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Стоимость и отзывы</h2></div>{cb.render("exhibition")}</section>{CASE_CSS}{case_narr()}{faq_html()}</main>'
+    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{bundle}{case_sec}<section class="ex-sec" id="ex-price"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Стоимость и отзывы</h2></div>{cb.render("exhibition")}</section>{CASE_CSS}{case_narr()}{faq_html()}</main>'
           f'<a id="lead"></a>{rc.footer()}{rc.JS}{VP_MODAL}{REVEAL_JS}</body></html>')
     return HEAD+body
 
