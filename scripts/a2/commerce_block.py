@@ -54,6 +54,15 @@ PAGES = {
         facts=['Цена зависит от хронометража, разрешения поверхностей и сложности графики.',
                'Смету считаем бесплатно после брифа.'],
         reviews=[]),
+    'ny': dict(
+        path='/event/novogodniy-korporativ/', crumb='Новогодний корпоратив', accent='#C12164',
+        parent=('Организация мероприятий', '/event/'),
+        service='Организация новогоднего корпоратива под ключ',
+        prices=[('Новогодний корпоратив под ключ', 500000), ('Мультимедийная зона на вечере', 150000)],
+        facts=['Цена зависит от числа гостей, площадки, программы и техники.',
+               'Концепцию с предварительной сметой готовим бесплатно после брифа.',
+               'Лучше начинать в октябре: залы на вторую половину декабря разбирают первыми.'],
+        reviews=['messe']),
 }
 
 CSS = """<style id="hm-cost-css">
@@ -106,7 +115,8 @@ def jsonld(key):
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
         'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': SITE + '/'},
-            {'@type': 'ListItem', 'position': 2, 'name': 'Услуги', 'item': SITE + '/service/'},
+            {'@type': 'ListItem', 'position': 2, 'name': p.get('parent', ('Услуги', '/service/'))[0],
+             'item': SITE + p.get('parent', ('Услуги', '/service/'))[1]},
             {'@type': 'ListItem', 'position': 3, 'name': p['crumb'], 'item': SITE + p['path']},
         ]}
     dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))

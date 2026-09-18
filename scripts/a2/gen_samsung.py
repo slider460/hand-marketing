@@ -1422,6 +1422,7 @@ def result():
       '<div class="sm-r"><span class="sm-kick">Результат</span>'
       '<h2>Что получил клиент</h2>'
       '<p class="sm-res__more">Больше о направлениях: '
+      '<a href="/event/novogodniy-korporativ/">организация новогоднего корпоратива</a>, '
       '<a href="/event">организация мероприятий</a>, '
       '<a href="/3dmapping">3D mapping и проекционное шоу</a>.</p></div>'
       f'<ul class="sm-res__list sm-r">{lis}</ul>'
