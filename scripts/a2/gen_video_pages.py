@@ -382,7 +382,7 @@ def hero(p):
         '<section class="vpg-hero">'
         f'<img class="vpg-hero__img" src="{p["hero"]}" alt="{esc(p["hero_alt"])}" '
         'fetchpriority="high" decoding="async">'
-        f'<video class="vpg-hero__v" autoplay muted loop playsinline preload="metadata" '
+        f'<video class="vpg-hero__v" autoplay muted loop playsinline preload="auto" '
         f'aria-hidden="true"><source src="{p["loop"]}" type="video/mp4"></video>'
         '<span class="vpg-hero__sh" aria-hidden="true"></span>'
         '<div class="vpg-hero__in">'
@@ -474,12 +474,27 @@ def faq(p):
 
 HERO_JS = """<script>(function(){
 var v=document.querySelector('.vpg-hero__v');if(!v)return;
-function on(){v.classList.add('is-on')}
-if(v.readyState>2){on()}else{v.addEventListener('loadeddata',on)}
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function show(){v.classList.add('is-on')}
+function hide(){v.classList.remove('is-on')}
+// Слой с видео показываем ТОЛЬКО когда воспроизведение реально началось. Safari
+// в режиме энергосбережения и при выключенном автозапуске рисует поверх
+// остановленного видео свою кнопку Play, и вместо героя посетитель видит
+// мёртвый плеер. Если запуск не удался, остаётся постер под видео.
+function play(){
+ if(reduce){hide();v.pause();v.removeAttribute('autoplay');return}
+ var p=v.play();
+ if(p&&p.then){p.then(show).catch(hide)}else{v.paused?hide():show()}
+}
+v.muted=true;
+if(v.readyState>2){play()}else{v.addEventListener('loadeddata',play)}
+// вторая попытка после первого действия посетителя: к этому моменту запрет снят
+['pointerdown','touchstart','scroll','keydown'].forEach(function(ev){
+ window.addEventListener(ev,function once(){play();window.removeEventListener(ev,once)},
+  {passive:true})});
 if('IntersectionObserver' in window){
- new IntersectionObserver(function(e){e[0].isIntersecting?v.play().catch(function(){}):v.pause()},
+ new IntersectionObserver(function(e){e[0].isIntersecting?play():v.pause()},
   {threshold:.05}).observe(v)}
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause();v.removeAttribute('autoplay')}
 })();</script>"""
 
 
