@@ -19,6 +19,22 @@ MOB_ANCHOR = '<section class="mh-form'
 WRAP_CSS = ('<style id="hm-seo-mob-css">.hm-seo-mob{display:none}'
             '@media (max-width:640px){.hm-seo-mob{display:block}}</style>')
 
+def strip_mob(h):
+    """Вырезает мобильную копию секции. По регулярке с .*?</div> нельзя: внутри
+    секции свои </div>, остаётся хвост. Ищем конец по </section></div>."""
+    n = 0
+    while True:
+        i = h.find('<style id="hm-seo-mob-css">')
+        if i < 0:
+            break
+        j = h.find('</section></div>', i)
+        if j < 0:
+            break
+        h = h[:i] + h[j + len('</section></div>'):]
+        n += 1
+    return h, n
+
+
 def extract_section(h):
     m = re.search(r'<section class="(?:ev|sv)-seo".*?</section>', h, flags=re.S)
     if not m:
@@ -36,9 +52,8 @@ for slug in PAGES:
             continue
         with open(path, encoding='utf-8') as f:
             h = f.read()
-        if 'hm-seo-mob' in h:
-            print(f'/{slug}/{name}: уже пропатчен')
-            continue
+        # старую копию вырезаем: секция могла быть пересобрана, копия отстанет
+        h, refreshed = strip_mob(h)
         if MOB_ANCHOR not in h:
             print(f'/{slug}/{name}: мобильной формы нет — пропуск')
             continue
@@ -51,5 +66,5 @@ for slug in PAGES:
         with open(path, 'w', encoding='utf-8') as f:
             f.write(h)
         total += 1
-        print(f'/{slug}/{name}: мобильная копия вставлена перед mh-form')
+        print(f'/{slug}/{name}: мобильная копия {"обновлена" if refreshed else "вставлена"}')
 print('Готово, файлов:', total)
