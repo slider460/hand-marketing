@@ -1709,7 +1709,7 @@ BREADCRUMB_LD = (
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Новый год Samsung 2020: панорамные проекции, сетка с автосбросом и digital-ящик Деда Мороза | Hand Marketing</title>
+<title>Новый год Samsung 2020: панорамное шоу в зале | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: новогодний корпоратив Samsung. Панорамные проекционные декорации зимнего леса, проекционные сетки с автоматическим сбросом над сценой и digital-почтовый ящик Деда Мороза с датчиком и УКФ-проектором. Контент, оборудование, монтаж и полное техническое сопровождение вечера.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

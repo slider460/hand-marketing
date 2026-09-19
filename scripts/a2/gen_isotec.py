@@ -629,7 +629,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Бренд-ролик «Изотек» (ISOTEC, Saint-Gobain): кейс видеопродакшна | Hand Marketing</title>
+<title>Бренд-ролик «Изотек» для Saint-Gobain | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: имиджевый бренд-ролик компании «Изотек» (ISOTEC, группа Saint-Gobain). Хронология бренда 2012-2024 прямо в плеере, шесть производственных площадок, съёмка в действующих цехах, цифровые сервисы и итоговые цифры компании.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

@@ -581,7 +581,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Имиджевый ролик Power Technologies: энергоснабжение ЧМ-2018 | Hand Marketing</title>
+<title>Имиджевый ролик Power Technologies: ЧМ-2018 | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: фильм «История успеха» Power Technologies о временном энергоснабжении объектов чемпионата мира по футболу 2018. Одиннадцать городов и двенадцать стадионов, 150 дизель-генераторов, 960 км кабелей, съёмка мобильными группами прямо во время чемпионата.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

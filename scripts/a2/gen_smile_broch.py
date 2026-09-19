@@ -738,7 +738,7 @@ PAGE_CSS = """<style id="sb-css">
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Брошюра ТЦ «Смайл» для Becar: 22 полосы про инвестиции в торговую недвижимость | Hand Marketing</title>
+<title>Брошюра ТЦ «Смайл» для Becar: 22 полосы | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: печатная брошюра действующего торгового центра «Смайл» в Санкт-Петербурге для Becar Asset Management. 22 полосы, 10 разворотов, квадрат 210×210 мм. Концепция, копирайтинг, инфографика, вёрстка и препресс: издание объясняет частному инвестору формат кондо-ТЦ и доходность лота до 13% годовых.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

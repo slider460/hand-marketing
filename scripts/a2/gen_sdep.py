@@ -480,7 +480,7 @@ html.no-js .sd-r{opacity:1!important;transform:none!important}
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Фирменный стиль отдела продаж Becar: логотип SALESDEP, паттерн и гайдлайн | Hand Marketing</title>
+<title>Фирменный стиль SALESDEP для Becar | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: айдентика SALESDEP для отдела продаж Becar Asset Management. Логотип из двух блоков, паттерн из повторяющегося слова, палитра из 9 цветов и гайдлайн на 29 полос с готовыми макетами: презентации, соцсети, стикеры, деловые материалы, выставки, сувенирка.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

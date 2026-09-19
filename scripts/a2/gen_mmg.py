@@ -969,7 +969,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Рекламный фильм ТРЦ «Павелецкая Плаза» (MMG): кейс видеопродакшна | Hand Marketing</title>
+<title>Рекламный фильм ТРЦ «Павелецкая Плаза» | Hand Marketing</title>
 <meta name="description" content="Рекламный ролик ТРЦ «Павелецкая Плаза» для Mall Management Group: трафик площади, зоны охвата, tenant mix, интервью архитектора и арендаторов.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

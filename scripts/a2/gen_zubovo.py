@@ -745,7 +745,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Презентационный фильм технопарка «Зубово» под Уфой: кейс видеопродакшна | Hand Marketing</title>
+<title>Презентационный фильм технопарка «Зубово» | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: презентационный фильм индустриальной площадки «Зубово» (Уфа, Башкортостан). Аэросъёмка территории, инфографика мощностей, баланс участков и синхроны с руководителями площадки. Весь фильм разложен по главам прямо на странице.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

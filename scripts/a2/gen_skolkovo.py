@@ -515,7 +515,7 @@ PAGE_CSS = """<style id="sk-css">
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Доклад «Цифровое производство» для СКОЛКОВО: дизайн и вёрстка 86 полос | Hand Marketing</title>
+<title>Доклад «Цифровое производство» для СКОЛКОВО | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: рабочий доклад Департамента корпоративного обучения Московской школы управления СКОЛКОВО «Цифровое производство. Методы, экосистемы, технологии». 86 полос, шесть глав, переработанная инфографика: 15 ключевых компонентов производства, модель зрелости ODM3, цикл Гартнера и Фабрики Будущего.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">

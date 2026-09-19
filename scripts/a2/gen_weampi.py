@@ -429,7 +429,7 @@ html.no-js .wi-r{opacity:1!important;transform:none!important}
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Брошюра We&amp;I by Vertical Hotel для Becar: 24 полосы про кондо-отель | Hand Marketing</title>
+<title>Брошюра We&amp;I by Vertical для Becar: 24 полосы | Hand Marketing</title>
 <meta name="description" content="Кейс Hand Marketing: печатная брошюра кондо-отеля We&amp;I by Vertical Hotel для Becar Asset Management. 24 полосы, 11 разворотов, квадрат 210×210 мм, полноцвет 4+4. Копирайтинг, вёрстка и препресс: буклет объясняет инвестору формат кондо-отеля и показывает отель изнутри.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
