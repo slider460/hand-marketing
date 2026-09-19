@@ -17,7 +17,7 @@ FORM='''<section class="mh-form" id="mh-form"><h2>Давайте сделаем 
 <form class="mh-f" onsubmit="return false"><input type="text" name="name" placeholder="Как вас зовут" autocomplete="name"><input type="tel" name="phone" placeholder="+7 ___ ___ __ __" autocomplete="tel" inputmode="tel"><button type="submit">Отправить заявку</button><span class="mh-f__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</span></form></section>'''
 
 SERVICES=[("Event","/event","#673A7E","Мероприятия под ключ: концепция, площадка, продакшн, режиссура"),
- ("Creative & Design","/creativedesign","#C12164","Брендинг, дизайн, креативные концепции и POSm"),
+ ("Creative & Design","/creativedesign","#C12164","Брендинг, дизайн, креативные концепции и POS-материалы"),
  ("Video Production","/videoproduction","#CF6F19","Имиджевые и рекламные ролики, съёмка и пост-продакшн"),
  ("Digital","/digital","#5E9A2E","Сайты, лендинги и digital-продвижение"),
  ("3D Mapping","/3dmapping","#7E3FA0","Мультимедийные 3D-mapping шоу любого масштаба"),

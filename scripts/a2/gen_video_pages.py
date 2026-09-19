@@ -129,7 +129,7 @@ PAGES = {
     'film': dict(
         out=('videoproduction', 'korporativnyy-film'),
         key='film', kicker='Video Production · Фильм о компании',
-        title='Корпоративный фильм о компании: съёмка под ключ | Hand Marketing',
+        title='Корпоративный фильм о компании: съёмка в Москве | Hand Marketing',
         descr=('Корпоративный фильм о компании под ключ: сценарий, съёмка своими операторами, '
                'графика и монтаж. Фильмы для РЖД, Saint-Gobain, Power Technologies. От 150 000 ₽.'),
         h1='Корпоративный фильм о компании',

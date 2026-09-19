@@ -21,7 +21,7 @@ CARD = ('<a class="mh-scard" href="/photo" style="--c:#3B729D">'
         '<span class="mh-scard__ghost" aria-hidden="true">P</span>'
         '<span class="mh-scard__tag">Услуга</span>'
         '<h3 class="mh-scard__t">Photo Production</h3>'
-        '<p class="mh-scard__d">Предметная съёмка товаров и оборудования '
+        '<p class="mh-scard__d">Предметная съёмка товаров и оборудования в Москве '
         'для каталогов</p>'
         '<span class="mh-scard__go" aria-hidden="true"></span></a>')
 

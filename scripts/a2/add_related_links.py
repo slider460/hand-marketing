@@ -128,16 +128,20 @@ def strip_old(s):
 
 
 def main():
+    # /samara_vdnh это неканоническая копия /portfolio/samara-stand-vdnh: обложки
+    # в каталоге у неё нет, а cover из cases.json ведёт на /assets/** и отдаёт 404.
+    # В соседи такие страницы не берём, сами блок получают
+    shown = [c for c in CASES if c['route'].rstrip('/') in COVERS]
     by_cat = {}
-    for c in CASES:
+    for c in shown:
         by_cat.setdefault(c['category'], []).append(c)
 
     done = skipped = 0
     for c in CASES:
-        group = by_cat[c['category']]
+        group = by_cat.get(c['category'], [])
         if len(group) < 2:
             continue  # направление из одного кейса: соседей нет, блок был бы пустым
-        i = group.index(c)
+        i = group.index(c) if c in group else -1
         siblings = [group[(i + k) % len(group)] for k in range(1, min(7, len(group)))]
         path = os.path.join(MIRROR, c['route'].strip('/'), 'index.html')
         a2 = os.path.join(MIRROR, c['route'].strip('/'), 'index-a2.html')
