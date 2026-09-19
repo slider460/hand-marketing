@@ -710,4 +710,32 @@ document.addEventListener('click',function(e){
  if(!a)return;
  g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
 },true);
-})();</script></body></html>
+})();</script><style id="hm-hero-video-css">video.hm-video-idle{opacity:0!important;visibility:hidden!important}</style>
+<script id="hm-hero-video">(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var list=[].slice.call(document.querySelectorAll('video[autoplay]')).filter(function(v){
+ return !v.controls&&(v.muted||v.hasAttribute('muted'))});
+list.forEach(function(v){
+ var tries=0;
+ function show(){v.classList.remove('hm-video-idle')}
+ function hide(){v.classList.add('hm-video-idle')}
+ if(reduce){hide();v.removeAttribute('autoplay');try{v.pause()}catch(e){}return}
+ v.muted=true;
+ hide();
+ function attempt(){
+  if(v.readyState<3)return;
+  var p=v.play();
+  if(!p||!p.then){v.paused?hide():show();return}
+  p.then(show).catch(function(){hide();if(++tries<12)setTimeout(attempt,700)});
+ }
+ ['loadeddata','canplay','canplaythrough','progress'].forEach(function(e){v.addEventListener(e,attempt)});
+ attempt();
+ document.addEventListener('visibilitychange',function(){if(!document.hidden)attempt()});
+ ['pointerdown','touchstart','scroll','keydown'].forEach(function(e){
+  window.addEventListener(e,attempt,{passive:true})});
+ if('IntersectionObserver' in window){
+  new IntersectionObserver(function(en){en[0].isIntersecting?attempt():v.pause()},
+   {threshold:.05}).observe(v)}
+});
+})();</script>
+</body></html>

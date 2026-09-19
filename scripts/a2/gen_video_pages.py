@@ -474,26 +474,29 @@ def faq(p):
 
 HERO_JS = """<script>(function(){
 var v=document.querySelector('.vpg-hero__v');if(!v)return;
-var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function show(){v.classList.add('is-on')}
 function hide(){v.classList.remove('is-on')}
-// Слой с видео показываем ТОЛЬКО когда воспроизведение реально началось. Safari
-// в режиме энергосбережения и при выключенном автозапуске рисует поверх
-// остановленного видео свою кнопку Play, и вместо героя посетитель видит
-// мёртвый плеер. Если запуск не удался, остаётся постер под видео.
-function play(){
- if(reduce){hide();v.pause();v.removeAttribute('autoplay');return}
- var p=v.play();
- if(p&&p.then){p.then(show).catch(hide)}else{v.paused?hide():show()}
-}
+// Пока ролик не поехал, в герое остаётся постер. Слой с видео показываем только
+// после реального старта: Safari в энергосбережении рисует поверх остановленного
+// видео свою кнопку Play, и вместо героя получается мёртвый плеер.
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ hide();v.removeAttribute('autoplay');v.pause();return}
 v.muted=true;
-if(v.readyState>2){play()}else{v.addEventListener('loadeddata',play)}
-// вторая попытка после первого действия посетителя: к этому моменту запрет снят
-['pointerdown','touchstart','scroll','keydown'].forEach(function(ev){
- window.addEventListener(ev,function once(){play();window.removeEventListener(ev,once)},
-  {passive:true})});
+var tries=0;
+function attempt(){
+ if(v.readyState<3)return;                       // ещё грузится, ждём следующего события
+ var p=v.play();
+ if(!p||!p.then){v.paused?hide():show();return}
+ p.then(show).catch(function(){hide();if(++tries<12)setTimeout(attempt,700)});
+}
+['loadeddata','canplay','canplaythrough','progress'].forEach(function(e){
+ v.addEventListener(e,attempt)});
+attempt();
+document.addEventListener('visibilitychange',function(){if(!document.hidden)attempt()});
+['pointerdown','touchstart','scroll','keydown'].forEach(function(e){
+ window.addEventListener(e,attempt,{passive:true})});
 if('IntersectionObserver' in window){
- new IntersectionObserver(function(e){e[0].isIntersecting?play():v.pause()},
+ new IntersectionObserver(function(en){en[0].isIntersecting?attempt():v.pause()},
   {threshold:.05}).observe(v)}
 })();</script>"""
 
