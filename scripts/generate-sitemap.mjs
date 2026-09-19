@@ -2,7 +2,7 @@
 // Генерирует sitemap.xml из СТРУКТУРЫ ЗЕРКАЛА (mirror/**/index.html) —
 // список URL не ведётся руками и не может устареть: что задеплоено, то и в sitemap.
 // lastmod — из mtime страницы. Пишет mirror/sitemap.xml (боевой) и копию в public/.
-import { writeFileSync, statSync, globSync } from 'node:fs'
+import { writeFileSync, statSync, readFileSync, existsSync, globSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = new URL('..', import.meta.url).pathname
@@ -12,6 +12,17 @@ const pages = globSync(join(ROOT, 'mirror/**/index.html'))
   .filter((f) => !f.includes('/static/'))
   // /for/** — приватные клиентские страницы (доступ по коду), в sitemap не попадают
   .filter((f) => !f.includes('/mirror/for/'))
+  // страницы, чей canonical ведёт на другой адрес: дубль в карте противоречит canonical
+  // (случай /samara_vdnh/ -> /portfolio/samara-stand-vdnh/)
+  .filter((f) => {
+    const loc = f.replace(join(ROOT, 'mirror'), '').replace(/index\.html$/, '')
+    // на прод уезжает index-a2.html, если он есть: проверяем именно его
+    const a2 = f.replace(/index\.html$/, 'index-a2.html')
+    const src = existsSync(a2) ? a2 : f
+    const m = readFileSync(src, 'utf8').match(/<link rel="canonical" href="([^"]+)"/)
+    if (!m) return true
+    return m[1].replace(BASE, '').replace(/\/$/, '') === loc.replace(/\/$/, '')
+  })
   .map((f) => ({
     loc: f.replace(join(ROOT, 'mirror'), '').replace(/index\.html$/, ''),
     lastmod: statSync(f).mtime.toISOString().slice(0, 10),
