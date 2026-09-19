@@ -44,7 +44,7 @@ spec.loader.exec_module(rc)
 SG = json.load(open(os.path.join(HERE, 'sgphoto_map.json'), encoding='utf-8'))['stats']
 
 URL = 'https://hand-marketing.ru/photo'
-TITLE = 'Предметная съёмка товаров и оборудования в Москве | Hand Marketing'
+TITLE = 'Предметная съёмка товаров и оборудования в Москве в Москве | Hand Marketing'
 DESCR = ('Предметная и каталожная съёмка товаров, оборудования и интерьеров: '
          'контур, кадрирование под карточки, ретушь под каталог, сайт '
          'и маркетплейсы. Выезд на объект.')
@@ -156,7 +156,7 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
 LD = ('<script type="application/ld+json">' + json.dumps({
     "@context": "https://schema.org", "@type": "Service",
     "name": "Фотопродакшн: предметная и каталожная съёмка",
-    "serviceType": "Предметная съёмка товаров и оборудования в Москве",
+    "serviceType": "Предметная съёмка товаров и оборудования в Москве в Москве",
     "provider": {"@type": "Organization", "name": "Hand Marketing",
                  "url": "https://hand-marketing.ru/"},
     "areaServed": {"@type": "Country", "name": "Россия"},
