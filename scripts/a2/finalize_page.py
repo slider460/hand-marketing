@@ -30,7 +30,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..'))
 MIRROR = os.path.join(ROOT, 'mirror')
 SITEMAP = os.path.join(MIRROR, 'sitemap.xml')
-POSTSCRIPTS = ['add_cookie_consent.py', 'add_metrika_goals.py']
+POSTSCRIPTS = ['add_cookie_consent.py', 'add_metrika_goals.py',
+               # блок «Похожие проекты»: без него свежесобранный кейс снова
+               # становится тупиком без внутренних ссылок
+               'add_related_links.py']
 MARKERS = ['hm-cookie-consent', 'hm-metrika-goals', 'mc.yandex']
 
 
