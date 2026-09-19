@@ -37,8 +37,12 @@ def main():
     out = parts[0]
     for i, tail in enumerate(parts[1:]):
         first = i == 0
+        # стили кладём в обе копии страницы: мобильную копию секции пересоздаёт
+        # add_seo_mobile, и если <style> оказался только в ней, он уезжает вместе
+        # с копией и блок цены остаётся без оформления. Дубль <style> безвреден,
+        # дубль JSON-LD нет, поэтому разметку ставим только в первый блок
         block = ('<!--hmc:event--><h3 class="ev-h3">Стоимость и отзывы</h3>'
-                 + cb.render('event', with_css=first, with_ld=first) + '<!--/hmc:event-->')
+                 + cb.render('event', with_css=True, with_ld=first) + '<!--/hmc:event-->')
         out += block + ANCHOR + tail
     n_faq = out.count(FAQ_OLD)
     out = out.replace(FAQ_OLD, FAQ_NEW)

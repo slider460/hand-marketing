@@ -43,7 +43,9 @@ def extract_section(h):
         return None
     sec = m.group(0)
     # убрать ld+json из копии (schema остаётся один раз в десктоп-экземпляре)
-    sec = re.sub(r'<script type="application/ld\+json">.*?</script>', '', sec, flags=re.S)
+    # у блока цены скрипты идут с атрибутом (data-hmc), поэтому шаблон должен
+    # допускать любые атрибуты: иначе разметка Service и BreadcrumbList дублируется
+    sec = re.sub(r'<script type="application/ld\+json"[^>]*>.*?</script>', '', sec, flags=re.S)
     return sec
 
 total = 0

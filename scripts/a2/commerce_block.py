@@ -180,6 +180,7 @@ CSS = """<style id="hm-cost-css">
 .hm-cost__f li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;color:#5A616A}
 .hm-cost__f li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--hmcost-a)}
 .hm-cost__rev{display:grid;gap:14px}
+.hm-cost__rk a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor;font-weight:700}
 .hm-cost__rk{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5A616A}
 .hm-cost__q{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--hmcost-a)}
 .hm-cost__q blockquote{margin:0 0 10px;font-size:clamp(15px,1.4vw,17px);line-height:1.6;color:#14171C}
@@ -246,7 +247,8 @@ def render(key, with_css=True, with_ld=True):
             link = f' <a href="{r["case"]}">Кейс&nbsp;→</a>' if r.get('case') else ''
             qs += (f'<figure class="hm-cost__q"><blockquote>«{H.escape(r["quote"])}»</blockquote>'
                    f'<figcaption><b>{H.escape(r["company"])}</b>{who}{link}</figcaption></figure>')
-        rev = f'<div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем</p>{qs}</div>'
+        rev = (f'<div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем'
+               f' <a href="/reviews/">все письма&nbsp;→</a></p>{qs}</div>')
     solo = '' if rev else ' hm-cost--solo'
     return ((CSS if with_css else '') +
             f'<div class="hm-cost{solo}" style="--hmcost-a:{p["accent"]}" data-hmc="{key}">{price}{rev}</div>'
