@@ -16,6 +16,7 @@ alt="" и aria-hidden: это не «забытый alt», а осознанны
 Идемпотентен: старый скрипт вырезается и вставляется заново. Патчит index-a2.html
 (боевая версия, см. память index-a2-deploy-trap) и index.html, если он есть.
 """
+import html as H
 import json
 import os
 import re
@@ -53,6 +54,25 @@ def js_block(alts):
             '})();</script>\n')
 
 
+def static_pass(s, alts):
+    """Карточки мобильных сеток (.mcase) лежат в HTML статически, и это единственное,
+    что видит робот, не исполнивший JS. Подпись им ставим прямо в разметке,
+    не полагаясь на скрипт: на /project без JS названо было 2 картинки из 66."""
+    n = 0
+
+    def fix(m):
+        nonlocal n
+        href, img = m.group(1), m.group(0)
+        k = alts.get(href.rstrip('/'))
+        if not k or 'alt=""' not in img:
+            return img
+        n += 1
+        return img.replace('alt=""', f'alt="{H.escape(k)}"', 1)
+
+    s = re.sub(r'<a class="mcase" href="([^"]+)".{0,400}?<img[^>]*>', fix, s, flags=re.S)
+    return s, n
+
+
 def decor_pass(s):
     """Пустой alt декоративным картинкам: у них нет содержания, и это надо сказать явно."""
     n = 0
@@ -81,6 +101,7 @@ def main():
                 continue
             s = open(path, encoding='utf-8').read()
             s = re.sub(r'<script id="' + MARK + r'">.*?</script>\n?', '', s, flags=re.S)
+            s, ns = static_pass(s, alts)
             s, nd = decor_pass(s)
             i = s.rfind('</body>')
             if i < 0:
@@ -90,7 +111,7 @@ def main():
             open(path, 'w', encoding='utf-8').write(s)
             total_js += 1
             total_decor += nd
-            print(f'/{slug}/{name}: скрипт подписей + декор {nd}')
+            print(f'/{slug}/{name}: карточек подписано {ns}, декор {nd}, скрипт на месте')
     print(f'Готово: файлов {total_js}, декоративных картинок закрыто {total_decor}')
 
 
