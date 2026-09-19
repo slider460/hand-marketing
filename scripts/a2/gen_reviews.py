@@ -58,6 +58,7 @@ LINKS = [
     ('/exhibition/', 'Выставочные стенды'), ('/content/', 'Мультимедийный контент'),
     ('/creativedesign/', 'Креатив и дизайн'), ('/printandproduction/', 'Печать и производство'),
     ('/photo', 'Фотопродакшн'), ('/project', 'Все проекты'),
+    ('/team/', 'Команда'), ('/price/', 'Цены'),
 ]
 
 METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'

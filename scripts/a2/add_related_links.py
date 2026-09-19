@@ -83,7 +83,7 @@ DIRECTIONS = [
     ('/3dmapping/', '3D Mapping'), ('/creativedesign/', 'Креатив и дизайн'),
     ('/printandproduction/', 'Печать и производство'), ('/photo', 'Фотопродакшн'),
     ('/btl/', 'BTL и промо'), ('/digital/', 'Digital и сайты'),
-    ('/price/', 'Цены'), ('/reviews/', 'Отзывы'),
+    ('/price/', 'Цены'), ('/reviews/', 'Отзывы'), ('/team/', 'Команда'),
 ]
 
 
