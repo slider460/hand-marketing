@@ -290,9 +290,9 @@ VP_FAQ=[
  ('Сколько стоит съёмка рекламного ролика?',
   'Рекламный или корпоративный ролик стоит от 150 000 ₽. Итог зависит от хронометража, числа съёмочных дней, графики и прав на музыку. После брифа бесплатно готовим смету в двух вариантах, «оптимально» и «расширенно». Ролики для соцсетей и корпоративные фильмы считаем по той же схеме.'),
  ('Какие сроки производства видео?',
-  'Материал с репортажной съёмки отдаём за 2–5 дней. Рекламный ролик или корпоративный фильм занимает обычно 3–6 недель от брифа до мастера, в зависимости от графики и согласований.'),
+  'Экспресс-формат снимаем и отдаём за неделю. Полноценный рекламный ролик или корпоративный фильм занимает 2–3 недели от брифа до мастера, в зависимости от графики и согласований.'),
  ('Снимаете ли вы за пределами Москвы?',
-  'Да, съёмочная группа выезжает в любой город России. Снимали в Самаре, Ставрополе, на федеральных форумах и выставках.'),
+  'Да. Снимаем по всей России и за рубежом: где именно снимать, для нас роли не играет. Снимали в Самаре, Ставрополе, Алматы, на федеральных форумах и выставках.'),
  ('Делаете ли вы только монтаж или графику по готовым материалам?',
   'Да, это отдельная услуга: монтаж, цветокоррекция, титры, 2D/3D-графика и упаковка под площадки по вашим исходникам.'),
 ]
@@ -317,6 +317,14 @@ def seo_sec():
          '.vp-step h4{margin:6px 0 6px;font-size:14.5px;font-weight:700;line-height:1.35}'
          '.vp-step p{margin:0;font-size:13px;line-height:1.5;color:#5A616A}'
          '.vp-sec__lead a{color:#673A7E;font-weight:600}'
+         '.vp-fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:6px 0 34px}'
+         '.vp-fmt__i{display:block;border:1px solid rgba(20,23,28,.12);border-radius:18px;padding:22px 22px 20px;'
+         'text-decoration:none;color:inherit;background:#fff;transition:transform .2s ease,border-color .2s ease}'
+         '.vp-fmt__i:hover{transform:translateY(-3px);border-color:#CF6F19}'
+         '.vp-fmt__i b{display:block;font-size:18px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}'
+         '.vp-fmt__i span{display:block;font-size:14.5px;line-height:1.6;color:#5A616A}'
+         '.vp-fmt__i i{display:block;margin-top:12px;font-style:normal;font-size:14px;font-weight:700;color:#CF6F19}'
+         '@media(max-width:960px){.vp-fmt{grid-template-columns:1fr}}'
          '.vp-faq{display:grid;gap:10px;max-width:820px}'
          '.vp-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;background:#fff;padding:0 20px}'
          '.vp-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:15px 36px 15px 0;font-size:15.5px;font-weight:700}'
@@ -328,7 +336,24 @@ def seo_sec():
          '@media(max-width:960px){.vp-steps{grid-template-columns:1fr 1fr}}'
          '@media(max-width:640px){.vp-steps{grid-template-columns:1fr}}'
          '</style>')
+    fmts = (('Съёмка рекламного ролика', '/videoproduction/reklamnyy-rolik/',
+             'Реклама продукта, ролик со звездой или блогером, вирусный формат. '
+             'УАЗ Патриот, VIVAX SPORT, «Газель-трансформер».'),
+            ('Корпоративный фильм о компании', '/videoproduction/korporativnyy-film/',
+             'Фильм к юбилею, о производстве, о клиентском опыте и для тендера. '
+             'РЖД, Saint-Gobain, Power Technologies.'),
+            ('Презентационный ролик объекта', '/videoproduction/prezentacionnyy-rolik/',
+             'Торговые центры, многофункциональные комплексы и технопарки для арендаторов '
+             'и инвесторов. «Мозаика», «Саларис», MMG.'))
+    fmt_html = ''.join(
+        f'<a class="vp-fmt__i vp-rev" href="{h}"><b>{t}</b><span>{d}</span>'
+        f'<i>Подробно о формате →</i></a>' for t, h, d in fmts)
+
     return (f'<section class="vp-sec" id="vp-seo">{css}'
+            f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Форматы съёмки</h2></div>'
+            f'<p class="vp-sec__lead vp-rev">У каждого формата свой процесс, сроки и смета. '
+            f'Выберите ближе к задаче, там кейсы с цифрами и стоимость.</p>'
+            f'<div class="vp-fmt">{fmt_html}</div>'
             f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Как проходит видеопродакшн</h2></div>'
             f'<p class="vp-sec__lead vp-rev">Видеопродакшн полного цикла означает, что за результат от идеи до мастер-файла '
             f'отвечает одна команда. Съёмка рекламных роликов, производство корпоративных фильмов, репортажи с мероприятий '
