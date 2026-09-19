@@ -13,8 +13,10 @@
 import os, re
 
 ROOT = os.path.join(os.path.dirname(__file__), '..', '..', 'mirror')
-PAGES = ['event', 'creativedesign', 'btl', '3dmapping', 'printandproduction']
+PAGES = ['event', 'creativedesign', 'btl', '3dmapping', 'printandproduction', 'digital', 'service']
 MOB_ANCHOR = '<section class="mh-form'
+# у /service мобильной формы нет, там копия встаёт перед подвалом
+ALT_ANCHOR = '<footer class="mh-foot"'
 
 WRAP_CSS = ('<style id="hm-seo-mob-css">.hm-seo-mob{display:none}'
             '@media (max-width:640px){.hm-seo-mob{display:block}}</style>')
@@ -54,15 +56,16 @@ for slug in PAGES:
             h = f.read()
         # старую копию вырезаем: секция могла быть пересобрана, копия отстанет
         h, refreshed = strip_mob(h)
-        if MOB_ANCHOR not in h:
-            print(f'/{slug}/{name}: мобильной формы нет — пропуск')
+        anchor = MOB_ANCHOR if MOB_ANCHOR in h else (ALT_ANCHOR if ALT_ANCHOR in h else None)
+        if not anchor:
+            print(f'/{slug}/{name}: мобильной версии нет — пропуск')
             continue
         sec = extract_section(h)
         if not sec:
             print(f'/{slug}/{name}: SEO-секция не найдена — пропуск')
             continue
         mob = f'{WRAP_CSS}<div class="hm-seo-mob">{sec}</div>'
-        h = h.replace(MOB_ANCHOR, mob + MOB_ANCHOR, 1)
+        h = h.replace(anchor, mob + anchor, 1)
         with open(path, 'w', encoding='utf-8') as f:
             f.write(h)
         total += 1
