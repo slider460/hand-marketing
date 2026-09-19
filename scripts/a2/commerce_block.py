@@ -72,6 +72,15 @@ PAGES = {
                'Схему мультимедиа и эскизы готовим за одну-две недели, полный проект от двух недель.',
                'Контент, интерфейсы и монтажное сопровождение делаем сами.'],
         reviews=['becar_2018']),
+    'photo': dict(
+        path='/photo', crumb='Фотопродакшн', accent='#4CA4E8',
+        service='Предметная и каталожная съёмка товаров и оборудования',
+        prices=[],
+        facts=['Считаем по числу позиций и ракурсов, а не по часам: съёмочный день, обработка '
+               'и вырезание фона стоят в смете отдельно.',
+               'Смету готовим бесплатно после списка позиций.',
+               'Снимаем в студии и на площадке заказчика, по Москве и в регионах.'],
+        reviews=['sg_design']),
     'ad': dict(
         path='/videoproduction/reklamnyy-rolik/', crumb='Рекламный ролик', accent='#CF6F19',
         parent=('Видеопродакшн', '/videoproduction/'),
@@ -142,11 +151,13 @@ def jsonld(key):
         'areaServed': {'@type': 'Country', 'name': 'Россия'},
         'provider': {'@type': 'Organization', 'name': 'Hand Marketing', 'url': SITE + '/',
                      'telephone': '+7 495 580 75 37', 'email': 'info@hand-marketing.ru'},
-        'offers': [{'@type': 'Offer', 'name': name, 'priceCurrency': 'RUB',
-                    'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': price,
-                                           'priceCurrency': 'RUB'}}
-                   for name, price in p['prices']],
     }
+    if p['prices']:
+        service['offers'] = [
+            {'@type': 'Offer', 'name': name, 'priceCurrency': 'RUB',
+             'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': price,
+                                    'priceCurrency': 'RUB'}}
+            for name, price in p['prices']]
     crumbs = {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
         'itemListElement': [
@@ -168,7 +179,8 @@ def render(key, with_css=True, with_ld=True):
                    f'<span class="hm-cost__v"><small>от</small>{rub(price)}</span></div>'
                    for name, price in p['prices'])
     facts = ''.join(f'<li>{H.escape(f)}</li>' for f in p['facts'])
-    price = (f'<div class="hm-cost__price"><p class="hm-cost__k">Стоимость</p>{rows}'
+    kicker = 'Стоимость' if p['prices'] else 'Как считаем смету'
+    price = (f'<div class="hm-cost__price"><p class="hm-cost__k">{kicker}</p>{rows}'
              f'<ul class="hm-cost__f">{facts}</ul></div>')
     rev = ''
     if p['reviews']:

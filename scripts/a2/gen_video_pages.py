@@ -54,8 +54,20 @@ PAGES = {
         lead=('Снимаем рекламу, которую досматривают до конца: 60 секунд про блокировку '
               'дифференциала для УАЗ Патриот, 49 секунд с Настасьей Самбурской для VIVAX SPORT '
               'и 1:42 «Газели-трансформера», которую пересылали друг другу сами.'),
-        hero=f'{IMG}/patriot/hero.jpg',
+        hero=f'{IMG}/vpg/ad-hero.jpg',
         hero_alt='Кадр рекламного ролика УАЗ Патриот на бездорожье',
+        loop='/media/ad-hero-loop.mp4',
+        shots_h2='Кадры из наших рекламных роликов',
+        shots_lead='Три ролика, три разных задачи: показать работу узла, показать '
+                   'средство в деле и заставить переслать ролик дальше.',
+        shots=[('ad/patriot-mud.jpg', 'УАЗ Патриот: три съёмочные смены на бездорожье'),
+               ('ad/patriot-ford.jpg', 'Брод сняли с воды и с берега, чтобы показать глубину'),
+               ('ad/patriot-diff.jpg', 'Разрез дифференциала собран графикой поверх съёмки'),
+               ('ad/gaz-robot.jpg', 'Трансформер нарисован по сториборду на 31 лист'),
+               ('ad/gaz-street.jpg', 'Реакцию прохожих и пассажиров снимали отдельной сменой'),
+               ('ad/vivax-gym.jpg', 'VIVAX SPORT: тренировка в зале, один съёмочный день'),
+               ('ad/vivax-apply.jpg', 'Продукт входит в кадр по ходу тренировки, без пауз'),
+               ],
         chips=['от 150 000 ₽', 'экспресс за неделю', 'съёмка по России и за рубежом'],
         bar_h2='Три ролика и их хронометраж',
         bar_lead='Длина полосы пропорциональна длительности ролика.',
@@ -124,8 +136,21 @@ PAGES = {
         lead=('Фильм к десятилетию дирекции РЖД, фильм о клиентском опыте Saint-Gobain, фильм '
               'об энергоснабжении чемпионата мира по футболу. Снимаем то, что компания хочет '
               'показывать партнёрам, сотрудникам и на тендере.'),
-        hero=f'{IMG}/rgd-history/poster.jpg',
-        hero_alt='Кадр корпоративного фильма для Центральной дирекции РЖД',
+        hero=f'{IMG}/vpg/film-hero.jpg',
+        hero_alt='Кадр корпоративного фильма: грузовой двор Центральной дирекции РЖД',
+        loop='/media/film-hero-loop.mp4',
+        shots_h2='Кадры из корпоративных фильмов',
+        shots_lead='Производство, объекты и люди компании: снимаем в рабочую смену, '
+                   'без перекрытия площадки и без постановочных сцен.',
+        shots=[('film/rzd-yard.jpg', 'Грузовой двор ЦМ РЖД снят с воздуха'),
+               ('film/rzd-crane.jpg', 'Портальный кран в работе, смену не останавливали'),
+               ('film/rzd-air.jpg', 'Съёмка шла в нескольких городах сети дирекции'),
+               ('film/sg-wall.jpg', 'Saint-Gobain: 48 сотрудников сняты в одном свете'),
+               ('film/sg-line.jpg', 'Линия упаковки: производство в рабочую смену'),
+               ('film/pt-gallery.jpg', 'Международный вещательный центр чемпионата мира'),
+               ('film/pt-numbers.jpg', 'Цифры проекта: 960 км кабеля, 75 МВт, 300 человек'),
+               ('film/isotec-plant.jpg', 'Изотек: цех и склад в бренд-фильме компании'),
+               ],
         chips=['от 150 000 ₽', '2–3 недели', 'съёмка по России и за рубежом'],
         bar_h2='Сколько длится корпоративный фильм',
         bar_lead='Хронометраж наших фильмов: полоса пропорциональна длительности.',
@@ -199,8 +224,22 @@ PAGES = {
         lead=('Ролик, который показывают арендаторам, инвесторам и городу. Снимали торговые '
               'центры, многофункциональные комплексы и технопарки: объект, трафик, зоны '
               'и цифры в одном рассказе.'),
-        hero=f'{IMG}/mozaika-video/poster.jpg',
-        hero_alt='Кадр презентационного ролика торгового центра «Мозаика»',
+        hero=f'{IMG}/vpg/obj-hero.jpg',
+        hero_alt='Кадр презентационного ролика торгового центра «Мозаика» с воздуха',
+        loop='/media/obj-hero-loop.mp4',
+        shots_h2='Кадры из роликов об объектах',
+        shots_lead='Объект с воздуха и изнутри, зона охвата и цифры: то, что арендатор '
+                   'и инвестор хотят увидеть до встречи.',
+        shots=[('obj/mozaika-air.jpg', 'ТРЦ «Мозаика»: 68 000 м² торговой площади'),
+               ('obj/mozaika-gallery.jpg', 'Галереи снимали в рабочие часы, центр не закрывали'),
+               ('obj/mozaika-link.jpg', 'Переход в жилую часть квартала'),
+               ('obj/salaris-scheme.jpg', 'Зона охвата «Салариса» вдоль Киевского шоссе'),
+               ('obj/salaris-site.jpg', 'Стройка 310 000 м²: съёмка с земли и с воздуха'),
+               ('obj/mmg-air.jpg', 'Павелецкая площадь: объект в центре Москвы'),
+               ('obj/mmg-reach.jpg', 'Зона охвата: более 3 млн человек в 15–20 минутах'),
+               ('obj/zubovo-map.jpg', 'Технопарк «Зубово» в 40 км от Уфы'),
+               ('obj/zubovo-plan.jpg', 'Схема площадки: подстанция, котельная, водозабор'),
+               ],
         chips=['от 150 000 ₽', '2–3 недели', 'съёмка по России и за рубежом'],
         bar_h2='Хронометраж роликов об объектах',
         bar_lead='Чем сложнее объект, тем длиннее рассказ. Полоса пропорциональна длительности.',
@@ -268,7 +307,16 @@ CSS = """<style>
 .vpg-sec__lead{margin:0 0 30px;max-width:72ch;font-size:16.5px;line-height:1.65;color:#5A616A}
 .vpg-hero{position:relative;min-height:clamp(380px,56vh,560px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
 .vpg-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vpg-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,10,6,.28),rgba(14,10,6,.86))}
+.vpg-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,10,6,.52) 0%,rgba(14,10,6,.42) 38%,rgba(14,10,6,.9) 100%)}
+.vpg-hero__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.vpg-hero__v.is-on{opacity:1}
+.vpg-shots{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.vpg-shot{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#EFE9E3;grid-column:span 2}
+.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 3}
+.vpg-shot img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.vpg-shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:13.5px;line-height:1.45;color:#fff;background:linear-gradient(180deg,rgba(14,10,6,0),rgba(14,10,6,.82))}
+@media(max-width:980px){.vpg-shots{grid-template-columns:repeat(2,1fr)}.vpg-shot,.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 1}}
+@media(max-width:640px){.vpg-shots{grid-template-columns:1fr}}
 .vpg-hero__in{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 40px clamp(34px,4.6vw,60px)}
 .vpg-hero__k{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F6C99A}
 .vpg-hero h1{margin:0;font-size:clamp(28px,4.2vw,54px);font-weight:800;letter-spacing:-.025em;line-height:1.06;max-width:19ch}
@@ -287,7 +335,7 @@ CSS = """<style>
 .vpg-bar__line{height:14px;border-radius:7px;background:rgba(207,111,25,.14);overflow:hidden}
 .vpg-bar__fill{height:100%;border-radius:7px;background:var(--a)}
 .vpg-bar__d{margin:10px 0 0;font-size:14.5px;line-height:1.6;color:#5A616A;max-width:74ch}
-.vpg-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vpg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px}
 .vpg-card{display:flex;flex-direction:column;border:1px solid rgba(20,23,28,.1);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:transform .2s ease}
 .vpg-card:hover{transform:translateY(-4px)}
 .vpg-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
@@ -334,6 +382,8 @@ def hero(p):
         '<section class="vpg-hero">'
         f'<img class="vpg-hero__img" src="{p["hero"]}" alt="{esc(p["hero_alt"])}" '
         'fetchpriority="high" decoding="async">'
+        f'<video class="vpg-hero__v" autoplay muted loop playsinline preload="metadata" '
+        f'aria-hidden="true"><source src="{p["loop"]}" type="video/mp4"></video>'
         '<span class="vpg-hero__sh" aria-hidden="true"></span>'
         '<div class="vpg-hero__in">'
         f'<p class="vpg-hero__k">{esc(p["kicker"])}</p>'
@@ -364,6 +414,18 @@ def bars(p):
             f'<h2 class="vpg-sec__h">{esc(p["bar_h2"])}</h2>'
             f'<p class="vpg-sec__lead">{esc(p["bar_lead"])}</p>'
             f'<div class="vpg-bars">{rows}</div></div></section>')
+
+
+def shots(p):
+    """Кадры со съёмок. Подпись несёт факт о работе, а не пересказ того, что видно."""
+    items = ''.join(
+        f'<figure class="vpg-shot"><img src="{IMG}/vpg/{f}" alt="{esc(cap)}" '
+        f'loading="lazy" width="1600" height="900">'
+        f'<figcaption>{esc(cap)}</figcaption></figure>' for f, cap in p['shots'])
+    return (f'<section class="vpg-sec"><div class="vpg__in">'
+            f'<h2 class="vpg-sec__h">{esc(p["shots_h2"])}</h2>'
+            f'<p class="vpg-sec__lead">{esc(p["shots_lead"])}</p>'
+            f'<div class="vpg-shots">{items}</div></div></section>')
 
 
 def cards(p):
@@ -410,6 +472,17 @@ def faq(p):
             f'</div></section>')
 
 
+HERO_JS = """<script>(function(){
+var v=document.querySelector('.vpg-hero__v');if(!v)return;
+function on(){v.classList.add('is-on')}
+if(v.readyState>2){on()}else{v.addEventListener('loadeddata',on)}
+if('IntersectionObserver' in window){
+ new IntersectionObserver(function(e){e[0].isIntersecting?v.play().catch(function(){}):v.pause()},
+  {threshold:.05}).observe(v)}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause();v.removeAttribute('autoplay')}
+})();</script>"""
+
+
 def page(p):
     url = SITE + cb.PAGES[p['key']]['path']
     head = (
@@ -426,7 +499,7 @@ def page(p):
         f'<meta property="og:image" content="{SITE}{p["hero"]}">'
         + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
     body = (f'{rc.header()}<main class="vpg">{hero(p)}{crumbs(p)}{bars(p)}{cards(p)}'
-            f'{lists(p)}{price(p)}{faq(p)}</main>'
+            f'{shots(p)}{lists(p)}{price(p)}{faq(p)}</main>{HERO_JS}'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return head + body
 

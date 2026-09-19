@@ -1,0 +1,30 @@
+{
+ "стенды": {
+  "ours": ["http://localhost:8080/exhibition/", "http://localhost:8080/exhibition/multimedia/"],
+  "top": ["https://pro-lgroup.com/", "https://amfexpo.com/", "https://intek-expo.ru/",
+          "https://white-project.ru/expo/", "https://www.stendart.ru/uslugi/stendy/zastroyka/",
+          "https://mosstand.ru/"]
+ },
+ "рекламный ролик": {
+  "ours": ["http://localhost:8080/videoproduction/", "http://localhost:8080/videoproduction/reklamnyy-rolik/"],
+  "top": ["https://mosvideo.org/services/prodayuschie-roliki/", "https://avastudio.ru/",
+          "https://videohunter.pro/uslugi/videosemka/semka-reklamnogo-rolika/",
+          "https://www.formula-advert.ru/uslugi/sjomka-reklamnyh-rolikov",
+          "https://musestudio.ru/commercials/", "https://prepropost.ru/sozdanie-reklamnogo-rolika"]
+ },
+ "корпоративный фильм": {
+  "ours": ["http://localhost:8080/videoproduction/korporativnyy-film/"],
+  "top": ["https://mosvideo.org/", "https://ruvision.ru/", "https://couragefilms.ru/",
+          "https://humanvideo.ru/", "https://2sides.pro/"]
+ },
+ "мероприятия": {
+  "ours": ["http://localhost:8080/event/", "http://localhost:8080/event/novogodniy-korporativ/"],
+  "top": ["https://av55.ru/", "https://catalystrussia.ru/", "https://oq.agency/",
+          "https://eventyon.ru/", "https://paramount-events.ru/"]
+ },
+ "мультимедиа": {
+  "ours": ["http://localhost:8080/content/"],
+  "top": ["https://interfantasy.ru/", "https://intprod.ru/", "https://mir.show/",
+          "https://divent.ru/", "https://art-puls.ru/"]
+ }
+}

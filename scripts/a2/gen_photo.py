@@ -33,6 +33,10 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', 'mirror'))
 
+import sys
+sys.path.insert(0, HERE)
+import commerce_block as cb  # noqa: E402
+
 spec = importlib.util.spec_from_file_location("rc", os.path.join(HERE, "react-chrome.py"))
 rc = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(rc)
@@ -198,6 +202,9 @@ CSS = """<style id="ph-css">
 .ph-card{border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;background:#fff}
 .ph-card h3{font-size:19px;font-weight:700;margin:0 0 10px}
 .ph-card p{font-size:15.5px;line-height:1.62;margin:0;color:#3D444A}
+.ph-card_l{display:block;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.ph-card_l:hover{border-color:var(--blue);transform:translateY(-3px)}
+.ph-card__go{display:block;margin-top:14px;font-family:'Exo 2',sans-serif;font-size:14px;font-weight:700;color:var(--deep)}
 .ph-del{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:30px}
 .ph-del__i{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
 .ph-del__t{font-family:'Exo 2',sans-serif;font-size:15px;font-weight:700}
@@ -334,6 +341,43 @@ def highlight():
 </div></section>'''
 
 
+BUNDLE = [
+    ('CeramicaNova', '/portfolio/ceramicanova',
+     '17 роликов по коллекциям санфарфора. Чтобы вода в кадре была видна, слив '
+     'замкнули в оборот и подкрасили её. Снято в студии, той же, где снимаются '
+     'предметные кадры.'),
+    ('OBO Bettermann', '/portfolio/obo-academy',
+     '10 роликов в Академии OBO: монтаж систем показан на тех же изделиях, '
+     'которые в каталоге стоят отдельными позициями.'),
+    ('Видеопродакшн', '/videoproduction/',
+     'Если видео нужно вместе с каталогом, скажите об этом на брифе: свет и '
+     'предмет ставятся один раз, а продукцию не приходится везти в студию дважды.'),
+]
+
+
+def bundle():
+    cards = ''
+    for t, href, d in BUNDLE:
+        cards += (f'<a class="ph-card ph-card_l" href="{href}"><h3>{H.escape(t)}</h3>'
+                  f'<p>{H.escape(d)}</p><span class="ph-card__go">Смотреть →</span></a>')
+    return f'''<section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Съёмка и видео</p>
+<h2 class="ph__h">Одна постановка, кадры и ролики</h2>
+<p class="ph__lead">Съёмочная площадка у предметной съёмки и у видео одна: свет, фон
+ и сам предмет. Мы снимали видео по товарным линейкам, и такая же смена закрывает
+ каталог кадрами.</p>
+<div class="ph-grid">{cards}</div>
+</div></section>'''
+
+
+def cost():
+    return f'''<section class="ph__sec"><div class="ph__wrap">
+<p class="ph__kicker">Смета</p>
+<h2 class="ph__h">Как считаем и что говорят клиенты</h2>
+{cb.render('photo')}
+</div></section>'''
+
+
 def cases():
     tiles = ''
     for url, client, what, img, hov in CASES:
@@ -378,7 +422,7 @@ HEAD = ('<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
 
 def page():
     body = (f'{rc.header()}<main class="ph">{hero()}{kinds()}{delivery()}'
-            f'{highlight()}{cases()}{faq()}</main>'
+            f'{highlight()}{bundle()}{cases()}{cost()}{faq()}</main>'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}{LD}</body></html>')
     return HEAD + body
 
