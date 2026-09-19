@@ -167,7 +167,8 @@ CSS = """<style id="hm-cost-css">
 .hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
 .hm-cost--solo{grid-template-columns:minmax(0,1fr)}
 .hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__k a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__k{grid-column:1/-1}
 .hm-cost--solo .hm-cost__f{margin:0}
 .hm-cost__price{border:1px solid rgba(20,23,28,.1);border-radius:20px;padding:clamp(20px,2.6vw,30px);background:#fff}
 .hm-cost__k{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hmcost-a)}
@@ -235,7 +236,8 @@ def render(key, with_css=True, with_ld=True):
                    f'<span class="hm-cost__v"><small>от</small>{rub(price)}</span></div>'
                    for name, price in p['prices'])
     facts = ''.join(f'<li>{H.escape(f)}</li>' for f in p['facts'])
-    kicker = 'Стоимость' if p['prices'] else 'Как считаем смету'
+    kicker = ('Стоимость' if p['prices'] else 'Как считаем смету') + \
+        ' <a href="/price/">все цены&nbsp;→</a>'
     price = (f'<div class="hm-cost__price"><p class="hm-cost__k">{kicker}</p>{rows}'
              f'<ul class="hm-cost__f">{facts}</ul></div>')
     rev = ''
