@@ -56,7 +56,7 @@ PAGES['contacts']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyeb
 <div class="mh-csoc"><a href="https://t.me/">Telegram</a><a href="https://wa.me/74955807537">WhatsApp</a></div>
 </div></section>{FORM}''')
 # О НАС
-ABOUT=[("Более 10 лет","Делаем эффективные маркетинговые коммуникации","#C12164"),("Full service","Любые услуги в области маркетинговых коммуникаций","#CF6F19"),("Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочного партнёрства","#5E9A2E"),("Локация","Офис в центре Москвы. Региональная сеть с охватом 100+ городов России","#673A7E")]
+ABOUT=[("Более 10 лет","Делаем эффективные маркетинговые коммуникации","#C12164"),("Full service","Десять направлений: от ролика до выставочного стенда","#CF6F19"),("Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочного партнёрства","#5E9A2E"),("Локация","Офис в центре Москвы. Работаем по всей России и за рубежом","#673A7E")]
 ab=''.join(f'<div class="mh-val" style="--c:{c}"><div class="mh-val__dot"></div><div><div class="mh-val__t">{H.escape(t)}</div><div class="mh-val__d">{H.escape(d)}</div></div></div>' for t,d,c in ABOUT)
 PAGES['about']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyebrow">Агентство</p><h1 class="mh-h1 mh-h1_sm">О нас</h1><p class="mh-lead">Рекламное агентство полного цикла с 2012 года.</p></section>
 <section class="mh-sec mh-about"><div class="mh-vals">{ab}</div></section>
