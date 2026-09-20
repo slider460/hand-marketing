@@ -30,11 +30,14 @@ ANCHORS = ['<section class="mh-form"', '<div id="rec237885363"']
 
 # /about: чем закрываем вопрос «кто вы такие»
 ABOUT_FACTS = [
-    ('2012', 'год основания агентства'),
-    ('56', 'проектов разобраны на сайте по шагам'),
-    ('11', 'благодарственных писем со сканами'),
-    ('7', 'городов, где мы работали на площадке'),
+    ('2012', 'год основания агентства', '#673A7E'),
+    ('56', 'проектов разобраны на сайте по шагам', '#CF6F19'),
+    ('11', 'благодарственных писем со сканами', '#C12164'),
+    ('7', 'городов, где мы работали на площадке', '#5E9A2E'),
 ]
+
+BLOCK_COLORS = ['#673A7E', '#CF6F19', '#C12164', '#8E5FB0', '#5E9A2E']
+GROUP_COLORS = ['#CF6F19', '#3B729D', '#8E5FB0', '#5E9A2E', '#C12164']
 
 ABOUT_BLOCKS = [
     ('Что мы делаем',
@@ -101,6 +104,7 @@ CLIENT_GROUPS = [
 
 PAGES = {
     'about': dict(
+        tag='Агентство с 2012 года',
         h2='Агентство Hand Marketing: чем занимаемся и как работаем',
         lead='Мы работаем с 2012 года и делаем проекты, которые видно на площадке: '
              'выставочные стенды, мероприятия, ролики, мультимедийный контент, '
@@ -112,6 +116,7 @@ PAGES = {
              'команды на странице <a href="/team/">команды</a>, порядок расчёта '
              'на странице <a href="/price/">стоимости</a>.'),
     'clients': dict(
+        tag='Кто с нами работает',
         h2='Клиенты агентства: кто и с какими задачами приходит',
         lead='С нами работают промышленные компании, транспортные холдинги, '
              'девелоперы, торговые центры, региональные администрации и бренды. '
@@ -124,28 +129,43 @@ PAGES = {
 }
 
 CSS = """<style id="hm-about-seo-css">
-.ab{--ink:#14171C;--mut:#5A616A;--a:#673A7E;--line:rgba(20,23,28,.12);
+/* те же приёмы, что в секции главной: цветной тег с квадратом, радиус 24,
+   мягкая тень, цветные акценты по палитре направлений */
+.ab{--ink:#14171C;--mut:#5A616A;--a:#673A7E;--line:#ECEEF2;
  font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff;
- padding:72px 0 64px;border-top:1px solid var(--line)}
+ padding:76px 0 68px;border-top:1.5px solid var(--line)}
 .ab *{box-sizing:border-box}
 .ab__in{max-width:1180px;margin:0 auto;padding:0 40px}
-.ab h2{margin:0 0 14px;font-size:clamp(25px,3vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
+.ab__tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;
+ letter-spacing:.2em;text-transform:uppercase;color:var(--a);margin-bottom:12px}
+.ab__tag::before{content:"";width:11px;height:11px;border-radius:3px;background:currentColor}
+.ab h2{margin:0 0 14px;font-size:clamp(26px,3.1vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
 .ab p.lead{margin:0 0 30px;max-width:74ch;font-size:16.5px;line-height:1.7;color:#3d434b}
-.ab-facts{display:flex;flex-wrap:wrap;gap:34px;margin:0 0 34px}
-.ab-facts div b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--a)}
-.ab-facts div span{font-size:13.5px;color:var(--mut);max-width:24ch;display:block}
-.ab-blocks{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 28px}
-.ab-b h3{margin:0 0 8px;font-size:18px;font-weight:800;letter-spacing:-.01em}
+.ab-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0 0 36px}
+.ab-facts div{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:22px 24px;
+ box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.ab-facts div i{display:block;width:40px;height:6px;border-radius:3px;background:var(--c);margin-bottom:14px}
+.ab-facts div b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em;color:var(--c)}
+.ab-facts div span{display:block;margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--mut)}
+.ab-blocks{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ab-b{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:24px;
+ padding:24px 26px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.ab-b h3{margin:0 0 10px;font-size:19px;font-weight:800;letter-spacing:-.01em;
+ display:flex;align-items:center;gap:12px}
+.ab-b h3::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--c);flex:none}
 .ab-b p{margin:0;font-size:15px;line-height:1.68;color:var(--mut)}
 .ab-groups{display:grid;gap:18px}
-.ab-g{border-left:3px solid var(--a);padding:2px 0 2px 20px}
-.ab-g h3{margin:0 0 4px;font-size:18px;font-weight:800}
-.ab-g em{display:block;margin-bottom:8px;font-style:normal;font-size:14px;font-weight:700;color:var(--a)}
-.ab-g p{margin:0;font-size:15px;line-height:1.68;color:var(--mut);max-width:86ch}
-.ab-tail{margin:34px 0 0;font-size:15.5px;line-height:1.7;color:#3d434b;max-width:80ch}
-.ab-tail a{color:var(--a);font-weight:700}
-@media(max-width:900px){.ab-blocks{grid-template-columns:1fr}}
-@media(max-width:640px){.ab__in{padding:0 18px}.ab{padding:52px 0 44px}}
+.ab-g{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:24px;
+ padding:24px 28px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5);
+ border-left:6px solid var(--c)}
+.ab-g h3{margin:0 0 6px;font-size:20px;font-weight:800;letter-spacing:-.01em}
+.ab-g em{display:block;margin-bottom:10px;font-style:normal;font-size:13.5px;font-weight:800;
+ letter-spacing:.04em;color:var(--c)}
+.ab-g p{margin:0;font-size:15px;line-height:1.68;color:var(--mut);max-width:92ch}
+.ab-tail{margin:34px 0 0;font-size:15.5px;line-height:1.7;color:#3d434b;max-width:82ch}
+.ab-tail a{color:var(--a)!important;font-weight:700}
+@media(max-width:1000px){.ab-facts{grid-template-columns:1fr 1fr}.ab-blocks{grid-template-columns:1fr}}
+@media(max-width:640px){.ab__in{padding:0 18px}.ab{padding:52px 0 44px}.ab-facts{grid-template-columns:1fr}}
 </style>"""
 
 
@@ -158,20 +178,23 @@ def build(slug, with_css=True):
     facts = ''
     if p['facts']:
         facts = ('<div class="ab-facts">' + ''.join(
-            f'<div><b>{esc(n)}</b><span>{esc(t)}</span></div>' for n, t in p['facts'])
-            + '</div>')
+            f'<div style="--c:{c}"><i aria-hidden="true"></i><b>{esc(n)}</b>'
+            f'<span>{esc(t)}</span></div>' for n, t, c in p['facts']) + '</div>')
     body = ''
     if p['blocks']:
         body = ('<div class="ab-blocks">' + ''.join(
-            f'<div class="ab-b"><h3>{esc(t)}</h3><p>{esc(d)}</p></div>'
-            for t, d in p['blocks']) + '</div>')
+            f'<div class="ab-b" style="--c:{BLOCK_COLORS[i % len(BLOCK_COLORS)]}">'
+            f'<h3>{esc(t)}</h3><p>{esc(d)}</p></div>'
+            for i, (t, d) in enumerate(p['blocks'])) + '</div>')
     if p['groups']:
         body = ('<div class="ab-groups">' + ''.join(
-            f'<div class="ab-g"><h3>{esc(t)}</h3><em>{esc(who)}</em><p>{esc(d)}</p></div>'
-            for t, who, d in p['groups']) + '</div>')
+            f'<div class="ab-g" style="--c:{GROUP_COLORS[i % len(GROUP_COLORS)]}">'
+            f'<h3>{esc(t)}</h3><em>{esc(who)}</em><p>{esc(d)}</p></div>'
+            for i, (t, who, d) in enumerate(p['groups'])) + '</div>')
     return (f'<!-- {MARK} -->{CSS if with_css else ""}'
             f'<section class="ab" aria-label="Об агентстве">'
-            f'<div class="ab__in"><h2>{esc(p["h2"])}</h2>'
+            f'<div class="ab__in">'
+            f'<span class="ab__tag">{esc(p["tag"])}</span><h2>{esc(p["h2"])}</h2>'
             f'<p class="lead">{esc(p["lead"])}</p>{facts}{body}'
             f'<p class="ab-tail">{p["tail"]}</p>'
             f'</div></section>{END}')
@@ -195,10 +218,14 @@ def main():
                 continue
             s = strip_old(open(path, encoding='utf-8').read())
             n = 0
+            # стиль отдаём ОБЕИМ копиям вёрстки: в тильдовской десктопной версии
+            # свои правила для ссылок, и без нашего <style> заголовки красятся
+            # фирменным коралловым. Дубль <style> с тем же id безвреден,
+            # дубль JSON-LD нет, поэтому разметка идёт только в первую вставку
             for anchor in ANCHORS:
                 if anchor not in s:
                     continue
-                s = s.replace(anchor, build(slug, with_css=(n == 0)) + anchor, 1)
+                s = s.replace(anchor, build(slug, with_css=True) + anchor, 1)
                 n += 1
             if not n:
                 print(f'/{slug}/{name}: якорей формы нет — пропуск')

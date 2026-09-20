@@ -226,31 +226,43 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><scrip
 <p class="sv-why">Мы не посредники: съёмка, дизайн, контент и печать делаются внутри агентства. Это видно по проектам, где направления складываются вместе: для выставки в Самаре мы сделали <a href="/creative/samara/">фирменный стиль</a>, застройку и контент, для Eaton <a href="/video/eaton/">ролики</a>, <a href="/event/eaton/">конференцию</a> и печатные материалы, для Becar десяток проектов от брошюр до <a href="/portfolio/becar-private-money/">выставочного стенда</a>. Заказчику это экономит время на согласованиях и деньги на посредниках.</p>
 <h3 class="sv-h3">Стоимость и отзывы</h3>
 <style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
 .hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
 .hm-cost--solo{grid-template-columns:minmax(0,1fr)}
 .hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor}
-.hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
 .hm-cost--solo .hm-cost__f{margin:0}
-.hm-cost__price{border:1px solid rgba(20,23,28,.1);border-radius:20px;padding:clamp(20px,2.6vw,30px);background:#fff}
-.hm-cost__k{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hmcost-a)}
-.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:12px 0;border-top:1px solid rgba(20,23,28,.08)}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
 .hm-cost__row:first-of-type{border-top:0;padding-top:0}
 .hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
-.hm-cost__v{font-size:clamp(24px,2.8vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
-.hm-cost__v small{font-size:.5em;font-weight:700;margin-right:4px;color:#5A616A}
-.hm-cost__f{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
-.hm-cost__f li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;color:#5A616A}
-.hm-cost__f li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--hmcost-a)}
-.hm-cost__rev{display:grid;gap:14px}
-.hm-cost__rk a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor;font-weight:700}
-.hm-cost__rk{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5A616A}
-.hm-cost__q{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--hmcost-a)}
-.hm-cost__q blockquote{margin:0 0 10px;font-size:clamp(15px,1.4vw,17px);line-height:1.6;color:#14171C}
-.hm-cost__q figcaption{font-size:13.5px;line-height:1.5;color:#5A616A}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
 .hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
-.hm-cost .hm-cost__q a{color:var(--hmcost-a);font-weight:700;text-decoration:none;white-space:nowrap}
-.hm-cost__q a:hover{text-decoration:underline}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
 @media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
 </style><div class="hm-cost" style="--hmcost-a:#673A7E" data-hmc="service"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Рекламный или корпоративный ролик</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мультимедийная зона</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мероприятие под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Выставочный стенд под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><ul class="hm-cost__f"><li>Это нижние границы по направлениям. Итог зависит от объёма работ, сроков и площадки.</li><li>Смету по вашей задаче готовим бесплатно после брифа.</li><li>По остальным направлениям, от дизайна до печати, считаем по объёму: цена зависит от числа макетов, тиража или числа точек.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«…было успешно реализовано несколько проектов по разным направлениям, включая, но не ограничиваясь: дизайн рекламных печатных материалов, дизайн и верстка сайта, проведение под ключ клиентских вечеринок, разработка и производство сувенирной продукции, оформление стендов на профильных выставках и иных мероприятиях.»</blockquote><figcaption><b>Becar Asset Management</b>Д. С. Сороколетов, вице-президент <a href="/portfolio/becar-private-money">Кейс&nbsp;→</a></figcaption></figure><figure class="hm-cost__q"><blockquote>«На протяжении нескольких лет совместная работа с агентством «Хэнд-Маркетинг» приносит ожидаемый положительный результат.»</blockquote><figcaption><b>Eaton</b>А. К. Бурочкин, директор по маркетингу <a href="/video/eaton">Кейс&nbsp;→</a></figcaption></figure></div></div>
 <h3 class="sv-h3">Частые вопросы</h3>
@@ -297,6 +309,7 @@ aria-label='Photo production' role="img"> </a> </div> <div class='t396__elem tn-
 production</a></div> </div> <div class='t396__elem tn-elem tn-elem__2287262701599786054582 t396__elem--anim-hidden' data-elem-id='1599786054582' data-elem-type='text' data-field-top-value="16" data-field-left-value="-13" data-field-width-value="181" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="%" data-field-leftunits-value="%" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':1500,'mx':'0','my':'0','sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'','dt':2500}]" data-field-fontsize-value="20" data-field-top-res-320-value="-15" data-field-left-res-320-value="-11" data-field-width-res-320-value="90" data-field-fontsize-res-320-value="12" data-field-top-res-480-value="19" data-field-left-res-480-value="-12" data-field-top-res-640-value="15" data-field-left-res-640-value="-13" data-field-top-res-960-value="17" data-field-left-res-960-value="-13"> <div class='tn-atom'><a href="/printandproduction"style="color: inherit">Print &amp;<br>
 Production</a></div> </div> <div class='t396__elem tn-elem tn-elem__2287262701599786054587 t396__elem--anim-hidden' data-elem-id='1599786054587' data-elem-type='text' data-field-top-value="16" data-field-left-value="12" data-field-width-value="51" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="%" data-field-leftunits-value="%" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':1500,'mx':'0','my':'0','sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'','dt':3000}]" data-field-fontsize-value="20" data-field-top-res-320-value="-15" data-field-left-res-320-value="13" data-field-fontsize-res-320-value="12" data-field-top-res-480-value="19" data-field-left-res-480-value="9" data-field-top-res-640-value="15" data-field-left-res-640-value="13" data-field-top-res-960-value="17" data-field-left-res-960-value="14"> <div class='tn-atom'><a href="/btl"style="color: inherit">BTL</a></div> </div> <div class='t396__elem tn-elem tn-elem__2287262701599786054592 t396__elem--anim-hidden' data-elem-id='1599786054592' data-elem-type='text' data-field-top-value="16" data-field-left-value="37" data-field-width-value="71" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="%" data-field-leftunits-value="%" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':1500,'mx':'0','my':'0','sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'','dt':3500}]" data-field-fontsize-value="20" data-field-top-res-320-value="-15" data-field-left-res-320-value="38" data-field-fontsize-res-320-value="12" data-field-top-res-480-value="20" data-field-left-res-480-value="34" data-field-top-res-640-value="15" data-field-left-res-640-value="36" data-field-top-res-960-value="17" data-field-left-res-960-value="40"> <div class='tn-atom'><a href="/digital"style="color: inherit">Digital</a></div> </div> <div class='t396__elem tn-elem tn-elem__2287262701599786054597 t396__elem--anim-hidden' data-elem-id='1599786054597' data-elem-type='text' data-field-top-value="37" data-field-left-value="-38" data-field-width-value="155" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="%" data-field-leftunits-value="%" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':1500,'mx':'0','my':'0','sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'','dt':4000}]" data-field-fontsize-value="20" data-field-top-res-320-value="8" data-field-left-res-320-value="-36" data-field-width-res-320-value="83" data-field-fontsize-res-320-value="12" data-field-top-res-480-value="35" data-field-left-res-480-value="-34" data-field-top-res-640-value="32" data-field-left-res-640-value="-36" data-field-top-res-960-value="38" data-field-left-res-960-value="-40"> <div class='tn-atom'><a href="/3dmapping"style="color: inherit">3D Mapping</a></div> </div><div class='t396__elem tn-elem tn-elem__2287262701755500000051 t396__elem--anim-hidden' data-elem-id='1755500000051' data-elem-type='text' data-field-top-value="37" data-field-left-value="-13" data-field-width-value="155" data-field-axisy-value="center" data-field-axisx-value="center" data-field-container-value="grid" data-field-topunits-value="%" data-field-leftunits-value="%" data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':1500,'mx':'0','my':'0','sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'','dt':4500}]" data-field-fontsize-value="20" data-field-top-res-320-value="8" data-field-left-res-320-value="-11" data-field-width-res-320-value="83" data-field-fontsize-res-320-value="12" data-field-top-res-480-value="35" data-field-left-res-480-value="-12" data-field-top-res-640-value="32" data-field-left-res-640-value="-13" data-field-top-res-960-value="38" data-field-left-res-960-value="-13"> <div class='tn-atom'><a href="/photo"style="color: inherit">Photo production</a></div> </div> <div class='t396__elem tn-elem tn-elem__2287262701605023901871' data-elem-id='1605023901871' data-elem-type='text' data-field-top-value="140" data-field-left-value="30" data-field-width-value="1060" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-fontsize-value="20" data-field-top-res-320-value="275" data-field-left-res-320-value="10" data-field-width-res-320-value="300" data-field-fontsize-res-320-value="13" data-field-top-res-480-value="140" data-field-left-res-480-value="30" data-field-width-res-480-value="430" data-field-top-res-640-value="140" data-field-left-res-640-value="30" data-field-width-res-640-value="580" data-field-top-res-960-value="140" data-field-left-res-960-value="30" data-field-width-res-960-value="860"> <div class='tn-atom'field='tn_text_1605023901871'><strong>Hand Marketing</strong> - агентство полного цикла. Мы оказываем <strong>полный комплекс</strong> маркетинговых услуг, охватывающий
 <strong> online и offline</strong> продвижение товаров и услуг — от исследований, анализа и планирования до продакшна, проведения мероприятий, WOW SHOW и рекламных кампаний любой сложности.<br></div> </div> </div> </div> <script type="td">t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('228726270');});});</script> <!-- /T396 --> </div> 
+
 
 
 
@@ -351,31 +364,43 @@ Production</a></div> </div> <div class='t396__elem tn-elem tn-elem__228726270159
 <p class="sv-why">Мы не посредники: съёмка, дизайн, контент и печать делаются внутри агентства. Это видно по проектам, где направления складываются вместе: для выставки в Самаре мы сделали <a href="/creative/samara/">фирменный стиль</a>, застройку и контент, для Eaton <a href="/video/eaton/">ролики</a>, <a href="/event/eaton/">конференцию</a> и печатные материалы, для Becar десяток проектов от брошюр до <a href="/portfolio/becar-private-money/">выставочного стенда</a>. Заказчику это экономит время на согласованиях и деньги на посредниках.</p>
 <h3 class="sv-h3">Стоимость и отзывы</h3>
 <style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
 .hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
 .hm-cost--solo{grid-template-columns:minmax(0,1fr)}
 .hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor}
-.hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
 .hm-cost--solo .hm-cost__f{margin:0}
-.hm-cost__price{border:1px solid rgba(20,23,28,.1);border-radius:20px;padding:clamp(20px,2.6vw,30px);background:#fff}
-.hm-cost__k{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hmcost-a)}
-.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:12px 0;border-top:1px solid rgba(20,23,28,.08)}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
 .hm-cost__row:first-of-type{border-top:0;padding-top:0}
 .hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
-.hm-cost__v{font-size:clamp(24px,2.8vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
-.hm-cost__v small{font-size:.5em;font-weight:700;margin-right:4px;color:#5A616A}
-.hm-cost__f{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
-.hm-cost__f li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;color:#5A616A}
-.hm-cost__f li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--hmcost-a)}
-.hm-cost__rev{display:grid;gap:14px}
-.hm-cost__rk a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor;font-weight:700}
-.hm-cost__rk{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5A616A}
-.hm-cost__q{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--hmcost-a)}
-.hm-cost__q blockquote{margin:0 0 10px;font-size:clamp(15px,1.4vw,17px);line-height:1.6;color:#14171C}
-.hm-cost__q figcaption{font-size:13.5px;line-height:1.5;color:#5A616A}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
 .hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
-.hm-cost .hm-cost__q a{color:var(--hmcost-a);font-weight:700;text-decoration:none;white-space:nowrap}
-.hm-cost__q a:hover{text-decoration:underline}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
 @media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
 </style><div class="hm-cost" style="--hmcost-a:#673A7E" data-hmc="service"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Рекламный или корпоративный ролик</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мультимедийная зона</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мероприятие под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Выставочный стенд под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><ul class="hm-cost__f"><li>Это нижние границы по направлениям. Итог зависит от объёма работ, сроков и площадки.</li><li>Смету по вашей задаче готовим бесплатно после брифа.</li><li>По остальным направлениям, от дизайна до печати, считаем по объёму: цена зависит от числа макетов, тиража или числа точек.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«…было успешно реализовано несколько проектов по разным направлениям, включая, но не ограничиваясь: дизайн рекламных печатных материалов, дизайн и верстка сайта, проведение под ключ клиентских вечеринок, разработка и производство сувенирной продукции, оформление стендов на профильных выставках и иных мероприятиях.»</blockquote><figcaption><b>Becar Asset Management</b>Д. С. Сороколетов, вице-президент <a href="/portfolio/becar-private-money">Кейс&nbsp;→</a></figcaption></figure><figure class="hm-cost__q"><blockquote>«На протяжении нескольких лет совместная работа с агентством «Хэнд-Маркетинг» приносит ожидаемый положительный результат.»</blockquote><figcaption><b>Eaton</b>А. К. Бурочкин, директор по маркетингу <a href="/video/eaton">Кейс&nbsp;→</a></figcaption></figure></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Рекламное агентство полного цикла: реклама, мероприятия, выставки, контент","serviceType":"Услуги","url":"https://hand-marketing.ru/service","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"},"offers":[{"@type":"Offer","name":"Рекламный или корпоративный ролик","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":150000,"priceCurrency":"RUB"}},{"@type":"Offer","name":"Мультимедийная зона","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":150000,"priceCurrency":"RUB"}},{"@type":"Offer","name":"Мероприятие под ключ","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":500000,"priceCurrency":"RUB"}},{"@type":"Offer","name":"Выставочный стенд под ключ","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":500000,"priceCurrency":"RUB"}}]}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Услуги","item":"https://hand-marketing.ru/service/"}]}</script>
 <h3 class="sv-h3">Частые вопросы</h3>

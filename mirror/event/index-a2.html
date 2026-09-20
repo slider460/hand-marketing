@@ -242,31 +242,43 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script><scrip
 <p class="ev-why">Мы работаем с 2012 года, и почти все наши заказчики приходят повторно: с Eaton сделали конференции, ролики и онлайн-трансляцию, с Becar десяток проектов от брошюр до выставочного стенда, с Saint-Gobain фильмы, съёмку и печатные материалы. Если после мероприятия нужен ролик, сайт или печать, это делает та же команда.</p>
 
 <!--hmc:event--><h3 class="ev-h3">Стоимость и отзывы</h3><style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
 .hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
 .hm-cost--solo{grid-template-columns:minmax(0,1fr)}
 .hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor}
-.hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
 .hm-cost--solo .hm-cost__f{margin:0}
-.hm-cost__price{border:1px solid rgba(20,23,28,.1);border-radius:20px;padding:clamp(20px,2.6vw,30px);background:#fff}
-.hm-cost__k{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hmcost-a)}
-.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:12px 0;border-top:1px solid rgba(20,23,28,.08)}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
 .hm-cost__row:first-of-type{border-top:0;padding-top:0}
 .hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
-.hm-cost__v{font-size:clamp(24px,2.8vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
-.hm-cost__v small{font-size:.5em;font-weight:700;margin-right:4px;color:#5A616A}
-.hm-cost__f{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
-.hm-cost__f li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;color:#5A616A}
-.hm-cost__f li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--hmcost-a)}
-.hm-cost__rev{display:grid;gap:14px}
-.hm-cost__rk a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor;font-weight:700}
-.hm-cost__rk{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5A616A}
-.hm-cost__q{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--hmcost-a)}
-.hm-cost__q blockquote{margin:0 0 10px;font-size:clamp(15px,1.4vw,17px);line-height:1.6;color:#14171C}
-.hm-cost__q figcaption{font-size:13.5px;line-height:1.5;color:#5A616A}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
 .hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
-.hm-cost .hm-cost__q a{color:var(--hmcost-a);font-weight:700;text-decoration:none;white-space:nowrap}
-.hm-cost__q a:hover{text-decoration:underline}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
 @media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
 </style><div class="hm-cost" style="--hmcost-a:#C12164" data-hmc="event"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Мероприятие под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мультимедийная зона на мероприятии</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><ul class="hm-cost__f"><li>Цена зависит от формата, площадки, числа гостей и техники.</li><li>Концепцию с предварительной сметой готовим бесплатно после брифа.</li><li>Лучше всего обращаться за 4–8 недель до даты.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«Благодаря профессионализму, креативности и слаженной работе Вашей дружной команды наш праздник получился ярким, необычным, весёлым и запоминающимся!»</blockquote><figcaption><b>Messe Düsseldorf Moscow</b>Томас Штенцель, генеральный директор <a href="/event/messeduessleldorf">Кейс&nbsp;→</a></figcaption></figure><figure class="hm-cost__q"><blockquote>«Агентством были выполнены все поставленные задачи в сжатые сроки, что свидетельствует о высоком профессионализме сотрудников.»</blockquote><figcaption><b>МФК «Саларис» (АО «ЛАУТ»)</b>Т. В. Левченко, генеральный директор <a href="/event/salaris">Кейс&nbsp;→</a></figcaption></figure></div></div><!--/hmc:event--><h3 class="ev-h3">Вопросы об организации мероприятий</h3>
 <div class="ev-faq"><details class="ev-faq__i"><summary>Какие мероприятия организует ивент-агентство Hand Marketing?</summary><p>Корпоративные мероприятия и праздники, презентации брендов и продуктов, деловые форумы и MICE-события, вечера для арендаторов торговых центров, кросс-мероприятия с медиа, мультимедийные шоу и 3D-маппинг. По масштабу от Нового года в офисе Messe Düsseldorf до 3D-шоу на площади Ленина в Ставрополе, куда пришли больше 25 000 человек.</p></details><details class="ev-faq__i"><summary>Сколько стоит организация мероприятия под ключ?</summary><p>Мероприятие под ключ стоит от 500 000 ₽, мультимедийная зона от 150 000 ₽. Итог зависит от формата, площадки, числа гостей и техники. После брифа бесплатно готовим концепцию с предварительной сметой. Оставьте заявку, и мы перезвоним в течение рабочего дня.</p></details><details class="ev-faq__i"><summary>Что входит в смету мероприятия?</summary><p>Концепция и сценарий, аренда площадки, застройка и декор, техника со светом и звуком, мультимедийный контент, ведущий и артисты, работа команды на площадке, монтаж и демонтаж, фото- и видеосъёмка. В смете каждая позиция стоит отдельной строкой, поэтому её видно целиком и можно убрать лишнее.</p></details><details class="ev-faq__i"><summary>Вы работаете только в Москве?</summary><p>Нет. Офис в Москве, а мероприятия проводим по всей России и за рубежом: 3D-шоу для администрации Ставрополя, партнёрская конференция Eaton в Алматы, проекты в Самаре и Уфе.</p></details><details class="ev-faq__i"><summary>Можно ли заказать только техническое обеспечение: свет, звук, экраны?</summary><p>Да. Свет, звук, экраны и проекторы подбираем под площадку, привозим и ведём весь вечер. Берём и полное техническое сопровождение чужих мероприятий.</p></details><details class="ev-faq__i"><summary>Кто делает контент для экранов и проекций?</summary><p>Наша команда. Видео, графику и 3D мы не отдаём на сторону, поэтому контент считается сразу под конкретную поверхность: экран, купол, фасад здания, кинетическую сетку. Из-за этого на площадке не приходится подгонять картинку в последний вечер.</p></details><details class="ev-faq__i"><summary>За сколько времени лучше обращаться?</summary><p>Лучше всего за 4–8 недель до даты, тогда концепцию, площадку и продакшн успеем проработать без спешки. Но умеем и быстро: часть наших проектов запускалась за две недели.</p></details><details class="ev-faq__i"><summary>Вы работаете по договору и безналичному расчёту?</summary><p>Да. Работаем с юридическими лицами по договору, с закрывающими документами и НДС. Среди заказчиков Samsung, Eaton, Saint-Gobain, РЖД, Becar и Messe Düsseldorf.</p></details><details class="ev-faq__i"><summary>Остаётся ли у нас видео с мероприятия?</summary><p>Да. Фото- и видеоотчёт снимает наша команда, мастер-файлы и версии под соцсети передаём заказчику. Ролик о вечере потом работает в презентациях и на сайте.</p></details></div>
@@ -399,6 +411,7 @@ type="button"><span class="t-btnflex__text js-store-load-more-btn-text">Load mor
 
 
 
+
 <!-- ev-seo: SEO-секция услуги (вставка, Zero-блоки не тронуты) -->
 <style id="ev-seo-css">
 .ev-seo{font-family:'Montserrat',-apple-system,Arial,sans-serif;color:#14171C;background:#fff;padding:72px 0 64px}
@@ -470,31 +483,43 @@ type="button"><span class="t-btnflex__text js-store-load-more-btn-text">Load mor
 <p class="ev-why">Мы работаем с 2012 года, и почти все наши заказчики приходят повторно: с Eaton сделали конференции, ролики и онлайн-трансляцию, с Becar десяток проектов от брошюр до выставочного стенда, с Saint-Gobain фильмы, съёмку и печатные материалы. Если после мероприятия нужен ролик, сайт или печать, это делает та же команда.</p>
 
 <!--hmc:event--><h3 class="ev-h3">Стоимость и отзывы</h3><style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
 .hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
 .hm-cost--solo{grid-template-columns:minmax(0,1fr)}
 .hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor}
-.hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
 .hm-cost--solo .hm-cost__f{margin:0}
-.hm-cost__price{border:1px solid rgba(20,23,28,.1);border-radius:20px;padding:clamp(20px,2.6vw,30px);background:#fff}
-.hm-cost__k{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hmcost-a)}
-.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:12px 0;border-top:1px solid rgba(20,23,28,.08)}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
 .hm-cost__row:first-of-type{border-top:0;padding-top:0}
 .hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
-.hm-cost__v{font-size:clamp(24px,2.8vw,34px);font-weight:800;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
-.hm-cost__v small{font-size:.5em;font-weight:700;margin-right:4px;color:#5A616A}
-.hm-cost__f{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
-.hm-cost__f li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;color:#5A616A}
-.hm-cost__f li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--hmcost-a)}
-.hm-cost__rev{display:grid;gap:14px}
-.hm-cost__rk a{color:var(--hmcost-a);text-decoration:none;border-bottom:1px solid currentColor;font-weight:700}
-.hm-cost__rk{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5A616A}
-.hm-cost__q{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--hmcost-a)}
-.hm-cost__q blockquote{margin:0 0 10px;font-size:clamp(15px,1.4vw,17px);line-height:1.6;color:#14171C}
-.hm-cost__q figcaption{font-size:13.5px;line-height:1.5;color:#5A616A}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
 .hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
-.hm-cost .hm-cost__q a{color:var(--hmcost-a);font-weight:700;text-decoration:none;white-space:nowrap}
-.hm-cost__q a:hover{text-decoration:underline}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
 @media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
 </style><div class="hm-cost" style="--hmcost-a:#C12164" data-hmc="event"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Мероприятие под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Мультимедийная зона на мероприятии</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><ul class="hm-cost__f"><li>Цена зависит от формата, площадки, числа гостей и техники.</li><li>Концепцию с предварительной сметой готовим бесплатно после брифа.</li><li>Лучше всего обращаться за 4–8 недель до даты.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«Благодаря профессионализму, креативности и слаженной работе Вашей дружной команды наш праздник получился ярким, необычным, весёлым и запоминающимся!»</blockquote><figcaption><b>Messe Düsseldorf Moscow</b>Томас Штенцель, генеральный директор <a href="/event/messeduessleldorf">Кейс&nbsp;→</a></figcaption></figure><figure class="hm-cost__q"><blockquote>«Агентством были выполнены все поставленные задачи в сжатые сроки, что свидетельствует о высоком профессионализме сотрудников.»</blockquote><figcaption><b>МФК «Саларис» (АО «ЛАУТ»)</b>Т. В. Левченко, генеральный директор <a href="/event/salaris">Кейс&nbsp;→</a></figcaption></figure></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Организация корпоративных мероприятий под ключ","serviceType":"Организация мероприятий","url":"https://hand-marketing.ru/event/","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"},"offers":[{"@type":"Offer","name":"Мероприятие под ключ","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":500000,"priceCurrency":"RUB"}},{"@type":"Offer","name":"Мультимедийная зона на мероприятии","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":150000,"priceCurrency":"RUB"}}]}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Услуги","item":"https://hand-marketing.ru/service/"},{"@type":"ListItem","position":3,"name":"Организация мероприятий","item":"https://hand-marketing.ru/event/"}]}</script><!--/hmc:event--><h3 class="ev-h3">Вопросы об организации мероприятий</h3>
 <div class="ev-faq"><details class="ev-faq__i"><summary>Какие мероприятия организует ивент-агентство Hand Marketing?</summary><p>Корпоративные мероприятия и праздники, презентации брендов и продуктов, деловые форумы и MICE-события, вечера для арендаторов торговых центров, кросс-мероприятия с медиа, мультимедийные шоу и 3D-маппинг. По масштабу от Нового года в офисе Messe Düsseldorf до 3D-шоу на площади Ленина в Ставрополе, куда пришли больше 25 000 человек.</p></details><details class="ev-faq__i"><summary>Сколько стоит организация мероприятия под ключ?</summary><p>Мероприятие под ключ стоит от 500 000 ₽, мультимедийная зона от 150 000 ₽. Итог зависит от формата, площадки, числа гостей и техники. После брифа бесплатно готовим концепцию с предварительной сметой. Оставьте заявку, и мы перезвоним в течение рабочего дня.</p></details><details class="ev-faq__i"><summary>Что входит в смету мероприятия?</summary><p>Концепция и сценарий, аренда площадки, застройка и декор, техника со светом и звуком, мультимедийный контент, ведущий и артисты, работа команды на площадке, монтаж и демонтаж, фото- и видеосъёмка. В смете каждая позиция стоит отдельной строкой, поэтому её видно целиком и можно убрать лишнее.</p></details><details class="ev-faq__i"><summary>Вы работаете только в Москве?</summary><p>Нет. Офис в Москве, а мероприятия проводим по всей России и за рубежом: 3D-шоу для администрации Ставрополя, партнёрская конференция Eaton в Алматы, проекты в Самаре и Уфе.</p></details><details class="ev-faq__i"><summary>Можно ли заказать только техническое обеспечение: свет, звук, экраны?</summary><p>Да. Свет, звук, экраны и проекторы подбираем под площадку, привозим и ведём весь вечер. Берём и полное техническое сопровождение чужих мероприятий.</p></details><details class="ev-faq__i"><summary>Кто делает контент для экранов и проекций?</summary><p>Наша команда. Видео, графику и 3D мы не отдаём на сторону, поэтому контент считается сразу под конкретную поверхность: экран, купол, фасад здания, кинетическую сетку. Из-за этого на площадке не приходится подгонять картинку в последний вечер.</p></details><details class="ev-faq__i"><summary>За сколько времени лучше обращаться?</summary><p>Лучше всего за 4–8 недель до даты, тогда концепцию, площадку и продакшн успеем проработать без спешки. Но умеем и быстро: часть наших проектов запускалась за две недели.</p></details><details class="ev-faq__i"><summary>Вы работаете по договору и безналичному расчёту?</summary><p>Да. Работаем с юридическими лицами по договору, с закрывающими документами и НДС. Среди заказчиков Samsung, Eaton, Saint-Gobain, РЖД, Becar и Messe Düsseldorf.</p></details><details class="ev-faq__i"><summary>Остаётся ли у нас видео с мероприятия?</summary><p>Да. Фото- и видеоотчёт снимает наша команда, мастер-файлы и версии под соцсети передаём заказчику. Ролик о вечере потом работает в презентациях и на сайте.</p></details></div>
