@@ -37,3 +37,6 @@ scripts/audit/agent-out/
 scripts/audit/serp-cache/
 scripts/audit/lint.json
 scripts/audit/lint.md
+
+# рабочая папка приватного отчёта (незашифрованная версия, исходные данные)
+_andr_build/

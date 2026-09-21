@@ -1,0 +1,8 @@
+# Приватная страница-отчёт. Закрыта от индексации на уровне сервера.
+# Правила действуют ТОЛЬКО внутри этой папки, корневой .htaccess не затрагивается.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</IfModule>
+
+# Не отдавать листинг каталога
+Options -Indexes
