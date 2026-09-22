@@ -10,6 +10,15 @@ if (!isset($_GET['k']) || !hash_equals($KEY, (string)$_GET['k'])) {
     exit('Not Found');
 }
 
+// ---------- обнуление статистики ----------
+if (isset($_GET['reset']) && $_GET['reset'] === '1') {
+    foreach (['hits.jsonl', 'hits.log', '.hit-guard.json', '.geo-cache.json'] as $f) {
+        @unlink(__DIR__ . '/' . $f);
+    }
+    header('Location: log.php?k=' . urlencode($KEY) . '&cleared=1');
+    exit;
+}
+
 header('Content-Type: text/html; charset=utf-8');
 header('X-Robots-Tag: noindex, nofollow');
 
@@ -93,7 +102,13 @@ function mmss(int $s): string {
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#fafaf8;color:#080000;font:15px/1.55 -apple-system,system-ui,sans-serif;padding:26px}
 h1{font-size:23px}
-.sub{color:#8c8c88;font-size:13px;margin:4px 0 22px}
+.sub{color:#8c8c88;font-size:13px;margin:4px 0 0}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.reset{flex:none;font-size:13px;color:#8c8c88;text-decoration:none;border:1px solid #e7e7e4;
+  background:#fff;border-radius:20px;padding:7px 15px;transition:all .15s}
+.reset:hover{color:#ba1e1e;border-color:#ba1e1e}
+.ok{background:#eef7dd;border:1px solid #93c01f;border-radius:10px;padding:12px 16px;
+  margin-bottom:18px;font-size:14px}
 .cards{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
 .c{background:#fff;border:1px solid #e7e7e4;border-radius:12px;padding:15px 18px;min-width:140px}
 .c b{display:block;font-size:28px;line-height:1.1}
@@ -118,8 +133,18 @@ h1{font-size:23px}
 code{font-family:ui-monospace,monospace;font-size:12px}
 </style></head><body>
 
-<h1>Заходы на отчёт</h1>
-<div class="sub">Голубой огонёк 2025 · время московское · обновляется автоматически</div>
+<div class="top">
+  <div>
+    <h1>Заходы на отчёт</h1>
+    <div class="sub">Голубой огонёк 2025 · время московское</div>
+  </div>
+  <a class="reset" href="?k=<?= urlencode($KEY) ?>&amp;reset=1"
+     onclick="return confirm('Обнулить статистику? Все записи будут удалены.')">Обнулить</a>
+</div>
+
+<?php if (isset($_GET['cleared'])): ?>
+  <div class="ok">Статистика обнулена. Дальше пойдут только новые заходы.</div>
+<?php endif; ?>
 
 <div class="cards">
   <div class="c"><b><?= $totalOpen ?></b><span>всего визитов</span></div>
