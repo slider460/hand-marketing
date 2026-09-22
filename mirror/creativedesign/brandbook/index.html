@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Разработка брендбука и фирменного стиля в Москве | Hand Marketing</title><meta name="description" content="Разработка брендбука, фирменного стиля и логотипа под ключ: знак, цвет, шрифты, паттерны, носители и гайдлайн. Брендбуки для Metra, выставки «Самара», Becar. Печать носителей своими силами."><link rel="canonical" href="https://hand-marketing.ru/creativedesign/brandbook/"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="Разработка брендбука и фирменного стиля в Москве | Hand Marketing"><meta property="og:description" content="Разработка брендбука, фирменного стиля и логотипа под ключ: знак, цвет, шрифты, паттерны, носители и гайдлайн. Брендбуки для Metra, выставки «Самара», Becar. Печать носителей своими силами."><meta property="og:url" content="https://hand-marketing.ru/creativedesign/brandbook/"><link href="/fonts/montserrat.css" rel="stylesheet"><style id="hm-chrome-css">
+/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
+#root header,#root footer{display:none!important}
+body>.hm-topbar,.hm-topbar{display:none!important}
+/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
+/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
+#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
+.hm-chrome,.hm-chrome *{box-sizing:border-box}
+.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
+/* ШАПКА */
+.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
+.hm-hdr__nav{display:flex;align-items:center;gap:34px}
+.hm-hdr__nav.r{justify-content:flex-end}
+.hm-hdr a{color:#14171C;text-decoration:none}
+.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
+.hm-hdr__nav a:hover{opacity:.6}
+.hm-hdr__logo{display:flex;justify-content:center}
+.hm-hdr__logo img{height:54px;width:auto;display:block}
+.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
+.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
+.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
+/* ПОДВАЛ — фиолетовая форма */
+.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
+.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
+.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
+.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
+.hm-cta__consent a{color:#fff}
+.hm-cta form{display:flex;flex-direction:column;gap:14px}
+.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
+.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
+  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
+.hm-cta button:hover{transform:translateY(-2px)}
+.hm-cta__msg{font-weight:700;padding:8px 0}
+/* ПОДВАЛ — тёмный футер */
+.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
+.hm-foot__in{max-width:1080px;margin:0 auto}
+.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
+.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.hm-foot__nav a:hover{color:#FFE000}
+.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
+.hm-foot a{color:#cfd2d6}
+.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
+.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
+.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
+.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
+.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
+.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
+@media(max-width:860px){
+  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
+  .hm-hdr__nav.l{display:none}
+  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
+  .hm-hdr__logo{justify-content:flex-start}
+  .hm-hdr__logo img{height:40px}
+  .hm-hdr__contacts{margin-left:0}
+  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
+  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
+}
+
+/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
+   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
+   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
+   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
+body{margin:0}
+@media(min-width:861px){
+ .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
+ .hm-hdr__nav,.hm-hdr__contacts{display:contents}
+ .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
+  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
+ .hm-hdr a:hover{opacity:.6}
+ .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
+ .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
+ .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
+ .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
+@media(min-width:1200px){
+ .hm-hdr a[href="/about"]{left:calc(50% - 600px + 24px)}
+ .hm-hdr a[href="/service"]{left:calc(50% - 600px + 180px)}
+ .hm-hdr a[href="/project"]{left:calc(50% - 600px + 324px)}
+ .hm-hdr a[href="/clients"]{right:calc(50% - 600px + 372px)}
+ .hm-hdr a[href="/contacts"]{right:calc(50% - 600px + 216px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
+@media(min-width:960px) and (max-width:1199px){
+ .hm-hdr a[href="/about"]{left:calc(50% - 480px + 19px)}
+ .hm-hdr a[href="/service"]{left:calc(50% - 480px + 144px)}
+ .hm-hdr a[href="/project"]{left:calc(50% - 480px + 259px)}
+ .hm-hdr a[href="/clients"]{right:calc(50% - 480px + 298px)}
+ .hm-hdr a[href="/contacts"]{right:calc(50% - 480px + 173px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
+@media(min-width:861px) and (max-width:959px){
+ .hm-hdr a[href="/about"]{left:2%}
+ .hm-hdr a[href="/service"]{left:15%}
+ .hm-hdr a[href="/project"]{left:27%}
+ .hm-hdr a[href="/clients"]{right:31%}
+ .hm-hdr a[href="/contacts"]{right:18%}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
+</style><style id="bb-css">
+.bb{--ink:#14171C;--mut:#5A616A;--a:#C12164;--line:#ECEEF2;
+ font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff}
+.bb *{box-sizing:border-box}
+.bb__in{max-width:1180px;margin:0 auto;padding:0 40px}
+.bb-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;
+ letter-spacing:.2em;text-transform:uppercase;color:var(--c,var(--a));margin-bottom:12px}
+.bb-tag::before{content:"";width:11px;height:11px;border-radius:3px;background:currentColor}
+.bb-hero{position:relative;overflow:hidden;isolation:isolate;padding:72px 0 64px}
+.bb-hero__ghost{position:absolute;z-index:-1;right:-20px;top:10px;font:900 420px/1 'Montserrat',Arial,sans-serif;
+ color:var(--a);opacity:.06;letter-spacing:-.06em;pointer-events:none;user-select:none}
+.bb-hero h1{margin:0 0 18px;font-size:clamp(32px,4.6vw,58px);font-weight:900;letter-spacing:-.03em;line-height:1.02;max-width:16ch}
+.bb-hero p{margin:0;max-width:64ch;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#3d434b}
+.bb-chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.bb-chips li{border:1.5px solid var(--line);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:700}
+.bb-cta{display:inline-block;margin-top:28px;background:#FCB724;color:#14171C!important;font-weight:800;font-size:15.5px;
+ padding:15px 34px;border-radius:30px;text-decoration:none}
+.bb-crumbs{font-size:13px;color:#8A9099;padding:20px 0 0}
+.bb-crumbs a{color:#8A9099!important;text-decoration:none}
+.bb-sec{padding:clamp(52px,6vw,84px) 0;border-top:1.5px solid var(--line)}
+.bb-sec h2{margin:0 0 14px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+.bb-sec p.lead{margin:0 0 30px;max-width:74ch;font-size:16.5px;line-height:1.7;color:#3d434b}
+.bb-parts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bb-part{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:22px 22px 20px;
+ box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.bb-part i{display:block;width:40px;height:6px;border-radius:3px;background:var(--c);margin-bottom:14px}
+.bb-part h3{margin:0 0 8px;font-size:17px;font-weight:800;line-height:1.25}
+.bb-part p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
+.bb-formats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bb-f{position:relative;isolation:isolate;overflow:hidden;background:#fff;border:1.5px solid var(--line);border-radius:24px;
+ padding:24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5);display:flex;flex-direction:column;gap:10px}
+.bb-f__ghost{position:absolute;z-index:-1;right:2px;bottom:-40px;font:900 150px/1 'Montserrat',Arial,sans-serif;
+ color:var(--a);opacity:.08;letter-spacing:-.06em}
+.bb-f h3{margin:0;font-size:19px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.bb-f p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
+.bb-f b{margin-top:auto;font-size:14px;font-weight:800;color:var(--a)}
+.bb-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bb-case{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:24px;overflow:hidden;
+ text-decoration:none;color:inherit!important;box-shadow:0 14px 30px -22px rgba(20,23,28,.5);transition:transform .2s,border-color .25s}
+.bb-case:hover{transform:translateY(-3px);border-color:var(--a)}
+.bb-case img{width:100%;height:210px;object-fit:contain;background:#F7F4F1;display:block;padding:12px 0}
+.bb-case__b{padding:18px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.bb-case__n{font-size:24px;font-weight:900;letter-spacing:-.02em;color:var(--a)}
+.bb-case__t{font-size:17px;font-weight:800;line-height:1.25}
+.bb-case__d{font-size:14px;line-height:1.55;color:var(--mut)}
+.bb-case__go{margin-top:auto;font-size:14px;font-weight:800;color:var(--a)}
+.bb-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.bb-step__n{width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;font-size:17px;font-weight:900;
+ display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
+.bb-step h3{margin:0 0 6px;font-size:16px;font-weight:800;line-height:1.25}
+.bb-step p{margin:0;font-size:13.5px;line-height:1.55;color:var(--mut)}
+.bb-faq{display:grid;gap:12px;max-width:900px}
+.bb-faq details{border:1.5px solid var(--line);border-radius:20px;padding:0 22px;background:#fff}
+.bb-faq summary{cursor:pointer;list-style:none;padding:18px 0;font-size:16px;font-weight:800;display:flex;align-items:center;gap:14px}
+.bb-faq summary::-webkit-details-marker{display:none}
+.bb-faq summary::before{content:"+";width:30px;height:30px;border-radius:50%;flex:none;background:#ECEEF2;color:#14171C;
+ font-size:20px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.bb-faq details[open] summary::before{content:"\2212";background:var(--a);color:#fff}
+.bb-faq p{margin:0 0 20px 44px;font-size:15px;line-height:1.65;color:var(--mut)}
+.bb-more{margin:30px 0 0;font-size:15.5px;line-height:1.7;color:#3d434b}
+.bb-more a{color:var(--a)!important;font-weight:700}
+@media(max-width:1100px){.bb-parts,.bb-formats{grid-template-columns:repeat(2,1fr)}.bb-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.bb-cases{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.bb__in{padding:0 18px}.bb-parts,.bb-formats,.bb-cases,.bb-steps{grid-template-columns:1fr}
+ .bb-hero__ghost{font-size:260px}}
+</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px" alt=""></div></noscript></head><body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="bb"><section class="bb-hero"><span class="bb-hero__ghost" aria-hidden="true">B</span><div class="bb__in"><span class="bb-tag">Creative &amp; Design</span><h1>Разработка брендбука и фирменного стиля</h1><p>Делаем фирменный стиль, который работает на реальных носителях: от визитки до выставочного стенда. Брендбук Metra Technology Group на 69 полос с пятью брендами экосистемы, фирменный стиль выставки «Самара» на 28 полос, стиль отдела продаж Becar. Печать и производство носителей делаем сами, поэтому стиль доходит до площадки без потерь.</p><ul class="bb-chips"><li>логотип за 2–3 недели</li><li>брендбук от месяца</li><li>печать носителей своими силами</li></ul><a class="bb-cta" href="#lead">Обсудить проект</a></div></section><div class="bb__in"><nav class="bb-crumbs" aria-label="Навигация по разделам"><a href="/">Главная</a> · <a href="/creativedesign/">Креатив и дизайн</a> · Разработка брендбука</nav></div><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Состав</span><h2>Что входит в брендбук</h2><p class="lead">Брендбук это не альбом с логотипом, а правила, по которым стиль держится без автора. Ниже то, что обычно входит в работу. Состав подбираем под задачу: новому продукту хватает мини-гайда, экосистеме нужна архитектура бренда.</p><div class="bb-parts"><div class="bb-part" style="--c:#C12164"><i aria-hidden="true"></i><h3>Логотип и знак</h3><p>Основная и упрощённая версии, охранное поле, минимальный размер, запреты. Знак вынимается кривыми, чтобы работать от визитки до фасада.</p></div><div class="bb-part" style="--c:#673A7E"><i aria-hidden="true"></i><h3>Цвет</h3><p>Основная и дополнительная палитры с кодами для экрана, печати и производства. Проверяем, как цвет ведёт себя на плёнке, ткани и металле.</p></div><div class="bb-part" style="--c:#8E5FB0"><i aria-hidden="true"></i><h3>Шрифты</h3><p>Пара для заголовков и текста, правила набора, кириллица. Если шрифт платный, подбираем лицензию или свободную замену.</p></div><div class="bb-part" style="--c:#CF6F19"><i aria-hidden="true"></i><h3>Паттерны и графика</h3><p>Фирменная графика, которая узнаётся без логотипа: паттерны, иконки, иллюстрации. Для Metra паттерны собирает генератор.</p></div><div class="bb-part" style="--c:#E08A2B"><i aria-hidden="true"></i><h3>Носители</h3><p>Визитки, бланки, презентации, сувениры, форма персонала, транспорт. Каждый носитель с размерами и готовым файлом.</p></div><div class="bb-part" style="--c:#3B729D"><i aria-hidden="true"></i><h3>Навигация и среда</h3><p>Таблички, указатели, оформление стенда и помещения. Для выставки «Самара» сделали конструктор таблички по модулю.</p></div><div class="bb-part" style="--c:#5E9A2E"><i aria-hidden="true"></i><h3>Архитектура бренда</h3><p>Как связаны материнский бренд и дочерние: общее и различия. Для Metra это пять брендов одной экосистемы.</p></div><div class="bb-part" style="--c:#D6357E"><i aria-hidden="true"></i><h3>Гайдлайн и шаблоны</h3><p>Правила применения и исходники в рабочих форматах, чтобы дизайнер заказчика собирал новые материалы без нас.</p></div></div></div></section><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Форматы</span><h2>От логотипа до архитектуры бренда</h2><div class="bb-formats"><div class="bb-f"><span class="bb-f__ghost" aria-hidden="true">1</span><h3>Логотип и мини-гайд</h3><p>Знак, цвета, шрифты и базовые правила на нескольких полосах. Для нового проекта или продукта.</p><b>2–3 недели</b></div><div class="bb-f"><span class="bb-f__ghost" aria-hidden="true">2</span><h3>Фирменный стиль</h3><p>Логотип плюс фирменная графика и основные носители: бланки, презентация, визитки, соцсети.</p><b>от 3 недель</b></div><div class="bb-f"><span class="bb-f__ghost" aria-hidden="true">3</span><h3>Полный брендбук</h3><p>Весь фирменный стиль, носители, навигация, среда и подробный гайдлайн с шаблонами.</p><b>от месяца</b></div><div class="bb-f"><span class="bb-f__ghost" aria-hidden="true">4</span><h3>Архитектура бренда</h3><p>Система из нескольких брендов: материнский, дочерние, правила их сосуществования.</p><b>по объёму</b></div></div></div></section><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Проекты</span><h2>Брендбуки и фирменные стили, которые мы сделали</h2><p class="lead">У каждого проекта на сайте есть разбор: знак, система, носители и то, как стиль работает в реальной среде.</p><div class="bb-cases"><a class="bb-case" href="/creative/metra/"><img src="/images/lib/custom-metra/cover-main.png" alt="Брендбук Metra Technology Group" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">5 брендов</span><span class="bb-case__t">Брендбук Metra Technology Group</span><span class="bb-case__d">69 полос, архитектура индустриальной экосистемы и генератор паттернов для каждого бренда.</span><span class="bb-case__go">Смотреть проект →</span></span></a><a class="bb-case" href="/creative/samara/"><img src="/images/lib/custom-samara-brand/cover-main.png" alt="Фирменный стиль выставки «Самара»" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">28 полос</span><span class="bb-case__t">Фирменный стиль выставки «Самара»</span><span class="bb-case__d">Руководство для музея: маскот в 16 образах, конструктор навигационной таблички по модулю, стена зоны из 46 слов.</span><span class="bb-case__go">Смотреть проект →</span></span></a><a class="bb-case" href="/creative/becar/sdep/"><img src="/images/lib/as6366-6163-4338-b039-373730386163/__-74.png" alt="Стиль отдела продаж Becar" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">SALESDEP</span><span class="bb-case__t">Стиль отдела продаж Becar</span><span class="bb-case__d">Знак и паттерн, вынутые кривыми из исходника, гайдлайн для всех материалов отдела.</span><span class="bb-case__go">Смотреть проект →</span></span></a><a class="bb-case" href="/creative/piloti/"><img src="/images/lib/as3530-6166-4831-b932-356466373932/__-70.png" alt="Пилоты будущего" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">логотип</span><span class="bb-case__t">Пилоты будущего</span><span class="bb-case__d">Креативная концепция и фирменный стиль детского клуба технологий: знак-корабль и паттерн.</span><span class="bb-case__go">Смотреть проект →</span></span></a><a class="bb-case" href="/creative/patriki/"><img src="/images/lib/as6265-3361-4465-a366-336161356638/__-68.png" alt="Журнал Patriki Times" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">сетка</span><span class="bb-case__t">Журнал Patriki Times</span><span class="bb-case__d">Дизайн издания и модульная сетка, по которой номер собирается каждый месяц.</span><span class="bb-case__go">Смотреть проект →</span></span></a><a class="bb-case" href="/creative/skolkovo/"><img src="/images/lib/as3266-3963-4363-a239-646364383365/__-72.png" alt="Доклад для СКОЛКОВО" loading="lazy" width="600" height="600"><span class="bb-case__b"><span class="bb-case__n">86 полос</span><span class="bb-case__t">Доклад для СКОЛКОВО</span><span class="bb-case__d">Вёрстка доклада «Цифровое производство» с инфографикой в едином визуальном языке.</span><span class="bb-case__go">Смотреть проект →</span></span></a></div></div></section><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Порядок работы</span><h2>Как идёт разработка</h2><p class="lead">Согласование идёт по промежуточным листам: заказчик видит концепцию, знак и носители до того, как стиль уйдёт в производство.</p><div class="bb-steps"><div class="bb-step" style="--c:#673A7E"><span class="bb-step__n">01</span><h3>Бриф и аудит</h3><p>Задачи бренда, аудитория, конкуренты. Смотрим, что уже есть и что стоит сохранить.</p></div><div class="bb-step" style="--c:#8E5FB0"><span class="bb-step__n">02</span><h3>Концепция</h3><p>Два-три направления идеи с обоснованием. Выбираем одно и развиваем его.</p></div><div class="bb-step" style="--c:#C12164"><span class="bb-step__n">03</span><h3>Знак и система</h3><p>Логотип, цвет, шрифты и графика. Проверяем на реальных носителях, а не на белом листе.</p></div><div class="bb-step" style="--c:#CF6F19"><span class="bb-step__n">04</span><h3>Носители</h3><p>Раскладываем стиль на все нужные материалы с размерами и готовыми файлами.</p></div><div class="bb-step" style="--c:#5E9A2E"><span class="bb-step__n">05</span><h3>Гайдлайн и сдача</h3><p>Правила применения, шаблоны и исходники. Всё передаём заказчику, без привязки к нам.</p></div></div></div></section><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Стоимость</span><h2>Стоимость и отзывы</h2><style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
+.hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
+.hm-cost--solo{grid-template-columns:minmax(0,1fr)}
+.hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__f{margin:0}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
+.hm-cost__row:first-of-type{border-top:0;padding-top:0}
+.hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
+.hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
+@media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
+</style><div class="hm-cost" style="--hmcost-a:#C12164" data-hmc="brandbook"><div class="hm-cost__price"><p class="hm-cost__k">Как считаем смету <a href="/price/">все цены&nbsp;→</a></p><ul class="hm-cost__f"><li>Считаем по объёму: логотип с мини-гайдом, фирменный стиль или полный брендбук с архитектурой бренда это разные сметы.</li><li>Логотип и базовая айдентика обычно 2–3 недели, полный брендбук от месяца.</li><li>Смету готовим бесплатно после брифа, в ней видно каждую позицию.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«…за работу над проектами по разработке дизайна рекламных материалов.»</blockquote><figcaption><b>Saint-Gobain</b>Юлия Ночевина, руководитель отдела маркетинговых коммуникаций</figcaption></figure><figure class="hm-cost__q"><blockquote>«…мы рады возможности решать задачи разного уровня и направлений (от разработки и производства сувенирной продукции до оформления стендов и проведение клиентских мероприятий) в рамках взаимодействия с одной компанией.»</blockquote><figcaption><b>Becar Asset Management</b>Д. С. Сороколетов, вице-президент <a href="/portfolio/becar-private-money">Кейс&nbsp;→</a></figcaption></figure></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Разработка брендбука и фирменного стиля","serviceType":"Разработка брендбука","url":"https://hand-marketing.ru/creativedesign/brandbook/","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"}}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Креатив и дизайн","item":"https://hand-marketing.ru/creativedesign/"},{"@type":"ListItem","position":3,"name":"Разработка брендбука","item":"https://hand-marketing.ru/creativedesign/brandbook/"}]}</script><p class="bb-more">Состав смет по всем направлениям разобран на странице <a href="/price/">стоимости</a>, другие работы по дизайну в разделе <a href="/creativedesign/">креатива и дизайна</a>.</p></div></section><section class="bb-sec"><div class="bb__in"><span class="bb-tag">Вопросы</span><h2>Что спрашивают о брендбуке</h2><div class="bb-faq"><details><summary>Сколько стоит разработка брендбука?</summary><p>Считаем по объёму. Логотип с мини-гайдом, фирменный стиль и полный брендбук с архитектурой бренда это разные сметы. После брифа готовим смету бесплатно, в ней видно каждую позицию.</p></details><details><summary>Сколько времени занимает работа?</summary><p>Логотип и базовая айдентика обычно 2–3 недели, полный брендбук от месяца. Срок зависит от числа носителей и итераций согласования.</p></details><details><summary>Чем брендбук отличается от фирменного стиля?</summary><p>Фирменный стиль это сам визуальный язык: знак, цвет, шрифты, графика. Брендбук добавляет к нему правила применения, носители и шаблоны, чтобы стиль держался без автора.</p></details><details><summary>Вы работаете с существующим брендом?</summary><p>Да. Можем развить готовую айдентику: добавить носители, собрать шаблоны, привести материалы к единому виду. Для Saint-Gobain мы годами делаем материалы внутри их гайдлайна.</p></details><details><summary>Что мы получим в конце?</summary><p>Брендбук в PDF, исходники в рабочих форматах, шрифты и лицензии, шаблоны носителей. Всё передаётся заказчику, без привязки к агентству.</p></details><details><summary>Вы потом печатаете и производите носители?</summary><p>Да, это наше отличие: печать, сувениры, навигация и оформление стендов делаются внутри агентства, поэтому стиль доходит до носителя без потерь в цвете и пропорциях.</p></details></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит разработка брендбука?","acceptedAnswer":{"@type":"Answer","text":"Считаем по объёму. Логотип с мини-гайдом, фирменный стиль и полный брендбук с архитектурой бренда это разные сметы. После брифа готовим смету бесплатно, в ней видно каждую позицию."}},{"@type":"Question","name":"Сколько времени занимает работа?","acceptedAnswer":{"@type":"Answer","text":"Логотип и базовая айдентика обычно 2–3 недели, полный брендбук от месяца. Срок зависит от числа носителей и итераций согласования."}},{"@type":"Question","name":"Чем брендбук отличается от фирменного стиля?","acceptedAnswer":{"@type":"Answer","text":"Фирменный стиль это сам визуальный язык: знак, цвет, шрифты, графика. Брендбук добавляет к нему правила применения, носители и шаблоны, чтобы стиль держался без автора."}},{"@type":"Question","name":"Вы работаете с существующим брендом?","acceptedAnswer":{"@type":"Answer","text":"Да. Можем развить готовую айдентику: добавить носители, собрать шаблоны, привести материалы к единому виду. Для Saint-Gobain мы годами делаем материалы внутри их гайдлайна."}},{"@type":"Question","name":"Что мы получим в конце?","acceptedAnswer":{"@type":"Answer","text":"Брендбук в PDF, исходники в рабочих форматах, шрифты и лицензии, шаблоны носителей. Всё передаётся заказчику, без привязки к агентству."}},{"@type":"Question","name":"Вы потом печатаете и производите носители?","acceptedAnswer":{"@type":"Answer","text":"Да, это наше отличие: печать, сувениры, навигация и оформление стендов делаются внутри агентства, поэтому стиль доходит до носителя без потерь в цвете и пропорциях."}}]}</script></div></section></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
+// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
+function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
+ n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
+// форма -> /api/lead.php
+function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
+document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
+ var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
+ var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
+ fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
+var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
+if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
+})();</script><style id="hm-cookie-consent">
+.hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.hmc.is-on{transform:translateY(0)}
+.hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
+.hmc__card{position:relative;max-width:1200px;margin:0 auto;background:#fff;border:1px solid #f3f4f6;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+.hmc__title{font-family:'Montserrat','Inter',sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0f172a;margin:0 0 6px}
+.hmc__text{font-size:14px;line-height:1.55;color:#334155;margin:0;max-width:820px}
+.hmc__text a{color:#2563eb;text-decoration:none}
+.hmc__text a:hover{text-decoration:underline;text-underline-offset:3px}
+.hmc__accept{flex:none;appearance:none;border:0;cursor:pointer;background:#111827;color:#fff;font-family:'Montserrat','Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:14px 32px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:background .15s,transform .15s,box-shadow .15s}
+.hmc__accept:hover{background:#1f2937;transform:translateY(-2px);box-shadow:0 16px 26px -10px rgba(0,0,0,.45)}
+.hmc__close{position:absolute;top:10px;right:12px;width:28px;height:28px;border:0;background:transparent;color:#94a3b8;font-size:22px;line-height:1;cursor:pointer;display:none}
+.hmc__close:hover{color:#475569}
+@media (max-width:760px){
+ .hmc{padding:12px}
+ .hmc__card{flex-direction:column;align-items:flex-start;gap:16px;padding:22px 20px}
+ .hmc__accept{width:100%}
+ .hmc__close{display:block}
+}
+</style>
+<div class="hmc" id="hmCookie" role="dialog" aria-label="Согласие на использование файлов cookie" aria-live="polite">
+ <div class="hmc__card">
+  <div>
+   <div class="hmc__title">Мы используем файлы cookie</div>
+   <p class="hmc__text">Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даёте согласие на обработку файлов cookie. Подробнее в <a href="/privacy">Политике обработки персональных данных</a>.</p>
+  </div>
+  <button type="button" class="hmc__accept" id="hmCookieOk">ПРИНИМАЮ</button>
+  <button type="button" class="hmc__close" id="hmCookieX" aria-label="Закрыть">&times;</button>
+ </div>
+</div>
+<script>(function(){
+ var KEY='hm-cookie-consent';
+ try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
+ var box=document.getElementById('hmCookie');if(!box)return;
+ function accept(){try{localStorage.setItem(KEY,'1');}catch(e){}box.classList.remove('is-on');setTimeout(function(){if(box&&box.parentNode)box.parentNode.removeChild(box);},400);}
+ document.getElementById('hmCookieOk').addEventListener('click',accept);
+ document.getElementById('hmCookieX').addEventListener('click',accept);
+ setTimeout(function(){box.classList.add('is-on');},600);
+})();</script><script id="hm-metrika-goals">(function(){
+function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM')return;
+ if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ g('form_submit');
+},true);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+ if(!a)return;
+ g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+},true);
+})();</script></body></html>
