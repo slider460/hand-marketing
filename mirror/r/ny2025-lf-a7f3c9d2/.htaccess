@@ -8,6 +8,6 @@
 Options -Indexes
 
 # Лог заходов и служебные файлы наружу не отдаём (смотреть через log.php с ключом)
-<FilesMatch "(\.log|\.hit-guard\.json)$">
+<FilesMatch "(\.log|\.jsonl|\.hit-guard\.json|\.geo-cache\.json)$">
   Require all denied
 </FilesMatch>
