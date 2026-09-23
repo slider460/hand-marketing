@@ -229,17 +229,47 @@ alt='' imgfield='tn_img_1604681109980'
 /> </div> </div> <div class='t396__elem tn-elem tn-elem__2376106061604681147600' data-elem-id='1604681147600' data-elem-type='text' data-field-top-value="240" data-field-left-value="420" data-field-width-value="170" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="" data-field-widthunits-value="px" data-field-fontsize-value="15" data-field-top-res-320-value="294" data-field-left-res-320-value="167" data-field-width-res-320-value="70" data-field-fontsize-res-320-value="8" data-field-top-res-640-value="315" data-field-left-res-640-value="280" data-field-top-res-960-value="275" data-field-left-res-960-value="280"> <div class='tn-atom'field='tn_text_1604681147600'>Подключен<br>
 к системе</div> </div> </div> </div> <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('237610606');});});</script> <!-- /T396 --> </div> </footer> <!--/footer--> </div> <!--/allrecords--> <!-- Stat --> <!-- Yandex.Metrika counter 71125393 --> <script type="text/javascript" data-tn-cookie-type="analytics">setTimeout(function(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.mainMetrikaId='71125393';ym(window.mainMetrikaId,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,params:{__ym:{"ymCms":{"cms":"custom","cmsVersion":"1.0","cmsCatalog":"1"}}},ecommerce:"dataLayer"});},2000);</script> <noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --> <script type="text/javascript">if(!window.mainTracker) {window.mainTracker='custom';}
 </script> <script src="../static/adaptive.js"></script><script id="hm-metrika-goals">(function(){
-function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+var sent={};
+function g(id,once){if(once){if(sent[id])return;sent[id]=1;}try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+function inQuiz(el){return el&&el.closest&&el.closest('[data-quiz]');} // у квиза свои цели
 document.addEventListener('submit',function(e){
- var f=e.target;if(!f||f.tagName!=='FORM')return;
- if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ var f=e.target;if(!f||f.tagName!=='FORM'||inQuiz(f))return;
  g('form_submit');
 },true);
-document.addEventListener('click',function(e){
- var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
- if(!a)return;
- g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+document.addEventListener('focusin',function(e){
+ var t=e.target;if(!t||!/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.type==='hidden')return;
+ var f=t.form||(t.closest&&t.closest('form'));if(!f||inQuiz(f))return;
+ g('form_start',1);
 },true);
+function kind(h){
+ h=(h||'').toLowerCase();
+ if(h.indexOf('tel:')===0)return 'phone';
+ if(h.indexOf('mailto:')===0)return 'email';
+ if(/\/\/(www\.)?(t\.me|telegram\.me)\//.test(h))return 'telegram';
+ if(/\/\/(wa\.me|api\.whatsapp\.com)\//.test(h))return 'whatsapp';
+ if(/\.(pdf|pptx?|docx?|xlsx?|zip)([?#]|$)/.test(h))return 'file';
+ return '';
+}
+var CLICK={phone:'phone_click',email:'email_click',telegram:'telegram_click',whatsapp:'whatsapp_click',file:'file_download'};
+function link(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');return a?kind(a.getAttribute('href')):'';}
+document.addEventListener('click',function(e){var k=link(e);if(k)g(CLICK[k]);},true);
+// правая кнопка или долгое нажатие на телефоне: «Скопировать адрес» из меню ссылки
+document.addEventListener('contextmenu',function(e){var k=link(e);if(k==='email')g('email_copy');else if(k==='phone')g('phone_copy');},true);
+document.addEventListener('copy',function(){
+ var s='';try{s=String(window.getSelection()).trim();}catch(e){}
+ if(/[\w.+-]+@[\w-]+\.[\w.-]+/.test(s))g('email_copy');
+ else if(/^[\s\d()+-]+$/.test(s)&&s.replace(/\D/g,'').length>=10)g('phone_copy');
+},true);
+document.addEventListener('play',function(e){
+ var v=e.target;if(!v||v.tagName!=='VIDEO')return;
+ var ua=navigator.userActivation;if(ua?!ua.isActive:v.muted)return;
+ g('video_play',1);
+},true);
+window.addEventListener('scroll',function(){
+ if(sent.scroll_75)return;
+ var d=document.documentElement,h=d.scrollHeight-window.innerHeight;
+ if(h>0&&(window.pageYOffset||d.scrollTop)/h>=0.75)g('scroll_75',1);
+},{passive:true});
 })();</script><style id="hm-cookie-consent">
 .hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 .hmc.is-on{transform:translateY(0)}

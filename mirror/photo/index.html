@@ -356,15 +356,45 @@ if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.docume
  document.getElementById('hmCookieX').addEventListener('click',accept);
  setTimeout(function(){box.classList.add('is-on');},600);
 })();</script><script id="hm-metrika-goals">(function(){
-function g(id){try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+var sent={};
+function g(id,once){if(once){if(sent[id])return;sent[id]=1;}try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+function inQuiz(el){return el&&el.closest&&el.closest('[data-quiz]');} // у квиза свои цели
 document.addEventListener('submit',function(e){
- var f=e.target;if(!f||f.tagName!=='FORM')return;
- if(f.closest&&f.closest('[data-quiz]'))return; // у квиза свои цели
+ var f=e.target;if(!f||f.tagName!=='FORM'||inQuiz(f))return;
  g('form_submit');
 },true);
-document.addEventListener('click',function(e){
- var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
- if(!a)return;
- g(a.getAttribute('href').indexOf('tel:')===0?'phone_click':'email_click');
+document.addEventListener('focusin',function(e){
+ var t=e.target;if(!t||!/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.type==='hidden')return;
+ var f=t.form||(t.closest&&t.closest('form'));if(!f||inQuiz(f))return;
+ g('form_start',1);
 },true);
+function kind(h){
+ h=(h||'').toLowerCase();
+ if(h.indexOf('tel:')===0)return 'phone';
+ if(h.indexOf('mailto:')===0)return 'email';
+ if(/\/\/(www\.)?(t\.me|telegram\.me)\//.test(h))return 'telegram';
+ if(/\/\/(wa\.me|api\.whatsapp\.com)\//.test(h))return 'whatsapp';
+ if(/\.(pdf|pptx?|docx?|xlsx?|zip)([?#]|$)/.test(h))return 'file';
+ return '';
+}
+var CLICK={phone:'phone_click',email:'email_click',telegram:'telegram_click',whatsapp:'whatsapp_click',file:'file_download'};
+function link(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');return a?kind(a.getAttribute('href')):'';}
+document.addEventListener('click',function(e){var k=link(e);if(k)g(CLICK[k]);},true);
+// правая кнопка или долгое нажатие на телефоне: «Скопировать адрес» из меню ссылки
+document.addEventListener('contextmenu',function(e){var k=link(e);if(k==='email')g('email_copy');else if(k==='phone')g('phone_copy');},true);
+document.addEventListener('copy',function(){
+ var s='';try{s=String(window.getSelection()).trim();}catch(e){}
+ if(/[\w.+-]+@[\w-]+\.[\w.-]+/.test(s))g('email_copy');
+ else if(/^[\s\d()+-]+$/.test(s)&&s.replace(/\D/g,'').length>=10)g('phone_copy');
+},true);
+document.addEventListener('play',function(e){
+ var v=e.target;if(!v||v.tagName!=='VIDEO')return;
+ var ua=navigator.userActivation;if(ua?!ua.isActive:v.muted)return;
+ g('video_play',1);
+},true);
+window.addEventListener('scroll',function(){
+ if(sent.scroll_75)return;
+ var d=document.documentElement,h=d.scrollHeight-window.innerHeight;
+ if(h>0&&(window.pageYOffset||d.scrollTop)/h>=0.75)g('scroll_75',1);
+},{passive:true});
 })();</script></body></html>
