@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Дизайн и проектирование выставочных стендов в Москве | Hand Marketing</title><meta name="description" content="Дизайн выставочного стенда: концепция, зонирование, 3D-визуализация и рабочие чертежи. Проект для вашего застройщика или стенд под ключ. Дизайн-проект от 100 000 ₽."><link rel="canonical" href="https://hand-marketing.ru/exhibition/dizayn-stenda/"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="Дизайн и проектирование выставочных стендов в Москве | Hand Marketing"><meta property="og:description" content="Дизайн выставочного стенда: концепция, зонирование, 3D-визуализация и рабочие чертежи. Проект для вашего застройщика или стенд под ключ. Дизайн-проект от 100 000 ₽."><meta property="og:url" content="https://hand-marketing.ru/exhibition/dizayn-stenda/"><meta property="og:image" content="https://hand-marketing.ru/images/exhibition/samara/render-v1-a.jpg"><link href="/fonts/montserrat.css" rel="stylesheet"><style id="hm-chrome-css">
+/* спрятать родные шапку/подвал React-кейса. .hm-topbar — шапка React (div, потомок body, ВНЕ #root) */
+#root header,#root footer{display:none!important}
+body>.hm-topbar,.hm-topbar{display:none!important}
+/* React-CTA внизу кейса (синий/зелёный градиент с кнопкой «Обсудить проект») — */
+/* заменён нашей фиолетовой формой; скрытие основным образом делает JS по тексту кнопки */
+#root section.from-blue-700,#root section.from-emerald-600{display:none!important}
+.hm-chrome,.hm-chrome *{box-sizing:border-box}
+.hm-chrome{font-family:'Montserrat',-apple-system,Arial,sans-serif}
+/* ШАПКА */
+.hm-hdr{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid rgba(20,23,28,.08);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:80px;padding:0 40px}
+.hm-hdr__nav{display:flex;align-items:center;gap:34px}
+.hm-hdr__nav.r{justify-content:flex-end}
+.hm-hdr a{color:#14171C;text-decoration:none}
+.hm-hdr__nav a{font-weight:700;font-size:16px;white-space:nowrap;transition:opacity .15s}
+.hm-hdr__nav a:hover{opacity:.6}
+.hm-hdr__logo{display:flex;justify-content:center}
+.hm-hdr__logo img{height:54px;width:auto;display:block}
+.hm-hdr__contacts{display:flex;flex-direction:column;align-items:flex-end;margin-left:18px;line-height:1.25}
+.hm-hdr__contacts .ph{font-weight:800;font-size:17px;color:#14171C}
+.hm-hdr__contacts .em{font-size:13px;color:#6A7078}
+/* ПОДВАЛ — фиолетовая форма */
+.hm-cta{background:#77449E;color:#fff;padding:62px 40px}
+.hm-cta__in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hm-cta h2{font-size:40px;font-weight:800;line-height:1.05;margin:0 0 14px}
+.hm-cta p{margin:0;font-size:18px;color:rgba(255,255,255,.85)}
+.hm-cta__consent{margin-top:16px;font-size:12px;color:rgba(255,255,255,.7)}
+.hm-cta__consent a{color:#fff}
+.hm-cta form{display:flex;flex-direction:column;gap:14px}
+.hm-cta input{height:56px;border:0;border-radius:30px;padding:0 26px;font:500 16px Montserrat,Arial,sans-serif;color:#14171C}
+.hm-cta button{align-self:flex-start;height:54px;border:0;border-radius:30px;padding:0 42px;cursor:pointer;
+  background:#FCB724;color:#14171C;font:800 16px Montserrat,Arial,sans-serif;transition:transform .15s}
+.hm-cta button:hover{transform:translateY(-2px)}
+.hm-cta__msg{font-weight:700;padding:8px 0}
+/* ПОДВАЛ — тёмный футер */
+.hm-foot{background:#242424;color:#cfd2d6;padding:42px 40px 30px}
+.hm-foot__in{max-width:1080px;margin:0 auto}
+.hm-foot__nav{display:flex;flex-wrap:wrap;gap:30px;padding-bottom:22px;border-bottom:2px solid #FFE000}
+.hm-foot__nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.hm-foot__nav a:hover{color:#FFE000}
+.hm-foot__cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-top:26px;font-size:13px;line-height:1.6}
+.hm-foot a{color:#cfd2d6}
+.hm-foot__c .ph{display:block;font-weight:800;font-size:17px;color:#fff;margin-bottom:4px}
+.hm-foot__soc{display:flex;gap:12px;margin-top:14px}
+.hm-foot__soc a{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#3a3a3a;align-items:center;justify-content:center}
+.hm-foot__soc svg{width:18px;height:18px;fill:#fff}
+.hm-foot__sber{display:flex;align-items:center;gap:8px;margin-top:10px}
+.hm-foot__sber img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.hm-foot__cp{margin-top:22px;font-size:12px;color:#8a8f96}
+@media(max-width:860px){
+  .hm-hdr{grid-template-columns:auto 1fr;height:64px;padding:0 16px}
+  .hm-hdr__nav.l{display:none}
+  .hm-hdr__nav.r>a,.hm-hdr__contacts .em{display:none}  /* скрыть пункты меню, оставить телефон */
+  .hm-hdr__logo{justify-content:flex-start}
+  .hm-hdr__logo img{height:40px}
+  .hm-hdr__contacts{margin-left:0}
+  .hm-cta{padding:40px 18px}.hm-cta__in{grid-template-columns:1fr;gap:24px}.hm-cta h2{font-size:28px}
+  .hm-foot{padding:30px 18px}.hm-foot__cols{grid-template-columns:1fr;gap:20px}
+}
+
+/* === TILDA_HDR_CSS: шапка — точная реплика Tilda-шапки сайта (rec237851314) ===
+   Координаты сняты с движка: высота 140, сетка 1200/960, Raleway 700 20px #000,
+   лого 90px по центру окна, телефон 20px + почта 14px правым краем, НЕ sticky.
+   Только десктоп >=861px — мобильная компакт-шапка остаётся как есть. */
+body{margin:0}
+@media(min-width:861px){
+ .hm-hdr{position:relative;display:block;height:140px;border-bottom:0;padding:0;background:#fff}
+ .hm-hdr__nav,.hm-hdr__contacts{display:contents}
+ .hm-hdr a{position:absolute;top:50px;width:100px;font-family:'Raleway',Arial,sans-serif;
+  font-size:20px;font-weight:700;line-height:.95;color:#000;white-space:nowrap;transition:opacity .15s}
+ .hm-hdr a:hover{opacity:.6}
+ .hm-hdr__contacts .ph{width:160px;text-align:right;font-size:20px;color:#000}
+ .hm-hdr__contacts .em{top:75px;width:260px;text-align:right;font-size:14px;color:#000}
+ .hm-hdr a.hm-hdr__logo{width:90px;top:30px;left:calc(50% - 45px)}
+ .hm-hdr a.hm-hdr__logo img{width:90px;height:auto;display:block}}
+@media(min-width:1200px){
+ .hm-hdr a[href="/about/"]{left:calc(50% - 600px + 24px)}
+ .hm-hdr a[href="/service/"]{left:calc(50% - 600px + 180px)}
+ .hm-hdr a[href="/project/"]{left:calc(50% - 600px + 324px)}
+ .hm-hdr a[href="/clients/"]{right:calc(50% - 600px + 372px)}
+ .hm-hdr a[href="/contacts/"]{right:calc(50% - 600px + 216px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 600px + 24px)}}
+@media(min-width:960px) and (max-width:1199px){
+ .hm-hdr a[href="/about/"]{left:calc(50% - 480px + 19px)}
+ .hm-hdr a[href="/service/"]{left:calc(50% - 480px + 144px)}
+ .hm-hdr a[href="/project/"]{left:calc(50% - 480px + 259px)}
+ .hm-hdr a[href="/clients/"]{right:calc(50% - 480px + 298px)}
+ .hm-hdr a[href="/contacts/"]{right:calc(50% - 480px + 173px)}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:calc(50% - 480px + 19px)}}
+@media(min-width:861px) and (max-width:959px){
+ .hm-hdr a[href="/about/"]{left:2%}
+ .hm-hdr a[href="/service/"]{left:15%}
+ .hm-hdr a[href="/project/"]{left:27%}
+ .hm-hdr a[href="/clients/"]{right:31%}
+ .hm-hdr a[href="/contacts/"]{right:18%}
+ .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
+</style><style>
+.ds{--a:#673A7E;--ink:#14171C;--mut:#5A616A;--line:rgba(20,23,28,.12);--paper:#F7F5F0;
+ font-family:'Montserrat',Arial,sans-serif;color:var(--ink);background:#fff}
+.ds__in{max-width:1180px;margin:0 auto;padding:0 40px}
+.ds-sec{padding:clamp(46px,5.6vw,80px) 0}
+.ds-sec__h{margin:0 0 10px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.ds-sec__lead{margin:0 0 30px;max-width:72ch;font-size:16.5px;line-height:1.65;color:var(--mut)}
+.ds-sec__lead a,.ds-more a{color:var(--a);font-weight:700}
+.ds-hero{position:relative;min-height:clamp(400px,58vh,580px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0E1016}
+.ds-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ds-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,18,.25),rgba(10,10,18,.88))}
+.ds-hero__in{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 40px clamp(34px,4.6vw,60px)}
+.ds-hero__k{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D9C4E8}
+.ds-hero h1{margin:0;font-size:clamp(28px,4.2vw,54px);font-weight:800;letter-spacing:-.025em;line-height:1.06;max-width:17ch}
+.ds-hero__lead{margin:18px 0 0;max-width:60ch;font-size:clamp(15.5px,1.5vw,18px);line-height:1.6;color:rgba(255,255,255,.88)}
+.ds-hero__f{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.ds-hero__f li{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:600}
+.ds-hero__cta{display:inline-block;margin-top:24px;background:#FCB724;color:#14171C;font-weight:800;font-size:15.5px;padding:15px 34px;border-radius:30px;text-decoration:none}
+.ds-hero__cap{position:absolute;right:40px;top:22px;font-size:12px;color:rgba(255,255,255,.7);max-width:34ch;text-align:right}
+.ds-crumbs{font-size:13px;color:#8A9099;padding:18px 0 0}
+.ds-crumbs a{color:#8A9099;text-decoration:none}
+.ds-crumbs a:hover{text-decoration:underline}
+/* проект → монтаж → стенд */
+.ds-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:rt}
+.ds-route figure{margin:0;counter-increment:rt}
+.ds-route__f{position:relative;border-radius:16px;overflow:hidden;background:var(--paper)}
+.ds-route img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.ds-route__t{position:absolute;left:12px;top:12px;background:#fff;border-radius:20px;padding:6px 14px 6px 10px;font-size:13px;font-weight:800;display:flex;gap:8px;align-items:center}
+.ds-route__t::before{content:"0" counter(rt);color:var(--a)}
+.ds-route figcaption{margin-top:12px;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.ds-more{margin:22px 0 0;font-size:15px;line-height:1.65;color:var(--mut);max-width:74ch}
+.ds-kinds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ds-kind{border-top:2px solid var(--a);padding:14px 0 0}
+.ds-kind b{display:block;font-size:16px;margin-bottom:6px}
+.ds-kind span{font-size:14.5px;line-height:1.55;color:var(--mut)}
+.ds-kind a{color:inherit}
+/* альбом проекта: лист в рамке чертежа со штампом */
+.ds-alb input{position:absolute;opacity:0;pointer-events:none}
+.ds-alb__tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.ds-alb__lbl{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-weight:700;cursor:pointer;background:#fff;transition:border-color .15s,background .15s}
+.ds-alb__lbl span{font-size:12px;color:#8A9099;font-weight:700}
+.ds-alb__lbl:hover{border-color:var(--a)}
+.ds-alb__sheet{display:none}
+.ds-alb__frame{position:relative;background:#fff;border:1.5px solid var(--ink);padding:12px;box-shadow:10px 10px 0 -1px var(--paper),10px 10px 0 0 var(--line)}
+.ds-alb__frame img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--paper)}
+.ds-alb__stamp{position:absolute;right:12px;bottom:12px;display:grid;grid-template-columns:auto auto;background:#fff;border:1.5px solid var(--ink);font-size:11.5px;line-height:1.3}
+.ds-alb__stamp span{padding:5px 9px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.ds-alb__stamp span:nth-child(2n){border-right:0;font-weight:700}
+.ds-alb__stamp span:nth-last-child(-n+2){border-bottom:0}
+.ds-alb__stamp span:nth-child(2n+1){color:#8A9099;text-transform:uppercase;letter-spacing:.06em;font-size:10.5px}
+.ds-alb__cap{margin:18px 0 0;font-size:15.5px;line-height:1.65;color:var(--mut);max-width:70ch}
+.ds-alb__cap b{color:var(--ink)}
+.ds-modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ds-mode{border:1px solid var(--line);border-radius:20px;padding:24px 26px;display:flex;flex-direction:column;gap:10px}
+.ds-mode__h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px}
+.ds-mode__h b{font-size:19px;letter-spacing:-.01em}
+.ds-mode__h em{font-style:normal;font-size:22px;font-weight:900;color:var(--a);white-space:nowrap}
+.ds-mode p{margin:0;font-size:15px;line-height:1.6;color:var(--mut)}
+.ds-mode a{margin-top:auto;font-size:14px;font-weight:700;color:var(--a)}
+.ds-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:st}
+.ds-step{counter-increment:st;border-top:2px solid var(--a);padding-top:12px}
+.ds-step::before{content:"0" counter(st);font-weight:800;font-size:13px;color:var(--a);letter-spacing:.08em}
+.ds-step b{display:block;margin:6px 0;font-size:15px}
+.ds-step span{font-size:14px;line-height:1.55;color:var(--mut)}
+.ds-faq{display:grid;gap:10px;max-width:860px}
+.ds-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;padding:0 20px}
+.ds-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:16px 36px 16px 0;font-size:15.5px;font-weight:700}
+.ds-faq__i summary::-webkit-details-marker{display:none}
+.ds-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;transform:translateY(-70%) rotate(45deg);border-right:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transition:transform .2s}
+.ds-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.ds-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--mut)}
+@media(max-width:980px){.ds-kinds{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-route{grid-template-columns:minmax(0,1fr)}.ds-route img{aspect-ratio:16/9}}
+@media(max-width:640px){.ds__in,.ds-hero__in{padding-left:18px;padding-right:18px}.ds-kinds,.ds-modes,.ds-steps{grid-template-columns:minmax(0,1fr)}
+ .ds-hero__cap{display:none}.ds-alb__frame{padding:8px;box-shadow:none}.ds-alb__stamp{position:static;margin-top:8px}}
+</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px" alt=""></div></noscript></head><body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about/">О нас</a><a href="/service/">Услуги</a><a href="/project/">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients/">Клиенты</a><a href="/contacts/">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="ds"><section class="ds-hero"><img class="ds-hero__img" src="/images/exhibition/samara/render-v1-a.jpg" alt="Дизайн-проект выставочного стенда Самарской области: 3D-визуализация варианта «Неоновая арена»" fetchpriority="high" decoding="async"><span class="ds-hero__sh" aria-hidden="true"></span><p class="ds-hero__cap">Дизайн-проект стенда Самарской области, вариант «Неоновая арена»</p><div class="ds-hero__in"><p class="ds-hero__k">Exhibition · Дизайн стенда</p><h1>Дизайн и проектирование выставочных стендов</h1><p class="ds-hero__lead">Придумываем, о чём стенд, разводим потоки гостей, рисуем стенд в 3D и выпускаем чертежи, по которым его строят. Экраны и интерактив закладываем в проект с первого листа.</p><ul class="ds-hero__f"><li>дизайн-проект от 100 000 ₽</li><li>эскизы за 1–2 недели</li><li>только проект или под ключ</li></ul><a class="ds-hero__cta" href="#lead">Обсудить стенд</a></div></section><div class="ds__in"><nav class="ds-crumbs" aria-label="Навигация по разделам"><a href="/">Главная</a> · <a href="/exhibition/">Застройка выставочных стендов</a> · Дизайн стенда</nav></div><section class="ds-sec"><div class="ds__in"><h2 class="ds-sec__h">От рендера до стенда на ВДНХ</h2><p class="ds-sec__lead">Один объект в трёх состояниях: стенд Самарской области мы спроектировали и построили, он отработал на ВДНХ 248 дней. Проект здесь не картинка для согласования, а документ, по которому стенд собирают в павильоне.</p><div class="ds-route"><figure><div class="ds-route__f"><img src="/images/exhibition/design/vdnh-render.jpg" alt="Концепт-рендер стенда Самарской области на ВДНХ" loading="lazy" width="800" height="600"><span class="ds-route__t">Проект</span></div><figcaption>Концепт-рендер: изогнутый экран-парус, амфитеатр для программы, LED-шары под потолком.</figcaption></figure><figure><div class="ds-route__f"><img src="/images/lib/custom-samara-vdnh/build-hall.jpg" alt="Монтаж стенда Самарской области в павильоне ВДНХ" loading="lazy" width="800" height="600"><span class="ds-route__t">Монтаж</span></div><figcaption>Каркас паруса и амфитеатр в павильоне. Размеры экранов и точки крепления заданы проектом.</figcaption></figure><figure><div class="ds-route__f"><img src="/images/lib/custom-samara-vdnh/stand-hero.jpg" alt="Стенд Самарской области на ВДНХ с экраном-парусом" loading="lazy" width="800" height="600"><span class="ds-route__t">Стенд</span></div><figcaption>Стенд работает: 248 дней, 16 млн посетителей, экраны и интерактив по одному пульту.</figcaption></figure></div><p class="ds-more">Подробно о стенде в <a href="/portfolio/samara-stand-vdnh/">кейсе стенда Самарской области</a>. Для выставки «Самара» в Музее Алабина мы сделали <a href="/creative/samara/">фирменный стиль и оформление зон</a>.</p></div></section><section class="ds-sec" style="background:#FAF9FC"><div class="ds__in"><h2 class="ds-sec__h">Что входит в дизайн-проект стенда</h2><p class="ds-sec__lead">Состав подбираем под выставку и задачу. Небольшому стенду хватит эскиза и плана, стенду региона нужен полный альбом с чертежами и контентом. Как экраны встраиваются в конструктив, разобрано на странице <a href="/exhibition/multimedia/">мультимедиа для стенда</a>.</p><div class="ds-kinds"><div class="ds-kind"><b>Легенда и концепция</b><span>О чём стенд и чем его запомнят. Для крупного стенда показываем несколько концепций, у каждой своя видеопрезентация.</span></div><div class="ds-kind"><b>Зонирование и потоки</b><span>Где стойка, где переговорная, где очередь к интерактиву. У делегаций, деловых гостей и семей с детьми свои маршруты.</span></div><div class="ds-kind"><b>3D-визуализация</b><span>Рендеры с нескольких точек и видеооблёт: стенд можно показать руководству до начала производства.</span></div><div class="ds-kind"><b>Конструктив и чертежи</b><span>План застройки, развёртки, узлы и спецификации. По ним стенд строим мы или ваш застройщик.</span></div><div class="ds-kind"><b>Экраны в конструктиве</b><span>LED-пилоны, медиапотолок и сенсорные стойки получают место, подводку и крепление в проекте, а не на монтаже.</span></div><div class="ds-kind"><b>Требования выставки</b><span>Высота застройки, нагрузки, электричество и пожарные нормы павильона. Проект согласуем с организатором.</span></div></div></div></section><section class="ds-sec"><div class="ds__in"><h2 class="ds-sec__h">Проект стенда по листам</h2><p class="ds-sec__lead">Шесть листов из проекта стенда Самарской области к форуму «Россия — спортивная держава»: 204 м², две концепции, два варианта дизайна, 79 листов в альбоме. Стенд по этому проекту не строили, но на нём видно, как идёт работа до производства. Выберите лист.</p><style>#ds-legend:checked ~ .ds-alb__tabs label[for="ds-legend"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-legend:checked ~ .ds-alb__sheets [data-sheet="legend"]{display:block}#ds-plan:checked ~ .ds-alb__tabs label[for="ds-plan"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-plan:checked ~ .ds-alb__sheets [data-sheet="plan"]{display:block}#ds-arena:checked ~ .ds-alb__tabs label[for="ds-arena"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-arena:checked ~ .ds-alb__sheets [data-sheet="arena"]{display:block}#ds-keepers:checked ~ .ds-alb__tabs label[for="ds-keepers"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-keepers:checked ~ .ds-alb__sheets [data-sheet="keepers"]{display:block}#ds-ceiling:checked ~ .ds-alb__tabs label[for="ds-ceiling"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-ceiling:checked ~ .ds-alb__sheets [data-sheet="ceiling"]{display:block}#ds-content:checked ~ .ds-alb__tabs label[for="ds-content"]{border-color:var(--a);background:rgba(103,58,126,.07)}#ds-content:checked ~ .ds-alb__sheets [data-sheet="content"]{display:block}</style><div class="ds-alb"><input type="radio" name="dsalb" id="ds-legend" checked><input type="radio" name="dsalb" id="ds-plan"><input type="radio" name="dsalb" id="ds-arena"><input type="radio" name="dsalb" id="ds-keepers"><input type="radio" name="dsalb" id="ds-ceiling"><input type="radio" name="dsalb" id="ds-content"><div class="ds-alb__tabs"><label class="ds-alb__lbl" for="ds-legend"><span>01</span>Легенда</label><label class="ds-alb__lbl" for="ds-plan"><span>02</span>Зоны</label><label class="ds-alb__lbl" for="ds-arena"><span>03</span>Вариант 1</label><label class="ds-alb__lbl" for="ds-keepers"><span>04</span>Вариант 2</label><label class="ds-alb__lbl" for="ds-ceiling"><span>05</span>Медиапотолок</label><label class="ds-alb__lbl" for="ds-content"><span>06</span>Контент</label></div><div class="ds-alb__sheets"><div class="ds-alb__sheet" data-sheet="legend"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/vp/4-stihii_samara.jpg" alt="Концепция «Четыре стихии» для стенда Самарской области" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Концепция</span><span>Лист</span><span>01 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Легенда.</b> Концепция «Четыре стихии»: земля, вода, огонь и воздух. У каждой свой цвет, звук и своя зона на стенде. Параллельно шла вторая концепция, «Пять духов».</figcaption></figure></div><div class="ds-alb__sheet" data-sheet="plan"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/exhibition/samara/plan-v2.jpg" alt="План застройки стенда Самарской области с подписями зон" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Зонирование</span><span>Лист</span><span>02 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Зоны.</b> План застройки второго варианта на 204 м². Пятнадцать зон: деловая сцена, VIP-переговорная, аттракционы спортивных клубов, фотозона.</figcaption></figure></div><div class="ds-alb__sheet" data-sheet="arena"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/exhibition/samara/render-v1-a.jpg" alt="Вариант «Неоновая арена»: 3D-визуализация стенда" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Визуализация</span><span>Лист</span><span>03 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Вариант 1.</b> Вариант «Неоновая арена»: светящийся контур по периметру и фасад, открытый на проход.</figcaption></figure></div><div class="ds-alb__sheet" data-sheet="keepers"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/exhibition/samara/render-v2-a.jpg" alt="Вариант «Хранители»: 3D-визуализация стенда с медиаколоннами" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Визуализация</span><span>Лист</span><span>04 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Вариант 2.</b> Вариант «Хранители»: медиаколонны с образами хранителей и LED-столбы. Подписи на рендере показывают, какие поверхности работают как экраны.</figcaption></figure></div><div class="ds-alb__sheet" data-sheet="ceiling"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/exhibition/samara/render-v1-c.jpg" alt="Интерьер стенда с медиапотолком" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Мультимедиа</span><span>Лист</span><span>05 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Медиапотолок.</b> Интерьер первого варианта. Экран над головой гостей заложен в конструктив с первого чертежа, а не подвешен после.</figcaption></figure></div><div class="ds-alb__sheet" data-sheet="content"><figure style="margin:0"><div class="ds-alb__frame"><img src="/images/vp/content_samara.jpg" alt="Концепция контента для экранов стенда" loading="lazy" width="1600" height="900"><div class="ds-alb__stamp"><span>Объект</span><span>Стенд Самарской области, 204 м²</span><span>Стадия</span><span>Контент</span><span>Лист</span><span>06 из 06 на странице</span></div></div><figcaption class="ds-alb__cap"><b>Контент.</b> Контент для экранов входит в проект: серия роликов «Самарский спорт в лицах» с AI-образами спортсменов.</figcaption></figure></div></div></div><p class="ds-more">Все пятнадцать зон, обе концепции и видеопрезентации в <a href="/exhibition/#ex-case">полном разборе проекта</a> на странице застройки стендов.</p></div></section><section class="ds-sec" style="background:#FAF9FC"><div class="ds__in"><h2 class="ds-sec__h">Только проект или стенд под ключ</h2><p class="ds-sec__lead">Если у вас есть свой застройщик, заказывайте только дизайн. Если нет, ведём стенд от эскиза до демонтажа.</p><div class="ds-modes"><div class="ds-mode"><div class="ds-mode__h"><b>Только дизайн-проект</b><em>от 100 000 ₽</em></div><p>Концепция, зонирование, 3D-визуализация, чертежи и спецификация экранов. Отдаём файлы вашему застройщику и отвечаем на его вопросы по проекту.</p></div><div class="ds-mode"><div class="ds-mode__h"><b>Стенд под ключ</b><em>от 500 000 ₽</em></div><p>Тот же проект, а дальше застройка, мультимедиа, контент, монтаж и демонтаж на выставке. За стенд отвечает одна команда.</p><a href="/exhibition/">Застройка стендов под ключ →</a></div></div></div></section><section class="ds-sec"><div class="ds__in"><h2 class="ds-sec__h">Этапы и сроки</h2><div class="ds-steps"><div class="ds-step"><b>Бриф</b><span>Выставка, площадь и место в павильоне, задачи стенда, требования организатора.</span></div><div class="ds-step"><b>Эскизы и зоны</b><span>Одна-две недели: концепция, план с потоками гостей, первые эскизы.</span></div><div class="ds-step"><b>3D и выбор</b><span>Визуализация и видеооблёт вариантов, правки до утверждения.</span></div><div class="ds-step"><b>Рабочий проект</b><span>Полный проект от двух недель: чертежи, спецификации, экраны и контент.</span></div><div class="ds-step"><b>Застройка</b><span>Строим под ключ или передаём проект вашему застройщику.</span></div></div></div></section><section class="ds-sec" style="background:#FAF9FC"><div class="ds__in"><h2 class="ds-sec__h">Стоимость и отзыв</h2><style id="hm-cost-css">
+/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
+   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
+   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
+   красит их фирменным коралловым и перебивает классы */
+.hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
+.hm-cost--solo{grid-template-columns:minmax(0,1fr)}
+.hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
+.hm-cost--solo .hm-cost__k{grid-column:1/-1}
+.hm-cost--solo .hm-cost__f{margin:0}
+.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
+ background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
+.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
+.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
+.hm-cost__row:first-of-type{border-top:0;padding-top:0}
+.hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
+.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
+.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
+.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
+.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
+.hm-cost__rev{display:grid;gap:16px;align-content:start}
+.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
+ display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
+.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
+.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
+ padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
+.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
+ color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
+.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
+.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
+.hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
+.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
+ border-bottom:1px solid currentColor}
+@media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
+</style><div class="hm-cost" style="--hmcost-a:#673A7E" data-hmc="stand_design"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Дизайн-проект стенда</span><span class="hm-cost__v"><small>от</small>100 000 ₽</span></div><div class="hm-cost__row"><span class="hm-cost__what">Выставочный стенд под ключ</span><span class="hm-cost__v"><small>от</small>500 000 ₽</span></div><ul class="hm-cost__f"><li>Цена проекта зависит от площади, числа концепций и вариантов, объёма мультимедиа и детализации чертежей.</li><li>Эскизы и зонирование готовим за одну-две недели, полный проект от двух недель.</li><li>Смету готовим бесплатно после брифа.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«…мы рады возможности решать задачи разного уровня и направлений (от разработки и производства сувенирной продукции до оформления стендов и проведение клиентских мероприятий) в рамках взаимодействия с одной компанией.»</blockquote><figcaption><b>Becar Asset Management</b>Д. С. Сороколетов, вице-президент <a href="/portfolio/becar-private-money/">Кейс&nbsp;→</a></figcaption></figure></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Дизайн и проектирование выставочных стендов","serviceType":"Дизайн выставочного стенда","url":"https://hand-marketing.ru/exhibition/dizayn-stenda/","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"},"offers":[{"@type":"Offer","name":"Дизайн-проект стенда","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":100000,"priceCurrency":"RUB"}},{"@type":"Offer","name":"Выставочный стенд под ключ","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":500000,"priceCurrency":"RUB"}}]}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Застройка выставочных стендов","item":"https://hand-marketing.ru/exhibition/"},{"@type":"ListItem","position":3,"name":"Дизайн выставочного стенда","item":"https://hand-marketing.ru/exhibition/dizayn-stenda/"}]}</script></div></section><section class="ds-sec"><div class="ds__in"><h2 class="ds-sec__h">Вопросы о дизайне стенда</h2><div class="ds-faq"><details class="ds-faq__i"><summary>Сколько стоит дизайн выставочного стенда?</summary><p>Дизайн-проект от 100 000 ₽, стенд под ключ вместе с проектом от 500 000 ₽. Итог зависит от площади, числа вариантов, объёма мультимедиа и от того, нужны ли рабочие чертежи. Смету готовим бесплатно после брифа.</p></details><details class="ds-faq__i"><summary>Можно заказать только проект, если стенд строит другой подрядчик?</summary><p>Да. Передаём вашему застройщику концепцию, визуализацию, план застройки, чертежи и спецификации и отвечаем на его вопросы по проекту.</p></details><details class="ds-faq__i"><summary>Сколько времени занимает проектирование стенда?</summary><p>Эскизы и зонирование готовим за одну-две недели, полный проект от двух недель. График считаем от даты монтажа на выставке.</p></details><details class="ds-faq__i"><summary>Что нужно от нас для начала работы?</summary><p>Название выставки, площадь и место стенда на плане павильона, требования организатора к застройке, задачи стенда и фирменный стиль компании.</p></details><details class="ds-faq__i"><summary>Сколько вариантов дизайна вы показываете?</summary><p>Столько, сколько нужно для решения. Для стенда Самарской области мы сделали две концепции и два варианта дизайна.</p></details><details class="ds-faq__i"><summary>Закладываете ли вы в проект экраны и интерактив?</summary><p>Да, с первого чертежа: место, подводка и крепление экрана решаются в проекте. Контент для экранов тоже делаем мы.</p></details></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит дизайн выставочного стенда?","acceptedAnswer":{"@type":"Answer","text":"Дизайн-проект от 100 000 ₽, стенд под ключ вместе с проектом от 500 000 ₽. Итог зависит от площади, числа вариантов, объёма мультимедиа и от того, нужны ли рабочие чертежи. Смету готовим бесплатно после брифа."}},{"@type":"Question","name":"Можно заказать только проект, если стенд строит другой подрядчик?","acceptedAnswer":{"@type":"Answer","text":"Да. Передаём вашему застройщику концепцию, визуализацию, план застройки, чертежи и спецификации и отвечаем на его вопросы по проекту."}},{"@type":"Question","name":"Сколько времени занимает проектирование стенда?","acceptedAnswer":{"@type":"Answer","text":"Эскизы и зонирование готовим за одну-две недели, полный проект от двух недель. График считаем от даты монтажа на выставке."}},{"@type":"Question","name":"Что нужно от нас для начала работы?","acceptedAnswer":{"@type":"Answer","text":"Название выставки, площадь и место стенда на плане павильона, требования организатора к застройке, задачи стенда и фирменный стиль компании."}},{"@type":"Question","name":"Сколько вариантов дизайна вы показываете?","acceptedAnswer":{"@type":"Answer","text":"Столько, сколько нужно для решения. Для стенда Самарской области мы сделали две концепции и два варианта дизайна."}},{"@type":"Question","name":"Закладываете ли вы в проект экраны и интерактив?","acceptedAnswer":{"@type":"Answer","text":"Да, с первого чертежа: место, подводка и крепление экрана решаются в проекте. Контент для экранов тоже делаем мы."}}]}</script></div></section></main><a id="lead"></a><div class="hm-chrome"><section class="hm-cta"><div class="hm-cta__in"><div><h2>Давайте сделаем проект вместе?</h2><p>Отправьте свои данные и мы вам перезвоним</p><div class="hm-cta__consent">Нажимая на кнопку, вы даёте согласие на обработку <a href="/privacy/">своих персональных данных</a></div></div><form class="hm-cta-form" novalidate><input type="tel" name="phone" placeholder="+X XXX XXX XX XX" required><input type="text" name="name" placeholder="Имя"><button type="submit">отправить</button></form></div></section><div class="hm-foot" role="contentinfo"><div class="hm-foot__in"><nav class="hm-foot__nav"><a href="/about/">О нас</a><a href="/service/">Услуги</a><a href="/project/">Проекты</a><a href="/clients/">Клиенты</a><a href="/contacts/">Контакты</a></nav><div class="hm-foot__cols"><div class="hm-foot__c"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a><div class="hm-foot__soc"><a href="https://t.me/narodetskii" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.8 16.6l-.4 4c.5 0 .8-.2 1-.5l2.5-2.3 5 3.7c.9.5 1.6.2 1.8-.8l3.3-15.3c.3-1.2-.5-1.7-1.3-1.4L1.6 10c-1.2.5-1.2 1.1-.2 1.4l5 1.6L18 5.7c.5-.3 1-.2.6.2"/></svg></a><a href="https://wa.me/79859998783" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.87 9.87 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><a href="https://youtube.com/channel/UCKBNvpFhrJXQjzZdTnIFYxw" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 001 12a31 31 0 00.1 4.5 3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1A31 31 0 0023 12a31 31 0 00-.1-4.5zM10 15V9l5 3z"/></svg></a></div></div><div>© 2026 ООО «Хэнд-маркетинг»<br>ИНН 7709931482 КПП 770901001<br>ОГРН 1137746525608<br><a href="/privacy/">Политика конфиденциальности</a></div><div>Использование материалов Hand Marketing разрешено только с согласия правообладателя<div class="hm-foot__sber"><img src="/images/lib/as6562-3737-4062-a266-336439646532/sberkorus.png" alt="СберКорус"></div></div></div><div class="hm-foot__cp">2012 - 2026 Hand Marketing</div></div></div></div><script>(function(){
+// убрать CTA «Готовы к совместному проекту» (заменён фиолетовой формой)
+function hideCTA(){var n=[].slice.call(document.querySelectorAll('#root section,#root div'));
+ n.forEach(function(e){var t=e.textContent||'';if(/Обсудить проект/i.test(t)&&t.length<500&&e.style.display!=='none')e.style.display='none';});}
+// форма -> /api/lead.php
+function msg(f,t,ok){var d=document.createElement('div');d.className='hm-cta__msg';d.textContent=t;d.style.color=ok?'#fff':'#FFE0E0';f.parentNode.insertBefore(d,f.nextSibling);}
+document.addEventListener('submit',function(e){var f=e.target;if(!f.classList||!f.classList.contains('hm-cta-form'))return;e.preventDefault();
+ var tel=f.querySelector('input[type=tel]');if(tel&&tel.value.replace(/\D/g,'').length<6){tel.focus();return;}
+ var b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Отправляем…';}
+ fetch('/api/lead.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(j){if(!j||!j.success)throw 0;f.style.display='none';msg(f,'Спасибо! Мы свяжемся с вами в ближайшее время.',true);}).catch(function(){if(b){b.disabled=false;b.textContent='отправить';}msg(f,'Не удалось отправить. Позвоните: +7 495 580 75 37',false);});});
+var t=0,iv=setInterval(function(){hideCTA();if(++t>40)clearInterval(iv);},300);
+if(window.MutationObserver)new MutationObserver(hideCTA).observe(document.documentElement,{childList:true,subtree:true});
+})();</script><style id="hm-cookie-consent">
+.hmc{position:fixed;left:0;right:0;bottom:0;z-index:9000;padding:16px;box-sizing:border-box;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);font-family:'Inter','Montserrat',-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.hmc.is-on{transform:translateY(0)}
+.hmc *,.hmc *::before,.hmc *::after{box-sizing:border-box}
+.hmc__card{position:relative;max-width:1200px;margin:0 auto;background:#fff;border:1px solid #f3f4f6;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);padding:24px 28px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+.hmc__title{font-family:'Montserrat','Inter',sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0f172a;margin:0 0 6px}
+.hmc__text{font-size:14px;line-height:1.55;color:#334155;margin:0;max-width:820px}
+.hmc__text a{color:#2563eb;text-decoration:none}
+.hmc__text a:hover{text-decoration:underline;text-underline-offset:3px}
+.hmc__accept{flex:none;appearance:none;border:0;cursor:pointer;background:#111827;color:#fff;font-family:'Montserrat','Inter',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;padding:14px 32px;border-radius:12px;box-shadow:0 10px 20px -8px rgba(0,0,0,.4);transition:background .15s,transform .15s,box-shadow .15s}
+.hmc__accept:hover{background:#1f2937;transform:translateY(-2px);box-shadow:0 16px 26px -10px rgba(0,0,0,.45)}
+.hmc__close{position:absolute;top:10px;right:12px;width:28px;height:28px;border:0;background:transparent;color:#94a3b8;font-size:22px;line-height:1;cursor:pointer;display:none}
+.hmc__close:hover{color:#475569}
+@media (max-width:760px){
+ .hmc{padding:12px}
+ .hmc__card{flex-direction:column;align-items:flex-start;gap:16px;padding:22px 20px}
+ .hmc__accept{width:100%}
+ .hmc__close{display:block}
+}
+</style>
+<div class="hmc" id="hmCookie" role="dialog" aria-label="Согласие на использование файлов cookie" aria-live="polite">
+ <div class="hmc__card">
+  <div>
+   <div class="hmc__title">Мы используем файлы cookie</div>
+   <p class="hmc__text">Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даёте согласие на обработку файлов cookie. Подробнее в <a href="/privacy/">Политике обработки персональных данных</a>.</p>
+  </div>
+  <button type="button" class="hmc__accept" id="hmCookieOk">ПРИНИМАЮ</button>
+  <button type="button" class="hmc__close" id="hmCookieX" aria-label="Закрыть">&times;</button>
+ </div>
+</div>
+<script>(function(){
+ var KEY='hm-cookie-consent';
+ try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
+ var box=document.getElementById('hmCookie');if(!box)return;
+ function accept(){try{localStorage.setItem(KEY,'1');}catch(e){}box.classList.remove('is-on');setTimeout(function(){if(box&&box.parentNode)box.parentNode.removeChild(box);},400);}
+ document.getElementById('hmCookieOk').addEventListener('click',accept);
+ document.getElementById('hmCookieX').addEventListener('click',accept);
+ setTimeout(function(){box.classList.add('is-on');},600);
+})();</script><script id="hm-metrika-goals">(function(){
+var sent={};
+function g(id,once){if(once){if(sent[id])return;sent[id]=1;}try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
+function inQuiz(el){return el&&el.closest&&el.closest('[data-quiz]');} // у квиза свои цели
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||f.tagName!=='FORM'||inQuiz(f))return;
+ g('form_submit');
+},true);
+document.addEventListener('focusin',function(e){
+ var t=e.target;if(!t||!/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.type==='hidden')return;
+ var f=t.form||(t.closest&&t.closest('form'));if(!f||inQuiz(f))return;
+ g('form_start',1);
+},true);
+function kind(h){
+ h=(h||'').toLowerCase();
+ if(h.indexOf('tel:')===0)return 'phone';
+ if(h.indexOf('mailto:')===0)return 'email';
+ if(/\/\/(www\.)?(t\.me|telegram\.me)\//.test(h))return 'telegram';
+ if(/\/\/(wa\.me|api\.whatsapp\.com)\//.test(h))return 'whatsapp';
+ if(/\.(pdf|pptx?|docx?|xlsx?|zip)([?#]|$)/.test(h))return 'file';
+ return '';
+}
+var CLICK={phone:'phone_click',email:'email_click',telegram:'telegram_click',whatsapp:'whatsapp_click',file:'file_download'};
+function link(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');return a?kind(a.getAttribute('href')):'';}
+document.addEventListener('click',function(e){var k=link(e);if(k)g(CLICK[k]);},true);
+// правая кнопка или долгое нажатие на телефоне: «Скопировать адрес» из меню ссылки
+document.addEventListener('contextmenu',function(e){var k=link(e);if(k==='email')g('email_copy');else if(k==='phone')g('phone_copy');},true);
+document.addEventListener('copy',function(){
+ var s='';try{s=String(window.getSelection()).trim();}catch(e){}
+ if(/[\w.+-]+@[\w-]+\.[\w.-]+/.test(s))g('email_copy');
+ else if(/^[\s\d()+-]+$/.test(s)&&s.replace(/\D/g,'').length>=10)g('phone_copy');
+},true);
+document.addEventListener('play',function(e){
+ var v=e.target;if(!v||v.tagName!=='VIDEO')return;
+ var ua=navigator.userActivation;if(ua?!ua.isActive:v.muted)return;
+ g('video_play',1);
+},true);
+window.addEventListener('scroll',function(){
+ if(sent.scroll_75)return;
+ var d=document.documentElement,h=d.scrollHeight-window.innerHeight;
+ if(h>0&&(window.pageYOffset||d.scrollTop)/h>=0.75)g('scroll_75',1);
+},{passive:true});
+})();</script></body></html>

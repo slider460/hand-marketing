@@ -323,7 +323,9 @@ def case_narr():
              '<h3>С дизайн-проекта начинается каждый стенд, который мы строим</h3>'
              '<p>Всё, что показано выше, вы видите и оцениваете <b>до начала производства</b>. Дальше берём на себя '
              'изготовление выставочных стендов, аренду готовых конструкций для типовых задач, '
-             'интерактивные инсталляции, монтаж и сопровождение на площадке.</p></div>')
+             'интерактивные инсталляции, монтаж и сопровождение на площадке.</p>'
+             '<p>Если стенд строит ваш подрядчик, проект можно заказать отдельно: '
+             '<a href="/exhibition/dizayn-stenda/">дизайн и проектирование стендов</a>.</p></div>')
 
     return (f'<div class="sam-dark" id="ex-case"><div class="sam-in">'
             f'<p class="sam-over ex-rev">Как мы подходим к работе</p>'
@@ -486,6 +488,7 @@ CASE_CSS = """<style id="sam-css">
  background:linear-gradient(135deg,rgba(59,201,216,.09),transparent 55%)}
 .sam-outro h3{margin:0 0 12px;font-size:clamp(20px,2.6vw,28px);font-weight:800;letter-spacing:-.02em;color:#fff}
 .sam-outro p{margin:0 0 22px;max-width:72ch;font-size:15.5px;line-height:1.65;color:#C6CDD6}
+.sam-outro p a{color:#fff;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
 /* FAQ (светлая зона страницы) */
 .sam-faq{display:grid;gap:10px;max-width:820px}
 .sam-faq__item{border:1px solid rgba(20,23,28,.1);border-radius:14px;background:#fff;padding:0 20px}
@@ -722,7 +725,7 @@ def build():
         '<h2 class="ex-sec__h ex-rev">Стенд, контент и ролики делает одна команда</h2></div>'
         '<div class="ex-steps ex-steps_3">'
         '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
-        '<h3>Конструктив и застройка</h3><p>Дизайн-проект, производство конструкций, '
+        '<h3>Конструктив и застройка</h3><p><a href="/exhibition/dizayn-stenda/">Дизайн-проект</a>, производство конструкций, '
         'аренда готовых для типовых задач, монтаж на площадке.</p></div>'
         '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
         '<h3>Мультимедиа и интерактив</h3><p>Экраны, проекции, сенсорные панели и интерактивные '

@@ -33,7 +33,7 @@ SERVICES = {
   'cards': [
    ('<a href="/videoproduction/">Видеопродакшн</a>','<a href="/videoproduction/reklamnyy-rolik/">Рекламные ролики</a>, <a href="/videoproduction/korporativnyy-film/">корпоративные фильмы</a>, <a href="/videoproduction/prezentacionnyy-rolik/">ролики объектов</a>, съёмка мероприятий и продукции. Своя техника и операторы. От 150 000 ₽.'),
    ('<a href="/event/">Организация мероприятий</a>','Корпоративы и <a href="/event/novogodniy-korporativ/">новогодние вечера</a>, презентации, конференции и вечера для арендаторов под ключ. От 500 000 ₽.'),
-   ('<a href="/exhibition/">Выставочные стенды</a>','Проектирование, застройка, <a href="/exhibition/multimedia/">мультимедиа</a> и контент стенда. От 500 000 ₽.'),
+   ('<a href="/exhibition/">Выставочные стенды</a>','<a href="/exhibition/dizayn-stenda/">Проектирование</a>, застройка, <a href="/exhibition/multimedia/">мультимедиа</a> и контент стенда. От 500 000 ₽.'),
    ('<a href="/content/">Мультимедийный контент</a>','Контент для экранов, куполов, кинетики и интерактива. Мультимедийная зона от 150 000 ₽.'),
    ('<a href="/3dmapping/">3D Mapping</a>','Проекционные шоу на фасадах и объектах: контент, оборудование, монтаж, показ.'),
    ('<a href="/creativedesign/">Креатив и дизайн</a>','Концепции, <a href="/creativedesign/brandbook/">фирменный стиль и брендбуки</a>, дизайн полиграфии, 3D-визуализация.'),

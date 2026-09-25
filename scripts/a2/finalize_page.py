@@ -60,6 +60,16 @@ def git_deleted():
     return {p for p, st in git_status().items() if 'D' in st}
 
 
+def page_mtimes():
+    out = {}
+    for dirpath, _, files in os.walk(MIRROR):
+        for f in files:
+            if f in ('index.html', 'index-a2.html'):
+                p = os.path.join(dirpath, f)
+                out[p] = os.stat(p).st_mtime_ns
+    return out
+
+
 def run(script_path):
     print(f'\n▶ {os.path.relpath(script_path, ROOT)}', flush=True)
     r = subprocess.run([sys.executable, script_path], cwd=ROOT)
@@ -125,7 +135,7 @@ def main():
 
     dirty_before = git_dirty()
     deleted_before = git_deleted()
-    t0 = time.time()
+    mtimes_before = page_mtimes()
     run(gen)
     # генератор кастомной страницы может СНОСИТЬ файл (типичный случай:
     # index-a2.html, который на деплое переименовывается в index.html и затёр бы
@@ -134,15 +144,12 @@ def main():
     if deleted_by_gen:
         print('  удалено генератором:', ', '.join(sorted(deleted_by_gen)))
 
-    # целевые страницы: index*.html, переписанные генератором (по mtime —
-    # ловит и случай «перезаписал тем же содержимым»)
-    targets = []
-    for dirpath, _, files in os.walk(MIRROR):
-        for f in files:
-            if f in ('index.html', 'index-a2.html'):
-                p = os.path.join(dirpath, f)
-                if os.path.getmtime(p) >= t0 - 1:
-                    targets.append(os.path.relpath(p, ROOT))
+    # целевые страницы: index*.html, переписанные генератором. Сравниваем mtime
+    # со снимком до запуска (ловит и «перезаписал тем же содержимым»). Раньше брали
+    # «mtime >= старт − 1 с», и прогон сразу после другого прогона забирал себе
+    # 56 кейсов, которые пост-скрипты прошлого прогона переписали в ту же секунду
+    targets = sorted(os.path.relpath(p, ROOT) for p, t in page_mtimes().items()
+                     if mtimes_before.get(p) != t)
     if not targets:
         sys.exit('✗ генератор не переписал ни одного mirror/**/index*.html — проверь его вывод')
     print('  страницы генератора:', ', '.join(targets))
