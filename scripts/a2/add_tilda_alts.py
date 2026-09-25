@@ -45,7 +45,8 @@ ALTS = {
 }
 
 # опечатки, запечённые в тильдовских текстовых элементах
-TYPOS = [('Chief information Officet', 'Chief Information Officer')]
+TYPOS = [('Chief information Officet', 'Chief Information Officer'),
+         ('Chief Creative Officet', 'Chief Creative Officer')]
 
 IMG = re.compile(r'<img\b[^>]*>', re.S)
 
