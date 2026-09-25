@@ -66,7 +66,7 @@ LINES = [
     ('Печать и рекламное производство', '/printandproduction/', 'по объёму',
      'Широкоформатная печать, полиграфия, POS-материалы, навигация '
      'и нестандартные конструкции.', '#E08A2B', 'P'),
-    ('Фотопродакшн', '/photo', 'по объёму',
+    ('Фотопродакшн', '/photo/', 'по объёму',
      'Предметная и каталожная съёмка, съёмка оборудования на объекте, '
      'репортаж с мероприятий.', '#3B729D', 'P'),
     ('BTL и промо', '/btl/', 'по объёму',
@@ -178,6 +178,8 @@ CSS = """<style id="hm-home-seo-css">
 .hs h2{margin:0 0 14px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
 .hs h3{margin:54px 0 18px;font-size:clamp(21px,2.4vw,28px);font-weight:800;letter-spacing:-.015em}
 .hs p.lead{margin:0 0 16px;max-width:74ch;font-size:16.5px;line-height:1.7;color:#3d434b}
+.hs p.lead a,.hs-budget span a{color:inherit!important;text-decoration:none;border-bottom:2px solid rgba(20,23,28,.28)}
+.hs p.lead a:hover,.hs-budget span a:hover{border-color:currentColor}
 
 /* направления */
 .hs-dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -333,8 +335,9 @@ def build(with_css=True, with_ld=True):
 <span class="hs__tag">Рекламное агентство с 2012 года</span>
 <h2>Рекламное агентство полного цикла в Москве</h2>
 <p class="lead">Hand Marketing работает с 2012 года. Мы строим выставочные стенды, проводим
- мероприятия, снимаем рекламу и корпоративные фильмы, делаем мультимедийный контент, фирменный
- стиль и печать. Заказчики приходят не за отдельной услугой, а за результатом на площадке:
+ мероприятия, снимаем <a href="/videoproduction/reklamnyy-rolik/">рекламу</a>
+ и <a href="/videoproduction/korporativnyy-film/">корпоративные фильмы</a>, делаем мультимедийный
+ контент, <a href="/creativedesign/brandbook/">фирменный стиль</a> и печать. Заказчики приходят не за отдельной услугой, а за результатом на площадке:
  стенд, который отработает восемь месяцев на ВДНХ, фильм, который покажут партнёрам, шоу,
  которое увидит городская площадь.</p>
 <p class="lead">С нами работают компании, у которых цена ошибки выше стоимости проекта:
@@ -366,9 +369,9 @@ def build(with_css=True, with_ld=True):
 <p class="lead">Ниже нижние границы по направлениям: это не прайс, а рамка, чтобы
  сразу понимать масштаб. Точную цифру считаем по задаче, смета бесплатна и построчна.</p>
 <div class="hs-budget">
- <div style="--c:#CF6F19"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span>рекламный ролик или корпоративный фильм</span></div>
- <div style="--c:#E0427E"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span>мультимедийная зона на стенде или мероприятии</span></div>
- <div style="--c:#673A7E"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>мероприятие под ключ</span></div>
+ <div style="--c:#CF6F19"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span><a href="/videoproduction/reklamnyy-rolik/">рекламный ролик</a> или <a href="/videoproduction/korporativnyy-film/">корпоративный фильм</a></span></div>
+ <div style="--c:#E0427E"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span>мультимедийная зона на <a href="/exhibition/multimedia/">стенде</a> или мероприятии</span></div>
+ <div style="--c:#673A7E"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>мероприятие под ключ, в том числе <a href="/event/novogodniy-korporativ/">новогодний корпоратив</a></span></div>
  <div style="--c:#8E5FB0"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>выставочный стенд под ключ</span></div>
 </div>
 <p class="hs-more">По дизайну, печати, промо и съёмке считаем по объёму работ: состав смет

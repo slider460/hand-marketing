@@ -33,7 +33,10 @@ SITEMAP = os.path.join(MIRROR, 'sitemap.xml')
 POSTSCRIPTS = ['add_cookie_consent.py', 'add_metrika_goals.py',
                # блок «Похожие проекты»: без него свежесобранный кейс снова
                # становится тупиком без внутренних ссылок
-               'add_related_links.py']
+               'add_related_links.py',
+               # ссылки шапки и подвала сразу на адрес со слэшем, без 301;
+               # идёт последним, чтобы поймать и ссылки блока «Похожие проекты»
+               'fix_internal_slashes.py']
 MARKERS = ['hm-cookie-consent', 'hm-metrika-goals', 'mc.yandex']
 
 
@@ -96,6 +99,25 @@ def touch_sitemap(url):
     print(f'  sitemap: {url} — {note}')
 
 
+def canonical_of(url):
+    d = os.path.join(MIRROR, url.strip('/'))
+    for name in ('index-a2.html', 'index.html'):
+        p = os.path.join(d, name)
+        if os.path.isfile(p):
+            m = re.search(r'<link rel="canonical" href="([^"]+)"', open(p, encoding='utf-8').read())
+            return m.group(1) if m else None
+    return None
+
+
+def drop_from_sitemap(url):
+    s = open(SITEMAP, encoding='utf-8').read()
+    loc = re.escape(f'<loc>https://hand-marketing.ru{url}</loc>')
+    new = re.sub(r'[ \t]*<url>' + loc + r'<lastmod>[^<]*</lastmod></url>\n?', '', s)
+    if new != s:
+        open(SITEMAP, 'w', encoding='utf-8').write(new)
+        print(f'  sitemap: {url} — убран (canonical ведёт на другой адрес)')
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit('Использование: python3 scripts/a2/finalize_page.py gen_<slug>.py')
@@ -138,6 +160,12 @@ def main():
         print('  чужих изменений нет (пост-скрипты идемпотентны)')
 
     for url in sorted({page_url(t) for t in targets}):
+        # страница с canonical на другой адрес в карту не идёт (как в generate-sitemap.mjs),
+        # иначе /samara_vdnh/ возвращалась в sitemap при каждой сборке кейсов
+        canon = canonical_of(url)
+        if canon and canon.rstrip('/') != f'https://hand-marketing.ru{url}'.rstrip('/'):
+            drop_from_sitemap(url)
+            continue
         touch_sitemap(url)
 
     print('\n== Контроль маркеров ==')

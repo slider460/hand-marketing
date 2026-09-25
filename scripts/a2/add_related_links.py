@@ -49,7 +49,7 @@ SERVICE = {  # направление -> (страница услуги, как 
     'event': ('/event/', 'Организация мероприятий', '#C12164'),
     'creative': ('/creativedesign/', 'Креатив и дизайн', '#C12164'),
     'digital': ('/digital/', 'Digital и сайты', '#2F6FC4'),
-    'photo': ('/photo', 'Фотопродакшн', '#4CA4E8'),
+    'photo': ('/photo/', 'Фотопродакшн', '#4CA4E8'),
     '3dmapping': ('/3dmapping/', '3D Mapping', '#7E3FA0'),
 }
 
@@ -81,10 +81,22 @@ DIRECTIONS = [
     ('/videoproduction/', 'Видеопродакшн'), ('/event/', 'Мероприятия'),
     ('/exhibition/', 'Выставочные стенды'), ('/content/', 'Мультимедийный контент'),
     ('/3dmapping/', '3D Mapping'), ('/creativedesign/', 'Креатив и дизайн'),
-    ('/printandproduction/', 'Печать и производство'), ('/photo', 'Фотопродакшн'),
+    ('/printandproduction/', 'Печать и производство'), ('/photo/', 'Фотопродакшн'),
     ('/btl/', 'BTL и промо'), ('/digital/', 'Digital и сайты'),
     ('/price/', 'Цены'), ('/reviews/', 'Отзывы'), ('/team/', 'Команда'),
 ]
+
+# посадочные под конкретный запрос: без ссылок с кейсов у них было по 1–3
+# входящих против 9–14 у кейсов, и Яндекс видел их почти сиротами (замер 25.09.2026)
+FORMATS = {
+    'video': [('/videoproduction/reklamnyy-rolik/', 'Съёмка рекламного ролика'),
+              ('/videoproduction/korporativnyy-film/', 'Корпоративный фильм о компании'),
+              ('/videoproduction/prezentacionnyy-rolik/', 'Презентационный ролик объекта')],
+    'event': [('/event/novogodniy-korporativ/', 'Новогодний корпоратив под ключ'),
+              ('/exhibition/multimedia/', 'Мультимедиа для выставочного стенда')],
+    'creative': [('/creativedesign/brandbook/', 'Разработка брендбука и фирменного стиля')],
+    '3dmapping': [('/exhibition/multimedia/', 'Мультимедиа для выставочного стенда')],
+}
 
 
 def ru(t):
@@ -104,6 +116,11 @@ def block(case, siblings):
     href, label, accent = SERVICE[case['category']]
     dirs = ''.join(f'<a href="{h}">{t}</a>' for h, t in DIRECTIONS
                    if h.rstrip('/') != href.rstrip('/'))
+    formats = ''
+    if FORMATS.get(case['category']):
+        formats = ('<p class="hm-rel__dirs"><b>Отдельно по задачам</b>'
+                   + ''.join(f'<a href="{h}">{t}</a>' for h, t in FORMATS[case['category']])
+                   + '</p>')
     cards = ''
     for s in siblings:
         cover = COVERS.get(s['route'].rstrip('/'), s['cover'])
@@ -119,6 +136,7 @@ def block(case, siblings):
             f'<p class="hm-rel__lead">Этот кейс из направления '
             f'<a href="{href}">{label}</a>. Рядом лежат проекты, где мы решали похожие задачи.</p>'
             f'<div class="hm-rel__grid">{cards}</div>'
+            f'{formats}'
             f'<p class="hm-rel__dirs"><b>Все направления</b>{dirs}</p>'
             f'</div></section><!-- /{MARK} -->')
 

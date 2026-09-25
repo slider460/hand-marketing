@@ -10,7 +10,7 @@ HEADER=f'''<header class="mh-hdr"><a class="mh-hdr__b" href="/"><img src="/{P}{H
 FOOTER='''<footer class="mh-foot"><b>HAND MARKETING</b>
 <p>м. Краснопресненская / Баррикадная<br>123022, Москва, Рочдельская, 14А</p>
 <div class="mh-foot__c"><a href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></div>
-<div class="mh-foot__s"><a href="https://t.me/" aria-label="Telegram">TG</a><a href="https://wa.me/74955807537" aria-label="WhatsApp">WA</a></div>
+<div class="mh-foot__s"><a href="https://t.me/narodetskii" aria-label="Telegram">TG</a><a href="https://wa.me/79859998783" aria-label="WhatsApp">WA</a></div>
 <nav class="mh-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav>
 <small>© 2026 ООО «Хэнд-маркетинг»</small></footer>'''
 FORM='''<section class="mh-form" id="mh-form"><h2>Давайте сделаем проект вместе?</h2><p>Оставьте контакты — перезвоним и обсудим задачу.</p>
@@ -53,7 +53,7 @@ PAGES['contacts']=wrap(f'''<section class="mh-hero mh-hero_sm"><p class="mh-eyeb
 <a class="mh-crow" href="tel:+74955807537"><span>Телефон</span><b>+7 495 580 75 37</b></a>
 <a class="mh-crow" href="mailto:info@hand-marketing.ru"><span>E-mail</span><b>info@hand-marketing.ru</b></a>
 <div class="mh-crow"><span>Адрес</span><b>123022, Москва, Рочдельская, 14А<br>м. Краснопресненская / Баррикадная</b></div>
-<div class="mh-csoc"><a href="https://t.me/">Telegram</a><a href="https://wa.me/74955807537">WhatsApp</a></div>
+<div class="mh-csoc"><a href="https://t.me/narodetskii">Telegram</a><a href="https://wa.me/79859998783">WhatsApp</a></div>
 </div></section>{FORM}''')
 # О НАС
 ABOUT=[("Более 10 лет","Делаем эффективные маркетинговые коммуникации","#C12164"),("Full service","Десять направлений: от ролика до выставочного стенда","#CF6F19"),("Сотрудничество","Целеустремлённость и внимание к партнёрам — залог долгосрочного партнёрства","#5E9A2E"),("Локация","Офис в центре Москвы. Работаем по всей России и за рубежом","#673A7E")]

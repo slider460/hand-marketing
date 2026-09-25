@@ -58,7 +58,7 @@ spec.loader.exec_module(rc)
 
 MAP = json.load(open(os.path.join(HERE, 'sgphoto_map.json'), encoding='utf-8'))
 IMG = '/images/sgphoto'
-URL = 'https://hand-marketing.ru/photo/saint-gobain'
+URL = 'https://hand-marketing.ru/photo/saint-gobain/'
 TITLE = 'Предметная съёмка продукции Gyproc для Saint-Gobain | Hand Marketing'
 DESCR = ('Предметная съёмка комплектующих Gyproc для Saint-Gobain: 63 позиции '
          'за один съёмочный день, 62 кадра в сдаче, вырезанный по контуру фон '
@@ -165,7 +165,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">' + json.dumps({
         {"@type": "ListItem", "position": 1, "name": "Главная",
          "item": "https://hand-marketing.ru/"},
         {"@type": "ListItem", "position": 2, "name": "Фотопродакшн",
-         "item": "https://hand-marketing.ru/photo"},
+         "item": "https://hand-marketing.ru/photo/"},
         {"@type": "ListItem", "position": 3,
          "name": "Предметная съёмка продукции Gyproc", "item": URL},
     ]}, ensure_ascii=False) + '</script>')

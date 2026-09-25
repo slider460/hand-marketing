@@ -25,7 +25,13 @@ const pages = globSync(join(ROOT, 'mirror/**/index.html'))
   })
   .map((f) => ({
     loc: f.replace(join(ROOT, 'mirror'), '').replace(/index\.html$/, ''),
-    lastmod: statSync(f).mtime.toISOString().slice(0, 10),
+    // на прод уезжает index-a2.html, если он есть: дата правки берётся с него,
+    // иначе главная и тильдовские страницы годами висят с датой мёртвого index.html
+    lastmod: (() => {
+      const a2 = f.replace(/index\.html$/, 'index-a2.html')
+      const t = Math.max(statSync(f).mtimeMs, existsSync(a2) ? statSync(a2).mtimeMs : 0)
+      return new Date(t).toISOString().slice(0, 10)
+    })(),
   }))
   .sort((a, b) => a.loc.localeCompare(b.loc))
 

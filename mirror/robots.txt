@@ -2,5 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /api/leads.csv
 
+# Яндекс: метки рекламы и счётчиков не делают отдельную страницу
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+Clean-param: yclid&ysclid&gclid&fbclid&_openstat&from&etext
+
 Sitemap: https://hand-marketing.ru/sitemap.xml
 Host: hand-marketing.ru

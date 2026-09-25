@@ -43,7 +43,7 @@ spec.loader.exec_module(rc)
 
 SG = json.load(open(os.path.join(HERE, 'sgphoto_map.json'), encoding='utf-8'))['stats']
 
-URL = 'https://hand-marketing.ru/photo'
+URL = 'https://hand-marketing.ru/photo/'
 TITLE = 'Предметная съёмка товаров и оборудования в Москве в Москве | Hand Marketing'
 DESCR = ('Предметная и каталожная съёмка товаров, оборудования и интерьеров: '
          'контур, кадрирование под карточки, ретушь под каталог, сайт '

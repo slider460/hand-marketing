@@ -85,7 +85,7 @@ mh=f'''<div class="mhome" id="mhome">
   <b>HAND MARKETING</b>
   <p>м. Краснопресненская / Баррикадная<br>123022, Москва, Рочдельская, 14А</p>
   <div class="mh-foot__c"><a href="tel:+74955807537">+7 495 580 75 37</a><a href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></div>
-  <div class="mh-foot__s"><a href="https://t.me/" aria-label="Telegram">TG</a><a href="https://wa.me/74955807537" aria-label="WhatsApp">WA</a></div>
+  <div class="mh-foot__s"><a href="https://t.me/narodetskii" aria-label="Telegram">TG</a><a href="https://wa.me/79859998783" aria-label="WhatsApp">WA</a></div>
   <nav class="mh-foot__nav"><a href="/about">О нас</a><a href="/service">Услуги</a><a href="/project">Проекты</a><a href="/clients">Клиенты</a><a href="/contacts">Контакты</a></nav>
   <small>© {2026} ООО «Хэнд-маркетинг»</small>
 </footer>

@@ -59,6 +59,10 @@ now=datetime.date.today().isoformat()
 us=''.join('<url><loc>%s%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>%s</priority></url>'%(DOMAIN,url_of(f),now,'1.0' if url_of(f)=='/' else '0.7') for f in pages)
 open(M+'/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>'%us)
 # robots.txt
-open(M+'/robots.txt','w').write("User-agent: *\nAllow: /\nDisallow: /api/leads.csv\n\nSitemap: %s/sitemap.xml\nHost: hand-marketing.ru\n"%DOMAIN)
+open(M+'/robots.txt','w').write("User-agent: *\nAllow: /\nDisallow: /api/leads.csv\n\n"
+    "# Яндекс: метки рекламы и счётчиков не делают отдельную страницу\n"
+    "Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term\n"
+    "Clean-param: yclid&ysclid&gclid&fbclid&_openstat&from&etext\n\n"
+    "Sitemap: %s/sitemap.xml\nHost: hand-marketing.ru\n"%DOMAIN)
 print('Оптимизация:',stats)
 print('sitemap: %d URL | robots.txt создан'%len(pages))

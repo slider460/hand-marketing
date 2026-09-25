@@ -31,12 +31,12 @@ SERVICES = {
           'Ценность в связке: ролик, стенд и печатные материалы делает одна команда, поэтому проект '
           'не разваливается на стыках между подрядчиками. Москва и вся Россия.',
   'cards': [
-   ('<a href="/videoproduction/">Видеопродакшн</a>','Рекламные ролики, корпоративные фильмы, съёмка мероприятий и продукции. Своя техника и операторы. От 150 000 ₽.'),
-   ('<a href="/event/">Организация мероприятий</a>','Корпоративы, презентации, конференции и вечера для арендаторов под ключ. От 500 000 ₽.'),
-   ('<a href="/exhibition/">Выставочные стенды</a>','Проектирование, застройка, мультимедиа и контент стенда. От 500 000 ₽.'),
+   ('<a href="/videoproduction/">Видеопродакшн</a>','<a href="/videoproduction/reklamnyy-rolik/">Рекламные ролики</a>, <a href="/videoproduction/korporativnyy-film/">корпоративные фильмы</a>, <a href="/videoproduction/prezentacionnyy-rolik/">ролики объектов</a>, съёмка мероприятий и продукции. Своя техника и операторы. От 150 000 ₽.'),
+   ('<a href="/event/">Организация мероприятий</a>','Корпоративы и <a href="/event/novogodniy-korporativ/">новогодние вечера</a>, презентации, конференции и вечера для арендаторов под ключ. От 500 000 ₽.'),
+   ('<a href="/exhibition/">Выставочные стенды</a>','Проектирование, застройка, <a href="/exhibition/multimedia/">мультимедиа</a> и контент стенда. От 500 000 ₽.'),
    ('<a href="/content/">Мультимедийный контент</a>','Контент для экранов, куполов, кинетики и интерактива. Мультимедийная зона от 150 000 ₽.'),
    ('<a href="/3dmapping/">3D Mapping</a>','Проекционные шоу на фасадах и объектах: контент, оборудование, монтаж, показ.'),
-   ('<a href="/creativedesign/">Креатив и дизайн</a>','Концепции, фирменный стиль и брендбуки, дизайн полиграфии, 3D-визуализация.'),
+   ('<a href="/creativedesign/">Креатив и дизайн</a>','Концепции, <a href="/creativedesign/brandbook/">фирменный стиль и брендбуки</a>, дизайн полиграфии, 3D-визуализация.'),
    ('<a href="/printandproduction/">Печать и производство</a>','Широкоформатная печать, полиграфия, POS, навигация и нестандартные конструкции.'),
    ('<a href="/photo/">Фотопродакшн</a>','Предметная и каталожная съёмка, съёмка оборудования на объекте, репортаж.'),
    ('<a href="/btl/">BTL и промо</a>','Промо-акции, семплинг, промо-персонал и полевые команды с отчётностью.'),
@@ -368,6 +368,8 @@ def build(slug, s):
 .sv-card h4 a{{color:inherit;text-decoration:none;border-bottom:2px solid var(--ac)}}
 .sv-card h4 a:hover{{color:var(--ac)}}
 .sv-card p{{margin:0;font-size:13.5px;line-height:1.55;color:#5A616A}}
+.sv-card p a{{color:inherit;text-decoration:none;border-bottom:1px solid rgba(20,23,28,.3)}}
+.sv-card p a:hover{{color:var(--ac);border-color:var(--ac)}}
 .sv-steps{{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:sv}}
 .sv-step{{counter-increment:sv;border-top:2px solid var(--ac);padding-top:12px}}
 .sv-step::before{{content:"0" counter(sv);font-weight:800;font-size:13px;color:var(--ac);letter-spacing:.08em}}
