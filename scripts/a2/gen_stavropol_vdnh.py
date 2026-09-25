@@ -750,7 +750,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Стенд Ставропольского края на выставке «Россия» на ВДНХ | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: мультимедийное оснащение стенда Ставропольского края на выставке «Россия» (ВДНХ, павильон №75, 248 дней). LED-короб с naked-eye 3D, виртуальный терренкур на велотренажёре, прозрачные тач-панели, интерактивная картина, зелёный зал.">
+<meta name="description" content="Мультимедийное оснащение стенда Ставропольского края на выставке «Россия» на ВДНХ, 248 дней: LED-короб с naked eye 3D, виртуальный терренкур, тач-панели.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

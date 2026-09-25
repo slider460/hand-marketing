@@ -1827,7 +1827,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 HEAD = f'''<!DOCTYPE html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Стенд Самарской области на выставке «Россия» на ВДНХ | Hand Marketing</title>
-<meta name="description" content="248 дней работы стенда Самарской области на ВДНХ: экран-парус с naked eye 3D, кинетический экран, восемь тач-панелей, Kinect и VR, 817 событий программы. Как это спроектировано, построено и запрограммировано.">
+<meta name="description" content="248 дней работы стенда Самарской области на ВДНХ: экран-парус с naked eye 3D, кинетический экран, тач-панели, VR и 817 событий программы. Как стенд построен.">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Стенд Самарской области на выставке-форуме «Россия»">

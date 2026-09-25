@@ -852,7 +852,7 @@ PAGE_JS = """<script>(function(){
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Мероприятие для арендаторов ТЦ «Мозаика» | кейс Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: организация мероприятия для арендаторов ТЦ «Мозаика» в Москве, 31 октября 2018, 134 гостя. Концепция «Пора выходить на свет»: зал в синем монохроме, световая панель с логотипом, которую гости собирают своими лампочками, кейтеринг, пресс-волл, полиграфия и ролик об объекте.">
+<meta name="description" content="Вечер для арендаторов ТЦ «Мозаика», 31 октября 2018, 134 гостя. Концепция «Пора выходить на свет»: световая панель с логотипом, которую гости собирают лампочками.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

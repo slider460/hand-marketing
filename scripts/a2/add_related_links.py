@@ -92,10 +92,17 @@ FORMATS = {
     'video': [('/videoproduction/reklamnyy-rolik/', 'Съёмка рекламного ролика'),
               ('/videoproduction/korporativnyy-film/', 'Корпоративный фильм о компании'),
               ('/videoproduction/prezentacionnyy-rolik/', 'Презентационный ролик объекта')],
-    'event': [('/event/novogodniy-korporativ/', 'Новогодний корпоратив под ключ'),
+    'event': [('/event/konferencii/', 'Организация конференций'),
+              ('/event/novogodniy-korporativ/', 'Новогодний корпоратив под ключ'),
               ('/exhibition/multimedia/', 'Мультимедиа для выставочного стенда')],
     'creative': [('/creativedesign/brandbook/', 'Разработка брендбука и фирменного стиля')],
     '3dmapping': [('/exhibition/multimedia/', 'Мультимедиа для выставочного стенда')],
+}
+# кейсы-стенды внутри категории event: им нужны ссылки на стендовые посадочные, а не на корпоратив
+FORMATS_BY_ROUTE = {
+    '/portfolio/becar-private-money': [
+        ('/exhibition/dizayn-stenda/', 'Дизайн и проектирование стендов'),
+        ('/exhibition/multimedia/', 'Мультимедиа для выставочного стенда')],
 }
 
 
@@ -117,9 +124,10 @@ def block(case, siblings):
     dirs = ''.join(f'<a href="{h}">{t}</a>' for h, t in DIRECTIONS
                    if h.rstrip('/') != href.rstrip('/'))
     formats = ''
-    if FORMATS.get(case['category']):
+    fl = FORMATS_BY_ROUTE.get(case['route'].rstrip('/')) or FORMATS.get(case['category'])
+    if fl:
         formats = ('<p class="hm-rel__dirs"><b>Отдельно по задачам</b>'
-                   + ''.join(f'<a href="{h}">{t}</a>' for h, t in FORMATS[case['category']])
+                   + ''.join(f'<a href="{h}">{t}</a>' for h, t in fl)
                    + '</p>')
     cards = ''
     for s in siblings:

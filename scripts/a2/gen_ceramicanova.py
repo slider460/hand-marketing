@@ -298,7 +298,7 @@ html.no-js .cn-r,html.no-js .cn-stag>*{opacity:1!important;transform:none!import
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Имиджевые ролики CeramicaNova: 17 фильмов | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: серия из 17 имиджевых видеороликов для CeramicaNova, по одному на коллекцию санфарфора. В шоуруме бренда построили съёмочную инсталляцию, художник оформил сцену, сделали замкнутый слив и подкрасили воду, чтобы показать безободковый смыв. Предметная съёмка, макро, монтаж под ключ.">
+<meta name="description" content="17 имиджевых роликов для CeramicaNova, по одному на коллекцию санфарфора: съёмочная инсталляция в шоуруме, замкнутый слив и подкрашенная вода, макросъёмка.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/portfolio/ceramicanova/">
 <meta property="og:type" content="article"><meta property="og:title" content="Имиджевые ролики для CeramicaNova | кейс Hand Marketing">

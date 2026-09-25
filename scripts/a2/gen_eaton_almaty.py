@@ -795,7 +795,7 @@ PAGE_JS = """<script>(function(){
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Партнёрская конференция Eaton в Алматы, 2016 | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: партнёрская конференция Eaton, Алматы, Grand Hotel Tien Shan, 28 сентября 2016. Перелёты, трансферы, размещение, застройка зала, сцена и проекция, POS-материалы и печатный гид участника на 8 полос. Семь выступлений с 9:00 до 15:30.">
+<meta name="description" content="Партнёрская конференция Eaton в Алматы, 28 сентября 2016: перелёты, трансферы, размещение, застройка зала, сцена и проекция, печатный гид участника на 8 полос.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

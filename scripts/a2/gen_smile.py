@@ -386,7 +386,7 @@ section{position:relative}
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Лендинг ТРЦ «Смайл» для Becar | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: посадочная страница инвестиционного продукта ТРЦ «Смайл» для Becar Asset Management. Восемь экранов, доходность до 13% годовых на первом экране, формы заявки, адаптив и анимации. В кейсе страница прокручивается целиком.">
+<meta name="description" content="Посадочная страница инвестиционного продукта ТРЦ «Смайл» для Becar Asset Management: восемь экранов, доходность до 13% годовых, формы заявки, адаптив и анимация.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

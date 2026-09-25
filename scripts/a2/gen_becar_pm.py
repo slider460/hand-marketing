@@ -248,7 +248,7 @@ SKYLINE = ('<div class="bp-skyline" aria-hidden="true"><svg viewBox="0 0 1200 15
 HEAD = f'''<!doctype html><html lang="ru"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Стенд Becar на Private Money Expo Forum | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: выставка под ключ для Becar Asset Management на форуме Private Money 2021. Концепция и дизайн стенда You&Co, застройка в узкой галерее, презентация для главной сцены, POSM и полиграфия, сопровождение, демонтаж, фотоотчёт.">
+<meta name="description" content="Стенд You&Co для Becar Asset Management на форуме Private Money 2021: концепция и дизайн стенда, застройка в узкой галерее, презентация для сцены, POS-материалы.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hand-marketing.ru/portfolio/becar-private-money/">
 <meta property="og:type" content="article"><meta property="og:title" content="Стенд You&Co для Becar на Private Money Expo Forum 2021 | кейс Hand Marketing">

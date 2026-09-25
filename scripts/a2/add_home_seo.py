@@ -375,7 +375,7 @@ def build(with_css=True, with_ld=True):
 <div class="hs-budget">
  <div style="--c:#CF6F19"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span><a href="/videoproduction/reklamnyy-rolik/">рекламный ролик</a> или <a href="/videoproduction/korporativnyy-film/">корпоративный фильм</a></span></div>
  <div style="--c:#E0427E"><i aria-hidden="true"></i><b>от 150 000 ₽</b><span>мультимедийная зона на <a href="/exhibition/multimedia/">стенде</a> или мероприятии</span></div>
- <div style="--c:#673A7E"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>мероприятие под ключ, в том числе <a href="/event/novogodniy-korporativ/">новогодний корпоратив</a></span></div>
+ <div style="--c:#673A7E"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>мероприятие под ключ: <a href="/event/konferencii/">конференция</a> или <a href="/event/novogodniy-korporativ/">новогодний корпоратив</a></span></div>
  <div style="--c:#8E5FB0"><i aria-hidden="true"></i><b>от 500 000 ₽</b><span>выставочный стенд под ключ</span></div>
 </div>
 <p class="hs-more">По дизайну, печати, промо и съёмке считаем по объёму работ: состав смет

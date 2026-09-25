@@ -411,7 +411,7 @@ PAGE_CSS = """<style id="sx-css">
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>BTL-акция «Ком подарков» в ТРЦ «Саларис» | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: новогодняя BTL-кампания «Ком подарков» для ТРЦ «Саларис». Командная механика накопления баллов (1000 ₽ = 1 salar), карта участника, сайт и приложение акции, подарочный фонд с партнёрами, оформление центра, промо-корнеры, POS и финальное шоу с розыгрышем автомобиля.">
+<meta name="description" content="Новогодняя BTL-кампания «Ком подарков» для ТРЦ «Саларис»: командная механика баллов, сайт и приложение акции, промо-корнеры и шоу с розыгрышем автомобиля.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

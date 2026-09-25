@@ -67,10 +67,8 @@ FILM = '/media/silkway-3d.mp4'
 URL = 'https://hand-marketing.ru/video/silkway/'
 TITLE = ('3D-визуализация маршрута Silk Way Rally: рельеф трассы '
          'для презентации гонки | Hand Marketing')
-DESCR = ('Кейс Hand Marketing: 3D-визуализация маршрута ралли-марафона '
-         'Silk Way Rally от Сианя до Москвы. Десять этапов и 5 947,93 км '
-         'собраны рельефом по координатам легенды трассы, ролик 8:41 '
-         'работал на презентации гонки вместе с песочным столом.')
+DESCR = ('3D-визуализация маршрута ралли Silk Way Rally от Сианя до Москвы: десять этапов и 5 '
+         '947,93 км рельефом по координатам трассы, ролик 8:41 для презентации гонки.')
 
 MAP = json.load(open(os.path.join(HERE, 'silkway_map.json'), encoding='utf-8'))
 WHAT = MAP['photos']

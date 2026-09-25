@@ -51,10 +51,8 @@ METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(functi
 IMG = '/images/interplastika'
 URL = 'https://hand-marketing.ru/video/interplastika/'
 TITLE = 'Обзорный ролик выставки интерпластика, Messe Düsseldorf | Hand Marketing'
-DESCR = ('Обзорный ролик выставки полимеров интерпластика в ЦВК «Экспоцентр» '
-         'для Messe Düsseldorf: регистрация, стенды сырьевых компаний '
-         'и производителей машин, деловая программа. Разбор кейса: цепочка '
-         'передела отрасли, симулятор заполнения пресс-формы, план площадки.')
+DESCR = ('Обзорный ролик выставки «Интерпластика» в «Экспоцентре» для Messe Düsseldorf: стенды '
+         'сырьевых компаний и производителей машин, деловая программа, разбор отрасли.')
 
 MAP = json.load(open(os.path.join(HERE, 'interplastika_map.json'), encoding='utf-8'))
 PAL = MAP['palette']

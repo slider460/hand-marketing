@@ -413,7 +413,7 @@ html.no-js .su-r{opacity:1!important;transform:none!important}
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Проектный чемодан Saint-Gobain: концепция «Две комнаты» | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: дизайн проектного чемодана Saint-Gobain с образцами Gyproc и ISOVER. Концепция «Две комнаты»: снаружи чемодан работает как фрагмент стены, у которого две стороны (ремонт и тишина) и разрез по торцу со схемой сборки.">
+<meta name="description" content="Дизайн проектного чемодана Saint-Gobain с образцами Gyproc и ISOVER. Концепция «Две комнаты»: чемодан как фрагмент стены с двумя сторонами, ремонт и тишина.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

@@ -53,10 +53,8 @@ METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(functi
 IMG = '/images/vivax'
 URL = 'https://hand-marketing.ru/video/vivax/'
 TITLE = 'Рекламный ролик VIVAX SPORT с Настасьей Самбурской | Hand Marketing'
-DESCR = ('Вирусный ролик спортивных средств VIVAX SPORT с актрисой Настасьей '
-         'Самбурской для компании «Академия Научной Красоты». Разбор кейса: '
-         'три средства линейки в одной тренировке, схема работы мышцы, '
-         'карта тела по 64 планам, съёмка в зале X-Fit.')
+DESCR = ('Вирусный ролик VIVAX SPORT с Настасьей Самбурской для «Академии Научной '
+         'Красоты»: три средства линейки в одной тренировке, съёмка в зале X-Fit.')
 
 MAP = json.load(open(os.path.join(HERE, 'vivax_map.json'), encoding='utf-8'))
 STILL = MAP['stills']

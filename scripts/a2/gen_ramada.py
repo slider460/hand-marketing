@@ -538,7 +538,7 @@ PAGE_CSS = """<style id="rm-css">
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Брошюра Ramada Encore для Becar: 20 полос | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: печатная брошюра отельного комплекса Ramada Encore ® by Wyndham в Санкт-Петербурге для Becar Asset Management. 20 полос, 9 разворотов, квадрат 220×220 мм, полноцвет 4+4. Концепция, копирайтинг, вёрстка и препресс: издание объясняет инвестору кондо-формат и доходность номера.">
+<meta name="description" content="Брошюра отельного комплекса Ramada Encore в Санкт-Петербурге для Becar Asset Management: 20 полос, концепция, тексты и вёрстка про кондо-формат и доходность номера.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

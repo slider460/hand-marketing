@@ -1009,7 +1009,7 @@ BREADCRUMB_LD = (
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Брендбук Metra Technology Group: пять брендов | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: брендбук индустриальной экосистемы Metra Technology Group на 69 полос. Знак и пять логотипов группы (НПП Метра, МетраPRO, MetraRobotics, МетраПолис), пять палитр и пять паттернов на одной модульной сетке, фотостиль, деловая документация, наружная реклама, транспорт, сувенирка и презентации.">
+<meta name="description" content="Брендбук индустриальной экосистемы Metra Technology Group на 69 полос: знак и пять логотипов группы, пять палитр и паттернов на одной сетке, носители и документы.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

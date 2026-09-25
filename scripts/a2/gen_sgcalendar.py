@@ -413,7 +413,7 @@ html.no-js .sg-r{opacity:1!important;transform:none!important}
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Новогодний календарь Saint-Gobain: концепция | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: концепция новогоднего календаря Saint-Gobain на 2021 год. Иллюстрации собраны из настоящих инструментов и материалов: потолочный профиль Gyproc становится небоскрёбом, плита ISOVER пляжем, сверло рогом нарвала. Три варианта конструкции, обложка-раскраска и подарочный набор маркеров.">
+<meta name="description" content="Концепция новогоднего календаря Saint-Gobain на 2021 год: иллюстрации из настоящих инструментов и материалов Gyproc и ISOVER, три варианта конструкции.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

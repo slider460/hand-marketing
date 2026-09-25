@@ -747,7 +747,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>ONLINE трансляция Eaton с форума OCS «IT-ОСЬ 2020» | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: онлайн-трансляция выступления Eaton на форуме OCS Distribution «IT-ОСЬ 2020». Аппаратная в офисе заказчика, две камеры, мини-ПТС и vMix, два независимых канала мобильного интернета с автопереключением. Семь часов эфира с 10:30 до 17:30 без сбоев.">
+<meta name="description" content="Онлайн-трансляция выступления Eaton на форуме OCS «IT-ОСЬ 2020»: аппаратная в офисе заказчика, две камеры, резервный канал связи, семь часов эфира без сбоев.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

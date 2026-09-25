@@ -719,7 +719,7 @@ VIDEO_LD = ('<script type="application/ld+json">{"@context":"https://schema.org"
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Рекламный ролик УАЗ Патриот и блокировка Eaton | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: рекламный ролик о блокировке дифференциала Eaton для УАЗ Патриот. Сценарий на два рынка, прешутинг с экспертом Eaton, три съёмочные смены на грунтовке, в грязи и на броде, четыре недели постпродакшна. Интерактивный разрез дифференциала.">
+<meta name="description" content="Рекламный ролик о блокировке дифференциала Eaton для УАЗ Патриот: сценарий на два рынка, три съёмочные смены в грязи и на броде, четыре недели постпродакшна.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

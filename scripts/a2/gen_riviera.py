@@ -568,7 +568,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>«Внутри стихии»: презентация ТРЦ Ривьера арендаторам | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: мероприятие «Внутри стихии» для ТРЦ Ривьера, 1 октября 2015 года. Передача помещения под отделку якорному арендатору «Ашан Сити» на строительной площадке: концепция четырёх стихий, экскурсия по недострою со звуковыми иллюзиями, 3D mapping, четыре фуршетных острова.">
+<meta name="description" content="Мероприятие «Внутри стихии» для ТРЦ «Ривьера», 2015: передача помещения «Ашан Сити» на стройке, экскурсия со звуковыми иллюзиями, 3D mapping и четыре стихии.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

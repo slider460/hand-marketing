@@ -705,7 +705,7 @@ def out():
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Презентация МФК «Саларис» арендаторам, 2018 | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: презентация МФК «Саларис» будущим арендаторам, 5 апреля 2018 года, арт-пространство «ФотоФактура». 200 гостей, презентация о транспортном узле и трафике, фуршет с тремя станциями, зона фото 180°, ролик об объекте и зонт с логотипом на выходе.">
+<meta name="description" content="Презентация МФК «Саларис» будущим арендаторам, 5 апреля 2018: 200 гостей в «ФотоФактуре», презентация о трафике, фуршет, фотозона 180° и ролик об объекте.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

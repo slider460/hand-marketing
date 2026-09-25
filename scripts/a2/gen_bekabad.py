@@ -764,7 +764,7 @@ BREADCRUMB_LD = ('<script type="application/ld+json">{"@context":"https://schema
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Презентационный ролик технопарка «Бекабад» | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: презентационный ролик промышленного технопарка «Бекабад» в Ташкентской области. Аэросъёмка площадки, из которой вырастает 3D-мастер-план на 100 гектаров, карты транспортных коридоров Центральной Азии, экскурсия по будущим корпусам и калькулятор льгот СЭЗ.">
+<meta name="description" content="Презентационный ролик технопарка «Бекабад» в Ташкентской области: аэросъёмка площадки, 3D-мастер-план на 100 гектаров, транспортные коридоры и льготы СЭЗ.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

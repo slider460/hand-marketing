@@ -270,7 +270,10 @@ def route():
             f'<div class="ds-route">{figs}</div>'
             f'<p class="ds-more">Подробно о стенде в <a href="/portfolio/samara-stand-vdnh/">кейсе '
             f'стенда Самарской области</a>. Для выставки «Самара» в Музее Алабина мы сделали '
-            f'<a href="/creative/samara/">фирменный стиль и оформление зон</a>.</p>'
+            f'<a href="/creative/samara/">фирменный стиль и оформление зон</a>. Ещё один стенд '
+            f'по нашему проекту: <a href="/portfolio/becar-private-money/">You&amp;Co для Becar</a> '
+            f'на форуме Private Money 2021, семь брендов на узкой полосе галереи. Клиенту показали '
+            f'два эскиза и финальный вариант, потом построили.</p>'
             f'</div></section>')
 
 

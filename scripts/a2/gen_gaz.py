@@ -1037,7 +1037,7 @@ VIDEO_LD = ('<script type="application/ld+json">{"@context":"https://schema.org"
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Газель-трансформер: вирусный ролик для ГАЗ и Eaton | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing: вирусный ролик «Газель-трансформер» о блокировке дифференциала Eaton для ГАЗель Бизнес и Соболь. Реклама одной опции, снятая за два дня на двух локациях: маршрутка в пробке превращается в робота. Ролик разошёлся сам и перезаливается с 2013 года.">
+<meta name="description" content="Вирусный ролик «Газель-трансформер» о блокировке дифференциала Eaton для ГАЗель Бизнес: маршрутка в пробке превращается в робота. Перезаливается с 2013 года.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">

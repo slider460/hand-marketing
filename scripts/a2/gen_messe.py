@@ -50,9 +50,8 @@ METRIKA = '<!-- Yandex.Metrika counter --><script type="text/javascript">(functi
 IMG = '/images/messe'
 URL = 'https://hand-marketing.ru/event/messeduessleldorf/'
 TITLE = 'Новый год Messe Düsseldorf в офисе компании | Hand Marketing'
-DESCR = ('Корпоративный Новый год Messe Düsseldorf Moscow в собственном офисе: '
-         'рабочее помещение поделено на четыре зоны, фуршет, сцена, бар и зона '
-         'шаржиста, программа с ведущим, фокусником и восточными танцами.')
+DESCR = ('Новый год Messe Düsseldorf Moscow в собственном офисе компании: помещение поделено на '
+         'четыре зоны, фуршет, сцена и бар, программа с ведущим и фокусником.')
 
 MAP = json.load(open(os.path.join(HERE, 'messe_map.json'), encoding='utf-8'))
 PALETTE = MAP['palette']
