@@ -42,3 +42,6 @@ scripts/audit/lint.md
 _andr_build/
 __pycache__/
 *.pyc
+
+# превью приватных страниц /for/* (обходят калитку, в git не нужны)
+mirror/for/**/_preview-*
