@@ -3,10 +3,13 @@
 DirectoryIndex index.php
 Options -Indexes
 
-# Превью-файлы (локальная разработка) — не отдавать, даже если случайно попали на сервер
-<FilesMatch "^_preview-">
+# Служебные файлы на «_» (превью, _analytics.php) — не отдавать напрямую
+<FilesMatch "^_">
   Require all denied
 </FilesMatch>
+
+# Журнал аналитики, если он пишется рядом со страницей (запасной вариант)
+RedirectMatch 404 /for/mr-group/_data(/|$)
 
 # PDF предложения отдаёт только index.php?pdf=1 после ввода пароля
 <FilesMatch "\.pdf$">

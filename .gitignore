@@ -45,3 +45,9 @@ __pycache__/
 
 # превью приватных страниц /for/* (обходят калитку, в git не нужны)
 mirror/for/**/_preview-*
+
+# сгенерированный HTML печатной версии MR (ссылки file://, пересобирается build.py)
+scripts/mr-group-pdf/out/
+
+# локальный журнал аналитики /for/mr-group (при тесте на php -S)
+hm-analytics/
