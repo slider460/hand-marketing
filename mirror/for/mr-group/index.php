@@ -78,6 +78,16 @@ if (!$authed) {
 GATE;
     exit;
 }
+// Выгрузка PDF только после входа: файл лежит рядом, прямой доступ закрыт в .htaccess
+if (isset($_GET['pdf'])) {
+    $f = __DIR__ . '/mr-proposal.pdf';
+    if (!is_file($f)) { http_response_code(404); exit; }
+    header('Content-Type: application/pdf');
+    header('Content-Disposition: attachment; filename="MR_Nasha_shkola_2026_Hand_Marketing.pdf"');
+    header('Content-Length: ' . filesize($f));
+    readfile($f);
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="ru">
@@ -140,7 +150,7 @@ GATE;
   .hero > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; transform:scale(1.04); animation:heroZoom 18s ease-out forwards; }
   @keyframes heroZoom { to { transform:scale(1); } }
   .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(9,7,20,.5) 0%,rgba(9,7,20,0) 30%,rgba(9,7,20,.35) 55%,rgba(9,7,20,.92) 100%); }
-  .hero-in { position:relative; z-index:2; width:100%; padding-bottom:56px; }
+  .hero-in { position:relative; z-index:2; width:100%; padding-top:112px; padding-bottom:56px; }
   .hero .pill { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.22); color:#fff; backdrop-filter:blur(10px); }
   @media (max-width:640px){ .hero .pill { white-space:normal; line-height:1.35; max-width:100%; } .hero .pill .gem { flex:none; } }
   .hero h1 { font-family:var(--head); font-weight:500; font-size:clamp(40px,7.4vw,112px); line-height:.96; letter-spacing:-.055em; margin:22px 0 0; }
@@ -496,6 +506,28 @@ GATE;
   .vid:hover .vplay i { transform:scale(1.08); }
   .vid.playing::after, .vid.playing .vplay { display:none; }
   .link { display:inline-block; margin-top:12px; color:var(--violet); font-weight:600; font-size:14.5px; text-decoration:none; }
+
+  /* Кнопка PDF */
+  .pdf-btn { display:inline-flex; align-items:center; gap:14px; background:var(--violet); color:#fff; text-decoration:none; border-radius:999px;
+    padding:20px 34px 20px 28px; font-weight:600; font-size:18px; box-shadow:0 14px 40px rgba(117,75,233,.45); transition:background .15s, transform .15s; }
+  .pdf-btn:hover { background:var(--violet-d); transform:translateY(-2px); }
+  .pdf-btn small { display:block; font-weight:400; font-size:12.5px; opacity:.75; margin-top:2px; }
+  .hero-pdf { margin-top:26px; }
+  @media (max-width:640px){ .pdf-btn { width:100%; justify-content:center; font-size:17px; padding:18px 22px; } }
+
+  /* Печать и PDF: всё раскрыто, без анимаций и навигации, блоки не рвутся */
+  @media print {
+    @page { margin:0; }
+    html, body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .rv-in { opacity:1 !important; transform:none !important; }
+    .top .nav, .pdf-btn, .hero-pdf, .city-hero .gbtn, .stage .hint, .play-foot + *, #again { display:none !important; }
+    .hero { min-height:880px; }
+    .hero > img, .res .g, .final .big-gem, .dash, .res.me::after { animation:none !important; }
+    .card, .cl, .ru, .mc, .ps, .cr, .vcard, .pf, .qt, .fb, .li, .zi, .task, .cube-wrap, .city-hero, .layout, .play, .gems, .tl, .split, .rules, .proof, .quotes, .crg, .vids, .mech, .quoteband, .path { break-inside:avoid; }
+    section { break-inside:avoid; padding-top:72px; }
+    .eyebrow, .h2, .lead { break-after:avoid; }
+    .final { break-inside:avoid; margin-top:72px; }
+  }
   /* Финал */
   .final { margin-top:96px; background:#090714; color:#fff; border-radius:var(--r-xl) var(--r-xl) 0 0; padding:88px 0 40px; position:relative; overflow:hidden; }
   .final .big-gem { position:absolute; right:-40px; top:40px; width:360px; height:480px; background:linear-gradient(160deg,#9d7cff,#754be9 45%,#3b1fa0); clip-path:polygon(50% 0,100% 38%,50% 100%,0 38%); opacity:.9; animation:bob 5s ease-in-out infinite; }
@@ -550,6 +582,7 @@ GATE;
         <a class="hs" href="#city"><small>стенд C8.1</small><b>Город MR</b><span>игра на 5 минут</span></a>
       </div>
     </div>
+    <div class="hero-pdf"><a class="pdf-btn" href="?pdf=1" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg><span>Скачать PDF<small>чтобы распечатать или открыть без интернета</small></span></a></div>
   </div>
 </section>
 
@@ -989,6 +1022,7 @@ GATE;
       <a href="mailto:anarodetsky@hand-marketing.ru"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>anarodetsky@hand-marketing.ru</a>
       <a href="https://t.me/narodetskii" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 3.44a1.5 1.5 0 0 0-1.6-.23L2.7 10.57a1.4 1.4 0 0 0 .1 2.62l4.46 1.48 1.7 5.27a1.4 1.4 0 0 0 2.28.6l2.45-2.32 4.05 2.96a1.4 1.4 0 0 0 2.2-.86l2.42-15.4a1.5 1.5 0 0 0-.42-1.48zM9.6 14.1l8.13-7.11-6.53 8.32-.24 2.94-1.36-4.15z"/></svg>Telegram</a>
     </div>
+    <div style="margin-top:36px;position:relative"><a class="pdf-btn" href="?pdf=1" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg><span>Скачать PDF<small>чтобы распечатать или открыть без интернета</small></span></a></div>
     <div class="foot">
       <span>Страница подготовлена Hand Marketing для MR и не предназначена для публичного распространения.</span>
       <span>Визуализации и эскиз города: черновики для обсуждения, не финальная графика.</span>

@@ -7,3 +7,8 @@ Options -Indexes
 <FilesMatch "^_preview-">
   Require all denied
 </FilesMatch>
+
+# PDF предложения отдаёт только index.php?pdf=1 после ввода пароля
+<FilesMatch "\.pdf$">
+  Require all denied
+</FilesMatch>
