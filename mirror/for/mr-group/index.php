@@ -175,6 +175,10 @@ hm_event('page_view');
   .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(9,7,20,.5) 0%,rgba(9,7,20,0) 30%,rgba(9,7,20,.35) 55%,rgba(9,7,20,.92) 100%); }
   .hero-in { position:relative; z-index:2; width:100%; padding-top:112px; padding-bottom:56px; }
   .hero .pill { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.22); color:#fff; backdrop-filter:blur(10px); }
+  .private-for { display:inline-flex; align-items:center; gap:9px; margin-bottom:14px; font-weight:600; font-size:clamp(14px,1.2vw,16px); color:#fff;
+    background:var(--violet); border-radius:999px; padding:10px 18px 10px 14px; box-shadow:0 10px 30px rgba(117,75,233,.45); }
+  .private-for + .pill { display:flex; width:fit-content; }
+  @media print { .private-for { box-shadow:none; } }
   @media (max-width:640px){ .hero .pill { white-space:normal; line-height:1.35; max-width:100%; } .hero .pill .gem { flex:none; } }
   .hero h1 { font-family:var(--head); font-weight:500; font-size:clamp(40px,7.4vw,112px); line-height:.96; letter-spacing:-.055em; margin:22px 0 0; }
   .hero h1 span { color:#b9a3ff; }
@@ -596,6 +600,7 @@ hm_event('page_view');
 <section class="hero">
   <img src="img/stand-city.jpg" alt="Визуализация стенда «Город MR»">
   <div class="wrap hero-in">
+    <div class="private-for"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Закрытая страница для Анны Щербаковой</div>
     <span class="pill"><span class="gem"></span>MR · «Наша школа» 2026 · Гостиный двор · 24–26 ноября</span>
     <h1>Два стенда,<br>одна история <span>MR</span></h1>
     <div class="hero-row">
@@ -764,7 +769,7 @@ hm_event('page_view');
           <text x="240" y="30" font-family="Inter,sans-serif" font-size="12" fill="#5b5d67">светящийся ромб над стендом</text>
           <rect x="40" y="56" width="360" height="300" rx="6" fill="#f3f0ff" stroke="#754be9" stroke-width="2"/>
           <rect x="40" y="52" width="360" height="8" fill="#090714"/>
-          <g class="zone" data-z="screen"><rect x="130" y="70" width="180" height="40" rx="10" fill="#754be9"/><text x="220" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">экран 86″ · карта</text></g>
+          <g class="zone" data-z="screen"><rect x="130" y="70" width="180" height="40" rx="10" fill="#754be9"/><text x="220" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">LED-экран · карта</text></g>
           <g class="zone" data-z="st"><rect x="60" y="135" width="56" height="56" rx="10" fill="#2dbe6c"/><rect x="60" y="215" width="56" height="56" rx="10" fill="#2dbe6c"/><rect x="324" y="135" width="56" height="56" rx="10" fill="#2dbe6c"/><rect x="324" y="215" width="56" height="56" rx="10" fill="#2dbe6c"/>
             <g font-family="Unbounded,sans-serif" font-size="18" fill="#fff" text-anchor="middle"><text x="88" y="170">1</text><text x="88" y="250">2</text><text x="352" y="170">3</text><text x="352" y="250">4</text></g></g>
           <g class="zone" data-z="center"><rect x="140" y="135" width="160" height="136" rx="12" fill="none" stroke="#5ec4f7" stroke-width="2" stroke-dasharray="7 6"/><text x="220" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#0b8fd0">центр свободен</text><text x="220" y="218" text-anchor="middle" font-family="Inter,sans-serif" font-size="11.5" fill="#5b5d67">очередь и фото на фоне карты</text></g>
@@ -776,12 +781,13 @@ hm_event('page_view');
       <div class="card rv-in">
         <h3 class="h3">Четыре станции, экран и выдача на 11 м²</h3>
         <div class="zl" style="margin-top:14px">
-          <div class="zi" data-z="screen"><i style="background:#754be9"></i><div><b>Экран 86 дюймов</b><span>На задней стене. Карту видно из прохода и с подкаст-стенда напротив.</span></div></div>
+          <div class="zi" data-z="screen"><i style="background:#754be9"></i><div><b>Светодиодный экран, шаг 2 мм</b><span>На задней стене. Карту видно из прохода и с подкаст-стенда напротив.</span></div></div>
           <div class="zi" data-z="st"><i style="background:#2dbe6c"></i><div><b>4 игровые станции</b><span>Стойки-домики барной высоты по бокам, лицом к центру. Пятый iPad в резерве.</span></div></div>
           <div class="zi" data-z="desk"><i style="background:#ffb020"></i><div><b>Стойка выдачи</b><span>У прохода: принтер открыток, ободки, промоутер. Внутри тумбы сервер игры.</span></div></div>
           <div class="zi" data-z="center"><i style="background:#5ec4f7"></i><div><b>Центр свободен</b><span>Очередь по разметке и фото на фоне карты. Проход между станциями от 1,5 м.</span></div></div>
         </div>
         <p class="note">Станция принимает 8–10 гостей в час, четыре станции 30–40. Цель MR в 400 историй за три дня закрывается с запасом.</p>
+        <p class="note"><b>Планировка предварительная.</b> Точную разработаем следующим шагом, когда будет утверждено место стенда на выставке.</p>
       </div>
     </div>
   </div>
@@ -870,7 +876,7 @@ hm_event('page_view');
           </div>
           <div class="pc-wrap">
             <div class="postcard" id="postcard"></div>
-            <div class="pc-note" id="pc-note">Открытка 10 × 15 печатается за 10–15 секунд. Житель, имя, профессия, дом и учёба, QR на историю.</div>
+            <div class="pc-note" id="pc-note">Открытка 10 × 15 печатается за 10–15 секунд. Житель, имя, профессия, дом и учёба. QR на историю жителя добавим при необходимости.</div>
           </div>
         </div>
       </div>
@@ -892,7 +898,7 @@ hm_event('page_view');
       <div class="ps rv-in"><span class="n">5</span><b>Переезд</b><span>проект MR, учёба и история в 3–4 предложениях</span><em>40 с</em></div>
       <div class="ps rv-in"><span class="n">6</span><b>В город</b><span>житель приземляется в свой квартал на экране</span><em>15 с</em></div>
       <div class="ps rv-in"><span class="n">7</span><b>Открытка</b><span>печать и ободок с ромбом на голову</span><em>30 с</em></div>
-      <div class="ps rv-in"><span class="n">8</span><b>После</b><span>по QR история и живая карта в телефоне</span><em>дома</em></div>
+      <div class="ps rv-in"><span class="n">8</span><b>После</b><span>по QR история и живая карта в телефоне (разработаем при необходимости)</span><em>дома</em></div>
     </div>
     <div class="timebar rv-in"><i style="width:7%;background:#5ec4f7"></i><i style="width:36%;background:#754be9"></i><i style="width:26%;background:#9d7cff"></i><i style="width:14%;background:#2dbe6c"></i><i style="width:6%;background:#5ec4f7"></i><i style="width:11%;background:#ffb020"></i></div>
     <div class="timecap"><span>0:00</span><span>около 5 минут у стенда</span></div>
@@ -909,7 +915,7 @@ hm_event('page_view');
         <div class="in"><div class="h3">К концу первого дня ободки MR видно в каждом зале</div><p style="margin-top:8px;color:rgba(255,255,255,.8)">Люди спрашивают, где такой взять, и приходят на стенд. Каждый ромб ведёт к MR.</p></div></div>
       <div class="col">
         <div class="rv-in"><img src="img/handout.jpg" alt="Выдача открытки на стойке" loading="lazy"><span class="viz">Визуализация</span><span>Промоутер надевает ободок сразу, у стойки просятся фото</span></div>
-        <div class="rv-in"><img src="img/headbands.jpg" alt="Ободки с объёмным ромбом" loading="lazy"><span class="viz">Визуализация</span><span>Ободок с объёмным ромбом в цветах MR</span></div>
+        <div class="rv-in"><img src="img/headbands.jpg" alt="Ободки с объёмным ромбом" loading="lazy"><span class="viz">Визуализация</span><span>Ободок с объёмным ромбом в цветах MR. При необходимости рассмотрим логотип MR внутри ромба</span></div>
       </div>
     </div>
   </div>
@@ -926,7 +932,7 @@ hm_event('page_view');
       <div class="cl rv-in"><h4>Без персональных данных</h4><ul><li>имя жителя вымышленное</li><li>контакты, фото и ФИО не собираем</li><li>152-ФЗ не затрагивается</li><li>нужны контакты: отдельное согласие</li></ul></div>
     </div>
     <div class="cols4">
-      <div class="cl dark rv-in"><h4>Сервер на стенде</h4><p>Мини-ПК в стойке выдачи держит игру, базу и очередь печати. Планшеты и экран в своей сети.</p></div>
+      <div class="cl dark rv-in"><h4>Сервер на стенде</h4><p>Сервер в стойке выдачи держит игру, базу и очередь печати. Планшеты и экран в своей сети.</p></div>
       <div class="cl dark rv-in"><h4>Облако только зеркало</h4><p>Копия базы и страницы по QR. Пропал интернет площадки, стенд работает, данные досылаются позже.</p></div>
       <div class="cl dark rv-in"><h4>Админка</h4><p>Статистика по часам, модерация имён, повторная печать, выгрузка ответов.</p></div>
       <div class="cl dark rv-in"><h4>Резерв</h4><p>Пятый iPad, запасной принтер и копия базы каждые 15 минут.</p></div>
@@ -945,8 +951,8 @@ hm_event('page_view');
       <div class="ru hot rv-in"><span class="src">Аккредитация застройщика</span><h4>До 8 октября у ООО «Экспо-Сервис»</h4><p>Сторонний застройщик допускается только после экспертизы документации. После срока услуга дорожает. <b>Этот срок заложен в график.</b></p></div>
       <div class="ru rv-in"><span class="src">Звук на стендах</span><h4>Запрещён, штраф 25 000 ₽</h4><p>В кубе звук только в беспроводных наушниках для зрителей. Игра без звука, привлекает картинкой и ромбом.</p></div>
       <div class="ru rv-in"><span class="src">Монтаж</span><h4>22–23 ноября и до 06:00 24 ноября</h4><p>Куб и конструктив собираем на складе заранее, на площадке только сборка и настройка. <b>Полный прогон в середине ноября.</b></p></div>
-      <div class="ru rv-in"><span class="src">Стены и крепёж</span><h4>Панели 3,5 м, сверлить нельзя, гипсокартон запрещён</h4><p>Куб самонесущий. Экран 86″ и брендинг ставим на свои конструкции или крепим за верхний торец панели.</p></div>
-      <div class="ru rv-in"><span class="src">Электричество</span><h4>Подключение до 2,5 кВт на стенд</h4><p>Считаем мощность заранее: экран, пять iPad, принтер и мини-ПК укладываются. Свет и вентиляцию куба закладываем в его бюджет мощности.</p></div>
+      <div class="ru rv-in"><span class="src">Стены и крепёж</span><h4>Панели 3,5 м, сверлить нельзя, гипсокартон запрещён</h4><p>Куб самонесущий. Светодиодный экран и брендинг ставим на свои конструкции или крепим за верхний торец панели.</p></div>
+      <div class="ru rv-in"><span class="src">Электричество</span><h4>Подключение до 2,5 кВт на стенд</h4><p>Считаем мощность заранее: светодиодный экран, пять iPad, принтер и сервер, свет и вентиляция куба. Если 2,5 кВт не хватит, дозаказываем мощность у площадки.</p></div>
       <div class="ru rv-in"><span class="src">Демонтаж</span><h4>26 ноября с 20:00 до 08:00 27 ноября</h4><p>Разбираем и вывозим за ночь, мусор вывозим сами: за оставленный площадка штрафует на 15 000 ₽.</p></div>
     </div>
   </div>

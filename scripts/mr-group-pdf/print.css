@@ -206,3 +206,5 @@ table.xl { width: 100%; border-collapse: collapse; font-size: 8.3pt; }
 table.xl th { text-align: left; font-weight: 600; background: #eef8ee; color: #1e6b3a; padding: 1.5mm 2.5mm; border: .25mm solid #d6e6d6; }
 table.xl td { padding: 1.4mm 2.5mm; border: .25mm solid #e6e6ea; color: var(--grey2); }
 table.xl tr:nth-child(even) td { background: #fafafa; }
+
+.gems .cap.sm { font-family: 'Inter',sans-serif; font-size: 8.5pt; font-weight: 600; }
