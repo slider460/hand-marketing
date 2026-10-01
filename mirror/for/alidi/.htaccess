@@ -1,0 +1,17 @@
+# Приватная клиентская страница — вход через index.php (код доступа).
+# Действует ТОЛЬКО на /for/alidi/, корневой .htaccess не затрагивает.
+DirectoryIndex index.php
+Options -Indexes
+
+# Служебные файлы на «_» (превью, _analytics.php) — не отдавать напрямую
+<FilesMatch "^_">
+  Require all denied
+</FilesMatch>
+
+# Журнал аналитики, если он пишется рядом со страницей (запасной вариант)
+RedirectMatch 404 /for/alidi/_data(/|$)
+
+# PDF предложения отдаёт только index.php?pdf=1 после ввода пароля
+<FilesMatch "\.pdf$">
+  Require all denied
+</FilesMatch>
