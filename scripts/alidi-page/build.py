@@ -218,10 +218,6 @@ STEPS = [
     ('03', 'Видео-скаут площадок', 'Удалённый осмотр пяти объектов до фиксации сметы: окна активности, свет, маршруты, допуски.'),
 ]
 
-STRIP = ['/images/sgcx/sc-pallets@560.jpg', '/images/rgd-history/aero-station.jpg', '/images/sgcx/sc-isover-stock@560.jpg', '/images/sgcx/sc-truck@560.jpg',
-         '/images/isotec/prod-5.jpg', '/images/sgcx/sc-shipping-doc@560.jpg', '/images/rgd-history/baltkran.jpg', '/images/powertech/shoot-camera.jpg',
-         '/images/sgcx/sc-control-room@560.jpg', '/images/sgcx/sc-road@560.jpg', '/images/isotec/prod-4.jpg', '/images/sgcx/sc-vetonit-line@560.jpg']
-
 
 def full(u):
     return u if u.startswith('http') else SITE + u
@@ -250,7 +246,9 @@ def page():
       '<a class="pdf-btn" href="?pdf=1">PDF</a></div></header>')
 
     # 1. первый экран
-    a('<section class="hero" id="top"><div class="wrap">'
+    a('<section class="hero" id="top">'
+      '<video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="img/hero-loop.jpg" aria-hidden="true">'
+      '<source src="img/hero-loop.mp4" type="video/mp4"></video><div class="wrap">'
       f'<p class="eyebrow light">{TRI}ГК АЛИДИ · имиджевый фильм к 35-летию</p>'
       '<h1>Наши работы<br>и как мы их снимали.</h1>'
       '<p class="lead">Корпоративные и имиджевые фильмы, съёмки на заводах, складах и терминалах, серии роликов, графика. Каждый проект со ссылкой на страницу кейса с видео.</p>'
@@ -264,9 +262,7 @@ def page():
       '<span class="mk blue" data-d="2027-07-26"><b>26 июля</b>сдача фильма</span>'
       '<span class="mk end" data-d="2027-08-26"><b>26 августа</b>юбилей</span></div></div>'
       '<p class="sign">ООО «Хэнд-маркетинг» · с 2012 года · hand-marketing.ru</p>'
-      '</div><div class="strip" aria-hidden="true"><div class="belt">'
-      + ''.join(f'<img src="{s}" alt="" width="560" height="315">' for s in STRIP * 2) +
-      '</div></div></section>')
+      '</div></section>')
 
     # 2. как прочитали ТЗ
     a('<section class="sec" id="tz"><div class="wrap">'

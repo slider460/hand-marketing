@@ -160,7 +160,12 @@ h3 { font-weight:700; font-size:20px; line-height:1.25; }
 .top .pdf-btn:hover { background:#fff; color:var(--ink); }
 
 /* первый экран */
-.hero { background:var(--ink); color:#fff; padding:80px 0 0; overflow:hidden; position:relative; }
+.hero { background:var(--ink); color:#fff; padding:80px 0 56px; overflow:hidden; position:relative; border-bottom:6px solid var(--blue); isolation:isolate; }
+/* немая нарезка складов, отгрузки и терминалов из наших фильмов (scripts/alidi-page/hero_loop.py) */
+.hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+.hero:before { content:''; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(90deg, rgba(20,20,23,.94) 0%, rgba(20,20,23,.82) 42%, rgba(20,20,23,.45) 100%),
+             linear-gradient(0deg, rgba(20,20,23,.9) 0%, rgba(20,20,23,0) 45%); }
 .hero h1 { font-weight:800; font-size:clamp(40px,7.4vw,96px); line-height:.98; letter-spacing:-.035em; margin-bottom:28px; }
 .lead { font-size:clamp(17px,1.6vw,20px); line-height:1.5; max-width:660px; color:rgba(255,255,255,.78); }
 .hero-cta { display:flex; flex-wrap:wrap; gap:12px; margin:34px 0 0; }
@@ -189,13 +194,8 @@ h3 { font-weight:700; font-size:20px; line-height:1.25; }
 .mk.end { transform:translateX(-100%); text-align:right; bottom:auto; top:100%; padding:14px 0 0; }
 .mk.end:after { left:auto; right:-7px; width:14px; height:14px; top:-8px; bottom:auto; border-radius:0; border:0; background:var(--blue);
   clip-path:polygon(0 100%,50% 0,100% 100%); }
-.sign { margin-top:40px; font-size:13px; color:rgba(255,255,255,.4); }
+.sign { margin-top:40px; font-size:13px; color:rgba(255,255,255,.5); }
 
-/* лента кадров со склада и производства: едет как конвейер */
-.strip { margin-top:56px; overflow:hidden; border-top:6px solid var(--blue); }
-.belt { display:flex; width:max-content; animation:belt 70s linear infinite; }
-.belt img { width:300px; height:169px; object-fit:cover; filter:saturate(.85); border-right:2px solid var(--ink); }
-@keyframes belt { to { transform:translateX(-50%); } }
 
 /* разделы */
 .sec { padding:110px 0; }
@@ -427,7 +427,8 @@ cite { display:block; margin-top:8px; font-family:'Inter',sans-serif; font-style
 }
 @media (max-width:640px) {
   .wrap { padding:0 16px; }
-  .hero { padding-top:48px; }
+  .hero { padding-top:48px; padding-bottom:40px; }
+  .hero:before { background:linear-gradient(0deg, rgba(20,20,23,.95) 0%, rgba(20,20,23,.8) 55%, rgba(20,20,23,.6) 100%); }
   .sec { padding:64px 0; }
   .tz { grid-template-columns:1fr; }
   .stats, .stats.n4 { grid-template-columns:1fr 1fr; }
@@ -461,13 +462,12 @@ cite { display:block; margin-top:8px; font-family:'Inter',sans-serif; font-style
   .m-shots.n4 { gap:3px; }
   .m-shots figcaption { font-size:9px; padding:3px 5px; left:3px; bottom:3px; }
   .mk[data-d="2027-02-01"] { display:none; }
-  .belt img { width:200px; height:113px; }
   .brand img { height:26px; }
   .alidi-logo { height:14px; }
   .btn { padding:14px 18px; font-size:14px; }
 }
 @media (prefers-reduced-motion:reduce) {
-  .belt { animation:none; }
+  .hero-bg { display:none; }
   .geo .route, .geo .pt { opacity:1 !important; animation:none !important; }
 }
 
@@ -475,7 +475,7 @@ cite { display:block; margin-top:8px; font-family:'Inter',sans-serif; font-style
 </head>
 <body>
 <header class="top"><div class="wrap top-in"><a class="brand" href="#top" aria-label="В начало"><svg class="alidi-logo" role="img" aria-label="АЛИДИ" viewBox="0 0 260 46" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#alc)"> <path d="M148.502 0H139.185V46H148.502V0Z" fill="currentColor"/> <path d="M240.775 0H231.457V46H240.775V0Z" fill="currentColor"/> <path d="M198.271 0H163.367V46H198.271C211.314 46 221.889 35.7008 221.889 22.9982C221.889 10.2955 211.314 0 198.271 0ZM198.271 9.07543C206.158 9.07543 212.568 15.3223 212.568 22.9982C212.568 30.674 206.158 36.9209 198.271 36.9209H172.684V9.07543H198.271Z" fill="currentColor"/> <path d="M81.5839 0.161211V45.978H128.629V36.9026H90.9014V0.161211H81.5839Z" fill="currentColor"/> <path d="M23.7804 0L0 46H11.5106L35.2873 0H23.7804Z" fill="currentColor"/> <path d="M35.2873 0L59.0677 46H70.5782L46.7978 0H35.2873Z" fill="currentColor"/> <path d="M24.5397 45.978H46.0423L35.2873 25.2258L24.5397 45.978Z" fill="#0041EA"/> <path d="M254.025 38.6686H253.288V40.3356H254.106C254.998 40.3356 255.352 40.0572 255.352 39.5076C255.352 38.8371 254.828 38.6686 254.036 38.6686H254.025ZM254.349 41.2333H253.277V43.3657H252.105V37.7563H253.826C255.481 37.7563 256.487 38.0531 256.487 39.4966C256.488 39.8154 256.391 40.1269 256.208 40.389C256.026 40.6511 255.767 40.8512 255.466 40.9622L256.767 43.3327H255.496L254.353 41.2003L254.349 41.2333ZM254.18 45.0657C256.612 45.0657 258.422 43.3437 258.422 40.7643C258.422 38.185 256.612 36.419 254.18 36.419C251.747 36.419 249.926 38.1593 249.926 40.7643C249.926 43.3693 251.806 45.0657 254.18 45.0657ZM254.18 35.481C254.881 35.4623 255.579 35.586 256.231 35.8447C256.883 36.1033 257.475 36.4915 257.971 36.9853C258.466 37.4792 258.856 38.0684 259.115 38.7169C259.373 39.3654 259.496 40.0596 259.476 40.757C259.476 43.8969 257.114 46 254.187 46C253.48 46.0186 252.776 45.8961 252.118 45.64C251.459 45.3838 250.859 44.9991 250.352 44.5085C249.845 44.018 249.443 43.4315 249.168 42.7837C248.893 42.1359 248.751 41.4399 248.751 40.7368C248.751 40.0337 248.893 39.3378 249.168 38.69C249.443 38.0422 249.845 37.4557 250.352 36.9651C250.859 36.4746 251.459 36.0899 252.118 35.8337C252.776 35.5776 253.48 35.4551 254.187 35.4737" fill="currentColor"/> </g> <defs> <clipPath id="alc"> <rect width="259.469" height="46" fill="white"/> </clipPath> </defs> </svg><i></i><img src="hm-logo.svg" alt="Hand Marketing" width="34" height="34"></a><nav class="nav"><a href="#tz">ТЗ</a><a href="#match">Опыт</a><a href="#films">Фильмы</a><a href="#skills">Умеем</a><a href="#all">Все работы</a><a href="#next">Дальше</a></nav><a class="pdf-btn" href="?pdf=1">PDF</a></div></header>
-<section class="hero" id="top"><div class="wrap"><p class="eyebrow light"><svg class="tri" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 12 11 0 22 12z"/></svg>ГК АЛИДИ · имиджевый фильм к 35-летию</p><h1>Наши работы<br>и как мы их снимали.</h1><p class="lead">Корпоративные и имиджевые фильмы, съёмки на заводах, складах и терминалах, серии роликов, графика. Каждый проект со ссылкой на страницу кейса с видео.</p><div class="hero-cta"><a class="btn" href="#match">Что из задачи мы уже снимали</a></div><div class="clock" id="clock"><div class="clock-n"><b id="days">330</b><span>дней до 35-летия АЛИДИ<br>26 августа 2027</span></div><div class="line" aria-hidden="true"><i class="now" id="now"></i><span class="mk" style="--p:0%"><b>сегодня</b></span><span class="mk" data-d="2027-02-01"><b>1 февраля</b>старт съёмок</span><span class="mk blue" data-d="2027-07-26"><b>26 июля</b>сдача фильма</span><span class="mk end" data-d="2027-08-26"><b>26 августа</b>юбилей</span></div></div><p class="sign">ООО «Хэнд-маркетинг» · с 2012 года · hand-marketing.ru</p></div><div class="strip" aria-hidden="true"><div class="belt"><img src="/images/sgcx/sc-pallets@560.jpg" alt="" width="560" height="315"><img src="/images/rgd-history/aero-station.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-isover-stock@560.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-truck@560.jpg" alt="" width="560" height="315"><img src="/images/isotec/prod-5.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-shipping-doc@560.jpg" alt="" width="560" height="315"><img src="/images/rgd-history/baltkran.jpg" alt="" width="560" height="315"><img src="/images/powertech/shoot-camera.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-control-room@560.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-road@560.jpg" alt="" width="560" height="315"><img src="/images/isotec/prod-4.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-vetonit-line@560.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-pallets@560.jpg" alt="" width="560" height="315"><img src="/images/rgd-history/aero-station.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-isover-stock@560.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-truck@560.jpg" alt="" width="560" height="315"><img src="/images/isotec/prod-5.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-shipping-doc@560.jpg" alt="" width="560" height="315"><img src="/images/rgd-history/baltkran.jpg" alt="" width="560" height="315"><img src="/images/powertech/shoot-camera.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-control-room@560.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-road@560.jpg" alt="" width="560" height="315"><img src="/images/isotec/prod-4.jpg" alt="" width="560" height="315"><img src="/images/sgcx/sc-vetonit-line@560.jpg" alt="" width="560" height="315"></div></div></section>
+<section class="hero" id="top"><video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="img/hero-loop.jpg" aria-hidden="true"><source src="img/hero-loop.mp4" type="video/mp4"></video><div class="wrap"><p class="eyebrow light"><svg class="tri" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 12 11 0 22 12z"/></svg>ГК АЛИДИ · имиджевый фильм к 35-летию</p><h1>Наши работы<br>и как мы их снимали.</h1><p class="lead">Корпоративные и имиджевые фильмы, съёмки на заводах, складах и терминалах, серии роликов, графика. Каждый проект со ссылкой на страницу кейса с видео.</p><div class="hero-cta"><a class="btn" href="#match">Что из задачи мы уже снимали</a></div><div class="clock" id="clock"><div class="clock-n"><b id="days">330</b><span>дней до 35-летия АЛИДИ<br>26 августа 2027</span></div><div class="line" aria-hidden="true"><i class="now" id="now"></i><span class="mk" style="--p:0%"><b>сегодня</b></span><span class="mk" data-d="2027-02-01"><b>1 февраля</b>старт съёмок</span><span class="mk blue" data-d="2027-07-26"><b>26 июля</b>сдача фильма</span><span class="mk end" data-d="2027-08-26"><b>26 августа</b>юбилей</span></div></div><p class="sign">ООО «Хэнд-маркетинг» · с 2012 года · hand-marketing.ru</p></div></section>
 <section class="sec" id="tz"><div class="wrap"><p class="eyebrow"><svg class="tri" viewBox="0 0 22 12" aria-hidden="true"><path d="M0 12 11 0 22 12z"/></svg><b>01</b> Задача</p><h2>Как мы прочитали ТЗ.</h2><div class="tz">
 <div class="tz-c"><b class="n">2</b><span class="cap">версии фильма</span><p>Презентационная 2:30-3:00 и мини-фильм 4:00-5:00. Горизонталь для зала, ТВ и ПК.</p></div>
 <div class="tz-c"><b class="n">5</b><span class="cap">съёмочных площадок</span><p>Москва, Валищево, Нижний Новгород, Минск, Алматы. Офисы и склады.</p></div>
