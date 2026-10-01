@@ -105,17 +105,31 @@ function hm_device($ua) {
     return $os . ', ' . $br;
 }
 
-// Уведомление в Telegram через бот сайта: токены читаем из api/config.php, сам файл не меняем
-function hm_tg($text) {
-    if (hm_owner()) return;
+// Уведомление в Telegram через бот сайта: токены читаем из api/config.php, сам файл не меняем.
+// Отправка через curl, как в api/lead.php (на хостинге file_get_contents к https может быть закрыт).
+// $force: проверка из отчёта, шлём даже владельцу и возвращаем диагностику без токена.
+function hm_tg($text, $force = false) {
+    if (hm_owner() && !$force) return 'owner';
     $root = isset($_SERVER['DOCUMENT_ROOT']) ? rtrim($_SERVER['DOCUMENT_ROOT'], '/') : '';
-    if ($root !== '' && is_file($root . '/api/config.php')) @include_once $root . '/api/config.php';
-    if (!defined('TELEGRAM_BOT_TOKEN') || !defined('TELEGRAM_CHAT_ID') || !TELEGRAM_BOT_TOKEN) return;
+    $cfg = $root !== '' && is_file($root . '/api/config.php');
+    if ($cfg) @include_once $root . '/api/config.php';
+    if (!$cfg) return 'нет файла api/config.php';
+    if (!defined('TELEGRAM_BOT_TOKEN') || !TELEGRAM_BOT_TOKEN) return 'в config.php нет TELEGRAM_BOT_TOKEN';
+    if (!defined('TELEGRAM_CHAT_ID') || !TELEGRAM_CHAT_ID) return 'в config.php нет TELEGRAM_CHAT_ID';
+    $url = 'https://api.telegram.org/bot' . TELEGRAM_BOT_TOKEN . '/sendMessage';
+    $post = http_build_query(array('chat_id' => TELEGRAM_CHAT_ID, 'text' => $text, 'parse_mode' => 'HTML', 'disable_web_page_preview' => 1));
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, array(CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 5, CURLOPT_CONNECTTIMEOUT => 3, CURLOPT_POSTFIELDS => $post));
+        $res = curl_exec($ch); $code = curl_getinfo($ch, CURLINFO_HTTP_CODE); $err = curl_error($ch);
+        curl_close($ch);
+        return 'curl: HTTP ' . $code . ($err !== '' ? ', ошибка ' . $err : '') . ', ответ ' . substr((string)$res, 0, 300);
+    }
     $ctx = stream_context_create(array('http' => array(
-        'method' => 'POST', 'timeout' => 3, 'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
-        'content' => http_build_query(array('chat_id' => TELEGRAM_CHAT_ID, 'text' => $text, 'parse_mode' => 'HTML', 'disable_web_page_preview' => 1)),
+        'method' => 'POST', 'timeout' => 3, 'ignore_errors' => true, 'header' => "Content-Type: application/x-www-form-urlencoded\r\n", 'content' => $post,
     )));
-    @file_get_contents('https://api.telegram.org/bot' . TELEGRAM_BOT_TOKEN . '/sendMessage', false, $ctx);
+    $res = @file_get_contents($url, false, $ctx);
+    return 'fopen: ' . ($res === false ? 'не отправилось (allow_url_fopen?)' : substr($res, 0, 300));
 }
 
 function hm_where($g) {
@@ -183,6 +197,12 @@ function hm_stats_page($key) {
         if ($file && is_file($file)) @rename($file, $d . '/events-archive-' . date('Ymd-His') . '.jsonl');
         if ($d !== '' && is_file($d . '/tg-sent.json')) @unlink($d . '/tg-sent.json');
         header('Location: ?stats=' . rawurlencode($key));
+        exit;
+    }
+    // Проверка Telegram: шлёт тестовое сообщение и показывает ответ (токен не выводится)
+    if (isset($_GET['tgtest'])) {
+        header('Content-Type: text/plain; charset=utf-8');
+        echo hm_tg("✅ Проверка уведомлений: " . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'), true);
         exit;
     }
     if (isset($_GET['raw'])) {
@@ -254,7 +274,7 @@ function hm_stats_page($key) {
 <h1>Как MR изучают страницу</h1>
 <p class="sub">/for/mr-group/ · обновлено <?= date('d.m.Y H:i') ?> · <?= $showOwner ? 'показаны все визиты, включая ваши' : 'ваши визиты скрыты' ?></p>
 <div class="bar"><a class="v" href="<?= hm_esc($kq . ($showOwner ? '&all=1' : '')) ?>">Обновить</a><a href="<?= hm_esc($showOwner ? $kq : $kq . '&all=1') ?>"><?= $showOwner ? 'Скрыть мои визиты' : 'Показать мои визиты' ?></a><a href="<?= hm_esc($kq . '&raw=1') ?>">Скачать сырой журнал</a><a href="./" target="_blank">Открыть страницу</a>
-<form method="post" action="<?= hm_esc($kq) ?>" onsubmit="return confirm('Обнулить статистику? Текущий журнал уйдёт в архив на сервере.')" style="display:inline"><button name="reset" value="1" style="font:inherit;font-size:14px;background:#fff;border:0;border-radius:99px;padding:9px 16px;cursor:pointer;color:#c2410c">Обнулить статистику</button></form></div>
+<a href="<?= hm_esc($kq) ?>&amp;tgtest=1" style="font-size:14px;background:#fff;border-radius:99px;padding:9px 16px;text-decoration:none;color:#090714;margin-right:8px">Проверить Telegram</a><form method="post" action="<?= hm_esc($kq) ?>" onsubmit="return confirm('Обнулить статистику? Текущий журнал уйдёт в архив на сервере.')" style="display:inline"><button name="reset" value="1" style="font:inherit;font-size:14px;background:#fff;border:0;border-radius:99px;padding:9px 16px;cursor:pointer;color:#c2410c">Обнулить статистику</button></form></div>
 <?php if (!$rows || (!$devices && !$fails)): ?><div class="card empty">Пока никто не заходил. Уведомление о первом входе придёт в Telegram.</div><?php else: ?>
 <div class="kpi">
   <div><b><?= count($devices) ?></b><span>устройств</span></div>
