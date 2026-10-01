@@ -247,7 +247,7 @@ def page():
 
     # 1. первый экран
     a('<section class="hero" id="top">'
-      '<video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="img/hero-loop.jpg" aria-hidden="true">'
+      '<video class="hero-bg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="img/hero-loop.jpg" aria-hidden="true" tabindex="-1">'
       '<source src="img/hero-loop.mp4" type="video/mp4"></video><div class="wrap">'
       f'<p class="eyebrow light">{TRI}ГК АЛИДИ · имиджевый фильм к 35-летию</p>'
       '<h1>Наши работы<br>и как мы их снимали.</h1>'

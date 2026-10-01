@@ -9,6 +9,20 @@
     m.style.setProperty('--p', Math.min(100, Math.max(0, (d - now) / span * 100)).toFixed(1) + '%');
   });
 
+  // Фоновая нарезка: запускаем сами (Safari в энергосбережении игнорирует autoplay),
+  // при отказе пробуем снова на первом движении, прокрутке или касании
+  var bg = document.querySelector('.hero-bg');
+  if (bg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    bg.muted = true; bg.defaultMuted = true; bg.setAttribute('muted', '');
+    var kick = function () { if (bg.paused) { var p = bg.play(); if (p && p.catch) p.catch(function () {}); } };
+    kick();
+    bg.addEventListener('canplay', kick);
+    ['pointermove', 'scroll', 'touchstart', 'keydown', 'click'].forEach(function (t) {
+      addEventListener(t, kick, { passive: true });
+    });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) kick(); });
+  }
+
   // Карта площадок рисуется, когда доходит до экрана
   var geo = document.querySelector('.geo');
   if ('IntersectionObserver' in window) {
