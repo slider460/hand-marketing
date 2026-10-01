@@ -178,6 +178,13 @@ function hm_stats_page($key) {
     if (!is_string($key) || !hash_equals($STATS_HASH, hash('sha256', $key))) { http_response_code(404); echo 'Not found'; exit; }
     hm_cookie('hm_mr_owner', '1', 400); // этот браузер больше не считается клиентом
     $d = hm_dir(); $file = $d !== '' ? $d . '/events.jsonl' : '';
+    // Обнулить: текущий журнал уходит в архив с датой, счёт начинается заново
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
+        if ($file && is_file($file)) @rename($file, $d . '/events-archive-' . date('Ymd-His') . '.jsonl');
+        if ($d !== '' && is_file($d . '/tg-sent.json')) @unlink($d . '/tg-sent.json');
+        header('Location: ?stats=' . rawurlencode($key));
+        exit;
+    }
     if (isset($_GET['raw'])) {
         header('Content-Type: application/x-ndjson; charset=utf-8');
         header('Content-Disposition: attachment; filename="mr-group-events.jsonl"');
@@ -246,7 +253,8 @@ function hm_stats_page($key) {
 </style></head><body><div class="w">
 <h1>Как MR изучают страницу</h1>
 <p class="sub">/for/mr-group/ · обновлено <?= date('d.m.Y H:i') ?> · <?= $showOwner ? 'показаны все визиты, включая ваши' : 'ваши визиты скрыты' ?></p>
-<div class="bar"><a class="v" href="<?= hm_esc($kq . ($showOwner ? '&all=1' : '')) ?>">Обновить</a><a href="<?= hm_esc($showOwner ? $kq : $kq . '&all=1') ?>"><?= $showOwner ? 'Скрыть мои визиты' : 'Показать мои визиты' ?></a><a href="<?= hm_esc($kq . '&raw=1') ?>">Скачать сырой журнал</a><a href="./" target="_blank">Открыть страницу</a></div>
+<div class="bar"><a class="v" href="<?= hm_esc($kq . ($showOwner ? '&all=1' : '')) ?>">Обновить</a><a href="<?= hm_esc($showOwner ? $kq : $kq . '&all=1') ?>"><?= $showOwner ? 'Скрыть мои визиты' : 'Показать мои визиты' ?></a><a href="<?= hm_esc($kq . '&raw=1') ?>">Скачать сырой журнал</a><a href="./" target="_blank">Открыть страницу</a>
+<form method="post" action="<?= hm_esc($kq) ?>" onsubmit="return confirm('Обнулить статистику? Текущий журнал уйдёт в архив на сервере.')" style="display:inline"><button name="reset" value="1" style="font:inherit;font-size:14px;background:#fff;border:0;border-radius:99px;padding:9px 16px;cursor:pointer;color:#c2410c">Обнулить статистику</button></form></div>
 <?php if (!$rows || (!$devices && !$fails)): ?><div class="card empty">Пока никто не заходил. Уведомление о первом входе придёт в Telegram.</div><?php else: ?>
 <div class="kpi">
   <div><b><?= count($devices) ?></b><span>устройств</span></div>
