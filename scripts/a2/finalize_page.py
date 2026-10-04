@@ -36,7 +36,9 @@ POSTSCRIPTS = ['add_cookie_consent.py', 'add_metrika_goals.py',
                'add_related_links.py',
                # ссылки шапки и подвала сразу на адрес со слэшем, без 301;
                # идёт последним, чтобы поймать и ссылки блока «Похожие проекты»
-               'fix_internal_slashes.py']
+               'fix_internal_slashes.py',
+               # источник заявки (первый визит, этот визит) в письме с формы
+               'add_lead_source.py']
 MARKERS = ['hm-cookie-consent', 'hm-metrika-goals', 'mc.yandex']
 
 
