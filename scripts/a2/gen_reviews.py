@@ -169,6 +169,7 @@ def page():
         f'<meta property="og:title" content="{H.escape(title)}">'
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
+        '<meta property="og:image" content="https://hand-marketing.ru/images/lib/as6739-3465-4238-b064-323735316130/sg-video-letter.jpg">'
         + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
 
     crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [

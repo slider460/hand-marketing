@@ -19,7 +19,11 @@ const pages = globSync(join(ROOT, 'mirror/**/index.html'))
     // на прод уезжает index-a2.html, если он есть: проверяем именно его
     const a2 = f.replace(/index\.html$/, 'index-a2.html')
     const src = existsSync(a2) ? a2 : f
-    const m = readFileSync(src, 'utf8').match(/<link rel="canonical" href="([^"]+)"/)
+    const html = readFileSync(src, 'utf8')
+    // закрытые страницы с noindex (отчёты /r/<код>/ и подобные): адрес в карте
+    // раскрывает их поисковику и противоречит самой метке
+    if (/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html)) return false
+    const m = html.match(/<link rel="canonical" href="([^"]+)"/)
     if (!m) return true
     return m[1].replace(BASE, '').replace(/\/$/, '') === loc.replace(/\/$/, '')
   })

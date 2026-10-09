@@ -9,6 +9,9 @@ SEO-батч по аудиту 18.07.2026 (идемпотентен, безоп�
 2) Дописаны короткие description шести страниц (DESC).
 3) sr-only <h1> в статический пре-рендер 3 React-страниц /portfolio/* (маркер
    data-hm-seo-h1) — до гидрации краулер видит заголовок; вне #root, визуала нет.
+4) og:url приводится к адресу страницы со слэшем (у тильдовских стояло
+   относительное «/3dmapping»), og:image вида «https://hand-marketing.ru/../x»
+   превращается в нормальный адрес — так соцсети и мессенджеры берут превью.
 Правит index.html и index-a2.html. Откат: git checkout mirror/.
 """
 import io, json, os, re, glob
@@ -29,8 +32,8 @@ OG_MAP = {
 DESC = {
     "about": "Рекламное агентство полного цикла Hand Marketing: команда, подход и опыт с 2012 года. Мероприятия, выставочные стенды, видеопродакшн, мультимедиа, дизайн.",
     "becar_stancia": "Посадочная страница бизнес-центра «Станция» для Becar Asset Management: концепция, дизайн и вёрстка. Кейс агентства Hand Marketing.",
-    "event/mozaika": "Организация мероприятия для ТРЦ «Мозаика» в Москве: концепция, шоу-программа, техническое обеспечение и продакшн под ключ — кейс ивент-агентства Hand Marketing.",
-    "event/salaris": "Презентация ТРЦ «Саларис»: концепция мероприятия, площадка, шоу-программа и техническое обеспечение — кейс ивент-агентства полного цикла Hand Marketing.",
+    # event/mozaika и event/salaris отсюда убраны 09.10.2026: кейсы переписаны,
+    # описание теперь держат их генераторы, а повторный прогон затирал его старым
     "project": "Портфолио Hand Marketing, больше 40 кейсов: мероприятия, выставочные стенды, видеопродакшн, 3D-мэппинг, мультимедиа, дизайн и полиграфия.",
     "service": "Услуги рекламного агентства в Москве и по России: организация мероприятий, застройка выставочных стендов, видеопродакшн, мультимедийный контент, дизайн, полиграфия, BTL и 3D-маппинг.",
 }
@@ -38,15 +41,24 @@ DESC = {
 # h1 для пре-рендеров React-страниц — тексты сняты с ЖИВОГО рантайм-h1 приложения
 H1_PAGES = {
     "portfolio/samara-exhibition": "Выставка «Самара» в Музее им. П.В. Алабина",
-    "portfolio/samara-stand-vdnh": "Стенд Самарской области на выставке-форуме «Россия»",
-    "portfolio/stavropol-stand-vdnh": "Стенд Ставропольского края на выставке «Россия»",
+    # samara-stand-vdnh и stavropol-stand-vdnh убраны 09.10.2026: страницы переписаны
+    # с видимым <h1>, скрытый добавлял второй заголовок
 }
 # статика samara-exhibition несла title/description ДРУГОЙ страницы (стенд ВДНХ) —
 # приводим к рантайму React (страница про выставку в музее)
 TITLE_FIX = {
+    # тильдовские Becar-страницы: в выдаче стоял голый заголовок без бренда и клиента
+    "becar_stancia": (
+        "Посадочная страница БЦ «Станция» для Becar | Hand Marketing",
+        "Посадочная страница бизнес-центра «Станция» для Becar Asset Management: концепция, дизайн и вёрстка. Кейс агентства Hand Marketing.",
+    ),
+    "bacar_vertical_all": (
+        "Посадочная страница сети кондо-отелей Vertical для Becar | Hand Marketing",
+        "Посадочная страница сети кондо-отелей Vertical для Becar Asset Management: структура, дизайн и вёрстка. Кейс агентства Hand Marketing.",
+    ),
     "portfolio/samara-exhibition": (
         "Выставка «Самара» в Музее Алабина | Hand Marketing",
-        "Выставка «Самара» в Музее им. П.В. Алабина: мультимедийная экспозиция, контент и техническое оснащение — кейс Hand Marketing.",
+        "Выставка «Самара» в Музее им. П.В. Алабина: мультимедийная экспозиция, контент и техническое оснащение. Кейс Hand Marketing.",
     ),
 }
 SR_ONLY = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0"
@@ -73,12 +85,19 @@ def patch_page(path, route):
         url = m.group(1)
         if url and not url.startswith(("http://", "https://")):   # абсолютизировать
             html = html.replace(m.group(0), 'property="og:image" content="%s"' % (SITE + "/" + url.lstrip("/")))
+        elif url.startswith(SITE + "/../"):   # «/../» в абсолютном адресе: превью не берётся
+            html = html.replace(m.group(0), 'property="og:image" content="%s"' % (SITE + "/" + url[len(SITE + "/../"):]))
     else:
         og = COVER.get(route) or OG_MAP.get(route) or DEFAULT_OG
         tag = '<meta property="og:image" content="%s">' % og
         i = html.find("</head>")
         if i > 0:
             html = html[:i] + tag + html[i:]
+
+    # --- og:url = адрес страницы со слэшем, как canonical и sitemap ---
+    page_url = SITE + "/" + (route + "/" if route else "")
+    html = re.sub(r'(property="og:url" content=")[^"]*(")',
+                  lambda m: m.group(1) + page_url + m.group(2), html)
 
     # --- sr-only h1 для пре-рендеров (повторный прогон обновляет текст) ---
     if route in H1_PAGES:
@@ -114,8 +133,8 @@ def main():
         route = os.path.relpath(os.path.dirname(idx), os.path.join(ROOT, "mirror")).replace("\\", "/")
         if route == ".":
             route = ""
-        # пропустить приватные клиентские страницы — им og не нужен
-        if route.startswith("for/"):
+        # пропустить приватные клиентские страницы, им og не нужен
+        if route.startswith(("for/", "r/")):   # /r/ — закрытые отчёты, тоже noindex
             continue
         if patch_page(idx, route):
             changed += 1

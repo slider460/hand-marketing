@@ -694,7 +694,7 @@ def live():
 <div class="sb-lvs">{cards}</div>
 <p class="sb-note sb-r">Оснащение и мультимедиа выставки — отдельный кейс:
  <a href="/portfolio/samara-exhibition/">выставка «Самара» в Музее им. П. В. Алабина</a>.
- Стенд, с которого стиль переехал в музей, — <a href="/samara_vdnh/">на выставке-форуме
+ Стенд, с которого стиль переехал в музей, — <a href="/portfolio/samara-stand-vdnh/">на выставке-форуме
  «Россия» на ВДНХ</a>.</p>
 </div></section>'''
 

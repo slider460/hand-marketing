@@ -64,8 +64,14 @@ def main():
         s = open(f, encoding='utf-8').read()
         orig = s
         for old, new in PAIRS:
-            if old in s:
-                s = s.replace(old, new)
+            # новая фраза может начинаться со старой («…оборудования» → «…оборудования
+            # в Москве»): уже заменённое не трогаем, иначе второй прогон даёт
+            # «в Москве в Москве» (так и было в title /photo и /3dmapping до 09.10.2026)
+            pat = re.escape(old)
+            if new.startswith(old):
+                pat += '(?!' + re.escape(new[len(old):]) + ')'
+            s, n = re.subn(pat, lambda m: new, s)
+            if n:
                 titles += 1
         for old, new in WORDS:
             # «POS-материалы» уже могли поставить раньше: не трогаем то, что заменено

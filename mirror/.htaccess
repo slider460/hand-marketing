@@ -3,6 +3,11 @@
 
 DirectoryIndex index.html
 
+# Своя страница «не найдено» вместо заглушки хостинга (10.10.2026). Статус ответа
+# остаётся 404/403, страница с noindex. Генератор: scripts/a2/gen_404.py
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+
 # www -> без www ТОЛЬКО для боевого hand-marketing.ru.
 # Файл .htaccess общий с weshowstudia.ru — поэтому правило строго привязано к хосту.
 <IfModule mod_rewrite.c>
@@ -15,6 +20,9 @@ DirectoryIndex index.html
   # 301 на тот же путь боевого домена, чтобы вес и индекс не делились между дублями.
   RewriteCond %{HTTP_HOST} ^(www\.)?weshowstudia\.ru$ [NC]
   RewriteRule ^(.*)$ https://hand-marketing.ru/$1 [R=301,L]
+  # /portfolio/ — общий каталог React-кейсов без своей страницы (отдавал 403):
+  # ведём в портфолио. Сами кейсы /portfolio/<slug>/ правило не задевает
+  RewriteRule ^portfolio/?$ /project/ [R=301,L]
 </IfModule>
 
 # Красивые URL: /project -> /project/index.html (отдаётся каталогом автоматически)

@@ -259,6 +259,7 @@ def page():
         f'<meta property="og:title" content="{H.escape(title)}">'
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
+        '<meta property="og:image" content="https://hand-marketing.ru/images/metra/sheet/01.jpg">'
         + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
 
     body = (

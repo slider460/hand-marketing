@@ -472,7 +472,7 @@ def hero():
       '<header class="mz-hero" id="top"><div class="mz-w"><div class="mz-hero__grid">'
       '<div class="mz-r is-in">'
       '<p class="mz-kick"><a href="/event" style="color:inherit;text-decoration:none">Event</a> · ТЦ «Мозаика» · Москва · 31 октября 2018</p>'
-      '<h1>Пора выходить<em>на свет</em></h1>'
+      '<h1>Пора выходить <em>на свет</em></h1>'
       '<p class="mz-lead">Вечер для арендаторов торгового центра, на котором '
       'обновлённый знак «Мозаики» включили не кнопкой со сцены. Свет в зале '
       f'собрали сами гости: {GUESTS} человека, у каждого своя лампочка.</p>'
