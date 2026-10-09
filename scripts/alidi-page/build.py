@@ -462,7 +462,7 @@ def blk_more():
         ('Выставочные стенды', 'Строим под ключ, но главное в другом: нестандартную мультимедиа и контент закладываем ещё на этапе проекта, а не добавляем на монтаже.',
          [('Самара на ВДНХ', '/portfolio/samara-stand-vdnh/', L + 'custom-samara-vdnh/cover-main.png', False),
           ('Ставрополье на ВДНХ', '/portfolio/stavropol-stand-vdnh/', L + 'custom-stavropol-vdnh/cover-main.png', False),
-          ('Как разрабатываем: проект стенда Самары, 204 м², 79 листов', '/exhibition/dizayn-stenda/', '/images/exhibition/samara/render-v1-a.jpg', True)]),
+          ('Как разрабатываем: проект стенда Самары, 204 м², 79 листов', '/exhibition/#ex-case', '/images/exhibition/samara/render-v1-a.jpg', True)]),
         ('События', 'Наше основное направление с открытия агентства. Одна идея проходит через всё мероприятие: приглашение, площадку, сцену, экраны и подарки.',
          [('«Внутри стихии», ТРЦ Ривьера', '/event/riviera/', L + 'as3062-3363-4134-b333-623232303134/__-22.png', False),
           ('Новый год Samsung', '/event/samsung/', L + 'as3466-3261-4738-b938-303637303133/__-18.png', False)]),
