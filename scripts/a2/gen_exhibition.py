@@ -84,6 +84,8 @@ PAGE_CSS="""<style id="ex-css">
 .ex-step__n::before{content:"0" counter(exstep)}
 .ex-step h3{margin:0 0 8px;font-size:17px;font-weight:700;line-height:1.3}
 .ex-step p{margin:0;font-size:14px;line-height:1.55;color:#5A616A}.ex-step p a{color:#673A7E;font-weight:700;text-decoration:none}.ex-step p a:hover{text-decoration:underline}.ex-steps_3{grid-template-columns:repeat(3,1fr)}
+.ex-steps_4{grid-template-columns:repeat(4,1fr)}
+.ex-steps__note a{color:#673A7E;font-weight:700;text-decoration:none}.ex-steps__note a:hover{text-decoration:underline}
 .ex-steps__note{margin:44px 0 0;text-align:center;font-size:16px;color:#5A616A}
 .ex-steps__note b{color:#14171C}
 /* кейсы: масштаб родного стора (~295px), фото без апскейла */
@@ -367,6 +369,10 @@ FAQ = [
      'индивидуальной застройки. Наполнение, графику и мультимедиа при этом делаем так же.'),
     ('Можно ли заказать только мультимедиа и контент для готового стенда?',
      'Да. Интерактивные инсталляции, видеомаппинг, контент для LED-экранов и тач-панелей мы делаем и как отдельную услугу, в том числе для стендов, которые строит другой подрядчик.'),
+    ('Можно ли сделать стенд с кинетическим фасадом или подвижным потолком?',
+     'Да. Кинетический экран, медиапотолок и шары на лебёдках закладываем в проект с первого '
+     'эскиза: под них нужны точки подвеса, согласование нагрузки с площадкой, питание и контент '
+     'под рельеф. Технику подбираем под площадку, привозим и отвечаем за монтаж.'),
     ('Кто отвечает за изготовление выставочного стенда?',
      'Мы, целиком. Изготовление выставочных стендов ведём от проекта до монтажа: '
      'конструктив, печать графики, мебель и навигация делаются под конкретный проект, '
@@ -737,10 +743,40 @@ def build():
         '</div>'
         '<p class="ex-steps__note ex-rev">Поэтому на площадке не спорят между собой три подрядчика: '
         'сроки, макеты и форматы сходятся внутри одной команды.</p></section>')
+    # кинетика и подвесы: по этим запросам страница стоит на 6–7 месте (Вебмастер, 10.10.2026):
+    # «проектирование стенда с кинетическим фасадом», «…с кинетическим потолком»,
+    # «шары над стендом для навигации». Факты только с опубликованных кейсов;
+    # стенд к «Спортивной державе» не построен, подаём как проект
+    kinetic=(
+        '<section class="ex-sec" id="ex-kinetic"><div class="ex-sec__head">'
+        '<h2 class="ex-sec__h ex-rev">Кинетика, медиапотолок и шары над стендом</h2></div>'
+        '<div class="ex-steps ex-steps_4">'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Кинетический фасад и экран</h3><p>Пиксели выдвигаются из плоскости и складывают рельеф: '
+        'логотип, лицо, карту. На <a href="/portfolio/samara-stand-vdnh/">стенде Самарской области</a> '
+        'на ВДНХ ход пикселя был 20 см, на экране шли портреты земляков и сравнение «было и стало». '
+        'Контент под рельеф рисовали мы.</p></div>'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Медиапотолок и кинетический потолок</h3><p>Экраны и подвижные элементы над головой видно '
+        'из любой точки зала, даже когда стенд окружён людьми. В проекте стенда к форуму «Россия — '
+        'спортивная держава» под потолком плывут волны из хоккейных шайб, у каждой своя лебёдка.</p></div>'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Шары над стендом</h3><p>LED-шары и шары на лебёдках работают как навигация: зону видно '
+        'поверх голов с другого конца павильона. На стенде Самарской области под потолком висели '
+        'три LED-шара.</p></div>'
+        '<div class="ex-step ex-rev"><span class="ex-step__n" aria-hidden="true"></span>'
+        '<h3>Проекция и 3D-мэппинг на конструкции</h3><p>Проектор рисует по объёму стенда, если '
+        'поверхность и точку зрителя рассчитали заранее. Мэппинг-шоу на фасад здания делаем отдельно: '
+        'в Ставрополе это 27 проекторов. <a href="/3dmapping/">3D-мэппинг</a>.</p></div>'
+        '</div>'
+        '<p class="ex-steps__note ex-rev">Всё это закладываем в проект с первого эскиза: точки подвеса '
+        'и нагрузку согласуем с площадкой, питание и управление сводим в один пульт, как на стенде '
+        'Самарской области. Подробнее: <a href="/exhibition/multimedia/">мультимедиа для выставочного '
+        'стенда</a>.</p></section>')
     case_sec=(f'<div class="ex-cases-wrap" id="ex-cases"><section class="ex-sec">'
           f'<div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Кейсы</h2><a class="ex-all ex-rev" href="/project">Все проекты →</a></div>'
           f'<div class="ex-cases">{cases()}</div></section></div>')
-    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{bundle}{case_sec}<section class="ex-sec" id="ex-price"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Стоимость и отзывы</h2></div>{cb.render("exhibition")}</section>{CASE_CSS}{case_narr()}{faq_html()}</main>'
+    body=(f'{rc.header()}<main class="ex-main">{hero}{steps_sec}{bundle}{kinetic}{case_sec}<section class="ex-sec" id="ex-price"><div class="ex-sec__head"><h2 class="ex-sec__h ex-rev">Стоимость и отзывы</h2></div>{cb.render("exhibition")}</section>{CASE_CSS}{case_narr()}{faq_html()}</main>'
           f'<a id="lead"></a>{rc.footer()}{rc.JS}{VP_MODAL}{REVEAL_JS}</body></html>')
     return HEAD+body
 
