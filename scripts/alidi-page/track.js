@@ -62,6 +62,7 @@
     var txt = cap((a.getAttribute('aria-label') || a.textContent || '').slice(0, 80));
     var href = (a.getAttribute && a.getAttribute('href')) || '';
     if (a.classList.contains('pdf-btn')) return ev('pdf', 'нажал «Скачать PDF»');
+    if (a.id === 'arch-btn') return ev('archive', a.getAttribute('aria-expanded') === 'true' ? 'свернул архив' : 'открыл архив «Наши работы»');
     if (a.closest('.nav')) return ev('nav', 'меню: ' + txt);
     if (a.classList.contains('vid') || a.classList.contains('vid-inline')) return ev('video', 'включил ролик: ' + (a.dataset.video || '').split('/').pop());
     if (a.classList.contains('m-row')) return first('match' + a.dataset.i, 'match', 'опыт под задачу: «' + txt.replace(/^0\d\s*/, '') + '»');

@@ -1,4 +1,17 @@
 (function () {
+  // Архив прежней страницы: раскрывается кнопкой «Посмотреть»
+  var arch = document.getElementById('archive'), archBtn = document.getElementById('arch-btn');
+  function openArch(scroll) {
+    arch.hidden = false; archBtn.setAttribute('aria-expanded', 'true'); archBtn.textContent = 'Свернуть';
+    var v = arch.querySelector('.hero-bg'); if (v && v.paused) { var pp = v.play(); if (pp && pp.catch) pp.catch(function () {}); }
+    if (scroll) arch.scrollIntoView({ behavior: 'smooth' });
+  }
+  archBtn.addEventListener('click', function () {
+    if (arch.hidden) openArch(true);
+    else { arch.hidden = true; archBtn.setAttribute('aria-expanded', 'false'); archBtn.textContent = 'Посмотреть'; }
+  });
+  document.querySelectorAll('a[href="#archive-open"]').forEach(function (l) { l.addEventListener('click', function () { openArch(false); }); });
+
   // Счётчик до юбилея и шкала: сегодня → старт съёмок → сдача → 26.08.2027
   var DAY = 864e5, now = new Date(); now.setHours(0, 0, 0, 0);
   var end = new Date(2027, 7, 26), days = Math.max(0, Math.round((end - now) / DAY));
@@ -72,4 +85,34 @@
       cards.forEach(function (c) { c.classList.toggle('hide', t.dataset.f !== '*' && c.dataset.k !== t.dataset.f); });
     });
   });
+})();
+
+// «Как снимаем»: портреты и главы запускают ролик с нужной секунды; один ролик играет за раз
+(function () {
+  document.querySelectorAll('.tp, .pc').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = document.getElementById(b.dataset.p), t = parseFloat(b.dataset.t);
+      document.querySelectorAll('.how video').forEach(function (x) { if (x !== v) x.pause(); });
+      var go = function () { v.currentTime = t; var pp = v.play(); if (pp && pp.catch) pp.catch(function () {}); };
+      if (v.readyState >= 1) go(); else { v.preload = 'auto'; v.addEventListener('loadedmetadata', go, { once: true }); v.load(); }
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
+    });
+  });
+  document.querySelectorAll('.how video').forEach(function (v) {
+    v.addEventListener('play', function () { document.querySelectorAll('.how video').forEach(function (x) { if (x !== v) x.pause(); }); });
+  });
+})();
+
+// Карты: немые петли играют только на экране
+(function () {
+  var vs = document.querySelectorAll('.mp-v');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (x) {
+      var v = x.target;
+      if (x.isIntersecting) { if (!v.src) v.src = v.dataset.src; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: .35 });
+  vs.forEach(function (v) { v.muted = true; io.observe(v); });
 })();

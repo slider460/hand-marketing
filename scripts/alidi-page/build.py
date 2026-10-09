@@ -158,13 +158,13 @@ FILMS = [
          text='Центральная дирекция по управлению терминально-складским комплексом держит грузовые дворы по всей стране, от Калининграда до Находки. За 3:54 фильм показывает, что это за хозяйство, чем оно занято каждый день и что изменилось за десять лет. Три съёмочные группы вышли параллельно, снимали действующие терминалы с земли и с квадрокоптера, слайды дирекции пересобрали в экранную графику. Итог десяти лет проговаривает начальник дирекции.',
          stats=[('3 группы', 'параллельно: Москва, Санкт-Петербург, Калининград'), ('117', 'планов в фильме, средняя длина 2 секунды'),
                 ('15', 'городов на карте сети терминалов, с запада на восток')],
-         video='/media/transrzhd.mp4', poster='/images/rgd-history/poster.jpg', link='/video/rgd/history'),
+         video='/media/transrzhd.mp4', poster='/images/rgd-history/poster.jpg', link='/video/rgd/history/'),
     dict(id='isotec', color='#9b2a8a', tag='Имиджевый фильм · Saint-Gobain · ISOTEC · 2024',
          title='«Изотек»: двенадцать лет бренда в одной истории',
          accent='От образования направления до криогенной изоляции.',
          text='Ролик показывает «Изотек» как живой бренд с историей, а не как поставщика материалов. Работает в двух контурах: для клиентов, партнёров и отраслевых событий и для внутренних коммуникаций и адаптации сотрудников. Структура: пролог, хронология, география, производство, цифровые сервисы, итоги. Съёмки на действующих производственных площадках по регламентам СИЗ.',
          stats=[('4:33', 'хронометраж фильма'), ('9 вех', '2012-2024, каждая вынесена в экранную графику'), ('6', 'площадок с реальными кадрами производства')],
-         video='/media/izotek-brand-video.mp4', poster='/images/isotec/poster.jpg', link='/isotec'),
+         video='/media/izotek-brand-video.mp4', poster='/images/isotec/poster.jpg', link='/isotec/'),
     dict(id='pt', color='#1f8a85', tag='История успеха · Чемпионат мира по футболу 2018',
          title='Power Technologies: фильм снят, пока шёл проект',
          accent='Одиннадцать городов, двенадцать стадионов, месяц съёмок.',
@@ -176,9 +176,9 @@ FILMS = [
 
 PLACES = [
     ('Технопарк «Зубово»', 'Башкортостан · 3:04', 'Живая промышленная площадка под Уфой: корпуса, инженерия, облёт территории, синхроны руководства. Более 70 гектаров.',
-     '/media/technopark-zubovo.mp4', '/images/zubovo/poster.jpg', '/zubovo'),
+     '/media/technopark-zubovo.mp4', '/images/zubovo/poster.jpg', '/zubovo/'),
     ('Технопарк «Бекабад»', 'Узбекистан · 2:34', 'Площадка в Ташкентской области, которую Башкортостан строит вместе с Узбекистаном. Мастер-план поднимается поверх аэросъёмки реального участка.',
-     '/media/bekabad-hd.mp4', '/images/bekabad/poster.jpg', '/bekobod1'),
+     '/media/bekabad-hd.mp4', '/images/bekabad/poster.jpg', '/bekobod1/'),
     ('ТРЦ «Павелецкая Плаза»', 'MMG · 5:37', 'Фильм для арендаторов объекта на стройке: локация, трафик, аудитория, готовность. В первом кадре знак победителя MIPIM 2020.',
      '/media/mmg-paveleckayaplaza.mp4', '/images/mmg/poster.jpg', '/mmg'),
 ]
@@ -191,10 +191,10 @@ SERIES = [
 ]
 
 SKILLS = [  # что умеем → где это видно
-    ('Две концепции и сценарий', 'Предлагаем два хода на выбор и доводим выбранный до покадрового сценария.', 'Газель-трансформер', '/video/gaz'),
-    ('Съёмка на складе и в цеху', 'Работаем на действующих площадках по регламентам СИЗ, не останавливая смену.', '«Изотек»', '/isotec'),
-    ('Несколько групп одновременно', 'Параллельные выезды в разные города с одним режиссёрским планом.', 'ЦМ РЖД', '/video/rgd/history'),
-    ('Аэросъёмка', 'Территория, терминалы и подъездные пути сверху, с квадрокоптера.', 'Технопарк «Зубово»', '/zubovo'),
+    ('Две концепции и сценарий', 'Предлагаем два хода на выбор и доводим выбранный до покадрового сценария.', 'Газель-трансформер', '/video/gaz/'),
+    ('Съёмка на складе и в цеху', 'Работаем на действующих площадках по регламентам СИЗ, не останавливая смену.', '«Изотек»', '/isotec/'),
+    ('Несколько групп одновременно', 'Параллельные выезды в разные города с одним режиссёрским планом.', 'ЦМ РЖД', '/video/rgd/history/'),
+    ('Аэросъёмка', 'Территория, терминалы и подъездные пути сверху, с квадрокоптера.', 'Технопарк «Зубово»', '/zubovo/'),
     ('Синхроны и интервью', 'Ставим свет и кадр в кабинете и на рабочем месте, готовим вопросы со спикером.', 'Saint-Gobain', '/video/saintgobain/cx'),
     ('Экранная графика и 3D', 'От полностью смоделированного запуска ракеты в космос до контента на все экраны стенда, плюс ежедневные репортажи и трансляции.', 'стенд Самары на ВДНХ', '/portfolio/samara-stand-vdnh'),
     ('Озвучка и языки', 'Дикторский текст, английская версия, вшитые субтитры.', 'Eaton для выставки', '/video/eaton'),
@@ -236,17 +236,284 @@ def part_html(f):
             f'<p class="part">{b}</p>{vid(f["video2"], f["poster2"], f["title"] + ", " + b)}')
 
 
+VERSION = '9 октября 2026'
+
+# Новые блоки страницы: функции, которые возвращают HTML секции. Добавляем по одному.
+def blk_heard():
+    """Письмо после встречи 9 октября + протокол договорённостей. Тон: от человека, их словами."""
+    rows = [
+        ('Драфт-бюджет: три версии, русский язык, все площадки', 'Hand Marketing', '20 октября', True),
+        ('Таблица фактов и цифр для заполнения', 'Hand Marketing', 'вместе с бюджетом', False),
+        ('Примеры: как снимаем руководителей и сотрудников, и кино для сравнения', 'Hand Marketing', 'готово', 'done'),
+        ('Петербург в брифе', 'АЛИДИ', 'готово', 'done'),
+        ('Список логотипов, которые можно показывать', 'АЛИДИ', 'до съёмок', False),
+        ('Брендбук и гайды', 'АЛИДИ', 'до сценария', False),
+        ('Даты съёмок по загрузке складов', 'вместе', 'после выбора идеи', False),
+    ]
+    def cls(h):
+        return 'done' if h == 'done' else ('hot' if h else '')
+    def note(w, h):
+        if h != 'done':
+            return e(w)
+        link = ' <a href="#how">на этой странице ↓</a>' if w.startswith('Примеры') else ' <a href="#geo2">на этой странице ↓</a>'
+        return e(w) + link
+    tr = ''.join(f'<tr class="{cls(hot)}"><td>{note(w, hot)}</td><td>{e(who)}</td><td class="dt">{"✓ " if hot == "done" else ""}{e(when)}</td></tr>' for w, who, when, hot in rows)
+    return (
+        '<section class="memo" id="top"><div class="wrap memo-in">'
+        '<aside class="memo-side"><p class="mono">9.10.2026</p><p class="mono dim">после звонка</p>'
+        f'<div class="memo-to">{alidi_svg}<span>ГК АЛИДИ<br>имиджевый фильм к 35-летию</span></div></aside>'
+        '<div class="memo-body">'
+        '<h1>Спасибо за разговор.</h1>'
+        '<p>Записали главное, чтобы не держать в голове.</p>'
+        '<p>Сейчас вам нужен не сценарий, а понятная сумма: заложить её в бюджет на 2027 год и сравнить подрядчиков на одинаковом объёме. '
+        'Поэтому до 20 октября пришлём драфт-бюджет на три версии фильма: к 35-летию, партнёрскую и для HH.ru. Русский язык, съёмки на всех площадках, озвучка, графика, музыка. '
+        'Если по дороге понадобится что-то сверх этого, например переводы, посчитаем отдельно и скажем заранее.</p>'
+        '<blockquote>«Питер… это в целом красивая картинка, которую можно показать»<cite>из разговора 9 октября</cite></blockquote>'
+        '<p>Петербург добавляем, для партнёрской версии он сильный. Казань посчитаем отдельной строкой, решите, когда увидите цифры.</p>'
+        '<p>Форма, порядок в кадре и логотипы на вашей стороне, мы подстроимся под дни с меньшей нагрузкой. '
+        'Без киношного грима, договорились. Как мы снимаем руководителей и сотрудников в обычной рабочей обстановке, покажем на примерах.</p>'
+        '<p class="sign">Александр Народецкий<br><span>Hand Marketing</span></p>'
+        '</div></div>'
+        '<div class="wrap"><div class="proto"><div class="proto-h"><h2>Договорились</h2><p class="mono dim">обновляем здесь по мере движения</p></div>'
+        f'<table><thead><tr><th>Что</th><th>Кто</th><th>Когда</th></tr></thead><tbody>{tr}</tbody></table></div></div></section>')
+
+
+GEO2 = [  # с запада на восток: город, тип, подпись
+    ('Калининград', 'stock', 'стоки и архив'),
+    ('Минск', 'shoot', 'склад и офис'),
+    ('Санкт-Петербург', 'new', 'добавили 9 октября'),
+    ('Москва', 'shoot', 'офис и Валищево'),
+    ('Нижний Новгород', 'flag', 'отсюда с 1992 года'),
+    ('Казань', 'option', 'отдельной строкой'),
+    ('Алматы', 'shoot', 'склад и офис'),
+]
+
+
+def geo2_svg(vertical=False):
+    """Схема-линия с запада на восток. Перед Алматы разрыв: ~3 000 км."""
+    n = len(GEO2)
+    if not vertical:
+        W, H, y = 820, 190, 95
+        xs = [40 + i * 112 for i in range(n - 1)] + [780]
+        o = [f'<svg class="geo2 hz" viewBox="0 0 {W} {H}" role="img" aria-label="Съёмки с запада на восток">']
+        o.append(f'<line class="ln" x1="{xs[0]}" y1="{y}" x2="{xs[-2] + 40}" y2="{y}"/>')
+        o.append(f'<path class="ln br" d="M{xs[-2] + 40},{y} l10,-10 l12,20 l12,-20 l12,20 l10,-10"/>')
+        o.append(f'<line class="ln" x1="{xs[-2] + 96}" y1="{y}" x2="{xs[-1]}" y2="{y}"/>')
+        o.append(f'<text class="km" x="{xs[-2] + 74}" y="{y - 24}" text-anchor="middle">≈3 000 км</text>')
+        for i, ((name, t, sub), x) in enumerate(zip(GEO2, xs)):
+            up = i % 2 == 0
+            ty = y - 38 if up else y + 40
+            r = 11 if t == 'flag' else 9
+            o.append(f'<g class="g2 g2-{t}"><circle cx="{x}" cy="{y}" r="{r + 8}" class="hl"/><path d="M{x - r},{y + r * .7} L{x},{y - r} L{x + r},{y + r * .7}z"/>'
+                     f'<text x="{x}" y="{ty}" text-anchor="middle"><tspan class="nm">{e(name)}</tspan><tspan class="sb" x="{x}" dy="16">{e(sub)}</tspan></text></g>')
+    else:
+        W, H, x = 320, 470, 40
+        ys = [30 + i * 62 for i in range(n - 1)] + [450]
+        o = [f'<svg class="geo2 vt" viewBox="0 0 {W} {H}" role="img" aria-label="Съёмки с запада на восток">']
+        o.append(f'<line class="ln" x1="{x}" y1="{ys[0]}" x2="{x}" y2="{ys[-2] + 24}"/>')
+        o.append(f'<path class="ln br" d="M{x},{ys[-2] + 24} l-9,8 l18,10 l-18,10 l9,8"/>')
+        o.append(f'<line class="ln" x1="{x}" y1="{ys[-2] + 60}" x2="{x}" y2="{ys[-1]}"/>')
+        o.append(f'<text class="km" x="{x + 24}" y="{ys[-2] + 46}">≈3 000 км</text>')
+        for (name, t, sub), yy in zip(GEO2, ys):
+            r = 11 if t == 'flag' else 9
+            o.append(f'<g class="g2 g2-{t}"><circle cx="{x}" cy="{yy}" r="{r + 8}" class="hl"/><path d="M{x - r},{yy + r * .7} L{x},{yy - r} L{x + r},{yy + r * .7}z"/>'
+                     f'<text x="{x + 26}" y="{yy - 2}"><tspan class="nm">{e(name)}</tspan><tspan class="sb" x="{x + 26}" dy="16">{e(sub)}</tspan></text></g>')
+    o.append('</svg>')
+    return ''.join(o)
+
+
+def blk_geo():
+    """География: схема-линия с подписями, заголовок их словами."""
+    return ('<section class="route" id="geo2"><div class="wrap">'
+            '<div class="route-h"><h2>От Калининграда<br>до Алматы.</h2>'
+            '<p>Снимаем шесть городов, остальные филиалы показываем на карте стоками и архивом. '
+            'Москва без командировок, в смете отдельно Петербург, Нижний, Минск, Алматы и, по желанию, Казань.</p></div>'
+            '<div class="route-map">' + geo2_svg() + geo2_svg(True) + '</div></div></section>')
+
+
+def blk_ideas():
+    """Идеи фильма коротко: одна фраза и финал. Плюс три версии под площадки."""
+    ideas = [
+        ('Сутки без остановки', 'Один рабочий день компании: начинается в 05:52 в Алматы, заканчивается ночной сменой. Солнце идёт с востока на запад вместе с фильмом, у каждого города свой час, между городами переходим через ворота склада. Время в титре всегда настоящее.', '«Обычный день АЛИДИ. 12 783-й подряд.»'),
+        ('Год приёма', 'Историю рассказывают сотрудники, каждый называет год, когда пришёл. Люди выстроены по годам от самых первых до пришедших в 2027-м, и через их места работы видно, как росла компания. Без хроники и диктора.', 'Финал: самый опытный и самый новый встают рядом, за ними все герои.'),
+        ('Невидимый партнёр', 'От полки в магазине назад по цепочке: склад, заказ, приёмка. Фильм начинается с обычного утра покупателя и показывает, сколько людей и решений стоит за одним товаром. Сроки «за 2 часа», «за 9 часов» берём настоящие.', '«Ни на одной полке нет нашего логотипа. На каждой есть наша работа.»'),
+        ('Одна минута', 'Одно и то же движение в пяти городах: стандарт один везде. Коробку берут в Алматы, сканируют в Минске, ставят на паллет в Нижнем, а склейка получается только потому, что процессы действительно одинаковые.', '«Пять городов. Одна компания.»'),
+        ('Та же точка, 35 лет спустя', 'Архивное фото в руке на фоне того же места сегодня. Так проходим вехи от первого здания в Нижнем Новгороде до сегодняшних площадок в трёх странах, рассказывает голос человека, который всё это видел.', '«Тогда хватало одного кадра. Сегодня нужны три страны.»'),
+    ]
+    vers = [('К 35-летию', '4–5 минут', 'большой экран, со звуком'),
+            ('Партнёрская', '2:30–3:00', 'переговоры и тендеры по контрактам'),
+            ('Для HH.ru', '60–90 секунд', 'телефон, вертикаль, без звука')]
+    o = ('<section class="ideas" id="ideas"><div class="wrap"><div class="ideas-h"><h2>Пять идей.</h2>'
+         '<p>Выбираем две, обе доводим до сценария. Из одних съёмок собираем три версии.</p></div><ol class="ideas-l">')
+    for i, (n, x, fin) in enumerate(ideas):
+        o += f'<li><span class="mono dim">0{i + 1}</span><div><h3>{e(n)}</h3><p>{e(x)}</p></div><p class="ifin">{e(fin).replace("12 783", "12&nbsp;783")}</p></li>'
+    o += '</ol><div class="vers">' + ''.join(
+        f'<div><b>{e(a)}</b><span class="mono">{e(b)}</span><p>{e(c)}</p></div>' for a, b, c in vers) + '</div></div></section>'
+    return o
+
+
+def blk_how():
+    """Примеры уровня съёмки: руководители, сотрудники и путь клиента, кино для сравнения."""
+    tops = [  # таймкод во второй части фильма SG, портрет, имя, должность (только снятые нами в Москве)
+        (7.2, 2, 'Маргарита Молодых', 'директор бизнес-подразделения'), (19.2, 3, 'Рафаэль Зохрабян', 'генеральный директор'),
+        (28.8, 4, 'Артём Гаврилюк', 'директор по продажам'), (36.0, 5, 'Елена Сильвестрова', 'директор по персоналу'),
+        (45.6, 6, 'Андрей Зарипов', 'индустриальный директор'), (55.2, 7, 'Ирина Кочкина', 'директор по закупкам'),
+        (64.8, 8, 'Марина Ченцова', 'директор по логистике'), (74.4, 9, 'Елена Радченко', 'финансовый директор'),
+        (108.0, 12, 'Тимур Сагиров', 'директор по IT'), (122.4, 13, 'Юлия Ночёвина', 'директор по маркетингу'),
+    ]
+    path = [(37.2, 'sc-road', 'реклама и выбор'), (142.4, 'sc-gyproc-yard', 'завод'), (196.2, 'sc-isover-belt', 'линия'),
+            (221.4, 'sc-pallets', 'склад и отгрузка'), (232.0, 'sc-mounting', 'монтаж'), (409.5, 'sc-clients-final', 'финал')]
+    cine = [('https://hand-marketing.ru/media/vivax-samburskaya.mp4', '/images/vivax/rest-smile.jpg', 'VIVAX SPORT', 'реклама с Настасьей Самбурской, 49 с', '/video/vivax/'),
+            ('https://hand-marketing.ru/media/gazelle-transformer.mp4', '/images/gaz/poster.jpg', 'Газель-трансформер', 'вирусный ролик для Eaton, 1:42', '/video/gaz/'),
+            ('https://hand-marketing.ru/media/eaton-yaz.mp4', '/images/patriot/poster.jpg', 'УАЗ Патриот', 'рекламный ролик для Eaton, 60 с', '/video/patriot/')]
+    o = ('<section class="how" id="how"><div class="wrap"><div class="ideas-h"><h2>Как снимаем.</h2>'
+         '<p>Шесть примеров: на что смотреть и к какой версии вашего фильма это относится.</p></div>')
+    # 1. руководители
+    chips = ''.join(f'<button type="button" class="tp" data-p="v-tops" data-t="{t}"><img src="/images/sgcx/sp-{i:02d}@280.jpg" alt="" loading="lazy">'
+                    f'<b>{e(n)}</b><span>{e(r)}</span></button>' for t, i, n, r in tops)
+    o += ('<div class="ex"><div class="ex-t"><p class="mono dim">01 · руководители</p><h3>Интервью топ-менеджеров</h3>'
+          '<p>Saint-Gobain, фильм «Клиентский опыт». Руководителей снимали на трёх площадках: две локации в Москве и завод. Снимали между их встречами, свет и звук наши, профессионального грима нет.</p>'
+          '<p class="ex-for">В вашем фильме: Иван Сычёв и руководители направлений, во всех трёх версиях.</p>'
+          '<p class="ex-note">Руководителей из Казахстана и Беларуси в этом фильме мы не снимали: компания прислала их записи отдельно, поэтому в пример их не берём.</p><a class="ex-link" href="https://hand-marketing.ru/video/saintgobain/cx/" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+          '<div class="ex-v"><video id="v-tops" controls preload="none" playsinline poster="img/sg-tops.jpg" src="https://hand-marketing.ru/media/sg-cx-part2.mp4#t=7"></video>'
+          f'<p class="mono dim tp-h">выберите, с кого начать</p><div class="tps">{chips}</div></div></div>')
+    # 2. путь клиента и сотрудники
+    pch = ''.join(f'<button type="button" class="pc" data-p="v-path" data-t="{t}"><img src="/images/sgcx/{f}@560.jpg" alt="" loading="lazy"><span>{e(c)}</span></button>'
+                  for t, f, c in path)
+    o += ('<div class="ex"><div class="ex-t"><p class="mono dim">02 · сотрудники</p><h3>Путь клиента через всю компанию</h3>'
+          '<p>Тот же фильм, первая часть: один заказ проходит от рекламы до готового дома. В кадре 48 сотрудников на своих местах, каждый подписан по имени. Офис в Москве и два завода в Егорьевске.</p>'
+          '<p class="ex-for">В вашем фильме: склады, офисы и люди в «Сутках», «Годе приёма», HR-версии.</p><a class="ex-link" href="https://hand-marketing.ru/video/saintgobain/cx/" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+          '<div class="ex-v"><video id="v-path" controls preload="none" playsinline poster="/images/sgcx/hero-poster.jpg" src="https://hand-marketing.ru/media/sg-cx-part1.mp4"></video>'
+          f'<div class="pcs">{pch}</div></div></div>')
+    # 3. масштаб: много площадок в одном фильме
+    pt = [(37.0, 'poster-short', 'Лужники'), (66.0, 'obj-match', 'матч'), (78.0, 'nums-a', 'цифры'),
+          (112.0, 'shoot-fence', 'обход площадки'), (165.0, 'shoot-cables', 'кабельные трассы'), (225.0, 'shoot-gen', 'генератор и кран')]
+    pch2 = ''.join(f'<button type="button" class="pc" data-p="v-pt" data-t="{t}"><img src="/images/powertech/{f}.jpg" alt="" loading="lazy"><span>{e(c)}</span></button>'
+                   for t, f, c in pt)
+    o += ('<div class="ex"><div class="ex-t"><p class="mono dim">03 · масштаб</p><h3>Вся компания и много площадок в одном фильме</h3>'
+          '<p>Power Technologies на чемпионате мира 2018: 11 городов, 12 стадионов, месяц съёмок мобильными группами. Объекты, работа смен, руководители и инфографика собраны в один рассказ о масштабе.</p>'
+          '<p class="ex-for">В вашем фильме: шесть городов в трёх странах, партнёрская версия.</p><a class="ex-link" href="https://hand-marketing.ru/video/powertechnologies/" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+          '<div class="ex-v"><video id="v-pt" controls preload="none" playsinline poster="/images/powertech/poster-short.jpg" src="https://hand-marketing.ru/media/pt-film-short.mp4"></video>'
+          f'<div class="pcs">{pch2}</div></div></div>')
+    # 4. история по годам
+    iso = [(20, 'tl-1', '2012'), (49, 'tl-3', '2014'), (71, 'tl-5', '2018'), (94, 'tl-7', '2022'), (101, 'tl-8', '2023'), (115, 'tl-9', '2024')]
+    pch3 = ''.join(f'<button type="button" class="pc yr" data-p="v-iso" data-t="{t}"><img src="/images/isotec/{f}.jpg" alt="" loading="lazy"><span class="mono">{e(c)}</span></button>'
+                   for t, f, c in iso)
+    o += ('<div class="ex"><div class="ex-t"><p class="mono dim">04 · история</p><h3>Годы компании в одном ролике</h3>'
+          '<p>Бренд-фильм «Изотек»: двенадцать лет направления, девять вех от 2012 до 2024, каждая вынесена в графику поверх живых кадров производства. Дальше география и итоги в цифрах.</p>'
+          '<p class="ex-for">В вашем фильме: 35 лет от 1992 года, идеи «Та же точка» и «Год приёма».</p><a class="ex-link" href="https://hand-marketing.ru/isotec/" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+          '<div class="ex-v"><video id="v-iso" controls preload="none" playsinline poster="/images/isotec/poster.jpg" src="https://hand-marketing.ru/media/izotek-brand-video.mp4"></video>'
+          f'<div class="pcs">{pch3}</div></div></div>')
+    # 5. смесь: история, объект, интервью
+    mm = [(14.5, 'ren-2', 'объект'), (27.0, 'hist-1', 'история'), (38.0, 'was', 'было и будет'),
+          (84.0, 'ex-1', 'эксперт'), (118.5, 'num-2', 'цифры'), (262.0, 'ex-2', 'арендаторы')]
+    pch4 = ''.join(f'<button type="button" class="pc" data-p="v-mmg" data-t="{t}"><img src="/images/mmg/{f}.jpg" alt="" loading="lazy"><span>{e(c)}</span></button>'
+                   for t, f, c in mm)
+    o += ('<div class="ex"><div class="ex-t"><p class="mono dim">05 · всё вместе</p><h3>История, объект и интервью в одном фильме</h3>'
+          '<p>ТРЦ «Павелецкая Плаза» для MMG, 5:37. Архив Павелецкой площади и та же площадь в проекте, рендеры комплекса, карта зоны охвата и цифры, '
+          'интервью экспертов и арендаторов: «Эконика», «Теремок».</p>'
+          '<p class="ex-for">В вашем фильме: история с 1992 года, площадки сегодня и голоса руководителей вместе, партнёрская версия и версия к 35-летию.</p><a class="ex-link" href="https://hand-marketing.ru/mmg/" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+          '<div class="ex-v"><video id="v-mmg" controls preload="none" playsinline poster="/images/mmg/poster.jpg" src="https://hand-marketing.ru/media/mmg-paveleckayaplaza.mp4"></video>'
+          f'<div class="pcs">{pch4}</div></div></div>')
+    # 6. кино для сравнения
+    o += ('<div class="ex ex-cine"><div class="ex-t"><p class="mono dim">06 · для сравнения</p><h3>Кинематографичный уровень</h3>'
+          '<p>Грим, постановочный свет, актёры, раскадровка каждого плана. Для корпоративного фильма в таком объёме это не нужно, показываем, чтобы было с чем сравнить уровни в бюджете.</p></div>'
+          '<div class="cines">' + ''.join(
+              f'<div class="cn"><div class="vid0"><video controls preload="none" playsinline poster="{pp}" src="{v}"></video></div><b>{e(t)}</b><span>{e(c)}</span>'
+              f'<a class="ex-link" href="https://hand-marketing.ru{lk}" target="_blank" rel="noopener">страница кейса ↗</a></div>'
+              for v, pp, t, c, lk in cine) + '</div></div>')
+    return o + '</div></section>'
+
+
+def blk_maps():
+    """Как мы показываем карту присутствия: четыре немые петли из наших роликов."""
+    maps = [('map-rzd', 'ЦМ РЖД', 'Сеть терминалов прорастает с запада на восток, от Калининграда до Находки.', '/video/rgd/history/'),
+            ('map-iso', '«Изотек»', 'Города присутствия по одному загораются на карте России.', '/isotec/'),
+            ('map-zub', 'Технопарк «Зубово»', 'Регион на карте страны, затем подъезды к площадке: аэропорт, станция, трасса.', '/zubovo/'),
+            ('map-bek', 'Технопарк «Бекабад»', 'Страна на карте мира и торговые коридоры во все стороны.', '/bekobod1/'),
+            ('map-silk', 'Silk Way Rally · 3D', 'Глобус приближается к городу старта, этап поднимается рельефом по координатам маршрута.', '/video/silkway/')]
+    o = ('<section class="maps" id="maps"><div class="wrap"><div class="ideas-h"><h2>Карта в фильме.</h2>'
+         '<p>Так мы уже показывали масштаб в роликах: плоско, на глобусе и в 3D.</p></div><div class="mp-grid">')
+    for f, t, x, link in maps:
+        o += (f'<figure class="mp"><video class="mp-v" muted loop playsinline preload="none" poster="img/{f}.jpg" data-src="img/{f}.mp4" aria-hidden="true"></video>'
+              f'<figcaption><b>{e(t)}</b><span>{e(x)}</span><a href="{full(link)}" target="_blank" rel="noopener">страница кейса ↗</a></figcaption></figure>')
+    o += ('<div class="mp-for"><p class="mono dim">для АЛИДИ</p><h3>Россия, Беларусь и Казахстан на одной карте</h3>'
+          '<p>Точки всплывают от Калининграда до Алматы, на каждую короткий кадр с площадки. Шесть городов снимаем, остальные филиалы даём стоками и архивом. '
+          'Стиль карты подбираем под ваш брендбук.</p></div>')
+    return o + '</div></div></section>'
+
+
+def blk_sb():
+    """Проверка службой безопасности: статус регистрации на tender.alidi.ru."""
+    st = [('Регистрация на tender.alidi.ru', 'готово', True), ('Учредительные документы', 'загружены', True),
+          ('Бухгалтерские документы', 'в работе', False)]
+    return ('<section class="sb" id="sb"><div class="wrap"><div class="sb-in"><div><p class="mono dim">проверка службой безопасности</p>'
+            '<h3>Документы на tender.alidi.ru</h3></div><ul>'
+            + ''.join(f'<li class="{"ok" if ok else "wip"}"><span>{e(a)}</span><b class="mono">{"✓ " if ok else ""}{e(b)}</b></li>' for a, b, ok in st)
+            + '</ul></div></div></section>')
+
+
+def blk_more():
+    """Чем ещё можем помочь к 35-летию: компактно, без навязывания."""
+    L = '/images/lib/'
+    cols = [
+        ('Выставочные стенды', 'Строим под ключ, но главное в другом: нестандартную мультимедиа и контент закладываем ещё на этапе проекта, а не добавляем на монтаже.',
+         [('Самара на ВДНХ', '/portfolio/samara-stand-vdnh/', L + 'custom-samara-vdnh/cover-main.png', False),
+          ('Ставрополье на ВДНХ', '/portfolio/stavropol-stand-vdnh/', L + 'custom-stavropol-vdnh/cover-main.png', False),
+          ('Как разрабатываем: проект стенда Самары, 204 м², 79 листов', '/exhibition/dizayn-stenda/', '/images/exhibition/samara/render-v1-a.jpg', True)]),
+        ('События', 'Наше основное направление с открытия агентства. Одна идея проходит через всё мероприятие: приглашение, площадку, сцену, экраны и подарки.',
+         [('«Внутри стихии», ТРЦ Ривьера', '/event/riviera/', L + 'as3062-3363-4134-b333-623232303134/__-22.png', False),
+          ('Новый год Samsung', '/event/samsung/', L + 'as3466-3261-4738-b938-303637303133/__-18.png', False)]),
+        ('Контент и медианосители', 'Контент для мероприятий и выставок под конкретную площадку: проекции на здание и автомобиль, изогнутые и кинетические экраны, интерактив, песочные столы.',
+         [('3D mapping на здании, Ставрополь', '/3d/stavropol/', L + 'as6466-3635-4534-b432-353364376364/__-01.png', False),
+          ('Mapping на кузове Changan CS35', '/event/changan/', L + 'as3635-3436-4663-b265-633363383261/__-98.png', False),
+          ('Интерактив с Kinect, музей Алабина', '/portfolio/samara-exhibition/', L + 'custom-samara-exhibition/cover-main.png', False),
+          ('3D-маршрут и песочный стол, Silk Way', '/video/silkway/', L + 'as6164-6432-4132-a361-613136626438/__-51.png', False)]),
+        ('Дизайн', 'Своя креативная студия: айдентика, полиграфия, упаковка и сувенирная продукция.',
+         [('Брендбук Metra', '/creative/metra/', L + 'custom-metra/cover-main.png', False),
+          ('Чемодан Saint-Gobain', '/creative/saintgobain/suitcase/', L + 'as3734-3562-4636-a636-633764353537/__-41.png', False),
+          ('Стиль отдела продаж Becar', '/creative/becar/sdep/', L + 'as6366-6163-4338-b039-373730386163/__-74.png', False),
+          ('Брошюра Vertical, 24 полосы', '/creative/becar/vertical/', L + 'as6633-6662-4561-b364-303861353166/__-64.png', False),
+          ('Календарь Saint-Gobain: креативная концепция', '/creative/saintgobain/calendar/', L + 'custom-sgcalendar/cover-main.png', False),
+          ('Новогодний набор ЦМ РЖД', '/creative/rgd/suvenir/', L + 'as3634-3861-4239-b237-356636663535/__-60.png', False)]),
+    ]
+    o = ('<section class="more" id="more"><div class="wrap"><div class="more-h"><h2>Готовы участвовать и в других проектах.</h2>'
+         '<p>Не только фильм. То, что мы делаем давно и хорошо.</p></div><div class="more-g">')
+    for t, x, cases in cols:
+        o += f'<div class="mc"><h3>{e(t)}</h3><p>{e(x)}</p><ul>'
+        for n, u, img, photo in cases:
+            o += (f'<li><a href="https://hand-marketing.ru{u}" target="_blank" rel="noopener">'
+                  f'<img class="{"ph" if photo else ""}" src="{img}" alt="" loading="lazy"><span>{e(n)}</span><i>↗</i></a></li>')
+        o += '</ul></div>'
+    return o + '</div></div></section>'
+
+
+NEW_BLOCKS = [blk_heard, blk_sb, blk_geo, blk_maps, blk_ideas, blk_how, blk_more]
+
+
+
 # ---------- HTML ----------
 def page():
     o = []
     a = o.append
     a('<header class="top"><div class="wrap top-in">'
       f'<a class="brand" href="#top" aria-label="В начало">{alidi_svg}<i></i><img src="hm-logo.svg" alt="Hand Marketing" width="34" height="34"></a>'
-      '<nav class="nav"><a href="#tz">ТЗ</a><a href="#match">Опыт</a><a href="#films">Фильмы</a><a href="#skills">Умеем</a><a href="#all">Все работы</a><a href="#next">Дальше</a></nav>'
+      '<nav class="nav"><a href="#top">Материалы</a><a href="#archive-open">Наши работы</a><a href="#contacts">Контакты</a></nav>'
       '<a class="pdf-btn" href="?pdf=1">PDF</a></div></header>')
 
+    # 0. новая страница: блоки собираем по одному (NEW_BLOCKS)
+    for blk in NEW_BLOCKS:
+        a(blk())
+
+    # архив: всё, что было на странице до встречи, открывается кнопкой
+    a('<section class="arch-bar" id="archive-open"><div class="wrap arch-in">'
+      '<div><p class="eyebrow">' + TRI + 'Материалы от 1 октября</p><h3>Наши работы и как мы их снимали</h3>'
+      '<p>Кейсы, фильмы, отзывы и всё, что мы показывали до встречи.</p></div>'
+      '<button class="btn ghost-d" type="button" id="arch-btn" aria-expanded="false" aria-controls="archive">Посмотреть</button>'
+      '</div></section><div id="archive" hidden>')
+
     # 1. первый экран
-    a('<section class="hero" id="top">'
+    a('<section class="hero" id="hero">'
       '<video class="hero-bg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto" poster="img/hero-loop.jpg" aria-hidden="true" tabindex="-1">'
       '<source src="img/hero-loop.mp4" type="video/mp4"></video><div class="wrap">'
       f'<p class="eyebrow light">{TRI}ГК АЛИДИ · имиджевый фильм к 35-летию</p>'
@@ -309,7 +576,7 @@ def page():
       f'<div class="faces-t"><p class="eyebrow light">{TRI}<b>04</b> Люди в кадре</p>'
       '<h2>48 сотрудников по имени, на своих местах.</h2>'
       '<p>Так мы снимали Saint-Gobain: не массовка в коридоре, а кладовщик, водитель, технолог и менеджер, каждый подписан в кадре. Юбилейный фильм АЛИДИ тоже про людей: тысячи сотрудников в трёх странах, и зритель должен узнать в фильме своих коллег.</p>'
-      '<a class="m-link" href="https://hand-marketing.ru/video/saintgobain/cx" target="_blank" rel="noopener">стена лиц на странице кейса <span>↗</span></a></div>'
+      '<a class="m-link" href="https://hand-marketing.ru/video/saintgobain/cx/" target="_blank" rel="noopener">стена лиц на странице кейса <span>↗</span></a></div>'
       f'<div class="wall" aria-hidden="true">{faces}</div></div></section>')
 
     # 5. площадки
@@ -372,11 +639,13 @@ def page():
       '<p>С первого дня регистрируемся на tender.alidi.ru и загружаем документы для службы безопасности. Работа над фильмом при этом не ждёт.</p></div></div>')
     a('</div></section>')
 
+    a('</div>')  # конец архива
+
     # 10. контакты
     a('<section class="final" id="contacts"><div class="wrap fin">'
-      f'<div><p class="eyebrow light">{TRI}Контакты</p><h2>Готовы к встрече.</h2>'
-      '<p class="lead">Назовите удобное время, покажем, как видим фильм, и ответим на вопросы по смете и площадкам.</p>'
-      '<div class="hero-cta"><a class="btn" href="mailto:anarodetsky@hand-marketing.ru?subject=%D0%90%D0%9B%D0%98%D0%94%D0%98%3A%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0">Назначить встречу</a>'
+      f'<div><p class="eyebrow light">{TRI}Контакты</p><h2>На связи.</h2>'
+      '<p class="lead">Пишите на почту с любыми вопросами по идеям, смете и площадкам.</p>'
+      '<div class="hero-cta"><a class="btn" href="mailto:anarodetsky@hand-marketing.ru?subject=%D0%90%D0%9B%D0%98%D0%94%D0%98%3A%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%20%D0%BA%2035-%D0%BB%D0%B5%D1%82%D0%B8%D1%8E">Написать письмо</a>'
       '<a class="btn ghost" href="https://t.me/narodetskii" target="_blank" rel="noopener">Telegram</a><a class="btn ghost pdf-btn" href="?pdf=1">Скачать PDF</a></div></div>'
       '<dl class="cont">'
       '<dt>Контактное лицо</dt><dd>Народецкий Александр · Client Service Director</dd>'
@@ -405,6 +674,8 @@ HEAD = '''<!doctype html>
 <meta name="description" content="Корпоративные и имиджевые фильмы, съёмки на складах и производстве, работа в Казахстане и Беларуси. Кейсы со ссылками.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/fonts/react-main.css">
+<link rel="stylesheet" href="/fonts/golos-ptserif.css">
+<link rel="stylesheet" href="/fonts/plex.css">
 <style>
 ''' + CSS + '''
 </style>
