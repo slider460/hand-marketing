@@ -237,6 +237,7 @@ def part_html(f):
 
 
 VERSION = '9 октября 2026'
+PDF_FILE = '2026-10-09'  # дата в имени скачиваемого PDF
 
 # Новые блоки страницы: функции, которые возвращают HTML секции. Добавляем по одному.
 def blk_heard():
@@ -261,6 +262,7 @@ def blk_heard():
     return (
         '<section class="memo" id="top"><div class="wrap memo-in">'
         '<aside class="memo-side"><p class="mono">9.10.2026</p><p class="mono dim">после звонка</p>'
+        f'<a class="pdf-dl pdf-btn" href="?pdf=1">Скачать PDF<span class="mono">версия от {VERSION}</span></a>'
         f'<div class="memo-to">{alidi_svg}<span>ГК АЛИДИ<br>имиджевый фильм к 35-летию</span></div></aside>'
         '<div class="memo-body">'
         '<h1>Спасибо за разговор.</h1>'
@@ -508,7 +510,7 @@ def page():
     # архив: всё, что было на странице до встречи, открывается кнопкой
     a('<section class="arch-bar" id="archive-open"><div class="wrap arch-in">'
       '<div><p class="eyebrow">' + TRI + 'Материалы от 1 октября</p><h3>Наши работы и как мы их снимали</h3>'
-      '<p>Кейсы, фильмы, отзывы и всё, что мы показывали до встречи.</p></div>'
+      '<p>Кейсы, фильмы, отзывы и всё, что мы показывали до встречи. <a class="pdf-btn" href="?pdf=portfolio">Портфолио в PDF</a></p></div>'
       '<button class="btn ghost-d" type="button" id="arch-btn" aria-expanded="false" aria-controls="archive">Посмотреть</button>'
       '</div></section><div id="archive" hidden>')
 
@@ -793,14 +795,16 @@ __GATE__
 GATE;
     exit;
 }
-// PDF-портфолио только после входа: файл лежит рядом, прямой доступ закрыт в .htaccess
+// PDF только после входа: файлы лежат рядом, прямой доступ закрыт в .htaccess.
+// ?pdf=1 текущая версия материалов (собирается scripts/alidi-page/pdf.mjs), ?pdf=portfolio портфолио от 30 сентября
 if (isset($_GET['pdf'])) {
-    $f = __DIR__ . '/alidi-portfolio.pdf';
+    $old = $_GET['pdf'] === 'portfolio';
+    $f = __DIR__ . ($old ? '/alidi-portfolio.pdf' : '/alidi-materials.pdf');
     if (!is_file($f)) { http_response_code(404); exit; }
-    hm_event('pdf_download');
-    hm_tg("📄 <b>АЛИДИ скачали PDF</b>\n" . hm_device(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '') . "\n" . hm_where(hm_geo(hm_ip())) . "\n" . date('d.m H:i'));
+    hm_event('pdf_download', array('file' => $old ? 'portfolio' : 'materials'));
+    hm_tg("📄 <b>АЛИДИ скачали PDF</b>" . ($old ? " (портфолио)" : " (материалы __PDFDATE__)") . "\n" . hm_device(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '') . "\n" . hm_where(hm_geo(hm_ip())) . "\n" . date('d.m H:i'));
     header('Content-Type: application/pdf');
-    header('Content-Disposition: attachment; filename="Hand_Marketing_ALIDI_portfolio.pdf"');
+    header('Content-Disposition: attachment; filename="' . ($old ? 'Hand_Marketing_ALIDI_portfolio.pdf' : 'Hand_Marketing_ALIDI___PDFFILE__.pdf') . '"');
     header('Content-Length: ' . filesize($f));
     readfile($f);
     exit;
@@ -810,7 +814,7 @@ hm_event('page_view');
 '''
 
 assert '$' not in GATE_HTML.replace('{$errHtml}', ''), 'в экране пароля не должно быть $ кроме {$errHtml}'
-php = PHP_HEAD.replace('__HASH__', ACCESS_HASH).replace('__GATE__', GATE_HTML.rstrip('\n')) + PAGE_PHP
+php = PHP_HEAD.replace('__PDFDATE__', VERSION).replace('__PDFFILE__', PDF_FILE).replace('__HASH__', ACCESS_HASH).replace('__GATE__', GATE_HTML.rstrip('\n')) + PAGE_PHP
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / 'index.php').write_text(php, encoding='utf8')
 (OUT / '_preview-page.html').write_text(PAGE_PREVIEW, encoding='utf8')
