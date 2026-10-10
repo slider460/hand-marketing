@@ -35,6 +35,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import commerce_block as cb  # noqa: E402
+import hm_ds as ds  # noqa: E402
 
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
@@ -436,67 +437,6 @@ PAGES = {
         ]),
 }
 
-CSS = """<style>
-.vpg{--a:#CF6F19;font-family:'Montserrat',Arial,sans-serif;color:#14171C;background:#fff}
-.vpg__in{max-width:1180px;margin:0 auto;padding:0 40px}
-.vpg-sec{padding:clamp(46px,5.6vw,80px) 0}
-.vpg-sec_alt{background:#FBF7F3}
-.vpg-sec__h{margin:0 0 10px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.vpg-sec__lead{margin:0 0 30px;max-width:72ch;font-size:16.5px;line-height:1.65;color:#5A616A}
-.vpg-hero{position:relative;min-height:clamp(380px,56vh,560px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.vpg-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vpg-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,10,6,.52) 0%,rgba(14,10,6,.42) 38%,rgba(14,10,6,.9) 100%)}
-.vpg-hero__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;pointer-events:none}
-.vpg-hero__v.is-on{opacity:1}
-.vpg-shots{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.vpg-shot{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#EFE9E3;grid-column:span 2}
-.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 3}
-.vpg-shot img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.vpg-shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:13.5px;line-height:1.45;color:#fff;background:linear-gradient(180deg,rgba(14,10,6,0),rgba(14,10,6,.82))}
-@media(max-width:980px){.vpg-shots{grid-template-columns:repeat(2,1fr)}.vpg-shot,.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 1}}
-@media(max-width:640px){.vpg-shots{grid-template-columns:1fr}}
-.vpg-hero__in{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 40px clamp(34px,4.6vw,60px)}
-.vpg-hero__k{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F6C99A}
-.vpg-hero h1{margin:0;font-size:clamp(28px,4.2vw,54px);font-weight:800;letter-spacing:-.025em;line-height:1.06;max-width:19ch}
-.vpg-hero__lead{margin:18px 0 0;max-width:62ch;font-size:clamp(15.5px,1.5vw,18px);line-height:1.6;color:rgba(255,255,255,.88)}
-.vpg-hero__f{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
-.vpg-hero__f li{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:600}
-.vpg-hero__cta{display:inline-block;margin-top:24px;background:#FCB724;color:#14171C;font-weight:800;font-size:15.5px;padding:15px 34px;border-radius:30px;text-decoration:none}
-.vpg-crumbs{font-size:13px;color:#8A9099;padding:18px 0 0}
-.vpg-crumbs a{color:#8A9099;text-decoration:none}
-.vpg-crumbs a:hover{text-decoration:underline}
-.vpg-bars{display:grid;gap:22px}
-.vpg-bar__top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:8px}
-.vpg-bar__n{font-size:17px;font-weight:700;letter-spacing:-.01em}
-.vpg-bar__n a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(207,111,25,.45)}
-.vpg-list__i span a,.vpg-sec__lead a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(207,111,25,.45)}
-.vpg-list__i span a:hover,.vpg-sec__lead a:hover{border-bottom-color:var(--a)}
-.vpg-bar__t{font-size:15px;font-weight:800;color:var(--a);font-variant-numeric:tabular-nums}
-.vpg-bar__line{height:14px;border-radius:7px;background:rgba(207,111,25,.14);overflow:hidden}
-.vpg-bar__fill{height:100%;border-radius:7px;background:var(--a)}
-.vpg-bar__d{margin:10px 0 0;font-size:14.5px;line-height:1.6;color:#5A616A;max-width:74ch}
-.vpg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px}
-.vpg-card{display:flex;flex-direction:column;border:1px solid rgba(20,23,28,.1);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:transform .2s ease}
-.vpg-card:hover{transform:translateY(-4px)}
-.vpg-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
-.vpg-card__b{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.vpg-card__t{font-size:18px;font-weight:800;letter-spacing:-.01em}
-.vpg-card__d{font-size:14.5px;line-height:1.6;color:#5A616A}
-.vpg-card__go{margin-top:auto;font-size:14px;font-weight:700;color:var(--a)}
-.vpg-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.vpg-list__i{border-top:2px solid var(--a);padding:14px 0 0}
-.vpg-list__i b{display:block;font-size:16px;margin-bottom:6px}
-.vpg-list__i span{font-size:14.5px;line-height:1.55;color:#5A616A}
-.vpg-faq{display:grid;gap:10px;max-width:860px}
-.vpg-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;padding:0 20px}
-.vpg-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:16px 36px 16px 0;font-size:15.5px;font-weight:700}
-.vpg-faq__i summary::-webkit-details-marker{display:none}
-.vpg-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;transform:translateY(-70%) rotate(45deg);border-right:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transition:transform .2s}
-.vpg-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.vpg-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:#5A616A}
-@media(max-width:980px){.vpg-cards,.vpg-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.vpg__in,.vpg-hero__in{padding-left:18px;padding-right:18px}.vpg-cards,.vpg-list{grid-template-columns:minmax(0,1fr)}}
-</style>"""
 
 METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};'
@@ -512,85 +452,43 @@ def esc(s):
     return H.escape(s, quote=False)
 
 
+# баннер с фоновой нарезкой роликов направления и сетка кадров на тёмной полосе
+CSS = """<style id="vpg-css">
+.hd-banner__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.hd-banner__v.is-on{opacity:1}
+.vp-shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,14vw,200px);grid-auto-flow:dense;gap:14px}
+.vp-shots figure{margin:0;position:relative;overflow:hidden;background:#000}
+.vp-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vp-shots .is-b{grid-column:span 2;grid-row:span 2}
+.vp-shots .is-w{grid-column:span 2}
+.vp-shots figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(0deg,rgba(10,12,16,.9),rgba(10,12,16,0));font-size:13px;line-height:1.45;color:#fff}
+@media(max-width:640px){.vp-shots{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}.vp-shots figcaption{font-size:12px;padding:24px 10px 9px}}
+@media(prefers-reduced-motion:reduce){.hd-banner__v{display:none}}
+</style>"""
+
+# баннер: в фоне нарезка из роликов направления, поэтому он не ведёт на один кейс
+BANNER = {
+    'ad': ('Video', 'Из наших роликов', 'Узел в разрезе, средство в деле, ролик, который пересылали',
+           'УАЗ Патриот и Eaton, VIVAX SPORT с Настасьей Самбурской и «Газель-трансформер» для ГАЗ.',
+           ('1:00', '0:49', '1:42')),
+    'film': ('Film', 'Из наших фильмов', 'Компания, производство и люди в одном рассказе',
+             'Фильм к десятилетию ЦМ РЖД, фильм о клиентском опыте Saint-Gobain и фильм об '
+             'энергоснабжении чемпионата мира по футболу.', ('3:54', '10:07', '11:39')),
+    'obj': ('Object', 'Из наших роликов об объектах', 'Объект, трафик, зоны и цифры',
+            'ТРЦ «Мозаика», МФК «Саларис», «Павелецкая Плаза» и технопарк «Зубово»: с воздуха, '
+            'изнутри и в графике.', ('4:31', '2:58', '2:33')),
+}
+
+# порядок и вид смысловых блоков: (источник, номер, вид)
+LAYOUT = {
+    'ad': [('lists', 0, 'feats3'), ('extra', 0, 'rows'), ('extra', 1, 'violet'), ('lists', 1, 'feats4')],
+    'film': [('lists', 0, 'feats3'), ('extra', 0, 'rows'), ('extra', 1, 'violet'), ('lists', 1, 'steps3')],
+    'obj': [('lists', 0, 'feats4'), ('extra', 0, 'rows'), ('lists', 1, 'violet'), ('extra', 1, 'feats3')],
+}
+
+
 def mmss(sec):
     return f'{sec // 60}:{sec % 60:02d}' if sec >= 60 else f'0:{sec:02d}'
-
-
-def hero(p):
-    chips = ''.join(f'<li>{esc(c)}</li>' for c in p['chips'])
-    return (
-        '<section class="vpg-hero">'
-        f'<img class="vpg-hero__img" src="{p["hero"]}" alt="{esc(p["hero_alt"])}" '
-        'fetchpriority="high" decoding="async">'
-        f'<video class="vpg-hero__v" autoplay muted loop playsinline preload="auto" '
-        f'aria-hidden="true"><source src="{p["loop"]}" type="video/mp4"></video>'
-        '<span class="vpg-hero__sh" aria-hidden="true"></span>'
-        '<div class="vpg-hero__in">'
-        f'<p class="vpg-hero__k">{esc(p["kicker"])}</p>'
-        f'<h1>{esc(p["h1"])}</h1>'
-        f'<p class="vpg-hero__lead">{esc(p["lead"])}</p>'
-        f'<ul class="vpg-hero__f">{chips}</ul>'
-        '<a class="vpg-hero__cta" href="#lead">Обсудить проект</a>'
-        '</div></section>')
-
-
-def crumbs(p):
-    return ('<div class="vpg__in"><nav class="vpg-crumbs" aria-label="Навигация по разделам">'
-            '<a href="/">Главная</a> · <a href="/videoproduction/">Видеопродакшн</a> · '
-            f'{esc(cb.PAGES[p["key"]]["crumb"])}</nav></div>')
-
-
-def bars(p):
-    top = max(sec for _n, sec, _h, _d in p['bars'])
-    rows = ''
-    for name, sec, href, text in p['bars']:
-        w = round(sec / top * 100)
-        rows += (f'<div class="vpg-bar"><div class="vpg-bar__top">'
-                 f'<span class="vpg-bar__n"><a href="{href}">{esc(name)}</a></span>'
-                 f'<span class="vpg-bar__t">{mmss(sec)}</span></div>'
-                 f'<div class="vpg-bar__line"><div class="vpg-bar__fill" style="width:{w}%"></div></div>'
-                 f'<p class="vpg-bar__d">{esc(text)}</p></div>')
-    return (f'<section class="vpg-sec vpg-sec_alt"><div class="vpg__in">'
-            f'<h2 class="vpg-sec__h">{esc(p["bar_h2"])}</h2>'
-            f'<p class="vpg-sec__lead">{esc(p["bar_lead"])}</p>'
-            f'<div class="vpg-bars">{rows}</div></div></section>')
-
-
-def shots(p):
-    """Кадры со съёмок. Подпись несёт факт о работе, а не пересказ того, что видно."""
-    items = ''.join(
-        f'<figure class="vpg-shot"><img src="{IMG}/vpg/{f}" alt="{esc(cap)}" '
-        f'loading="lazy" width="1600" height="900">'
-        f'<figcaption>{esc(cap)}</figcaption></figure>' for f, cap in p['shots'])
-    return (f'<section class="vpg-sec"><div class="vpg__in">'
-            f'<h2 class="vpg-sec__h">{esc(p["shots_h2"])}</h2>'
-            f'<p class="vpg-sec__lead">{esc(p["shots_lead"])}</p>'
-            f'<div class="vpg-shots">{items}</div></div></section>')
-
-
-def cards(p):
-    items = ''.join(
-        f'<a class="vpg-card" href="{href}">'
-        f'<img src="{img}" alt="{esc(alt)}" loading="lazy" width="800" height="500">'
-        f'<span class="vpg-card__b"><span class="vpg-card__t">{esc(title)}</span>'
-        f'<span class="vpg-card__d">{esc(text)}</span>'
-        f'<span class="vpg-card__go">Смотреть кейс →</span></span></a>'
-        for href, img, title, text, alt in p['cards'])
-    return (f'<section class="vpg-sec"><div class="vpg__in">'
-            f'<h2 class="vpg-sec__h">{esc(p["cards_h2"])}</h2>'
-            f'<div class="vpg-cards">{items}</div></div></section>')
-
-
-def lists(p):
-    out = ''
-    for i, (head, items) in enumerate(p['lists']):
-        cls = ' vpg-sec_alt' if i % 2 else ''
-        body = ''.join(f'<div class="vpg-list__i"><b>{esc(t)}</b><span>{esc(d)}</span></div>'
-                       for t, d in items)
-        out += (f'<section class="vpg-sec{cls}"><div class="vpg__in">'
-                f'<h2 class="vpg-sec__h">{esc(head)}</h2>'
-                f'<div class="vpg-list">{body}</div></div></section>')
-    return out
 
 
 NBSP_UNIT = re.compile(r'(\d) (?=(?:\d{3}\b|МВт|га|м³|м²|%|млн|тыс|тысяч|человек|секунд|смен|роликов|продуктовых|имиджевых|планов|интервью|городов|стадионов|директоров|'
@@ -603,48 +501,102 @@ def nbsp(html):
     return NBSP_UNIT.sub('\\1\u00a0', html)
 
 
-def extra(p):
-    """Дополнительные разделы с фактами кейсов. Текст пишем сами в этом файле,
-    поэтому описания идут без экранирования: в них ссылки на кейсы."""
-    out = ''
-    for i, (head, lead, items) in enumerate(p.get('extra', [])):
-        cls = ' vpg-sec_alt' if i % 2 else ''
-        lead = nbsp(lead)
-        body = ''.join(f'<div class="vpg-list__i"><b>{esc(t)}</b><span>{nbsp(d)}</span></div>'
-                       for t, d in items)
-        out += (f'<section class="vpg-sec{cls}"><div class="vpg__in">'
-                f'<h2 class="vpg-sec__h">{esc(head)}</h2>'
-                f'<p class="vpg-sec__lead">{lead}</p>'
-                f'<div class="vpg-list">{body}</div></div></section>')
+def hero(p):
+    ghost = BANNER[p['key']][0]
+    return ds.hero(ghost, p['kicker'], p['h1'], esc(p['lead']), chips=p['chips'],
+                   ctas=(('Обсудить проект', '#lead', 'y'), ('Все видеокейсы', '/videoproduction/', 'o')),
+                   figs={'ad': 1, 'film': 2, 'obj': 0}[p['key']])
+
+
+def banner(p):
+    _g, kicker, title, text, chips = BANNER[p['key']]
+    chips_html = ''.join(f'<li>{esc(c)}</li>' for c in chips)
+    return (f'<div class="hd-w"><div class="hd-banner">'
+            f'<img src="{p["hero"]}" alt="{esc(p["hero_alt"])}" width="1600" height="900" '
+            f'fetchpriority="high" decoding="async">'
+            f'<video class="hd-banner__v" autoplay muted loop playsinline preload="auto" aria-hidden="true">'
+            f'<source src="{p["loop"]}" type="video/mp4"></video>'
+            f'<span class="hd-banner__sh" aria-hidden="true"></span><span class="hd-banner__in">'
+            f'<span class="hd-k">{esc(kicker)}</span><span class="hd-banner__t">{esc(title)}</span>'
+            f'<span class="hd-banner__p">{esc(text)}</span><ul class="hd-chips">{chips_html}</ul>'
+            f'</span></div></div>')
+
+
+def crumbs(p):
+    return ds.crumbs([('Главная', '/'), ('Видеопродакшн', '/videoproduction/'),
+                      (cb.PAGES[p['key']]['crumb'], None)])
+
+
+def bars(p):
+    items = [(name, sec, esc(text), href) for name, sec, href, text in p['bars']]
+    return ds.sec(ds.bars(items), p['bar_h2'], esc(p['bar_lead']), icons=2, top=True)
+
+
+def cards(p):
+    items = [(href, title, text, img) for href, img, title, text, alt in p['cards']]
+    return ds.sec(ds.cases(items, cols=3 if len(items) == 3 else 4), p['cards_h2'], alt=True)
+
+
+def shots(p):
+    """Кадры со съёмок. Подпись несёт факт о работе, а не пересказ того, что видно.
+    Мозаика: первый кадр большой 2×2, широкие 2×1 добирают сетку без дыр
+    и в 4 колонки, и в 2 колонки на телефоне (7, 8 и 9 кадров)."""
+    n = len(p['shots'])
+    wide = {7: {5, 6}, 8: {7}}.get(n, set())
+    items = ''
+    for i, (f, cap) in enumerate(p['shots']):
+        cls = ' class="is-b"' if i == 0 else (' class="is-w"' if i in wide else '')
+        items += (f'<figure{cls}><img src="{IMG}/vpg/{f}" alt="{esc(cap)}" loading="lazy" '
+                  f'width="1600" height="900"><figcaption>{esc(cap)}</figcaption></figure>')
+    return ds.band(f'<div class="vp-shots">{items}</div>', p['shots_h2'], esc(p['shots_lead']),
+                   kicker='Со съёмок', dark=True, fig='h')
+
+
+def block(p, src, idx, kind, alt):
+    if src == 'lists':
+        head, items = p['lists'][idx]
+        lead, items = None, [(t, esc(d)) for t, d in items]
+    else:
+        head, lead, items = p['extra'][idx]
+        lead, items = nbsp(lead), [(t, nbsp(d)) for t, d in items]
+    if kind == 'violet':
+        cols = len(items) if len(items) <= 5 else 3
+        return ds.band(ds.steps(items, cols=cols), head, lead, fig='blocks')
+    if kind == 'rows':
+        body = ds.rows(items)
+    elif kind == 'steps3':
+        body = ds.steps(items, cols=3)
+    else:
+        body = ds.feats(items, cols=4 if kind == 'feats4' else 3, start=idx * 3)
+    return ds.sec(body, head, lead, alt=alt, icons=3 if kind.startswith('feats') else 0, icon_start=idx * 2)
+
+
+def blocks(p):
+    out, alt = '', False
+    for src, idx, kind in LAYOUT[p['key']]:
+        if kind == 'violet':
+            out += block(p, src, idx, kind, False)
+            continue
+        out += block(p, src, idx, kind, alt)
+        alt = not alt
     return out
 
 
 def price(p):
-    return (f'<section class="vpg-sec"><div class="vpg__in">'
-            f'<h2 class="vpg-sec__h">Стоимость и отзыв</h2>{cb.render(p["key"])}</div></section>')
+    return ds.sec(ds.cost(p['key']), 'Стоимость и отзыв', alt=True)
 
 
 def faq(p):
-    items = ''.join(f'<details class="vpg-faq__i"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
-                    for q, a in p['faq'])
-    ld = {'@context': 'https://schema.org', '@type': 'FAQPage',
-          'mainEntity': [{'@type': 'Question', 'name': q,
-                          'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in p['faq']]}
-    return (f'<section class="vpg-sec vpg-sec_alt"><div class="vpg__in">'
-            f'<h2 class="vpg-sec__h">Вопросы</h2>'
-            f'<div class="vpg-faq">{items}</div>'
-            f'<script type="application/ld+json">'
-            f'{json.dumps(ld, ensure_ascii=False, separators=(",", ":"))}</script>'
-            f'</div></section>')
+    return ds.sec(ds.faq(p['faq']), 'Вопросы')
 
 
 HERO_JS = """<script>(function(){
-var v=document.querySelector('.vpg-hero__v');if(!v)return;
+var v=document.querySelector('.hd-banner__v');if(!v)return;
 function show(){v.classList.add('is-on')}
 function hide(){v.classList.remove('is-on')}
-// Пока ролик не поехал, в герое остаётся постер. Слой с видео показываем только
+// Пока ролик не поехал, в баннере остаётся постер. Слой с видео показываем только
 // после реального старта: Safari в энергосбережении рисует поверх остановленного
-// видео свою кнопку Play, и вместо героя получается мёртвый плеер.
+// видео свою кнопку Play, и вместо баннера получается мёртвый плеер.
 if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
  hide();v.removeAttribute('autoplay');v.pause();return}
 v.muted=true;
@@ -681,9 +633,9 @@ def page(p):
         f'<meta property="og:description" content="{H.escape(p["descr"])}">'
         f'<meta property="og:url" content="{url}">'
         f'<meta property="og:image" content="{SITE}{p["hero"]}">'
-        + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
-    body = (f'{rc.header()}<main class="vpg">{hero(p)}{crumbs(p)}{bars(p)}{cards(p)}'
-            f'{shots(p)}{lists(p)}{extra(p)}{price(p)}{faq(p)}</main>{HERO_JS}'
+        + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VID}">{crumbs(p)}{hero(p)}{banner(p)}'
+            f'{bars(p)}{cards(p)}{shots(p)}{blocks(p)}{price(p)}{faq(p)}</main>{HERO_JS}'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return head + body
 

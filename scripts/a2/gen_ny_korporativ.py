@@ -31,6 +31,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import commerce_block as cb  # noqa: E402
+import hm_ds as ds  # noqa: E402
 
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
@@ -178,179 +179,93 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '<!-- /Yandex.Metrika counter -->')
 
 
-CSS = """<style>
-.ny{--a:#C12164;font-family:'Montserrat',Arial,sans-serif;color:#14171C;background:#fff}
-.ny__in{max-width:1180px;margin:0 auto;padding:0 40px}
-.ny-sec{padding:clamp(48px,6vw,84px) 0}
-.ny-sec__h{margin:0 0 10px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.ny-sec__lead{margin:0 0 30px;max-width:72ch;font-size:16.5px;line-height:1.65;color:#5A616A}
-.ny-sec__lead a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(193,33,100,.45)}
-.ny-sec__lead a:hover{border-bottom-color:#C12164}
-.ny-hero{position:relative;min-height:clamp(420px,62vh,620px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.ny-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ny-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,18,.25),rgba(10,12,18,.88))}
-.ny-hero__in{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 40px clamp(38px,5vw,64px)}
-.ny-hero__k{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFD9E7}
-.ny-hero h1{margin:0;font-size:clamp(30px,4.4vw,58px);font-weight:800;letter-spacing:-.025em;line-height:1.05;max-width:20ch}
-.ny-hero__lead{margin:18px 0 0;max-width:62ch;font-size:clamp(15.5px,1.5vw,18px);line-height:1.6;color:rgba(255,255,255,.88)}
-.ny-hero__f{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
-.ny-hero__f li{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:600}
-.ny-hero__cta{display:inline-block;margin-top:26px;background:#FCB724;color:#14171C;font-weight:800;font-size:15.5px;padding:15px 34px;border-radius:30px;text-decoration:none}
-.ny-prj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.ny-prj__c{display:flex;flex-direction:column;border:1px solid rgba(20,23,28,.1);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:transform .2s ease}
-.ny-prj__c:hover{transform:translateY(-4px)}
-.ny-prj__c img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
-.ny-prj__b{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
-.ny-prj__k{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--a)}
-.ny-prj__t{font-size:19px;font-weight:800;letter-spacing:-.01em}
-.ny-prj__d{font-size:14.5px;line-height:1.6;color:#5A616A}
-.ny-prj__go{margin-top:auto;font-size:14px;font-weight:700;color:var(--a)}
-.ny-works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.ny-work{border-top:2px solid var(--a);padding:14px 0 0}
-.ny-work b{display:block;font-size:15.5px;margin-bottom:6px}
-.ny-work span{font-size:14px;line-height:1.55;color:#5A616A}
-.ny-ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.ny-idea img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;display:block}
-.ny-idea b{display:block;margin:14px 0 6px;font-size:16.5px;letter-spacing:-.01em}
-.ny-idea span{font-size:14.5px;line-height:1.6;color:#5A616A}
-.ny-cd{background:#14171C;color:#fff}
-.ny-cd .ny-sec__lead{color:rgba(255,255,255,.72)}
-.ny-cd__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);gap:18px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
-.ny-cd__c{scroll-snap-align:start;border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:20px 20px 22px;background:rgba(255,255,255,.04);display:flex;flex-direction:column;gap:10px}
-.ny-cd__n{display:flex;align-items:baseline;gap:8px;color:var(--a)}
-.ny-cd__n b{font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1}
-.ny-cd__n span{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.6)}
-.ny-cd__t{font-size:17px;font-weight:700}
-.ny-cd__d{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.72)}
-.ny-cd__c img{width:100%;height:150px;flex:none;align-self:stretch;object-fit:cover;border-radius:12px;margin-top:auto}
-.ny-cd__note{margin:22px 0 0;font-size:14px;color:rgba(255,255,255,.6)}
-.ny-faq{display:grid;gap:10px;max-width:860px}
-.ny-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;padding:0 20px}
-.ny-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:16px 36px 16px 0;font-size:15.5px;font-weight:700}
-.ny-faq__i summary::-webkit-details-marker{display:none}
-.ny-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;transform:translateY(-70%) rotate(45deg);border-right:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transition:transform .2s}
-.ny-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.ny-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:#5A616A}
-.ny-crumbs{font-size:13px;color:#8A9099;padding:18px 0 0}
-.ny-crumbs a{color:#8A9099;text-decoration:none}
-.ny-crumbs a:hover{text-decoration:underline}
-@media(max-width:980px){.ny-prj,.ny-ideas{grid-template-columns:repeat(2,minmax(0,1fr))}.ny-works{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.ny__in,.ny-hero__in{padding-left:18px;padding-right:18px}.ny-prj,.ny-ideas,.ny-works{grid-template-columns:minmax(0,1fr)}}
-</style>"""
-
-
 def esc(s):
     return H.escape(s, quote=False)
 
 
 def hero():
-    return (
-        '<section class="ny-hero">'
-        f'<img class="ny-hero__img" src="{IMG}/samsung/hall-wide.jpg" '
-        'alt="Новогодний корпоратив Samsung: зал под панорамной проекцией зимнего леса" '
-        'fetchpriority="high" decoding="async">'
-        '<span class="ny-hero__sh" aria-hidden="true"></span>'
-        '<div class="ny-hero__in">'
-        '<p class="ny-hero__k">Event · Новый год 2027</p>'
-        '<h1>Организация новогоднего корпоратива в Москве под ключ</h1>'
-        '<p class="ny-hero__lead">Для Samsung мы превратили банкетный зал в зимний лес из проекций '
-        'на 200+ гостей. Той же командой провели вечер для 200 будущих арендаторов «Салариса», '
-        'вечер на 134 гостя в «Мозаике» и партнёрскую конференцию Eaton на 100 участников. '
-        'Берём на себя концепцию, площадку, оформление, программу, технику и подарки.</p>'
-        '<ul class="ny-hero__f"><li>от 500 000 ₽</li><li>за 4–8 недель до даты</li>'
-        '<li>Москва и выезд</li></ul>'
-        '<a class="ny-hero__cta" href="#lead">Обсудить вечер</a>'
-        '</div></section>')
+    lede = ('Для Samsung мы превратили банкетный зал в зимний лес из проекций на 200+ гостей. '
+            'Той же командой провели вечер для 200 будущих арендаторов «Салариса», вечер на 134 гостя '
+            'в «Мозаике» и партнёрскую конференцию Eaton на 100 участников. Берём на себя концепцию, '
+            'площадку, оформление, программу, технику и подарки.')
+    return ds.hero('New Year', 'Event · Новый год 2027',
+                   'Организация новогоднего корпоратива в Москве под ключ', esc(lede),
+                   chips=('от 500 000 ₽', 'за 4–8 недель до даты', 'Москва и выезд'),
+                   ctas=(('Обсудить вечер', '#lead', 'y'), ('Кейс Samsung', '/event/samsung/', 'o')),
+                   figs=2)
+
+
+def banner():
+    return ds.banner('/event/samsung/', f'{IMG}/samsung/hall-wide.jpg',
+                     'Новогодний корпоратив Samsung: зал под панорамной проекцией зимнего леса',
+                     'Samsung · Новый год 2020', 'Мультимедиа вместо декораций',
+                     'Больше 200 гостей ужинали внутри картинки: зимний лес шёл по дуге балкона, '
+                     'а почтовый ящик Деда Мороза отвечал гостю прямо на стене.',
+                     chips=('200+ гостей', 'сетка уходит за 0,2 с'))
 
 
 def crumbs():
-    return ('<div class="ny__in"><nav class="ny-crumbs" aria-label="Навигация по разделам">'
-            '<a href="/">Главная</a> · <a href="/event/">Организация мероприятий</a> · '
-            'Новогодний корпоратив</nav></div>')
+    return ds.crumbs([('Главная', '/'), ('Организация мероприятий', '/event/'),
+                      ('Новогодний корпоратив', None)])
 
 
 def projects():
-    cards = ''.join(
-        f'<a class="ny-prj__c" href="{href}">'
-        f'<img src="{img}" alt="{esc(alt)}" loading="lazy" width="800" height="500">'
-        f'<span class="ny-prj__b"><span class="ny-prj__k">{esc(kick)}</span>'
-        f'<span class="ny-prj__t">{esc(title)}</span>'
-        f'<span class="ny-prj__d">{esc(text)}</span>'
-        f'<span class="ny-prj__go">Смотреть кейс →</span></span></a>'
-        for href, img, kick, title, text, alt in PROJECTS)
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Новый год и вечера, которые мы провели</h2>'
-            f'<p class="ny-sec__lead">Мы показываем только то, что делали сами: новогодний вечер '
-            f'Samsung, подарочный набор ЦМ РЖД и мероприятия, которые вела та же команда.</p>'
-            f'<div class="ny-prj">{cards}</div></div></section>')
+    items = [(href, kick, f'{title}. {text}', img) for href, img, kick, title, text, alt in PROJECTS]
+    return ds.sec(ds.cases(items, cols=3), 'Новый год и вечера, которые мы провели',
+                  esc('Мы показываем только то, что делали сами: новогодний вечер Samsung, подарочный '
+                      'набор ЦМ РЖД и мероприятия, которые вела та же команда.'),
+                  icons=3, top=True)
 
 
 def samsung():
-    items = ''.join(f'<div class="ny-work"><b>{esc(t)}</b><span>{esc(d)}</span></div>'
-                    for t, d in SAMSUNG)
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Новый год Samsung: как устроен вечер</h2>'
-            f'<p class="ny-sec__lead">Больше 200 гостей и мультимедиа вместо декораций. '
-            f'Подробный разбор с расчётами в <a href="/event/samsung/">кейсе Samsung</a>.</p>'
-            f'<div class="ny-works">{items}</div></div></section>')
+    # кадры не повторяют «Идеи с наших вечеров» ниже
+    pics = ds.mosaic([(f'{IMG}/samsung/hall2.jpg', 'Зал Samsung: проекция по дуге балкона и столы гостей',
+                       'Панорама по дуге балкона'),
+                      (f'{IMG}/samsung/tree.jpg', 'Главный экран: ёлка из частиц и «50 years of experience»',
+                       'Тема на главном экране'),
+                      (f'{IMG}/samsung/stage-color.jpg', 'Сцена и потолок зала в цветной заливке',
+                       'Свет по сценарию')])
+    items = ds.steps([(t, esc(d)) for t, d in SAMSUNG], cols=1)
+    return ds.band(ds.split(pics, items), 'Новый год Samsung: как устроен вечер',
+                   'Больше 200 гостей и мультимедиа вместо декораций. Подробный разбор с расчётами '
+                   'в <a href="/event/samsung/">кейсе Samsung</a>.', fig='blocks')
 
 
 def works():
-    items = ''.join(f'<div class="ny-work"><b>{esc(t)}</b><span>{esc(d)}</span></div>'
-                    for t, d in WORKS)
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Что берём на себя</h2>'
-            f'<p class="ny-sec__lead">Вечер ведёт одна команда: от идеи до вывоза оборудования '
-            f'наутро. Съёмку делаем своими операторами, технику подбираем под площадку '
-            f'и отвечаем за монтаж.</p>'
-            f'<div class="ny-works">{items}</div></div></section>')
+    return ds.sec(ds.feats([(t, esc(d)) for t, d in WORKS], cols=4), 'Что берём на себя',
+                  esc('Вечер ведёт одна команда: от идеи до вывоза оборудования наутро. Съёмку делаем '
+                      'своими операторами, технику подбираем под площадку и отвечаем за монтаж.'),
+                  icons=3, icon_start=2)
 
 
 def ideas():
-    cards = ''.join(
-        f'<figure class="ny-idea"><img src="{img}" alt="{esc(alt)}" loading="lazy" '
-        f'width="800" height="600"><figcaption><b>{esc(t)}</b><span>{esc(d)}</span></figcaption></figure>'
-        for img, t, d, alt in IDEAS)
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Идеи с наших вечеров</h2>'
-            f'<p class="ny-sec__lead">Эти приёмы уже работали на реальных площадках, поэтому их '
-            f'можно взять в свой сценарий и посчитать в смете.</p>'
-            f'<div class="ny-ideas">{cards}</div></div></section>')
+    return ds.sec(ds.tiles([(img, alt, t, d) for img, t, d, alt in IDEAS], cols=3),
+                  'Идеи с наших вечеров',
+                  esc('Эти приёмы уже работали на реальных площадках, поэтому их можно взять в свой '
+                      'сценарий и посчитать в смете.'), alt=True)
 
 
 def countdown():
-    cards = ''
+    cells = ''
     for n, unit, t, d, img, alt in COUNTDOWN:
-        pic = (f'<img src="{img}" alt="{esc(alt)}" loading="lazy" width="800" height="500">'
+        pic = (f'<img src="{img}" alt="{H.escape(alt)}" loading="lazy" width="800" height="600">'
                if img else '')
-        cards += (f'<article class="ny-cd__c"><p class="ny-cd__n"><b>{n}</b><span>{esc(unit)}</span></p>'
-                  f'<p class="ny-cd__t">{esc(t)}</p><p class="ny-cd__d">{esc(d)}</p>{pic}</article>')
-    return (f'<section class="ny-sec ny-cd"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Обратный отсчёт до вечера</h2>'
-            f'<p class="ny-sec__lead">Сколько времени занимает подготовка и что происходит '
-            f'на каждом шаге. Лента листается вбок.</p>'
-            f'<div class="ny-cd__track">{cards}</div>'
-            f'<p class="ny-cd__note">Обычно начинаем за 4–8 недель. Если времени меньше, '
-            f'тоже берёмся: часть проектов мы запускали за две недели.</p></div></section>')
+        cells += (f'<div><span class="hd-strip__n">{n}</span><span class="hd-strip__u">{esc(unit)}</span>'
+                  f'<b>{esc(t)}</b><p>{esc(d)}</p>{pic}</div>')
+    inner = (f'<div class="hd-strip">{cells}</div>'
+             f'<p class="hd-note">Обычно начинаем за 4–8 недель. Если времени меньше, тоже берёмся: '
+             f'часть проектов мы запускали за две недели.</p>')
+    return ds.band(inner, 'Обратный отсчёт до вечера',
+                   'Сколько времени занимает подготовка и что происходит на каждом шаге.',
+                   kicker='Подготовка', dark=True, fig='h')
 
 
 def price():
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Стоимость и отзыв</h2>{cb.render("ny")}</div></section>')
+    return ds.sec(ds.cost('ny'), 'Стоимость и отзыв')
 
 
 def faq():
-    items = ''.join(f'<details class="ny-faq__i"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
-                    for q, a in FAQ)
-    ld = {'@context': 'https://schema.org', '@type': 'FAQPage',
-          'mainEntity': [{'@type': 'Question', 'name': q,
-                          'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]}
-    return (f'<section class="ny-sec"><div class="ny__in">'
-            f'<h2 class="ny-sec__h">Вопросы о новогоднем корпоративе</h2>'
-            f'<div class="ny-faq">{items}</div>'
-            f'<script type="application/ld+json">'
-            f'{json.dumps(ld, ensure_ascii=False, separators=(",", ":"))}</script>'
-            f'</div></section>')
+    return ds.sec(ds.faq(FAQ), 'Вопросы о новогоднем корпоративе', alt=True)
 
 
 HEAD = (
@@ -365,12 +280,12 @@ HEAD = (
     f'<meta property="og:description" content="{H.escape(DESCR)}">'
     f'<meta property="og:url" content="{URL}">'
     f'<meta property="og:image" content="https://hand-marketing.ru{IMG}/samsung/hall-wide.jpg">'
-    + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
+    + rc.FONT + rc.CSS + ds.CSS + METRIKA + '</head><body>')
 
 
 def page():
-    body = (f'{rc.header()}<main class="ny">{hero()}{crumbs()}{projects()}{samsung()}{works()}'
-            f'{ideas()}{countdown()}{price()}{faq()}</main>'
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.EV}">{crumbs()}{hero()}{banner()}'
+            f'{projects()}{samsung()}{works()}{ideas()}{countdown()}{price()}{faq()}</main>'
             f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return HEAD + body
 

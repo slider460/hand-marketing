@@ -23,6 +23,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 sys.path.insert(0, HERE)
+import hm_ds as ds  # noqa: E402
 
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
 rc = importlib.util.module_from_spec(spec)
@@ -145,51 +146,6 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" '
            'style="position:absolute;left:-9999px" alt=""></div></noscript>')
 
-CSS = """<style id="pr-css">
-.pr{--ink:#14171C;--mut:#5A616A;--a:#673A7E;--line:rgba(20,23,28,.12);
- font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff}
-.pr *{box-sizing:border-box}
-.pr__wrap{max-width:1180px;margin:0 auto;padding:0 40px}
-.pr-hero{padding:64px 0 36px}
-.pr-hero h1{margin:0 0 16px;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.08}
-.pr-hero p{margin:0 0 10px;max-width:72ch;font-size:16.5px;line-height:1.65;color:var(--mut)}
-.pr-rows{display:grid;gap:14px;padding:10px 0 8px}
-.pr-row{display:grid;grid-template-columns:minmax(0,1.15fr) 190px;gap:24px;align-items:start;
- border:1px solid var(--line);border-radius:18px;padding:22px 24px;background:#fff}
-.pr-row h2{margin:0 0 10px;font-size:19px;font-weight:800;letter-spacing:-.01em}
-.pr-row h2 a{color:inherit;text-decoration:none;border-bottom:2px solid rgba(103,58,126,.35)}
-.pr-row h2 a:hover{color:var(--a)}
-.pr-row dl{margin:0;display:grid;gap:8px}
-.pr-row dt{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--a)}
-.pr-row dd{margin:0 0 4px;font-size:14.5px;line-height:1.6;color:var(--mut)}
-.pr-price{text-align:right}
-.pr-price b{display:block;font-size:26px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
-.pr-price small{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;
- text-transform:uppercase;color:var(--mut);margin-bottom:2px}
-.pr-price span{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--mut)}
-.pr-sec{padding:48px 0 0}
-.pr-sec h2{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em}
-.pr-sec p.lead{margin:0 0 24px;max-width:72ch;font-size:16px;line-height:1.65;color:var(--mut)}
-.pr-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:pr}
-.pr-step{counter-increment:pr;border-top:2px solid var(--a);padding-top:12px}
-.pr-step::before{content:"0" counter(pr);font-weight:800;font-size:13px;color:var(--a);letter-spacing:.08em}
-.pr-step h3{margin:6px 0 6px;font-size:15px;font-weight:700;line-height:1.35}
-.pr-step p{margin:0;font-size:13.5px;line-height:1.55;color:var(--mut)}
-.pr-faq{display:grid;gap:10px;max-width:860px}
-.pr-faq details{border:1px solid var(--line);border-radius:14px;padding:0 20px}
-.pr-faq summary{cursor:pointer;list-style:none;position:relative;padding:16px 36px 16px 0;font-size:15.5px;font-weight:700}
-.pr-faq summary::-webkit-details-marker{display:none}
-.pr-faq summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;
- transform:translateY(-70%) rotate(45deg);border-right:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transition:transform .2s}
-.pr-faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.pr-faq p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--mut)}
-.pr-cta{margin:44px 0 64px;padding:26px 28px;border-radius:20px;background:#F8F6FA;
- font-size:16px;line-height:1.6}
-.pr-cta a{color:var(--a);font-weight:700}
-@media(max-width:1000px){.pr-steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.pr__wrap{padding:0 18px}.pr-row{grid-template-columns:1fr}
- .pr-price{text-align:left}.pr-steps{grid-template-columns:1fr}}
-</style>"""
 
 
 def rub(n):
@@ -200,38 +156,86 @@ def esc(t):
     return H.escape(t, quote=False)
 
 
+# метка направления по разделу сайта, цвета как в метках услуг на главной
+TAGS = [('/videoproduction/', 'Video', ds.VID), ('/content/', 'Content', ds.CON), ('/event/', 'Event', ds.EV),
+        ('/exhibition/', 'Exhibition', ds.EXH), ('/3dmapping/', '3D', ds.MAP),
+        ('/creativedesign/', 'Creative', ds.CRE), ('/printandproduction/', 'Print', ds.PRN),
+        ('/photo/', 'Photo', ds.PHO), ('/btl/', 'BTL', ds.BTL), ('/digital/', 'Digital', ds.DIG)]
+
+CSS = """<style id="pr-css">
+.pr-head,.pr-row{display:grid;grid-template-columns:118px minmax(0,1.1fr) minmax(0,2.8fr) 190px;gap:28px;align-items:start}
+.pr-head{padding:0 0 14px;border-bottom:2px solid #111;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4C4C4C}
+.pr-head__dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.pr-head span:last-child{text-align:right}
+.pr-row{padding:26px 0;border-bottom:1px solid #E6E6E6}
+.pr-tag{justify-self:start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:5px 12px;white-space:nowrap}
+.pr-row h3{margin:0;font-size:18px;font-weight:700;line-height:1.35}
+.pr-row h3 a{color:#111;text-decoration:none;border-bottom:2px solid transparent;transition:border-color .15s}
+.pr-row h3 a:hover{border-bottom-color:#FFF700}
+.pr-row dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.pr-row dt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pr-row dd{margin:0;font-size:14.5px;line-height:1.6;color:#4C4C4C}
+.pr-price{text-align:right}
+.pr-price b{display:block;font-size:26px;font-weight:800;color:#111;white-space:nowrap}
+.pr-price small{display:block;font-size:18px;font-weight:800;color:#4C4C4C}
+.pr-price span{display:block;margin-top:6px;font-size:12.5px;line-height:1.45;color:#8A8A8A}
+@media(max-width:980px){
+ .pr-head{display:none}
+ .pr-row{grid-template-columns:minmax(0,1fr) auto;gap:12px 20px}
+ .pr-tag{grid-column:1/-1}
+ .pr-row dl{grid-column:1/-1;grid-row:3;grid-template-columns:minmax(0,1fr);gap:12px}
+ .pr-row dt{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8A8A8A;margin-bottom:4px}
+ .pr-price b{font-size:22px}
+ .pr-price span{max-width:16ch;margin-left:auto}
+}
+</style>"""
+
+
 def rows_html():
     out = ''
     for name, href, price, inc, dep in ROWS:
+        tag, color = next((t, c) for pre, t, c in TAGS if href.startswith(pre))
         if price:
-            money = f'<small>от</small><b>{rub(price)}</b>'
+            money = f'<b>от {ds.rub(price)}</b>'
         else:
-            money = ('<small>по объёму</small><span>Считаем по вашему списку работ, '
-                     'смета бесплатна</span>')
-        out += (f'<article class="pr-row">'
-                f'<div><h2><a href="{href}">{esc(name)}</a></h2>'
-                f'<dl><dt>Что входит</dt><dd>{esc(inc)}</dd>'
-                f'<dt>От чего зависит цена</dt><dd>{esc(dep)}</dd></dl></div>'
+            money = '<small>по объёму</small><span>Считаем по вашему списку работ, смета бесплатна</span>'
+        out += (f'<article class="pr-row" style="--c:{color}"><span class="pr-tag">{tag}</span>'
+                f'<h3><a href="{href}">{esc(name)}</a></h3>'
+                f'<dl><div><dt>Что входит</dt><dd>{esc(inc)}</dd></div>'
+                f'<div><dt>От чего зависит цена</dt><dd>{esc(dep)}</dd></div></dl>'
                 f'<div class="pr-price">{money}</div></article>')
-    return out
+    head = ('<div class="pr-head" aria-hidden="true"><span>Направление</span><span>Услуга</span>'
+            '<span class="pr-head__dl"><span>Что входит</span><span>От чего зависит цена</span></span>'
+            '<span>Стоимость</span></div>')
+    return head + out
 
 
 def page():
-    steps = ''.join(f'<div class="pr-step"><h3>{esc(t)}</h3><p>{esc(d)}</p></div>'
-                    for t, d in STEPS)
-    faq = ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
-                  for q, a in FAQ)
     title = 'Цены на услуги агентства: ролики, мероприятия, стенды | Hand Marketing'
     descr = ('Сколько стоит работа Hand Marketing: рекламный ролик и мультимедийная зона '
              'от 150 000 ₽, мероприятие под ключ и выставочный стенд от 500 000 ₽. '
              'Что входит в смету и от чего зависит цена.')
-    ld_faq = {'@context': 'https://schema.org', '@type': 'FAQPage',
-              'mainEntity': [{'@type': 'Question', 'name': q,
-                              'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]}
     ld_crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': 'https://hand-marketing.ru/'},
         {'@type': 'ListItem', 'position': 2, 'name': 'Цены', 'item': URL}]}
     dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
+
+    lede = ('Ниже нижние границы по направлениям и то, из чего складывается смета. Точную цифру называем '
+            'после брифа: мы считаем работу, а не продаём позиции из прайса. Смету готовим бесплатно '
+            'и обычно в двух вариантах, чтобы было видно, на чём можно сэкономить без потери результата.')
+    hero = ds.hero('Price', 'Об агентстве · Стоимость', 'Цены на услуги', esc(lede),
+                   chips=('смета бесплатно', 'обычно в двух вариантах', 'договор, счёт, НДС'),
+                   ctas=(('Посчитать проект', '#lead', 'y'), ('Проекты', '/project/', 'o')), figs=0)
+    crumbs = ds.crumbs([('Главная', '/'), ('Цены', None)])
+    table = ds.sec(rows_html(), 'Стоимость по направлениям', icons=4)
+    steps = ds.band(ds.steps([(t, esc(d)) for t, d in STEPS], cols=5), 'Как мы считаем',
+                    esc('Смета собирается из позиций, а не из общей суммы: видно, сколько стоит съёмочный '
+                        'день, сколько графика и сколько работа на площадке.'), fig='h')
+    faq = ds.sec(ds.faq(FAQ), 'Вопросы о деньгах')
+    cta = ds.sec('<p class="hd-lead" style="margin:0;font-size:18px;color:#111">Расскажите задачу, и мы '
+                 'посчитаем. Если сомневаетесь, посмотрите <a href="/project">проекты</a>, '
+                 '<a href="/team/">команду</a> и <a href="/reviews/">письма клиентов</a>: там видно, что '
+                 'мы уже делали и за какой срок.</p>', alt=True)
 
     head = (
         '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
@@ -245,34 +249,11 @@ def page():
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png">'
-        + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
-
-    body = (
-        f'{rc.header()}<main class="pr">'
-        '<section class="pr-hero"><div class="pr__wrap">'
-        '<h1>Цены на услуги</h1>'
-        '<p>Ниже нижние границы по направлениям и то, из чего складывается смета. '
-        'Точную цифру называем после брифа: мы считаем работу, а не продаём позиции '
-        'из прайса.</p>'
-        '<p>Смету готовим бесплатно и обычно в двух вариантах, чтобы было видно, '
-        'на чём можно сэкономить без потери результата.</p>'
-        '</div></section>'
-        f'<div class="pr__wrap"><div class="pr-rows">{rows_html()}</div>'
-        '<section class="pr-sec"><h2>Как мы считаем</h2>'
-        '<p class="lead">Смета собирается из позиций, а не из общей суммы: видно, '
-        'сколько стоит съёмочный день, сколько графика и сколько работа на площадке.</p>'
-        f'<div class="pr-steps">{steps}</div></section>'
-        '<section class="pr-sec"><h2>Вопросы о деньгах</h2>'
-        f'<div class="pr-faq">{faq}</div></section>'
-        '<p class="pr-cta">Расскажите задачу, и мы посчитаем. Если сомневаетесь, '
-        'посмотрите <a href="/project">проекты</a>, <a href="/team/">команду</a> '
-        'и <a href="/reviews/">письма клиентов</a>: '
-        'там видно, что мы уже делали и за какой срок.</p>'
-        '</div></main>'
-        f'<a id="lead"></a>{rc.footer()}{rc.JS}'
-        f'<script type="application/ld+json">{dump(ld_faq)}</script>'
-        f'<script type="application/ld+json">{dump(ld_crumbs)}</script>'
-        '</body></html>')
+        + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{table}{steps}{faq}{cta}</main>'
+            f'<a id="lead"></a>{rc.footer()}{rc.JS}'
+            f'<script type="application/ld+json">{dump(ld_crumbs)}</script>'
+            '</body></html>')
     return head + body
 
 

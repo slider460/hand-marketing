@@ -29,6 +29,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 sys.path.insert(0, HERE)
 import commerce_block as cb  # noqa: E402
+import hm_ds as ds  # noqa: E402
 
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
 rc = importlib.util.module_from_spec(spec)
@@ -148,72 +149,6 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" '
            'style="position:absolute;left:-9999px" alt=""></div></noscript>')
 
-CSS = """<style id="bb-css">
-.bb{--ink:#14171C;--mut:#5A616A;--a:#C12164;--line:#ECEEF2;
- font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff}
-.bb *{box-sizing:border-box}
-.bb__in{max-width:1180px;margin:0 auto;padding:0 40px}
-.bb-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;
- letter-spacing:.2em;text-transform:uppercase;color:var(--c,var(--a));margin-bottom:12px}
-.bb-tag::before{content:"";width:11px;height:11px;border-radius:3px;background:currentColor}
-.bb-hero{position:relative;overflow:hidden;isolation:isolate;padding:72px 0 64px}
-.bb-hero__ghost{position:absolute;z-index:-1;right:-20px;top:10px;font:900 420px/1 'Montserrat',Arial,sans-serif;
- color:var(--a);opacity:.06;letter-spacing:-.06em;pointer-events:none;user-select:none}
-.bb-hero h1{margin:0 0 18px;font-size:clamp(32px,4.6vw,58px);font-weight:900;letter-spacing:-.03em;line-height:1.02;max-width:16ch}
-.bb-hero p{margin:0;max-width:64ch;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:#3d434b}
-.bb-chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
-.bb-chips li{border:1.5px solid var(--line);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:700}
-.bb-cta{display:inline-block;margin-top:28px;background:#FCB724;color:#14171C!important;font-weight:800;font-size:15.5px;
- padding:15px 34px;border-radius:30px;text-decoration:none}
-.bb-crumbs{font-size:13px;color:#8A9099;padding:20px 0 0}
-.bb-crumbs a{color:#8A9099!important;text-decoration:none}
-.bb-sec{padding:clamp(52px,6vw,84px) 0;border-top:1.5px solid var(--line)}
-.bb-sec h2{margin:0 0 14px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
-.bb-sec p.lead{margin:0 0 30px;max-width:74ch;font-size:16.5px;line-height:1.7;color:#3d434b}
-.bb-parts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.bb-part{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:22px 22px 20px;
- box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
-.bb-part i{display:block;width:40px;height:6px;border-radius:3px;background:var(--c);margin-bottom:14px}
-.bb-part h3{margin:0 0 8px;font-size:17px;font-weight:800;line-height:1.25}
-.bb-part p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
-.bb-formats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.bb-f{position:relative;isolation:isolate;overflow:hidden;background:#fff;border:1.5px solid var(--line);border-radius:24px;
- padding:24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5);display:flex;flex-direction:column;gap:10px}
-.bb-f__ghost{position:absolute;z-index:-1;right:2px;bottom:-40px;font:900 150px/1 'Montserrat',Arial,sans-serif;
- color:var(--a);opacity:.08;letter-spacing:-.06em}
-.bb-f h3{margin:0;font-size:19px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
-.bb-f p{margin:0;font-size:14px;line-height:1.55;color:var(--mut)}
-.bb-f b{margin-top:auto;font-size:14px;font-weight:800;color:var(--a)}
-.bb-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.bb-case{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:24px;overflow:hidden;
- text-decoration:none;color:inherit!important;box-shadow:0 14px 30px -22px rgba(20,23,28,.5);transition:transform .2s,border-color .25s}
-.bb-case:hover{transform:translateY(-3px);border-color:var(--a)}
-.bb-case img{width:100%;height:210px;object-fit:contain;background:#F7F4F1;display:block;padding:12px 0}
-.bb-case__b{padding:18px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.bb-case__n{font-size:24px;font-weight:900;letter-spacing:-.02em;color:var(--a)}
-.bb-case__t{font-size:17px;font-weight:800;line-height:1.25}
-.bb-case__d{font-size:14px;line-height:1.55;color:var(--mut)}
-.bb-case__go{margin-top:auto;font-size:14px;font-weight:800;color:var(--a)}
-.bb-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.bb-step__n{width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;font-size:17px;font-weight:900;
- display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
-.bb-step h3{margin:0 0 6px;font-size:16px;font-weight:800;line-height:1.25}
-.bb-step p{margin:0;font-size:13.5px;line-height:1.55;color:var(--mut)}
-.bb-faq{display:grid;gap:12px;max-width:900px}
-.bb-faq details{border:1.5px solid var(--line);border-radius:20px;padding:0 22px;background:#fff}
-.bb-faq summary{cursor:pointer;list-style:none;padding:18px 0;font-size:16px;font-weight:800;display:flex;align-items:center;gap:14px}
-.bb-faq summary::-webkit-details-marker{display:none}
-.bb-faq summary::before{content:"+";width:30px;height:30px;border-radius:50%;flex:none;background:#ECEEF2;color:#14171C;
- font-size:20px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;line-height:1}
-.bb-faq details[open] summary::before{content:"\\2212";background:var(--a);color:#fff}
-.bb-faq p{margin:0 0 20px 44px;font-size:15px;line-height:1.65;color:var(--mut)}
-.bb-more{margin:30px 0 0;font-size:15.5px;line-height:1.7;color:#3d434b}
-.bb-more a{color:var(--a)!important;font-weight:700}
-@media(max-width:1100px){.bb-parts,.bb-formats{grid-template-columns:repeat(2,1fr)}.bb-steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){.bb-cases{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.bb__in{padding:0 18px}.bb-parts,.bb-formats,.bb-cases,.bb-steps{grid-template-columns:1fr}
- .bb-hero__ghost{font-size:260px}}
-</style>"""
 
 
 def esc(t):
@@ -221,28 +156,45 @@ def esc(t):
 
 
 def page():
-    parts = ''.join(f'<div class="bb-part" style="--c:{c}"><i aria-hidden="true"></i>'
-                    f'<h3>{esc(t)}</h3><p>{esc(d)}</p></div>' for t, d, c in PARTS)
-    formats = ''.join(f'<div class="bb-f"><span class="bb-f__ghost" aria-hidden="true">{i + 1}</span>'
-                      f'<h3>{esc(t)}</h3><p>{esc(d)}</p><b>{esc(term)}</b></div>'
-                      for i, (t, d, term) in enumerate(FORMATS))
-    cases = ''
-    for href, title, num, txt in CASES:
-        img = COVERS.get(href.rstrip('/'), '')
-        pic = (f'<img src="{img}" alt="{H.escape(title)}" loading="lazy" width="600" height="600">'
-               if img else '')
-        cases += (f'<a class="bb-case" href="{href}/">{pic}<span class="bb-case__b">'
-                  f'<span class="bb-case__n">{esc(num)}</span>'
-                  f'<span class="bb-case__t">{esc(title)}</span>'
-                  f'<span class="bb-case__d">{esc(txt)}</span>'
-                  f'<span class="bb-case__go">Смотреть проект →</span></span></a>')
-    steps = ''.join(f'<div class="bb-step" style="--c:{c}"><span class="bb-step__n">{i + 1:02d}</span>'
-                    f'<h3>{esc(t)}</h3><p>{esc(d)}</p></div>'
-                    for i, (t, d, c) in enumerate(STEPS))
-    faq = ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in FAQ)
-    ld_faq = {'@context': 'https://schema.org', '@type': 'FAQPage',
-              'mainEntity': [{'@type': 'Question', 'name': q,
-                              'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]}
+    lede = ('Делаем фирменный стиль, который работает на реальных носителях: от визитки до выставочного '
+            'стенда. Брендбук Metra Technology Group на 69 полос с пятью брендами экосистемы, фирменный '
+            'стиль выставки «Самара» на 28 полос, стиль отдела продаж Becar. Печать и производство '
+            'носителей ведём сами, поэтому стиль доходит до площадки без потерь.')
+    hero = ds.hero('Creative', 'Creative & Design · Брендбук', 'Разработка брендбука и фирменного стиля',
+                   esc(lede), chips=('логотип за 2–3 недели', 'брендбук от месяца',
+                                     'печать носителей своими силами'),
+                   ctas=(('Обсудить проект', '#lead', 'y'), ('Брендбук Metra', '/creative/metra/', 'o')),
+                   figs=2)
+    banner = ds.banner('/creative/metra/', '/images/metra/sheet/01.jpg',
+                       'Полоса брендбука Metra Technology Group', 'Metra Technology Group',
+                       '69 полос, пять брендов одной экосистемы', CASES[0][3],
+                       chips=('69 полос', '5 брендов'))
+    crumbs = ds.crumbs([('Главная', '/'), ('Креатив и дизайн', '/creativedesign/'),
+                        ('Разработка брендбука', None)])
+    parts = ds.sec(ds.feats([(t, esc(d)) for t, d, _c in PARTS], cols=4), 'Что входит в брендбук',
+                   esc('Брендбук это не альбом с логотипом, а правила, по которым стиль держится без автора. '
+                       'Ниже то, что обычно входит в работу. Состав подбираем под задачу: новому продукту '
+                       'хватает мини-гайда, экосистеме нужна архитектура бренда.'), icons=3, top=True)
+    # ступени: каждая следующая выше, последняя залита цветом направления
+    heights = (230, 290, 350, 410)
+    steps_html = ''.join(
+        f'<div style="min-height:{heights[i]}px"><i aria-hidden="true">{i + 1}</i><b>{esc(t)}</b>'
+        f'<p>{esc(d)}</p><small>{esc(term)}</small></div>' for i, (t, d, term) in enumerate(FORMATS))
+    formats = ds.sec(f'<div class="hd-ladder">{steps_html}</div>', 'От логотипа до архитектуры бренда',
+                     esc('Четыре формата работы. Каждая ступень включает предыдущую.'), alt=True)
+    cases = ds.sec(ds.cases([(href + '/', title, txt, None, num) for href, title, num, txt in CASES],
+                            cols=3, more='Смотреть проект'),
+                   'Брендбуки и фирменные стили, которые мы сделали',
+                   esc('У каждого проекта на сайте есть разбор: знак, система, носители и то, как стиль '
+                       'работает в реальной среде.'), icons=3, icon_start=4)
+    steps = ds.band(ds.steps([(t, esc(d)) for t, d, _c in STEPS], cols=5), 'Как идёт разработка',
+                    esc('Согласование идёт по промежуточным листам: заказчик видит концепцию, знак и '
+                        'носители до того, как стиль уйдёт в производство.'), fig='disc')
+    price = ds.sec(ds.cost('brandbook') +
+                   '<p class="hd-note">Состав смет по всем направлениям разобран на странице '
+                   '<a href="/price/">стоимости</a>, другие работы по дизайну в разделе '
+                   '<a href="/creativedesign/">креатива и дизайна</a>.</p>', 'Стоимость и отзывы')
+    faq = ds.sec(ds.faq(FAQ), 'Что спрашивают о брендбуке', alt=True)
 
     title = 'Разработка брендбука и фирменного стиля в Москве | Hand Marketing'
     descr = ('Разработка брендбука, фирменного стиля и логотипа под ключ: знак, цвет, шрифты, '
@@ -260,70 +212,10 @@ def page():
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/images/metra/sheet/01.jpg">'
-        + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
-
-    body = (
-        f'{rc.header()}<main class="bb">'
-        '<section class="bb-hero"><span class="bb-hero__ghost" aria-hidden="true">B</span>'
-        '<div class="bb__in">'
-        '<span class="bb-tag">Creative &amp; Design</span>'
-        '<h1>Разработка брендбука и фирменного стиля</h1>'
-        '<p>Делаем фирменный стиль, который работает на реальных носителях: от визитки '
-        'до выставочного стенда. Брендбук Metra Technology Group на 69 полос с пятью брендами '
-        'экосистемы, фирменный стиль выставки «Самара» на 28 полос, стиль отдела продаж Becar. '
-        'Печать и производство носителей ведём сами, поэтому стиль доходит до площадки '
-        'без потерь.</p>'
-        '<ul class="bb-chips"><li>логотип за 2–3 недели</li><li>брендбук от месяца</li>'
-        '<li>печать носителей своими силами</li></ul>'
-        '<a class="bb-cta" href="#lead">Обсудить проект</a>'
-        '</div></section>'
-        '<div class="bb__in"><nav class="bb-crumbs" aria-label="Навигация по разделам">'
-        '<a href="/">Главная</a> · <a href="/creativedesign/">Креатив и дизайн</a> · '
-        'Разработка брендбука</nav></div>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Состав</span>'
-        '<h2>Что входит в брендбук</h2>'
-        '<p class="lead">Брендбук это не альбом с логотипом, а правила, по которым стиль '
-        'держится без автора. Ниже то, что обычно входит в работу. Состав подбираем под задачу: '
-        'новому продукту хватает мини-гайда, экосистеме нужна архитектура бренда.</p>'
-        f'<div class="bb-parts">{parts}</div></div></section>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Форматы</span>'
-        '<h2>От логотипа до архитектуры бренда</h2>'
-        f'<div class="bb-formats">{formats}</div></div></section>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Проекты</span>'
-        '<h2>Брендбуки и фирменные стили, которые мы сделали</h2>'
-        '<p class="lead">У каждого проекта на сайте есть разбор: знак, система, носители '
-        'и то, как стиль работает в реальной среде.</p>'
-        f'<div class="bb-cases">{cases}</div></div></section>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Порядок работы</span>'
-        '<h2>Как идёт разработка</h2>'
-        '<p class="lead">Согласование идёт по промежуточным листам: заказчик видит концепцию, '
-        'знак и носители до того, как стиль уйдёт в производство.</p>'
-        f'<div class="bb-steps">{steps}</div></div></section>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Стоимость</span>'
-        f'<h2>Стоимость и отзывы</h2>{cb.render("brandbook")}'
-        '<p class="bb-more">Состав смет по всем направлениям разобран на странице '
-        '<a href="/price/">стоимости</a>, другие работы по дизайну в разделе '
-        '<a href="/creativedesign/">креатива и дизайна</a>.</p>'
-        '</div></section>'
-
-        '<section class="bb-sec"><div class="bb__in">'
-        '<span class="bb-tag">Вопросы</span>'
-        f'<h2>Что спрашивают о брендбуке</h2><div class="bb-faq">{faq}</div>'
-        f'<script type="application/ld+json">'
-        f'{json.dumps(ld_faq, ensure_ascii=False, separators=(",", ":"))}</script>'
-        '</div></section>'
-        '</main>'
-        f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+        + rc.FONT + rc.CSS + ds.CSS + METRIKA + '</head><body>')
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.CRE}">{crumbs}{hero}{banner}{parts}{formats}'
+            f'{cases}{steps}{price}{faq}</main>'
+            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return head + body
 
 

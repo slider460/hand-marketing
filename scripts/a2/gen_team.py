@@ -28,6 +28,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 sys.path.insert(0, HERE)
+import hm_ds as ds  # noqa: E402
 
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
 rc = importlib.util.module_from_spec(spec)
@@ -89,53 +90,41 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" '
            'style="position:absolute;left:-9999px" alt=""></div></noscript>')
 
-CSS = """<style id="tm-css">
-.tm{--ink:#14171C;--mut:#5A616A;--a:#673A7E;--line:rgba(20,23,28,.12);
- font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff}
-.tm *{box-sizing:border-box}
-.tm__wrap{max-width:1180px;margin:0 auto;padding:0 40px}
-.tm-hero{padding:64px 0 34px}
-.tm-hero h1{margin:0 0 16px;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.08}
-.tm-hero p{margin:0;max-width:72ch;font-size:16.5px;line-height:1.65;color:var(--mut)}
-.tm-facts{display:flex;flex-wrap:wrap;gap:34px;margin-top:26px}
-.tm-facts div b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--a)}
-.tm-facts div span{font-size:13.5px;color:var(--mut);max-width:26ch;display:block}
-.tm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 24px;padding:36px 0 8px}
-.tm-card{border:1px solid var(--line);border-radius:20px;padding:24px 24px 26px;background:#fff}
-.tm-card img{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;margin-bottom:16px}
-.tm-card h2{margin:0 0 4px;font-size:19px;font-weight:800;letter-spacing:-.01em}
-.tm-card .role{display:block;margin-bottom:12px;font-size:13px;font-weight:700;letter-spacing:.06em;
- text-transform:uppercase;color:var(--a)}
-.tm-card p{margin:0;font-size:14.5px;line-height:1.6;color:var(--mut)}
-.tm-sec{padding:44px 0 0}
-.tm-sec h2{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em}
-.tm-sec p.lead{margin:0 0 24px;max-width:74ch;font-size:16px;line-height:1.65;color:var(--mut)}
-.tm-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:tm}
-.tm-step{counter-increment:tm;border-top:2px solid var(--a);padding-top:12px}
-.tm-step::before{content:"0" counter(tm);font-weight:800;font-size:13px;color:var(--a);letter-spacing:.08em}
-.tm-step h3{margin:6px 0 6px;font-size:15px;font-weight:700;line-height:1.35}
-.tm-step p{margin:0;font-size:13.5px;line-height:1.55;color:var(--mut)}
-.tm-cta{margin:42px 0 64px;padding:26px 28px;border-radius:20px;background:#F8F6FA;font-size:16px;line-height:1.6}
-.tm-cta a{color:var(--a);font-weight:700}
-@media(max-width:1000px){.tm-grid{grid-template-columns:1fr 1fr}.tm-flow{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.tm__wrap{padding:0 18px}.tm-grid,.tm-flow{grid-template-columns:1fr}}
-</style>"""
 
 
 def esc(t):
     return H.escape(t, quote=False)
 
 
+# круглые портреты с кольцом, как в блоке команды на главной; цвет кольца у каждого свой
+RING = (ds.VIOLET, '#FCB724', ds.CON, ds.CRE, ds.DIG, ds.PHO, ds.EV)
+
+CSS = """<style id="tm-css">
+.tm-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 36px}
+.tm-card{text-align:center}
+.tm-card img{display:block;width:170px;height:170px;margin:0 auto;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px #fff,0 0 0 8px var(--c)}
+.tm-card h3{margin:24px 0 0;font-size:19px;font-weight:700;line-height:1.3;color:#111}
+.tm-card .role{display:block;margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+.tm-card p{margin:12px auto 0;max-width:30ch;font-size:14.5px;line-height:1.6;color:#4C4C4C}
+.tm-more{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#F6F4F9;padding:32px 26px}
+.tm-more img{width:64px;height:64px}
+.tm-more b{margin-top:18px;font-size:17px;line-height:1.4;color:#111}
+.tm-more p{margin:10px 0 0;font-size:14.5px;line-height:1.6;color:#4C4C4C}
+@media(max-width:980px){.tm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.tm-grid{grid-template-columns:minmax(0,1fr);gap:44px}}
+</style>"""
+
+
 def page():
     cards = ''.join(
-        f'<article class="tm-card">'
+        f'<article class="tm-card" style="--c:{RING[i]}">'
         f'<img src="/images/team/{slug}.jpg" alt="{H.escape(name)}, {H.escape(role)}" '
         f'loading="lazy" width="264" height="264">'
-        f'<h2>{esc(name)}</h2><span class="role">{esc(role)}</span><p>{esc(about)}</p>'
-        f'</article>' for slug, name, role, about in TEAM)
-    flow = ''.join(f'<div class="tm-step"><h3>{esc(t)}</h3><p>{esc(d)}</p></div>'
-                   for t, d in FLOW)
-    facts = ''.join(f'<div><b>{esc(n)}</b><span>{esc(t)}</span></div>' for n, t in FACTS)
+        f'<h3>{esc(name)}</h3><span class="role">{esc(role)}</span><p>{esc(about)}</p>'
+        f'</article>' for i, (slug, name, role, about) in enumerate(TEAM))
+    cards += (f'<div class="tm-more"><img src="{ds.FIG[7]}" alt="" aria-hidden="true" width="64" height="64">'
+              '<b>Под проект собираем группы</b><p>Съёмочные группы, монтажники и промо-персонал. '
+              'За результат отвечает кто-то из семерых.</p></div>')
 
     title = 'Команда агентства Hand Marketing'
     descr = ('Кто делает проекты Hand Marketing: клиент-сервис, коммерческий и креативный '
@@ -146,10 +135,25 @@ def page():
           'telephone': '+7 495 580 75 37', 'email': 'info@hand-marketing.ru',
           'employee': [{'@type': 'Person', 'name': name, 'jobTitle': role}
                        for _s, name, role, _a in TEAM]}
-    crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+    crumbs_ld = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': 'https://hand-marketing.ru/'},
         {'@type': 'ListItem', 'position': 2, 'name': 'Команда', 'item': URL}]}
     dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
+
+    lede = ('Проект ведут те же люди, которые его придумали: это семь человек, между которыми поделены '
+            'клиент-сервис, коммерция, креатив, продакшн и техническая часть. Под конкретную работу '
+            'собираем съёмочные группы, монтажников и промо-персонал, но отвечает за результат всегда '
+            'кто-то из этого списка.')
+    hero = ds.hero('Team', 'Об агентстве · Команда', 'Команда', esc(lede), figs=1)
+    hero = hero.replace('</div></section>', ds.nums(FACTS, cols=3, center=True) + '</div></section>', 1)
+    crumbs = ds.crumbs([('Главная', '/'), ('Команда', None)])
+    grid = ds.sec(f'<div class="tm-grid">{cards}</div>', 'Кто ведёт ваш проект', icons=3)
+    flow = ds.band(ds.steps([(t, esc(d)) for t, d in FLOW], cols=5), 'Как проект проходит через команду',
+                   esc('Заказчик общается с одним человеком, но внутри задача проходит через всех, '
+                       'кого касается.'), fig='blocks')
+    cta = ds.sec('<p class="hd-lead" style="margin:0;font-size:18px;color:#111">Хотите понять, как мы '
+                 'работаем на деле, посмотрите <a href="/project">проекты</a> и <a href="/reviews/">письма '
+                 'клиентов</a>, а порядок работы и цены описаны на странице <a href="/price/">стоимости</a>.</p>')
 
     head = (
         '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
@@ -163,31 +167,12 @@ def page():
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png">'
-        + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
-
-    body = (
-        f'{rc.header()}<main class="tm">'
-        '<section class="tm-hero"><div class="tm__wrap">'
-        '<h1>Команда</h1>'
-        '<p>Проект ведут те же люди, которые его придумали: это семь человек, между '
-        'которыми поделены клиент-сервис, коммерция, креатив, продакшн и техническая '
-        'часть. Под конкретную работу собираем съёмочные группы, монтажников и '
-        'промо-персонал, но отвечает за результат всегда кто-то из этого списка.</p>'
-        f'<div class="tm-facts">{facts}</div>'
-        '</div></section>'
-        f'<div class="tm__wrap"><div class="tm-grid">{cards}</div>'
-        '<section class="tm-sec"><h2>Как проект проходит через команду</h2>'
-        '<p class="lead">Заказчик общается с одним человеком, но внутри задача проходит '
-        'через всех, кого касается.</p>'
-        f'<div class="tm-flow">{flow}</div></section>'
-        '<p class="tm-cta">Хотите понять, как мы работаем на деле, посмотрите '
-        '<a href="/project">проекты</a> и <a href="/reviews/">письма клиентов</a>, '
-        'а порядок работы и цены описаны на странице <a href="/price/">стоимости</a>.</p>'
-        '</div></main>'
-        f'<a id="lead"></a>{rc.footer()}{rc.JS}'
-        f'<script type="application/ld+json">{dump(ld)}</script>'
-        f'<script type="application/ld+json">{dump(crumbs)}</script>'
-        '</body></html>')
+        + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{grid}{flow}{cta}</main>'
+            f'<a id="lead"></a>{rc.footer()}{rc.JS}'
+            f'<script type="application/ld+json">{dump(ld)}</script>'
+            f'<script type="application/ld+json">{dump(crumbs_ld)}</script>'
+            '</body></html>')
     return head + body
 
 

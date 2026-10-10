@@ -131,112 +131,287 @@ body{margin:0}
  .hm-hdr a[href="/clients/"]{right:31%}
  .hm-hdr a[href="/contacts/"]{right:18%}
  .hm-hdr__contacts .ph,.hm-hdr__contacts .em{right:2%}}
-</style><style>
-.vpg{--a:#CF6F19;font-family:'Montserrat',Arial,sans-serif;color:#14171C;background:#fff}
-.vpg__in{max-width:1180px;margin:0 auto;padding:0 40px}
-.vpg-sec{padding:clamp(46px,5.6vw,80px) 0}
-.vpg-sec_alt{background:#FBF7F3}
-.vpg-sec__h{margin:0 0 10px;font-size:clamp(26px,3.1vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.vpg-sec__lead{margin:0 0 30px;max-width:72ch;font-size:16.5px;line-height:1.65;color:#5A616A}
-.vpg-hero{position:relative;min-height:clamp(380px,56vh,560px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.vpg-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vpg-hero__sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,10,6,.52) 0%,rgba(14,10,6,.42) 38%,rgba(14,10,6,.9) 100%)}
-.vpg-hero__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;pointer-events:none}
-.vpg-hero__v.is-on{opacity:1}
-.vpg-shots{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.vpg-shot{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#EFE9E3;grid-column:span 2}
-.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 3}
-.vpg-shot img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.vpg-shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:13.5px;line-height:1.45;color:#fff;background:linear-gradient(180deg,rgba(14,10,6,0),rgba(14,10,6,.82))}
-@media(max-width:980px){.vpg-shots{grid-template-columns:repeat(2,1fr)}.vpg-shot,.vpg-shot:first-child,.vpg-shot:nth-child(2){grid-column:span 1}}
-@media(max-width:640px){.vpg-shots{grid-template-columns:1fr}}
-.vpg-hero__in{position:relative;width:100%;max-width:1180px;margin:0 auto;padding:0 40px clamp(34px,4.6vw,60px)}
-.vpg-hero__k{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F6C99A}
-.vpg-hero h1{margin:0;font-size:clamp(28px,4.2vw,54px);font-weight:800;letter-spacing:-.025em;line-height:1.06;max-width:19ch}
-.vpg-hero__lead{margin:18px 0 0;max-width:62ch;font-size:clamp(15.5px,1.5vw,18px);line-height:1.6;color:rgba(255,255,255,.88)}
-.vpg-hero__f{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
-.vpg-hero__f li{border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font-size:14px;font-weight:600}
-.vpg-hero__cta{display:inline-block;margin-top:24px;background:#FCB724;color:#14171C;font-weight:800;font-size:15.5px;padding:15px 34px;border-radius:30px;text-decoration:none}
-.vpg-crumbs{font-size:13px;color:#8A9099;padding:18px 0 0}
-.vpg-crumbs a{color:#8A9099;text-decoration:none}
-.vpg-crumbs a:hover{text-decoration:underline}
-.vpg-bars{display:grid;gap:22px}
-.vpg-bar__top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:8px}
-.vpg-bar__n{font-size:17px;font-weight:700;letter-spacing:-.01em}
-.vpg-bar__n a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(207,111,25,.45)}
-.vpg-list__i span a,.vpg-sec__lead a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(207,111,25,.45)}
-.vpg-list__i span a:hover,.vpg-sec__lead a:hover{border-bottom-color:var(--a)}
-.vpg-bar__t{font-size:15px;font-weight:800;color:var(--a);font-variant-numeric:tabular-nums}
-.vpg-bar__line{height:14px;border-radius:7px;background:rgba(207,111,25,.14);overflow:hidden}
-.vpg-bar__fill{height:100%;border-radius:7px;background:var(--a)}
-.vpg-bar__d{margin:10px 0 0;font-size:14.5px;line-height:1.6;color:#5A616A;max-width:74ch}
-.vpg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px}
-.vpg-card{display:flex;flex-direction:column;border:1px solid rgba(20,23,28,.1);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:transform .2s ease}
-.vpg-card:hover{transform:translateY(-4px)}
-.vpg-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
-.vpg-card__b{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.vpg-card__t{font-size:18px;font-weight:800;letter-spacing:-.01em}
-.vpg-card__d{font-size:14.5px;line-height:1.6;color:#5A616A}
-.vpg-card__go{margin-top:auto;font-size:14px;font-weight:700;color:var(--a)}
-.vpg-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.vpg-list__i{border-top:2px solid var(--a);padding:14px 0 0}
-.vpg-list__i b{display:block;font-size:16px;margin-bottom:6px}
-.vpg-list__i span{font-size:14.5px;line-height:1.55;color:#5A616A}
-.vpg-faq{display:grid;gap:10px;max-width:860px}
-.vpg-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;padding:0 20px}
-.vpg-faq__i summary{cursor:pointer;list-style:none;position:relative;padding:16px 36px 16px 0;font-size:15.5px;font-weight:700}
-.vpg-faq__i summary::-webkit-details-marker{display:none}
-.vpg-faq__i summary::after{content:"";position:absolute;right:2px;top:50%;width:11px;height:11px;transform:translateY(-70%) rotate(45deg);border-right:2.5px solid var(--a);border-bottom:2.5px solid var(--a);transition:transform .2s}
-.vpg-faq__i[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.vpg-faq__i p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:#5A616A}
-@media(max-width:980px){.vpg-cards,.vpg-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.vpg__in,.vpg-hero__in{padding-left:18px;padding-right:18px}.vpg-cards,.vpg-list{grid-template-columns:minmax(0,1fr)}}
-</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px" alt=""></div></noscript></head><body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about/">О нас</a><a href="/service/">Услуги</a><a href="/project/">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients/">Клиенты</a><a href="/contacts/">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="vpg"><section class="vpg-hero"><img class="vpg-hero__img" src="/images/vpg/film-hero.jpg" alt="Кадр корпоративного фильма: грузовой двор Центральной дирекции РЖД" fetchpriority="high" decoding="async"><video class="vpg-hero__v" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="/media/film-hero-loop.mp4" type="video/mp4"></video><span class="vpg-hero__sh" aria-hidden="true"></span><div class="vpg-hero__in"><p class="vpg-hero__k">Video Production · Фильм о компании</p><h1>Корпоративный фильм о компании</h1><p class="vpg-hero__lead">Фильм к десятилетию дирекции РЖД, фильм о клиентском опыте Saint-Gobain, фильм об энергоснабжении чемпионата мира по футболу. Снимаем то, что компания хочет показывать партнёрам, сотрудникам и на тендере.</p><ul class="vpg-hero__f"><li>от 150 000 ₽</li><li>2–3 недели</li><li>съёмка по России и за рубежом</li></ul><a class="vpg-hero__cta" href="#lead">Обсудить проект</a></div></section><div class="vpg__in"><nav class="vpg-crumbs" aria-label="Навигация по разделам"><a href="/">Главная</a> · <a href="/videoproduction/">Видеопродакшн</a> · Корпоративный фильм</nav></div><section class="vpg-sec vpg-sec_alt"><div class="vpg__in"><h2 class="vpg-sec__h">Сколько длится корпоративный фильм</h2><p class="vpg-sec__lead">Хронометраж наших фильмов: полоса пропорциональна длительности.</p><div class="vpg-bars"><div class="vpg-bar"><div class="vpg-bar__top"><span class="vpg-bar__n"><a href="/video/powertechnologies/">Power Technologies, ЧМ-2018</a></span><span class="vpg-bar__t">11:39</span></div><div class="vpg-bar__line"><div class="vpg-bar__fill" style="width:100%"></div></div><p class="vpg-bar__d">11 городов и 12 стадионов, восемь интервью. Есть короткая версия на 4:27 для показа на стенде и встречах.</p></div><div class="vpg-bar"><div class="vpg-bar__top"><span class="vpg-bar__n"><a href="/video/saintgobain/cx/">Saint-Gobain, клиентский опыт</a></span><span class="vpg-bar__t">10:07</span></div><div class="vpg-bar__line"><div class="vpg-bar__fill" style="width:87%"></div></div><p class="vpg-bar__d">Две части по 6:57 и 3:11: путь заказа от завода до объекта и прямая речь команды.</p></div><div class="vpg-bar"><div class="vpg-bar__top"><span class="vpg-bar__n"><a href="/video/rgd/history/">ЦМ РЖД, фильм к десятилетию</a></span><span class="vpg-bar__t">3:54</span></div><div class="vpg-bar__line"><div class="vpg-bar__fill" style="width:33%"></div></div><p class="vpg-bar__d">117 планов, семь услуг дирекции и съёмка в нескольких городах.</p></div></div></div></section><section class="vpg-sec"><div class="vpg__in"><h2 class="vpg-sec__h">Кейсы корпоративных фильмов</h2><div class="vpg-cards"><a class="vpg-card" href="/video/rgd/history/"><img src="/images/rgd-history/poster.jpg" alt="Кадр фильма для Центральной дирекции РЖД" loading="lazy" width="800" height="500"><span class="vpg-card__b"><span class="vpg-card__t">ЦМ РЖД, 3:54</span><span class="vpg-card__d">Фильм к десятилетию Центральной дирекции: 117 планов, грузовые дворы и семь услуг в одном рассказе.</span><span class="vpg-card__go">Смотреть кейс →</span></span></a><a class="vpg-card" href="/video/saintgobain/cx/"><img src="/images/sgcx/hero-poster.jpg" alt="Кадр фильма о клиентском опыте Saint-Gobain" loading="lazy" width="800" height="500"><span class="vpg-card__b"><span class="vpg-card__t">Saint-Gobain, 10 минут</span><span class="vpg-card__d">Фильм о клиентском опыте в двух частях: путь заказа, производство и прямая речь сотрудников компании.</span><span class="vpg-card__go">Смотреть кейс →</span></span></a><a class="vpg-card" href="/video/powertechnologies/"><img src="/images/powertech/poster-full.jpg" alt="Кадр фильма Power Technologies о чемпионате мира" loading="lazy" width="800" height="500"><span class="vpg-card__b"><span class="vpg-card__t">Power Technologies, ЧМ-2018</span><span class="vpg-card__d">Фильм о работе на чемпионате мира: 11 городов, 12 стадионов и восемь интервью. Полная версия 11:39 и короткая на 4:27.</span><span class="vpg-card__go">Смотреть кейс →</span></span></a><a class="vpg-card" href="/isotec/"><img src="/images/isotec/poster.jpg" alt="Кадр бренд-ролика компании Изотек" loading="lazy" width="800" height="500"><span class="vpg-card__b"><span class="vpg-card__t">Изотек, бренд-ролик</span><span class="vpg-card__d">История компании от 2012 года до сегодняшнего дня, две версии под разные площадки.</span><span class="vpg-card__go">Смотреть кейс →</span></span></a></div></div></section><section class="vpg-sec"><div class="vpg__in"><h2 class="vpg-sec__h">Кадры из корпоративных фильмов</h2><p class="vpg-sec__lead">Производство, объекты и люди компании: снимаем в рабочую смену, без перекрытия площадки и без постановочных сцен.</p><div class="vpg-shots"><figure class="vpg-shot"><img src="/images/vpg/film/rzd-yard.jpg" alt="Грузовой двор ЦМ РЖД снят с воздуха" loading="lazy" width="1600" height="900"><figcaption>Грузовой двор ЦМ РЖД снят с воздуха</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/rzd-crane.jpg" alt="Портальный кран в работе, смену не останавливали" loading="lazy" width="1600" height="900"><figcaption>Портальный кран в работе, смену не останавливали</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/rzd-air.jpg" alt="Съёмка шла в нескольких городах сети дирекции" loading="lazy" width="1600" height="900"><figcaption>Съёмка шла в нескольких городах сети дирекции</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/sg-wall.jpg" alt="Saint-Gobain: 48 сотрудников сняты в одном свете" loading="lazy" width="1600" height="900"><figcaption>Saint-Gobain: 48 сотрудников сняты в одном свете</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/sg-line.jpg" alt="Линия упаковки: производство в рабочую смену" loading="lazy" width="1600" height="900"><figcaption>Линия упаковки: производство в рабочую смену</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/pt-gallery.jpg" alt="Международный вещательный центр чемпионата мира" loading="lazy" width="1600" height="900"><figcaption>Международный вещательный центр чемпионата мира</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/pt-numbers.jpg" alt="Цифры проекта: 960 км кабеля, 75 МВт, 300 человек" loading="lazy" width="1600" height="900"><figcaption>Цифры проекта: 960 км кабеля, 75 МВт, 300 человек</figcaption></figure><figure class="vpg-shot"><img src="/images/vpg/film/isotec-plant.jpg" alt="Изотек: цех и склад в бренд-ролике компании" loading="lazy" width="1600" height="900"><figcaption>Изотек: цех и склад в бренд-ролике компании</figcaption></figure></div></div></section><section class="vpg-sec"><div class="vpg__in"><h2 class="vpg-sec__h">Какие фильмы снимаем</h2><div class="vpg-list"><div class="vpg-list__i"><b>К юбилею и итогам года</b><span>История компании и результаты в одном рассказе.</span></div><div class="vpg-list__i"><b>О производстве</b><span>Как устроен процесс: цеха, техника, люди на площадке.</span></div><div class="vpg-list__i"><b>О клиентском опыте</b><span>Путь заказа глазами клиента и сотрудников.</span></div><div class="vpg-list__i"><b>HR-фильм</b><span>Для найма и адаптации: кто работает в компании и как.</span></div><div class="vpg-list__i"><b>Для выставки и стенда</b><span>Версия под экран: читается без звука, идёт петлёй.</span></div><div class="vpg-list__i"><b>Для тендера и инвесторов</b><span>Сжатая версия с цифрами и объектами.</span></div></div></div></section><section class="vpg-sec vpg-sec_alt"><div class="vpg__in"><h2 class="vpg-sec__h">Как проходит работа</h2><div class="vpg-list"><div class="vpg-list__i"><b>Бриф и сценарий</b><span>Цели, аудитория, герои. Сценарий и смета до съёмок.</span></div><div class="vpg-list__i"><b>Подготовка</b><span>Локации, согласования на объектах, график смен.</span></div><div class="vpg-list__i"><b>Съёмка</b><span>Своя группа и техника, интервью и съёмка процессов.</span></div><div class="vpg-list__i"><b>Постпродакшн</b><span>Монтаж, цвет, графика, звук. Две итерации правок включены.</span></div><div class="vpg-list__i"><b>Версии</b><span>Полный фильм, короткая версия, нарезка для соцсетей.</span></div><div class="vpg-list__i"><b>Где живёт фильм</b><span>Экран на стенде, зал мероприятия, сайт, внутренние экраны.</span></div></div></div></section><section class="vpg-sec"><div class="vpg__in"><h2 class="vpg-sec__h">Имиджевый ролик и корпоративный фильм: в чём разница</h2><p class="vpg-sec__lead">Форматы похожи, но задачи у них разные. Из одной съёмки обычно собираем несколько роликов: полную версию, короткую и нарезки.</p><div class="vpg-list"><div class="vpg-list__i"><b>Имиджевый ролик</b><span>Короткий рассказ о бренде или продукте без длинных интервью. Для <a href="/portfolio/ceramicanova/">CeramicaNova</a> мы сняли 17 таких роликов, по одному на коллекцию санфарфора.</span></div><div class="vpg-list__i"><b>Бренд-ролик</b><span>История компании по годам. <a href="/isotec/">Бренд-ролик «Изотек»</a> идёт от 2012 года до сегодняшнего дня.</span></div><div class="vpg-list__i"><b>Корпоративный фильм</b><span>Подробный рассказ о компании для партнёров, сотрудников и тендеров: процессы, объекты, люди. <a href="/video/rgd/history/">Фильм к десятилетию ЦМ РЖД</a> длится 3:54, в нём 117 планов и семь услуг дирекции.</span></div><div class="vpg-list__i"><b>Фильм о проекте</b><span>Рассказ об одной большой работе. <a href="/video/powertechnologies/">Power Technologies</a> обеспечивала электричеством чемпионат мира по футболу 2018 года: в нём 11 городов, 12 стадионов и восемь интервью.</span></div></div></div></section><section class="vpg-sec vpg-sec_alt"><div class="vpg__in"><h2 class="vpg-sec__h">Как снимаем людей компании</h2><p class="vpg-sec__lead">На примере <a href="/video/saintgobain/cx/">фильма о клиентском опыте Saint-Gobain</a>.</p><div class="vpg-list"><div class="vpg-list__i"><b>Расписание по слотам</b><span>Три съёмочных дня разложили на 99 слотов по 15 минут, в расписании было 15 интервью.</span></div><div class="vpg-list__i"><b>Производство в рабочую смену</b><span>Два завода в Егорьевске сняли за один день, линии при этом работали.</span></div><div class="vpg-list__i"><b>Люди по именам</b><span>В финале 48 сотрудников названы в кадре по имени.</span></div><div class="vpg-list__i"><b>Директора в кадре</b><span>18 тезисов сказали на камеру 17 директоров компании.</span></div></div></div></section><section class="vpg-sec"><div class="vpg__in"><h2 class="vpg-sec__h">Стоимость и отзыв</h2><style id="hm-cost-css">
-/* приёмы те же, что в секциях главной и услуг: тег с квадратом-маркером,
-   радиус 24 с мягкой тенью, кавычка и кружок с инициалами в отзыве.
-   Цвета ссылок помечены important: у тильдовских страниц #allrecords a
-   красит их фирменным коралловым и перебивает классы */
-.hm-cost{--hmcost-a:#673A7E;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,40px);align-items:start;margin:0 0 8px}
-.hm-cost--solo{grid-template-columns:minmax(0,1fr)}
-.hm-cost--solo .hm-cost__price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(24px,4vw,56px);align-items:start}
-.hm-cost--solo .hm-cost__k{grid-column:1/-1}
-.hm-cost--solo .hm-cost__f{margin:0}
-.hm-cost__price{border:1.5px solid #ECEEF2;border-radius:24px;padding:clamp(22px,2.6vw,30px);
- background:#fff;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
-.hm-cost__k{margin:0 0 16px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
- color:var(--hmcost-a);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.hm-cost__k::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--hmcost-a);flex:none}
-.hm-cost__k a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor}
-.hm-cost__row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;padding:14px 0;border-top:1px solid #ECEEF2}
-.hm-cost__row:first-of-type{border-top:0;padding-top:0}
-.hm-cost__what{font-size:15px;font-weight:600;color:#14171C;line-height:1.35}
-.hm-cost__v{font-size:clamp(24px,2.8vw,32px);font-weight:900;letter-spacing:-.02em;color:var(--hmcost-a);white-space:nowrap}
-.hm-cost__v small{font-size:.5em;font-weight:800;margin-right:4px;color:#5A616A}
-.hm-cost__f{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:9px}
-.hm-cost__f li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.55;color:#5A616A}
-.hm-cost__f li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--hmcost-a)}
-.hm-cost__rev{display:grid;gap:16px;align-content:start}
-.hm-cost__rk{margin:0;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5A616A;
- display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.hm-cost__rk::before{content:"";width:11px;height:11px;border-radius:3px;background:#5A616A;flex:none}
-.hm-cost__rk a{color:var(--hmcost-a)!important;text-decoration:none;border-bottom:1px solid currentColor;font-weight:800}
-.hm-cost__q{margin:0;position:relative;background:#fff;border:1.5px solid #ECEEF2;border-radius:24px;
- padding:22px 24px;box-shadow:0 14px 30px -22px rgba(20,23,28,.5)}
-.hm-cost__q::before{content:"“";display:block;font:900 52px/.55 'Montserrat',Arial,sans-serif;
- color:var(--hmcost-a);opacity:.18;margin-bottom:10px}
-.hm-cost__q blockquote{margin:0 0 14px;font-size:clamp(15px,1.4vw,16.5px);line-height:1.6;color:#14171C}
-.hm-cost__q figcaption{font-size:13.5px;line-height:1.45;color:#5A616A}
-.hm-cost__q figcaption b{display:block;color:#14171C;font-size:14.5px}
-.hm-cost .hm-cost__q a{color:var(--hmcost-a)!important;font-weight:800;text-decoration:none;white-space:nowrap;
- border-bottom:1px solid currentColor}
-@media(max-width:860px){.hm-cost{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__price{grid-template-columns:minmax(0,1fr)}.hm-cost--solo .hm-cost__f{margin:16px 0 0}}
-</style><div class="hm-cost" style="--hmcost-a:#CF6F19" data-hmc="film"><div class="hm-cost__price"><p class="hm-cost__k">Стоимость <a href="/price/">все цены&nbsp;→</a></p><div class="hm-cost__row"><span class="hm-cost__what">Корпоративный фильм</span><span class="hm-cost__v"><small>от</small>150 000 ₽</span></div><ul class="hm-cost__f"><li>Цена зависит от хронометража, числа съёмочных дней, графики и прав на музыку.</li><li>Экспресс-формат снимаем за неделю, полноценный ролик или фильм занимает 2–3 недели.</li><li>Снимаем по всей России и за рубежом: съёмочная группа, техника и операторы свои.</li></ul></div><div class="hm-cost__rev"><p class="hm-cost__rk">Из благодарственных писем <a href="/reviews/">все письма&nbsp;→</a></p><figure class="hm-cost__q"><blockquote>«…за создание корпоративного видео ролика высокого качества, который был выполнен с высоким уровнем профессионализма в сжатые сроки. Результат оправдал и превзошёл ожидания.»</blockquote><figcaption><b>Saint-Gobain</b>Татьяна Дулуба, руководитель программы «Клиентский опыт» <a href="/video/saintgobain/cx/">Кейс&nbsp;→</a></figcaption></figure></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Корпоративный фильм о компании под ключ","serviceType":"Корпоративный фильм","url":"https://hand-marketing.ru/videoproduction/korporativnyy-film/","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"},"offers":[{"@type":"Offer","name":"Корпоративный фильм","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":150000,"priceCurrency":"RUB"}}]}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Видеопродакшн","item":"https://hand-marketing.ru/videoproduction/"},{"@type":"ListItem","position":3,"name":"Корпоративный фильм","item":"https://hand-marketing.ru/videoproduction/korporativnyy-film/"}]}</script></div></section><section class="vpg-sec vpg-sec_alt"><div class="vpg__in"><h2 class="vpg-sec__h">Вопросы</h2><div class="vpg-faq"><details class="vpg-faq__i"><summary>Сколько стоит корпоративный фильм?</summary><p>От 150 000 ₽. Итог зависит от хронометража, числа съёмочных дней и графики. Смету в двух вариантах готовим бесплатно после брифа.</p></details><details class="vpg-faq__i"><summary>Сколько времени занимает производство фильма?</summary><p>Экспресс-формат снимаем за неделю, полноценный фильм занимает 2–3 недели от брифа до мастера.</p></details><details class="vpg-faq__i"><summary>Кто пишет сценарий?</summary><p>Мы. После брифа предлагаем сюжет и структуру, согласуем до съёмок, чтобы на площадке не переделывать.</p></details><details class="vpg-faq__i"><summary>Снимаете ли вы в других городах?</summary><p>Да. Снимаем по всей России и за рубежом, география значения не имеет.</p></details><details class="vpg-faq__i"><summary>Что получим на выходе?</summary><p>Мастер-файл фильма, короткую версию и нарезки под площадки: стенд, зал, сайт и соцсети.</p></details><details class="vpg-faq__i"><summary>Чем имиджевый ролик отличается от корпоративного фильма?</summary><p>Имиджевый ролик короткий и рассказывает о бренде или продукте. Корпоративный подробно показывает компанию: процессы, объекты и людей, поэтому он длиннее.</p></details><details class="vpg-faq__i"><summary>Нужно ли останавливать производство на время съёмки?</summary><p>Нет. Снимаем в рабочую смену по расписанию. Так снимали заводы Saint-Gobain и грузовые дворы ЦМ РЖД.</p></details><details class="vpg-faq__i"><summary>Сотрудники не умеют говорить на камеру. Что делать?</summary><p>Уметь заранее не нужно. Интервью снимаем короткими слотами, а в монтаже оставляем живую речь. На съёмках Saint-Gobain на камеру говорили 17 директоров.</p></details></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит корпоративный фильм?","acceptedAnswer":{"@type":"Answer","text":"От 150 000 ₽. Итог зависит от хронометража, числа съёмочных дней и графики. Смету в двух вариантах готовим бесплатно после брифа."}},{"@type":"Question","name":"Сколько времени занимает производство фильма?","acceptedAnswer":{"@type":"Answer","text":"Экспресс-формат снимаем за неделю, полноценный фильм занимает 2–3 недели от брифа до мастера."}},{"@type":"Question","name":"Кто пишет сценарий?","acceptedAnswer":{"@type":"Answer","text":"Мы. После брифа предлагаем сюжет и структуру, согласуем до съёмок, чтобы на площадке не переделывать."}},{"@type":"Question","name":"Снимаете ли вы в других городах?","acceptedAnswer":{"@type":"Answer","text":"Да. Снимаем по всей России и за рубежом, география значения не имеет."}},{"@type":"Question","name":"Что получим на выходе?","acceptedAnswer":{"@type":"Answer","text":"Мастер-файл фильма, короткую версию и нарезки под площадки: стенд, зал, сайт и соцсети."}},{"@type":"Question","name":"Чем имиджевый ролик отличается от корпоративного фильма?","acceptedAnswer":{"@type":"Answer","text":"Имиджевый ролик короткий и рассказывает о бренде или продукте. Корпоративный подробно показывает компанию: процессы, объекты и людей, поэтому он длиннее."}},{"@type":"Question","name":"Нужно ли останавливать производство на время съёмки?","acceptedAnswer":{"@type":"Answer","text":"Нет. Снимаем в рабочую смену по расписанию. Так снимали заводы Saint-Gobain и грузовые дворы ЦМ РЖД."}},{"@type":"Question","name":"Сотрудники не умеют говорить на камеру. Что делать?","acceptedAnswer":{"@type":"Answer","text":"Уметь заранее не нужно. Интервью снимаем короткими слотами, а в монтаже оставляем живую речь. На съёмках Saint-Gobain на камеру говорили 17 директоров."}}]}</script></div></section></main><script>(function(){
-var v=document.querySelector('.vpg-hero__v');if(!v)return;
+</style><style id="hm-ds-css">
+.hd{--a:#730FBF;--ink:#111;--mut:#4C4C4C;--soft:#8A8A8A;--line:#E6E6E6;--ghost:#ECECEC;--tint:#F6F4F9;
+ --y:#FFF700;--amber:#FCB724;--dark:#14171C;--violet:#730FBF;--blue:#4A9FFF;
+ font-family:'Montserrat',Arial,sans-serif;font-weight:500;color:#222;background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.hd *,.hd *::before,.hd *::after{box-sizing:border-box}
+.hd img{max-width:100%;height:auto}
+.hd a{color:inherit}
+.hd-w{max-width:1180px;margin:0 auto;padding:0 40px;position:relative}
+.hd-crumbs{font-size:13px;color:var(--soft);padding:18px 0 0;margin:0}
+.hd-crumbs a{color:var(--soft);text-decoration:none}
+.hd-crumbs a:hover{color:var(--ink)}
+/* герой */
+.hd-hero{position:relative;text-align:center;padding:26px 0 60px;overflow:hidden}
+.hd-hero__g{margin:0;font-weight:800;font-size:clamp(46px,9vw,128px);line-height:1;color:var(--ghost);letter-spacing:-.02em;white-space:nowrap;user-select:none}
+.hd-hero__g::before{content:attr(data-ghost)}
+.hd-k{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--a)}
+.hd-hero .hd-k{margin:14px 0 12px}
+.hd-hero h1{margin:0 auto;max-width:20ch;font-size:clamp(30px,4vw,52px);font-weight:700;line-height:1.08;color:var(--ink);letter-spacing:-.01em}
+.hd-hero__lede{margin:20px auto 0;max-width:64ch;font-size:17px;line-height:1.65;color:var(--mut)}
+.hd-hero__lede a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+.hd-chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:24px 0 0;padding:0;list-style:none}
+.hd-chips li{border:1.5px solid var(--ink);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink)}
+.hd-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hd-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 30px;border-radius:30px;font:800 15px/1 'Montserrat',Arial,sans-serif;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s}
+.hd-btn:hover{transform:translateY(-2px)}
+.hd .hd-btn--y{background:var(--y);color:#000}
+.hd .hd-btn--d{background:var(--dark);color:#fff}
+.hd .hd-btn--o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.hd-fig{position:absolute;pointer-events:none;user-select:none;height:auto}
+.hd-fig--b{filter:blur(2px);opacity:.9}
+/* баннер кейса */
+.hd .hd-banner{color:#fff}
+.hd-banner{position:relative;display:block;max-width:940px;margin:0 auto;aspect-ratio:940/420;background:var(--dark);overflow:hidden;text-decoration:none;color:#fff}
+.hd-banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.hd-banner:hover>img{transform:scale(1.03)}
+.hd-banner__sh{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,22,.92) 0%,rgba(14,16,22,.7) 45%,rgba(14,16,22,.05) 80%)}
+.hd-banner__in{position:absolute;left:48px;top:50%;transform:translateY(-50%);max-width:480px}
+.hd-banner .hd-k{color:var(--blue)}
+.hd-banner__t{display:block;margin:12px 0 0;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.1}
+.hd-banner__t::after{content:"";display:inline-block;width:64px;height:4px;background:var(--blue);margin-left:14px;vertical-align:middle;border-radius:2px}
+.hd-banner__p{display:block;margin:14px 0 0;font-size:16px;line-height:1.55;color:rgba(255,255,255,.86)}
+.hd-banner .hd-chips{justify-content:flex-start;margin-top:18px}
+.hd-banner .hd-chips li{border-color:rgba(255,255,255,.75);color:#fff}
+/* секции */
+.hd-sec{padding:76px 0;position:relative}
+.hd-sec--alt{background:var(--tint)}
+.hd-sec--top{padding-top:96px}
+.hd-sh{display:flex;align-items:center;gap:28px;margin:0 0 36px}
+.hd-sh h2{margin:0;font-size:clamp(28px,3.4vw,46px);font-weight:700;line-height:1.1;color:var(--ink);letter-spacing:-.01em}
+.hd-sh__row{display:flex;gap:42px;align-items:center;flex:1;justify-content:flex-end}
+.hd-sh__row img{width:22px;height:22px}
+.hd-lead{margin:-18px 0 34px;max-width:70ch;font-size:16px;line-height:1.65;color:var(--mut)}
+.hd-lead a,.hd-txt a,.hd-feat p a,.hd-step p a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+.hd-note{margin:30px 0 0;max-width:80ch;font-size:14.5px;line-height:1.65;color:var(--mut)}
+.hd-note a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+/* круглые обложки кейсов */
+.hd-cases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:44px 28px}
+.hd-cases--3{grid-template-columns:repeat(3,minmax(0,1fr));gap:52px 40px}
+.hd-case{text-decoration:none;color:var(--ink);display:block}
+.hd-case__img{display:block;width:100%;aspect-ratio:477/396;object-fit:contain;transition:transform .3s ease}
+.hd-case__img--ph{object-fit:cover;border-radius:50%;aspect-ratio:1/1;width:82%;margin:0 auto}
+.hd-case:hover .hd-case__img{transform:translateY(-6px)}
+.hd-case b{display:block;margin-top:14px;font-size:16px;font-weight:700;line-height:1.3}
+.hd-case span{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--mut)}
+.hd-case em{display:inline-block;margin-top:10px;font-style:normal;font-size:13px;font-weight:700;border-bottom:2px solid var(--y)}
+/* колонки с 3D-иконкой */
+.hd-feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px 36px}
+.hd-feats--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.hd-feats--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hd-feat>img{width:34px;height:34px;display:block;margin-bottom:14px}
+.hd-feat b{display:block;font-size:17px;font-weight:700;line-height:1.3;color:var(--ink)}
+.hd-feat p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.hd-feat__tag{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--a)}
+/* фото с подписью */
+.hd-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 28px}
+.hd-tiles--4{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 20px}
+.hd-tiles--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hd-tile{margin:0}
+.hd-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.hd-tiles--4 .hd-tile img{aspect-ratio:4/5}
+.hd-tile figcaption{margin-top:14px}
+.hd-tile b{display:block;font-size:17px;font-weight:700;line-height:1.3;color:var(--ink)}
+.hd-tile span{display:block;margin-top:6px;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.hd-tile small{display:block;font-size:13.5px;line-height:1.55;color:var(--mut)}
+/* фиолетовая и тёмная секции */
+.hd-violet,.hd-dark{color:#fff;padding:84px 0;position:relative;overflow:hidden}
+.hd-violet{background:var(--violet)}
+.hd-dark{background:var(--dark)}
+.hd-violet h2,.hd-dark h2{margin:0 0 16px;font-size:clamp(30px,3.6vw,48px);font-weight:700;line-height:1.1;color:#fff}
+.hd-violet .hd-k,.hd-dark .hd-k{color:var(--amber);margin-bottom:12px}
+.hd-dlead{margin:0 0 40px;max-width:64ch;font-size:16px;line-height:1.7;color:rgba(255,255,255,.84)}
+.hd-dlead a{color:#fff;text-decoration:none;border-bottom:2px solid var(--amber)}
+.hd-violet .hd-feat b,.hd-dark .hd-feat b,.hd-violet .hd-tile b,.hd-dark .hd-tile b{color:#fff}
+.hd-violet .hd-feat p,.hd-dark .hd-feat p,.hd-violet .hd-tile span,.hd-dark .hd-tile span,.hd-dark .hd-tile small{color:rgba(255,255,255,.8)}
+.hd-violet .hd-step p a,.hd-dark .hd-step p a,.hd-violet .hd-feat p a,.hd-dark .hd-feat p a{color:#fff;border-bottom-color:var(--amber)}
+.hd-dark .hd-note,.hd-violet .hd-note{color:rgba(255,255,255,.72)}
+.hd-dark .hd-note a,.hd-violet .hd-note a{color:#fff}
+/* цифры */
+.hd-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.hd-nums--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hd-num b{display:block;font-size:clamp(34px,3.4vw,46px);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--a)}
+.hd-num span{display:block;margin-top:10px;font-size:14px;line-height:1.55;color:var(--mut)}
+.hd-violet .hd-num b{color:var(--y)}
+.hd-dark .hd-num b{color:var(--amber)}
+.hd-violet .hd-num span,.hd-dark .hd-num span{color:rgba(255,255,255,.82)}
+.hd-split .hd-num b{font-size:clamp(26px,2.4vw,34px)}
+.hd-h2--gap{margin-bottom:48px!important}
+.hd-nums--c{text-align:center;max-width:960px;margin:44px auto 0}
+.hd-nums--c .hd-num b{font-size:clamp(40px,4.4vw,58px)}
+/* шаги с бледными цифрами */
+.hd-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:30px 26px;counter-reset:hds}
+.hd-steps--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hd-steps--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.hd-step i{display:block;font-style:normal;font-size:64px;font-weight:800;line-height:1;color:var(--ghost)}
+.hd-step b{display:block;margin-top:-18px;font-size:16.5px;font-weight:700;line-height:1.3;color:var(--ink);position:relative}
+.hd-step p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.hd-violet .hd-step i{color:rgba(255,255,255,.16)}
+.hd-dark .hd-step i{color:rgba(255,255,255,.1)}
+.hd-violet .hd-step b,.hd-dark .hd-step b{color:#fff}
+.hd-violet .hd-step p,.hd-dark .hd-step p{color:rgba(255,255,255,.82)}
+/* полосы хронометража */
+.hd-bars{display:grid;gap:30px;max-width:1080px}
+.hd-bar__h{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.hd-bar__h b{font-size:18px;font-weight:700;color:var(--ink)}
+.hd-bar__h strong{font-size:28px;font-weight:800;color:var(--a);white-space:nowrap}
+.hd-bar__t{height:14px;margin:10px 0;background:#F1ECE6}
+.hd-bar__t span{display:block;height:100%;background:var(--a)}
+.hd-bar p{margin:0;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.hd-bar p a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+/* строки «задача / ответ» */
+.hd-rows{border-top:1.5px solid var(--ink);max-width:1080px}
+.hd-row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:32px;padding:22px 0;border-bottom:1px solid var(--line)}
+.hd-row b{font-size:18px;font-weight:700;line-height:1.35;color:var(--a)}
+.hd-row span{font-size:15px;line-height:1.65;color:#222}
+.hd-row span a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+/* таблица «кто за что» */
+.hd-duty{border-top:1.5px solid var(--ink);max-width:920px}
+.hd-duty>div{display:grid;grid-template-columns:minmax(0,1fr) 150px 150px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0;font-size:15px}
+.hd-duty i{font-style:normal;text-align:center;font-weight:800;color:var(--a);font-size:18px}
+.hd-duty .hd-duty__h{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.hd-duty .hd-duty__h i{font-size:12px;color:var(--mut)}
+.hd-duty small{display:block;margin-top:3px;font-size:13px;color:var(--mut)}
+/* стоимость и отзывы */
+.hd-cost{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.hd-cost--solo{grid-template-columns:minmax(0,1fr)}
+.hd-cost__p{border-top:1.5px solid var(--ink)}
+.hd-cost__row{padding:24px 0;border-bottom:1px solid var(--line)}
+.hd-cost__row small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--a)}
+.hd-cost__row b{display:block;margin-top:10px;font-size:clamp(28px,3vw,36px);font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.hd-cost__f{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.hd-cost__f li{position:relative;padding-left:22px;font-size:14.5px;line-height:1.6;color:var(--mut)}
+.hd-cost__f li::before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;border-radius:50%;background:var(--y);box-shadow:0 0 0 1.5px var(--ink)}
+.hd-cost .hd-btn{margin-top:24px}
+.hd-cost__r{display:grid;gap:18px}
+.hd-q{margin:0;background:var(--tint);padding:34px 38px 30px;position:relative}
+.hd-sec--alt .hd-q{background:#fff}
+.hd-q::before{content:"«";display:block;font-size:84px;line-height:.62;font-weight:800;color:var(--violet)}
+.hd-q blockquote{margin:12px 0 0;font-size:18px;line-height:1.55;font-weight:500;color:var(--ink)}
+.hd-q figcaption{margin-top:18px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;font-size:13.5px;line-height:1.5;color:var(--mut)}
+.hd-q figcaption b{display:block;font-size:15px;color:var(--ink)}
+.hd-q figcaption a,.hd-cost__all{font-size:13.5px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--y);color:var(--ink);white-space:nowrap}
+.hd-cost__all{display:inline-block;margin-top:4px;justify-self:start}
+/* вопросы */
+.hd-faq{max-width:880px;border-top:1.5px solid var(--ink)}
+.hd-faq details{border-bottom:1px solid var(--line)}
+.hd-faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:17px;font-weight:700;color:var(--ink);cursor:pointer}
+.hd-faq summary::-webkit-details-marker{display:none}
+.hd-faq summary::after{content:"+";flex:0 0 36px;height:36px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;line-height:1;color:#000}
+.hd-faq details[open] summary::after{content:"−"}
+.hd-faq p{margin:0 0 22px;max-width:72ch;font-size:15px;line-height:1.7;color:var(--mut)}
+.hd-faq p a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--y)}
+/* лента по шагам (горизонтальная) */
+.hd-strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);border-top:2px solid var(--amber)}
+.hd-strip>div{padding:24px 22px 0 0}
+.hd-strip__n{display:block;font-size:52px;font-weight:800;line-height:1;color:var(--amber)}
+.hd-strip__u{display:block;margin-top:4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.6)}
+.hd-strip b{display:block;margin-top:18px;font-size:16px;font-weight:700;color:#fff}
+.hd-strip p{margin:8px 0 0;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.78)}
+.hd-strip img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin-top:16px}
+/* ступени форматов */
+.hd-ladder{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:16px;align-items:end}
+.hd-ladder>div{background:#fff;border-top:4px solid var(--a);padding:26px 24px;display:flex;flex-direction:column}
+.hd-ladder i{font-style:normal;font-size:48px;font-weight:800;line-height:1;color:var(--ghost)}
+.hd-ladder b{margin-top:14px;font-size:19px;font-weight:700;color:var(--ink)}
+.hd-ladder p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--mut);flex:1}
+.hd-ladder small{margin-top:16px;font-size:13px;font-weight:700;color:var(--a)}
+.hd-ladder>div:last-child{background:var(--a);color:#fff}
+.hd-ladder>div:last-child i{color:rgba(255,255,255,.35)}
+.hd-ladder>div:last-child b{color:#fff}
+.hd-ladder>div:last-child p{color:rgba(255,255,255,.86)}
+.hd-ladder>div:last-child small{color:var(--y)}
+/* две колонки и фотомозаика */
+.hd-split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:52px;align-items:start}
+.hd-split--r{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.hd-split--c{align-items:center}
+.hd-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hd-mosaic figure{margin:0}
+.hd-mosaic img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.hd-mosaic figure:first-child{grid-column:1/-1}
+.hd-mosaic figure:first-child img{aspect-ratio:2/1}
+.hd-mosaic figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:var(--mut)}
+.hd-violet .hd-mosaic figcaption,.hd-dark .hd-mosaic figcaption{color:rgba(255,255,255,.72)}
+.hd-steps--1{grid-template-columns:minmax(0,1fr);gap:24px}
+/* внутренние ссылки-метки */
+.hd-links{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px 24px;align-items:center}
+.hd-links>b{font-size:14px;color:var(--ink)}
+.hd-links ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.hd-links a{display:inline-block;border:1.5px solid var(--ink);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);transition:background .15s}
+.hd-links a:hover{background:var(--y)}
+@media(max-width:980px){
+ .hd-cases,.hd-cases--3,.hd-feats,.hd-feats--4,.hd-tiles,.hd-tiles--4,.hd-nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hd-steps,.hd-steps--3,.hd-steps--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hd-cost{grid-template-columns:minmax(0,1fr);gap:36px}
+ .hd-split,.hd-split--r{grid-template-columns:minmax(0,1fr);gap:36px}
+ .hd-ladder{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hd-ladder>div{min-height:0!important}
+ .hd-strip{grid-auto-flow:row;grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}
+ .hd-sh__row{gap:24px}
+}
+@media(max-width:860px){
+ .hd-banner{aspect-ratio:auto;min-height:460px}
+ .hd-banner__in{left:22px;right:22px;top:auto;bottom:26px;transform:none;max-width:none}
+ .hd-banner__sh{background:linear-gradient(0deg,rgba(14,16,22,.95) 0%,rgba(14,16,22,.62) 58%,rgba(14,16,22,.08) 100%)}
+ .hd-row{grid-template-columns:minmax(0,1fr);gap:8px}
+}
+@media(max-width:640px){
+ .hd-w{padding:0 18px}
+ .hd-hero{padding:18px 0 44px}
+ .hd-hero__lede{font-size:16px}
+ .hd-sec{padding:56px 0}
+ .hd-sec--top{padding-top:64px}
+ .hd-violet,.hd-dark{padding:60px 0}
+ .hd-sh{margin-bottom:28px}
+ .hd-sh__row{display:none}
+ .hd-lead{margin:-12px 0 28px}
+ .hd-cases,.hd-cases--3{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 14px}
+ .hd-case b{font-size:14.5px}
+ .hd-case span{font-size:13px}
+ .hd-feats,.hd-feats--4,.hd-feats--2,.hd-tiles,.hd-tiles--2,.hd-steps,.hd-steps--3,.hd-steps--4{grid-template-columns:minmax(0,1fr)}
+ .hd-tiles--4{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+ .hd-nums,.hd-nums--3{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+ .hd-nums--c{grid-template-columns:minmax(0,1fr)}
+ .hd-ladder{grid-template-columns:minmax(0,1fr)}
+ .hd-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hd-strip__n{font-size:42px}
+ .hd-duty>div{grid-template-columns:minmax(0,1fr) 56px 88px;font-size:14px}
+ .hd-duty .hd-duty__h{font-size:10px;letter-spacing:.02em}
+ .hd-duty .hd-duty__h i{font-size:10px}
+ .hd-violet>.hd-fig,.hd-dark>.hd-fig{top:14px!important;right:14px!important;width:60px!important;opacity:.55}
+ .hd-q{padding:28px 22px 24px}
+ .hd-q blockquote{font-size:16.5px}
+ .hd-faq summary{font-size:15.5px;padding:18px 0}
+ .hd-links{grid-template-columns:minmax(0,1fr);gap:10px}
+ .hd-links>b{margin-top:8px}
+ .hd-fig{max-width:22vw}
+ .hd-hero .hd-fig--b{top:34px!important;max-width:16vw}
+ .hd-fig--hide{display:none}
+}
+@media(max-width:400px){
+ .hd-cases,.hd-cases--3{grid-template-columns:minmax(0,1fr)}
+ .hd-case__img{max-width:300px;margin:0 auto}
+}
+@media(prefers-reduced-motion:reduce){.hd-btn,.hd-banner>img,.hd-case__img{transition:none}}
+</style><style id="vpg-css">
+.hd-banner__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.hd-banner__v.is-on{opacity:1}
+.vp-shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,14vw,200px);grid-auto-flow:dense;gap:14px}
+.vp-shots figure{margin:0;position:relative;overflow:hidden;background:#000}
+.vp-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vp-shots .is-b{grid-column:span 2;grid-row:span 2}
+.vp-shots .is-w{grid-column:span 2}
+.vp-shots figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(0deg,rgba(10,12,16,.9),rgba(10,12,16,0));font-size:13px;line-height:1.45;color:#fff}
+@media(max-width:640px){.vp-shots{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}.vp-shots figcaption{font-size:12px;padding:24px 10px 9px}}
+@media(prefers-reduced-motion:reduce){.hd-banner__v{display:none}}
+</style><!-- Yandex.Metrika counter --><script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(71125393,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" style="position:absolute;left:-9999px" alt=""></div></noscript></head><body><div class="hm-chrome hm-hdr" role="banner"><nav class="hm-hdr__nav l"><a href="/about/">О нас</a><a href="/service/">Услуги</a><a href="/project/">Проекты</a></nav><a class="hm-hdr__logo" href="/" aria-label="Hand Marketing"><img src="/static/cdn/as3937-3563-4839-b138-383963656435/pizdapattrtn-63.svg" alt="Hand Marketing"></a><nav class="hm-hdr__nav r"><a href="/clients/">Клиенты</a><a href="/contacts/">Контакты</a><span class="hm-hdr__contacts"><a class="ph" href="tel:+74955807537">+7 495 580 75 37</a><a class="em" href="mailto:info@hand-marketing.ru">info@hand-marketing.ru</a></span></nav></div><main class="hd" style="--a:#CF6F19"><div class="hd-w"><nav class="hd-crumbs" aria-label="Навигация по разделам"><a href="/">Главная</a> · <a href="/videoproduction/">Видеопродакшн</a> · Корпоративный фильм</nav></div><section class="hd-hero"><img class="hd-fig hd-fig--b" src="/images/lib/as3633-3432-4235-b433-346566646565/__-27.png" alt="" aria-hidden="true" style="width:104px;left:6%;top:120px" width="240" height="240"><img class="hd-fig hd-fig--hide" src="/images/ds/fig-09.svg" alt="" aria-hidden="true" style="width:34px;left:22%;top:26px" width="34" height="34"><img class="hd-fig hd-fig--b" src="/images/lib/as3436-6364-4661-a130-303235663166/__-25.png" alt="" aria-hidden="true" style="width:118px;right:6%;top:150px" width="240" height="240"><div class="hd-w"><p class="hd-hero__g" data-ghost="Film" aria-hidden="true"></p><p class="hd-k">Video Production · Фильм о компании</p><h1>Корпоративный фильм о компании</h1><p class="hd-hero__lede">Фильм к десятилетию дирекции РЖД, фильм о клиентском опыте Saint-Gobain, фильм об энергоснабжении чемпионата мира по футболу. Снимаем то, что компания хочет показывать партнёрам, сотрудникам и на тендере.</p><ul class="hd-chips"><li>от 150 000 ₽</li><li>2–3 недели</li><li>съёмка по России и за рубежом</li></ul><div class="hd-acts"><a class="hd-btn hd-btn--y" href="#lead">Обсудить проект</a><a class="hd-btn hd-btn--o" href="/videoproduction/">Все видеокейсы</a></div></div></section><div class="hd-w"><div class="hd-banner"><img src="/images/vpg/film-hero.jpg" alt="Кадр корпоративного фильма: грузовой двор Центральной дирекции РЖД" width="1600" height="900" fetchpriority="high" decoding="async"><video class="hd-banner__v" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="/media/film-hero-loop.mp4" type="video/mp4"></video><span class="hd-banner__sh" aria-hidden="true"></span><span class="hd-banner__in"><span class="hd-k">Из наших фильмов</span><span class="hd-banner__t">Компания, производство и люди в одном рассказе</span><span class="hd-banner__p">Фильм к десятилетию ЦМ РЖД, фильм о клиентском опыте Saint-Gobain и фильм об энергоснабжении чемпионата мира по футболу.</span><ul class="hd-chips"><li>3:54</li><li>10:07</li><li>11:39</li></ul></span></div></div><section class="hd-sec hd-sec--top"><div class="hd-w"><div class="hd-sh"><h2>Сколько длится корпоративный фильм</h2><div class="hd-sh__row" aria-hidden="true"><img src="/images/ds/fig-01.svg" alt="" width="22" height="22"><img src="/images/ds/fig-03.svg" alt="" width="22" height="22"></div></div><p class="hd-lead">Хронометраж наших фильмов: полоса пропорциональна длительности.</p><div class="hd-bars"><div class="hd-bar"><div class="hd-bar__h"><b><a href="/video/powertechnologies/" style="text-decoration:none">Power Technologies, ЧМ-2018</a></b><strong>11:39</strong></div><div class="hd-bar__t" aria-hidden="true"><span style="width:100.0%"></span></div><p>11 городов и 12 стадионов, восемь интервью. Есть короткая версия на 4:27 для показа на стенде и встречах.</p></div><div class="hd-bar"><div class="hd-bar__h"><b><a href="/video/saintgobain/cx/" style="text-decoration:none">Saint-Gobain, клиентский опыт</a></b><strong>10:07</strong></div><div class="hd-bar__t" aria-hidden="true"><span style="width:86.8%"></span></div><p>Две части по 6:57 и 3:11: путь заказа от завода до объекта и прямая речь команды.</p></div><div class="hd-bar"><div class="hd-bar__h"><b><a href="/video/rgd/history/" style="text-decoration:none">ЦМ РЖД, фильм к десятилетию</a></b><strong>3:54</strong></div><div class="hd-bar__t" aria-hidden="true"><span style="width:33.5%"></span></div><p>117 планов, семь услуг дирекции и съёмка в нескольких городах.</p></div></div></div></section><section class="hd-sec hd-sec--alt"><div class="hd-w"><div class="hd-sh"><h2>Кейсы корпоративных фильмов</h2></div><div class="hd-cases"><a class="hd-case" href="/video/rgd/history/"><img class="hd-case__img" src="/images/lib/as3539-3461-4137-b062-323338303166/__-49.png" alt="" width="477" height="396" loading="lazy"><b>ЦМ РЖД, 3:54</b><span>Фильм к десятилетию Центральной дирекции: 117 планов, грузовые дворы и семь услуг в одном рассказе.</span><em>Смотреть кейс</em></a><a class="hd-case" href="/video/saintgobain/cx/"><img class="hd-case__img" src="/images/lib/custom-sgcx/cover-main.png" alt="" width="477" height="396" loading="lazy"><b>Saint-Gobain, 10 минут</b><span>Фильм о клиентском опыте в двух частях: путь заказа, производство и прямая речь сотрудников компании.</span><em>Смотреть кейс</em></a><a class="hd-case" href="/video/powertechnologies/"><img class="hd-case__img" src="/images/lib/as3161-3132-4333-b964-323537373462/__-30.png" alt="" width="477" height="396" loading="lazy"><b>Power Technologies, ЧМ-2018</b><span>Фильм о работе на чемпионате мира: 11 городов, 12 стадионов и восемь интервью. Полная версия 11:39 и короткая на 4:27.</span><em>Смотреть кейс</em></a><a class="hd-case" href="/isotec/"><img class="hd-case__img" src="/images/lib/stor3039-3238-4836-b039-616562373464/11635b224858f8c0034b3ee15dc4687f.png" alt="" width="477" height="396" loading="lazy"><b>Изотек, бренд-ролик</b><span>История компании от 2012 года до сегодняшнего дня, две версии под разные площадки.</span><em>Смотреть кейс</em></a></div></div></section><section class="hd-dark"><img class="hd-fig hd-fig--b" src="/images/lib/as3633-3432-4235-b433-346566646565/__-27.png" alt="" aria-hidden="true" style="width:118px;right:5%;top:40px" width="240" height="240"><div class="hd-w"><p class="hd-k">Со съёмок</p><h2>Кадры из корпоративных фильмов</h2><p class="hd-dlead">Производство, объекты и люди компании: снимаем в рабочую смену, без перекрытия площадки и без постановочных сцен.</p><div class="vp-shots"><figure class="is-b"><img src="/images/vpg/film/rzd-yard.jpg" alt="Грузовой двор ЦМ РЖД снят с воздуха" loading="lazy" width="1600" height="900"><figcaption>Грузовой двор ЦМ РЖД снят с воздуха</figcaption></figure><figure><img src="/images/vpg/film/rzd-crane.jpg" alt="Портальный кран в работе, смену не останавливали" loading="lazy" width="1600" height="900"><figcaption>Портальный кран в работе, смену не останавливали</figcaption></figure><figure><img src="/images/vpg/film/rzd-air.jpg" alt="Съёмка шла в нескольких городах сети дирекции" loading="lazy" width="1600" height="900"><figcaption>Съёмка шла в нескольких городах сети дирекции</figcaption></figure><figure><img src="/images/vpg/film/sg-wall.jpg" alt="Saint-Gobain: 48 сотрудников сняты в одном свете" loading="lazy" width="1600" height="900"><figcaption>Saint-Gobain: 48 сотрудников сняты в одном свете</figcaption></figure><figure><img src="/images/vpg/film/sg-line.jpg" alt="Линия упаковки: производство в рабочую смену" loading="lazy" width="1600" height="900"><figcaption>Линия упаковки: производство в рабочую смену</figcaption></figure><figure><img src="/images/vpg/film/pt-gallery.jpg" alt="Международный вещательный центр чемпионата мира" loading="lazy" width="1600" height="900"><figcaption>Международный вещательный центр чемпионата мира</figcaption></figure><figure><img src="/images/vpg/film/pt-numbers.jpg" alt="Цифры проекта: 960 км кабеля, 75 МВт, 300 человек" loading="lazy" width="1600" height="900"><figcaption>Цифры проекта: 960 км кабеля, 75 МВт, 300 человек</figcaption></figure><figure class="is-w"><img src="/images/vpg/film/isotec-plant.jpg" alt="Изотек: цех и склад в бренд-ролике компании" loading="lazy" width="1600" height="900"><figcaption>Изотек: цех и склад в бренд-ролике компании</figcaption></figure></div></div></section><section class="hd-sec"><div class="hd-w"><div class="hd-sh"><h2>Какие фильмы снимаем</h2><div class="hd-sh__row" aria-hidden="true"><img src="/images/ds/fig-01.svg" alt="" width="22" height="22"><img src="/images/ds/fig-03.svg" alt="" width="22" height="22"><img src="/images/ds/fig-05.svg" alt="" width="22" height="22"></div></div><div class="hd-feats"><div class="hd-feat"><img src="/images/ds/fig-01.svg" alt="" aria-hidden="true" width="34" height="34"><b>К юбилею и итогам года</b><p>История компании и результаты в одном рассказе.</p></div><div class="hd-feat"><img src="/images/ds/fig-03.svg" alt="" aria-hidden="true" width="34" height="34"><b>О производстве</b><p>Как устроен процесс: цеха, техника, люди на площадке.</p></div><div class="hd-feat"><img src="/images/ds/fig-05.svg" alt="" aria-hidden="true" width="34" height="34"><b>О клиентском опыте</b><p>Путь заказа глазами клиента и сотрудников.</p></div><div class="hd-feat"><img src="/images/ds/fig-07.svg" alt="" aria-hidden="true" width="34" height="34"><b>HR-фильм</b><p>Для найма и адаптации: кто работает в компании и как.</p></div><div class="hd-feat"><img src="/images/ds/fig-09.svg" alt="" aria-hidden="true" width="34" height="34"><b>Для выставки и стенда</b><p>Версия под экран: читается без звука, идёт петлёй.</p></div><div class="hd-feat"><img src="/images/ds/fig-11.svg" alt="" aria-hidden="true" width="34" height="34"><b>Для тендера и инвесторов</b><p>Сжатая версия с цифрами и объектами.</p></div></div></div></section><section class="hd-sec hd-sec--alt"><div class="hd-w"><div class="hd-sh"><h2>Имиджевый ролик и корпоративный фильм: в чём разница</h2></div><p class="hd-lead">Форматы похожи, но задачи у них разные. Из одной съёмки обычно собираем несколько роликов: полную версию, короткую и нарезки.</p><div class="hd-rows"><div class="hd-row"><b>Имиджевый ролик</b><span>Короткий рассказ о бренде или продукте без длинных интервью. Для <a href="/portfolio/ceramicanova/">CeramicaNova</a> мы сняли 17 таких роликов, по одному на коллекцию санфарфора.</span></div><div class="hd-row"><b>Бренд-ролик</b><span>История компании по годам. <a href="/isotec/">Бренд-ролик «Изотек»</a> идёт от 2012 года до сегодняшнего дня.</span></div><div class="hd-row"><b>Корпоративный фильм</b><span>Подробный рассказ о компании для партнёров, сотрудников и тендеров: процессы, объекты, люди. <a href="/video/rgd/history/">Фильм к десятилетию ЦМ РЖД</a> длится 3:54, в нём 117 планов и семь услуг дирекции.</span></div><div class="hd-row"><b>Фильм о проекте</b><span>Рассказ об одной большой работе. <a href="/video/powertechnologies/">Power Technologies</a> обеспечивала электричеством чемпионат мира по футболу 2018 года: в нём 11 городов, 12 стадионов и восемь интервью.</span></div></div></div></section><section class="hd-violet"><img class="hd-fig hd-fig--b" src="/images/lib/as6563-6234-4536-b165-656236646638/__-26.png" alt="" aria-hidden="true" style="width:118px;right:5%;top:40px" width="240" height="240"><div class="hd-w"><h2>Как снимаем людей компании</h2><p class="hd-dlead">На примере <a href="/video/saintgobain/cx/">фильма о клиентском опыте Saint-Gobain</a>.</p><div class="hd-steps hd-steps--4"><div class="hd-step"><i aria-hidden="true">01</i><b>Расписание по слотам</b><p>Три съёмочных дня разложили на 99 слотов по 15 минут, в расписании было 15 интервью.</p></div><div class="hd-step"><i aria-hidden="true">02</i><b>Производство в рабочую смену</b><p>Два завода в Егорьевске сняли за один день, линии при этом работали.</p></div><div class="hd-step"><i aria-hidden="true">03</i><b>Люди по именам</b><p>В финале 48 сотрудников названы в кадре по имени.</p></div><div class="hd-step"><i aria-hidden="true">04</i><b>Директора в кадре</b><p>18 тезисов сказали на камеру 17 директоров компании.</p></div></div></div></section><section class="hd-sec"><div class="hd-w"><div class="hd-sh"><h2>Как проходит работа</h2></div><div class="hd-steps hd-steps--3"><div class="hd-step"><i aria-hidden="true">01</i><b>Бриф и сценарий</b><p>Цели, аудитория, герои. Сценарий и смета до съёмок.</p></div><div class="hd-step"><i aria-hidden="true">02</i><b>Подготовка</b><p>Локации, согласования на объектах, график смен.</p></div><div class="hd-step"><i aria-hidden="true">03</i><b>Съёмка</b><p>Своя группа и техника, интервью и съёмка процессов.</p></div><div class="hd-step"><i aria-hidden="true">04</i><b>Постпродакшн</b><p>Монтаж, цвет, графика, звук. Две итерации правок включены.</p></div><div class="hd-step"><i aria-hidden="true">05</i><b>Версии</b><p>Полный фильм, короткая версия, нарезка для соцсетей.</p></div><div class="hd-step"><i aria-hidden="true">06</i><b>Где живёт фильм</b><p>Экран на стенде, зал мероприятия, сайт, внутренние экраны.</p></div></div></div></section><section class="hd-sec hd-sec--alt"><div class="hd-w"><div class="hd-sh"><h2>Стоимость и отзыв</h2></div><div class="hd-cost" data-hmc="film"><div class="hd-cost__p"><div class="hd-cost__row"><small>Корпоративный фильм</small><b>от 150 000 ₽</b></div><ul class="hd-cost__f"><li>Цена зависит от хронометража, числа съёмочных дней, графики и прав на музыку.</li><li>Экспресс-формат снимаем за неделю, полноценный ролик или фильм занимает 2–3 недели.</li><li>Снимаем по всей России и за рубежом: съёмочная группа, техника и операторы свои.</li></ul><a class="hd-btn hd-btn--d" href="/price/">Все цены</a></div><div class="hd-cost__r"><figure class="hd-q"><blockquote>…за создание корпоративного видео ролика высокого качества, который был выполнен с высоким уровнем профессионализма в сжатые сроки. Результат оправдал и превзошёл ожидания.</blockquote><figcaption><span><b>Saint-Gobain</b>Татьяна Дулуба, руководитель программы «Клиентский опыт»</span><a href="/video/saintgobain/cx/">Кейс</a></figcaption></figure><a class="hd-cost__all" href="/reviews/">Все благодарственные письма</a></div></div><script type="application/ld+json" data-hmc="service">{"@context":"https://schema.org","@type":"Service","name":"Корпоративный фильм о компании под ключ","serviceType":"Корпоративный фильм","url":"https://hand-marketing.ru/videoproduction/korporativnyy-film/","areaServed":{"@type":"Country","name":"Россия"},"provider":{"@type":"Organization","name":"Hand Marketing","url":"https://hand-marketing.ru/","telephone":"+7 495 580 75 37","email":"info@hand-marketing.ru"},"offers":[{"@type":"Offer","name":"Корпоративный фильм","priceCurrency":"RUB","priceSpecification":{"@type":"PriceSpecification","minPrice":150000,"priceCurrency":"RUB"}}]}</script><script type="application/ld+json" data-hmc="crumbs">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://hand-marketing.ru/"},{"@type":"ListItem","position":2,"name":"Видеопродакшн","item":"https://hand-marketing.ru/videoproduction/"},{"@type":"ListItem","position":3,"name":"Корпоративный фильм","item":"https://hand-marketing.ru/videoproduction/korporativnyy-film/"}]}</script></div></section><section class="hd-sec"><div class="hd-w"><div class="hd-sh"><h2>Вопросы</h2></div><div class="hd-faq"><details><summary>Сколько стоит корпоративный фильм?</summary><p>От 150 000 ₽. Итог зависит от хронометража, числа съёмочных дней и графики. Смету в двух вариантах готовим бесплатно после брифа.</p></details><details><summary>Сколько времени занимает производство фильма?</summary><p>Экспресс-формат снимаем за неделю, полноценный фильм занимает 2–3 недели от брифа до мастера.</p></details><details><summary>Кто пишет сценарий?</summary><p>Мы. После брифа предлагаем сюжет и структуру, согласуем до съёмок, чтобы на площадке не переделывать.</p></details><details><summary>Снимаете ли вы в других городах?</summary><p>Да. Снимаем по всей России и за рубежом, география значения не имеет.</p></details><details><summary>Что получим на выходе?</summary><p>Мастер-файл фильма, короткую версию и нарезки под площадки: стенд, зал, сайт и соцсети.</p></details><details><summary>Чем имиджевый ролик отличается от корпоративного фильма?</summary><p>Имиджевый ролик короткий и рассказывает о бренде или продукте. Корпоративный подробно показывает компанию: процессы, объекты и людей, поэтому он длиннее.</p></details><details><summary>Нужно ли останавливать производство на время съёмки?</summary><p>Нет. Снимаем в рабочую смену по расписанию. Так снимали заводы Saint-Gobain и грузовые дворы ЦМ РЖД.</p></details><details><summary>Сотрудники не умеют говорить на камеру. Что делать?</summary><p>Уметь заранее не нужно. Интервью снимаем короткими слотами, а в монтаже оставляем живую речь. На съёмках Saint-Gobain на камеру говорили 17 директоров.</p></details></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит корпоративный фильм?","acceptedAnswer":{"@type":"Answer","text":"От 150 000 ₽. Итог зависит от хронометража, числа съёмочных дней и графики. Смету в двух вариантах готовим бесплатно после брифа."}},{"@type":"Question","name":"Сколько времени занимает производство фильма?","acceptedAnswer":{"@type":"Answer","text":"Экспресс-формат снимаем за неделю, полноценный фильм занимает 2–3 недели от брифа до мастера."}},{"@type":"Question","name":"Кто пишет сценарий?","acceptedAnswer":{"@type":"Answer","text":"Мы. После брифа предлагаем сюжет и структуру, согласуем до съёмок, чтобы на площадке не переделывать."}},{"@type":"Question","name":"Снимаете ли вы в других городах?","acceptedAnswer":{"@type":"Answer","text":"Да. Снимаем по всей России и за рубежом, география значения не имеет."}},{"@type":"Question","name":"Что получим на выходе?","acceptedAnswer":{"@type":"Answer","text":"Мастер-файл фильма, короткую версию и нарезки под площадки: стенд, зал, сайт и соцсети."}},{"@type":"Question","name":"Чем имиджевый ролик отличается от корпоративного фильма?","acceptedAnswer":{"@type":"Answer","text":"Имиджевый ролик короткий и рассказывает о бренде или продукте. Корпоративный подробно показывает компанию: процессы, объекты и людей, поэтому он длиннее."}},{"@type":"Question","name":"Нужно ли останавливать производство на время съёмки?","acceptedAnswer":{"@type":"Answer","text":"Нет. Снимаем в рабочую смену по расписанию. Так снимали заводы Saint-Gobain и грузовые дворы ЦМ РЖД."}},{"@type":"Question","name":"Сотрудники не умеют говорить на камеру. Что делать?","acceptedAnswer":{"@type":"Answer","text":"Уметь заранее не нужно. Интервью снимаем короткими слотами, а в монтаже оставляем живую речь. На съёмках Saint-Gobain на камеру говорили 17 директоров."}}]}</script></div></section></main><script>(function(){
+var v=document.querySelector('.hd-banner__v');if(!v)return;
 function show(){v.classList.add('is-on')}
 function hide(){v.classList.remove('is-on')}
-// Пока ролик не поехал, в герое остаётся постер. Слой с видео показываем только
+// Пока ролик не поехал, в баннере остаётся постер. Слой с видео показываем только
 // после реального старта: Safari в энергосбережении рисует поверх остановленного
-// видео свою кнопку Play, и вместо героя получается мёртвый плеер.
+// видео свою кнопку Play, и вместо баннера получается мёртвый плеер.
 if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
  hide();v.removeAttribute('autoplay');v.pause();return}
 v.muted=true;

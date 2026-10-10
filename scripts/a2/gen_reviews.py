@@ -26,6 +26,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..', 'mirror'))
 sys.path.insert(0, HERE)
+import hm_ds as ds  # noqa: E402
 
 spec = importlib.util.spec_from_file_location('rc', os.path.join(HERE, 'react-chrome.py'))
 rc = importlib.util.module_from_spec(spec)
@@ -70,43 +71,6 @@ METRIKA = ('<!-- Yandex.Metrika counter --><script type="text/javascript">'
            '</script><noscript><div><img src="https://mc.yandex.ru/watch/71125393" '
            'style="position:absolute;left:-9999px" alt=""></div></noscript>')
 
-CSS = """<style id="rv-css">
-.rv{--ink:#14171C;--mut:#5A616A;--a:#673A7E;--line:rgba(20,23,28,.12);
- font-family:'Montserrat',-apple-system,Arial,sans-serif;color:var(--ink);background:#fff}
-.rv *{box-sizing:border-box}
-.rv__wrap{max-width:1180px;margin:0 auto;padding:0 40px}
-.rv-hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
-.rv-hero h1{margin:0 0 16px;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.025em;line-height:1.08}
-.rv-hero p{margin:0;max-width:70ch;font-size:16.5px;line-height:1.65;color:var(--mut)}
-.rv-nums{display:flex;flex-wrap:wrap;gap:34px;margin-top:28px}
-.rv-nums div b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--a)}
-.rv-nums div span{font-size:13.5px;color:var(--mut)}
-.rv-list{display:grid;gap:22px;padding:44px 0 10px}
-.rv-item{display:grid;grid-template-columns:300px minmax(0,1fr);gap:26px;align-items:start;
- border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
-.rv-scan{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#F7F5F3}
-.rv-scan img{width:100%;height:auto;display:block;transition:transform .25s}
-.rv-scan:hover img{transform:scale(1.02)}
-.rv-item__cap{display:block;margin-top:8px;font-size:12.5px;color:var(--mut)}
-.rv-tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
- color:var(--a);border:1px solid rgba(103,58,126,.35);border-radius:20px;padding:5px 12px;margin-bottom:14px}
-.rv-item blockquote{margin:0 0 16px;font-size:clamp(16px,1.7vw,19px);line-height:1.62;font-weight:500}
-.rv-item blockquote + blockquote{font-size:15.5px;color:var(--mut);font-weight:400}
-.rv-who{margin:18px 0 0;font-size:14.5px;line-height:1.6}
-.rv-who b{display:block;font-size:16px}
-.rv-who span{color:var(--mut)}
-.rv-who a{display:inline-block;margin-top:8px;color:var(--a);font-weight:700;text-decoration:none;
- border-bottom:1px solid rgba(103,58,126,.4)}
-.rv-note{margin:34px 0 0;padding:20px 22px;border-left:3px solid var(--a);background:#F8F6FA;
- font-size:14.5px;line-height:1.65;color:var(--mut);border-radius:0 12px 12px 0;max-width:80ch}
-.rv-links{padding:44px 0 64px;border-top:1px solid var(--line);margin-top:40px}
-.rv-links h2{margin:0 0 14px;font-size:22px;font-weight:800;letter-spacing:-.02em}
-.rv-links p{margin:0 0 16px;font-size:15.5px;line-height:1.65;color:var(--mut)}
-.rv-links a{display:inline-block;margin:0 14px 10px 0;font-size:15px;color:var(--ink);
- text-decoration:none;border-bottom:1px solid rgba(20,23,28,.25)}
-.rv-links a:hover{color:var(--a);border-color:var(--a)}
-@media(max-width:820px){.rv-item{grid-template-columns:1fr}.rv__wrap{padding:0 18px}}
-</style>"""
 
 LIGHTBOX = """<script>(function(){
 // скан письма открывается во весь экран: на телефоне мелкий текст иначе не прочитать
@@ -130,20 +94,44 @@ def esc(t):
     return H.escape(t, quote=False)
 
 
-def item(key):
+# метка направления письма: цвет по первому слову работы из SCANS
+TAG_COLORS = (('Мероприятие', ds.EV), ('Видео', ds.VID), ('Корпоративный', ds.VID), ('Дизайн', ds.CRE),
+              ('Реклама', ds.PRN))
+
+CSS = """<style id="rv-css">
+.rv-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.rv-item{display:grid;grid-template-columns:170px minmax(0,1fr);gap:30px;align-items:start;background:#fff;padding:30px;box-shadow:0 1px 0 #ECECEC,0 18px 40px -28px rgba(20,23,28,.35)}
+.rv-scan{display:block;cursor:zoom-in}
+.rv-scan img{display:block;width:100%;aspect-ratio:210/297;object-fit:cover;object-position:top;border:1px solid #ECECEC;box-shadow:0 10px 24px -10px rgba(0,0,0,.35);transform:rotate(var(--r));transition:transform .25s ease}
+.rv-scan:hover img,.rv-scan:focus-visible img{transform:rotate(0) scale(1.03)}
+.rv-item__cap{display:block;margin-top:14px;font-size:12px;line-height:1.45;color:#8A8A8A}
+.rv-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:4px 11px}
+.rv-item blockquote{margin:16px 0 0;font-size:17px;line-height:1.55;font-weight:500;color:#111}
+.rv-item blockquote+blockquote{margin-top:10px;font-size:15px;color:#4C4C4C}
+.rv-who{margin:18px 0 0;font-size:13.5px;line-height:1.5;color:#4C4C4C}
+.rv-who b{display:block;font-size:15px;color:#111}
+.rv-who a{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;color:#111;text-decoration:none;border-bottom:2px solid #FFF700}
+@media(max-width:1100px){.rv-list{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){.rv-item{grid-template-columns:minmax(0,1fr);padding:24px 20px}.rv-scan{max-width:200px}}
+</style>"""
+
+
+def item(key, i):
     r = REVIEWS[key]
     scan, year, work = SCANS[key]
     who = f'{esc(r["person"])}, {esc(r["role"])}'
     # у четырёх писем в reviews.json поля about нет: берём направление работы из SCANS
     about = r.get('about') or work.lower()
-    case = (f'<a href="{r["case"]}">Смотреть проект →</a>' if r.get('case') else '')
+    color = next((c for w, c in TAG_COLORS if work.startswith(w)), ds.VIOLET)
+    case = (f'<a href="{r["case"]}">Смотреть проект</a>' if r.get('case') else '')
     q2 = f'<blockquote>«{esc(r["quote2"])}»</blockquote>' if r.get('quote2') else ''
     alt = f'Благодарственное письмо: {esc(r["company"])}'
     cap = f'{work}{", " + year if year else ""}'
+    tilt = ('-1.6deg', '1.2deg', '-0.8deg', '1.6deg')[i % 4]
     return (
-        f'<article class="rv-item">'
+        f'<article class="rv-item" style="--c:{color};--r:{tilt}">'
         f'<div><a class="rv-scan" href="{scan}" data-alt="{H.escape(alt)}">'
-        f'<img src="{scan}" alt="{H.escape(alt)}" loading="lazy"></a>'
+        f'<img src="{scan}" alt="{H.escape(alt)}" loading="lazy" width="420" height="594"></a>'
         f'<span class="rv-item__cap">{esc(cap)}. Нажмите, чтобы прочитать письмо целиком</span></div>'
         f'<div><span class="rv-tag">{esc(about)}</span>'
         f'<blockquote>«{esc(r["quote"])}»</blockquote>{q2}'
@@ -152,8 +140,7 @@ def item(key):
 
 
 def page():
-    items = ''.join(item(k) for k in ORDER)
-    links = ''.join(f'<a href="{h}">{esc(t)}</a>' for h, t in LINKS)
+    items = ''.join(item(k, i) for i, k in enumerate(ORDER))
     title = 'Отзывы клиентов и благодарственные письма | Hand Marketing'
     descr = ('Одиннадцать благодарственных писем от клиентов агентства: Saint-Gobain, '
              'Eaton, РЖД, Messe Düsseldorf, Becar, МФК «Саларис». Сканы писем целиком '
@@ -170,39 +157,36 @@ def page():
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/images/lib/as6739-3465-4238-b064-323735316130/sg-video-letter.jpg">'
-        + rc.FONT + rc.CSS + CSS + METRIKA + '</head><body>')
+        + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
 
-    crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+    crumbs_ld = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Главная', 'item': 'https://hand-marketing.ru/'},
         {'@type': 'ListItem', 'position': 2, 'name': 'Отзывы', 'item': URL}]}
 
-    body = (
-        f'{rc.header()}<main class="rv">'
-        '<section class="rv-hero"><div class="rv__wrap">'
-        '<h1>Отзывы клиентов и благодарственные письма</h1>'
-        '<p>Это письма, которые компании присылали нам после проектов. Сканы лежат целиком, '
-        'без вырезанных абзацев: можно открыть любое и прочитать полностью, вместе с подписью '
-        'и датой. Цитаты рядом приведены дословно.</p>'
-        '<div class="rv-nums">'
-        '<div><b>11</b><span>писем от клиентов</span></div>'
-        '<div><b>7</b><span>компаний, включая Saint-Gobain, Eaton, РЖД</span></div>'
-        '<div><b>с 2012</b><span>года работаем с повторными заказчиками</span></div>'
-        '</div></div></section>'
-        f'<div class="rv__wrap"><div class="rv-list">{items}</div>'
-        '<p class="rv-note">Все письма опубликованы с согласия компаний. Мы не размечаем их '
-        'как отзывы для поисковика и не выводим звёзды рейтинга: оценку своей работы на своём '
-        'сайте считать объективной нельзя, а письмо с подписью и печатью говорит само за себя.</p>'
-        '</div>'
-        '<section class="rv-links"><div class="rv__wrap">'
-        '<h2>Чем мы занимаемся</h2>'
-        '<p>Письма выше относятся к разным направлениям: съёмке, мероприятиям, дизайну, '
-        'печати и выставочным стендам.</p>'
-        f'<div>{links}</div></div></section>'
-        '</main>'
-        f'<a id="lead"></a>{rc.footer()}{rc.JS}{LIGHTBOX}'
-        f'<script type="application/ld+json">'
-        f'{json.dumps(crumbs, ensure_ascii=False, separators=(",", ":"))}</script>'
-        '</body></html>')
+    lede = ('Это письма, которые компании присылали нам после проектов. Сканы лежат целиком, без '
+            'вырезанных абзацев: можно открыть любое и прочитать полностью, вместе с подписью и датой. '
+            'Цитаты рядом приведены дословно.')
+    hero = ds.hero('Letters', 'Об агентстве · Отзывы', 'Отзывы клиентов и благодарственные письма',
+                   esc(lede), figs=2)
+    hero = hero.replace('</div></section>', ds.nums([
+        ('11', 'писем от клиентов'), ('7', 'компаний, включая Saint-Gobain, Eaton, РЖД'),
+        ('с 2012', 'года работаем с повторными заказчиками')], cols=3, center=True) + '</div></section>', 1)
+    crumbs = ds.crumbs([('Главная', '/'), ('Отзывы', None)])
+    letters = ds.sec(f'<div class="rv-list">{items}</div>'
+                     '<p class="hd-note">Все письма опубликованы с согласия компаний. Мы не размечаем их '
+                     'как отзывы для поисковика и не выводим звёзды рейтинга: оценку своей работы на своём '
+                     'сайте считать объективной нельзя, а письмо с подписью и печатью говорит само за себя.</p>',
+                     'Письма целиком', alt=True, icons=3)
+    links = ds.sec(ds.links([('Направления', [(t, h) for h, t in LINKS[:7]]),
+                             ('Об агентстве', [(t, h) for h, t in LINKS[7:]])]),
+                   'Чем мы занимаемся',
+                   esc('Письма выше относятся к разным направлениям: съёмке, мероприятиям, дизайну, '
+                       'печати и выставочным стендам.'))
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{letters}{links}</main>'
+            f'<a id="lead"></a>{rc.footer()}{rc.JS}{LIGHTBOX}'
+            f'<script type="application/ld+json">'
+            f'{json.dumps(crumbs_ld, ensure_ascii=False, separators=(",", ":"))}</script>'
+            '</body></html>')
     return head + body
 
 
