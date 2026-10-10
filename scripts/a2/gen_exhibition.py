@@ -691,7 +691,7 @@ HEAD=f'''<!doctype html><html lang="ru"><head>
 <link rel="canonical" href="https://hand-marketing.ru/exhibition/">
 <meta property="og:type" content="website"><meta property="og:title" content="Застройка выставочных стендов под ключ в Москве | Hand Marketing">
 <meta property="og:description" content="Выставочные стенды под ключ: дизайн, изготовление, интерактив и мультимедиа, монтаж по всей России.">
-<meta property="og:url" content="https://hand-marketing.ru/exhibition">
+<meta property="og:url" content="https://hand-marketing.ru/exhibition/">
 <meta property="og:image" content="https://hand-marketing.ru/images/lib/custom-samara-vdnh/cover-main.png">
 <link rel="shortcut icon" href="/static/cdn/as3561-3033-4731-b230-393638356539/---140.ico" type="image/x-icon">
 <!--custom-page-->
