@@ -147,7 +147,11 @@ def page():
     hero = ds.hero('Team', 'Об агентстве · Команда', 'Команда', esc(lede), figs=1)
     hero = hero.replace('</div></section>', ds.nums(FACTS, cols=3, center=True) + '</div></section>', 1)
     crumbs = ds.crumbs([('Главная', '/'), ('Команда', None)])
-    grid = ds.sec(f'<div class="tm-grid">{cards}</div>', 'Кто ведёт ваш проект', icons=3)
+    banner = ds.banner(None, '/videos/team-hero-poster.jpg', 'Съёмочная группа агентства на площадке',
+                       'Команда на площадке', 'Съёмки, монтаж, сцена',
+                       'Площадки роликов «Газель-трансформер» и VIVAX SPORT, монтаж сцены новогоднего '
+                       'вечера Samsung.', video='/videos/team-hero-loop.mp4')
+    grid = ds.sec(f'<div class="tm-grid">{cards}</div>', 'Кто ведёт ваш проект', icons=3, top=True)
     flow = ds.band(ds.steps([(t, esc(d)) for t, d in FLOW], cols=5), 'Как проект проходит через команду',
                    esc('Заказчик общается с одним человеком, но внутри задача проходит через всех, '
                        'кого касается.'), fig='blocks')
@@ -168,8 +172,8 @@ def page():
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png">'
         + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
-    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{grid}{flow}{cta}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}'
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{banner}{grid}{flow}{cta}</main>'
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}'
             f'<script type="application/ld+json">{dump(ld)}</script>'
             f'<script type="application/ld+json">{dump(crumbs_ld)}</script>'
             '</body></html>')

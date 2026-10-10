@@ -177,7 +177,8 @@ def banner():
     href, img, title, text, alt = CASES[0]
     return ds.banner(href, f'{SV}/stand-front.jpg',
                      'Мультимедийный выставочный стенд Самарской области: изогнутый экран-парус',
-                     'ВДНХ · 248 дней', title, text, chips=('16 млн посетителей', 'один пульт'))
+                     'ВДНХ · 248 дней', title, text, chips=('16 млн посетителей', 'один пульт'),
+                     video='/videos/mm-hero-loop.mp4')
 
 
 def crumbs():
@@ -253,7 +254,7 @@ HEAD = (
 def page():
     body = (f'{rc.header()}<main class="hd" style="--a:{ds.EXH}">{crumbs()}{hero()}{banner()}{kinds()}'
             f'{surfaces()}{cases()}{why()}{price()}{faq()}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return HEAD + body
 
 

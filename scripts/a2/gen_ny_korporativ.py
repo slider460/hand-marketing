@@ -201,7 +201,8 @@ def banner():
                      'Samsung · Новый год 2020', 'Мультимедиа вместо декораций',
                      'Больше 200 гостей ужинали внутри картинки: зимний лес шёл по дуге балкона, '
                      'а почтовый ящик Деда Мороза отвечал гостю прямо на стене.',
-                     chips=('200+ гостей', 'сетка уходит за 0,2 с'))
+                     chips=('200+ гостей', 'сетка уходит за 0,2 с'),
+                     video='/videos/ny-hero-loop.mp4')
 
 
 def crumbs():
@@ -286,7 +287,7 @@ HEAD = (
 def page():
     body = (f'{rc.header()}<main class="hd" style="--a:{ds.EV}">{crumbs()}{hero()}{banner()}'
             f'{projects()}{samsung()}{works()}{ideas()}{countdown()}{price()}{faq()}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return HEAD + body
 
 

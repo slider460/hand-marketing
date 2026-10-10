@@ -195,6 +195,15 @@ def hero():
                    figs=0)
 
 
+def banner():
+    return ds.banner('/exhibition/#ex-case', '/videos/design-hero-poster.jpg',
+                     '3D-визуализация проекта стенда Самарской области', 'Проект стенда Самарской области',
+                     'Две концепции, два варианта, 79 листов',
+                     'Проект к форуму «Россия — спортивная держава» на 204 м²: варианты дизайна в 3D '
+                     'до начала производства.', chips=('204 м²', '79 листов'),
+                     video='/videos/design-hero-loop.mp4')
+
+
 def crumbs():
     return ds.crumbs([('Главная', '/'), ('Застройка выставочных стендов', '/exhibition/'),
                       ('Дизайн стенда', None)])
@@ -212,7 +221,7 @@ def route():
     return ds.sec(tiles + more, 'От рендера до стенда на ВДНХ',
                   esc('Один объект в трёх состояниях: стенд Самарской области мы спроектировали и '
                       'построили, он отработал на ВДНХ 248 дней. Проект здесь не картинка для '
-                      'согласования, а документ, по которому стенд собирают в павильоне.'), icons=3)
+                      'согласования, а документ, по которому стенд собирают в павильоне.'), icons=3, top=True)
 
 
 def kinds():
@@ -292,9 +301,9 @@ HEAD = (
 
 
 def page():
-    body = (f'{rc.header()}<main class="hd" style="--a:{ds.EXH}">{crumbs()}{hero()}{route()}{kinds()}'
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.EXH}">{crumbs()}{hero()}{banner()}{route()}{kinds()}'
             f'{album()}{modes()}{steps()}{price()}{faq()}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return HEAD + body
 
 

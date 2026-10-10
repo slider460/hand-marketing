@@ -227,7 +227,11 @@ def page():
                    chips=('смета бесплатно', 'обычно в двух вариантах', 'договор, счёт, НДС'),
                    ctas=(('Посчитать проект', '#lead', 'y'), ('Проекты', '/project/', 'o')), figs=0)
     crumbs = ds.crumbs([('Главная', '/'), ('Цены', None)])
-    table = ds.sec(rows_html(), 'Стоимость по направлениям', icons=4)
+    banner = ds.banner(None, '/videos/price-hero-poster.jpg', 'Кадры из проектов агентства',
+                       'Из наших проектов', 'Ролики, мероприятия, стенды',
+                       'Нарезка из шоурила агентства: съёмки, мероприятия и застройка разных лет.',
+                       video='/videos/price-hero-loop.mp4')
+    table = ds.sec(rows_html(), 'Стоимость по направлениям', icons=4, top=True)
     steps = ds.band(ds.steps([(t, esc(d)) for t, d in STEPS], cols=5), 'Как мы считаем',
                     esc('Смета собирается из позиций, а не из общей суммы: видно, сколько стоит съёмочный '
                         'день, сколько графика и сколько работа на площадке.'), fig='h')
@@ -250,8 +254,8 @@ def page():
         f'<meta property="og:url" content="{URL}">'
         '<meta property="og:image" content="https://hand-marketing.ru/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png">'
         + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
-    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{table}{steps}{faq}{cta}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}'
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{banner}{table}{steps}{faq}{cta}</main>'
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}'
             f'<script type="application/ld+json">{dump(ld_crumbs)}</script>'
             '</body></html>')
     return head + body

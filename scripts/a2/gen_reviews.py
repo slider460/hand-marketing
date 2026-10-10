@@ -142,7 +142,7 @@ def item(key, i):
 def page():
     items = ''.join(item(k, i) for i, k in enumerate(ORDER))
     title = 'Отзывы клиентов и благодарственные письма | Hand Marketing'
-    descr = ('Одиннадцать благодарственных писем от клиентов агентства: Saint-Gobain, '
+    descr = ('Благодарственные письма от клиентов агентства: Saint-Gobain, '
              'Eaton, РЖД, Messe Düsseldorf, Becar, МФК «Саларис». Сканы писем целиком '
              'и ссылки на проекты.')
     head = (
@@ -168,10 +168,11 @@ def page():
             'Цитаты рядом приведены дословно.')
     hero = ds.hero('Letters', 'Об агентстве · Отзывы', 'Отзывы клиентов и благодарственные письма',
                    esc(lede), figs=2)
-    hero = hero.replace('</div></section>', ds.nums([
-        ('11', 'писем от клиентов'), ('7', 'компаний, включая Saint-Gobain, Eaton, РЖД'),
-        ('с 2012', 'года работаем с повторными заказчиками')], cols=3, center=True) + '</div></section>', 1)
     crumbs = ds.crumbs([('Главная', '/'), ('Отзывы', None)])
+    banner = ds.banner(None, '/videos/reviews-hero-poster.jpg', 'Кадры из проектов клиентов, приславших письма',
+                       'Проекты, о которых эти письма', 'Saint-Gobain, Eaton, «Саларис», ЦМ РЖД',
+                       'Кадры из фильмов и с мероприятий, после которых клиенты присылали благодарственные письма.',
+                       video='/videos/reviews-hero-loop.mp4')
     letters = ds.sec(f'<div class="rv-list">{items}</div>'
                      '<p class="hd-note">Все письма опубликованы с согласия компаний. Мы не размечаем их '
                      'как отзывы для поисковика и не выводим звёзды рейтинга: оценку своей работы на своём '
@@ -182,8 +183,8 @@ def page():
                    'Чем мы занимаемся',
                    esc('Письма выше относятся к разным направлениям: съёмке, мероприятиям, дизайну, '
                        'печати и выставочным стендам.'))
-    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{letters}{links}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}{LIGHTBOX}'
+    body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{banner}{letters}{links}</main>'
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}{LIGHTBOX}'
             f'<script type="application/ld+json">'
             f'{json.dumps(crumbs_ld, ensure_ascii=False, separators=(",", ":"))}</script>'
             '</body></html>')

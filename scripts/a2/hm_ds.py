@@ -91,6 +91,9 @@ CSS = """<style id="hm-ds-css">
 .hd-banner{position:relative;display:block;max-width:940px;margin:0 auto;aspect-ratio:940/420;background:var(--dark);overflow:hidden;text-decoration:none;color:#fff}
 .hd-banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .hd-banner:hover>img{transform:scale(1.03)}
+.hd-banner__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.hd-banner__v.is-on{opacity:1}
+@media(prefers-reduced-motion:reduce){.hd-banner__v{display:none}}
 .hd-banner__sh{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,22,.92) 0%,rgba(14,16,22,.7) 45%,rgba(14,16,22,.05) 80%)}
 .hd-banner__in{position:absolute;left:48px;top:50%;transform:translateY(-50%);max-width:480px}
 .hd-banner .hd-k{color:var(--blue)}
@@ -373,13 +376,16 @@ def hero(ghost, kicker, h1, lede_html, chips=(), ctas=(), figs=0):
             f'<p class="hd-hero__lede">{lede_html}</p>{chips_html}{acts}</div></section>')
 
 
-def banner(href, img, alt, kicker, title, text, chips=(), priority=True):
+def banner(href, img, alt, kicker, title, text, chips=(), priority=True, video=None):
+    """video: немой луп поверх постера, включается BANNER_JS после реального старта."""
+    vid = (f'<video class="hd-banner__v" autoplay muted loop playsinline preload="auto" aria-hidden="true">'
+           f'<source src="{video}" type="video/mp4"></video>') if video else ''
     chips_html = ''.join(f'<li>{esc(c)}</li>' for c in chips)
     chips_html = f'<ul class="hd-chips">{chips_html}</ul>' if chips_html else ''
     load = 'fetchpriority="high" decoding="async"' if priority else 'loading="lazy" decoding="async"'
     tag, href_attr = ('a', f' href="{href}"') if href else ('div', '')
     return (f'<div class="hd-w"><{tag} class="hd-banner"{href_attr}>'
-            f'<img src="{img}" alt="{attr(alt)}" width="1600" height="900" {load}>'
+            f'<img src="{img}" alt="{attr(alt)}" width="1600" height="900" {load}>{vid}'
             f'<span class="hd-banner__sh" aria-hidden="true"></span><span class="hd-banner__in">'
             f'<span class="hd-k">{esc(kicker)}</span><span class="hd-banner__t">{esc(title)}</span>'
             f'<span class="hd-banner__p">{esc(text)}</span>{chips_html}</span></{tag}></div>')
@@ -553,3 +559,32 @@ def faq(items, ld=True):
         html += ('<script type="application/ld+json">'
                  + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '</script>')
     return html
+
+
+BANNER_JS = """<script>(function(){
+var v=document.querySelector('.hd-banner__v');if(!v)return;
+function show(){v.classList.add('is-on')}
+function hide(){v.classList.remove('is-on')}
+// Пока ролик не поехал, в баннере остаётся постер. Слой с видео показываем только
+// после реального старта: Safari в энергосбережении рисует поверх остановленного
+// видео свою кнопку Play, и вместо баннера получается мёртвый плеер.
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ hide();v.removeAttribute('autoplay');v.pause();return}
+v.muted=true;
+var tries=0;
+function attempt(){
+ if(v.readyState<3)return;
+ var p=v.play();
+ if(!p||!p.then){v.paused?hide():show();return}
+ p.then(show).catch(function(){hide();if(++tries<12)setTimeout(attempt,700)});
+}
+['loadeddata','canplay','canplaythrough','progress'].forEach(function(e){
+ v.addEventListener(e,attempt)});
+attempt();
+document.addEventListener('visibilitychange',function(){if(!document.hidden)attempt()});
+['pointerdown','touchstart','scroll','keydown'].forEach(function(e){
+ window.addEventListener(e,attempt,{passive:true})});
+if('IntersectionObserver' in window){
+ new IntersectionObserver(function(en){en[0].isIntersecting?attempt():v.pause()},
+  {threshold:.05}).observe(v)}
+})();</script>"""

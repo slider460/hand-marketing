@@ -454,8 +454,6 @@ def esc(s):
 
 # баннер с фоновой нарезкой роликов направления и сетка кадров на тёмной полосе
 CSS = """<style id="vpg-css">
-.hd-banner__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
-.hd-banner__v.is-on{opacity:1}
 .vp-shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,14vw,200px);grid-auto-flow:dense;gap:14px}
 .vp-shots figure{margin:0;position:relative;overflow:hidden;background:#000}
 .vp-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -463,7 +461,6 @@ CSS = """<style id="vpg-css">
 .vp-shots .is-w{grid-column:span 2}
 .vp-shots figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(0deg,rgba(10,12,16,.9),rgba(10,12,16,0));font-size:13px;line-height:1.45;color:#fff}
 @media(max-width:640px){.vp-shots{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}.vp-shots figcaption{font-size:12px;padding:24px 10px 9px}}
-@media(prefers-reduced-motion:reduce){.hd-banner__v{display:none}}
 </style>"""
 
 # баннер: в фоне нарезка из роликов направления, поэтому он не ведёт на один кейс
@@ -590,33 +587,7 @@ def faq(p):
     return ds.sec(ds.faq(p['faq']), 'Вопросы')
 
 
-HERO_JS = """<script>(function(){
-var v=document.querySelector('.hd-banner__v');if(!v)return;
-function show(){v.classList.add('is-on')}
-function hide(){v.classList.remove('is-on')}
-// Пока ролик не поехал, в баннере остаётся постер. Слой с видео показываем только
-// после реального старта: Safari в энергосбережении рисует поверх остановленного
-// видео свою кнопку Play, и вместо баннера получается мёртвый плеер.
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
- hide();v.removeAttribute('autoplay');v.pause();return}
-v.muted=true;
-var tries=0;
-function attempt(){
- if(v.readyState<3)return;                       // ещё грузится, ждём следующего события
- var p=v.play();
- if(!p||!p.then){v.paused?hide():show();return}
- p.then(show).catch(function(){hide();if(++tries<12)setTimeout(attempt,700)});
-}
-['loadeddata','canplay','canplaythrough','progress'].forEach(function(e){
- v.addEventListener(e,attempt)});
-attempt();
-document.addEventListener('visibilitychange',function(){if(!document.hidden)attempt()});
-['pointerdown','touchstart','scroll','keydown'].forEach(function(e){
- window.addEventListener(e,attempt,{passive:true})});
-if('IntersectionObserver' in window){
- new IntersectionObserver(function(en){en[0].isIntersecting?attempt():v.pause()},
-  {threshold:.05}).observe(v)}
-})();</script>"""
+HERO_JS = ds.BANNER_JS
 
 
 def page(p):

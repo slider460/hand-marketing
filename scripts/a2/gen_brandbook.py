@@ -168,7 +168,7 @@ def page():
     banner = ds.banner('/creative/metra/', '/images/metra/sheet/01.jpg',
                        'Полоса брендбука Metra Technology Group', 'Metra Technology Group',
                        '69 полос, пять брендов одной экосистемы', CASES[0][3],
-                       chips=('69 полос', '5 брендов'))
+                       chips=('69 полос', '5 брендов'), video='/videos/brandbook-hero-loop.mp4')
     crumbs = ds.crumbs([('Главная', '/'), ('Креатив и дизайн', '/creativedesign/'),
                         ('Разработка брендбука', None)])
     parts = ds.sec(ds.feats([(t, esc(d)) for t, d, _c in PARTS], cols=4), 'Что входит в брендбук',
@@ -215,7 +215,7 @@ def page():
         + rc.FONT + rc.CSS + ds.CSS + METRIKA + '</head><body>')
     body = (f'{rc.header()}<main class="hd" style="--a:{ds.CRE}">{crumbs}{hero}{banner}{parts}{formats}'
             f'{cases}{steps}{price}{faq}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return head + body
 
 

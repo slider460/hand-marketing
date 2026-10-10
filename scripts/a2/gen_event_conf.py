@@ -140,7 +140,7 @@ def banner():
     href, img, title, text, alt = CASES[0]
     return ds.banner(href, img, 'Партнёрская конференция Eaton в Алматы: зал во время доклада',
                      'Алматы · Eaton', 'Партнёрская конференция Eaton', text,
-                     chips=('100 участников', 'трое суток'))
+                     chips=('100 участников', 'трое суток'), video='/videos/conf-hero-loop.mp4')
 
 
 def crumbs():
@@ -223,7 +223,7 @@ HEAD = (
 def page():
     body = (f'{rc.header()}<main class="hd" style="--a:{ds.EV}">{crumbs()}{hero()}{banner()}{tasks()}'
             f'{split()}{online()}{cases()}{steps()}{price()}{faq()}</main>'
-            f'<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
+            f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}</body></html>')
     return HEAD + body
 
 
