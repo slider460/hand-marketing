@@ -295,6 +295,9 @@ VP_FAQ=[
   'Да. Снимаем по всей России и за рубежом: где именно снимать, для нас роли не играет. Снимали в Самаре, Ставрополе, Алматы, на федеральных форумах и выставках.'),
  ('Делаете ли вы только монтаж или графику по готовым материалам?',
   'Да, это отдельная услуга: монтаж, цветокоррекция, титры, 2D/3D-графика и упаковка под площадки по вашим исходникам.'),
+ ('На какую технику снимаете?',
+  'Технику подбираем под задачу перед каждой съёмкой. Динамичные ролики снимаем на RED, '
+  'так сняты VIVAX, УАЗ Патриот и «Газель-трансформер». Большинство рекламных роликов снимаем на Canon.'),
  ('Снимаете ли вы мероприятия и конференции?',
   'Да, своей группой и своей техникой: репортажный ролик о событии, запись выступлений, короткие '
   'версии для соцсетей. Если мероприятие организуем мы, съёмку планируем вместе с программой.'),
@@ -327,6 +330,12 @@ def seo_sec():
          '.vp-fmt__i b{display:block;font-size:18px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}'
          '.vp-fmt__i span{display:block;font-size:14.5px;line-height:1.6;color:#5A616A}'
          '.vp-fmt__i i{display:block;margin-top:12px;font-style:normal;font-size:14px;font-weight:700;color:#CF6F19}'
+         '.vp-num{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:6px 0 34px}'
+         '.vp-num__i{border:1px solid rgba(20,23,28,.12);border-radius:18px;padding:22px 22px 20px;background:#fff}'
+         '.vp-num__i b{display:block;font-size:34px;font-weight:800;letter-spacing:-.02em;color:#CF6F19;margin-bottom:6px}'
+         '.vp-num__i span{display:block;font-size:14.5px;line-height:1.6;color:#5A616A}'
+         '.vp-num__i span a{color:#673A7E;font-weight:600}'
+         '@media(max-width:960px){.vp-num{grid-template-columns:1fr}}'
          '@media(max-width:960px){.vp-fmt{grid-template-columns:1fr}}'
          '.vp-faq{display:grid;gap:10px;max-width:820px}'
          '.vp-faq__i{border:1px solid rgba(20,23,28,.1);border-radius:14px;background:#fff;padding:0 20px}'
@@ -365,6 +374,26 @@ def seo_sec():
             f'<p class="vp-sec__lead vp-rev">Видео у нас редко живёт в одиночку: ролики становятся контентом для '
             f'<a href="/exhibition/">выставочных стендов</a>, <a href="/content/">мультимедийных инсталляций</a> и экранов '
             f'мероприятий. Снимаем сразу с учётом поверхностей, на которых материал будет показан.</p>'
+            # 10.10.2026: «видеопродакшн» 80, «видеопродакшн москва» 62, «студия видеопродакшн» 32
+            # (точные, Москва); страница была 675 слов против ~1900 у топа. Цифры посчитаны
+            # по сайту: 20 видеокейсов, 47 роликов в них
+            f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Видеопродакшн в цифрах</h2></div>'
+            f'<div class="vp-num">'
+            f'<div class="vp-num__i vp-rev"><b>20</b><span>видеокейсов на сайте, у каждого '
+            f'разбор с цифрами</span></div>'
+            f'<div class="vp-num__i vp-rev"><b>45+</b><span>роликов в этих кейсах, от 49-секундной '
+            f'рекламы до фильма на 11:39</span></div>'
+            f'<div class="vp-num__i vp-rev"><b>17 и 10</b><span>роликов в сериях для '
+            f'<a href="/portfolio/ceramicanova/">CeramicaNova</a> и '
+            f'<a href="/portfolio/obo-academy/">OBO Bettermann</a></span></div>'
+            f'</div>'
+            f'<p class="vp-sec__lead vp-rev">Снимали для Saint-Gobain, Eaton, ЦМ РЖД, ГАЗ и Power Technologies.</p>'
+            f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Своя съёмочная группа, техника под задачу</h2></div>'
+            f'<p class="vp-sec__lead vp-rev">Операторы и съёмочная группа у нас свои. Камеру выбираем под '
+            f'задачу: динамичные и трюковые ролики снимаем на RED, так сняты '
+            f'<a href="/video/vivax/">VIVAX</a>, <a href="/video/patriot/">УАЗ Патриот</a> и '
+            f'<a href="/video/gaz/">«Газель-трансформер»</a>. Рекламные ролики чаще снимаем на Canon. '
+            f'Остальную технику подбираем перед каждой съёмкой под площадку и формат.</p>'
             f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Стоимость и отзывы</h2></div>'
             f'{cb.render("video")}'
             f'<div class="vp-sec__head"><h2 class="vp-sec__h vp-rev">Вопросы о видеопродакшне</h2></div>'
