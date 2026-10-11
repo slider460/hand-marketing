@@ -63,6 +63,6 @@ open(M+'/robots.txt','w').write("User-agent: *\nAllow: /\nDisallow: /api/leads.c
     "# Яндекс: метки рекламы и счётчиков не делают отдельную страницу\n"
     "Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term\n"
     "Clean-param: yclid&ysclid&gclid&fbclid&_openstat&from&etext\n\n"
-    "Sitemap: %s/sitemap.xml\nHost: hand-marketing.ru\n"%DOMAIN)
+    "Sitemap: %s/sitemap.xml\n"%DOMAIN)
 print('Оптимизация:',stats)
 print('sitemap: %d URL | robots.txt создан'%len(pages))

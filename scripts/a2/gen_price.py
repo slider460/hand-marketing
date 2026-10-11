@@ -252,7 +252,7 @@ def page():
         f'<meta property="og:title" content="{H.escape(title)}">'
         f'<meta property="og:description" content="{H.escape(descr)}">'
         f'<meta property="og:url" content="{URL}">'
-        '<meta property="og:image" content="https://hand-marketing.ru/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png">'
+        '<meta property="og:image" content="https://hand-marketing.ru/images/og/hm-og.jpg">'
         + rc.FONT + rc.CSS + ds.CSS + CSS + METRIKA + '</head><body>')
     body = (f'{rc.header()}<main class="hd" style="--a:{ds.VIOLET}">{crumbs}{hero}{banner}{table}{steps}{faq}{cta}</main>'
             f'{ds.BANNER_JS}<a id="lead"></a>{rc.footer()}{rc.JS}'

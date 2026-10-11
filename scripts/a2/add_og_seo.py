@@ -18,7 +18,7 @@ import io, json, os, re, glob
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 SITE = "https://hand-marketing.ru"
-DEFAULT_OG = SITE + "/static/thb/as3230-6663-4363-b038-333866373133/-/resize/504x/__76876-145.png"
+DEFAULT_OG = SITE + "/images/og/hm-og.jpg"
 
 cases = json.load(open(os.path.join(ROOT, "src", "data", "cases.json"), encoding="utf-8"))
 # public/assets деплоится на прод в /case-assets/ (см. deploy.yml), НЕ в /assets/
