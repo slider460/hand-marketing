@@ -118,7 +118,7 @@ def hero():
       '<div class="ve-hero__in">'
       '<a class="ve-back" href="/project/">Все проекты</a>'
       '<div class="ve-kick">Video Production, Eaton</div>'
-      '<h1>Ролик для международной выставки</h1>'
+      '<h1>Видеоролик для международной выставки</h1>'
       '<p class="ve-hero__lead">Три с половиной минуты про Россию для зала, '
       'который по-русски не понимает. Дорожка английская, русские субтитры '
       'вшиты в картинку. Материал пришёл девятью разными кусками, связки '
@@ -604,12 +604,12 @@ def page_js():
 
 HEAD = f'''<!doctype html><html lang="ru" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Презентационный ролик Eaton для международной выставки | Hand Marketing</title>
-<meta name="description" content="Кейс Hand Marketing для Eaton: ролик 3:37 для международной выставки. Монтаж из девяти источников, 79 склеек, съёмка Москвы для недостающих сцен, английская дикторская дорожка под готовую картинку.">
+<title>Видеоролик для международной выставки: кейс Eaton | Hand Marketing</title>
+<meta name="description" content="Видеоролик для выставки Eaton: 3:37 на английском для международного зала. Монтаж из девяти источников, 79 склеек, досъёмка Москвы и дикторская дорожка под готовую картинку.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{URL}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Презентационный ролик Eaton для международной выставки">
+<meta property="og:title" content="Видеоролик для международной выставки: кейс Eaton">
 <meta property="og:description" content="Девять источников материала, 79 склеек, три блока съёмки Москвы и английская озвучка под уже смонтированную картинку. Монтажный лист ролика целиком.">
 <meta property="og:url" content="{URL}">
 <meta property="og:image" content="https://hand-marketing.ru{IMG}/og.jpg">
@@ -624,7 +624,7 @@ LD = (
   '<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList",'
   '"itemListElement":[{"@type":"ListItem","position":1,"name":"Проекты","item":"https://hand-marketing.ru/project/"},'
   '{"@type":"ListItem","position":2,"name":"Video Production","item":"https://hand-marketing.ru/videoproduction/"},'
-  '{"@type":"ListItem","position":3,"name":"Презентационный ролик Eaton для международной выставки",'
+  '{"@type":"ListItem","position":3,"name":"Видеоролик Eaton для международной выставки",'
   f'"item":"{URL}"}}]}}</script>')
 
 
