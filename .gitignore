@@ -51,3 +51,7 @@ scripts/mr-group-pdf/out/
 
 # локальный журнал аналитики /for/mr-group (при тесте на php -S)
 hm-analytics/
+
+# Океанариум: промежуточные файлы PDF (пересобираются scripts/ocean-page/pdf)
+scripts/ocean-page/pdf/out/
+scripts/ocean-page/pdf/captures/
