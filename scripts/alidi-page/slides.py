@@ -89,6 +89,11 @@ slide('<h2 class="ttl">Драфт-бюджет.</h2><div class="bd">'
       f'<div class="ql">{qr(PAGE + "#budget", 88)}<div><b>Каждая строка с пояснением</b>{link(PAGE + "#budget", "hand-marketing.ru/for/alidi")}<span class="mono dim">пароль: alidi · там же смета в Excel</span></div></div></div>'
       f'<ul class="bd-s">{secs}<li class="tot"><span>Итого без НДС</span><b>{B.rub(B.NET)}</b></li></ul></div>')
 
+# 3b. Объём работы и план по неделям (как на странице)
+nums = ''.join(f'<li><b>{e(n)}</b><span>{e(t)}</span></li>' for n, t, _ in B.scale_numbers())
+slide('<h2 class="ttl">Объём работы.</h2><p class="lead">Полгода работы и съёмочный марафон через три страны. План ориентировочный: даты съёмок подстроим под загрузку складов, цифра на полосе съёмки это число смен.</p>'
+      f'<ul class="sn">{nums}</ul><div class="sg">{B.gantt_html()}</div>')
+
 # 4. География
 slide('<h2 class="ttl">От Калининграда<br>до Алматы.</h2><p class="lead">Снимаем шесть городов, остальные филиалы показываем на карте стоками и архивом. '
       'Москва без командировок, в смете отдельно Петербург, Нижний, Минск, Алматы и, по желанию, Казань.</p>'

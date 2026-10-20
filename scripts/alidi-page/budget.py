@@ -4,7 +4,7 @@
     python3 scripts/alidi-page/budget.py          # собрать Excel в ~/Documents/Тендеры/АЛИДИ/
     from budget import blk_budget, TOTALS          # из build.py, блок страницы v3
 
-Все ставки ниже — вводные (в Excel синим, их можно менять, формулы пересчитают).
+Все ставки ниже: предложение Hand Marketing. Клиенту смета отдаётся как есть, без «можно менять» (решение владельца 20.10.2026).
 Съёмочная группа на каждую смену — решение владельца 14.10.2026: режиссёр-оператор,
 техник и куратор сценария. Перелёты Аэрофлотом, проживание, трансфер.
 """
@@ -443,7 +443,8 @@ def blk_budget():
         '<p class="mono dim sc-to">во что это складывается</p><div class="bud-top">'
         f'<div class="bud-sum"><p class="mono dim">итого с НДС 22%</p><p class="bud-big">{rub(GROSS)}&nbsp;₽</p>'
         f'<p class="mono">без НДС {rub(NET)} ₽ · НДС {rub(GROSS - NET)} ₽</p>'
-        '<a class="pdf-dl bud-x" href="?xlsx=1">Смета в Excel<span class="mono">построчно, с формулами</span></a></div>'
+        '<div class="bud-dl"><a class="pdf-dl" href="?xlsx=1">Смета в Excel<span class="mono">все строки и расчёт по городам</span></a>'
+        '<a class="pdf-dl" href="?pdf=1">Презентация, PDF<span class="mono">материалы, объём работы, итог</span></a></div></div>'
         f'<ul class="bud-secs">{secs}</ul></div>'
         '<div class="bud-crew"><div><p class="mono dim">на каждую смену</p><h3>Группа из трёх человек</h3>'
         f'<p>Съёмок {pl(SHIFTS, "смена")}, поэтому вместо большой группы на каждую площадку едут одни и те же трое. '
@@ -515,14 +516,14 @@ def build_xlsx(path=XLSX):
     st = wb.active; st.title = 'Ставки'
     W = widths(st, (3, 36, 50, 16, 3))
     X.paper(st, 24, 6)
-    later.append(banner(st, W, 240, KICK, 'Ставки и вводные', 'Жёлтые ячейки можно менять: смета и итог пересчитаются сами', ['fig_08', 'fig_02']))
+    later.append(banner(st, W, 240, KICK, 'Ставки и вводные', 'Ставки Hand Marketing по рынку Москвы на 2026–2027 годы, без НДС', ['fig_08', 'fig_02']))
     X.caps(st, 'B3', 'Съёмочная группа на одну смену, до 12 часов')
     r0 = 4
     for i, (n, x, rt) in enumerate(CREW):
         r = r0 + i
         st.cell(r, 2, n).font = font(11, True)
         st.cell(r, 3, x).font = font(9, color=X.STONE[600]); st.cell(r, 3).alignment = S['wrap']
-        c = st.cell(r, 4, rt); c.font = font(11, True); c.fill = fill(X.INPUT_FILL); c.number_format = RUB
+        c = st.cell(r, 4, rt); c.font = font(11, True); c.number_format = RUB
         st.row_dimensions[r].height = 26
         for k in (2, 3, 4):
             st.cell(r, k).border = S['line']; st.cell(r, k).alignment = Alignment(vertical='center', wrap_text=k == 3, horizontal='right' if k == 4 else None)
@@ -545,16 +546,14 @@ def build_xlsx(path=XLSX):
         r = rr + 3 + i
         st.cell(r, 2, n).font = font(10, True)
         st.cell(r, 3, x).font = font(9, color=X.STONE[600])
-        c = st.cell(r, 4, v); c.font = font(10, True); c.fill = fill(X.INPUT_FILL); c.number_format = fmt; c.alignment = S['mid_r']
+        c = st.cell(r, 4, v); c.font = font(10, True); c.number_format = fmt; c.alignment = S['mid_r']
         for k in (2, 3, 4):
             st.cell(r, k).border = S['line']
         st.row_dimensions[r].height = 22
         refs[n] = f'Ставки!$D${r}'
     CREWN, KITC, TDC, PDC, VATC = (refs[k] for k in ('Человек в группе', 'Комплект техники на смену', 'Дорожный день группы', 'Суточные на человека в день', 'НДС'))
     lg = rr + 3 + len(ins) + 1
-    st.cell(lg, 2).fill = fill(X.INPUT_FILL)
-    st.cell(lg, 2, 'жёлтое можно менять').font = font(8, True, X.STONE[600])
-    st.cell(lg, 3, 'Ставки: оценка Hand Marketing по рынку Москвы на 2026–2027 годы, без НДС.').font = font(8, color=X.STONE[400])
+    st.cell(lg, 2, 'Ставки: предложение Hand Marketing по рынку Москвы на 2026–2027 годы, без НДС.').font = font(8, color=X.STONE[400])
     X.footer(st, lg + 2, 5, S)
     st.sheet_properties.tabColor = X.FAMILY['yellow'][0]
 
@@ -566,8 +565,8 @@ def build_xlsx(path=XLSX):
     later.append(banner(sh, W, 240, KICK, 'Съёмки и командировки по городам',
                         'Группа из трёх человек едет на каждую площадку. Перелёт Аэрофлотом с багажом техники, гостиница, трансферы',
                         ['fig_05', 'fig_11', 'fig_13']))
-    sh.merge_cells('F3:J3'); sh['F3'] = 'ВВОДНЫЕ ПО ГОРОДУ · МОЖНО МЕНЯТЬ'
-    sh['F3'].font = font(8, True, X.INK); sh['F3'].fill = fill(X.INPUT_FILL); sh['F3'].alignment = S['mid_c']
+    sh.merge_cells('F3:J3'); sh['F3'] = 'ЦЕНЫ ПО ГОРОДУ'
+    sh['F3'].font = font(8, True, X.INK); sh['F3'].fill = fill(X.STONE[100]); sh['F3'].alignment = S['mid_c']
     sh.merge_cells('K3:R3'); sh['K3'] = 'РАСЧЁТ · ФОРМУЛЫ'
     sh['K3'].font = font(8, True, X.INK); sh['K3'].fill = fill(X.FAMILY['orange'][1]); sh['K3'].alignment = S['mid_c']
     sh.row_dimensions[3].height = 18
@@ -582,7 +581,7 @@ def build_xlsx(path=XLSX):
             cell = sh.cell(r, k, v)
             cell.font = font(10, k == 2, X.STONE[600] if (opt or k == 3) else X.INK, italic=opt)
             if k >= 4:
-                cell.fill = fill(X.INPUT_FILL if not opt else X.STONE[50]); cell.alignment = S['mid_r']
+                cell.fill = fill(X.STONE[50]); cell.alignment = S['mid_r']
             if k >= 6:
                 cell.number_format = MONEY
         f = {11: f'=D{r}*{RATE}', 12: f'=D{r}*{KITC}', 13: f'=E{r}*2*{RATE}*{TDC}', 14: f'=E{r}*(F{r}*{CREWN}+G{r})',
@@ -629,7 +628,7 @@ def build_xlsx(path=XLSX):
     W = widths(sm, colw)
     X.paper(sm, 3, 10)
     later.append(banner(sm, W, 240, KICK, 'Смета построчно',
-                        'Каждый раздел своим цветом. Кол-во и цену можно менять, суммы пересчитаются', ['fig_02', 'fig_15', 'fig_08', 'fig_14']))
+                        'Каждый раздел своим цветом, у каждой строки пояснение, что входит и зачем', ['fig_02', 'fig_15', 'fig_08', 'fig_14']))
     head_row(sm, 3, ['', '№', 'Статья', 'Ед.', 'Кол-во', 'Цена, ₽', 'Сумма, ₽', 'Комментарий', 'Что входит и зачем'], 1, 24)
     r = 4
     sec_rows = []
@@ -666,8 +665,8 @@ def build_xlsx(path=XLSX):
                 sm.cell(r, 2, f'{si}.{ri}').font = font(9, color=X.STONE[400])
                 sm.cell(r, 3, n).font = font(10, True)
                 sm.cell(r, 4, u).font = font(9, color=X.STONE[600])
-                c = sm.cell(r, 5, q); c.font = font(10); c.fill = fill(X.INPUT_FILL)
-                c = sm.cell(r, 6, pr); c.font = font(10); c.fill = fill(X.INPUT_FILL)
+                c = sm.cell(r, 5, q); c.font = font(10)
+                c = sm.cell(r, 6, pr); c.font = font(10)
                 sm.cell(r, 7, f'=E{r}*F{r}').font = font(10, True)
                 sm.cell(r, 8, x).font = font(9, color=X.STONE[600])
                 sm.cell(r, 9, TIPS[n]).font = font(9, color=X.STONE[600])
@@ -730,8 +729,8 @@ def build_xlsx(path=XLSX):
         else:
             u, q, pr = o[1]
             sm.cell(r, 4, u).font = font(9, color=X.STONE[600])
-            c = sm.cell(r, 5, q); c.font = font(10); c.fill = fill(X.INPUT_FILL)
-            c = sm.cell(r, 6, pr); c.font = font(10); c.fill = fill(X.INPUT_FILL)
+            c = sm.cell(r, 5, q); c.font = font(10)
+            c = sm.cell(r, 6, pr); c.font = font(10)
             sm.cell(r, 7, f'=E{r}*F{r}').font = font(10, True)
         sm.cell(r, 8, o[2]).font = font(9, color=X.STONE[600])
         for k in range(2, 10):
@@ -838,10 +837,6 @@ def build_xlsx(path=XLSX):
         sv.cell(rr_ + 1 + i, 3, a).font = font(10, True)
         sv.cell(rr_ + 1 + i, 4, b_).font = font(9, color=X.STONE[600])
     rr_ += len(guide) + 2
-    sv.cell(rr_, 3).fill = fill(X.INPUT_FILL)
-    sv.cell(rr_, 3, 'жёлтое можно менять').font = font(8, True, X.STONE[600])
-    sv.cell(rr_, 4, 'итоги и доли пересчитаются сами').font = font(8, color=X.STONE[400])
-    rr_ += 2
     c = sv.cell(rr_, 3, 'Живая версия с пояснениями: hand-marketing.ru/for/alidi (пароль alidi)')
     c.font = font(10, True, '0041EA'); c.hyperlink = 'https://hand-marketing.ru/for/alidi/#budget'
     X.footer(sv, rr_ + 2, 6, S)
@@ -879,6 +874,7 @@ def build_xlsx(path=XLSX):
         ws.page_setup.fitToHeight = 0
         ws.sheet_properties.pageSetUpPr.fitToPage = True
         ws.oddFooter.center.text = 'Hand Marketing для ГК АЛИДИ · драфт-бюджет от ' + VERSION + ' · стр. &P из &N'
+        ws.protection.sheet = True   # предложение Hand Marketing: смотреть и копировать можно, править нет (без пароля)
     wb.active = 0
     wb.calculation.fullCalcOnLoad = True
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -830,3 +830,5 @@ details[open] > summary .chev { transform:rotate(225deg) translate(-2px,-2px); }
   .bs-h { padding-left:14px; }
   .bs-tot { padding:14px 16px; }
 }
+.bud-dl { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.bud-dl .pdf-dl { margin-top:0; }
