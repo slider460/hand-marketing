@@ -116,3 +116,51 @@
   }, { threshold: .35 });
   vs.forEach(function (v) { v.muted = true; io.observe(v); });
 })();
+
+// Драфт-бюджет: подсказки «?», «Раскрыть всё», переход к разделу из сводки
+(function () {
+  var bud = document.getElementById('budget');
+  if (!bud) return;
+  var tips = bud.querySelectorAll('.tip');
+  function place(w) {
+    // на телефоне подсказка снизу экрана (CSS), на широком держим её в пределах окна
+    var b = w.querySelector('.tip-b');
+    b.style.marginLeft = ''; b.style.removeProperty('--ax'); w.classList.remove('below');
+    if (innerWidth <= 640) return;
+    if (getComputedStyle(b).display === 'none') return;
+    var r = b.getBoundingClientRect(), shift = 0;
+    if (r.left < 12) shift = 12 - r.left; else if (r.right > innerWidth - 12) shift = innerWidth - 12 - r.right;
+    if (shift) { b.style.marginLeft = (-150 + shift) + 'px'; b.style.setProperty('--ax', (150 - shift) + 'px'); }
+    if (r.top < 70) w.classList.add('below');
+  }
+  function closeAll(except) {
+    tips.forEach(function (t) { if (t !== except) t.setAttribute('aria-expanded', 'false'); });
+  }
+  tips.forEach(function (t) {
+    var w = t.parentNode;
+    w.addEventListener('mouseenter', function () { requestAnimationFrame(function () { place(w); }); });
+    t.addEventListener('focus', function () { requestAnimationFrame(function () { place(w); }); });
+    t.addEventListener('click', function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var open = t.getAttribute('aria-expanded') !== 'true';
+      closeAll(t); t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) place(w);
+    });
+  });
+  document.addEventListener('click', function (ev) { if (!ev.target.closest('.tip-w')) closeAll(); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') closeAll(); });
+  addEventListener('scroll', function () { if (innerWidth > 640) closeAll(); }, { passive: true });
+
+  var all = bud.querySelector('.bs-all');
+  var secs = bud.querySelectorAll('.bs, .cy');
+  if (all) all.addEventListener('click', function () {
+    var open = all.getAttribute('aria-pressed') !== 'true';
+    secs.forEach(function (d) { d.open = open; });
+    all.setAttribute('aria-pressed', open ? 'true' : 'false');
+    all.textContent = open ? 'Свернуть всё' : 'Раскрыть всё';
+  });
+  bud.querySelectorAll('.bud-secs a').forEach(function (a) {
+    a.addEventListener('click', function () { var d = document.querySelector(a.getAttribute('href')); if (d) d.open = true; });
+  });
+  addEventListener('beforeprint', function () { secs.forEach(function (d) { d.open = true; }); });
+})();

@@ -145,3 +145,17 @@ h1, h2, h3 { font-family:var(--head); letter-spacing:-.02em; }
 .sbx h3 { font-size:22px; } .sbx li { font-size:16px; padding:12px 0; }
 .mo { padding-top:26px; } .mo h3 { font-size:22px; margin-bottom:10px; } .mo p { font-size:15.5px; margin-bottom:16px; } .mo li { font-size:16.5px; padding:6px 0; }
 .end-qr { bottom:90px; }
+
+/* протокол на 9 строк + бюджет */
+.proto-s .proto { font-size:15px; } .proto-s .proto td { padding:9px 12px 9px 0; } .proto-s .proto td.dt { font-size:14px; }
+.proto-s .sbx li { font-size:14.5px; padding:9px 0; }
+.bd { display:grid; grid-template-columns:480px 1fr; gap:56px; margin-top:10px; }
+.bd-big { font-family:var(--head); font-weight:800; font-size:70px; line-height:1; letter-spacing:-.035em; margin:8px 0 8px; white-space:nowrap; }
+.bd-x { font-size:15.5px; line-height:1.5; color:#46464e; margin:22px 0 4px; }
+.bd .ql span { font-size:12px; }
+.bd-s { list-style:none; border-top:2px solid var(--ink); }
+.bd-s li { position:relative; display:flex; justify-content:space-between; padding:12px 0 13px; border-bottom:1px solid var(--line); font-size:17px; }
+.bd-s li b { font:500 16px 'IBM Plex Mono',monospace; }
+.bd-s li i { position:absolute; left:0; bottom:-1px; height:3px; background:var(--blue); }
+.bd-s li.tot { border-bottom:0; border-top:2px solid var(--ink); font-weight:700; } .bd-s li.tot b { color:var(--blue); font-weight:600; }
+.bd-s li i { background:var(--c); height:4px; } .bd-s li { align-items:center; justify-content:flex-start; } .bd-s li b { margin-left:auto; } .bd-s .sf { width:24px; height:24px; object-fit:contain; margin-right:12px; }

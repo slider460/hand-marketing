@@ -14,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 import build  # noqa: E402  (пересобирает страницу и даёт общие куски: логотип, схему городов, VERSION)
+import budget as B  # noqa: E402
 
 e = html.escape
 SITE = 'https://hand-marketing.ru'
@@ -48,8 +49,8 @@ slides.append(
     '<section class="s title"><img class="bgv" src="img/hero-loop.jpg" alt=""><div class="shade"></div>'
     f'<div class="t-logos">{build.alidi_svg}<i></i><img src="hm-logo.svg" alt="Hand Marketing"></div>'
     '<p class="t-k">ГК АЛИДИ · имиджевый фильм к 35-летию</p>'
-    '<h1>Материалы<br>после встречи.</h1>'
-    f'<p class="t-d">Онлайн-встреча 7 октября 2026 · версия от {e(VERSION)}</p>'
+    '<h1>Материалы<br>и драфт-бюджет.</h1>'
+    f'<p class="t-d">После встречи 7 октября 2026 · версия от {e(VERSION)}</p>'
     f'<div class="t-qr">{qr(PAGE, 112, light=True)}<div><b>Живая версия страницы</b>{link(PAGE)}<span>пароль: alidi</span></div></div>'
     '<p class="t-f">ООО «Хэнд-маркетинг» · hand-marketing.ru</p></section>')
 
@@ -63,18 +64,30 @@ slide('<div class="memo"><div class="m-l"><p class="mono">9.10.2026</p><p class=
       '<p class="sign">Александр Народецкий · Hand Marketing</p></div></div>')
 
 # 3. Договорились + СБ
-rows = [('Драфт-бюджет: три версии, русский язык, все площадки', 'Hand Marketing', '20 октября', 'hot'),
-        ('Таблица фактов и цифр для заполнения', 'Hand Marketing', 'вместе с бюджетом', ''),
+rows = [('Драфт-бюджет: три версии, русский язык, все площадки', 'Hand Marketing', '✓ готово', 'done'),
+        ('Проверка службой безопасности', 'АЛИДИ', '✓ согласована 15.10', 'done'),
+        ('Таблица фактов и цифр для заполнения', 'Hand Marketing', '✓ готово', 'done'),
         ('Примеры съёмки: руководители, сотрудники, кино', 'Hand Marketing', '✓ готово', 'done'),
         ('Петербург в брифе', 'АЛИДИ', '✓ готово', 'done'),
         ('Список логотипов, которые можно показывать', 'АЛИДИ', 'до съёмок', ''),
         ('Брендбук и гайды', 'АЛИДИ', 'до сценария', ''),
         ('Даты съёмок по загрузке складов', 'вместе', 'после выбора идеи', '')]
 tr = ''.join(f'<tr class="{c}"><td>{e(a)}</td><td>{e(b)}</td><td class="dt">{e(d)}</td></tr>' for a, b, d, c in rows)
-sb = [('Регистрация на tender.alidi.ru', '✓ готово', 'ok'), ('Учредительные документы', '✓ загружены', 'ok'), ('Бухгалтерские документы', 'в работе', 'wip')]
+sb = [('Регистрация на tender.alidi.ru', '✓ готово', 'ok'), ('Учредительные документы', '✓ загружены', 'ok'), ('Финансовые документы', '✓ загружены', 'ok'),
+      ('Решение службы безопасности', '✓ согласовано 15.10', 'ok')]
 slide(f'<h2 class="ttl">Договорились.</h2><div class="two"><table class="proto"><tr><th>Что</th><th>Кто</th><th>Когда</th></tr>{tr}</table>'
-      '<div class="sbx"><p class="mono dim">проверка службой безопасности</p><h3>Документы на tender.alidi.ru</h3><ul>'
-      + ''.join(f'<li class="{c}"><span>{e(a)}</span><b>{e(b)}</b></li>' for a, b, c in sb) + '</ul></div></div>')
+      '<div class="sbx"><p class="mono dim">проверка службой безопасности</p><h3>Проверка пройдена</h3><ul>'
+      + ''.join(f'<li class="{c}"><span>{e(a)}</span><b>{e(b)}</b></li>' for a, b, c in sb) + '</ul></div></div>', cls='proto-s')
+
+# 3a. Драфт-бюджет: итог и разделы, подробности на странице и в Excel
+secs = ''.join(f'<li style="{B._fam(k)[0]}"><img class="sf" src="{B._fam(k)[1]}" alt=""><span>{e(k)}</span><b>{B.rub(v)}</b><i style="width:{v / B.NET * 100:.1f}%"></i></li>' for k, v in B.TOTALS.items())
+slide('<h2 class="ttl">Драфт-бюджет.</h2><div class="bd">'
+      f'<div class="bd-l"><p class="mono dim">итого с НДС 22%</p><p class="bd-big">{B.rub(B.GROSS)}&nbsp;₽</p>'
+      f'<p class="mono dim">без НДС {B.rub(B.NET)} ₽ · НДС {B.rub(B.GROSS - B.NET)} ₽</p>'
+      f'<p class="bd-x">Три версии фильма, русский язык, шесть площадок в трёх странах, {B.SHIFTS} съёмочных смен по 12 часов. '
+      'На каждую смену едет группа из трёх человек: режиссёр-оператор, техник и куратор сценария. Перелёты Аэрофлотом, гостиницы и трансферы посчитаны по каждому городу.</p>'
+      f'<div class="ql">{qr(PAGE + "#budget", 88)}<div><b>Каждая строка с пояснением</b>{link(PAGE + "#budget", "hand-marketing.ru/for/alidi")}<span class="mono dim">пароль: alidi · там же смета в Excel</span></div></div></div>'
+      f'<ul class="bd-s">{secs}<li class="tot"><span>Итого без НДС</span><b>{B.rub(B.NET)}</b></li></ul></div>')
 
 # 4. География
 slide('<h2 class="ttl">От Калининграда<br>до Алматы.</h2><p class="lead">Снимаем шесть городов, остальные филиалы показываем на карте стоками и архивом. '

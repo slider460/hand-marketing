@@ -55,3 +55,6 @@ hm-analytics/
 # Океанариум: промежуточные файлы PDF (пересобираются scripts/ocean-page/pdf)
 scripts/ocean-page/pdf/out/
 scripts/ocean-page/pdf/captures/
+
+# кэш PNG для фирменного Excel АЛИДИ (пересобирается)
+scripts/alidi-page/xlsx-assets/png/

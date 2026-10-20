@@ -15,3 +15,8 @@ RedirectMatch 404 /for/alidi/_data(/|$)
 <FilesMatch "\.pdf$">
   Require all denied
 </FilesMatch>
+
+# Сметы и таблицы в Excel отдаёт только index.php?xlsx=... после ввода пароля
+<FilesMatch "\.xlsx$">
+  Require all denied
+</FilesMatch>

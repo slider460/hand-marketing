@@ -5,6 +5,7 @@
   mirror/for/alidi/index.php           калитка с паролем + страница (идёт на прод)
   mirror/for/alidi/_preview-page.html  страница без PHP, для локального превью (не коммитить)
   mirror/for/alidi/_preview-gate.html  экран пароля без PHP (не коммитить)
+  mirror/for/alidi/_preview-v3.html    третья версия с драфт-бюджетом, пока только локально (не коммитить)
 
 Тексты и факты: scripts/alidi-page/brief.md (раздел 7 «Все остальные проекты» парсится из него).
 Пересборка: python3 scripts/alidi-page/build.py
@@ -12,7 +13,11 @@
 import html
 import math
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from budget import blk_budget  # noqa: E402  драфт-бюджет, только в третьей версии (локально)
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -236,15 +241,40 @@ def part_html(f):
             f'<p class="part">{b}</p>{vid(f["video2"], f["poster2"], f["title"] + ", " + b)}')
 
 
-VERSION = '9 октября 2026'
-PDF_FILE = '2026-10-09'  # дата в имени скачиваемого PDF
+VERSION = '20 октября 2026'
+PDF_FILE = '2026-10-20'  # дата в имени скачиваемого PDF
+# 2: обновление 14 октября без бюджета (документы СБ загружены, бюджет готовим);
+# 3: с драфт-бюджетом, с 20 октября это и есть index.php (_preview-v3.html оставлен для сравнения)
+STAGE = 3
+
+
+def blk_update():
+    """Свежее обновление над письмом: что сделали с прошлой версии."""
+    bud = ('Драфт-бюджет готов: <a href="#budget">ниже на странице ↓</a>, построчно <a href="?xlsx=1">в Excel</a> и в PDF. '
+           'Каждая съёмка посчитана отдельно, с перелётами, проживанием и трансферами.' if STAGE >= 3 else
+           'Готовим подробный бюджет: каждая съёмка отдельно, перелёты, проживание и трансферы, графика, озвучка и три версии фильма. '
+           'Пришлём до 20 октября, здесь на странице и в Excel.')
+    if STAGE < 3:
+        return ('<div class="upd"><p class="mono">14.10.2026 · что нового</p><ul>'
+                '<li class="ok">Финансовые документы загрузили на tender.alidi.ru. Пакет для службы безопасности полный.</li>'
+                f'<li class="wip">{bud}</li></ul></div>')
+    return ('<div class="upd"><p class="mono">20.10.2026 · что нового</p><ul>'
+            '<li class="ok">Служба безопасности АЛИДИ согласовала Hand Marketing 15 октября. Можем участвовать в ваших тендерах.</li>'
+            f'<li class="ok">{bud}</li>'
+            '<li class="ok">Таблица фактов и цифр для фильма: <a href="?xlsx=facts">скачать Excel</a>. '
+            'Заполните, что удобно, остальное уточним по ходу.</li></ul></div>')
+
+
 
 # Новые блоки страницы: функции, которые возвращают HTML секции. Добавляем по одному.
 def blk_heard():
     """Письмо после встречи 7 октября + протокол договорённостей. Тон: от человека, их словами."""
     rows = [
-        ('Драфт-бюджет: три версии, русский язык, все площадки', 'Hand Marketing', '20 октября', True),
-        ('Таблица фактов и цифр для заполнения', 'Hand Marketing', 'вместе с бюджетом', False),
+        ('Драфт-бюджет: три версии, русский язык, все площадки', 'Hand Marketing', *(('готово', 'done') if STAGE >= 3 else ('20 октября', True))),
+        ('Документы для службы безопасности на tender.alidi.ru', 'Hand Marketing', 'загружены', 'done'),
+        *([('Проверка службой безопасности', 'АЛИДИ', 'согласована 15.10', 'done'),
+           ('Таблица фактов и цифр для заполнения', 'Hand Marketing', 'готово', 'done')] if STAGE >= 3 else
+          [('Таблица фактов и цифр для заполнения', 'Hand Marketing', 'вместе с бюджетом', False)]),
         ('Примеры: как снимаем руководителей и сотрудников, и кино для сравнения', 'Hand Marketing', 'готово', 'done'),
         ('Петербург в брифе', 'АЛИДИ', 'готово', 'done'),
         ('Список логотипов, которые можно показывать', 'АЛИДИ', 'до съёмок', False),
@@ -256,15 +286,18 @@ def blk_heard():
     def note(w, h):
         if h != 'done':
             return e(w)
-        link = ' <a href="#how">на этой странице ↓</a>' if w.startswith('Примеры') else ' <a href="#geo2">на этой странице ↓</a>'
-        return e(w) + link
+        if w.startswith('Таблица'):
+            return e(w) + ' <a href="?xlsx=facts">скачать Excel ↓</a>'
+        to = {'Примеры': '#how', 'Петербург': '#geo2', 'Драфт': '#budget', 'Документы': '#sb', 'Проверка': '#sb'}
+        href = next((v for k, v in to.items() if w.startswith(k)), '')
+        return e(w) + (f' <a href="{href}">на этой странице ↓</a>' if href else '')
     tr = ''.join(f'<tr class="{cls(hot)}"><td>{note(w, hot)}</td><td>{e(who)}</td><td class="dt">{"✓ " if hot == "done" else ""}{e(when)}</td></tr>' for w, who, when, hot in rows)
     return (
         '<section class="memo" id="top"><div class="wrap memo-in">'
         '<aside class="memo-side"><p class="mono">9.10.2026</p><p class="mono dim">после встречи 7 октября</p>'
         f'<a class="pdf-dl pdf-btn" href="?pdf=1">Скачать PDF<span class="mono">версия от {VERSION}</span></a>'
         f'<div class="memo-to">{alidi_svg}<span>ГК АЛИДИ<br>имиджевый фильм к 35-летию</span></div></aside>'
-        '<div class="memo-body">'
+        '<div class="memo-body">' + blk_update() +
         '<h1>Спасибо за разговор.</h1>'
         '<p>Записали главное, чтобы не держать в голове.</p>'
         '<p>Сейчас вам нужен не сценарий, а понятная сумма: заложить её в бюджет на 2027 год и сравнить подрядчиков на одинаковом объёме. '
@@ -448,9 +481,12 @@ def blk_maps():
 def blk_sb():
     """Проверка службой безопасности: статус регистрации на tender.alidi.ru."""
     st = [('Регистрация на tender.alidi.ru', 'готово', True), ('Учредительные документы', 'загружены', True),
-          ('Бухгалтерские документы', 'в работе', False)]
+          ('Финансовые документы', 'загружены', True)]
+    if STAGE >= 3:
+        st.append(('Решение службы безопасности', 'согласовано 15.10.2026', True))
+    h = 'Проверка пройдена' if STAGE >= 3 else 'Документы на tender.alidi.ru'
     return ('<section class="sb" id="sb"><div class="wrap"><div class="sb-in"><div><p class="mono dim">проверка службой безопасности</p>'
-            '<h3>Документы на tender.alidi.ru</h3></div><ul>'
+            f'<h3>{h}</h3></div><ul>'
             + ''.join(f'<li class="{"ok" if ok else "wip"}"><span>{e(a)}</span><b class="mono">{"✓ " if ok else ""}{e(b)}</b></li>' for a, b, ok in st)
             + '</ul></div></div></section>')
 
@@ -490,7 +526,9 @@ def blk_more():
     return o + '</div></div></section>'
 
 
-NEW_BLOCKS = [blk_heard, blk_sb, blk_geo, blk_maps, blk_ideas, blk_how, blk_more]
+def new_blocks():
+    bud = [blk_budget] if STAGE >= 3 else []
+    return [blk_heard, *bud, blk_sb, blk_geo, blk_maps, blk_ideas, blk_how, blk_more]
 
 
 
@@ -500,11 +538,11 @@ def page():
     a = o.append
     a('<header class="top"><div class="wrap top-in">'
       f'<a class="brand" href="#top" aria-label="В начало">{alidi_svg}<i></i><img src="hm-logo.svg" alt="Hand Marketing" width="34" height="34"></a>'
-      '<nav class="nav"><a href="#top">Материалы</a><a href="#archive-open">Наши работы</a><a href="#contacts">Контакты</a></nav>'
+      '<nav class="nav"><a href="#top">Материалы</a>' + ('<a href="#budget">Бюджет</a>' if STAGE >= 3 else '') + '<a href="#archive-open">Наши работы</a><a href="#contacts">Контакты</a></nav>'
       '<a class="pdf-btn" href="?pdf=1">PDF</a></div></header>')
 
-    # 0. новая страница: блоки собираем по одному (NEW_BLOCKS)
-    for blk in NEW_BLOCKS:
+    # 0. новая страница: блоки собираем по одному (new_blocks)
+    for blk in new_blocks():
         a(blk())
 
     # архив: всё, что было на странице до встречи, открывается кнопкой
@@ -695,6 +733,7 @@ ym(71125393, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true,
 BODY = HEAD + page() + '\n<script>\n' + JS + '\n</script>\n'
 PAGE_PHP = BODY + '<script id="hm-al-analytics">\n' + TRACK + '\n</script>\n' + METRIKA + '</body>\n</html>\n'
 PAGE_PREVIEW = BODY + '</body>\n</html>\n'
+PAGE_V3 = PAGE_PREVIEW
 
 GATE_HTML = '''<!doctype html>
 <html lang="ru">
@@ -809,6 +848,20 @@ if (isset($_GET['pdf'])) {
     readfile($f);
     exit;
 }
+// Смета в Excel (третья версия): файл кладём рядом как alidi-budget.xlsx, прямой доступ закрыть в .htaccess
+// ?xlsx=facts таблица фактов для заполнения (alidi-facts.xlsx)
+if (isset($_GET['xlsx'])) {
+    $facts = $_GET['xlsx'] === 'facts';
+    $f = __DIR__ . ($facts ? '/alidi-facts.xlsx' : '/alidi-budget.xlsx');
+    if (!is_file($f)) { http_response_code(404); exit; }
+    hm_event('xlsx_download', array('file' => $facts ? 'facts' : 'budget'));
+    hm_tg("📊 <b>АЛИДИ скачали " . ($facts ? "таблицу фактов" : "смету") . " в Excel</b>\n" . hm_device(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '') . "\n" . hm_where(hm_geo(hm_ip())) . "\n" . date('d.m H:i'));
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header('Content-Disposition: attachment; filename="' . ($facts ? 'Hand_Marketing_ALIDI_facts___PDFFILE__.xlsx' : 'Hand_Marketing_ALIDI_budget___PDFFILE__.xlsx') . '"');
+    header('Content-Length: ' . filesize($f));
+    readfile($f);
+    exit;
+}
 hm_event('page_view');
 ?>
 '''
@@ -818,5 +871,13 @@ php = PHP_HEAD.replace('__PDFDATE__', VERSION).replace('__PDFFILE__', PDF_FILE).
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / 'index.php').write_text(php, encoding='utf8')
 (OUT / '_preview-page.html').write_text(PAGE_PREVIEW, encoding='utf8')
+(OUT / '_preview-v3.html').write_text(PAGE_V3, encoding='utf8')
+# Excel для скачивания со страницы (?xlsx=1 и ?xlsx=facts): копии из папки тендера, прямой доступ закрыт в .htaccess
+import shutil  # noqa: E402
+import budget as _bud  # noqa: E402
+import facts_xlsx as _facts  # noqa: E402
+for _src, _dst in ((_bud.XLSX, 'alidi-budget.xlsx'), (_facts.OUT, 'alidi-facts.xlsx')):
+    if _src.is_file():
+        shutil.copyfile(_src, OUT / _dst)
 (OUT / '_preview-gate.html').write_text(GATE_HTML.replace('{$errHtml}', ''), encoding='utf8')
 print('ok', len(php), 'байт;', sum(len(c) for _, c in CATS), 'карточек в «Все остальные»')
