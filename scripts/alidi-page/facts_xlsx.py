@@ -144,6 +144,8 @@ def build(path=OUT):
     ws.page_setup.fitToWidth = 1
     ws.page_setup.fitToHeight = 0
     ws.sheet_properties.pageSetUpPr.fitToPage = True
+    wb.properties.creator = wb.properties.lastModifiedBy = 'Hand Marketing'
+    wb.properties.title = 'ГК АЛИДИ · имиджевый фильм к 35-летию · факты и цифры'
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
     return path

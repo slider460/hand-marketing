@@ -259,7 +259,7 @@ def blk_update():
                 '<li class="ok">Финансовые документы загрузили на tender.alidi.ru. Пакет для службы безопасности полный.</li>'
                 f'<li class="wip">{bud}</li></ul></div>')
     return ('<div class="upd"><p class="mono">20.10.2026 · что нового</p><ul>'
-            '<li class="ok">Служба безопасности АЛИДИ согласовала Hand Marketing 15 октября. Можем участвовать в ваших тендерах.</li>'
+            '<li class="ok">Ваша служба безопасности согласовала нас 15 октября. Можем участвовать в ваших тендерах.</li>'
             f'<li class="ok">{bud}</li>'
             '<li class="ok">Таблица фактов и цифр для фильма: <a href="?xlsx=facts">скачать Excel</a>. '
             'Заполните, что удобно, остальное уточним по ходу.</li>'
@@ -474,7 +474,7 @@ def blk_maps():
     for f, t, x, link in maps:
         o += (f'<figure class="mp"><video class="mp-v" muted loop playsinline preload="none" poster="img/{f}.jpg" data-src="img/{f}.mp4" aria-hidden="true"></video>'
               f'<figcaption><b>{e(t)}</b><span>{e(x)}</span><a href="{full(link)}" target="_blank" rel="noopener">страница кейса ↗</a></figcaption></figure>')
-    o += ('<div class="mp-for"><p class="mono dim">для АЛИДИ</p><h3>Россия, Беларусь и Казахстан на одной карте</h3>'
+    o += ('<div class="mp-for"><p class="mono dim">для вашего фильма</p><h3>Россия, Беларусь и Казахстан на одной карте</h3>'
           '<p>Точки всплывают от Калининграда до Алматы, на каждую короткий кадр с площадки. Шесть городов снимаем, остальные филиалы даём стоками и архивом. '
           'Стиль карты подбираем под ваш брендбук.</p></div>')
     return o + '</div></div></section>'
