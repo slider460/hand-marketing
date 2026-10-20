@@ -96,6 +96,22 @@ $body .= "\n\n—\nIP: " . ($_SERVER['REMOTE_ADDR'] ?? '') .
          "\nВремя: " . date('Y-m-d H:i:s') .
          "\nСтраница: " . ($_SERVER['HTTP_REFERER'] ?? '');
 
+// подозрительные сети: заявку НЕ выкидываем (за ними бывает живой человек с VPN),
+// а помечаем в теме письма и в Telegram. DTL LLC 195.209.208.0/20 — хостинг,
+// оттуда 30.09–18.10.2026 шли пустые «Its good» с главной.
+$SPAM_NETS = ['195.209.208.0/20'];
+$suspect = false;
+$ip = ip2long($_SERVER['REMOTE_ADDR'] ?? '');
+foreach ($SPAM_NETS as $net) {
+    list($base, $bits) = explode('/', $net);
+    $mask = -1 << (32 - (int)$bits);
+    if ($ip !== false && (($ip & $mask) === (ip2long($base) & $mask))) { $suspect = true; break; }
+}
+if ($suspect) {
+    $SUBJECT = '[похоже на спам] ' . $SUBJECT;
+    $body .= "\nПометка: адрес из сети хостинга, похоже на бота. Перед звонком сверить.";
+}
+
 // 1) сохранить в CSV (на случай проблем с почтой);
 //    ведущие =,+,-,@ экранируются от formula-injection при открытии в Excel
 $row = [date('Y-m-d H:i:s')];
@@ -133,7 +149,7 @@ if (defined('TELEGRAM_BOT_TOKEN') && TELEGRAM_BOT_TOKEN !== ''
         CURLOPT_TIMEOUT => 10,
         CURLOPT_POSTFIELDS => http_build_query([
             'chat_id' => TELEGRAM_CHAT_ID,
-            'text'    => "🟢 Заявка с hand-marketing.ru\n" . $body,
+            'text'    => ($suspect ? "⚪️ Похоже на спам, hand-marketing.ru\n" : "🟢 Заявка с hand-marketing.ru\n") . $body,
         ]),
     ]);
     curl_exec($ch);

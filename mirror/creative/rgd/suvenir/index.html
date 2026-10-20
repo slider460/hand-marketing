@@ -590,9 +590,20 @@ if(lb){
 var sent={};
 function g(id,once){if(once){if(sent[id])return;sent[id]=1;}try{if(window.ym)ym(71125393,'reachGoal',id);}catch(e){}}
 function inQuiz(el){return el&&el.closest&&el.closest('[data-quiz]');} // у квиза свои цели
+// form_submit = заявка реально принята /api/lead.php. По событию submit считать нельзя:
+// перехватчик форм (fix_forms.py) гасит его раньше нас, и цель всегда была 0.
+function isLead(u){return String(u||'').indexOf('lead.php')>-1;}
+function okLead(t){try{var j=typeof t==='string'?JSON.parse(t):t;if(j&&(j.success||j.ok))g('form_submit');}catch(e){}}
+var of=window.fetch;
+if(of){window.fetch=function(u,o){var p=of.apply(this,arguments);
+ try{if(isLead(u&&u.url?u.url:u))p.then(function(r){r.clone().json().then(okLead,function(){});},function(){});}catch(e){}
+ return p;};if(of.hmSrc)window.fetch.hmSrc=1;}
+var XO=XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open=function(m,u){if(isLead(u)){var x=this;x.addEventListener('load',function(){okLead(x.responseText);});}return XO.apply(this,arguments);};
+// обычный POST формы на lead.php (без JS-перехвата): страница уходит, считаем по submit
 document.addEventListener('submit',function(e){
- var f=e.target;if(!f||f.tagName!=='FORM'||inQuiz(f))return;
- g('form_submit');
+ var f=e.target;if(!f||f.tagName!=='FORM'||inQuiz(f)||e.defaultPrevented)return;
+ if(isLead(f.getAttribute('action')))g('form_submit');
 },true);
 document.addEventListener('focusin',function(e){
  var t=e.target;if(!t||!/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.type==='hidden')return;
