@@ -378,7 +378,7 @@ NO_DISC = {"p15_fpv", "p3_day", "p3_night", "p3_truck", "p3_waste", "p3_tower",
            "p13_light", "p13_model", "p13_styl", "p13_mua", "p13_props", "p13_asst", "p13_trans", "p13_food",
            "p25_ac", "p25_mic", "p25_con", "p25_lig", "p25_tech", "p25_del", "p26_sh", "p26_ot",
            "p27_own", "p27_no", "p27_hour", "p30_pr", "p30_ho", "p30_st", "p30_ad", "p30_tee"}
-# Услуги с расходами на подрядчиков: аванс 50%
+# Услуги с расходами на подрядчиков: аванс 70%, остаток 30% после акта
 PAYKEY = {13: "adv", 25: "adv", 26: "adv", 27: "adv", 30: "adv"}
 _PAY = {no: pay for no, _, _, pay, _, _ in POS}
 def discounted(key):
